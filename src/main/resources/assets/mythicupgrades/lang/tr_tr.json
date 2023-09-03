@@ -1,0 +1,172 @@
+{
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Demirci Şablonu",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Demirci Şablonu",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Demirci Şablonu",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Demirci Şablonu",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Demirci Şablonu",
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Demirci Şablonu",
+
+  "item.mythicupgrades.sapphire": "Safir",
+  "item.mythicupgrades.sapphire_ingot": "Safir Külçesi",
+
+  "item.mythicupgrades.sapphire_helmet": "Safir Miğfer",
+  "item.mythicupgrades.sapphire_chestplate": "Safir Göğüslük",
+  "item.mythicupgrades.sapphire_leggings": "Safir Tozluk",
+  "item.mythicupgrades.sapphire_boots": "Safir Çizme",
+
+  "item.mythicupgrades.sapphire_sword": "Safir Kılıç",
+  "item.mythicupgrades.sapphire_axe": "Safir Balta",
+
+  "block.mythicupgrades.sapphire_ore": "Safir Cevheri",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Kayrak Taşında Safir Cevheri",
+  "block.mythicupgrades.sapphire_block": "Safir Bloğu",
+  "block.mythicupgrades.sapphire_ruins": "Safir Kalıntıları",
+
+  "item.mythicupgrades.ruby": "Yakut",
+  "item.mythicupgrades.ruby_ingot": "Yakut Külçesi",
+
+  "item.mythicupgrades.ruby_sword": "Yakut Kılıç",
+  "item.mythicupgrades.ruby_axe": "Yakut Balta",
+  "item.mythicupgrades.ruby_pickaxe": "Yakut Kazma",
+  "item.mythicupgrades.ruby_shovel": "Yakut Kürek",
+  "item.mythicupgrades.ruby_hoe": "Yakut Çapa",
+
+  "block.mythicupgrades.ruby_ore": "Yakut Cevheri",
+  "block.mythicupgrades.deepslate_ruby_ore": "Kayrak Taşında Yakut Cevheri",
+  "block.mythicupgrades.ruby_block": "Yakut Bloğu",
+  "block.mythicupgrades.ruby_ruins": "Yakut Kalıntıları",
+
+  "item.mythicupgrades.jade": "Yeşim",
+  "item.mythicupgrades.jade_ingot": "Yeşim Külçesi",
+
+  "item.mythicupgrades.jade_helmet": "Yeşim Miğfer",
+  "item.mythicupgrades.jade_chestplate": "Yeşim Göğüslük",
+  "item.mythicupgrades.jade_leggings": "Yeşim Tozluk",
+  "item.mythicupgrades.jade_boots": "Yeşim Çizme",
+
+  "item.mythicupgrades.jade_sword": "Yeşim Kılıç",
+  "item.mythicupgrades.jade_axe": "Yeşim Balta",
+
+  "block.mythicupgrades.jade_ore": "Yeşim Cevheri",
+  "block.mythicupgrades.deepslate_jade_ore": "Kayrak Taşında Yeşim Cevheri",
+  "block.mythicupgrades.jade_block": "Yeşim Bloğu",
+  "block.mythicupgrades.jade_ruins": "Yeşim Kalıntıları",
+
+  "item.mythicupgrades.topaz": "Topaz",
+  "item.mythicupgrades.topaz_ingot": "Topaz Külçesi",
+
+  "item.mythicupgrades.topaz_helmet": "Topaz Miğfer",
+  "item.mythicupgrades.topaz_chestplate": "Topaz Göğüslük",
+  "item.mythicupgrades.topaz_leggings": "Topaz Tozluk",
+  "item.mythicupgrades.topaz_boots": "Topaz Çizme",
+
+  "item.mythicupgrades.topaz_sword": "Topaz Kılıç",
+  "item.mythicupgrades.topaz_axe": "Topaz Balta",
+  "item.mythicupgrades.topaz_pickaxe": "Topaz Kazma",
+  "item.mythicupgrades.topaz_shovel": "Topaz Kürek",
+  "item.mythicupgrades.topaz_hoe": "Topaz Çapa",
+
+  "block.mythicupgrades.topaz_ore": "Topaz Cevheri",
+  "block.mythicupgrades.deepslate_topaz_ore": "Kayrak Taşında Topaz Cevheri",
+  "block.mythicupgrades.topaz_block": "Topaz Bloğu",
+  "block.mythicupgrades.topaz_ruins": "Topaz Kalıntıları",
+
+  "item.mythicupgrades.ametrine": "Ametrin",
+  "item.mythicupgrades.ametrine_ingot": "Ametrin Külçesi",
+
+  "item.mythicupgrades.ametrine_helmet": "Ametrin Miğfer",
+  "item.mythicupgrades.ametrine_chestplate": "Ametrin Göğüslük",
+  "item.mythicupgrades.ametrine_leggings": "Ametrin Tozluk",
+  "item.mythicupgrades.ametrine_boots": "Ametrin Çizme",
+
+  "item.mythicupgrades.ametrine_sword": "Ametrin Kılıç",
+  "item.mythicupgrades.ametrine_axe": "Ametrin Balta",
+
+  "block.mythicupgrades.ametrine_ore": "Ametrin Cevheri",
+  "block.mythicupgrades.ametrine_block": "Ametrin Bloğu",
+  "block.mythicupgrades.ametrine_ruins": "Ametrin Kalıntıları",
+
+  "item.mythicupgrades.aquamarine": "Akuamarin",
+  "item.mythicupgrades.aquamarine_ingot": "Akuamarin Külçesi",
+
+  "item.mythicupgrades.aquamarine_sword": "Akuamarin Kılıç",
+  "item.mythicupgrades.aquamarine_axe": "Akuamarin Balta",
+
+  "block.mythicupgrades.aquamarine_ore": "Akuamarin Cevheri",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Kayrak Taşında Akuamarin Cevheri",
+  "block.mythicupgrades.aquamarine_block": "Akuamarin Bloğu",
+  "block.mythicupgrades.aquamarine_ruins": "Akuamarin Kalıntıları",
+
+  "effect.mythicupgrades.thorns": "Dikenler",
+  "effect.mythicupgrades.freeze": "Dondurma",
+
+  "sapphire.description": "§7§oHasarı artırır. Zırh Dikenler V sağlar.",
+  "ruby.description": "§7§oSaldırı hızı ve kazma hızını artırır.",
+  "jade.description": "§7§oZırh koruması artar. Balta ve kılıç rakibi zehirler.",
+  "topaz.description": "§7§oTüm aletleri hafif güçlendirir, dayanıklılığı 3'e katlar. Zırh Ateş Koruması sağlar.",
+  "ametrine.description": "§7§oZırh Zıplama Desteği II ve Hız II sağlar. Balta ve kılıç rakibi havaya yükseltir.",
+  "aquamarine.description": "§7§oBalta ve kılıç rakibi dondurur.",
+
+  "item.mythicupgrades.broken_sapphire_disc": "Kırık Müzik Diski",
+  "item.mythicupgrades.broken_ruby_disc": "Kırık Müzik Diski",
+  "item.mythicupgrades.broken_jade_disc": "Kırık Müzik Diski",
+  "item.mythicupgrades.broken_topaz_disc": "Kırık Müzik Diski",
+  "item.mythicupgrades.broken_ametrine_disc": "Kırık Müzik Diski",
+  "item.mythicupgrades.broken_aquamarine_disc": "Kırık Müzik Diski",
+
+  "sapphiredisc.description": "§7Bu diski bir Safir ile tamir et!",
+  "rubydisc.description": "§7Bu diski bir Yakut ile tamir et!",
+  "jadedisc.description": "§7Bu diski bir Yeşim ile tamir et!",
+  "topazdisc.description": "§7Bu diski bir Topaz ile tamir et!",
+  "ametrinedisc.description": "§7Bu diski bir Ametrin ile tamir et!",
+  "aquamarinedisc.description": "§7Bu diski bir Akuamarin ile tamir et!",
+
+  "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Yeşim Külçesi ekleyin",
+  "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.jade_upgrade.ingredients": "Yeşim Külçesi",
+  "upgrade.minecraft.jade_upgrade": "Yeşim Yükseltmesi",
+
+  "item.minecraft.smithing_template.topaz_upgrade.additions_slot_description": "Topaz Külçesi ekleyin",
+  "item.minecraft.smithing_template.topaz_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.topaz_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.topaz_upgrade.ingredients": "Topaz Külçesi",
+  "upgrade.minecraft.topaz_upgrade": "Topaz Yükseltmesi",
+
+  "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Akuamarin Külçesi ekleyin",
+  "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Akuamarin Külçesi",
+  "upgrade.minecraft.aquamarine_upgrade": "Akuamarin Yükseltmesi",
+
+  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Safir Külçesi ekleyin",
+  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Safir Külçesi",
+  "upgrade.minecraft.sapphire_upgrade": "Safir Yükseltmesi",
+
+  "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Yakut Külçesi ekleyin",
+  "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Yakut Külçesi",
+  "upgrade.minecraft.ruby_upgrade": "Yakut Yükseltmesi",
+
+  "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Ametrin Külçesi ekleyin",
+  "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherit Ekipman",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrin Külçesi",
+  "upgrade.minecraft.ametrine_upgrade": "Ametrin Yükseltmesi",
+
+  "item.mythicupgrades.music_disc_soot": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
+  "item.mythicupgrades.music_disc_nelumbo": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
+  "item.mythicupgrades.music_disc_fierce": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
+  "item.mythicupgrades.music_disc_appomattox": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMüzik Diski",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss"
+}

@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "mythicupgrades:jade_block",
+    "mythicupgrades:jade_ruins",
+    "mythicupgrades:jade_ore",
+    "mythicupgrades:deepslate_jade_ore",
+    "mythicupgrades:topaz_block",
+    "mythicupgrades:topaz_ruins",
+    "mythicupgrades:topaz_ore",
+    "mythicupgrades:deepslate_topaz_ore",
+    "mythicupgrades:aquamarine_block",
+    "mythicupgrades:aquamarine_ruins",
+    "mythicupgrades:aquamarine_ore",
+    "mythicupgrades:deepslate_aquamarine_ore",
+    "mythicupgrades:sapphire_block",
+    "mythicupgrades:sapphire_ruins",
+    "mythicupgrades:sapphire_ore",
+    "mythicupgrades:ruby_block",
+    "mythicupgrades:ruby_ruins",
+    "mythicupgrades:ruby_ore",
+    "mythicupgrades:ametrine_ruins",
+    "mythicupgrades:ametrine_block",
+    "mythicupgrades:ametrine_ore"
+  ]
+}

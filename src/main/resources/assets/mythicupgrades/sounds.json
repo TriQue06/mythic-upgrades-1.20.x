@@ -1,0 +1,50 @@
+{
+  "soot": {
+  "sounds": [
+    {
+      "name": "mythicupgrades:soot",
+      "stream": true
+    }
+  ]
+},
+  "appomattox": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:appomattox",
+        "stream": true
+      }
+    ]
+  },
+  "fierce": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:fierce",
+        "stream": true
+      }
+    ]
+  },
+  "nelumbo": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:nelumbo",
+        "stream": true
+      }
+    ]
+  },
+  "flow_of_the_abyss": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:flow_of_the_abyss",
+        "stream": true
+      }
+    ]
+  },
+  "tanker_on_the_levantines": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:tanker_on_the_levantines",
+        "stream": true
+      }
+    ]
+  }
+}

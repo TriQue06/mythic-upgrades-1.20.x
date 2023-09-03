@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "mythicupgrades:jade_helmet",
+    "mythicupgrades:jade_chestplate",
+    "mythicupgrades:jade_leggings",
+    "mythicupgrades:jade_boots",
+    "mythicupgrades:topaz_helmet",
+    "mythicupgrades:topaz_chestplate",
+    "mythicupgrades:topaz_leggings",
+    "mythicupgrades:topaz_boots",
+    "mythicupgrades:sapphire_helmet",
+    "mythicupgrades:sapphire_chestplate",
+    "mythicupgrades:sapphire_leggings",
+    "mythicupgrades:sapphire_boots",
+    "mythicupgrades:ametrine_helmet",
+    "mythicupgrades:ametrine_chestplate",
+    "mythicupgrades:ametrine_leggings",
+    "mythicupgrades:ametrine_boots"
+  ]
+}

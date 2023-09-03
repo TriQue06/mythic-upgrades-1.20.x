@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:netherite_ingot"
+      }
+    ],
+    "X": {
+      "item": "mythicupgrades:sapphire"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "result": {
+    "count": 2,
+    "item": "mythicupgrades:sapphire_ingot"
+  },
+  "show_notification": true
+}

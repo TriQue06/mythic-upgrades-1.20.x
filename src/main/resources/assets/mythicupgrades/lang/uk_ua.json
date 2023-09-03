@@ -1,0 +1,72 @@
+{
+  "item.mythicupgrades.sapphire": "Сапфір",
+  "item.mythicupgrades.sapphire_ingot": "Сапфіровий злиток",
+  
+  "item.mythicupgrades.sapphire_helmet": "Сапфіровий шолом",
+  "item.mythicupgrades.sapphire_chestplate": "Сапфіровий нагрудник",
+  "item.mythicupgrades.sapphire_leggings": "Сапфірові наголінники",
+  "item.mythicupgrades.sapphire_boots": "Сапфірові чоботи",
+
+  "item.mythicupgrades.sapphire_sword": "Сапфіровий меч",
+  "item.mythicupgrades.sapphire_axe": "Сапфірова сокира",
+
+  "block.mythicupgrades.sapphire_ore": "Сапфірова руда",
+  "block.mythicupgrades.sapphire_block": "Блок сапфіру",
+
+  "item.mythicupgrades.ruby": "Рубін",
+  "item.mythicupgrades.ruby_ingot": "Рубіновий злиток",
+
+  "item.mythicupgrades.ruby_sword": "Рубіновий меч",
+  "item.mythicupgrades.ruby_axe": "Рубінова сокира",
+  "item.mythicupgrades.ruby_pickaxe": "Рубінове кайло",
+  "item.mythicupgrades.ruby_shovel": "Рубінова лопата",
+  "item.mythicupgrades.ruby_hoe": "Рубінова мотика",
+
+  "block.mythicupgrades.ruby_ore": "Рубінова руда",
+  "block.mythicupgrades.ruby_block": "Блок рубіну",
+
+  "item.mythicupgrades.jade": "Нефрит",
+  "item.mythicupgrades.jade_ingot": "Нефритовий злиток",
+
+  "item.mythicupgrades.jade_helmet": "Нефритовий шолом",
+  "item.mythicupgrades.jade_chestplate": "Нефритовий нагрудник",
+  "item.mythicupgrades.jade_leggings": "Нефритові наголінники",
+  "item.mythicupgrades.jade_boots": "Нефритові чоботи",
+
+  "item.mythicupgrades.jade_sword": "Нефритовий меч",
+
+  "block.mythicupgrades.jade_ore": "Нефритова руда",
+  "block.mythicupgrades.deepslate_jade_ore": "Глибосланцева нефритова руда",
+  "block.mythicupgrades.jade_block": "Блок нефриту",
+
+  "item.mythicupgrades.topaz": "Топаз",
+  "item.mythicupgrades.topaz_ingot": "Топазовий злиток",
+
+  "item.mythicupgrades.topaz_helmet": "Топазовий шолом",
+  "item.mythicupgrades.topaz_chestplate": "Топазовий нагрудник",
+  "item.mythicupgrades.topaz_leggings": "Топазові наголінники",
+  "item.mythicupgrades.topaz_boots": "Топазові чоботи",
+  
+  "item.mythicupgrades.topaz_sword": "Топазовий меч",
+  "item.mythicupgrades.topaz_axe": "Топазова сокира",
+  "item.mythicupgrades.topaz_pickaxe": "Топазове кайло",
+  "item.mythicupgrades.topaz_shovel": "Топазова лопата",
+  "item.mythicupgrades.topaz_hoe": "Топазова мотика",
+
+  "block.mythicupgrades.topaz_ore": "Топазова руда",
+  "block.mythicupgrades.deepslate_topaz_ore": "Глибосланцева топазова руда",
+  "block.mythicupgrades.topaz_block": "Блок топазу",
+
+  "item.mythicupgrades.ametrine": "Аметрин",
+  "item.mythicupgrades.ametrine_ingot": "Аметриновий злиток",
+
+  "item.mythicupgrades.ametrine_helmet": "Аметриновий шолом",
+  "item.mythicupgrades.ametrine_chestplate": "Аметриновий нагрудник",
+  "item.mythicupgrades.ametrine_leggings": "Аметринові наголінники",
+  "item.mythicupgrades.ametrine_boots": "Аметринові чоботи",
+
+  "block.mythicupgrades.ametrine_ore": "Аметринова руда",
+  "block.mythicupgrades.ametrine_block": "Блок аметрину",
+
+  "effect.mythicupgrades.thorns": "Шипи сапфіра"
+}

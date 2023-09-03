@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:broken_topaz_disc"
+    },
+    {
+      "item": "mythicupgrades:topaz"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:music_disc_fierce"
+  }
+}

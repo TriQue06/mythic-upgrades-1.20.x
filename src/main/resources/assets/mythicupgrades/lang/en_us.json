@@ -1,0 +1,172 @@
+{
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Smithing Template",
+
+  "item.mythicupgrades.sapphire": "Sapphire",
+  "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
+  
+  "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
+  "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
+  "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
+  "item.mythicupgrades.sapphire_boots": "Sapphire Boots",
+
+  "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
+  "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
+
+  "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.mythicupgrades.sapphire_block": "Block of Sapphire",
+  "block.mythicupgrades.sapphire_ruins": "Sapphire Ruins",
+
+  "item.mythicupgrades.ruby": "Ruby",
+  "item.mythicupgrades.ruby_ingot": "Ruby Ingot",
+
+  "item.mythicupgrades.ruby_sword": "Ruby Sword",
+  "item.mythicupgrades.ruby_axe": "Ruby Axe",
+  "item.mythicupgrades.ruby_pickaxe": "Ruby Pickaxe",
+  "item.mythicupgrades.ruby_shovel": "Ruby Shovel",
+  "item.mythicupgrades.ruby_hoe": "Ruby Hoe",
+
+  "block.mythicupgrades.ruby_ore": "Ruby Ore",
+  "block.mythicupgrades.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.mythicupgrades.ruby_block": "Block of Ruby",
+  "block.mythicupgrades.ruby_ruins": "Ruby Ruins",
+
+  "item.mythicupgrades.jade": "Jade",
+  "item.mythicupgrades.jade_ingot": "Jade Ingot",
+
+  "item.mythicupgrades.jade_helmet": "Jade Helmet",
+  "item.mythicupgrades.jade_chestplate": "Jade Chestplate",
+  "item.mythicupgrades.jade_leggings": "Jade Leggings",
+  "item.mythicupgrades.jade_boots": "Jade Boots",
+
+  "item.mythicupgrades.jade_sword": "Jade Sword",
+  "item.mythicupgrades.jade_axe": "Jade Axe",
+
+  "block.mythicupgrades.jade_ore": "Jade Ore",
+  "block.mythicupgrades.deepslate_jade_ore": "Deepslate Jade Ore",
+  "block.mythicupgrades.jade_block": "Block of Jade",
+  "block.mythicupgrades.jade_ruins": "Jade Ruins",
+
+  "item.mythicupgrades.topaz": "Topaz",
+  "item.mythicupgrades.topaz_ingot": "Topaz Ingot",
+
+  "item.mythicupgrades.topaz_helmet": "Topaz Helmet",
+  "item.mythicupgrades.topaz_chestplate": "Topaz Chestplate",
+  "item.mythicupgrades.topaz_leggings": "Topaz Leggings",
+  "item.mythicupgrades.topaz_boots": "Topaz Boots",
+  
+  "item.mythicupgrades.topaz_sword": "Topaz Sword",
+  "item.mythicupgrades.topaz_axe": "Topaz Axe",
+  "item.mythicupgrades.topaz_pickaxe": "Topaz Pickaxe",
+  "item.mythicupgrades.topaz_shovel": "Topaz Shovel",
+  "item.mythicupgrades.topaz_hoe": "Topaz Hoe",
+
+  "block.mythicupgrades.topaz_ore": "Topaz Ore",
+  "block.mythicupgrades.deepslate_topaz_ore": "Deepslate Topaz Ore",
+  "block.mythicupgrades.topaz_block": "Block of Topaz",
+  "block.mythicupgrades.topaz_ruins": "Topaz Ruins",
+
+  "item.mythicupgrades.ametrine": "Ametrine",
+  "item.mythicupgrades.ametrine_ingot": "Ametrine Ingot",
+
+  "item.mythicupgrades.ametrine_helmet": "Ametrine Helmet",
+  "item.mythicupgrades.ametrine_chestplate": "Ametrine Chestplate",
+  "item.mythicupgrades.ametrine_leggings": "Ametrine Leggings",
+  "item.mythicupgrades.ametrine_boots": "Ametrine Boots",
+
+  "item.mythicupgrades.ametrine_sword": "Ametrine Sword",
+  "item.mythicupgrades.ametrine_axe": "Ametrine Axe",
+  
+  "block.mythicupgrades.ametrine_ore": "Ametrine Ore",
+  "block.mythicupgrades.ametrine_block": "Block of Ametrine",
+  "block.mythicupgrades.ametrine_ruins": "Ametrine Ruins",
+
+  "item.mythicupgrades.aquamarine": "Aquamarine",
+  "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
+
+  "item.mythicupgrades.aquamarine_sword": "Aquamarine Sword",
+  "item.mythicupgrades.aquamarine_axe": "Aquamarine Axe",
+
+  "block.mythicupgrades.aquamarine_ore": "Aquamarine Ore",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Deepslate Aquamarine Ore",
+  "block.mythicupgrades.aquamarine_block": "Block of Aquamarine",
+  "block.mythicupgrades.aquamarine_ruins": "Aquamarine Ruins",
+
+  "effect.mythicupgrades.thorns": "Thorns",
+  "effect.mythicupgrades.freeze": "Freeze",
+
+  "sapphire.description": "§7Increases damage. Armor provides Thorns V.",
+  "ruby.description": "§7Increases attack speed & mining speed.",
+  "jade.description": "§7Increases armor protection. Axe & sword poisons enemy.",
+  "topaz.description": "§7Strengthens tools slightly, 3x durability. Armor provides Fire Protection.",
+  "ametrine.description": "§7Armor provides Jump Boost II & Speed II. Axe & sword levitates enemy.",
+  "aquamarine.description": "§7Axe & sword freezes enemy.",
+
+  "item.mythicupgrades.broken_sapphire_disc": "Broken Music Disc",
+  "item.mythicupgrades.broken_ruby_disc": "Broken Music Disc",
+  "item.mythicupgrades.broken_jade_disc": "Broken Music Disc",
+  "item.mythicupgrades.broken_topaz_disc": "Broken Music Disc",
+  "item.mythicupgrades.broken_ametrine_disc": "Broken Music Disc",
+  "item.mythicupgrades.broken_aquamarine_disc": "Broken Music Disc",
+
+  "sapphiredisc.description": "§7Repair this disc with a Sapphire!",
+  "rubydisc.description": "§7Repair this disc with a Ruby!",
+  "jadedisc.description": "§7Repair this disc with a Jade!",
+  "topazdisc.description": "§7Repair this disc with a Topaz!",
+  "ametrinedisc.description": "§7Repair this disc with an Ametrine!",
+  "aquamarinedisc.description": "§7Repair this disc with an Aquamarine!",
+  
+  "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
+  "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.jade_upgrade.ingredients": "Jade Ingot",
+  "upgrade.minecraft.jade_upgrade": "Jade Upgrade",
+
+  "item.minecraft.smithing_template.topaz_upgrade.additions_slot_description": "Add Topaz Ingot",
+  "item.minecraft.smithing_template.topaz_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.topaz_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.topaz_upgrade.ingredients": "Topaz Ingot",
+  "upgrade.minecraft.topaz_upgrade": "Topaz Upgrade",
+
+  "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Add Aquamarine Ingot",
+  "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Aquamarine Ingot",
+  "upgrade.minecraft.aquamarine_upgrade": "Aquamarine Upgrade",
+
+  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Add Sapphire Ingot",
+  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Sapphire Ingot",
+  "upgrade.minecraft.sapphire_upgrade": "Sapphire Upgrade",
+
+  "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Add Ruby Ingot",
+  "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Ruby Ingot",
+  "upgrade.minecraft.ruby_upgrade": "Ruby Upgrade",
+
+  "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Add Ametrine Ingot",
+  "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
+  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
+
+  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
+  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
+  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
+  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss"
+}
