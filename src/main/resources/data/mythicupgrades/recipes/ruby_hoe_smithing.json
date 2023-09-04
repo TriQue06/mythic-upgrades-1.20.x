@@ -10,6 +10,6 @@
     "item": "mythicupgrades:ruby_hoe"
   },
   "template": {
-    "item": "minecraft:ruby_upgrade_smithing_template"
+    "item": "mythicupgrades:ruby_upgrade_smithing_template"
   }
 }

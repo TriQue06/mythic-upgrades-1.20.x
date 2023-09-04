@@ -48,6 +48,13 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MythicItems.MUSIC_DISC_FLOW_OF_THE_ABYSS, Models.GENERATED);
         itemModelGenerator.register(MythicItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES, Models.GENERATED);
 
+        itemModelGenerator.register(MythicItems.JADE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(MythicItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(MythicItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(MythicItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(MythicItems.RUBY_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(MythicItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+
         itemModelGenerator.register(MythicItems.SAPPHIRE_AXE, Models.HANDHELD);
         itemModelGenerator.register(MythicItems.SAPPHIRE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(MythicItems.SAPPHIRE_HELMET, Models.GENERATED);

@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "mythicupgrades:sapphire"
+      "item": "mythicupgrades:ametrine"
     },
     "C": {
-      "item": "minecraft:nether_bricks"
+      "item": "minecraft:end_stone"
     },
     "S": {
-      "item": "minecraft:sapphire_upgrade_smithing_template"
+      "item": "mythicupgrades:ametrine_upgrade_smithing_template"
     }
   },
   "pattern": [
@@ -19,7 +19,7 @@
   ],
   "result": {
     "count": 2,
-    "item": "minecraft:sapphire_upgrade_smithing_template"
+    "item": "mythicupgrades:ametrine_upgrade_smithing_template"
   },
   "show_notification": true
 }

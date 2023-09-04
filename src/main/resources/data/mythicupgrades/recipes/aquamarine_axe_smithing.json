@@ -10,6 +10,6 @@
     "item": "mythicupgrades:aquamarine_axe"
   },
   "template": {
-    "item": "minecraft:aquamarine_upgrade_smithing_template"
+    "item": "mythicupgrades:aquamarine_upgrade_smithing_template"
   }
 }

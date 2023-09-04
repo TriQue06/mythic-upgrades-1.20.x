@@ -123,7 +123,7 @@
   
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.jade_upgrade.ingredients": "Jade Ingot",
   "upgrade.minecraft.jade_upgrade": "Jade Upgrade",
 
@@ -135,25 +135,25 @@
 
   "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Add Aquamarine Ingot",
   "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Add netherite weapon",
   "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Aquamarine Ingot",
   "upgrade.minecraft.aquamarine_upgrade": "Aquamarine Upgrade",
 
   "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Add Sapphire Ingot",
   "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Sapphire Ingot",
   "upgrade.minecraft.sapphire_upgrade": "Sapphire Upgrade",
 
   "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Add Ruby Ingot",
   "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Add netherite weapon or tool",
   "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Ruby Ingot",
   "upgrade.minecraft.ruby_upgrade": "Ruby Upgrade",
 
   "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Add Ametrine Ingot",
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
   "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
 

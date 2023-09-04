@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "mythicupgrades:aquamarine"
+      "item": "mythicupgrades:ruby"
     },
     "C": {
-      "item": "minecraft:ice"
+      "item": "minecraft:blackstone"
     },
     "S": {
-      "item": "minecraft:aquamarine_upgrade_smithing_template"
+      "item": "mythicupgrades:ruby_upgrade_smithing_template"
     }
   },
   "pattern": [
@@ -19,7 +19,7 @@
   ],
   "result": {
     "count": 2,
-    "item": "minecraft:aquamarine_upgrade_smithing_template"
+    "item": "mythicupgrades:ruby_upgrade_smithing_template"
   },
   "show_notification": true
 }

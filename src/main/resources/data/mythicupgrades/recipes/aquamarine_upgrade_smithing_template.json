@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "mythicupgrades:ametrine"
+      "item": "mythicupgrades:aquamarine"
     },
     "C": {
-      "item": "minecraft:end_stone"
+      "item": "minecraft:ice"
     },
     "S": {
-      "item": "minecraft:ametrine_upgrade_smithing_template"
+      "item": "mythicupgrades:aquamarine_upgrade_smithing_template"
     }
   },
   "pattern": [
@@ -19,7 +19,7 @@
   ],
   "result": {
     "count": 2,
-    "item": "minecraft:ametrine_upgrade_smithing_template"
+    "item": "mythicupgrades:aquamarine_upgrade_smithing_template"
   },
   "show_notification": true
 }

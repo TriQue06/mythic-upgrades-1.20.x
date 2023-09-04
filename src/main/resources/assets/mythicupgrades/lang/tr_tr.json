@@ -123,7 +123,7 @@
 
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Yeşim Külçesi ekleyin",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherit Ekipman",
-  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Netherit zırh veya silah ekleyin",
   "item.minecraft.smithing_template.jade_upgrade.ingredients": "Yeşim Külçesi",
   "upgrade.minecraft.jade_upgrade": "Yeşim Yükseltmesi",
 
@@ -135,25 +135,25 @@
 
   "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Akuamarin Külçesi ekleyin",
   "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Netherit Ekipman",
-  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Netherit silah ekleyin",
   "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Akuamarin Külçesi",
   "upgrade.minecraft.aquamarine_upgrade": "Akuamarin Yükseltmesi",
 
   "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Safir Külçesi ekleyin",
   "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherit Ekipman",
-  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Netherit zırh veya silah ekleyin",
   "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Safir Külçesi",
   "upgrade.minecraft.sapphire_upgrade": "Safir Yükseltmesi",
 
   "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Yakut Külçesi ekleyin",
   "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Netherit Ekipman",
-  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Netherit silah veya alet ekleyin",
   "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Yakut Külçesi",
   "upgrade.minecraft.ruby_upgrade": "Yakut Yükseltmesi",
 
   "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Ametrin Külçesi ekleyin",
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherit Ekipman",
-  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Netherit zırh veya silah ekleyin",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrin Külçesi",
   "upgrade.minecraft.ametrine_upgrade": "Ametrin Yükseltmesi",
 

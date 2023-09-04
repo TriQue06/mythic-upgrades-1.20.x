@@ -139,31 +139,31 @@ public class MythicItems {
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
     static {
-        JADE_UPGRADE_SMITHING_TEMPLATE = register((String)"jade_upgrade_smithing_template", (Item)MythicTemplateItem.createJadeUpgrade());
+        JADE_UPGRADE_SMITHING_TEMPLATE = registerItem("jade_upgrade_smithing_template", MythicTemplateItem.createJadeUpgrade());
     }
     
     public static final Item TOPAZ_UPGRADE_SMITHING_TEMPLATE;
     static {
-        TOPAZ_UPGRADE_SMITHING_TEMPLATE = register((String)"topaz_upgrade_smithing_template", (Item)MythicTemplateItem.createTopazUpgrade());
+        TOPAZ_UPGRADE_SMITHING_TEMPLATE = registerItem("topaz_upgrade_smithing_template", MythicTemplateItem.createTopazUpgrade());
     }
     
     public static final Item AQUAMARINE_UPGRADE_SMITHING_TEMPLATE;
     static {
-        AQUAMARINE_UPGRADE_SMITHING_TEMPLATE = register((String)"aquamarine_upgrade_smithing_template", (Item)MythicTemplateItem.createAquamarineUpgrade());
+        AQUAMARINE_UPGRADE_SMITHING_TEMPLATE = registerItem("aquamarine_upgrade_smithing_template", MythicTemplateItem.createAquamarineUpgrade());
     }
     public static final Item SAPPHIRE_UPGRADE_SMITHING_TEMPLATE;
     static {
-        SAPPHIRE_UPGRADE_SMITHING_TEMPLATE = register((String)"sapphire_upgrade_smithing_template", (Item)MythicTemplateItem.createSapphireUpgrade());
+        SAPPHIRE_UPGRADE_SMITHING_TEMPLATE = registerItem("sapphire_upgrade_smithing_template", MythicTemplateItem.createSapphireUpgrade());
     }
 
     public static final Item RUBY_UPGRADE_SMITHING_TEMPLATE;
     static {
-        RUBY_UPGRADE_SMITHING_TEMPLATE = register((String)"ruby_upgrade_smithing_template", (Item)MythicTemplateItem.createRubyUpgrade());
+        RUBY_UPGRADE_SMITHING_TEMPLATE = registerItem("ruby_upgrade_smithing_template", MythicTemplateItem.createRubyUpgrade());
     }
 
     public static final Item AMETRINE_UPGRADE_SMITHING_TEMPLATE;
     static {
-        AMETRINE_UPGRADE_SMITHING_TEMPLATE = register((String)"ametrine_upgrade_smithing_template", (Item)MythicTemplateItem.createAmetrineUpgrade());
+        AMETRINE_UPGRADE_SMITHING_TEMPLATE = registerItem("ametrine_upgrade_smithing_template", MythicTemplateItem.createAmetrineUpgrade());
     }
 
     private static Item registerItem (String name, Item item) {

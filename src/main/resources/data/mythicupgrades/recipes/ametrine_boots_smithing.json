@@ -10,6 +10,6 @@
     "item": "mythicupgrades:ametrine_boots"
   },
   "template": {
-    "item": "minecraft:ametrine_upgrade_smithing_template"
+    "item": "mythicupgrades:ametrine_upgrade_smithing_template"
   }
 }
