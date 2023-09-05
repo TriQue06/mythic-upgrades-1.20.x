@@ -30,7 +30,6 @@ public class ArmorEffectItem extends ArmorItem {
                 }
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
@@ -39,7 +38,6 @@ public class ArmorEffectItem extends ArmorItem {
         ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
         ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
         ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
-
         return !helmet.isEmpty() && !chestplate.isEmpty() && !leggings.isEmpty() && !boots.isEmpty();
     }
 
@@ -55,7 +53,6 @@ public class ArmorEffectItem extends ArmorItem {
         Item chestplate = player.getEquippedStack(EquipmentSlot.CHEST).getItem();
         Item helmet = player.getEquippedStack(EquipmentSlot.HEAD).getItem();
 
-        // Handle any non-armor items in armor slots
         if (!(boots instanceof ArmorItem)
                 || !(leggings instanceof ArmorItem)
                 || !(chestplate instanceof ArmorItem)
@@ -81,5 +78,4 @@ public class ArmorEffectItem extends ArmorItem {
             }
         }
     }
-
 }

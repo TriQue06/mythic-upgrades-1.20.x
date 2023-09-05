@@ -33,40 +33,40 @@ import java.util.List;
             var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
             register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.SAPPHIRE_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
             register(context, SAPPHIRE_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.SAPPHIRE_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
             register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.RUBY_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
             register(context, RUBY_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.RUBY_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
             register(context, JADE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.JADE_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             register(context, JADE_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.JADE_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.TOPAZ_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             register(context, TOPAZ_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.TOPAZ_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AMETRINE_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
             register(context, AMETRINE_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AMETRINE_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
             register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AQUAMARINE_ORE_KEY),
-                    MythicOrePlacement.modifiersWithCount(3,
+                    MythicOrePlacement.modifiersWithCount(4,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             register(context, AQUAMARINE_RUINS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AQUAMARINE_RUINS_KEY),
-                    MythicOrePlacement.modifiersWithCount(10,
+                    MythicOrePlacement.modifiersWithCount(16,
                             HeightRangePlacementModifier.trapezoid(YOffset.fixed(-48), YOffset.fixed(16))));
             }
 

@@ -74,17 +74,17 @@ public class MythicConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(terraReplacables, MythicBlocks.AQUAMARINE_RUINS.getDefaultState()));
 
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 4));
-        register(context, SAPPHIRE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireRuins, 10));
+        register(context, SAPPHIRE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireRuins, 12));
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 4));
-        register(context, RUBY_RUINS_KEY, Feature.ORE, new OreFeatureConfig(netherRubyRuins, 10));
+        register(context, RUBY_RUINS_KEY, Feature.ORE, new OreFeatureConfig(netherRubyRuins, 12));
         register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 4));
-        register(context, JADE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeRuins, 10));
+        register(context, JADE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeRuins, 12));
         register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 4));
-        register(context, TOPAZ_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazRuins, 10));
+        register(context, TOPAZ_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazRuins, 12));
         register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 4));
-        register(context, AMETRINE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineRuins, 10));
+        register(context, AMETRINE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineRuins, 12));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 4));
-        register(context, AQUAMARINE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineRuins, 10));
+        register(context, AQUAMARINE_RUINS_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineRuins, 12));
 }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

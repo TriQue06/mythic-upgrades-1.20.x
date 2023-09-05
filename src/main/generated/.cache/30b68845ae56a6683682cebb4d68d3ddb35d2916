@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-04T19:45:08.8580796	Mythic Upgrades/Model Definitions
+// 1.20.1	2023-09-05T18:22:19.8244823	Mythic Upgrades/Model Definitions
 1338829e6fe1b8d797fbf51c068cd1b208f101ef assets\mythicupgrades\blockstates\ametrine_ore.json
 2b63b22646b9f7a900fe3c2221d37a3f2c4a7eef assets\mythicupgrades\models\block\ruby_ruins.json
 619e28b712f2e66ea20f0bbd2a18f9628c588af7 assets\mythicupgrades\models\block\sapphire_ruins.json
@@ -95,8 +95,8 @@ aae47b98edb55a4af8adcc086bfb9a3b0b0f1c27 assets\mythicupgrades\models\item\ruby_
 356fe3ab0d6f460cf683e4f609b396076326f075 assets\mythicupgrades\models\block\topaz_ruins.json
 f96ececa696d0c910635b09fd5f0a042917156a0 assets\mythicupgrades\models\item\aquamarine_sword.json
 7999d63f240b25d5dce2a64d022d20bb30f6fb65 assets\mythicupgrades\models\item\topaz_pickaxe.json
-df54f5b2eb50a196d960c0f5d2074fa3d0bb5199 assets\mythicupgrades\models\item\jade_axe.json
 285fffad9071a3f1aff70ddbde6bf351541e6900 assets\mythicupgrades\models\item\ametrine_upgrade_smithing_template.json
+df54f5b2eb50a196d960c0f5d2074fa3d0bb5199 assets\mythicupgrades\models\item\jade_axe.json
 3bce943594d29e1c72609123ae8b05e3d093a758 assets\mythicupgrades\models\block\ametrine_block.json
 d63b452f1128852d217a3536f086fd54a045b9ae assets\mythicupgrades\models\item\jade_leggings.json
 63eb6f7507d5cf2b72c8ca2f8f6ec21f939fab9c assets\mythicupgrades\models\item\topaz_shovel.json
