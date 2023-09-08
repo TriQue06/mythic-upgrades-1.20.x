@@ -1,0 +1,172 @@
+{
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Кузнечный шаблон",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Кузнечный шаблон",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Кузнечный шаблон",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Кузнечный шаблон",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Кузнечный шаблон",
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Кузнечный шаблон",
+
+  "item.mythicupgrades.sapphire": "Сапфир",
+  "item.mythicupgrades.sapphire_ingot": "Сапфировый слиток",
+  
+  "item.mythicupgrades.sapphire_helmet": "Сапфировый шлем",
+  "item.mythicupgrades.sapphire_chestplate": "Сапфировый нагрудник",
+  "item.mythicupgrades.sapphire_leggings": "Сапфировые поножи",
+  "item.mythicupgrades.sapphire_boots": "Сапфировые ботинки",
+
+  "item.mythicupgrades.sapphire_sword": "Сапфировый меч",
+  "item.mythicupgrades.sapphire_axe": "Сапфировый топор",
+
+  "block.mythicupgrades.sapphire_ore": "Сапфировая руда",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Глубиносланцевая сапфировая руда",
+  "block.mythicupgrades.sapphire_block": "Блок сапфира",
+  "block.mythicupgrades.sapphire_ruins": "Сапфиросодержащий остаток",
+
+  "item.mythicupgrades.ruby": "Рубин",
+  "item.mythicupgrades.ruby_ingot": "Рубиновый слиток",
+
+  "item.mythicupgrades.ruby_sword": "Рубиновый меч",
+  "item.mythicupgrades.ruby_axe": "Рубиновый топор",
+  "item.mythicupgrades.ruby_pickaxe": "Рубиновая кирка",
+  "item.mythicupgrades.ruby_shovel": "Рубиновая лопата",
+  "item.mythicupgrades.ruby_hoe": "Рубиновая мотыга",
+
+  "block.mythicupgrades.ruby_ore": "Рубиновая руда",
+  "block.mythicupgrades.deepslate_ruby_ore": "Глубиносланцевая рубиновая руда",
+  "block.mythicupgrades.ruby_block": "Блок рубина",
+  "block.mythicupgrades.ruby_ruins": "Рубиносодержащий остаток",
+
+  "item.mythicupgrades.jade": "Нефрит",
+  "item.mythicupgrades.jade_ingot": "Нефритовый слиток",
+
+  "item.mythicupgrades.jade_helmet": "Нефритовый шлем",
+  "item.mythicupgrades.jade_chestplate": "Нефритовый нагрудник",
+  "item.mythicupgrades.jade_leggings": "Нефритовые поножи",
+  "item.mythicupgrades.jade_boots": "Нефритовые ботинки",
+
+  "item.mythicupgrades.jade_sword": "Нефритовый меч",
+  "item.mythicupgrades.jade_axe": "Нефритовый топор",
+
+  "block.mythicupgrades.jade_ore": "Нефритовая руда",
+  "block.mythicupgrades.deepslate_jade_ore": "Глубиносланцевая нефритовая руда",
+  "block.mythicupgrades.jade_block": "Блок нефрита",
+  "block.mythicupgrades.jade_ruins": "Нефритосодежащий остаток",
+
+  "item.mythicupgrades.topaz": "Топаз",
+  "item.mythicupgrades.topaz_ingot": "Топазовый слиток",
+
+  "item.mythicupgrades.topaz_helmet": "Топазовый шлем",
+  "item.mythicupgrades.topaz_chestplate": "Топазовый нагрудник",
+  "item.mythicupgrades.topaz_leggings": "Топазовые поножи",
+  "item.mythicupgrades.topaz_boots": "Топазовые ботинки",
+  
+  "item.mythicupgrades.topaz_sword": "Топазовый меч",
+  "item.mythicupgrades.topaz_axe": "Топазовый топор",
+  "item.mythicupgrades.topaz_pickaxe": "Топазовая кирка",
+  "item.mythicupgrades.topaz_shovel": "Топазовая лопата",
+  "item.mythicupgrades.topaz_hoe": "Топазовая мотыга",
+
+  "block.mythicupgrades.topaz_ore": "Топазовая руда",
+  "block.mythicupgrades.deepslate_topaz_ore": "Глубиносланцевая топазовая руда",
+  "block.mythicupgrades.topaz_block": "Блок топаза",
+  "block.mythicupgrades.topaz_ruins": "Топазосодежащий остаток",
+
+  "item.mythicupgrades.ametrine": "Аметрин",
+  "item.mythicupgrades.ametrine_ingot": "Аметриновый слиток",
+
+  "item.mythicupgrades.ametrine_helmet": "Аметриновый шлем",
+  "item.mythicupgrades.ametrine_chestplate": "Аметриновый нагрудник",
+  "item.mythicupgrades.ametrine_leggings": "Аметриновые поножи",
+  "item.mythicupgrades.ametrine_boots": "Аметриновые ботинки",
+
+  "item.mythicupgrades.ametrine_sword": "Аметриновый меч",
+  "item.mythicupgrades.ametrine_axe": "Аметриновый топор",
+  
+  "block.mythicupgrades.ametrine_ore": "Аметриновая руда",
+  "block.mythicupgrades.ametrine_block": "Блок аметрина",
+  "block.mythicupgrades.ametrine_ruins": "Аметриносодежащий остаток",
+
+  "item.mythicupgrades.aquamarine": "Аквамарин",
+  "item.mythicupgrades.aquamarine_ingot": "Аквамариновый слиток",
+
+  "item.mythicupgrades.aquamarine_sword": "Аквамариновый меч",
+  "item.mythicupgrades.aquamarine_axe": "Аквамариновый топор",
+
+  "block.mythicupgrades.aquamarine_ore": "Аквамариновая руда",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Глубиносланцевая аквамариновая руда",
+  "block.mythicupgrades.aquamarine_block": "Блок аквамарина",
+  "block.mythicupgrades.aquamarine_ruins": "Аквамариносодежащий остаток",
+
+  "effect.mythicupgrades.thorns": "Шипы",
+  "effect.mythicupgrades.freeze": "Заморозка",
+
+  "sapphire.description": "§7Увеличивает урон. Броня дает эффект Шипы V.",
+  "ruby.description": "§7Увеличивает скорость атаки и добычи блоков.",
+  "jade.description": "§7Увеличивает защиту брони. Топор и меч отравляют противника.",
+  "topaz.description": "§7Незначительно усиляет инструменты, прочность увеличивается в 3 раза. Броня дает защиту от огня.",
+  "ametrine.description": "§7Броня дает эффекты Прыгучести II и Скорости II. Топор и меч заставляют врага левитировать.",
+  "aquamarine.description": "§7Топор и меч замораживают противника.",
+
+  "item.mythicupgrades.broken_sapphire_disc": "Сломанная музыкальная пластинка",
+  "item.mythicupgrades.broken_ruby_disc": "Сломанная музыкальная пластинка",
+  "item.mythicupgrades.broken_jade_disc": "Сломанная музыкальная пластинка",
+  "item.mythicupgrades.broken_topaz_disc": "Сломанная музыкальная пластинка",
+  "item.mythicupgrades.broken_ametrine_disc": "Сломанная музыкальная пластинка",
+  "item.mythicupgrades.broken_aquamarine_disc": "Сломанная музыкальная пластинка",
+
+  "sapphiredisc.description": "§7Почините этот диск сапфиром!",
+  "rubydisc.description": "§7Почините этот диск рубином!",
+  "jadedisc.description": "§7Почините этот диск нефритом!",
+  "topazdisc.description": "§7Почините этот диск топазом!",
+  "ametrinedisc.description": "§7Почините этот диск аметрином!",
+  "aquamarinedisc.description": "§7Почините этот диск аквамарином!",
+  
+  "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Добавьте нефритовый слиток",
+  "item.minecraft.smithing_template.jade_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
+  "item.minecraft.smithing_template.jade_upgrade.ingredients": "Нефритовый слиток",
+  "upgrade.minecraft.jade_upgrade": "Нефритовое улучшение",
+
+  "item.minecraft.smithing_template.topaz_upgrade.additions_slot_description": "Добавьте топазовый слиток",
+  "item.minecraft.smithing_template.topaz_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.topaz_upgrade.base_slot_description": "Добавьте незеритовую броню, оружие или инструмент",
+  "item.minecraft.smithing_template.topaz_upgrade.ingredients": "Топазовый слиток",
+  "upgrade.minecraft.topaz_upgrade": "Топазовое улучшение",
+
+  "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Добавьте аквамариновый слиток",
+  "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Добавьте незеритовую броню.",
+  "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Аквамариновый слиток",
+  "upgrade.minecraft.aquamarine_upgrade": "Аквамариновое улучшение",
+
+  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Добавьте сапфировый слиток",
+  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
+  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Сапфировый слиток",
+  "upgrade.minecraft.sapphire_upgrade": "Сапфировое улучшение",
+
+  "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Добавьте рубиновый слиток",
+  "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Добавьте незеритовое оружие или инструмент",
+  "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Рубиновый слиток",
+  "upgrade.minecraft.ruby_upgrade": "Рубиновое улучшение",
+
+  "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Добавьте аметриновый слиток",
+  "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
+  "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Аметриновый слиток",
+  "upgrade.minecraft.ametrine_upgrade": "Аметриновое улучшение",
+
+  "item.mythicupgrades.music_disc_soot": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
+  "item.mythicupgrades.music_disc_nelumbo": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
+  "item.mythicupgrades.music_disc_fierce": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
+  "item.mythicupgrades.music_disc_appomattox": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bМузыкальная пластинка",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss"
+}
