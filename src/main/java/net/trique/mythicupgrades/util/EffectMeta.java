@@ -21,7 +21,7 @@ public class EffectMeta {
 
 
     public static EffectMeta positive(Integer duration, Integer amplifier) {
-        return new EffectMeta(duration, amplifier, true, false, true);
+        return new EffectMeta(duration, amplifier, true, true, true);
     }
 
     public Integer getAmplifier() {
