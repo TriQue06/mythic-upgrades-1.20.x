@@ -9,14 +9,17 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class BrokenTopazDiscItem extends Item {
-    public BrokenTopazDiscItem(Settings settings) {
+public class BrokenDiscItem extends Item {
+
+    private final String translationKey;
+    public BrokenDiscItem(String translationKey, Settings settings) {
         super(settings);
+        this.translationKey = translationKey;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("topazdisc.description"));
+        tooltip.add(Text.translatable(translationKey));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }
