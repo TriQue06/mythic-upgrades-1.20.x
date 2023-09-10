@@ -16,12 +16,10 @@ public class ThornsEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.getWorld().isClient()) {
-
             Entity attacker = pLivingEntity.getAttacker();
-            int level = 2;
             if (pLivingEntity.hurtTime == 9) {
                 if (attacker != null){
-                    attacker.damage(pLivingEntity.getWorld().getDamageSources().thorns(pLivingEntity), pAmplifier + level);
+                    attacker.damage(pLivingEntity.getWorld().getDamageSources().thorns(pLivingEntity), pAmplifier);
                 }
             }
         }
