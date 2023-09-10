@@ -1,11 +1,11 @@
 package net.trique.mythicupgrades.util;
 
 public class EffectMeta {
-    private int amplifier;
-    private int duration;
-    private boolean ambient;
-    private boolean showParticles;
-    private boolean showIcon;
+    private final int amplifier;
+    private final int duration;
+    private final boolean ambient;
+    private final boolean showParticles;
+    private final boolean showIcon;
 
     public EffectMeta(int duration, int amplifier, boolean ambient, boolean showParticles, boolean showIcon) {
         this.amplifier = amplifier;
@@ -28,39 +28,17 @@ public class EffectMeta {
         return amplifier;
     }
 
-    public void setAmplifier(int amplifier) {
-        this.amplifier = amplifier;
-    }
-
     public int getDuration() {
         return duration;
     }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
     public boolean isAmbient() {
         return ambient;
     }
-
-    public void setAmbient(boolean ambient) {
-        this.ambient = ambient;
-    }
-
     public boolean shouldShowParticles() {
         return showParticles;
     }
 
-    public void setShowParticles(boolean showParticles) {
-        this.showParticles = showParticles;
-    }
-
     public boolean shouldShowIcon() {
         return showIcon;
-    }
-
-    public void setShowIcon(boolean showIcon) {
-        this.showIcon = showIcon;
     }
 }
