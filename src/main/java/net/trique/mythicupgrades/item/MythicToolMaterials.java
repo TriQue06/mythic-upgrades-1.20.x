@@ -1,22 +1,21 @@
 package net.trique.mythicupgrades.item;
 
 import net.fabricmc.yarn.constants.MiningLevels;
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Lazy;
+import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
 import java.util.function.Supplier;
 
 public enum MythicToolMaterials implements ToolMaterial {
 
-    SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 6.0f, 18, () -> Ingredient.ofItems(MythicItems.SAPPHIRE_INGOT)),
-    RUBY(MiningLevels.NETHERITE, 2106, 12.0f, 4.0f, 18, () -> Ingredient.ofItems(MythicItems.RUBY_INGOT)),
-    JADE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(MythicItems.JADE_INGOT)),
-    TOPAZ(MiningLevels.NETHERITE, 6318, 10.0f, 4.5f, 18, () -> Ingredient.ofItems(MythicItems.TOPAZ_INGOT)),
-    AMETRINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(MythicItems.AMETRINE_INGOT)),
-    AQUAMARINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(MythicItems.AQUAMARINE_INGOT));
+    SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 6.0f, 18, () -> Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
+    RUBY(MiningLevels.NETHERITE, 2106, 12.0f, 4.0f, 18, () -> Ingredient.ofItems(RegisterMythicItems.RUBY_INGOT)),
+    JADE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
+    TOPAZ(MiningLevels.NETHERITE, 6318, 10.0f, 4.5f, 18, () -> Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
+    AMETRINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT)),
+    AQUAMARINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, () -> Ingredient.ofItems(RegisterMythicItems.AQUAMARINE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;
