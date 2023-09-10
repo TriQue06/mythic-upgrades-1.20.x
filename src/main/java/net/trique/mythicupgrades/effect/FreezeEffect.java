@@ -1,12 +1,8 @@
 package net.trique.mythicupgrades.effect;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.Activity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.entity.mob.MobEntity;
-
-import java.util.Set;
 
 public class FreezeEffect extends StatusEffect {
     public FreezeEffect(StatusEffectCategory statusEffectCategory, int color) {

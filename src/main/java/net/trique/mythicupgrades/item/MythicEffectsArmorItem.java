@@ -90,6 +90,6 @@ public class MythicEffectsArmorItem extends ArmorItem implements MythicItem {
 
     @Override
     public HashMap<StatusEffect, EffectMeta> getForSelf() {
-        return effects.getAllEffects();
+        return effects.allEffects();
     }
 }

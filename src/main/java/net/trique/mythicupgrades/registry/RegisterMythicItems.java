@@ -2,7 +2,6 @@ package net.trique.mythicupgrades.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -19,8 +18,6 @@ import net.trique.mythicupgrades.util.ArmorEffectsList;
 import net.trique.mythicupgrades.util.ArmorEffectsListBuilder;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
-
-import java.util.HashMap;
 
 public class RegisterMythicItems {
     
