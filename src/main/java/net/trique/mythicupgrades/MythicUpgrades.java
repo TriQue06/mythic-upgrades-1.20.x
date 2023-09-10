@@ -3,9 +3,8 @@ package net.trique.mythicupgrades;
 import net.fabricmc.api.ModInitializer;
 
 import net.trique.mythicupgrades.block.MythicBlocks;
-import net.trique.mythicupgrades.effect.MythicEffects;
-import net.trique.mythicupgrades.item.MythicItemGroup;
-import net.trique.mythicupgrades.item.MythicItems;
+import net.trique.mythicupgrades.registry.RegisterMythicEffects;
+import net.trique.mythicupgrades.registry.RegisterMythicItems;
 import net.trique.mythicupgrades.world.gen.MythicWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,10 +15,9 @@ public class MythicUpgrades implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		MythicItemGroup.registerMythicGroups();
-		MythicItems.registerMythicItems();
+		RegisterMythicEffects.registerEffects();
+		RegisterMythicItems.registerMythicItems();
 		MythicBlocks.registerMythicBlocks();
-		MythicEffects.registerEffects();
 		MythicWorldGeneration.generateModWorldGen();
 		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARŞİM <3!");
 	}
