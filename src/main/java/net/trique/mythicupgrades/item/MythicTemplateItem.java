@@ -3,18 +3,13 @@
 // (powered by FernFlower decompiler)
 //
 
-package net.trique.mythicupgrades.item.custom;
+package net.trique.mythicupgrades.item;
 
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.SmithingTemplateItem;
-import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -83,7 +78,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getJadeUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
     }
 
     private static List<Identifier> getJadeUpgradeEmptyAdditionsSlotTextures() {
@@ -107,7 +102,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_AXE_TEXTURE);
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyAdditionsSlotTextures() {
@@ -119,7 +114,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getSapphireUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
     }
 
     private static List<Identifier> getSapphireUpgradeEmptyAdditionsSlotTextures() {
@@ -131,7 +126,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getRubyUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
     }
 
     private static List<Identifier> getRubyUpgradeEmptyAdditionsSlotTextures() {
@@ -143,7 +138,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getAmetrineUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
     }
 
     private static List<Identifier> getAmetrineUpgradeEmptyAdditionsSlotTextures() {
@@ -180,12 +175,12 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE = new Identifier("item/empty_armor_slot_chestplate");
         EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE = new Identifier("item/empty_armor_slot_leggings");
         EMPTY_ARMOR_SLOT_BOOTS_TEXTURE = new Identifier("item/empty_armor_slot_boots");
-        EMPTY_SLOT_HOE_TEXTURE = new Identifier("minecraft:item/empty_slot_hoe");
-        EMPTY_SLOT_AXE_TEXTURE = new Identifier("minecraft:item/empty_slot_axe");
-        EMPTY_SLOT_SWORD_TEXTURE = new Identifier("minecraft:item/empty_slot_sword");
-        EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("minecraft:item/empty_slot_shovel");
-        EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("minecraft:item/empty_slot_pickaxe");
-        EMPTY_SLOT_INGOT_TEXTURE = new Identifier("minecraft:item/empty_slot_ingot");
+        EMPTY_SLOT_HOE_TEXTURE = new Identifier("item/empty_slot_hoe");
+        EMPTY_SLOT_AXE_TEXTURE = new Identifier("item/empty_slot_axe");
+        EMPTY_SLOT_SWORD_TEXTURE = new Identifier("item/empty_slot_sword");
+        EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("item/empty_slot_shovel");
+        EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("item/empty_slot_pickaxe");
+        EMPTY_SLOT_INGOT_TEXTURE = new Identifier(":item/empty_slot_ingot");
 
         JADE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("jade_upgrade"))).formatted(TITLE_FORMATTING);
         JADE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.jade_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);

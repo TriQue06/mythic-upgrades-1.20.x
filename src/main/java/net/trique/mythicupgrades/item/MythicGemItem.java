@@ -1,38 +1,34 @@
-package net.trique.mythicupgrades.item.custom;
+package net.trique.mythicupgrades.item;
 
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
+import net.trique.mythicupgrades.util.ItemEffectsList;
+import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicGemItem extends Item {
-
-    private final HashMap<StatusEffect, EffectMeta> effects;
+public class MythicGemItem extends Item implements MythicItem {
+    private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String translationKey;
 
-    public MythicGemItem(String translationKey, HashMap<StatusEffect, EffectMeta> effects, Settings settings) {
+    public MythicGemItem(String translationKey, ItemEffectsList effects, Settings settings) {
         super(settings);
-        this.effects = effects;
+        this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.translationKey = translationKey;
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        for (StatusEffect effect: effects.keySet()) {
-            int duration = effects.get(effect).getDuration();
-            int amplifier = effects.get(effect).getAmplifier();
-            target.addStatusEffect(new StatusEffectInstance(effect, duration, amplifier), attacker);
-        }
+        virtualItemHandler.handlePostHit(target, attacker);
         return super.postHit(stack, target, attacker);
     }
 
@@ -42,4 +38,8 @@ public class MythicGemItem extends Item {
         super.appendTooltip(stack, world, tooltip, context);
     }
 
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getForSelf() {
+        return virtualItemHandler.getSelfEffects();
+    }
 }

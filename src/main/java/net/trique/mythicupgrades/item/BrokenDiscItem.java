@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item.custom;
+package net.trique.mythicupgrades.item;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
