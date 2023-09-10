@@ -1,12 +1,10 @@
 package net.trique.mythicupgrades.item;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
