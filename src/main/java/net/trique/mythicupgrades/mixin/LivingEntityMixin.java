@@ -7,7 +7,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.trique.mythicupgrades.item.BaseMythicItem;
-import net.trique.mythicupgrades.item.MythicEffectsArmorItem;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -40,12 +39,11 @@ public abstract class LivingEntityMixin {
     @Inject(method = "tick", at = @At(value = "HEAD"))
     public void checkItemInHand(CallbackInfo ci) {
         if (!this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty() &&
-                (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item) &&
-                !(this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsArmorItem)) {
+                (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
             if (lastUsed != null) {
                 removeInfiniteEffects(lastUsed);
             }
-            HashMap<StatusEffect, EffectMeta> effects = item.getForSelf();
+            HashMap<StatusEffect, EffectMeta> effects = item.getMainHandEffects();
             lastUsed = item;
             for (StatusEffect effect : effects.keySet()) {
                 if (effect != null && !effect.isInstant()) {
@@ -66,7 +64,7 @@ public abstract class LivingEntityMixin {
     @Unique
     public void removeInfiniteEffects(BaseMythicItem item) {
         if (item != null) {
-            HashMap<StatusEffect, EffectMeta> effects = item.getForSelf();
+            HashMap<StatusEffect, EffectMeta> effects = item.getMainHandEffects();
             for (StatusEffect effect : effects.keySet()) {
                 if (effect != null && this.hasStatusEffect(effect) && this.getActiveStatusEffects().get(effect).isInfinite()) {
                     this.removeStatusEffect(effect);
