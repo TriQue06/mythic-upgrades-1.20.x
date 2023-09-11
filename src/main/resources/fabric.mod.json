@@ -5,7 +5,9 @@
 	"name": "Mythic Upgrades",
 	"description": "Mythic Upgrades adds new mythic ways to upgrade Netherite gear with new ores.",
 	"authors": [
-		"TriQue",
+		"TriQue"
+	],
+	"contributors": [
 		"CyberSteve777"
 	],
 	"contact": {
