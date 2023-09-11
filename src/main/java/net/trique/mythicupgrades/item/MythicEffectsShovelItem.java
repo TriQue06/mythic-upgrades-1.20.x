@@ -11,7 +11,7 @@ import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 
 import java.util.HashMap;
 
-public class MythicEffectsShovelItem extends ShovelItem implements MythicItem {
+public class MythicEffectsShovelItem extends ShovelItem implements BaseMythicItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
 
     public MythicEffectsShovelItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings, ItemEffectsList effects) {

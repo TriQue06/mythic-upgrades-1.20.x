@@ -9,7 +9,7 @@ import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 
 import java.util.HashMap;
 
-public class MythicEffectsPickaxeItem extends PickaxeItem implements MythicItem {
+public class MythicEffectsPickaxeItem extends PickaxeItem implements BaseMythicItem {
 
     private final MythicEffectVirtualItemHandler virtualItemHandler;
 

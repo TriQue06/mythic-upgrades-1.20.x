@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class Functions {
     public static boolean isMythicItem(Item item) {
-        return item instanceof MythicItem;
+        return item instanceof BaseMythicItem;
     }
 
 

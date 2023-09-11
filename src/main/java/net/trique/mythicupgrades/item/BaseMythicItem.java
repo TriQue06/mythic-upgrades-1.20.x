@@ -5,7 +5,7 @@ import net.trique.mythicupgrades.util.EffectMeta;
 
 import java.util.HashMap;
 
-public interface MythicItem {
+public interface BaseMythicItem {
     HashMap<StatusEffect, EffectMeta> getForSelf();
 
 }

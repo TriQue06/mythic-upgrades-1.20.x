@@ -12,7 +12,7 @@ import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 
 import java.util.HashMap;
 
-public class MythicEffectsSwordItem extends SwordItem implements MythicItem {
+public class MythicEffectsSwordItem extends SwordItem implements BaseMythicItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
 
     public MythicEffectsSwordItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings, ItemEffectsList effects) {

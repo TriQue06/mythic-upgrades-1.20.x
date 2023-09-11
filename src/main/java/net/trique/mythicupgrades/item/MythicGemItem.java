@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicGemItem extends Item implements MythicItem {
+public class MythicGemItem extends Item implements BaseMythicItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String translationKey;
 

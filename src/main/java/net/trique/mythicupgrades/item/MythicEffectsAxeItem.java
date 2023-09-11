@@ -11,7 +11,7 @@ import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 
 import java.util.HashMap;
 
-public class MythicEffectsAxeItem extends AxeItem implements MythicItem {
+public class MythicEffectsAxeItem extends AxeItem implements BaseMythicItem {
 
     private final MythicEffectVirtualItemHandler virtualItemHandler;
 

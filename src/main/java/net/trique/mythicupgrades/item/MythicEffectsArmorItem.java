@@ -15,7 +15,7 @@ import net.trique.mythicupgrades.util.EffectMeta;
 
 import java.util.*;
 
-public class MythicEffectsArmorItem extends ArmorItem implements MythicItem {
+public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem {
     private final ArmorEffectsList effects;
 
     public MythicEffectsArmorItem(ArmorMaterial material, Type type, Settings settings, ArmorEffectsList effects) {
