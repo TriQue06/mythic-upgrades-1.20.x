@@ -30,7 +30,7 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
                 if (hasFullSuitOfArmorOn(player) && hasCorrectArmorOn(this.getMaterial(), player)) {
                     addStatusEffects(player);
                 } else {
-                    for (StatusEffect effect : effects.getForEquipment().keySet()) {
+                    for (StatusEffect effect : getEquipmentEffects().keySet()) {
                         if (player.hasStatusEffect(effect) && player.getActiveStatusEffects().get(effect).isInfinite()) {
                             player.removeStatusEffect(effect);
                         }
@@ -67,8 +67,8 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
 
 
     private void addStatusEffects(PlayerEntity player) {
-        for (StatusEffect effect : effects.getForEquipment().keySet()) {
-            EffectMeta meta = effects.getForEquipment().get(effect);
+        for (StatusEffect effect : getEquipmentEffects().keySet()) {
+            EffectMeta meta = getEquipmentEffects().get(effect);
             if (effect != null) {
                 player.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()));
