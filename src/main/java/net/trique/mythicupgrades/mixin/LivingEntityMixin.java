@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.trique.mythicupgrades.item.BaseMythicItem;
+import net.trique.mythicupgrades.item.MythicEffectsArmorItem;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -33,14 +34,14 @@ public abstract class LivingEntityMixin {
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
 
     @Shadow public abstract Map<StatusEffect, StatusEffectInstance> getActiveStatusEffects();
-
     @Unique
     private BaseMythicItem lastUsed;
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
     public void checkItemInHand(CallbackInfo ci) {
         if (!this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty() &&
-                (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
+                (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item) &&
+                !(this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsArmorItem)) {
             if (lastUsed != null) {
                 removeInfiniteEffects(lastUsed);
             }
