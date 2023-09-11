@@ -12,7 +12,7 @@
 		"sources": "https://github.com/TriQue06/mythic-upgrades-1.20.x",
 		"issues": "https://github.com/TriQue06/mythic-upgrades-1.20.x/issues"
 	},
-	"license": "CC0 1.0 Universal",
+	"license": "MIT",
 	"icon": "assets/mythicupgrades/icon.png",
 	"environment": "*",
 	"entrypoints": {
