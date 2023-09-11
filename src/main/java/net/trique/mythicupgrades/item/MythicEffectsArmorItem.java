@@ -10,15 +10,15 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.trique.mythicupgrades.util.ArmorEffectsList;
 import net.trique.mythicupgrades.util.EffectMeta;
+import net.trique.mythicupgrades.util.ItemEffectsList;
 
 import java.util.*;
 
 public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem {
-    private final ArmorEffectsList effects;
+    private final ItemEffectsList effects;
 
-    public MythicEffectsArmorItem(ArmorMaterial material, Type type, Settings settings, ArmorEffectsList effects) {
+    public MythicEffectsArmorItem(ArmorMaterial material, Type type, Settings settings, ItemEffectsList effects) {
         super(material, type, settings);
         this.effects = effects;
     }
@@ -30,7 +30,7 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
                 if (hasFullSuitOfArmorOn(player) && hasCorrectArmorOn(this.getMaterial(), player)) {
                     addStatusEffects(player);
                 } else {
-                    for (StatusEffect effect : effects.getEffectsSet()) {
+                    for (StatusEffect effect : effects.getForEquipment().keySet()) {
                         if (player.hasStatusEffect(effect) && player.getActiveStatusEffects().get(effect).isInfinite()) {
                             player.removeStatusEffect(effect);
                         }
@@ -65,22 +65,10 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
         return result;
     }
 
-//    private boolean doesArmorHaveMaterial(PlayerEntity player) {
-//        for (int i = 0; i < 4; i++) {
-//            try {
-//                ((ArmorItem) player.getInventory().getArmorStack(i).getItem()).getMaterial();
-//            } catch (Exception e) {
-//                return false;
-//            }
-//        }
-//
-//        return true;
-//    }
-
 
     private void addStatusEffects(PlayerEntity player) {
-        for (StatusEffect effect : effects.getEffectsSet()) {
-            EffectMeta meta = effects.getAmplifierByEffect(effect);
+        for (StatusEffect effect : effects.getForEquipment().keySet()) {
+            EffectMeta meta = effects.getForEquipment().get(effect);
             if (effect != null) {
                 player.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()));
@@ -89,7 +77,12 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getForSelf() {
-        return effects.allEffects();
+    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+        return effects.getForMainHand();
+    }
+
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
+        return effects.getForEquipment();
     }
 }

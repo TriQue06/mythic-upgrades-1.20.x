@@ -14,36 +14,34 @@ import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.effect.MythicEffects;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.sound.MythicSounds;
-import net.trique.mythicupgrades.util.ArmorEffectsList;
-import net.trique.mythicupgrades.util.ArmorEffectsListBuilder;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
 public class RegisterMythicItems {
     
 
-    private static final ArmorEffectsList sapphireArmourEffects = new ArmorEffectsListBuilder().addEffect(MythicEffects.THORNS, 4).build();
-    private static final ArmorEffectsList ametrineArmourEffects = new ArmorEffectsListBuilder().addEffect(StatusEffects.SPEED, 1).addEffect(StatusEffects.JUMP_BOOST, 1).build();
-    private static final ArmorEffectsList topazArmourEffects = new ArmorEffectsListBuilder().addEffect(StatusEffects.FIRE_RESISTANCE, 0).build();
+    private static final ItemEffectsList sapphireArmourEffects = new ItemEffectsListBuilder().addForEquipment(MythicEffects.THORNS, 4).build();
+    private static final ItemEffectsList ametrineArmourEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.SPEED, 1).addForEquipment(StatusEffects.JUMP_BOOST, 1).build();
+    private static final ItemEffectsList topazArmourEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.FIRE_RESISTANCE, 0).build();
 
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.POISON, 40, 3).build();
+    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
     private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.LEVITATION, 10, 4).build();
-    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForOthers(MythicEffects.FREEZE, 20, 0).build();
-    private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForOthers(MythicEffects.FREEZE, 20, 0).build();
+    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
+    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
+    private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
 
-    private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForOthers(MythicEffects.FREEZE, 20, 0).build();
-    private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.LEVITATION, 10, 4).build();
-    private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.LEVITATION, 10, 4).build();
-    private static final ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.POISON, 40, 3).build();
-    private static final ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForOthers(StatusEffects.POISON, 40, 3).build();
-    private static final ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForSelf(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
-    private static final ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForSelf(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
-    private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForSelf(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
-    private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForSelf(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
-    private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForSelf(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
+    private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
+    private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
+    private static final ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
+    private static final ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
+    private static final ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
 
     public static final Item BROKEN_SAPPHIRE_DISC = registerItem("broken_sapphire_disc",
             new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16)));

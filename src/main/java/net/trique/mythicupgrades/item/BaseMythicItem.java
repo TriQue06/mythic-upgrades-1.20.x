@@ -6,6 +6,7 @@ import net.trique.mythicupgrades.util.EffectMeta;
 import java.util.HashMap;
 
 public interface BaseMythicItem {
-    HashMap<StatusEffect, EffectMeta> getForSelf();
+    HashMap<StatusEffect, EffectMeta> getMainHandEffects();
+    HashMap<StatusEffect, EffectMeta> getEquipmentEffects();
 
 }

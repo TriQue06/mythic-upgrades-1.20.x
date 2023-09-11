@@ -26,7 +26,11 @@ public class MythicEffectsShovelItem extends ShovelItem implements BaseMythicIte
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getForSelf() {
-        return virtualItemHandler.getSelfEffects();
+    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+        return virtualItemHandler.getMainHandEffects();
+    }
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
+        return virtualItemHandler.getEquipmentEffects();
     }
 }

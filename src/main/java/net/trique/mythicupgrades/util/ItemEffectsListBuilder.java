@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.util;
 
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 
 import java.util.HashMap;
 
@@ -9,16 +10,22 @@ public class ItemEffectsListBuilder {
 
     public ItemEffectsListBuilder() {
         allEffects = new HashMap<>();
-        allEffects.put(Target.SELF, new HashMap<>());
-        allEffects.put(Target.OTHERS, new HashMap<>());
+        allEffects.put(Target.IN_MAIN_HAND, new HashMap<>());
+        allEffects.put(Target.ON_HIT, new HashMap<>());
+        allEffects.put(Target.ON_EQUIPMENT, new HashMap<>());
     }
 
-    public ItemEffectsListBuilder addForSelf(StatusEffect effect, int duration, int amplifier) {
-        allEffects.get(Target.SELF).put(effect, EffectMeta.partiallyVisible(duration, amplifier));
+    public ItemEffectsListBuilder addForMainHand(StatusEffect effect, int duration, int amplifier) {
+        allEffects.get(Target.IN_MAIN_HAND).put(effect, EffectMeta.partiallyVisible(duration, amplifier));
         return this;
     }
-    public ItemEffectsListBuilder addForOthers(StatusEffect effect, int duration, int amplifier) {
-        allEffects.get(Target.OTHERS).put(effect, EffectMeta.fullyVisible(duration, amplifier));
+    public ItemEffectsListBuilder addForHit(StatusEffect effect, int duration, int amplifier) {
+        allEffects.get(Target.ON_HIT).put(effect, EffectMeta.fullyVisible(duration, amplifier));
+        return this;
+    }
+
+    public ItemEffectsListBuilder addForEquipment(StatusEffect effect, int amplifier) {
+        allEffects.get(Target.ON_EQUIPMENT).put(effect, EffectMeta.partiallyVisible(StatusEffectInstance.INFINITE, amplifier));
         return this;
     }
 

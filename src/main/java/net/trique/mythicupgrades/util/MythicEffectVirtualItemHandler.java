@@ -34,7 +34,10 @@ public class MythicEffectVirtualItemHandler {
 
         }
     }
-    public HashMap<StatusEffect, EffectMeta> getSelfEffects() {
-        return allEffects.getForSelf();
+    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+        return allEffects.getForMainHand();
+    }
+    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
+        return allEffects.getForEquipment();
     }
 }

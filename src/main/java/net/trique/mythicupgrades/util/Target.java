@@ -1,14 +1,11 @@
 package net.trique.mythicupgrades.util;
 
 public enum Target {
-    SELF(0),
-    OTHERS(1);
-    private final int type;
+    IN_MAIN_HAND(),
+    ON_HIT(),
+    ON_EQUIPMENT();
 
-    Target(int type) {
-        this.type = type;
+    Target() {
     }
-
-
 
 }

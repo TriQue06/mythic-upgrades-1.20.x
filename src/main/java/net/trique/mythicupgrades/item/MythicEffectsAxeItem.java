@@ -27,7 +27,12 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicItem {
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getForSelf() {
-        return virtualItemHandler.getSelfEffects();
+    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+        return virtualItemHandler.getMainHandEffects();
+    }
+
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
+        return virtualItemHandler.getEquipmentEffects();
     }
 }

@@ -13,14 +13,16 @@ public class ItemEffectsList {
 
     public ItemEffectsList() {
         allEffects = new HashMap<>();
-        allEffects.put(Target.SELF, new HashMap<>());
-        allEffects.put(Target.OTHERS, new HashMap<>());
+        allEffects.put(Target.IN_MAIN_HAND, new HashMap<>());
+        allEffects.put(Target.ON_HIT, new HashMap<>());
+        allEffects.put(Target.ON_EQUIPMENT, new HashMap<>());
     }
 
-    public HashMap<StatusEffect, EffectMeta> getForSelf() {
-        return allEffects.get(Target.SELF);
+    public HashMap<StatusEffect, EffectMeta> getForMainHand() {
+        return allEffects.get(Target.IN_MAIN_HAND);
     }
+    public HashMap<StatusEffect, EffectMeta> getForEquipment() {return allEffects.get(Target.ON_EQUIPMENT);}
     public HashMap<StatusEffect, EffectMeta> getForOthers() {
-        return allEffects.get(Target.OTHERS);
+        return allEffects.get(Target.ON_HIT);
     }
 }
