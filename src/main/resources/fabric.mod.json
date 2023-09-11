@@ -5,9 +5,14 @@
 	"name": "Mythic Upgrades",
 	"description": "Mythic Upgrades adds new mythic ways to upgrade Netherite gear with new ores.",
 	"authors": [
-		"TriQue"
+		"TriQue",
+		"CyberSteve777"
 	],
-	"license": "what licence O_O",
+	"contact": {
+		"sources": "https://github.com/TriQue06/mythic-upgrades-1.20.x",
+		"issues": "https://github.com/TriQue06/mythic-upgrades-1.20.x/issues"
+	},
+	"license": "CC0 1.0 Universal",
 	"icon": "assets/mythicupgrades/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -25,7 +30,8 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "Also try Warden Tools!"
+		"wardentools": "*",
+		"another-mod": "*"
 	},
 	"mixins": [
 		"mythicupgrades.mixins.json"
