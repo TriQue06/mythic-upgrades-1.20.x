@@ -76,8 +76,8 @@ public class RegisterMythicItems {
             new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 3, -2.4f,
                     (new FabricItemSettings().fireproof()), freezeSwordItemEffects));
     public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet",
-            new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,
-                    new FabricItemSettings().fireproof(), sapphireArmourEffects));
+            new ArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,
+                    new FabricItemSettings().fireproof()));
     public static final Item SAPPHIRE_CHESTPLATE = registerItem("sapphire_chestplate",
             new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE,
                     new FabricItemSettings().fireproof(), sapphireArmourEffects));
@@ -85,8 +85,8 @@ public class RegisterMythicItems {
             new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.LEGGINGS,
                     new FabricItemSettings().fireproof(), sapphireArmourEffects));
     public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots",
-            new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS,
-                    new FabricItemSettings().fireproof(), sapphireArmourEffects));
+            new ArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS,
+                    new FabricItemSettings().fireproof()));
     public static final Item SAPPHIRE = registerItem("sapphire",
             new MythicGemItem("sapphire.description", sapphireItemEffects, new FabricItemSettings()));
     public static final Item SAPPHIRE_INGOT = registerItem("sapphire_ingot",
@@ -142,11 +142,11 @@ public class RegisterMythicItems {
     public static final Item TOPAZ_SWORD = registerItem("topaz_sword",
             new SwordItem(MythicToolMaterials.TOPAZ, 3, -2.4f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_HELMET = registerItem("topaz_helmet",
-            new MythicEffectsArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.HELMET,
-                    new FabricItemSettings().fireproof(), topazArmourEffects));
+            new ArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.HELMET,
+                    new FabricItemSettings().fireproof()));
     public static final Item TOPAZ_CHESTPLATE = registerItem("topaz_chestplate",
-            new MythicEffectsArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.CHESTPLATE,
-                    new FabricItemSettings().fireproof(), topazArmourEffects));
+            new ArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.CHESTPLATE,
+                    new FabricItemSettings().fireproof()));
     public static final Item TOPAZ_LEGGINGS = registerItem("topaz_leggings",
             new MythicEffectsArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.LEGGINGS,
                     new FabricItemSettings().fireproof(), topazArmourEffects));
@@ -165,11 +165,11 @@ public class RegisterMythicItems {
             new MythicEffectsSwordItem(MythicToolMaterials.AMETRINE, 3, -2.4f,
                     (new FabricItemSettings().fireproof()), levitationSwordItemEffects));
     public static final Item AMETRINE_HELMET = registerItem("ametrine_helmet",
-            new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.HELMET,
-                    new FabricItemSettings().fireproof(), ametrineArmourEffects));
+            new ArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.HELMET,
+                    new FabricItemSettings().fireproof()));
     public static final Item AMETRINE_CHESTPLATE = registerItem("ametrine_chestplate",
-            new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE,
-                    new FabricItemSettings().fireproof(), ametrineArmourEffects));
+            new ArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE,
+                    new FabricItemSettings().fireproof()));
     public static final Item AMETRINE_LEGGINGS = registerItem("ametrine_leggings",
             new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS,
                     new FabricItemSettings().fireproof(), ametrineArmourEffects));
