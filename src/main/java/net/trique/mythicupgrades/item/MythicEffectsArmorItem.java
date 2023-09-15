@@ -2,17 +2,15 @@ package net.trique.mythicupgrades.item;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
-
 import java.util.*;
 
 public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem {
@@ -26,13 +24,13 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient()) {
-            if (entity instanceof PlayerEntity player) {
-                if (hasFullSuitOfArmorOn(player) && hasCorrectArmorOn(this.getMaterial(), player)) {
-                    addStatusEffects(player);
+            if (entity instanceof LivingEntity livingEntity) {
+                if (hasCorrectArmorOn(livingEntity)) {
+                    addStatusEffects(livingEntity);
                 } else {
                     for (StatusEffect effect : getEquipmentEffects().keySet()) {
-                        if (player.hasStatusEffect(effect) && player.getActiveStatusEffects().get(effect).isInfinite()) {
-                            player.removeStatusEffect(effect);
+                        if (livingEntity.hasStatusEffect(effect) && livingEntity.getActiveStatusEffects().get(effect).isInfinite()) {
+                            livingEntity.removeStatusEffect(effect);
                         }
                     }
                 }
@@ -42,35 +40,28 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        boolean result = true;
+    private boolean hasCorrectArmorOn(LivingEntity entity) {
         ArrayList<EquipmentSlot> slots = new ArrayList<>(Arrays.asList(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET));
         for (EquipmentSlot slot : slots) {
-            result &= !player.getEquippedStack(slot).isEmpty();
-        }
-        return result;
-    }
-
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        boolean result = true;
-        for (int i = 0; i < 4; ++i) {
-            Item item = player.getInventory().getArmorStack(i).getItem();
-            try {
-                ArmorMaterial m = ((ArmorItem) item).getMaterial();
-                result &= m.equals(material);
-            } catch (Exception e) {
+            ItemStack stack = entity.getEquippedStack(slot);
+            if (stack.isEmpty()) {
+                return false;
+            }
+            if (!(stack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+            if (!((ArmorItem) stack.getItem()).getMaterial().equals(this.material)) {
                 return false;
             }
         }
-        return result;
+        return true;
     }
 
-
-    private void addStatusEffects(PlayerEntity player) {
+    private void addStatusEffects(LivingEntity entity) {
         for (StatusEffect effect : getEquipmentEffects().keySet()) {
             EffectMeta meta = getEquipmentEffects().get(effect);
             if (effect != null) {
-                player.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
+                entity.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()));
             }
         }
@@ -84,5 +75,10 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
     @Override
     public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
         return effects.getForEquipment();
+    }
+
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+        return effects.getForOthers();
     }
 }

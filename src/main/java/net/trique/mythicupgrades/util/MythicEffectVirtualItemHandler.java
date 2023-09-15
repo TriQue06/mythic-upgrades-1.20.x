@@ -40,4 +40,8 @@ public class MythicEffectVirtualItemHandler {
     public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
         return allEffects.getForEquipment();
     }
+
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+        return allEffects.getForOthers();
+    }
 }

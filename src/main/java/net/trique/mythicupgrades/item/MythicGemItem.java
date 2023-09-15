@@ -45,4 +45,9 @@ public class MythicGemItem extends Item implements BaseMythicItem {
     public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
         return virtualItemHandler.getEquipmentEffects();
     }
+
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+        return virtualItemHandler.getOnHitEffects();
+    }
 }
