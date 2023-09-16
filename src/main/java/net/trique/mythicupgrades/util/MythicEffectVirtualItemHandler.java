@@ -28,7 +28,7 @@ public class MythicEffectVirtualItemHandler {
             boolean showIcon = meta.shouldShowIcon();
             boolean showParticles = meta.shouldShowParticles();
             if (effect != null && ((effect.equals(StatusEffects.INSTANT_HEALTH) && (target.getGroup().equals(EntityGroup.UNDEAD))) ||
-                    (!(effect.equals(StatusEffects.INSTANT_DAMAGE) && (target.getGroup().equals(EntityGroup.UNDEAD))))) || !effect.isInstant()) {
+                    (!(effect.equals(StatusEffects.INSTANT_DAMAGE) && (target.getGroup().equals(EntityGroup.UNDEAD)))) || !effect.isInstant())) {
                 target.addStatusEffect(new StatusEffectInstance(effect, duration, amplifier, ambient, showParticles, showIcon), attacker);
             }
 
