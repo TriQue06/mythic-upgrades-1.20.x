@@ -4,12 +4,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
+import net.trique.mythicupgrades.util.Functions;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import java.util.*;
 
@@ -26,7 +26,7 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
         if (!world.isClient()) {
             if (entity instanceof LivingEntity livingEntity) {
                 if (hasCorrectArmorOn(livingEntity)) {
-                    addStatusEffects(livingEntity);
+                    Functions.addStatusEffects(livingEntity, this.getEquipmentEffects());
                 } else {
                     for (StatusEffect effect : getEquipmentEffects().keySet()) {
                         if (livingEntity.hasStatusEffect(effect) && livingEntity.getActiveStatusEffects().get(effect).isInfinite()) {
@@ -55,16 +55,6 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
             }
         }
         return true;
-    }
-
-    private void addStatusEffects(LivingEntity entity) {
-        for (StatusEffect effect : getEquipmentEffects().keySet()) {
-            EffectMeta meta = getEquipmentEffects().get(effect);
-            if (effect != null) {
-                entity.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
-                        meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()));
-            }
-        }
     }
 
     @Override
