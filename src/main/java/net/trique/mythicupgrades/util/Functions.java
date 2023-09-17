@@ -3,11 +3,22 @@ package net.trique.mythicupgrades.util;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.EntityGroup;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Functions {
     public static ClientPlayerEntity getLocalPlayer() {
@@ -28,5 +39,32 @@ public class Functions {
 
     public static void addStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         addStatusEffects(entity, effects, null);
+    }
+
+
+    public static void handleTooltipForArmor(ItemStack stack, List<Text> tooltips, String tooltipSB, Formatting color, ArmorMaterial material) {
+        ClientPlayerEntity player = getLocalPlayer();
+        MutableText tooltip = Text.translatable(tooltipSB).formatted(color).formatted(Formatting.ITALIC);
+        ArrayList<ItemStack> toCheck = new ArrayList<>();
+        player.getArmorItems().forEach(toCheck::add);
+        if (hasCorrectArmorOn(player, material) && toCheck.contains(stack)) {
+            tooltips.add(tooltip);
+        }
+    }
+    public static boolean hasCorrectArmorOn(LivingEntity entity, ArmorMaterial material) {
+        ArrayList<EquipmentSlot> slots = new ArrayList<>(Arrays.asList(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET));
+        for (EquipmentSlot slot : slots) {
+            ItemStack stack = entity.getEquippedStack(slot);
+            if (stack.isEmpty()) {
+                return false;
+            }
+            if (!(stack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+            if (!((ArmorItem) stack.getItem()).getMaterial().equals(material)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
