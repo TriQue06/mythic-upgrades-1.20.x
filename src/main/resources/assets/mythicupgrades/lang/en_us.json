@@ -100,6 +100,8 @@
   "effect.mythicupgrades.thorns": "Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
 
+  "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented",
+
   "aquamarine.description": "Freezes enemy on hit.",
   "aquamarine_axe.description": "Freezes enemy on hit.",
   "aquamarine_sword.description": "Freezes enemy on hit.",

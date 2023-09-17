@@ -100,6 +100,9 @@
   "effect.mythicupgrades.thorns": "Шипы",
   "effect.mythicupgrades.freeze": "Заморозка",
 
+  "defaultArmorTooltip.description": "Попробуйте надеть полный комплект брони чтобы получить его бонусы, если они есть",
+
+
   "aquamarine.description": "Замораживает противника при ударе.",
   "aquamarine_axe.description": "Замораживает противника при ударе.",
   "aquamarine_sword.description": "Замораживает противника при ударе.",
