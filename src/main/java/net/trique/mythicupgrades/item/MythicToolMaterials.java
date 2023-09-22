@@ -3,10 +3,7 @@ package net.trique.mythicupgrades.item;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Lazy;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
-
-import java.util.function.Supplier;
 
 public enum MythicToolMaterials implements ToolMaterial {
 

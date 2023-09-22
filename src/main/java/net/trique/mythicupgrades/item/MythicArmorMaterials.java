@@ -1,7 +1,6 @@
 package net.trique.mythicupgrades.item;
 
 import java.util.EnumMap;
-import java.util.function.Supplier;
 
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
