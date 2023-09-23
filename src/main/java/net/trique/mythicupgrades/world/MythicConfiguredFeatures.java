@@ -1,6 +1,6 @@
 package net.trique.mythicupgrades.world;
 
-import net.minecraft.block.Block;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;

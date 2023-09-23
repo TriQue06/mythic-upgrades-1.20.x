@@ -1,18 +1,15 @@
 package net.trique.mythicupgrades.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.trique.mythicupgrades.MythicUpgrades;
-import net.trique.mythicupgrades.item.MythicItemGroup;
 
 public class MythicBlocks {
 
@@ -85,9 +82,8 @@ public class MythicBlocks {
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(MythicUpgrades.MOD_ID, name),
+        return Registry.register(Registries.ITEM, new Identifier(MythicUpgrades.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        return item;
     }
 
     public static void registerMythicBlocks() {

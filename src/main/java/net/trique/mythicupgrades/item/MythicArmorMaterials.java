@@ -11,41 +11,34 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
+import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
 public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
 
-    SAPPHIRE("sapphire", 40, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    SAPPHIRE("sapphire", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{MythicItems.SAPPHIRE_INGOT});
-    }),
-    JADE("jade", 40, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
+    JADE("jade", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
         map.put(Type.HELMET, 4);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{MythicItems.JADE_INGOT});
-    }),
-    TOPAZ("topaz", 120, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
+    TOPAZ("topaz", 120, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{MythicItems.TOPAZ_INGOT});
-    }),
-    AMETRINE("ametrine", 40, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
+    AMETRINE("ametrine", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{MythicItems.AMETRINE_INGOT});
-    });
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
 
     public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
     private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
@@ -56,14 +49,14 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
     });
     private final String name;
     private final int durabilityMultiplier;
-    private final EnumMap<Type, Integer> protectionAmounts;
+    private final EnumMap protectionAmounts;
     private final int enchantability;
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private MythicArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
+    MythicArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -91,7 +84,7 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
+        return this.repairIngredientSupplier.get();
     }
 
     public String getName() {

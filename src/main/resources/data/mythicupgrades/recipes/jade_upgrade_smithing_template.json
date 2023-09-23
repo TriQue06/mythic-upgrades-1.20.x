@@ -9,7 +9,7 @@
       "item": "minecraft:mossy_cobblestone"
     },
     "S": {
-      "item": "minecraft:jade_upgrade_smithing_template"
+      "item": "mythicupgrades:jade_upgrade_smithing_template"
     }
   },
   "pattern": [

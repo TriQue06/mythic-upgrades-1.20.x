@@ -10,18 +10,20 @@ public class FreezeEffect extends StatusEffect {
     }
 
     @Override
-    public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.getWorld().isClient()) {
-            double x = pLivingEntity.getX();
-            double y = pLivingEntity.getY();
-            double z = pLivingEntity.getZ();
+    public void applyUpdateEffect(LivingEntity livingEntity, int amplifier) {
+        if (!livingEntity.getWorld().isClient()) {
+            double x = livingEntity.getX();
+            double y = livingEntity.getY();
+            double z = livingEntity.getZ();
 
-            pLivingEntity.teleport(x, y, z);
-            pLivingEntity.setVelocity(0, 0, 0);
+            livingEntity.teleport(x, y, z);
+            livingEntity.refreshPositionAfterTeleport(x, y, z);
+            livingEntity.setVelocity(0, 0, 0);
+            livingEntity.setMovementSpeed(0f);
         }
-
-        super.applyUpdateEffect(pLivingEntity, pAmplifier);
+        super.applyUpdateEffect(livingEntity, amplifier);
     }
+
 
     @Override
     public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {

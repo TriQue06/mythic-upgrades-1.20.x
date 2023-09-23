@@ -7,7 +7,14 @@
 	"authors": [
 		"TriQue"
 	],
-	"license": "what licence O_O",
+	"contributors": [
+		"CyberSteve777"
+	],
+	"contact": {
+		"sources": "https://github.com/TriQue06/mythic-upgrades-1.20.x",
+		"issues": "https://github.com/TriQue06/mythic-upgrades-1.20.x/issues"
+	},
+	"license": "MIT",
 	"icon": "assets/mythicupgrades/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -25,6 +32,10 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "Also try Warden Tools!"
-	}
+		"wardentools": "*",
+		"another-mod": "*"
+	},
+	"mixins": [
+		"mythicupgrades.mixins.json"
+	]
 }
