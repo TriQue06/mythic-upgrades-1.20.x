@@ -19,23 +19,18 @@ import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
 public class RegisterMythicItems {
-    
 
-    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipment(MythicEffects.THORNS, 4).build();
-    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.SPEED, 1).addForEquipment(StatusEffects.JUMP_BOOST, 1).build();
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.FIRE_RESISTANCE, 0).build();
-
-    private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
+    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.SPEED, 1).addForEquipment(StatusEffects.JUMP_BOOST, 1).build();
+    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipment(MythicEffects.THORNS, 4).build();
     private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
     private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
     private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
+    private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
+    private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
+    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
     private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
-
     private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(MythicEffects.FREEZE, 20, 0).build();
-    private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
-    private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
     private static final ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
     private static final ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 3).build();
     private static final ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
@@ -43,6 +38,8 @@ public class RegisterMythicItems {
     private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
     private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
     private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, 0).build();
+    private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
+    private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 4).build();
 
     public static final Item BROKEN_SAPPHIRE_DISC = registerItem("broken_sapphire_disc",
             new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16)));
@@ -70,30 +67,41 @@ public class RegisterMythicItems {
     public static final Item MUSIC_DISC_TANKER_ON_THE_LEVANTINES = registerItem("music_disc_tanker_on_the_levantines",
             new MusicDiscItem(14, MythicSounds.TANKER_ON_THE_LEVANTINES, new FabricItemSettings().maxCount(1), 201));
 
-
-    public static final Item SAPPHIRE = registerItem("sapphire",
-            new MythicGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings()));
-    public static final Item SAPPHIRE_INGOT = registerItem("sapphire_ingot",
-            new Item(new FabricItemSettings().fireproof()));
-    public static final Item RUBY = registerItem("ruby",
-            new MythicGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings()));
-    public static final Item RUBY_INGOT = registerItem("ruby_ingot",
-            new Item(new FabricItemSettings().fireproof()));
     public static final Item JADE = registerItem("jade",
             new MythicGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings()));
     public static final Item JADE_INGOT = registerItem("jade_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item JADE_NUGGET = registerItem("jade_nugget",
             new Item(new FabricItemSettings().fireproof()));
     public static final Item TOPAZ = registerItem("topaz",
             new MythicGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings()));
     public static final Item TOPAZ_INGOT = registerItem("topaz_ingot",
             new Item(new FabricItemSettings().fireproof()));
-    public static final Item AMETRINE = registerItem("ametrine",
-            new MythicGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings()));
-    public static final Item AMETRINE_INGOT = registerItem("ametrine_ingot",
+    public static final Item TOPAZ_NUGGET = registerItem("topaz_nugget",
             new Item(new FabricItemSettings().fireproof()));
     public static final Item AQUAMARINE = registerItem("aquamarine",
             new MythicGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings()));
     public static final Item AQUAMARINE_INGOT = registerItem("aquamarine_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item AQUAMARINE_NUGGET = registerItem("aquamarine_nugget",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item SAPPHIRE = registerItem("sapphire",
+            new MythicGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings()));
+    public static final Item SAPPHIRE_INGOT = registerItem("sapphire_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item SAPPHIRE_NUGGET = registerItem("sapphire_nugget",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item RUBY = registerItem("ruby",
+            new MythicGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings()));
+    public static final Item RUBY_INGOT = registerItem("ruby_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item RUBY_NUGGET = registerItem("ruby_nugget",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item AMETRINE = registerItem("ametrine",
+            new MythicGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings()));
+    public static final Item AMETRINE_INGOT = registerItem("ametrine_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item AMETRINE_NUGGET = registerItem("ametrine_nugget",
             new Item(new FabricItemSettings().fireproof()));
 
     public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe",
