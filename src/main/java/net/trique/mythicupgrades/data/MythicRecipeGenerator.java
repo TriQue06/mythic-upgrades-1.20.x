@@ -2,21 +2,20 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 public class MythicRecipeGenerator extends FabricRecipeProvider {
     public MythicRecipeGenerator(FabricDataOutput output) {
         super(output);
     }
-    @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
 
+    @Override
+    public void generate(RecipeExporter exporter) {
         offerSmelting(exporter, List.of(MythicBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, RegisterMythicItems.SAPPHIRE,
                 3.0f, 200, "sapphire");
         offerBlasting(exporter, List.of(MythicBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, RegisterMythicItems.SAPPHIRE,

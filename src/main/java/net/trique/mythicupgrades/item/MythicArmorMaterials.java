@@ -1,14 +1,12 @@
 package net.trique.mythicupgrades.item;
 
 import java.util.EnumMap;
-import java.util.function.Supplier;
 
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Lazy;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
@@ -20,28 +18,26 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
     JADE("jade", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
         map.put(Type.HELMET, 4);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
     TOPAZ("topaz", 120, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
     AMETRINE("ametrine", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
-
-    public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
-    private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
+    private static final EnumMap BASE_DURABILITY = Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 13);
         map.put(Type.LEGGINGS, 15);
         map.put(Type.CHESTPLATE, 16);
@@ -54,9 +50,9 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
-    private final Lazy<Ingredient> repairIngredientSupplier;
+    private final Ingredient repairIngredientSupplier;
 
-    MythicArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
+    MythicArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -64,7 +60,7 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = new Lazy(repairIngredientSupplier);
+        this.repairIngredientSupplier = repairIngredientSupplier;
     }
 
     public int getDurability(Type type) {
@@ -84,7 +80,7 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return this.repairIngredientSupplier.get();
+        return this.repairIngredientSupplier;
     }
 
     public String getName() {
