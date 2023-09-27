@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.mixin;
 
-
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -31,7 +30,6 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
-
 
     @Shadow
     public abstract float getAttackCooldownProgress(float baseTime);

@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.item;
 
-
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -31,10 +30,9 @@ public class MythicEffectsSwordItem extends SwordItem implements BaseMythicItem 
         this.color = color;
     }
 
-
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(tooltipKey).formatted(color).formatted(Formatting.ITALIC));
+        tooltip.add(Text.translatable(tooltipKey).formatted(color));
         super.appendTooltip(stack, world, tooltip, context);
     }
 

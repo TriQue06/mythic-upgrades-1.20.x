@@ -36,7 +36,7 @@ public class MythicGemItem extends Item implements BaseMythicItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(translationKey).formatted(color).formatted(Formatting.ITALIC));
+        tooltip.add(Text.translatable(translationKey).formatted(color));
         super.appendTooltip(stack, world, tooltip, context);
     }
 

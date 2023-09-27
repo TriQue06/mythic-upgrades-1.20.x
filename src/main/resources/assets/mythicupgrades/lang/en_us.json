@@ -8,6 +8,8 @@
 
   "item.mythicupgrades.sapphire": "Sapphire",
   "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
+  "item.mythicupgrades.sapphire_fragment": "Sapphire Fragment",
+  "item.mythicupgrades.sapphire_shard": "Sapphire Shard",
   
   "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
   "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
@@ -17,13 +19,17 @@
   "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
   "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
 
+  "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
   "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
   "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.mythicupgrades.sapphire_block": "Block of Sapphire",
   "block.mythicupgrades.sapphire_ruins": "Sapphire Ruins",
+  "block.mythicupgrades.deepslate_sapphire_ruins": "Deepslate Sapphire Ruins",
 
   "item.mythicupgrades.ruby": "Ruby",
   "item.mythicupgrades.ruby_ingot": "Ruby Ingot",
+  "item.mythicupgrades.ruby_fragment": "Ruby Fragment",
+  "item.mythicupgrades.ruby_shard": "Ruby Shard",
 
   "item.mythicupgrades.ruby_sword": "Ruby Sword",
   "item.mythicupgrades.ruby_axe": "Ruby Axe",
@@ -100,7 +106,7 @@
   "effect.mythicupgrades.thorns": "Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
 
-  "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented",
+  "defaultArmorTooltip.description": "Try to wear full set of armor to get bonus effects if they are presented",
 
   "aquamarine.description": "Freezes enemy on hit.",
   "aquamarine_axe.description": "Freezes enemy on hit.",
@@ -126,10 +132,10 @@
   "topaz_sword.description": "Has 3x durability as netherite sword.",
 
   "sapphire.description": "Has no effects on its own.",
-  "sapphire_helmet.description": "Set Bonus: Thorns V effect.",
-  "sapphire_chestplate.description": "Set Bonus: Thorns V effect.",
-  "sapphire_leggings.description": "Set Bonus: Thorns V effect.",
-  "sapphire_boots.description": "Set Bonus: Thorns V effect.",
+  "sapphire_helmet.description": "Set Bonus: Thorns III effect.",
+  "sapphire_chestplate.description": "Set Bonus: Thorns III effect.",
+  "sapphire_leggings.description": "Set Bonus: Thorns III effect.",
+  "sapphire_boots.description": "Set Bonus: Thorns III effect.",
   "sapphire_axe.description": "Has increased damage.",
   "sapphire_sword.description": "Has increased damage.",
 

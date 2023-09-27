@@ -23,7 +23,6 @@ import java.util.Map;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
 
-
     @Shadow
     public abstract boolean hasStatusEffect(StatusEffect effect);
 
