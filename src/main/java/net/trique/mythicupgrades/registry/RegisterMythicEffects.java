@@ -12,7 +12,8 @@ public class RegisterMythicEffects {
         Registry.register(Registries.STATUS_EFFECT, new Identifier(MythicUpgrades.MOD_ID, name), effect);
     }
     public static void registerEffects() {
-        registerEffect(MythicEffects.THORNS, "thorns");
+        registerEffect(MythicEffects.POISONOUS_THORNS, "poisonous_thorns");
         registerEffect(MythicEffects.FREEZE, "freeze");
+        registerEffect(MythicEffects.DAMAGE_DEFLECTION, "damage_deflection");
     }
 }

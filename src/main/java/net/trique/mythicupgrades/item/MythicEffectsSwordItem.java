@@ -1,5 +1,6 @@
 package net.trique.mythicupgrades.item;
 
+
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -17,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicEffectsSwordItem extends SwordItem implements BaseMythicItem {
+public class MythicEffectsSwordItem extends SwordItem implements BaseMythicToolItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String tooltipKey;
     private final Formatting color;
@@ -29,6 +30,7 @@ public class MythicEffectsSwordItem extends SwordItem implements BaseMythicItem 
         this.tooltipKey = tooltipKey;
         this.color = color;
     }
+
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
@@ -46,13 +48,13 @@ public class MythicEffectsSwordItem extends SwordItem implements BaseMythicItem 
     public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
         return virtualItemHandler.getMainHandEffects();
     }
-    @Override
-    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
-        return virtualItemHandler.getEquipmentEffects();
-    }
 
     @Override
     public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
         return virtualItemHandler.getOnHitEffects();
+    }
+    @Override
+    public ToolMaterial getMythicMaterial() {
+        return this.getMaterial();
     }
 }
