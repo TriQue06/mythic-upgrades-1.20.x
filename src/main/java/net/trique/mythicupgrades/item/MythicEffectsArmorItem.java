@@ -14,7 +14,7 @@ import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
-public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem {
+public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmorItem {
     private final ItemEffectsList effects;
     private final String tooltipSB;
     private final Formatting color;
@@ -38,12 +38,17 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicItem 
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
-        return effects.getForEquipment();
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+        return effects.getForOthers();
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
-        return effects.getForOthers();
+    public HashMap<StatusEffect, EffectMeta> getEquipmentBuffs() {
+        return effects.getForEquipmentBuffs();
+    }
+
+    @Override
+    public HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs() {
+        return effects.getForEquipmentDebuffs();
     }
 }

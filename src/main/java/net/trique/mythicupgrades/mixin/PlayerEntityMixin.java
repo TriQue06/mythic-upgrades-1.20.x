@@ -4,6 +4,10 @@ package net.trique.mythicupgrades.mixin;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.dragon.EnderDragonEntity;
+import net.minecraft.entity.boss.dragon.EnderDragonPart;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -12,21 +16,31 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
+import net.trique.mythicupgrades.effect.MythicEffects;
+import net.trique.mythicupgrades.item.BaseMythicToolItem;
 import net.trique.mythicupgrades.item.MythicEffectsSwordItem;
+import net.trique.mythicupgrades.item.MythicToolMaterials;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
+import java.util.Objects;
+
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
 
+    @Unique
+    private boolean hasDamageBeenDeflected;
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
+        hasDamageBeenDeflected = false;
     }
 
     @Shadow
@@ -35,6 +49,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow
     public abstract float getAttackCooldownProgress(float baseTime);
+
+    @Shadow public abstract void remove(RemovalReason reason);
+
+    @Shadow public abstract boolean isCreative();
+
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
     public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
@@ -81,5 +100,43 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 }
             }
         }
+    }
+
+    @Inject(method = "attack", at = @At(value = "HEAD"))
+    public void applySapphirePiercingDamage(Entity entity, CallbackInfo ci) {
+        if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
+                item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
+            DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
+                    MythicUpgradeDamageTypes.PIERCING_DAMAGE_TYPE, this);
+            if (entity instanceof EnderDragonPart part) {
+                EnderDragonEntity dragon = part.owner;
+                dragon.damagePart(part, source, 0.1f * dragon.getMaxHealth());
+            } else if (entity instanceof LivingEntity target) {
+                target.damage(source, 0.1f * target.getMaxHealth());
+            }
+        }
+    }
+
+    @Override
+    public boolean damage(DamageSource source, float amount) {
+        if (this.isCreative()) {
+            return false;
+        }
+        StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
+        if (deflection != null) {
+            Entity attacker;
+            if (Objects.equals(source.getSource(), source.getAttacker()) && ((attacker = source.getAttacker()) != null)) {
+                float refl_dmg_coef = deflection.getAmplifier() / 10f;
+                if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
+                    hasDamageBeenDeflected = true;
+                    attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (refl_dmg_coef + 1.1f) * amount);
+                } else {
+                    hasDamageBeenDeflected = false;
+                }
+                return super.damage(source, (0.9f - refl_dmg_coef) * amount);
+            }
+        }
+        return super.damage(source, amount);
     }
 }

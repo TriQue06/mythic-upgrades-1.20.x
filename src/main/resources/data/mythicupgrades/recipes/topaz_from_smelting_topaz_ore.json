@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "topaz",
+  "ingredient": {
+    "item": "mythicupgrades:topaz_ore"
+  },
+  "result": "mythicupgrades:topaz"
+}

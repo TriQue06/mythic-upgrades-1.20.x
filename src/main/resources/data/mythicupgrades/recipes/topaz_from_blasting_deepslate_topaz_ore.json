@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "topaz",
+  "ingredient": {
+    "item": "mythicupgrades:deepslate_topaz_ore"
+  },
+  "result": "mythicupgrades:topaz"
+}

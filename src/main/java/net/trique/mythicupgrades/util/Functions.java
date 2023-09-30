@@ -44,7 +44,7 @@ public class Functions {
 
     public static void handleTooltipForArmor(ItemStack stack, List<Text> tooltips, String tooltipSB, Formatting color, ArmorMaterial material) {
         ClientPlayerEntity player = getLocalPlayer();
-        MutableText tooltip = Text.translatable(tooltipSB).formatted(color).formatted(Formatting.ITALIC);
+        MutableText tooltip = Text.translatable(tooltipSB).formatted(color);
         MutableText defaultArmorTooltip = Text.translatable("defaultArmorTooltip.description").formatted(Formatting.GRAY).
                 formatted(Formatting.ITALIC);
         ArrayList<ItemStack> toCheck = new ArrayList<>();

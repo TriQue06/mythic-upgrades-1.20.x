@@ -97,10 +97,14 @@
   "block.mythicupgrades.aquamarine_block": "Block of Aquamarine",
   "block.mythicupgrades.aquamarine_ruins": "Aquamarine Ruins",
 
-  "effect.mythicupgrades.thorns": "Thorns",
+  "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
+  "effect.mythicupgrades.damage_deflection": "Damage Deflection",
 
-  "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented",
+  "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
+  "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
+
+  "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented.",
 
   "aquamarine.description": "Freezes enemy on hit.",
   "aquamarine_axe.description": "Freezes enemy on hit.",
@@ -126,12 +130,12 @@
   "topaz_sword.description": "Has 3x durability as netherite sword.",
 
   "sapphire.description": "Has no effects on its own.",
-  "sapphire_helmet.description": "Set Bonus: Thorns V effect.",
-  "sapphire_chestplate.description": "Set Bonus: Thorns V effect.",
-  "sapphire_leggings.description": "Set Bonus: Thorns V effect.",
-  "sapphire_boots.description": "Set Bonus: Thorns V effect.",
-  "sapphire_axe.description": "Has increased damage.",
-  "sapphire_sword.description": "Has increased damage.",
+  "sapphire_helmet.description": "Set Bonus: Damage Deflection V effect.",
+  "sapphire_chestplate.description": "Set Bonus: Damage Deflection V effect.",
+  "sapphire_leggings.description": "Set Bonus: Damage Deflection V effect.",
+  "sapphire_boots.description": "Set Bonus: Damage Deflection V effect.",
+  "sapphire_axe.description": "Deals percentage-based damage depending on enemy health.",
+  "sapphire_sword.description": "Deals percentage-based damage depending on enemy health.",
 
   "ruby.description": "Has no effects on its own.",
   "ruby_axe.description": "Applies Haste when in main hand.",
@@ -141,10 +145,10 @@
   "ruby_sword.description": "Applies Haste when in main hand.",
 
   "jade.description": "Poisons enemy on hit.",
-  "jade_helmet.description": "Set Bonus: None. Has increased protection by default.",
-  "jade_chestplate.description": "Set Bonus: None. Has increased protection by default.",
-  "jade_leggings.description": "Set Bonus: None. Has increased protection by default.",
-  "jade_boots.description": "Set Bonus: None. Has increased protection by default.",
+  "jade_helmet.description": "Set Bonus: Poisonous Thorns IV effect.",
+  "jade_chestplate.description": "Set Bonus: Poisonous Thorns IV effect.",
+  "jade_leggings.description": "Set Bonus: Poisonous Thorns IV effect.",
+  "jade_boots.description": "Set Bonus: Poisonous Thorns IV effect.",
   "jade_axe.description": "Poisons enemy on hit.",
   "jade_sword.description": "Poisons enemy on hit.",
 

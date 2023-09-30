@@ -21,8 +21,11 @@ public class MythicEffectVirtualItemHandler {
     public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
         return allEffects.getForMainHand();
     }
-    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
-        return allEffects.getForEquipment();
+    public HashMap<StatusEffect, EffectMeta> getEquipmentBuffs() {
+        return allEffects.getForEquipmentBuffs();
+    }
+    public HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs() {
+        return allEffects.getForEquipmentDebuffs();
     }
 
     public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
