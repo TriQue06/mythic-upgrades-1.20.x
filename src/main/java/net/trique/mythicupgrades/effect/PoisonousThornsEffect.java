@@ -21,7 +21,7 @@ public class PoisonousThornsEffect extends StatusEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 1 + amplifier);
                     entity.playSound(SoundEvents.ENCHANT_THORNS_HIT, 1.0f, livingEntity.getSoundPitch());
-                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80, amplifier), livingEntity);
+                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 80, 1 + amplifier), livingEntity);
                 }
             }
         }
