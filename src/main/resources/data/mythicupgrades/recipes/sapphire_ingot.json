@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:sapphire_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:sapphire_ingot"
+  }
+}
