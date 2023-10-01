@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ametrine_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:ametrine_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ametrine_from_blasting_ametrine_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ametrine_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ametrine_from_blasting_ametrine_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

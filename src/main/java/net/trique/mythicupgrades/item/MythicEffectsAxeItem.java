@@ -17,15 +17,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicEffectsAxeItem extends AxeItem implements BaseMythicItem {
+public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem {
 
     private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String tooltipKey;
     private final Formatting color;
 
-    public MythicEffectsAxeItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings,
+    public MythicEffectsAxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings,
                                 ItemEffectsList effects, String tooltipKey, Formatting color) {
-        super(material, (int) attackDamage, attackSpeed, settings);
+        super(material, attackDamage, attackSpeed, settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.tooltipKey = tooltipKey;
         this.color = color;
@@ -40,7 +40,7 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(tooltipKey).formatted(color).formatted(Formatting.ITALIC));
+        tooltip.add(Text.translatable(tooltipKey).formatted(color));
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -50,12 +50,12 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicItem {
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
-        return virtualItemHandler.getEquipmentEffects();
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+        return virtualItemHandler.getOnHitEffects();
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
-        return virtualItemHandler.getOnHitEffects();
+    public ToolMaterial getMythicMaterial() {
+        return this.getMaterial();
     }
 }

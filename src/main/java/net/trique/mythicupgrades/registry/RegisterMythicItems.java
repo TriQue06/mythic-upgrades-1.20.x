@@ -21,9 +21,10 @@ import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 public class RegisterMythicItems {
     
 
-    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipment(MythicEffects.THORNS, 4).build();
-    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.SPEED, 1).addForEquipment(StatusEffects.JUMP_BOOST, 1).build();
-    private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipment(StatusEffects.FIRE_RESISTANCE, 0).build();
+    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.DAMAGE_DEFLECTION, 4).build();
+    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, 1).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, 1).build();
+    private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
+    private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.POISONOUS_THORNS, 3).build();
 
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
@@ -70,12 +71,42 @@ public class RegisterMythicItems {
     public static final Item MUSIC_DISC_TANKER_ON_THE_LEVANTINES = registerItem("music_disc_tanker_on_the_levantines",
             new MusicDiscItem(14, MythicSounds.TANKER_ON_THE_LEVANTINES, new FabricItemSettings().maxCount(1), 201));
 
+    public static final Item SAPPHIRE = registerItem("sapphire",
+            new MythicGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings()));
+    public static final Item SAPPHIRE_INGOT = registerItem("sapphire_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
+    public static final Item RUBY = registerItem("ruby",
+            new MythicGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings()));
+    public static final Item RUBY_INGOT = registerItem("ruby_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
+    public static final Item JADE = registerItem("jade",
+            new MythicGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings()));
+    public static final Item JADE_INGOT = registerItem("jade_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
+    public static final Item TOPAZ = registerItem("topaz",
+            new MythicGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings()));
+    public static final Item TOPAZ_INGOT = registerItem("topaz_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
+    public static final Item AMETRINE = registerItem("ametrine",
+            new MythicGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings()));
+    public static final Item AMETRINE_INGOT = registerItem("ametrine_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
+    public static final Item AQUAMARINE = registerItem("aquamarine",
+            new MythicGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings()));
+    public static final Item AQUAMARINE_INGOT = registerItem("aquamarine_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+
     public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.SAPPHIRE, 5.0f, -3.0f,
-                    (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "sapphire_axe.description", Formatting.BLUE));
+            new MythicEffectsAxeItem(MythicToolMaterials.SAPPHIRE, 0, -3.0f,
+                    (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE));
     public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 3, -2.4f,
-                    (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "sapphire_sword.decsription", Formatting.BLUE));
+            new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 0, -2.4f,
+                    (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE));
     public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet",
             new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,
                     new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_helmet.description", Formatting.BLUE));
@@ -88,60 +119,54 @@ public class RegisterMythicItems {
     public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots",
             new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS,
                     new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_boots.description", Formatting.BLUE));
-    public static final Item SAPPHIRE = registerItem("sapphire",
-            new MythicGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings()));
-    public static final Item SAPPHIRE_INGOT = registerItem("sapphire_ingot",
-            new Item(new FabricItemSettings().fireproof()));
 
     public static final Item RUBY_SHOVEL = registerItem("ruby_shovel",
-            new MythicEffectsShovelItem(MythicToolMaterials.RUBY, 1.5f, -2.2f,
+            new MythicEffectsShovelItem(MythicToolMaterials.RUBY, 2, -2.2f,
                     (new FabricItemSettings().fireproof()), hasteShovelItemEffects, "ruby_shovel.description", Formatting.RED));
     public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe",
-            new MythicEffectsPickaxeItem(MythicToolMaterials.RUBY, 1, -2.2f,
+            new MythicEffectsPickaxeItem(MythicToolMaterials.RUBY, 2, -2.2f,
                     (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED));
     public static final Item RUBY_AXE = registerItem("ruby_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.RUBY, 5.0f, -2.5f,
+            new MythicEffectsAxeItem(MythicToolMaterials.RUBY, 6, -2.5f,
                     (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED));
     public static final Item RUBY_HOE = registerItem("ruby_hoe",
-            new MythicEffectsHoeItem(MythicToolMaterials.RUBY, -4, 0.6f,
+            new MythicEffectsHoeItem(MythicToolMaterials.RUBY, 1, 0.6f,
                     (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED));
     public static final Item RUBY_SWORD = registerItem("ruby_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 3, -1.6f,
+            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 4, -1.6f,
                     (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
-    public static final Item RUBY = registerItem("ruby",
-            new MythicGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings()));
-    public static final Item RUBY_INGOT = registerItem("ruby_ingot",
-            new Item(new FabricItemSettings().fireproof()));
+
 
     public static final Item JADE_AXE = registerItem("jade_axe",
             new MythicEffectsAxeItem(MythicToolMaterials.JADE, 7, -3.0f,
                     (new FabricItemSettings().fireproof()), poisonAxeItemEffects,"jade_axe.description", Formatting.GREEN));
     public static final Item JADE_SWORD = registerItem("jade_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.JADE, 3, -2.4f,
+            new MythicEffectsSwordItem(MythicToolMaterials.JADE, 5, -2.4f,
                     (new FabricItemSettings().fireproof()), poisonSwordItemEffects, "jade_sword.description", Formatting.GREEN));
     public static final Item JADE_HELMET = registerItem("jade_helmet",
-            new ArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));
+            new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(),
+                    jadeArmorEffects, "jade_helmet.description", Formatting.GREEN));
     public static final Item JADE_CHESTPLATE = registerItem("jade_chestplate",
-            new ArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof()));
+            new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(),
+                    jadeArmorEffects, "jade_chestplate.description", Formatting.GREEN));
     public static final Item JADE_LEGGINGS = registerItem("jade_leggings",
-            new ArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof()));
+            new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(),
+                    jadeArmorEffects, "jade_leggings.description", Formatting.GREEN));
     public static final Item JADE_BOOTS = registerItem("jade_boots",
-            new ArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
-    public static final Item JADE = registerItem("jade",
-            new MythicGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings()));
-    public static final Item JADE_INGOT = registerItem("jade_ingot",
-            new Item(new FabricItemSettings().fireproof()));
+            new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(),
+                    jadeArmorEffects, "jade_boots.description", Formatting.GREEN));
+
 
     public static final Item TOPAZ_SHOVEL = registerItem("topaz_shovel",
-            new ShovelItem(MythicToolMaterials.TOPAZ, 1.5f, -3.0f, (new FabricItemSettings().fireproof())));
+            new ShovelItem(MythicToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_PICKAXE = registerItem("topaz_pickaxe",
-            new PickaxeItem(MythicToolMaterials.TOPAZ, 1, -2.8f, (new FabricItemSettings().fireproof())));
+            new PickaxeItem(MythicToolMaterials.TOPAZ, 2, -2.8f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_AXE = registerItem("topaz_axe",
-            new AxeItem(MythicToolMaterials.TOPAZ, 5.0f, -3f, (new FabricItemSettings().fireproof())));
+            new AxeItem(MythicToolMaterials.TOPAZ, 6, -3f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_HOE = registerItem("topaz_hoe",
-            new HoeItem(MythicToolMaterials.TOPAZ, -4, 0.0f, (new FabricItemSettings().fireproof())));
+            new HoeItem(MythicToolMaterials.TOPAZ, 1, 0.0f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_SWORD = registerItem("topaz_sword",
-            new SwordItem(MythicToolMaterials.TOPAZ, 3, -2.4f, (new FabricItemSettings().fireproof())));
+            new SwordItem(MythicToolMaterials.TOPAZ, 4, -2.4f, (new FabricItemSettings().fireproof())));
     public static final Item TOPAZ_HELMET = registerItem("topaz_helmet",
             new MythicEffectsArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.HELMET,
                     new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_helmet.description", Formatting.GOLD));
@@ -154,16 +179,12 @@ public class RegisterMythicItems {
     public static final Item TOPAZ_BOOTS = registerItem("topaz_boots",
             new MythicEffectsArmorItem(MythicArmorMaterials.TOPAZ, ArmorItem.Type.BOOTS,
                     new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_boots.description", Formatting.GOLD));
-    public static final Item TOPAZ = registerItem("topaz",
-            new MythicGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings()));
-    public static final Item TOPAZ_INGOT = registerItem("topaz_ingot",
-            new Item(new FabricItemSettings().fireproof()));
 
     public static final Item AMETRINE_AXE = registerItem("ametrine_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.AMETRINE, 5, -3.0f,
+            new MythicEffectsAxeItem(MythicToolMaterials.AMETRINE, 6, -3.0f,
                     (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE));
     public static final Item AMETRINE_SWORD = registerItem("ametrine_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.AMETRINE, 3, -2.4f,
+            new MythicEffectsSwordItem(MythicToolMaterials.AMETRINE, 4, -2.4f,
                     (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE));
     public static final Item AMETRINE_HELMET = registerItem("ametrine_helmet",
             new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.HELMET,
@@ -177,21 +198,14 @@ public class RegisterMythicItems {
     public static final Item AMETRINE_BOOTS = registerItem("ametrine_boots",
             new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS,
                     new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", Formatting.LIGHT_PURPLE));
-    public static final Item AMETRINE = registerItem("ametrine",
-            new MythicGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings()));
-    public static final Item AMETRINE_INGOT = registerItem("ametrine_ingot",
-            new Item(new FabricItemSettings().fireproof()));
+
 
     public static final Item AQUAMARINE_AXE = registerItem("aquamarine_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 5, -3.3f,
+            new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 6, -3.3f,
                     (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
     public static final Item AQUAMARINE_SWORD = registerItem("aquamarine_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 3, -2.7f,
+            new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 4, -2.7f,
                     (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
-    public static final Item AQUAMARINE = registerItem("aquamarine",
-            new MythicGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings()));
-    public static final Item AQUAMARINE_INGOT = registerItem("aquamarine_ingot",
-            new Item(new FabricItemSettings().fireproof()));
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
 
@@ -261,7 +275,6 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
                             entries.add(RegisterMythicItems.RUBY_UPGRADE_SMITHING_TEMPLATE);
                             entries.add(RegisterMythicItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE);
-
                             entries.add(MythicBlocks.JADE_BLOCK);
                             entries.add(MythicBlocks.JADE_RUINS);
                             entries.add(MythicBlocks.JADE_ORE);
