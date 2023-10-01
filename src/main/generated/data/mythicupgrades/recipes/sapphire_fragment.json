@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:sapphire"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:sapphire_fragment"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aquamarine_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:aquamarine_fragment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:aquamarine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aquamarine_fragment"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:aquamarine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

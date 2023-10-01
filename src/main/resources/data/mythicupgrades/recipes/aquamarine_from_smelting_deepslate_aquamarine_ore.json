@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "aquamarine",
+  "ingredient": {
+    "item": "mythicupgrades:deepslate_aquamarine_ore"
+  },
+  "result": "mythicupgrades:aquamarine"
+}

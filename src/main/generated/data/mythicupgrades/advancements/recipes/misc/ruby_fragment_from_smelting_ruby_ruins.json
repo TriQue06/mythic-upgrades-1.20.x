@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ruby_ruins": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:ruby_ruins"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ruby_fragment_from_smelting_ruby_ruins"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ruby_ruins"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ruby_fragment_from_smelting_ruby_ruins"
+    ]
+  },
+  "sends_telemetry_event": false
+}

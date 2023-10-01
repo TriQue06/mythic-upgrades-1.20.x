@@ -6,7 +6,6 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
-
 import java.util.List;
 
 public class MythicRecipeGenerator extends FabricRecipeProvider {
