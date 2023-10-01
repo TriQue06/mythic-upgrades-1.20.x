@@ -31,6 +31,7 @@ public class MythicBlocks {
             new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(4, 8)));
 
 
+
     public static final Block TOPAZ_BLOCK = registerBlock("topaz_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
