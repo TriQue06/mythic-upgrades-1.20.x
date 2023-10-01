@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "ametrine",
+  "ingredient": {
+    "item": "mythicupgrades:ametrine_ore"
+  },
+  "result": "mythicupgrades:ametrine"
+}

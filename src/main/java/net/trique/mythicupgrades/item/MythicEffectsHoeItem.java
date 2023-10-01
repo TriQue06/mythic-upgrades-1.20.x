@@ -17,14 +17,14 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicEffectsHoeItem extends HoeItem implements BaseMythicItem {
+public class MythicEffectsHoeItem extends HoeItem implements BaseMythicToolItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String tooltipKey;
     private final Formatting color;
 
-    public MythicEffectsHoeItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings,
+    public MythicEffectsHoeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings,
                                 ItemEffectsList effects, String tooltipKey, Formatting color) {
-        super(material, (int) attackDamage, attackSpeed, settings);
+        super(material, attackDamage, attackSpeed, settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.tooltipKey = tooltipKey;
         this.color = color;
@@ -36,9 +36,10 @@ public class MythicEffectsHoeItem extends HoeItem implements BaseMythicItem {
         return super.postHit(stack, target, attacker);
     }
 
+
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(this.tooltipKey).formatted(color).formatted(Formatting.ITALIC));
+        tooltip.add(Text.translatable(this.tooltipKey).formatted(color));
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -46,13 +47,14 @@ public class MythicEffectsHoeItem extends HoeItem implements BaseMythicItem {
     public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
         return virtualItemHandler.getMainHandEffects();
     }
-    @Override
-    public HashMap<StatusEffect, EffectMeta> getEquipmentEffects() {
-        return virtualItemHandler.getEquipmentEffects();
-    }
 
     @Override
     public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
         return virtualItemHandler.getOnHitEffects();
+    }
+
+    @Override
+    public ToolMaterial getMythicMaterial() {
+        return this.getMaterial();
     }
 }

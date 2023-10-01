@@ -16,40 +16,26 @@ public class MythicModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_RUINS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_JADE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_RUINS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_JADE_RUINS);
-
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_RUINS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_TOPAZ_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_RUINS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_TOPAZ_RUINS);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_RUINS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_AQUAMARINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_RUINS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_AQUAMARINE_RUINS);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_RUINS);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_RUINS);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_ORE);
     }
 
     @Override
@@ -76,8 +62,6 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.SAPPHIRE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.SAPPHIRE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.SAPPHIRE_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.SAPPHIRE_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(RegisterMythicItems.RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.RUBY_PICKAXE, Models.HANDHELD);
@@ -86,8 +70,6 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.RUBY_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.RUBY_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.RUBY_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(RegisterMythicItems.JADE_AXE, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.JADE_SWORD, Models.HANDHELD);
@@ -97,8 +79,6 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.JADE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.JADE, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.JADE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.JADE_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.JADE_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(RegisterMythicItems.TOPAZ_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.TOPAZ_PICKAXE, Models.HANDHELD);
@@ -111,8 +91,6 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.TOPAZ_BOOTS, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.TOPAZ, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.TOPAZ_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.TOPAZ_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.TOPAZ_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(RegisterMythicItems.AMETRINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.AMETRINE_SWORD, Models.HANDHELD);
@@ -122,14 +100,10 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.AMETRINE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.AMETRINE, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.AMETRINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.AMETRINE_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.AMETRINE_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_FRAGMENT, Models.GENERATED);
-        itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_SHARD, Models.GENERATED);
     }
 }

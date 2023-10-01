@@ -12,7 +12,8 @@ public class ItemEffectsListBuilder {
         allEffects = new HashMap<>();
         allEffects.put(Target.IN_MAIN_HAND, new HashMap<>());
         allEffects.put(Target.ON_HIT, new HashMap<>());
-        allEffects.put(Target.ON_EQUIPMENT, new HashMap<>());
+        allEffects.put(Target.ON_EQUIPMENT_BUFF, new HashMap<>());
+        allEffects.put(Target.ON_EQUIPMENT_DEBUFF, new HashMap<>());
     }
 
     public ItemEffectsListBuilder addForMainHand(StatusEffect effect, int duration, int amplifier) {
@@ -24,8 +25,12 @@ public class ItemEffectsListBuilder {
         return this;
     }
 
-    public ItemEffectsListBuilder addForEquipment(StatusEffect effect, int amplifier) {
-        allEffects.get(Target.ON_EQUIPMENT).put(effect, EffectMeta.partiallyVisible(StatusEffectInstance.INFINITE, amplifier));
+    public ItemEffectsListBuilder addForEquipmentBuffs(StatusEffect effect, int amplifier) {
+        allEffects.get(Target.ON_EQUIPMENT_BUFF).put(effect, EffectMeta.partiallyVisible(StatusEffectInstance.INFINITE, amplifier));
+        return this;
+    }
+    public ItemEffectsListBuilder addForEquipmentDebuffs(StatusEffect effect, int duration, int amplifier) {
+        allEffects.get(Target.ON_EQUIPMENT_DEBUFF).put(effect, EffectMeta.fullyVisible(duration, amplifier));
         return this;
     }
 
