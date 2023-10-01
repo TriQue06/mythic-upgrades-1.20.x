@@ -14,7 +14,7 @@ import net.trique.mythicupgrades.effect.MythicEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
 import net.trique.mythicupgrades.item.BaseMythicToolItem;
 import net.trique.mythicupgrades.item.MythicToolMaterials;
-import net.trique.mythicupgrades.util.Functions;
+import net.trique.mythicupgrades.util.CommonFunctions;
 import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -43,7 +43,7 @@ public abstract class MobEntityMixin extends LivingEntity {
         boolean wasAttacked = cir.getReturnValue();
         if (wasAttacked) {
             if (target instanceof LivingEntity entity && this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item) {
-                Functions.addStatusEffects(entity, item.getOnHitEffects(), this);
+                CommonFunctions.addStatusEffects(entity, item.getOnHitEffects(), this);
             }
         }
     }
