@@ -13,4 +13,3 @@ public class DamageDeflectionEffect extends StatusEffect {
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
-}
