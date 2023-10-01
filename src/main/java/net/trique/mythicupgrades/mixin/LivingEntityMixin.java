@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.trique.mythicupgrades.item.BaseMythicItem;
 import net.trique.mythicupgrades.item.MythicEffectsArmorItem;
 import net.trique.mythicupgrades.util.EffectMeta;
-import net.trique.mythicupgrades.util.Functions;
+import net.trique.mythicupgrades.util.CommonFunctions;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -51,7 +51,7 @@ public abstract class LivingEntityMixin {
                 removeMythicInfiniteEffects(lastUsed.getMainHandEffects());
             }
             lastUsed = item;
-            Functions.addStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects());
+            CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects());
         } else if (lastUsed != null) {
             removeMythicInfiniteEffects(lastUsed.getMainHandEffects());
         }
@@ -61,12 +61,12 @@ public abstract class LivingEntityMixin {
     public void applyArmorBuffs(CallbackInfo ci) {
         ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
-                Functions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
+                CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
             if (lastWorn != null) {
                 removeMythicInfiniteEffects(lastWorn.getEquipmentBuffs());
             }
             lastWorn = item;
-            Functions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs());
+            CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs());
         } else if (lastWorn != null) {
             removeMythicInfiniteEffects(lastWorn.getEquipmentBuffs());
         }
@@ -80,8 +80,8 @@ public abstract class LivingEntityMixin {
             if (attacker instanceof LivingEntity entity) {
                 ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
                 if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
-                        Functions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                    Functions.addStatusEffects(entity, item.getEquipmentDebuffs(), entity);
+                        CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
+                    CommonFunctions.addStatusEffects(entity, item.getEquipmentDebuffs(), entity);
                 }
             }
         }
