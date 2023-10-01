@@ -267,7 +267,6 @@ public class RegisterMythicItems {
     private static void registerMythicItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
                         .icon(() -> new ItemStack(RegisterMythicItems.AMETRINE_SWORD)).entries((displayContext, entries) -> {
-
                             entries.add(RegisterMythicItems.BROKEN_JADE_DISC);
                             entries.add(RegisterMythicItems.MUSIC_DISC_NELUMBO);
 
