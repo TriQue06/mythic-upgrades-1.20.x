@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:jade"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:jade_fragment"
+  }
+}

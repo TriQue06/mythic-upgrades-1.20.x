@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aquamarine_ruins": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:aquamarine_ruins"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:aquamarine_fragment_from_blasting_aquamarine_ruins"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aquamarine_ruins"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:aquamarine_fragment_from_blasting_aquamarine_ruins"
+    ]
+  },
+  "sends_telemetry_event": false
+}

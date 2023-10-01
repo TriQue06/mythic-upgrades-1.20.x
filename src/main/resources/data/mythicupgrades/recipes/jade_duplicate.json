@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:jade"
+    },
+    "S": {
+      "item": "mythicupgrades:jade_shard"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "S#S",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "mythicupgrades:jade"
+  },
+  "show_notification": true
+}

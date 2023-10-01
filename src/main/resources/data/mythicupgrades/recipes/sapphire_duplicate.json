@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:sapphire"
+    },
+    "S": {
+      "item": "mythicupgrades:sapphire_shard"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "S#S",
+    "SSS"
+  ],
+  "result": {
+    "count": 2,
+    "item": "mythicupgrades:sapphire"
+  },
+  "show_notification": true
+}
