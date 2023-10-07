@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
+import net.trique.mythicupgrades.util.ClientFunctions;
 import net.trique.mythicupgrades.util.EffectMeta;
-import net.trique.mythicupgrades.util.Functions;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 import java.util.*;
@@ -28,7 +28,7 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmor
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        Functions.handleTooltipForArmor(stack, tooltip, tooltipSB, color, this.getMaterial());
+        ClientFunctions.handleTooltipForArmor(stack, tooltip, tooltipSB, color, this.getMaterial());
         super.appendTooltip(stack, world, tooltip, context);
     }
 

@@ -28,6 +28,7 @@ public class MythicBlocks {
     public static final Block TOPAZ_RUINS = registerBlock("topaz_ruins",
             new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).requiresTool().luminance(value -> 10).strength(3.0f, 1200.0f), UniformIntProvider.create(8, 16)));
 
+
     public static final Block TOPAZ_BLOCK = registerBlock("topaz_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE).requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
