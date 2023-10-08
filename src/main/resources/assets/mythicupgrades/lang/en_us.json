@@ -134,8 +134,8 @@
   "sapphire_chestplate.description": "Set Bonus: Damage Deflection V effect.",
   "sapphire_leggings.description": "Set Bonus: Damage Deflection V effect.",
   "sapphire_boots.description": "Set Bonus: Damage Deflection V effect.",
-  "sapphire_axe.description": "Deals percentage-based damage depending on enemy health.",
-  "sapphire_sword.description": "Deals percentage-based damage depending on enemy health.",
+  "sapphire_axe.description": "Deals percentage-based damage depending on enemy's health.",
+  "sapphire_sword.description": "Deals percentage-based damage depending on enemy's health.",
 
   "ruby.description": "Has no effects on its own.",
   "ruby_axe.description": "Applies Haste when in main hand.",
