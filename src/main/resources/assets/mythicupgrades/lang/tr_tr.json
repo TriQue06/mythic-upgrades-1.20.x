@@ -20,7 +20,7 @@
   "block.mythicupgrades.sapphire_ore": "Safir Cevheri",
   "block.mythicupgrades.deepslate_sapphire_ore": "Kayrak Taşında Safir Cevheri",
   "block.mythicupgrades.sapphire_block": "Safir Bloğu",
-  "block.mythicupgrades.sapphire_ruins": "Safir Kalıntıları",
+  "block.mythicupgrades.sapphire_crystal_block": "Safir Kristali Bloğu",
 
   "item.mythicupgrades.ruby": "Yakut",
   "item.mythicupgrades.ruby_ingot": "Yakut Külçesi",
@@ -34,7 +34,7 @@
   "block.mythicupgrades.ruby_ore": "Yakut Cevheri",
   "block.mythicupgrades.deepslate_ruby_ore": "Kayrak Taşında Yakut Cevheri",
   "block.mythicupgrades.ruby_block": "Yakut Bloğu",
-  "block.mythicupgrades.ruby_ruins": "Yakut Kalıntıları",
+  "block.mythicupgrades.ruby_crystal_block": "Yakut Kristali Bloğu",
 
   "item.mythicupgrades.jade": "Yeşim",
   "item.mythicupgrades.jade_ingot": "Yeşim Külçesi",
@@ -50,7 +50,7 @@
   "block.mythicupgrades.jade_ore": "Yeşim Cevheri",
   "block.mythicupgrades.deepslate_jade_ore": "Kayrak Taşında Yeşim Cevheri",
   "block.mythicupgrades.jade_block": "Yeşim Bloğu",
-  "block.mythicupgrades.jade_ruins": "Yeşim Kalıntıları",
+  "block.mythicupgrades.jade_crystal_block": "Yeşim Kristali Bloğu",
 
   "item.mythicupgrades.topaz": "Topaz",
   "item.mythicupgrades.topaz_ingot": "Topaz Külçesi",
@@ -69,7 +69,7 @@
   "block.mythicupgrades.topaz_ore": "Topaz Cevheri",
   "block.mythicupgrades.deepslate_topaz_ore": "Kayrak Taşında Topaz Cevheri",
   "block.mythicupgrades.topaz_block": "Topaz Bloğu",
-  "block.mythicupgrades.topaz_ruins": "Topaz Kalıntıları",
+  "block.mythicupgrades.topaz_crystal_block": "Topaz Kristali Bloğu",
 
   "item.mythicupgrades.ametrine": "Ametrin",
   "item.mythicupgrades.ametrine_ingot": "Ametrin Külçesi",
@@ -84,7 +84,7 @@
 
   "block.mythicupgrades.ametrine_ore": "Ametrin Cevheri",
   "block.mythicupgrades.ametrine_block": "Ametrin Bloğu",
-  "block.mythicupgrades.ametrine_ruins": "Ametrin Kalıntıları",
+  "block.mythicupgrades.ametrine_crystal_block": "Ametrin Kristali Bloğu",
 
   "item.mythicupgrades.aquamarine": "Akuamarin",
   "item.mythicupgrades.aquamarine_ingot": "Akuamarin Külçesi",
@@ -95,7 +95,7 @@
   "block.mythicupgrades.aquamarine_ore": "Akuamarin Cevheri",
   "block.mythicupgrades.deepslate_aquamarine_ore": "Kayrak Taşında Akuamarin Cevheri",
   "block.mythicupgrades.aquamarine_block": "Akuamarin Bloğu",
-  "block.mythicupgrades.aquamarine_ruins": "Akuamarin Kalıntıları",
+  "block.mythicupgrades.aquamarine_crystal_block": "Akuamarin Kristali Bloğu",
 
   "effect.mythicupgrades.thorns": "Dikenler",
   "effect.mythicupgrades.freeze": "Dondurma",
