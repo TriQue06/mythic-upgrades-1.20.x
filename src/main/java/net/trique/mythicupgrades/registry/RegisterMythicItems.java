@@ -135,7 +135,6 @@ public class RegisterMythicItems {
             new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 4, -1.6f,
                     (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
 
-
     public static final Item JADE_AXE = registerItem("jade_axe",
             new MythicEffectsAxeItem(MythicToolMaterials.JADE, 7, -3.0f,
                     (new FabricItemSettings().fireproof()), poisonAxeItemEffects,"jade_axe.description", Formatting.GREEN));
@@ -154,7 +153,6 @@ public class RegisterMythicItems {
     public static final Item JADE_BOOTS = registerItem("jade_boots",
             new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(),
                     jadeArmorEffects, "jade_boots.description", Formatting.GREEN));
-
 
     public static final Item TOPAZ_SHOVEL = registerItem("topaz_shovel",
             new ShovelItem(MythicToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof())));
@@ -345,7 +343,6 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.AMETRINE_BOOTS);
                             entries.add(RegisterMythicItems.AMETRINE);
                             entries.add(RegisterMythicItems.AMETRINE_INGOT);
-
                         }).build();
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
     }

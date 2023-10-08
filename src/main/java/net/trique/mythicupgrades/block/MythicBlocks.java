@@ -42,7 +42,7 @@ public class MythicBlocks {
     public static final Block AQUAMARINE_BLOCK = registerBlock("aquamarine_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.LIGHT_BLUE).requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
-    public static final Block AQUAMARINE_CRYSTAL_BLOCK = registerBlock("aquamarine_ruins",
+    public static final Block AQUAMARINE_CRYSTAL_BLOCK = registerBlock("aquamarine_crystal_block",
             new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.LIGHT_BLUE).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().luminance(value -> 10).strength(3.0f, 1200.0f)));
 
     public static final Block AQUAMARINE_ORE = registerBlock("aquamarine_ore",

@@ -20,22 +20,22 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.HELMET, 3);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
     JADE("jade", 40, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
+    TOPAZ("topaz", 120, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
-        map.put(Type.HELMET, 4);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
-    TOPAZ("topaz", 120, Util.make(new EnumMap(Type.class), (map) -> {
-        map.put(Type.BOOTS, 9);
-        map.put(Type.LEGGINGS, 18);
-        map.put(Type.CHESTPLATE, 24);
-        map.put(Type.HELMET, 9);
+        map.put(Type.HELMET, 5);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
     AMETRINE("ametrine", 40, Util.make(new EnumMap(Type.class), (map) -> {
-        map.put(Type.BOOTS, 5);
-        map.put(Type.LEGGINGS, 9);
-        map.put(Type.CHESTPLATE, 11);
-        map.put(Type.HELMET, 5);
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
 
     private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {

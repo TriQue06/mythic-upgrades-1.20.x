@@ -1,4 +1,4 @@
-// 1.20.2	2023-10-08T12:48:17.8479032	Mythic Upgrades/Recipes
+// 1.20.2	2023-10-08T14:28:20.389097	Mythic Upgrades/Recipes
 dd380532deaa61fb63618e612d7ee27c88965eef data\mythicupgrades\advancements\recipes\misc\sapphire_from_blasting_sapphire_ore.json
 739ae830979519795d1da7f2673f82e6a3e89c1b data\mythicupgrades\advancements\recipes\misc\sapphire_from_smelting_sapphire_ore.json
 ddd1c19fe6484587654d8c89c093ade1cad01363 data\mythicupgrades\advancements\recipes\building_blocks\sapphire_block.json
@@ -38,8 +38,8 @@ b90d2974e1fddf51a8c981e57f727e7c9870a0f7 data\mythicupgrades\advancements\recipe
 80a93c980c43fa4a50df20298a165a38c7892b81 data\mythicupgrades\recipes\ametrine_ingot.json
 1b3f9d394a1a299e575dd713b7e0693540c01abb data\mythicupgrades\recipes\ametrine_from_blasting_ametrine_ore.json
 cd6271c4fcf9c82d2409a7682773d47edcbeac70 data\mythicupgrades\recipes\aquamarine_ingot.json
-cf5362f5282db375448f09601e2d2d32b757bc6e data\mythicupgrades\advancements\recipes\misc\topaz_from_smelting_topaz_ore.json
 8a1d84bea984af594f93c780121f7063218cba50 data\mythicupgrades\recipes\ruby_from_smelting_ruby_ore.json
+cf5362f5282db375448f09601e2d2d32b757bc6e data\mythicupgrades\advancements\recipes\misc\topaz_from_smelting_topaz_ore.json
 95b6b417abdff6a59dc0494debe8178082fe2663 data\mythicupgrades\advancements\recipes\misc\aquamarine_from_blasting_aquamarine_ore.json
 dccf1ed37079705732ec308185f63714e1fc524c data\mythicupgrades\recipes\ruby_block.json
 47ed1ffe67ab6d394dc0b60ed8ddfcee614b2339 data\mythicupgrades\recipes\sapphire_ingot.json
