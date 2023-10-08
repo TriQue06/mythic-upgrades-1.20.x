@@ -12,12 +12,18 @@ public class MythicLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(MythicBlocks.SAPPHIRE_BLOCK);
-        addDrop(MythicBlocks.RUBY_BLOCK);
         addDrop(MythicBlocks.JADE_BLOCK);
+        addDrop(MythicBlocks.JADE_CRYSTAL_BLOCK);
         addDrop(MythicBlocks.TOPAZ_BLOCK);
-        addDrop(MythicBlocks.AMETRINE_BLOCK);
+        addDrop(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
         addDrop(MythicBlocks.AQUAMARINE_BLOCK);
+        addDrop(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
+        addDrop(MythicBlocks.SAPPHIRE_BLOCK);
+        addDrop(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
+        addDrop(MythicBlocks.RUBY_BLOCK);
+        addDrop(MythicBlocks.RUBY_CRYSTAL_BLOCK);
+        addDrop(MythicBlocks.AMETRINE_BLOCK);
+        addDrop(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
 
         addDrop(MythicBlocks.SAPPHIRE_ORE, oreDrops(MythicBlocks.SAPPHIRE_ORE, RegisterMythicItems.SAPPHIRE));
         addDrop(MythicBlocks.RUBY_ORE, oreDrops(MythicBlocks.RUBY_ORE, RegisterMythicItems.RUBY));

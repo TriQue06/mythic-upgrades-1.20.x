@@ -9,11 +9,9 @@ public class MythicEffectVirtualItemHandler {
 
     private final ItemEffectsList allEffects;
 
-
     public MythicEffectVirtualItemHandler(ItemEffectsList allEffects) {
         this.allEffects = allEffects;
     }
-
 
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
         Functions.addStatusEffects(target, allEffects.getForOthers(), attacker);

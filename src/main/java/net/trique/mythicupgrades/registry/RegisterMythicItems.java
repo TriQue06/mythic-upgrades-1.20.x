@@ -19,7 +19,6 @@ import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
 public class RegisterMythicItems {
-    
 
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.DAMAGE_DEFLECTION, 4).build();
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, 1).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, 1).build();
@@ -50,7 +49,7 @@ public class RegisterMythicItems {
     public static final Item BROKEN_RUBY_DISC = registerItem("broken_ruby_disc",
             new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16)));
     public static final Item BROKEN_JADE_DISC = registerItem("broken_jade_disc",
-            new BrokenDiscItem("jade.description", new FabricItemSettings().maxCount(16)));
+            new BrokenDiscItem("jadedisc.description", new FabricItemSettings().maxCount(16)));
     public static final Item BROKEN_TOPAZ_DISC = registerItem("broken_topaz_disc",
             new BrokenDiscItem("topazdisc.description", new FabricItemSettings().maxCount(16)));
     public static final Item BROKEN_AMETRINE_DISC = registerItem("broken_ametrine_disc",
@@ -275,7 +274,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.RUBY_UPGRADE_SMITHING_TEMPLATE);
                             entries.add(RegisterMythicItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE);
                             entries.add(MythicBlocks.JADE_BLOCK);
-                            entries.add(MythicBlocks.JADE_RUINS);
+                            entries.add(MythicBlocks.JADE_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.JADE_ORE);
                             entries.add(MythicBlocks.DEEPSLATE_JADE_ORE);
                             entries.add(RegisterMythicItems.JADE_AXE);
@@ -288,7 +287,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.JADE_INGOT);
 
                             entries.add(MythicBlocks.TOPAZ_BLOCK);
-                            entries.add(MythicBlocks.TOPAZ_RUINS);
+                            entries.add(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.TOPAZ_ORE);
                             entries.add(MythicBlocks.DEEPSLATE_TOPAZ_ORE);
                             entries.add(RegisterMythicItems.TOPAZ_SHOVEL);
@@ -304,7 +303,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.TOPAZ_INGOT);
 
                             entries.add(MythicBlocks.AQUAMARINE_BLOCK);
-                            entries.add(MythicBlocks.AQUAMARINE_RUINS);
+                            entries.add(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.AQUAMARINE_ORE);
                             entries.add(MythicBlocks.DEEPSLATE_AQUAMARINE_ORE);
                             entries.add(RegisterMythicItems.AQUAMARINE_AXE);
@@ -313,7 +312,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.AQUAMARINE_INGOT);
 
                             entries.add(MythicBlocks.SAPPHIRE_BLOCK);
-                            entries.add(MythicBlocks.SAPPHIRE_RUINS);
+                            entries.add(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.SAPPHIRE_ORE);
                             entries.add(RegisterMythicItems.SAPPHIRE_AXE);
                             entries.add(RegisterMythicItems.SAPPHIRE_SWORD);
@@ -325,7 +324,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.SAPPHIRE_INGOT);
 
                             entries.add(MythicBlocks.RUBY_BLOCK);
-                            entries.add(MythicBlocks.RUBY_RUINS);
+                            entries.add(MythicBlocks.RUBY_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.RUBY_ORE);
                             entries.add(RegisterMythicItems.RUBY_SHOVEL);
                             entries.add(RegisterMythicItems.RUBY_PICKAXE);
@@ -336,7 +335,7 @@ public class RegisterMythicItems {
                             entries.add(RegisterMythicItems.RUBY_INGOT);
 
                             entries.add(MythicBlocks.AMETRINE_BLOCK);
-                            entries.add(MythicBlocks.AMETRINE_RUINS);
+                            entries.add(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
                             entries.add(MythicBlocks.AMETRINE_ORE);
                             entries.add(RegisterMythicItems.AMETRINE_AXE);
                             entries.add(RegisterMythicItems.AMETRINE_SWORD);

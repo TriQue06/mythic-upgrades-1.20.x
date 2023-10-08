@@ -25,7 +25,6 @@ public class Functions {
         return MinecraftClient.getInstance().player;
     }
 
-
     public static void addStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects, LivingEntity attacker) {
         for (StatusEffect effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
@@ -40,7 +39,6 @@ public class Functions {
     public static void addStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         addStatusEffects(entity, effects, null);
     }
-
 
     public static void handleTooltipForArmor(ItemStack stack, List<Text> tooltips, String tooltipSB, Formatting color, ArmorMaterial material) {
         ClientPlayerEntity player = getLocalPlayer();

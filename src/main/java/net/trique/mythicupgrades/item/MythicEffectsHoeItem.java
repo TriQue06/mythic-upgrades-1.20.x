@@ -36,7 +36,6 @@ public class MythicEffectsHoeItem extends HoeItem implements BaseMythicToolItem 
         return super.postHit(stack, target, attacker);
     }
 
-
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable(this.tooltipKey).formatted(color));

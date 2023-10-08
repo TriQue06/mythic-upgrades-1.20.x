@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.mixin;
 
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

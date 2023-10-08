@@ -37,12 +37,14 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.CHESTPLATE, 11);
         map.put(Type.HELMET, 5);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
+
     private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 13);
         map.put(Type.LEGGINGS, 15);
         map.put(Type.CHESTPLATE, 16);
         map.put(Type.HELMET, 11);
     });
+
     private final String name;
     private final int durabilityMultiplier;
     private final EnumMap protectionAmounts;

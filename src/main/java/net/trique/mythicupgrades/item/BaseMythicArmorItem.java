@@ -7,7 +7,5 @@ import java.util.HashMap;
 
 public interface BaseMythicArmorItem extends BaseMythicItem {
     HashMap<StatusEffect, EffectMeta> getEquipmentBuffs();
-
     HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs();
-
 }

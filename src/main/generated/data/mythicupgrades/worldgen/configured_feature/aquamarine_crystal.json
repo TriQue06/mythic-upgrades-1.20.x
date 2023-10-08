@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 10,
+    "size": 12,
     "targets": [
       {
         "state": {
-          "Name": "mythicupgrades:aquamarine_crystal_block"
+          "Name": "mythicupgrades:aquamarine_ruins"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
