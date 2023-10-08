@@ -25,7 +25,6 @@ public class PoisonousThornsEffect extends StatusEffect {
                 }
             }
         }
-
         super.applyUpdateEffect(livingEntity, amplifier);
     }
 

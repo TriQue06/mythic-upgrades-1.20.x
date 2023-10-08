@@ -9,35 +9,34 @@ import net.trique.mythicupgrades.world.MythicPlacedFeatures;
 
 public class MythicOreGeneration {
     public static void generateOres() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_RUINS_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.RUBY_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.RUBY_RUINS_PLACED_KEY);
-
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.SWAMP),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.JADE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.SWAMP),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.JADE_RUINS_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.JADE_CRYSTAL_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BADLANDS),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.TOPAZ_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BADLANDS),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.TOPAZ_RUINS_PLACED_KEY);
-
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AMETRINE_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AMETRINE_RUINS_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.TOPAZ_CRYSTAL_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
-                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AQUAMARINE_RUINS_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AQUAMARINE_CRYSTAL_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_CRYSTAL_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.RUBY_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.RUBY_CRYSTAL_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AMETRINE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AMETRINE_CRYSTAL_PLACED_KEY);
     }
 }
