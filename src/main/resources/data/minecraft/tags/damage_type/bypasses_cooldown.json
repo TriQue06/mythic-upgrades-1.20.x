@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mythicupgrades:deflecting_damage_type"
+    "mythicupgrades:deflecting_damage_type",
+    "mythicupgrades:piercing_damage_type"
   ]
 }
