@@ -102,17 +102,19 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
     }
 
-    @Inject(method = "attack", at = @At(value = "HEAD"))
+    @Inject(method = "attack", at = @At(value = "TAIL"))
     public void applySapphirePiercingDamage(Entity entity, CallbackInfo ci) {
-        if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
-                item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
-            DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
-                    MythicUpgradeDamageTypes.PIERCING_DAMAGE_TYPE, this);
-            if (entity instanceof EnderDragonPart part) {
-                EnderDragonEntity dragon = part.owner;
-                dragon.damagePart(part, source, 0.1f * dragon.getMaxHealth());
-            } else if (entity instanceof LivingEntity target) {
-                target.damage(source, 0.1f * target.getMaxHealth());
+        if (entity.isAttackable()) {
+            if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
+                    item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
+                DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
+                        MythicUpgradeDamageTypes.PIERCING_DAMAGE_TYPE, this);
+                if (entity instanceof EnderDragonPart part) {
+                    EnderDragonEntity dragon = part.owner;
+                    dragon.damagePart(part, source, 0.1f * dragon.getMaxHealth());
+                } else if (entity instanceof LivingEntity target) {
+                    target.damage(source, 0.1f * target.getMaxHealth());
+                }
             }
         }
     }
