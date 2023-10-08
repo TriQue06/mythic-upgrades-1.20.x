@@ -101,10 +101,10 @@ public class RegisterMythicItems {
             new Item(new FabricItemSettings().fireproof()));
 
     public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.SAPPHIRE, 0, -3.0f,
+            new MythicEffectsAxeItem(MythicToolMaterials.SAPPHIRE, 6, -3.0f,
                     (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE));
     public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 0, -2.4f,
+            new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 4, -2.4f,
                     (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE));
     public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet",
             new MythicEffectsArmorItem(MythicArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,
@@ -136,10 +136,10 @@ public class RegisterMythicItems {
                     (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
 
     public static final Item JADE_AXE = registerItem("jade_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.JADE, 7, -3.0f,
+            new MythicEffectsAxeItem(MythicToolMaterials.JADE, 6, -3.0f,
                     (new FabricItemSettings().fireproof()), poisonAxeItemEffects,"jade_axe.description", Formatting.GREEN));
     public static final Item JADE_SWORD = registerItem("jade_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.JADE, 5, -2.4f,
+            new MythicEffectsSwordItem(MythicToolMaterials.JADE, 4, -2.4f,
                     (new FabricItemSettings().fireproof()), poisonSwordItemEffects, "jade_sword.description", Formatting.GREEN));
     public static final Item JADE_HELMET = registerItem("jade_helmet",
             new MythicEffectsArmorItem(MythicArmorMaterials.JADE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(),
@@ -195,7 +195,6 @@ public class RegisterMythicItems {
     public static final Item AMETRINE_BOOTS = registerItem("ametrine_boots",
             new MythicEffectsArmorItem(MythicArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS,
                     new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", Formatting.LIGHT_PURPLE));
-
 
     public static final Item AQUAMARINE_AXE = registerItem("aquamarine_axe",
             new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 6, -3.3f,

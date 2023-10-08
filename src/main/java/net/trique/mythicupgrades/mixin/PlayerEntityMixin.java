@@ -113,7 +113,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                     EnderDragonEntity dragon = part.owner;
                     dragon.damagePart(part, source, 0.1f * dragon.getMaxHealth());
                 } else if (entity instanceof LivingEntity target) {
-                    target.damage(source, 0.1f * target.getMaxHealth());
+                    target.damage(source, 0.05f * target.getMaxHealth());
                 }
             }
         }

@@ -9,14 +9,14 @@ import net.trique.mythicupgrades.world.MythicPlacedFeatures;
 
 public class MythicOreGeneration {
     public static void generateOres() {
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.SWAMP),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.JADE_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.SWAMP),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.JADE_CRYSTAL_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BADLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.TOPAZ_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BADLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.TOPAZ_CRYSTAL_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
