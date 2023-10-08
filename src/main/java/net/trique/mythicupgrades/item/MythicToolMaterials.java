@@ -7,7 +7,7 @@ import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
 public enum MythicToolMaterials implements ToolMaterial {
 
-    SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 6.0f, 18, Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
+    SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
     RUBY(MiningLevels.NETHERITE, 2106, 12.0f, 4.0f, 18, Ingredient.ofItems(RegisterMythicItems.RUBY_INGOT)),
     JADE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
     TOPAZ(MiningLevels.NETHERITE, 6318, 10.0f, 4.5f, 18, Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),

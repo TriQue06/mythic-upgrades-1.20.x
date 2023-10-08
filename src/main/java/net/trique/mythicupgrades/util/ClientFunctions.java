@@ -28,5 +28,4 @@ public class ClientFunctions {
     public static ClientPlayerEntity getLocalPlayer() {
         return MinecraftClient.getInstance().player;
     }
-
 }

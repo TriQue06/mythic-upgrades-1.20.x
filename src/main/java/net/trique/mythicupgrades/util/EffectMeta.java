@@ -19,7 +19,6 @@ public class EffectMeta {
         return new EffectMeta(duration, amplifier, true, true, true);
     }
 
-
     public static EffectMeta partiallyVisible(int duration, int amplifier) {
         return new EffectMeta(duration, amplifier, true, false, true);
     }
@@ -27,7 +26,6 @@ public class EffectMeta {
     public int getAmplifier() {
         return amplifier;
     }
-
     public int getDuration() {
         return duration;
     }
@@ -37,7 +35,6 @@ public class EffectMeta {
     public boolean shouldShowParticles() {
         return showParticles;
     }
-
     public boolean shouldShowIcon() {
         return showIcon;
     }

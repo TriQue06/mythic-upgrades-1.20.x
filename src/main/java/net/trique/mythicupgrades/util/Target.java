@@ -5,8 +5,6 @@ public enum Target {
     ON_HIT(),
     ON_EQUIPMENT_BUFF(),
     ON_EQUIPMENT_DEBUFF();
-
     Target() {
     }
-
 }
