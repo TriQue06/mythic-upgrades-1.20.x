@@ -9,7 +9,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
-import net.trique.mythicupgrades.util.Functions;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 import java.util.*;
