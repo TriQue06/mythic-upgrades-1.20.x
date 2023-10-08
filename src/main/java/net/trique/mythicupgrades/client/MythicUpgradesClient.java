@@ -2,7 +2,7 @@ package net.trique.mythicupgrades.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class Mythic_upgradesClient implements ClientModInitializer {
+public class MythicUpgradesClient implements ClientModInitializer {
     /**
      * Runs the mod initializer on the client environment.
      */
