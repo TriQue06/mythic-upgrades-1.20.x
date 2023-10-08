@@ -16,7 +16,7 @@ public class MythicEffectVirtualItemHandler {
 
 
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
-        Functions.addStatusEffects(target, allEffects.getForOthers(), attacker);
+        CommonFunctions.addStatusEffects(target, allEffects.getForOthers(), attacker);
     }
     public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
         return allEffects.getForMainHand();
