@@ -9,11 +9,9 @@ public class MythicEffectVirtualItemHandler {
 
     private final ItemEffectsList allEffects;
 
-
     public MythicEffectVirtualItemHandler(ItemEffectsList allEffects) {
         this.allEffects = allEffects;
     }
-
 
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
         CommonFunctions.addStatusEffects(target, allEffects.getForOthers(), attacker);
@@ -27,7 +25,6 @@ public class MythicEffectVirtualItemHandler {
     public HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs() {
         return allEffects.getForEquipmentDebuffs();
     }
-
     public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
         return allEffects.getForOthers();
     }

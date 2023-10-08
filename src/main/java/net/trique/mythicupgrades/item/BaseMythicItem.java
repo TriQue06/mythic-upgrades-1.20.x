@@ -7,7 +7,5 @@ import java.util.HashMap;
 
 public interface BaseMythicItem {
     HashMap<StatusEffect, EffectMeta> getMainHandEffects();
-
     HashMap<StatusEffect, EffectMeta> getOnHitEffects();
-
 }
