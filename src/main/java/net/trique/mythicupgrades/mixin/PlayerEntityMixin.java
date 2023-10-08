@@ -1,5 +1,6 @@
 package net.trique.mythicupgrades.mixin;
 
+
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -31,6 +32,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Objects;
 
+
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
 
@@ -44,12 +46,14 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
 
+
     @Shadow
     public abstract float getAttackCooldownProgress(float baseTime);
 
     @Shadow public abstract void remove(RemovalReason reason);
 
     @Shadow public abstract boolean isCreative();
+
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
     public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
