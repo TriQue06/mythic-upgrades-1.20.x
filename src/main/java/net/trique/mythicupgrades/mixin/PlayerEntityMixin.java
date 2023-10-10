@@ -51,7 +51,6 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow public abstract boolean isCreative();
 
-
     @Inject(method = "attack", at = @At(value = "HEAD"))
     public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
         if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsSwordItem sword) {
@@ -100,7 +99,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "attack", at = @At(value = "TAIL"))
-    public void applySapphirePiercingDamage(Entity entity, CallbackInfo ci) {
+    public void applySapphirePercentageDamage(Entity entity, CallbackInfo ci) {
         if (entity.isAttackable()) {
             if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
                     item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
