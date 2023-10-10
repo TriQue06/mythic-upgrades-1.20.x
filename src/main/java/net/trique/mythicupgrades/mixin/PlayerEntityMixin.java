@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.mixin;
 
-
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -32,7 +31,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Objects;
 
-
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
 
@@ -45,7 +43,6 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
-
 
     @Shadow
     public abstract float getAttackCooldownProgress(float baseTime);
@@ -132,7 +129,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
                     hasDamageBeenDeflected = true;
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (refl_dmg_coef + 1.1f) * amount);
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (1.1f + refl_dmg_coef) * amount);
                 } else {
                     hasDamageBeenDeflected = false;
                 }

@@ -20,7 +20,7 @@ import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
 public class RegisterMythicItems {
 
-    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.DAMAGE_DEFLECTION, 4).build();
+    private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.DAMAGE_DEFLECTION, 1).build();
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, 1).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, 1).build();
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
     private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.POISONOUS_THORNS, 3).build();
@@ -132,7 +132,7 @@ public class RegisterMythicItems {
             new MythicEffectsHoeItem(MythicToolMaterials.RUBY, 1, 0.6f,
                     (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED));
     public static final Item RUBY_SWORD = registerItem("ruby_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 4, -1.6f,
+            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 5, -1.6f,
                     (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
 
     public static final Item JADE_AXE = registerItem("jade_axe",
@@ -197,10 +197,10 @@ public class RegisterMythicItems {
                     new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", Formatting.LIGHT_PURPLE));
 
     public static final Item AQUAMARINE_AXE = registerItem("aquamarine_axe",
-            new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 6, -3.3f,
+            new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 6, -3f,
                     (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
     public static final Item AQUAMARINE_SWORD = registerItem("aquamarine_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 4, -2.7f,
+            new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 4, -2.4f,
                     (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
@@ -245,7 +245,7 @@ public class RegisterMythicItems {
 
     private static void registerMythicItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                        .icon(() -> new ItemStack(RegisterMythicItems.AMETRINE_SWORD)).entries((displayContext, entries) -> {
+                        .icon(() -> new ItemStack(RegisterMythicItems.JADE_SWORD)).entries((displayContext, entries) -> {
                             entries.add(RegisterMythicItems.BROKEN_JADE_DISC);
                             entries.add(RegisterMythicItems.MUSIC_DISC_NELUMBO);
 
