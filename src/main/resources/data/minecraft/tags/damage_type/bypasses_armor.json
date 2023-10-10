@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mythicupgrades:piercing_damage_type"
+    "mythicupgrades:percentage_damage_type"
   ]
 }

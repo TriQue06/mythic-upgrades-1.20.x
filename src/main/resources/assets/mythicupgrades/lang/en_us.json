@@ -103,8 +103,8 @@
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
-  "death.attack.piercing": "%s was pierced by %s.",
-  "death.attack.piercing.item": "%s was pierced by %s holding %s.",
+  "death.attack.percentage": "%s has received enough magic percentage damage to pass away while fighting with %s.",
+  "death.attack.percentage.item": "%s has received enough magic percentage damage to pass away while fighting with %s holding %s.",
 
   "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented.",
 
