@@ -100,7 +100,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "attack", at = @At(value = "TAIL"))
-    public void applySapphirePiercingDamage(Entity entity, CallbackInfo ci) {
+    public void applySapphirePercentageDamage(Entity entity, CallbackInfo ci) {
         if (entity.isAttackable()) {
             if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
                     item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {

@@ -49,7 +49,7 @@ public abstract class MobEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "tryAttack", at = @At(value = "RETURN"))
-    public void applySapphirePiercingDamage(Entity target, CallbackInfoReturnable<Boolean> cir) {
+    public void applySapphirePercentageDamage(Entity target, CallbackInfoReturnable<Boolean> cir) {
         boolean wasAttacked = cir.getReturnValue();
         if (wasAttacked) {
             if (target instanceof LivingEntity entity) {
