@@ -105,7 +105,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
                     item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
                 DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
-                        MythicUpgradeDamageTypes.PIERCING_DAMAGE_TYPE, this);
+                        MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragonEntity dragon = part.owner;
                     dragon.damagePart(part, source, 0.05f * dragon.getMaxHealth());
