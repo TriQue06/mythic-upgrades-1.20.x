@@ -129,7 +129,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
                     hasDamageBeenDeflected = true;
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (refl_dmg_coef + 1.1f) * amount);
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (1.1f + refl_dmg_coef) * amount);
                 } else {
                     hasDamageBeenDeflected = false;
                 }
