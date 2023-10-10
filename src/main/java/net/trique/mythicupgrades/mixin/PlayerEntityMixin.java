@@ -108,9 +108,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                         MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragonEntity dragon = part.owner;
-                    dragon.damagePart(part, source, 0.05f * dragon.getMaxHealth());
+                    dragon.damagePart(part, source, 0.07f * dragon.getMaxHealth());
                 } else if (entity instanceof LivingEntity target) {
-                    target.damage(source, 0.05f * target.getMaxHealth());
+                    target.damage(source, 0.07f * target.getMaxHealth());
                 }
             }
         }
