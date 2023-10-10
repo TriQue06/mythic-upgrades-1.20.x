@@ -55,7 +55,7 @@ public abstract class MobEntityMixin extends LivingEntity {
             if (target instanceof LivingEntity entity) {
                 if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
                         item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
-                    DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PIERCING_DAMAGE_TYPE,
+                    DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
                     entity.damage(source, 0.05f * entity.getMaxHealth());
                 }
