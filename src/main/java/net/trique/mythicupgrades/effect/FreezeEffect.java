@@ -24,7 +24,6 @@ public class FreezeEffect extends StatusEffect {
         super.applyUpdateEffect(livingEntity, amplifier);
     }
 
-
     @Override
     public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {
         return true;

@@ -16,25 +16,25 @@ public class MythicModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.JADE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_JADE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.TOPAZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_TOPAZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AQUAMARINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.DEEPSLATE_AQUAMARINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.SAPPHIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.RUBY_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_RUINS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(MythicBlocks.AMETRINE_ORE);
     }
 

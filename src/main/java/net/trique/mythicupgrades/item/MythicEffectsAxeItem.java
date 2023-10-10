@@ -37,7 +37,6 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem 
         return super.postHit(stack, target, attacker);
     }
 
-
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable(tooltipKey).formatted(color));
