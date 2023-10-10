@@ -20,7 +20,7 @@
   "block.mythicupgrades.sapphire_ore": "Сапфировая руда",
   "block.mythicupgrades.deepslate_sapphire_ore": "Глубиносланцевая сапфировая руда",
   "block.mythicupgrades.sapphire_block": "Блок сапфира",
-  "block.mythicupgrades.sapphire_ruins": "Сапфиросодержащий остаток",
+  "block.mythicupgrades.sapphire_crystal_block": "Блок сапфирового кристалла",
 
   "item.mythicupgrades.ruby": "Рубин",
   "item.mythicupgrades.ruby_ingot": "Рубиновый слиток",
@@ -34,7 +34,7 @@
   "block.mythicupgrades.ruby_ore": "Рубиновая руда",
   "block.mythicupgrades.deepslate_ruby_ore": "Глубиносланцевая рубиновая руда",
   "block.mythicupgrades.ruby_block": "Блок рубина",
-  "block.mythicupgrades.ruby_ruins": "Рубиносодержащий остаток",
+  "block.mythicupgrades.ruby_crystal_block": "Блок рубинового кристалла",
 
   "item.mythicupgrades.jade": "Нефрит",
   "item.mythicupgrades.jade_ingot": "Нефритовый слиток",
@@ -50,7 +50,7 @@
   "block.mythicupgrades.jade_ore": "Нефритовая руда",
   "block.mythicupgrades.deepslate_jade_ore": "Глубиносланцевая нефритовая руда",
   "block.mythicupgrades.jade_block": "Блок нефрита",
-  "block.mythicupgrades.jade_ruins": "Нефритосодежащий остаток",
+  "block.mythicupgrades.jade_crystal_block": "Блок нефритового кристалла",
 
   "item.mythicupgrades.topaz": "Топаз",
   "item.mythicupgrades.topaz_ingot": "Топазовый слиток",
@@ -69,7 +69,7 @@
   "block.mythicupgrades.topaz_ore": "Топазовая руда",
   "block.mythicupgrades.deepslate_topaz_ore": "Глубиносланцевая топазовая руда",
   "block.mythicupgrades.topaz_block": "Блок топаза",
-  "block.mythicupgrades.topaz_ruins": "Топазосодежащий остаток",
+  "block.mythicupgrades.topaz_crystal_block": "Блок топазового кристалла",
 
   "item.mythicupgrades.ametrine": "Аметрин",
   "item.mythicupgrades.ametrine_ingot": "Аметриновый слиток",
@@ -84,7 +84,7 @@
   
   "block.mythicupgrades.ametrine_ore": "Аметриновая руда",
   "block.mythicupgrades.ametrine_block": "Блок аметрина",
-  "block.mythicupgrades.ametrine_ruins": "Аметриносодежащий остаток",
+  "block.mythicupgrades.ametrine_crystal_block": "Блок аметринового кристалла",
 
   "item.mythicupgrades.aquamarine": "Аквамарин",
   "item.mythicupgrades.aquamarine_ingot": "Аквамариновый слиток",
@@ -95,7 +95,7 @@
   "block.mythicupgrades.aquamarine_ore": "Аквамариновая руда",
   "block.mythicupgrades.deepslate_aquamarine_ore": "Глубиносланцевая аквамариновая руда",
   "block.mythicupgrades.aquamarine_block": "Блок аквамарина",
-  "block.mythicupgrades.aquamarine_ruins": "Аквамариносодежащий остаток",
+  "block.mythicupgrades.aquamarine_crystal_block": "Блок аквамаринового кристалла",
 
   "effect.mythicupgrades.poisonous_thorns": "Ядовитые шипы",
   "effect.mythicupgrades.freeze": "Заморозка",
@@ -103,8 +103,11 @@
 
   "defaultArmorTooltip.description": "Попробуйте надеть полный комплект брони чтобы получить его бонусы, если они есть",
 
-  "death.attack.deflecting": "%s получил достаточно отраженного урона от %s чтобы уйти из этого мира.",
-  "death.attack.deflecting.item": "%s получил достаточно отраженного урона от %s чтобы уйти из этого мира не без помощи %s.",
+  "death.attack.deflecting": "%s получил(а) достаточно отраженного урона от %s чтобы уйти из этого мира.",
+  "death.attack.deflecting.item": "%s получил(а) достаточно отраженного урона от %s чтобы уйти из этого мира не без помощи %s.",
+  "death.attack.piercing": "%s был(а) пронзён(а) %s.",
+  "death.attack.piercing.item": "%s был(а) пронзён(а) %s, державшего(ей) %s.",
+
 
   "aquamarine.description": "Замораживает противника при ударе.",
   "aquamarine_axe.description": "Замораживает противника при ударе.",
