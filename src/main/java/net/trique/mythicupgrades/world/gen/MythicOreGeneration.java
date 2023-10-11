@@ -24,9 +24,9 @@ public class MythicOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.AQUAMARINE_CRYSTAL_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WARPED_FOREST),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_ORE_PLACED_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SOUL_SAND_VALLEY),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WARPED_FOREST),
                 GenerationStep.Feature.UNDERGROUND_ORES, MythicPlacedFeatures.SAPPHIRE_CRYSTAL_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
