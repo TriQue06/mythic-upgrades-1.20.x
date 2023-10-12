@@ -132,7 +132,7 @@ public class RegisterMythicItems {
             new MythicEffectsHoeItem(MythicToolMaterials.RUBY, 1, 0.6f,
                     (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED));
     public static final Item RUBY_SWORD = registerItem("ruby_sword",
-            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 5, -1.6f,
+            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 4, -1.6f,
                     (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
 
     public static final Item JADE_AXE = registerItem("jade_axe",

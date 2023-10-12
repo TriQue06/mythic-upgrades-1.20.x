@@ -57,7 +57,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                         item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
                     DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
-                    entity.damage(source, 0.05f * entity.getMaxHealth());
+                    entity.damage(source, 0.07f * entity.getMaxHealth());
                 }
             }
         }
