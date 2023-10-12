@@ -49,7 +49,7 @@ public abstract class MobEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "tryAttack", at = @At(value = "RETURN"))
-    public void applySapphirePiercingDamage(Entity target, CallbackInfoReturnable<Boolean> cir) {
+    public void applySapphirePercentageDamage(Entity target, CallbackInfoReturnable<Boolean> cir) {
         boolean wasAttacked = cir.getReturnValue();
         if (wasAttacked) {
             if (target instanceof LivingEntity entity) {
@@ -57,7 +57,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                         item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
                     DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
-                    entity.damage(source, 0.05f * entity.getMaxHealth());
+                    entity.damage(source, 0.07f * entity.getMaxHealth());
                 }
             }
         }
