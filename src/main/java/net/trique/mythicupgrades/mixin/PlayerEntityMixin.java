@@ -107,9 +107,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                         MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragonEntity dragon = part.owner;
-                    dragon.damagePart(part, source, 0.07f * dragon.getMaxHealth());
+                    dragon.damagePart(part, source, 0.05f * dragon.getMaxHealth());
                 } else if (entity instanceof LivingEntity target) {
-                    target.damage(source, 0.07f * target.getMaxHealth());
+                    target.damage(source, 0.05f * target.getMaxHealth());
                 }
             }
         }
@@ -128,7 +128,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
                     hasDamageBeenDeflected = true;
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (1.1f + refl_dmg_coef) * amount);
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + refl_dmg_coef) * amount);
                 } else {
                     hasDamageBeenDeflected = false;
                 }
