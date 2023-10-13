@@ -133,10 +133,10 @@
   "topaz_sword.description": "Имеет в 3 раза больше прочности чем незеритовый меч",
 
   "sapphire.description": "Не имеет эффектов сам по себе.",
-  "sapphire_helmet.description": "Бонус комплекта: эффект Отражения урона V.",
-  "sapphire_chestplate.description": "Бонус комплекта: эффект Отражения урона V.",
-  "sapphire_leggings.description": "Бонус комплекта: эффект Отражения урона V.",
-  "sapphire_boots.description": "Бонус комплекта: эффект Отражения урона V.",
+  "sapphire_helmet.description": "Бонус комплекта: эффект Отражения урона III.",
+  "sapphire_chestplate.description": "Бонус комплекта: эффект Отражения урона III.",
+  "sapphire_leggings.description": "Бонус комплекта: эффект Отражения урона III.",
+  "sapphire_boots.description": "Бонус комплекта: эффект Отражения урона III.",
   "sapphire_axe.description": "Наносит урон в процентном соотношении со здоровьем противника.",
   "sapphire_sword.description": "Наносит урон в процентном соотношении со здоровьем противника.",
 
@@ -148,10 +148,10 @@
   "ruby_sword.description": "Если предмет в главной руке, накладывается эффект Спешки.",
 
   "jade.description": "Отравляет противника при ударе.",
-  "jade_helmet.description": "Бонус комплекта: Эффект Отравленных шипов IV.",
-  "jade_chestplate.description": "Бонус комплекта: Эффект Отравленных шипов IV.",
-  "jade_leggings.description": "Бонус комплекта: Эффект Отравленных шипов IV.",
-  "jade_boots.description": "Бонус комплекта: Эффект Отравленных шипов IV.",
+  "jade_helmet.description": "Бонус комплекта: Эффект Отравленных шипов III.",
+  "jade_chestplate.description": "Бонус комплекта: Эффект Отравленных шипов III.",
+  "jade_leggings.description": "Бонус комплекта: Эффект Отравленных шипов III.",
+  "jade_boots.description": "Бонус комплекта: Эффект Отравленных шипов III.",
   "jade_axe.description": "Отравляет противника при ударе.",
   "jade_sword.description": "Отравляет противника при ударе.",
 
