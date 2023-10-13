@@ -57,7 +57,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                         item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
                     DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
-                    entity.damage(source, 0.07f * entity.getMaxHealth());
+                    entity.damage(source, 0.05f * entity.getMaxHealth());
                 }
             }
         }
@@ -73,7 +73,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                 if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
                     hasDamageBeenDeflected = true;
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (1.1f + refl_dmg_coef) * amount);
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + refl_dmg_coef) * amount);
                 } else {
                     hasDamageBeenDeflected = false;
                 }

@@ -132,10 +132,10 @@
   "topaz_sword.description": "Has 3x durability as netherite sword.",
 
   "sapphire.description": "Has no effects on its own.",
-  "sapphire_helmet.description": "Set Bonus: Damage Deflection V effect.",
-  "sapphire_chestplate.description": "Set Bonus: Damage Deflection V effect.",
-  "sapphire_leggings.description": "Set Bonus: Damage Deflection V effect.",
-  "sapphire_boots.description": "Set Bonus: Damage Deflection V effect.",
+  "sapphire_helmet.description": "Set Bonus: Damage Deflection III effect.",
+  "sapphire_chestplate.description": "Set Bonus: Damage Deflection III effect.",
+  "sapphire_leggings.description": "Set Bonus: Damage Deflection III effect.",
+  "sapphire_boots.description": "Set Bonus: Damage Deflection III effect.",
   "sapphire_axe.description": "Deals percentage-based damage depending on enemy's health.",
   "sapphire_sword.description": "Deals percentage-based damage depending on enemy's health.",
 
@@ -147,10 +147,10 @@
   "ruby_sword.description": "Applies Haste when in main hand.",
 
   "jade.description": "Poisons enemy on hit.",
-  "jade_helmet.description": "Set Bonus: Poisonous Thorns IV effect.",
-  "jade_chestplate.description": "Set Bonus: Poisonous Thorns IV effect.",
-  "jade_leggings.description": "Set Bonus: Poisonous Thorns IV effect.",
-  "jade_boots.description": "Set Bonus: Poisonous Thorns IV effect.",
+  "jade_helmet.description": "Set Bonus: Poisonous Thorns III effect.",
+  "jade_chestplate.description": "Set Bonus: Poisonous Thorns III effect.",
+  "jade_leggings.description": "Set Bonus: Poisonous Thorns III effect.",
+  "jade_boots.description": "Set Bonus: Poisonous Thorns III effect.",
   "jade_axe.description": "Poisons enemy on hit.",
   "jade_sword.description": "Poisons enemy on hit.",
 
