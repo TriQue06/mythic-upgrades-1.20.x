@@ -72,18 +72,18 @@ public class MythicConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldAquamarineCrystals =
                 List.of(OreFeatureConfig.createTarget(terraReplacables, MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK.getDefaultState()));
 
-        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 4));
-        register(context, SAPPHIRE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireCrystals, 12));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 4));
-        register(context, RUBY_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(netherRubyCrystals, 12));
-        register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 4));
-        register(context, JADE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeCrystals, 12));
-        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 4));
-        register(context, TOPAZ_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazCrystals, 12));
-        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 4));
-        register(context, AMETRINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineCrystals, 12));
-        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 4));
-        register(context, AQUAMARINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineCrystals, 12));
+        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 5));
+        register(context, SAPPHIRE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireCrystals, 10));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 5));
+        register(context, RUBY_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(netherRubyCrystals, 10));
+        register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 5));
+        register(context, JADE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeCrystals, 10));
+        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 5));
+        register(context, TOPAZ_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazCrystals, 10));
+        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 5));
+        register(context, AMETRINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineCrystals, 10));
+        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 5));
+        register(context, AQUAMARINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineCrystals, 10));
 }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
