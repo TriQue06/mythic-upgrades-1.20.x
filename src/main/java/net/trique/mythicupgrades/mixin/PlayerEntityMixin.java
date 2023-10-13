@@ -117,7 +117,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Override
     public boolean damage(DamageSource source, float amount) {
-        if (this.isCreative()) {
+        if (this.isCreative() || this.isSpectator()) {
             return false;
         }
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
