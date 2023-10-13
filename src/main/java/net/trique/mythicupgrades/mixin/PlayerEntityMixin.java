@@ -51,7 +51,6 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow public abstract boolean isCreative();
 
-
     @Inject(method = "attack", at = @At(value = "HEAD"))
     public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
         if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsSwordItem sword) {
@@ -118,7 +117,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Override
     public boolean damage(DamageSource source, float amount) {
-        if (this.isCreative()) {
+        if (this.isCreative() || this.isSpectator()) {
             return false;
         }
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
@@ -129,7 +128,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
                     hasDamageBeenDeflected = true;
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (refl_dmg_coef + 0.1f) * amount);
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + refl_dmg_coef) * amount);
                 } else {
                     hasDamageBeenDeflected = false;
                 }
