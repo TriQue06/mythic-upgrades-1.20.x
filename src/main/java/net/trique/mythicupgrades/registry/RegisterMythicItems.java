@@ -19,7 +19,6 @@ import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
 public class RegisterMythicItems {
-
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MythicEffects.DAMAGE_DEFLECTION, 2).build();
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, 1).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, 1).build();
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
@@ -245,7 +244,7 @@ public class RegisterMythicItems {
 
     private static void registerMythicItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                        .icon(() -> new ItemStack(RegisterMythicItems.AMETRINE_SWORD)).entries((displayContext, entries) -> {
+                        .icon(() -> new ItemStack(RegisterMythicItems.JADE_SWORD)).entries((displayContext, entries) -> {
                             entries.add(RegisterMythicItems.BROKEN_JADE_DISC);
                             entries.add(RegisterMythicItems.MUSIC_DISC_NELUMBO);
 
