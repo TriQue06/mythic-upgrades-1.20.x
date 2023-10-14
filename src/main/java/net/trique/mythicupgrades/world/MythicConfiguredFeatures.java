@@ -65,7 +65,7 @@ public class MythicConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MythicBlocks.AMETRINE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> endAmetrineCrystals =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MythicBlocks.AMETRINE_CRYSTAL_BLOCK.getDefaultState()));
-        
+
         List<OreFeatureConfig.Target> overworldAquamarineOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, MythicBlocks.AQUAMARINE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, MythicBlocks.DEEPSLATE_AQUAMARINE_ORE.getDefaultState()));
@@ -84,7 +84,7 @@ public class MythicConfiguredFeatures {
         register(context, AMETRINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineCrystals, 12));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 6));
         register(context, AQUAMARINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineCrystals, 12));
-}
+    }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MythicUpgrades.MOD_ID, name));

@@ -200,7 +200,7 @@ public class RegisterMythicItems {
                     (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
     public static final Item AQUAMARINE_SWORD = registerItem("aquamarine_sword",
             new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.4f,
-                    (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
+                    (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
 
