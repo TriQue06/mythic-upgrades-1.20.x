@@ -111,6 +111,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             }
         }
     }
+
     @Inject(method = "damage", at = @At(value = "HEAD"))
     private void applyDeflectingEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
