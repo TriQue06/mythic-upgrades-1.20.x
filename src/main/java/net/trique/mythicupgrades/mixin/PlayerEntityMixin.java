@@ -27,7 +27,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 import java.util.Objects;
 
@@ -48,11 +48,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     public abstract float getAttackCooldownProgress(float baseTime);
 
     @Shadow public abstract void remove(RemovalReason reason);
-
-    @Shadow public abstract boolean isCreative();
-
     @Inject(method = "attack", at = @At(value = "HEAD"))
-    public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
+    private void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
         if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsSwordItem sword) {
             float gn_dmg = (float) this.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
             float gr_dmg;
@@ -115,11 +112,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
     }
 
-    @Override
-    public boolean damage(DamageSource source, float amount) {
-        if (this.isCreative() || this.isSpectator()) {
-            return false;
-        }
+    @Inject(method = "damage", at = @At(value = "HEAD"))
+    private void applyDeflectingEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
         if (deflection != null) {
             Entity attacker;
@@ -132,9 +126,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 } else {
                     hasDamageBeenDeflected = false;
                 }
-                return super.damage(source, (0.9f - refl_dmg_coef) * amount);
+                super.damage(source, (0.9f - refl_dmg_coef) * amount);
             }
         }
-        return super.damage(source, amount);
     }
 }
