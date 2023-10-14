@@ -105,5 +105,29 @@ public class MythicModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(RegisterMythicItems.AQUAMARINE_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_JADE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_JADE_SWORD, Models.HANDHELD);
+        
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_TOPAZ_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_TOPAZ_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_TOPAZ_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_TOPAZ_HOE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_TOPAZ_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_AQUAMARINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_AQUAMARINE_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_RUBY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_RUBY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_RUBY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_RUBY_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_SAPPHIRE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_SAPPHIRE_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_AMETRINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(RegisterMythicItems.EVOLVED_AMETRINE_SWORD, Models.HANDHELD);
     }
 }

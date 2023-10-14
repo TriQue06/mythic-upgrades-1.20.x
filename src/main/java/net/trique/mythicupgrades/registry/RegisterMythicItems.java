@@ -202,6 +202,61 @@ public class RegisterMythicItems {
             new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 4, -2.4f,
                     (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
 
+    public static final Item EVOLVED_JADE_AXE = registerItem("evolved_jade_axe",
+            new MythicEffectsAxeItem(MythicToolMaterials.JADE, 6, -3.0f,
+                    (new FabricItemSettings().fireproof()), poisonAxeItemEffects,"jade_axe.description", Formatting.GREEN));
+    public static final Item EVOLVED_JADE_SWORD = registerItem("evolved_jade_sword",
+            new MythicEffectsSwordItem(MythicToolMaterials.JADE, 4, -2.4f,
+                    (new FabricItemSettings().fireproof()), poisonSwordItemEffects, "jade_sword.description", Formatting.GREEN));
+
+    public static final Item EVOLVED_TOPAZ_SHOVEL = registerItem("evolved_topaz_shovel",
+            new ShovelItem(MythicToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof())));
+    public static final Item EVOLVED_TOPAZ_PICKAXE = registerItem("evolved_topaz_pickaxe",
+            new PickaxeItem(MythicToolMaterials.TOPAZ, 2, -2.8f, (new FabricItemSettings().fireproof())));
+    public static final Item EVOLVED_TOPAZ_AXE = registerItem("evolved_topaz_axe",
+            new AxeItem(MythicToolMaterials.TOPAZ, 6, -3f, (new FabricItemSettings().fireproof())));
+    public static final Item EVOLVED_TOPAZ_HOE = registerItem("evolved_topaz_hoe",
+            new HoeItem(MythicToolMaterials.TOPAZ, 1, 0.0f, (new FabricItemSettings().fireproof())));
+    public static final Item EVOLVED_TOPAZ_SWORD = registerItem("evolved_topaz_sword",
+            new SwordItem(MythicToolMaterials.TOPAZ, 4, -2.4f, (new FabricItemSettings().fireproof())));
+
+    public static final Item EVOLVED_AQUAMARINE_AXE = registerItem("evolved_aquamarine_axe",
+            new MythicEffectsAxeItem(MythicToolMaterials.AQUAMARINE, 6, -3f,
+                    (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
+    public static final Item EVOLVED_AQUAMARINE_SWORD = registerItem("evolved_aquamarine_sword",
+            new MythicEffectsSwordItem(MythicToolMaterials.AQUAMARINE, 4, -2.4f,
+                    (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
+
+    public static final Item EVOLVED_SAPPHIRE_AXE = registerItem("evolved_sapphire_axe",
+            new MythicEffectsAxeItem(MythicToolMaterials.SAPPHIRE, 6, -3.0f,
+                    (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE));
+    public static final Item EVOLVED_SAPPHIRE_SWORD = registerItem("evolved_sapphire_sword",
+            new MythicEffectsSwordItem(MythicToolMaterials.SAPPHIRE, 4, -2.4f,
+                    (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE));
+
+    public static final Item EVOLVED_RUBY_SHOVEL = registerItem("evolved_ruby_shovel",
+            new MythicEffectsShovelItem(MythicToolMaterials.RUBY, 2, -2.2f,
+                    (new FabricItemSettings().fireproof()), hasteShovelItemEffects, "ruby_shovel.description", Formatting.RED));
+    public static final Item EVOLVED_RUBY_PICKAXE = registerItem("evolved_ruby_pickaxe",
+            new MythicEffectsPickaxeItem(MythicToolMaterials.RUBY, 2, -2.2f,
+                    (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED));
+    public static final Item EVOLVED_RUBY_AXE = registerItem("evolved_ruby_axe",
+            new MythicEffectsAxeItem(MythicToolMaterials.RUBY, 6, -2.5f,
+                    (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED));
+    public static final Item EVOLVED_RUBY_HOE = registerItem("evolved_ruby_hoe",
+            new MythicEffectsHoeItem(MythicToolMaterials.RUBY, 1, 0.6f,
+                    (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED));
+    public static final Item EVOLVED_RUBY_SWORD = registerItem("evolved_ruby_sword",
+            new MythicEffectsSwordItem(MythicToolMaterials.RUBY, 4, -1.6f,
+                    (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED));
+
+    public static final Item EVOLVED_AMETRINE_AXE = registerItem("evolved_ametrine_axe",
+            new MythicEffectsAxeItem(MythicToolMaterials.AMETRINE, 6, -3.0f,
+                    (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE));
+    public static final Item EVOLVED_AMETRINE_SWORD = registerItem("evolved_ametrine_sword",
+            new MythicEffectsSwordItem(MythicToolMaterials.AMETRINE, 4, -2.4f,
+                    (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE));
+
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
 
     static {
@@ -244,104 +299,123 @@ public class RegisterMythicItems {
 
     private static void registerMythicItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                        .icon(() -> new ItemStack(RegisterMythicItems.JADE_SWORD)).entries((displayContext, entries) -> {
-                            entries.add(RegisterMythicItems.BROKEN_JADE_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_NELUMBO);
+                .icon(() -> new ItemStack(RegisterMythicItems.JADE_SWORD)).entries((displayContext, entries) -> {
+                    entries.add(RegisterMythicItems.BROKEN_JADE_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_NELUMBO);
+                    entries.add(RegisterMythicItems.BROKEN_TOPAZ_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_FIERCE);
+                    entries.add(RegisterMythicItems.BROKEN_AQUAMARINE_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_FLOW_OF_THE_ABYSS);
+                    entries.add(RegisterMythicItems.BROKEN_SAPPHIRE_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_SOOT);
+                    entries.add(RegisterMythicItems.BROKEN_RUBY_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
+                    entries.add(RegisterMythicItems.BROKEN_AMETRINE_DISC);
+                    entries.add(RegisterMythicItems.MUSIC_DISC_APPOMATTOX);
 
-                            entries.add(RegisterMythicItems.BROKEN_TOPAZ_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_FIERCE);
+                    entries.add(RegisterMythicItems.JADE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(RegisterMythicItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(RegisterMythicItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(RegisterMythicItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(RegisterMythicItems.RUBY_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(RegisterMythicItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MythicBlocks.JADE_BLOCK);
+                    entries.add(MythicBlocks.JADE_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.JADE_ORE);
+                    entries.add(MythicBlocks.DEEPSLATE_JADE_ORE);
+                    entries.add(RegisterMythicItems.JADE_AXE);
+                    entries.add(RegisterMythicItems.JADE_SWORD);
+                    entries.add(RegisterMythicItems.JADE_HELMET);
+                    entries.add(RegisterMythicItems.JADE_CHESTPLATE);
+                    entries.add(RegisterMythicItems.JADE_LEGGINGS);
+                    entries.add(RegisterMythicItems.JADE_BOOTS);
+                    entries.add(RegisterMythicItems.JADE);
+                    entries.add(RegisterMythicItems.JADE_INGOT);
 
-                            entries.add(RegisterMythicItems.BROKEN_AQUAMARINE_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_FLOW_OF_THE_ABYSS);
+                    entries.add(MythicBlocks.TOPAZ_BLOCK);
+                    entries.add(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.TOPAZ_ORE);
+                    entries.add(MythicBlocks.DEEPSLATE_TOPAZ_ORE);
+                    entries.add(RegisterMythicItems.TOPAZ_SHOVEL);
+                    entries.add(RegisterMythicItems.TOPAZ_PICKAXE);
+                    entries.add(RegisterMythicItems.TOPAZ_AXE);
+                    entries.add(RegisterMythicItems.TOPAZ_HOE);
+                    entries.add(RegisterMythicItems.TOPAZ_SWORD);
+                    entries.add(RegisterMythicItems.TOPAZ_HELMET);
+                    entries.add(RegisterMythicItems.TOPAZ_CHESTPLATE);
+                    entries.add(RegisterMythicItems.TOPAZ_LEGGINGS);
+                    entries.add(RegisterMythicItems.TOPAZ_BOOTS);
+                    entries.add(RegisterMythicItems.TOPAZ);
+                    entries.add(RegisterMythicItems.TOPAZ_INGOT);
 
-                            entries.add(RegisterMythicItems.BROKEN_SAPPHIRE_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_SOOT);
+                    entries.add(MythicBlocks.AQUAMARINE_BLOCK);
+                    entries.add(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.AQUAMARINE_ORE);
+                    entries.add(MythicBlocks.DEEPSLATE_AQUAMARINE_ORE);
+                    entries.add(RegisterMythicItems.AQUAMARINE_AXE);
+                    entries.add(RegisterMythicItems.AQUAMARINE_SWORD);
+                    entries.add(RegisterMythicItems.AQUAMARINE);
+                    entries.add(RegisterMythicItems.AQUAMARINE_INGOT);
 
-                            entries.add(RegisterMythicItems.BROKEN_RUBY_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
+                    entries.add(MythicBlocks.SAPPHIRE_BLOCK);
+                    entries.add(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.SAPPHIRE_ORE);
+                    entries.add(RegisterMythicItems.SAPPHIRE_AXE);
+                    entries.add(RegisterMythicItems.SAPPHIRE_SWORD);
+                    entries.add(RegisterMythicItems.SAPPHIRE_HELMET);
+                    entries.add(RegisterMythicItems.SAPPHIRE_CHESTPLATE);
+                    entries.add(RegisterMythicItems.SAPPHIRE_LEGGINGS);
+                    entries.add(RegisterMythicItems.SAPPHIRE_BOOTS);
+                    entries.add(RegisterMythicItems.SAPPHIRE);
+                    entries.add(RegisterMythicItems.SAPPHIRE_INGOT);
 
-                            entries.add(RegisterMythicItems.BROKEN_AMETRINE_DISC);
-                            entries.add(RegisterMythicItems.MUSIC_DISC_APPOMATTOX);
+                    entries.add(MythicBlocks.RUBY_BLOCK);
+                    entries.add(MythicBlocks.RUBY_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.RUBY_ORE);
+                    entries.add(RegisterMythicItems.RUBY_SHOVEL);
+                    entries.add(RegisterMythicItems.RUBY_PICKAXE);
+                    entries.add(RegisterMythicItems.RUBY_AXE);
+                    entries.add(RegisterMythicItems.RUBY_HOE);
+                    entries.add(RegisterMythicItems.RUBY_SWORD);
+                    entries.add(RegisterMythicItems.RUBY);
+                    entries.add(RegisterMythicItems.RUBY_INGOT);
 
-                            entries.add(RegisterMythicItems.JADE_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(RegisterMythicItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(RegisterMythicItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(RegisterMythicItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(RegisterMythicItems.RUBY_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(RegisterMythicItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE);
-                            entries.add(MythicBlocks.JADE_BLOCK);
-                            entries.add(MythicBlocks.JADE_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.JADE_ORE);
-                            entries.add(MythicBlocks.DEEPSLATE_JADE_ORE);
-                            entries.add(RegisterMythicItems.JADE_AXE);
-                            entries.add(RegisterMythicItems.JADE_SWORD);
-                            entries.add(RegisterMythicItems.JADE_HELMET);
-                            entries.add(RegisterMythicItems.JADE_CHESTPLATE);
-                            entries.add(RegisterMythicItems.JADE_LEGGINGS);
-                            entries.add(RegisterMythicItems.JADE_BOOTS);
-                            entries.add(RegisterMythicItems.JADE);
-                            entries.add(RegisterMythicItems.JADE_INGOT);
+                    entries.add(MythicBlocks.AMETRINE_BLOCK);
+                    entries.add(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
+                    entries.add(MythicBlocks.AMETRINE_ORE);
+                    entries.add(RegisterMythicItems.AMETRINE_AXE);
+                    entries.add(RegisterMythicItems.AMETRINE_SWORD);
+                    entries.add(RegisterMythicItems.AMETRINE_HELMET);
+                    entries.add(RegisterMythicItems.AMETRINE_CHESTPLATE);
+                    entries.add(RegisterMythicItems.AMETRINE_LEGGINGS);
+                    entries.add(RegisterMythicItems.AMETRINE_BOOTS);
+                    entries.add(RegisterMythicItems.AMETRINE);
+                    entries.add(RegisterMythicItems.AMETRINE_INGOT);
 
-                            entries.add(MythicBlocks.TOPAZ_BLOCK);
-                            entries.add(MythicBlocks.TOPAZ_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.TOPAZ_ORE);
-                            entries.add(MythicBlocks.DEEPSLATE_TOPAZ_ORE);
-                            entries.add(RegisterMythicItems.TOPAZ_SHOVEL);
-                            entries.add(RegisterMythicItems.TOPAZ_PICKAXE);
-                            entries.add(RegisterMythicItems.TOPAZ_AXE);
-                            entries.add(RegisterMythicItems.TOPAZ_HOE);
-                            entries.add(RegisterMythicItems.TOPAZ_SWORD);
-                            entries.add(RegisterMythicItems.TOPAZ_HELMET);
-                            entries.add(RegisterMythicItems.TOPAZ_CHESTPLATE);
-                            entries.add(RegisterMythicItems.TOPAZ_LEGGINGS);
-                            entries.add(RegisterMythicItems.TOPAZ_BOOTS);
-                            entries.add(RegisterMythicItems.TOPAZ);
-                            entries.add(RegisterMythicItems.TOPAZ_INGOT);
+                    entries.add(RegisterMythicItems.EVOLVED_JADE_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_JADE_SWORD);
 
-                            entries.add(MythicBlocks.AQUAMARINE_BLOCK);
-                            entries.add(MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.AQUAMARINE_ORE);
-                            entries.add(MythicBlocks.DEEPSLATE_AQUAMARINE_ORE);
-                            entries.add(RegisterMythicItems.AQUAMARINE_AXE);
-                            entries.add(RegisterMythicItems.AQUAMARINE_SWORD);
-                            entries.add(RegisterMythicItems.AQUAMARINE);
-                            entries.add(RegisterMythicItems.AQUAMARINE_INGOT);
+                    entries.add(RegisterMythicItems.EVOLVED_TOPAZ_SHOVEL);
+                    entries.add(RegisterMythicItems.EVOLVED_TOPAZ_PICKAXE);
+                    entries.add(RegisterMythicItems.EVOLVED_TOPAZ_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_TOPAZ_HOE);
+                    entries.add(RegisterMythicItems.EVOLVED_TOPAZ_SWORD);
 
-                            entries.add(MythicBlocks.SAPPHIRE_BLOCK);
-                            entries.add(MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.SAPPHIRE_ORE);
-                            entries.add(RegisterMythicItems.SAPPHIRE_AXE);
-                            entries.add(RegisterMythicItems.SAPPHIRE_SWORD);
-                            entries.add(RegisterMythicItems.SAPPHIRE_HELMET);
-                            entries.add(RegisterMythicItems.SAPPHIRE_CHESTPLATE);
-                            entries.add(RegisterMythicItems.SAPPHIRE_LEGGINGS);
-                            entries.add(RegisterMythicItems.SAPPHIRE_BOOTS);
-                            entries.add(RegisterMythicItems.SAPPHIRE);
-                            entries.add(RegisterMythicItems.SAPPHIRE_INGOT);
+                    entries.add(RegisterMythicItems.EVOLVED_AQUAMARINE_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_AQUAMARINE_SWORD);
 
-                            entries.add(MythicBlocks.RUBY_BLOCK);
-                            entries.add(MythicBlocks.RUBY_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.RUBY_ORE);
-                            entries.add(RegisterMythicItems.RUBY_SHOVEL);
-                            entries.add(RegisterMythicItems.RUBY_PICKAXE);
-                            entries.add(RegisterMythicItems.RUBY_AXE);
-                            entries.add(RegisterMythicItems.RUBY_HOE);
-                            entries.add(RegisterMythicItems.RUBY_SWORD);
-                            entries.add(RegisterMythicItems.RUBY);
-                            entries.add(RegisterMythicItems.RUBY_INGOT);
+                    entries.add(RegisterMythicItems.EVOLVED_RUBY_SHOVEL);
+                    entries.add(RegisterMythicItems.EVOLVED_RUBY_PICKAXE);
+                    entries.add(RegisterMythicItems.EVOLVED_RUBY_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_RUBY_HOE);
+                    entries.add(RegisterMythicItems.EVOLVED_RUBY_SWORD);
 
-                            entries.add(MythicBlocks.AMETRINE_BLOCK);
-                            entries.add(MythicBlocks.AMETRINE_CRYSTAL_BLOCK);
-                            entries.add(MythicBlocks.AMETRINE_ORE);
-                            entries.add(RegisterMythicItems.AMETRINE_AXE);
-                            entries.add(RegisterMythicItems.AMETRINE_SWORD);
-                            entries.add(RegisterMythicItems.AMETRINE_HELMET);
-                            entries.add(RegisterMythicItems.AMETRINE_CHESTPLATE);
-                            entries.add(RegisterMythicItems.AMETRINE_LEGGINGS);
-                            entries.add(RegisterMythicItems.AMETRINE_BOOTS);
-                            entries.add(RegisterMythicItems.AMETRINE);
-                            entries.add(RegisterMythicItems.AMETRINE_INGOT);
-                        }).build();
+                    entries.add(RegisterMythicItems.EVOLVED_SAPPHIRE_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_SAPPHIRE_SWORD);
+
+                    entries.add(RegisterMythicItems.EVOLVED_AMETRINE_AXE);
+                    entries.add(RegisterMythicItems.EVOLVED_AMETRINE_SWORD);
+                }).build();
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
     }
 
