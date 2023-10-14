@@ -50,7 +50,6 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Shadow public abstract void remove(RemovalReason reason);
 
-    @Shadow public abstract boolean isCreative();
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
     public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
