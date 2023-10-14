@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import net.trique.mythicupgrades.effect.MythicEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
 import net.trique.mythicupgrades.item.BaseMythicToolItem;
-import net.trique.mythicupgrades.item.MythicToolMaterials;
+import net.trique.mythicupgrades.item.MUToolMaterials;
 import net.trique.mythicupgrades.util.CommonFunctions;
 import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -54,7 +54,7 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (wasAttacked) {
             if (target instanceof LivingEntity entity) {
                 if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
-                        item.getMythicMaterial().equals(MythicToolMaterials.SAPPHIRE)) {
+                        item.getMythicMaterial().equals(MUToolMaterials.SAPPHIRE)) {
                     DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
                     entity.damage(source, 0.05f * entity.getMaxHealth());
