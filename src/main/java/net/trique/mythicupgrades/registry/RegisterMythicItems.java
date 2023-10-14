@@ -196,11 +196,11 @@ public class RegisterMythicItems {
                     new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", Formatting.LIGHT_PURPLE));
 
     public static final Item AQUAMARINE_AXE = registerItem("aquamarine_axe",
-            new MythicEffectsAxeItem(MUToolMaterials.AQUAMARINE, 6, -3.3f,
+            new MythicEffectsAxeItem(MUToolMaterials.AQUAMARINE, 6, -3f,
                     (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
     public static final Item AQUAMARINE_SWORD = registerItem("aquamarine_sword",
-            new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.7f,
-                    (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_sword.description", Formatting.AQUA));
+            new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.4f,
+                    (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA));
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE;
 
