@@ -11,7 +11,7 @@ import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
-public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
+public enum MUArmorMaterials implements StringIdentifiable, ArmorMaterial {
 
     SAPPHIRE("sapphire", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
@@ -54,7 +54,7 @@ public enum MythicArmorMaterials implements StringIdentifiable, ArmorMaterial {
     private final float knockbackResistance;
     private final Ingredient repairIngredientSupplier;
 
-    MythicArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
+    MUArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
