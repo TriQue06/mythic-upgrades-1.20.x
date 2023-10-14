@@ -21,7 +21,7 @@ public enum MUToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Ingredient repairIngredient;
 
-    private MUToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
+    MUToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
