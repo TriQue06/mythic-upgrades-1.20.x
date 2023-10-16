@@ -129,7 +129,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 } else {
                     hasDamageBeenDeflected = false;
                 }
-                super.damage(source, (0.9f - refl_dmg_coef) * amount);
+                amount *= (0.9f - refl_dmg_coef);
             }
         }
     }
