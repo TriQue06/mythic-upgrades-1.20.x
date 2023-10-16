@@ -119,22 +119,18 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
         if (deflection != null) {
             Entity attacker;
+            float defl_dmg_coef = deflection.getAmplifier() / 10f;
             if (Objects.equals(source.getSource(), source.getAttacker()) && ((attacker = source.getAttacker()) != null)) {
-                float defl_dmg_coef = deflection.getAmplifier() / 10f;
                 boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
-                if (!check_damage_type) {
+                if (!check_damage_type || !hasDamageBeenDeflected) {
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
                             MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + defl_dmg_coef) * amount);
+                    hasDamageBeenDeflected = check_damage_type;
+                } else  {
                     hasDamageBeenDeflected = false;
-                } else if (hasDamageBeenDeflected) {
-                    hasDamageBeenDeflected = false;
-                } else {
-                    attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + defl_dmg_coef) * amount);
-                    hasDamageBeenDeflected = true;
                 }
-                amount *= (0.9f - defl_dmg_coef);
             }
+            amount *= (0.9f - defl_dmg_coef);
         }
         return amount;
     }
