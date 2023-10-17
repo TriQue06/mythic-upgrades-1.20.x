@@ -26,9 +26,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 import java.util.List;
 import java.util.Objects;
 
@@ -115,22 +114,24 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
     }
 
-    @Inject(method = "damage", at = @At(value = "HEAD"))
-    private void applyDeflectingEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+    @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
+    private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
         StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
         if (deflection != null) {
             Entity attacker;
+            float defl_dmg_coef = deflection.getAmplifier() / 10f;
             if (Objects.equals(source.getSource(), source.getAttacker()) && ((attacker = source.getAttacker()) != null)) {
-                float refl_dmg_coef = deflection.getAmplifier() / 10f;
-                if (!((source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS)) && hasDamageBeenDeflected)) {
-                    hasDamageBeenDeflected = true;
+                boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
+                if (!check_damage_type || !hasDamageBeenDeflected) {
                     attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + refl_dmg_coef) * amount);
-                } else {
+                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + defl_dmg_coef) * amount);
+                    hasDamageBeenDeflected = check_damage_type;
+                } else  {
                     hasDamageBeenDeflected = false;
                 }
-                super.damage(source, (0.9f - refl_dmg_coef) * amount);
             }
+            amount *= (0.9f - defl_dmg_coef);
         }
+        return amount;
     }
 }
