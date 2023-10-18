@@ -12,7 +12,17 @@ import net.minecraft.item.ItemStack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+
 public class CommonFunctions {
+
+    public static boolean checkStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
+        for (StatusEffect effect : effects.keySet()) {
+            if (!entity.hasStatusEffect(effect) || entity.getActiveStatusEffects().get(effect).getAmplifier() < effects.get(effect).getAmplifier()) {
+                return true;
+            }
+        }
+        return false;
+    }
     public static void addStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects, LivingEntity attacker) {
         for (StatusEffect effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
@@ -43,5 +53,14 @@ public class CommonFunctions {
             }
         }
         return true;
+    }
+    public static void removeMythicInfiniteEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
+        for (StatusEffect effect : effects.keySet()) {
+            EffectMeta meta = effects.get(effect);
+            if (effect != null && entity.hasStatusEffect(effect) && entity.getActiveStatusEffects().get(effect).isInfinite() &&
+            entity.getActiveStatusEffects().get(effect).getAmplifier() == meta.getAmplifier()) {
+                entity.removeStatusEffect(effect);
+            }
+        }
     }
 }
