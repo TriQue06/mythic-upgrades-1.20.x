@@ -17,7 +17,8 @@ public class CommonFunctions {
 
     public static boolean checkStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         for (StatusEffect effect : effects.keySet()) {
-            if (!entity.hasStatusEffect(effect)) {
+            if (!entity.hasStatusEffect(effect) || entity.getActiveStatusEffects().get(effect).getAmplifier() <
+                    effects.get(effect).getAmplifier()) {
                 return true;
             }
         }
@@ -27,8 +28,7 @@ public class CommonFunctions {
         for (StatusEffect effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
             if (effect != null && ((effect.equals(StatusEffects.INSTANT_HEALTH) && (entity.getGroup().equals(EntityGroup.UNDEAD))) ||
-                    (!(effect.equals(StatusEffects.INSTANT_DAMAGE) && (entity.getGroup().equals(EntityGroup.UNDEAD)))) || !effect.isInstant()) &&
-                    !entity.hasStatusEffect(effect)) {
+                    (!(effect.equals(StatusEffects.INSTANT_DAMAGE) && (entity.getGroup().equals(EntityGroup.UNDEAD)))) || !effect.isInstant())) {
                 entity.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()), attacker);
             }
