@@ -8,7 +8,7 @@
 
   "item.mythicupgrades.sapphire": "Сапфир",
   "item.mythicupgrades.sapphire_ingot": "Сапфировый слиток",
-  
+
   "item.mythicupgrades.sapphire_helmet": "Сапфировый шлем",
   "item.mythicupgrades.sapphire_chestplate": "Сапфировый нагрудник",
   "item.mythicupgrades.sapphire_leggings": "Сапфировые поножи",
@@ -59,7 +59,7 @@
   "item.mythicupgrades.topaz_chestplate": "Топазовый нагрудник",
   "item.mythicupgrades.topaz_leggings": "Топазовые поножи",
   "item.mythicupgrades.topaz_boots": "Топазовые ботинки",
-  
+
   "item.mythicupgrades.topaz_sword": "Топазовый меч",
   "item.mythicupgrades.topaz_axe": "Топазовый топор",
   "item.mythicupgrades.topaz_pickaxe": "Топазовая кирка",
@@ -81,7 +81,7 @@
 
   "item.mythicupgrades.ametrine_sword": "Аметриновый меч",
   "item.mythicupgrades.ametrine_axe": "Аметриновый топор",
-  
+
   "block.mythicupgrades.ametrine_ore": "Аметриновая руда",
   "block.mythicupgrades.ametrine_block": "Блок аметрина",
   "block.mythicupgrades.ametrine_crystal_block": "Блок аметринового кристалла",
@@ -168,7 +168,7 @@
   "topazdisc.description": "§7Почините этот диск топазом!",
   "ametrinedisc.description": "§7Почините этот диск аметрином!",
   "aquamarinedisc.description": "§7Почините этот диск аквамарином!",
-  
+
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Добавьте нефритовый слиток",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Незеритовому снаряжению",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
