@@ -8,7 +8,7 @@
 
   "item.mythicupgrades.sapphire": "Sapphire",
   "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
-  
+
   "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
   "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
   "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
@@ -59,7 +59,7 @@
   "item.mythicupgrades.topaz_chestplate": "Topaz Chestplate",
   "item.mythicupgrades.topaz_leggings": "Topaz Leggings",
   "item.mythicupgrades.topaz_boots": "Topaz Boots",
-  
+
   "item.mythicupgrades.topaz_sword": "Topaz Sword",
   "item.mythicupgrades.topaz_axe": "Topaz Axe",
   "item.mythicupgrades.topaz_pickaxe": "Topaz Pickaxe",
@@ -81,7 +81,7 @@
 
   "item.mythicupgrades.ametrine_sword": "Ametrine Sword",
   "item.mythicupgrades.ametrine_axe": "Ametrine Axe",
-  
+
   "block.mythicupgrades.ametrine_ore": "Ametrine Ore",
   "block.mythicupgrades.ametrine_block": "Block of Ametrine",
   "block.mythicupgrades.ametrine_crystal_block": "Block of Ametrine Crystal",
@@ -167,7 +167,7 @@
   "topazdisc.description": "§7Repair this disc with a Topaz!",
   "ametrinedisc.description": "§7Repair this disc with an Ametrine!",
   "aquamarinedisc.description": "§7Repair this disc with an Aquamarine!",
-  
+
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor or weapon",
