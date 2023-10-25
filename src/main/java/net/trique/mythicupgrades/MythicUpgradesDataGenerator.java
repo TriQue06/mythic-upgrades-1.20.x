@@ -4,10 +4,10 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.trique.mythicupgrades.data.MythicLootTableGenerator;
-import net.trique.mythicupgrades.data.MythicModelProvider;
-import net.trique.mythicupgrades.data.MythicRecipeGenerator;
-import net.trique.mythicupgrades.data.MythicWorldGenerator;
+import net.trique.mythicupgrades.data.MULootTableGenerator;
+import net.trique.mythicupgrades.data.MUModelProvider;
+import net.trique.mythicupgrades.data.MURecipeGenerator;
+import net.trique.mythicupgrades.data.MUWorldGenerator;
 import net.trique.mythicupgrades.world.MythicConfiguredFeatures;
 import net.trique.mythicupgrades.world.MythicPlacedFeatures;
 
@@ -15,10 +15,10 @@ public class MythicUpgradesDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-        pack.addProvider(MythicLootTableGenerator::new);
-        pack.addProvider(MythicRecipeGenerator::new);
-        pack.addProvider(MythicModelProvider::new);
-        pack.addProvider(MythicWorldGenerator::new);
+        pack.addProvider(MULootTableGenerator::new);
+        pack.addProvider(MURecipeGenerator::new);
+        pack.addProvider(MUModelProvider::new);
+        pack.addProvider(MUWorldGenerator::new);
     }
 
     @Override

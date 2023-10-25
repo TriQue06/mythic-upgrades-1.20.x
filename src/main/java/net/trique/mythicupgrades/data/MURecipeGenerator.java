@@ -7,12 +7,12 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
-import static net.trique.mythicupgrades.data.MythicRecipeProvider.*;
+import static net.trique.mythicupgrades.data.MURecipeProvider.*;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class MythicRecipeGenerator extends FabricRecipeProvider {
-    public MythicRecipeGenerator(FabricDataOutput output) {
+public class MURecipeGenerator extends FabricRecipeProvider {
+    public MURecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 

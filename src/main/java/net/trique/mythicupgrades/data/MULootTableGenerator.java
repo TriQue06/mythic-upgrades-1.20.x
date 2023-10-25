@@ -5,8 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
-public class MythicLootTableGenerator extends FabricBlockLootTableProvider {
-    public MythicLootTableGenerator(FabricDataOutput dataOutput) {
+public class MULootTableGenerator extends FabricBlockLootTableProvider {
+    public MULootTableGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 
