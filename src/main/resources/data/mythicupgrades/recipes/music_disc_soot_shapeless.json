@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "sapphire",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:broken_sapphire_disc"
+    },
+    {
+      "item": "mythicupgrades:sapphire"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:music_disc_soot"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:topaz_chestplate_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_topaz_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:topaz_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_topaz_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:topaz_chestplate_smithing"
+    ]
+  },
+  "sends_telemetry_event": false
+}

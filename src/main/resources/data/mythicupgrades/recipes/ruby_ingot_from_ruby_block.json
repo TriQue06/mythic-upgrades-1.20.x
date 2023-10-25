@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "ruby",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:ruby_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:ruby_ingot"
+  }
+}

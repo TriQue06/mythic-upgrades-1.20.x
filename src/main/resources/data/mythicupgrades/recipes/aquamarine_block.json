@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "aquamarine",
   "key": {
     "#": {
       "item": "mythicupgrades:aquamarine_ingot"
