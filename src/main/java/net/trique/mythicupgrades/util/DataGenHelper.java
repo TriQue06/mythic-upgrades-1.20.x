@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-
-import static net.trique.mythicupgrades.util.CommonFunctions.getId;
-
 public class DataGenHelper {
     public static void offerShapelessRecipeWithMultipleInputs(RecipeExporter exporter, ItemConvertible output, List<ItemConvertible> inputs, @Nullable String group, int outputCount) {
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, output, inputs, inputs, group, outputCount);
