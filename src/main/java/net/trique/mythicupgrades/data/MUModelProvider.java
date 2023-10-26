@@ -8,8 +8,8 @@ import net.minecraft.data.client.Models;
 import net.trique.mythicupgrades.block.MythicBlocks;
 import net.trique.mythicupgrades.registry.RegisterMythicItems;
 
-public class MythicModelProvider extends FabricModelProvider {
-    public MythicModelProvider(FabricDataOutput output) {
+public class MUModelProvider extends FabricModelProvider {
+    public MUModelProvider(FabricDataOutput output) {
         super(output);
     }
 

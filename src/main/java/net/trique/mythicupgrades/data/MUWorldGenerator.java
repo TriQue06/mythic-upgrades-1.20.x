@@ -8,8 +8,8 @@ import net.trique.mythicupgrades.MythicUpgrades;
 
 import java.util.concurrent.CompletableFuture;
 
-public class MythicWorldGenerator extends FabricDynamicRegistryProvider {
-    public MythicWorldGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class MUWorldGenerator extends FabricDynamicRegistryProvider {
+    public MUWorldGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
