@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aquamarine_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:aquamarine_block"
+              "mythicupgrades:broken_topaz_disc"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aquamarine_ingot"
+        "recipe": "mythicupgrades:music_disc_fierce"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_aquamarine_block"
+      "has_necessary_ingredients"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aquamarine_ingot"
+      "mythicupgrades:music_disc_fierce"
     ]
   },
   "sends_telemetry_event": false

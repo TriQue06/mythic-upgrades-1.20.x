@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "mythicupgrades:ruby"
+              "mythicupgrades:broken_ruby_disc"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:ruby_ingot_shapeless"
+        "recipe": "mythicupgrades:music_disc_tanker_on_the_levantines"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:ruby_ingot_shapeless"
+      "mythicupgrades:music_disc_tanker_on_the_levantines"
     ]
   },
   "sends_telemetry_event": false

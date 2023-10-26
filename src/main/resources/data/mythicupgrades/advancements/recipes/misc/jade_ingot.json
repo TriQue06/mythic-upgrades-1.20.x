@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ruby_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:ruby_block"
+              "mythicupgrades:jade"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ruby_ingot"
+        "recipe": "mythicupgrades:jade_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ruby_block"
+      "has_necessary_ingredients"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ruby_ingot"
+      "mythicupgrades:jade_ingot"
     ]
   },
   "sends_telemetry_event": false

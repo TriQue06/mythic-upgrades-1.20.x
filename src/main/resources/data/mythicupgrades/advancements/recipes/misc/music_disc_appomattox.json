@@ -1,34 +1,34 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:topaz_ingot"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_topaz_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:topaz_block"
+              "mythicupgrades:broken_ametrine_disc"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicupgrades:music_disc_appomattox"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_topaz_block"
+      "has_necessary_ingredients"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:topaz_ingot"
+      "mythicupgrades:music_disc_appomattox"
     ]
   },
   "sends_telemetry_event": false

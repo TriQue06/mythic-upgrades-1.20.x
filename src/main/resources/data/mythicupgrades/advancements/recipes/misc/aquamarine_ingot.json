@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "mythicupgrades:sapphire"
+              "mythicupgrades:aquamarine"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:sapphire_ingot_shapeless"
+        "recipe": "mythicupgrades:aquamarine_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:sapphire_ingot_shapeless"
+      "mythicupgrades:aquamarine_ingot"
     ]
   },
   "sends_telemetry_event": false

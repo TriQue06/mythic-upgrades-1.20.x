@@ -43,7 +43,7 @@ public class DataGenHelper {
             builder = builder.input(itemConvertible);
         }
         builder = builder.criterion("has_necessary_ingredients", conditionsFromItems(fromList(keyItems))).group(group);
-        builder.offerTo(exporter, getId(RecipeProvider.getItemPath(output) + "_shapeless"));
+        builder.offerTo(exporter);
     }
 
     public static ItemConvertible [] fromList(List<ItemConvertible> list) {

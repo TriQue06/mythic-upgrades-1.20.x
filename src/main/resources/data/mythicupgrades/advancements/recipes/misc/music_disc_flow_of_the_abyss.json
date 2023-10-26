@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sapphire_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:sapphire_block"
+              "mythicupgrades:broken_aquamarine_disc"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sapphire_ingot"
+        "recipe": "mythicupgrades:music_disc_flow_of_the_abyss"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sapphire_block"
+      "has_necessary_ingredients"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sapphire_ingot"
+      "mythicupgrades:music_disc_flow_of_the_abyss"
     ]
   },
   "sends_telemetry_event": false
