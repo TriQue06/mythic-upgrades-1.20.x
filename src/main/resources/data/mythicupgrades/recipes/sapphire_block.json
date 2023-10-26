@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "sapphire_block",
   "key": {
     "#": {
       "item": "mythicupgrades:sapphire_ingot"

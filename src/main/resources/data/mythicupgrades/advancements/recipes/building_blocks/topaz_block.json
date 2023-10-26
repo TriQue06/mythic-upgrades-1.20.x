@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:topaz_block"
+        "recipe": "mythicupgrades:topaz_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:topaz_block"
+      "mythicupgrades:topaz_block"
     ]
   },
   "sends_telemetry_event": false

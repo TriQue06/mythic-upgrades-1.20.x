@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
+  "group": "sapphire_ingot",
   "ingredients": [
     {
       "item": "mythicupgrades:sapphire"
