@@ -15,8 +15,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.function.Consumer;
 
-import static net.trique.mythicupgrades.util.CommonFunctions.getId;
-
 public class DataGenHelper {
     public static void offerShapelessRecipeWithMultipleInputs(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, List<ItemConvertible> inputs, @Nullable String group, int outputCount) {
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, output, inputs, inputs, group, outputCount);
@@ -43,7 +41,7 @@ public class DataGenHelper {
             builder = builder.input(itemConvertible);
         }
         builder = builder.criterion("has_necessary_ingredients", conditionsFromItems(fromList(keyItems))).group(group);
-        builder.offerTo(exporter, getId(RecipeProvider.getItemPath(output) + "_shapeless"));
+        builder.offerTo(exporter);
     }
 
     public static ItemConvertible [] fromList(List<ItemConvertible> list) {
