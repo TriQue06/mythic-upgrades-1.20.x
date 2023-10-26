@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ametrine_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:ametrine_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:ametrine_ingot"
+  }
+}

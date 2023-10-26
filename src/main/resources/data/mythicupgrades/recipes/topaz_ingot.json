@@ -1,13 +1,35 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
+  "category": "misc",
+  "group": "topaz_ingot",
   "ingredients": [
     {
-      "item": "mythicupgrades:topaz_block"
+      "item": "mythicupgrades:topaz"
+    },
+    {
+      "item": "mythicupgrades:topaz"
+    },
+    {
+      "item": "mythicupgrades:topaz"
+    },
+    {
+      "item": "mythicupgrades:topaz"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
     }
   ],
   "result": {
-    "count": 9,
+    "count": 2,
     "item": "mythicupgrades:topaz_ingot"
   }
 }
