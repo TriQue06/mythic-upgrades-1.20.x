@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_broken_topaz_disc": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
@@ -15,33 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:music_disc_fierce_shapeless"
+        "recipe": "mythicupgrades:music_disc_fierce_shapeless"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_topaz": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "mythicupgrades:topaz"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_broken_topaz_disc",
-      "has_topaz",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:music_disc_fierce_shapeless"
+      "mythicupgrades:music_disc_fierce_shapeless"
     ]
   },
   "sends_telemetry_event": false

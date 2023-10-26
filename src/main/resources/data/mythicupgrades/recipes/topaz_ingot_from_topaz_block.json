@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "group": "topaz",
+  "category": "misc",
+  "group": "topaz_ingot",
   "ingredients": [
     {
       "item": "mythicupgrades:topaz_block"

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "jade",
+  "group": "jade_ingot",
   "ingredients": [
     {
       "item": "mythicupgrades:jade"

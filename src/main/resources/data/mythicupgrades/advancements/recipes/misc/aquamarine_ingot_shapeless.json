@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_aquamarine": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
@@ -13,35 +13,22 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_netherite_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:netherite_ingot"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aquamarine_ingot_shapeless"
+        "recipe": "mythicupgrades:aquamarine_ingot_shapeless"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_aquamarine",
-      "has_netherite_ingot",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aquamarine_ingot_shapeless"
+      "mythicupgrades:aquamarine_ingot_shapeless"
     ]
   },
   "sends_telemetry_event": false

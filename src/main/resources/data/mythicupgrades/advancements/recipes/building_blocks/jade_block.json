@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jade_block"
+        "recipe": "mythicupgrades:jade_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jade_block"
+      "mythicupgrades:jade_block"
     ]
   },
   "sends_telemetry_event": false

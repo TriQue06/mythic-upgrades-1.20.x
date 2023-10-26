@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ametrine",
+  "group": "ametrine_ingot",
   "ingredients": [
     {
       "item": "mythicupgrades:ametrine"

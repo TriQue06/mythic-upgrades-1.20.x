@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "ametrine",
+  "group": "ametrine_block",
   "key": {
     "#": {
       "item": "mythicupgrades:ametrine_ingot"

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_broken_ruby_disc": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
@@ -13,35 +13,22 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_ruby": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "mythicupgrades:ruby"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:music_disc_tanker_on_the_levantines_shapeless"
+        "recipe": "mythicupgrades:music_disc_tanker_on_the_levantines_shapeless"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_broken_ruby_disc",
-      "has_ruby",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:music_disc_tanker_on_the_levantines_shapeless"
+      "mythicupgrades:music_disc_tanker_on_the_levantines_shapeless"
     ]
   },
   "sends_telemetry_event": false
