@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_jade_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:jade_block"
+              "mythicupgrades:broken_topaz_disc"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:jade_ingot_from_jade_block"
+        "recipe": "mythicupgrades:music_disc_fierce"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_jade_block",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:jade_ingot_from_jade_block"
+      "mythicupgrades:music_disc_fierce"
     ]
   },
   "sends_telemetry_event": false

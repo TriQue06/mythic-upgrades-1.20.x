@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ruby_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:ruby_block"
+              "mythicupgrades:broken_jade_disc"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:ruby_ingot_from_ruby_block"
+        "recipe": "mythicupgrades:music_disc_nelumbo"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ruby_block",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:ruby_ingot_from_ruby_block"
+      "mythicupgrades:music_disc_nelumbo"
     ]
   },
   "sends_telemetry_event": false

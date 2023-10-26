@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ametrine_block": {
+    "has_necessary_ingredients": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mythicupgrades:ametrine_block"
+              "mythicupgrades:sapphire"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:ametrine_ingot_from_ametrine_block"
+        "recipe": "mythicupgrades:sapphire_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ametrine_block",
+      "has_necessary_ingredients",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:ametrine_ingot_from_ametrine_block"
+      "mythicupgrades:sapphire_ingot"
     ]
   },
   "sends_telemetry_event": false

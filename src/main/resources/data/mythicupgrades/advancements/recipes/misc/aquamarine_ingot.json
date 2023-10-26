@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:aquamarine_ingot_shapeless"
+        "recipe": "mythicupgrades:aquamarine_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:aquamarine_ingot_shapeless"
+      "mythicupgrades:aquamarine_ingot"
     ]
   },
   "sends_telemetry_event": false

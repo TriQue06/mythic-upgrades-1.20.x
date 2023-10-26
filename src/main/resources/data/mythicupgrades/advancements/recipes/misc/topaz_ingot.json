@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "mythicupgrades:broken_aquamarine_disc"
+              "mythicupgrades:topaz"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicupgrades:music_disc_flow_of_the_abyss_shapeless"
+        "recipe": "mythicupgrades:topaz_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mythicupgrades:music_disc_flow_of_the_abyss_shapeless"
+      "mythicupgrades:topaz_ingot"
     ]
   },
   "sends_telemetry_event": false
