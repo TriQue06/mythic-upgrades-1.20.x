@@ -9,6 +9,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.trique.mythicupgrades.MythicUpgrades;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,8 +19,7 @@ public class CommonFunctions {
 
     public static boolean checkStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         for (StatusEffect effect : effects.keySet()) {
-            if (!entity.hasStatusEffect(effect) || entity.getActiveStatusEffects().get(effect).getAmplifier() <
-                    effects.get(effect).getAmplifier()) {
+            if (!entity.hasStatusEffect(effect) || entity.getActiveStatusEffects().get(effect).getAmplifier() < effects.get(effect).getAmplifier()) {
                 return true;
             }
         }
@@ -63,5 +64,9 @@ public class CommonFunctions {
                 entity.removeStatusEffect(effect);
             }
         }
+    }
+
+    public static String getId(String name) {
+        return MythicUpgrades.MOD_ID + ":" + name;
     }
 }

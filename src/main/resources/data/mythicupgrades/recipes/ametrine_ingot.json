@@ -1,13 +1,35 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
+  "category": "misc",
+  "group": "ametrine_ingot",
   "ingredients": [
     {
-      "item": "mythicupgrades:ametrine_block"
+      "item": "mythicupgrades:ametrine"
+    },
+    {
+      "item": "mythicupgrades:ametrine"
+    },
+    {
+      "item": "mythicupgrades:ametrine"
+    },
+    {
+      "item": "mythicupgrades:ametrine"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
     }
   ],
   "result": {
-    "count": 9,
+    "count": 2,
     "item": "mythicupgrades:ametrine_ingot"
   }
 }

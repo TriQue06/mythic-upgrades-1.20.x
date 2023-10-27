@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "mu_music_disc",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:broken_ametrine_disc"
+    },
+    {
+      "item": "mythicupgrades:ametrine"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:music_disc_appomattox"
+  }
+}
