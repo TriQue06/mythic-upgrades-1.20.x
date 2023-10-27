@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "ruby_block",
   "key": {
     "#": {
       "item": "mythicupgrades:ruby_ingot"

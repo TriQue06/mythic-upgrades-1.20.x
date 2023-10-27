@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aquamarine_block"
+        "recipe": "mythicupgrades:aquamarine_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aquamarine_block"
+      "mythicupgrades:aquamarine_block"
     ]
   },
   "sends_telemetry_event": false
