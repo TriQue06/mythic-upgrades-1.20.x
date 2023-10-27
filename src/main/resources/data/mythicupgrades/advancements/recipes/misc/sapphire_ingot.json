@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_necessary_ingredients": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:sapphire"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicupgrades:sapphire_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_necessary_ingredients",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicupgrades:sapphire_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

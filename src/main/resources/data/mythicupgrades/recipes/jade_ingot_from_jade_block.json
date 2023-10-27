@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "jade_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:jade_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:jade_ingot"
+  }
+}

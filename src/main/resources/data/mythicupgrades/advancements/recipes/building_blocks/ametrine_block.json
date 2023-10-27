@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ametrine_block"
+        "recipe": "mythicupgrades:ametrine_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_ametrine_ingot"
+      "has_ametrine_ingot",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ametrine_block"
+      "mythicupgrades:ametrine_block"
     ]
   },
   "sends_telemetry_event": false

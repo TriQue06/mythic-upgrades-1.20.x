@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jade_block"
+        "recipe": "mythicupgrades:jade_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_jade_ingot"
+      "has_jade_ingot",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jade_block"
+      "mythicupgrades:jade_block"
     ]
   },
   "sends_telemetry_event": false

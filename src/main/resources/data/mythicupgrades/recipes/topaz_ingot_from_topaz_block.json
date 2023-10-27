@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "topaz_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:topaz_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:topaz_ingot"
+  }
+}
