@@ -19,7 +19,13 @@ public class CommonFunctions {
 
     public static boolean checkStatusEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         for (StatusEffect effect : effects.keySet()) {
-            if (!entity.hasStatusEffect(effect) || entity.getActiveStatusEffects().get(effect).getAmplifier() < effects.get(effect).getAmplifier()) {
+            StatusEffectInstance instance = entity.getStatusEffect(effect);
+            EffectMeta meta = effects.get(effect);
+            if (instance != null) {
+                if ((instance.isInfinite() && instance.getAmplifier() != meta.getAmplifier()) || instance.getAmplifier() < meta.getAmplifier()) {
+                    return true;
+                }
+            } else {
                 return true;
             }
         }
@@ -30,6 +36,9 @@ public class CommonFunctions {
             EffectMeta meta = effects.get(effect);
             if (effect != null && ((effect.equals(StatusEffects.INSTANT_HEALTH) && (entity.getGroup().equals(EntityGroup.UNDEAD))) ||
                     (!(effect.equals(StatusEffects.INSTANT_DAMAGE) && (entity.getGroup().equals(EntityGroup.UNDEAD)))) || !effect.isInstant())) {
+                if (entity.hasStatusEffect(effect)) {
+                    entity.removeStatusEffect(effect);
+                }
                 entity.addStatusEffect(new StatusEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()), attacker);
             }
@@ -59,8 +68,8 @@ public class CommonFunctions {
     public static void removeMythicInfiniteEffects(LivingEntity entity, HashMap<StatusEffect, EffectMeta> effects) {
         for (StatusEffect effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
-            if (effect != null && entity.hasStatusEffect(effect) && entity.getActiveStatusEffects().get(effect).isInfinite() &&
-            entity.getActiveStatusEffects().get(effect).getAmplifier() == meta.getAmplifier()) {
+            if (effect != null && entity.hasStatusEffect(effect) && entity.getStatusEffect(effect).isInfinite() &&
+            entity.getStatusEffect(effect).getAmplifier() == meta.getAmplifier()) {
                 entity.removeStatusEffect(effect);
             }
         }
@@ -68,5 +77,22 @@ public class CommonFunctions {
 
     public static String getId(String name) {
         return MythicUpgrades.MOD_ID + ":" + name;
+    }
+
+    public static String arabicToRom(int num){
+        num += 1;
+        int [] a = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+        String [] r = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
+        int i = 12;
+        StringBuilder result = new StringBuilder();
+        while (num > 0) {
+            while (a[i] > num){
+                i--;
+            }
+            result.append(r[i]);
+            num -= a[i];
+
+        }
+        return result.toString();
     }
 }
