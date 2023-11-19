@@ -6,39 +6,36 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonPart;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
-import net.trique.mythicupgrades.effect.MythicEffects;
-import net.trique.mythicupgrades.item.BaseMythicToolItem;
-import net.trique.mythicupgrades.item.MythicEffectsSwordItem;
-import net.trique.mythicupgrades.item.MUToolMaterials;
+import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
-import java.util.Objects;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Unique
-    private boolean hasDamageBeenDeflected;
+    private float cooldownOnHit;
+
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
-        hasDamageBeenDeflected = false;
+
+        cooldownOnHit = 0;
     }
 
     @Shadow
@@ -47,11 +44,14 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Shadow
     public abstract float getAttackCooldownProgress(float baseTime);
 
-    @Shadow public abstract void remove(RemovalReason reason);
-
 
     @Inject(method = "attack", at = @At(value = "HEAD"))
-    public void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
+    private void setCooldownOnHit(CallbackInfo ci) {
+        cooldownOnHit = getAttackCooldownProgress(0.5f);
+    }
+
+    @Inject(method = "attack", at = @At(value = "HEAD"))
+    private void applyEffectsOnSweeping(Entity target, CallbackInfo ci) {
         if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsSwordItem sword) {
             float gn_dmg = (float) this.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
             float gr_dmg;
@@ -98,40 +98,29 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "attack", at = @At(value = "TAIL"))
-    public void applySapphirePercentageDamage(Entity entity, CallbackInfo ci) {
+    private void applySapphirePercentageDamage(Entity entity, CallbackInfo ci) {
         if (entity.isAttackable()) {
-            if (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicToolItem item &&
-                    item.getMythicMaterial().equals(MUToolMaterials.SAPPHIRE)) {
+            Item weapon = getEquippedStack(EquipmentSlot.MAINHAND).getItem();
+            boolean sapphire_weapon = (weapon instanceof SapphireAxeItem || weapon instanceof SapphireSwordItem);
+            if (sapphire_weapon) {
+                int percent;
+                if (weapon instanceof SapphireSwordItem swordItem) {
+                    percent = swordItem.getPercent();
+                } else {
+                    SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
+                    percent = axeItem.getPercent();
+                }
                 DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
                         MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+                float dmg = (percent / 100f) * cooldownOnHit;
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragonEntity dragon = part.owner;
-                    dragon.damagePart(part, source, 0.05f * dragon.getMaxHealth());
+                    dragon.damagePart(part, source, dmg * dragon.getMaxHealth());
                 } else if (entity instanceof LivingEntity target) {
-                    target.damage(source, 0.05f * target.getMaxHealth());
+//                    System.out.println(dmg * target.getMaxHealth());
+                    target.damage(source, dmg * target.getMaxHealth());
                 }
             }
         }
-    }
-
-    @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
-    private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
-        StatusEffectInstance deflection = this.getActiveStatusEffects().get(MythicEffects.DAMAGE_DEFLECTION);
-        if (deflection != null) {
-            Entity attacker;
-            float defl_dmg_coef = deflection.getAmplifier() / 10f;
-            if (Objects.equals(source.getSource(), source.getAttacker()) && ((attacker = source.getAttacker()) != null)) {
-                boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
-                if (!check_damage_type || !hasDamageBeenDeflected) {
-                    attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, this), (0.1f + defl_dmg_coef) * amount);
-                    hasDamageBeenDeflected = check_damage_type;
-                } else  {
-                    hasDamageBeenDeflected = false;
-                }
-            }
-            amount *= (0.9f - defl_dmg_coef);
-        }
-        return amount;
     }
 }

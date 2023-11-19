@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.trique.mythicupgrades.MythicUpgrades;
 
-public class MythicBlocks {
+public class MUBlocks {
 
     public static final Block JADE_BLOCK = registerBlock("jade_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.LIME).requiresTool().strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
