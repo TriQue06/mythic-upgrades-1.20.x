@@ -14,7 +14,7 @@ import net.trique.mythicupgrades.MythicUpgrades;
 
 import java.util.List;
 
-public class MythicPlacedFeatures {
+public class MUPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = registerKey("sapphire_ore_placed");
     public static final RegistryKey<PlacedFeature> SAPPHIRE_CRYSTAL_PLACED_KEY = registerKey("sapphire_crystal_placed");
@@ -31,41 +31,41 @@ public class MythicPlacedFeatures {
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.SAPPHIRE_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
-        register(context, SAPPHIRE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.SAPPHIRE_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, SAPPHIRE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
-        register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.RUBY_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
-        register(context, RUBY_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.RUBY_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, RUBY_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
-        register(context, JADE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.JADE_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, JADE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
-        register(context, JADE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.JADE_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, JADE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
-        register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.TOPAZ_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
-        register(context, TOPAZ_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.TOPAZ_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, TOPAZ_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
-        register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AMETRINE_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
-        register(context, AMETRINE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AMETRINE_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, AMETRINE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
-        register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AQUAMARINE_ORE_KEY),
-                MythicOrePlacement.modifiersWithCount(6,
+        register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
-        register(context, AQUAMARINE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MythicConfiguredFeatures.AQUAMARINE_CRYSTAL_KEY),
-                MythicOrePlacement.modifiersWithCount(12,
+        register(context, AQUAMARINE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_KEY),
+                MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
     }
 

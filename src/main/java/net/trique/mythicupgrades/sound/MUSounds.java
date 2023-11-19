@@ -6,7 +6,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.trique.mythicupgrades.MythicUpgrades;
 
-public class MythicSounds {
+public class MUSounds {
 
     public static SoundEvent SOOT = registerSoundEvent("soot");
     public static SoundEvent APPOMATTOX = registerSoundEvent("appomattox");

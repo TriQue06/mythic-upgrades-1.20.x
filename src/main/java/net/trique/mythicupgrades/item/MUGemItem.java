@@ -16,12 +16,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashMap;
 import java.util.List;
 
-public class MythicGemItem extends Item implements BaseMythicItem {
+public class MUGemItem extends Item implements BaseMythicItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
     private final String translationKey;
     private final Formatting color;
 
-    public MythicGemItem(String translationKey, Formatting color, ItemEffectsList effects, Settings settings) {
+    public MUGemItem(String translationKey, Formatting color, ItemEffectsList effects, Settings settings) {
         super(settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.translationKey = translationKey;
@@ -37,7 +37,6 @@ public class MythicGemItem extends Item implements BaseMythicItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable(translationKey).formatted(color));
-        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
