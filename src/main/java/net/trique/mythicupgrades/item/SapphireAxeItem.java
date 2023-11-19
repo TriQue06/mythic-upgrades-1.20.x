@@ -9,8 +9,6 @@ import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class SapphireAxeItem extends MythicEffectsAxeItem {
