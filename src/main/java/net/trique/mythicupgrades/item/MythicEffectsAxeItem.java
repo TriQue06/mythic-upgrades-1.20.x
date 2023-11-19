@@ -19,9 +19,10 @@ import java.util.List;
 
 public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem {
 
-    private final MythicEffectVirtualItemHandler virtualItemHandler;
-    private final String tooltipKey;
-    private final Formatting color;
+    protected final MythicEffectVirtualItemHandler virtualItemHandler;
+    protected final String tooltipKey;
+
+    protected final Formatting color;
 
     public MythicEffectsAxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings,
                                 ItemEffectsList effects, String tooltipKey, Formatting color) {
@@ -40,7 +41,6 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable(tooltipKey).formatted(color));
-        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
@@ -56,5 +56,10 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem 
     @Override
     public ToolMaterial getMythicMaterial() {
         return this.getMaterial();
+    }
+
+    @Override
+    public void setNewEffects(ItemEffectsList list) {
+        virtualItemHandler.setNewEffects(list);
     }
 }

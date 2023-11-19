@@ -8,7 +8,7 @@ import net.minecraft.util.Util;
 
 import java.util.List;
 
-public class MythicTemplateItem extends SmithingTemplateItem {
+public class MUTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
     private static final Formatting DESCRIPTION_FORMATTING;
     private static final String TRANSLATION_KEY;
@@ -60,7 +60,7 @@ public class MythicTemplateItem extends SmithingTemplateItem {
     private static final Text AMETRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Text AMETRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
 
-    public MythicTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, List<Identifier> emptyBaseSlotTextures, List<Identifier> emptyAdditionsSlotTextures) {
+    public MUTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, List<Identifier> emptyBaseSlotTextures, List<Identifier> emptyAdditionsSlotTextures) {
         super(appliesToText, ingredientsText, titleText, baseSlotDescriptionText, additionsSlotDescriptionText, emptyBaseSlotTextures, emptyAdditionsSlotTextures);
         this.baseSlotDescriptionText = baseSlotDescriptionText;
         this.additionsSlotDescriptionText = additionsSlotDescriptionText;
@@ -68,8 +68,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         this.emptyAdditionsSlotTextures = emptyAdditionsSlotTextures;
     }
 
-    public static MythicTemplateItem createJadeUpgrade() {
-        return new MythicTemplateItem(JADE_UPGRADE_APPLIES_TO_TEXT, JADE_UPGRADE_INGREDIENTS_TEXT, JADE_UPGRADE_TEXT, JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getJadeUpgradeEmptyBaseSlotTextures(), getJadeUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createJadeUpgrade() {
+        return new MUTemplateItem(JADE_UPGRADE_APPLIES_TO_TEXT, JADE_UPGRADE_INGREDIENTS_TEXT, JADE_UPGRADE_TEXT, JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getJadeUpgradeEmptyBaseSlotTextures(), getJadeUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getJadeUpgradeEmptyBaseSlotTextures() {
@@ -80,8 +80,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    public static MythicTemplateItem createTopazUpgrade() {
-        return new MythicTemplateItem(TOPAZ_UPGRADE_APPLIES_TO_TEXT, TOPAZ_UPGRADE_INGREDIENTS_TEXT, TOPAZ_UPGRADE_TEXT, TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getTopazUpgradeEmptyBaseSlotTextures(), getTopazUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createTopazUpgrade() {
+        return new MUTemplateItem(TOPAZ_UPGRADE_APPLIES_TO_TEXT, TOPAZ_UPGRADE_INGREDIENTS_TEXT, TOPAZ_UPGRADE_TEXT, TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getTopazUpgradeEmptyBaseSlotTextures(), getTopazUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getTopazUpgradeEmptyBaseSlotTextures() {
@@ -92,8 +92,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    public static MythicTemplateItem createAquamarineUpgrade() {
-        return new MythicTemplateItem(AQUAMARINE_UPGRADE_APPLIES_TO_TEXT, AQUAMARINE_UPGRADE_INGREDIENTS_TEXT, AQUAMARINE_UPGRADE_TEXT, AQUAMARINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, AQUAMARINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getAquamarineUpgradeEmptyBaseSlotTextures(), getAquamarineUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createAquamarineUpgrade() {
+        return new MUTemplateItem(AQUAMARINE_UPGRADE_APPLIES_TO_TEXT, AQUAMARINE_UPGRADE_INGREDIENTS_TEXT, AQUAMARINE_UPGRADE_TEXT, AQUAMARINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, AQUAMARINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getAquamarineUpgradeEmptyBaseSlotTextures(), getAquamarineUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyBaseSlotTextures() {
@@ -104,8 +104,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    public static MythicTemplateItem createSapphireUpgrade() {
-        return new MythicTemplateItem(SAPPHIRE_UPGRADE_APPLIES_TO_TEXT, SAPPHIRE_UPGRADE_INGREDIENTS_TEXT, SAPPHIRE_UPGRADE_TEXT, SAPPHIRE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, SAPPHIRE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getSapphireUpgradeEmptyBaseSlotTextures(), getSapphireUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createSapphireUpgrade() {
+        return new MUTemplateItem(SAPPHIRE_UPGRADE_APPLIES_TO_TEXT, SAPPHIRE_UPGRADE_INGREDIENTS_TEXT, SAPPHIRE_UPGRADE_TEXT, SAPPHIRE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, SAPPHIRE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getSapphireUpgradeEmptyBaseSlotTextures(), getSapphireUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getSapphireUpgradeEmptyBaseSlotTextures() {
@@ -116,8 +116,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    public static MythicTemplateItem createRubyUpgrade() {
-        return new MythicTemplateItem(RUBY_UPGRADE_APPLIES_TO_TEXT, RUBY_UPGRADE_INGREDIENTS_TEXT, RUBY_UPGRADE_TEXT, RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getRubyUpgradeEmptyBaseSlotTextures(), getRubyUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createRubyUpgrade() {
+        return new MUTemplateItem(RUBY_UPGRADE_APPLIES_TO_TEXT, RUBY_UPGRADE_INGREDIENTS_TEXT, RUBY_UPGRADE_TEXT, RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getRubyUpgradeEmptyBaseSlotTextures(), getRubyUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getRubyUpgradeEmptyBaseSlotTextures() {
@@ -128,8 +128,8 @@ public class MythicTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    public static MythicTemplateItem createAmetrineUpgrade() {
-        return new MythicTemplateItem(AMETRINE_UPGRADE_APPLIES_TO_TEXT, AMETRINE_UPGRADE_INGREDIENTS_TEXT, AMETRINE_UPGRADE_TEXT, AMETRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, AMETRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getAmetrineUpgradeEmptyBaseSlotTextures(), getAmetrineUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createAmetrineUpgrade() {
+        return new MUTemplateItem(AMETRINE_UPGRADE_APPLIES_TO_TEXT, AMETRINE_UPGRADE_INGREDIENTS_TEXT, AMETRINE_UPGRADE_TEXT, AMETRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, AMETRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getAmetrineUpgradeEmptyBaseSlotTextures(), getAmetrineUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<Identifier> getAmetrineUpgradeEmptyBaseSlotTextures() {

@@ -1,4 +1,40 @@
 {
+  "text.config.mythicupgrades-config.title": [{"text" : "Конфигурация мода Mythic Upgrades", "color" : "dark_purple", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфир", "color" : "blue", "bold":  "true"}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "light_purple", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубин", "color" : "red", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Нефрит", "color" : "green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Процент у процентного урона сапфирового топора", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Процент у процентного урона сапфирового меча", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Сила эффекта отражения урона у сапфировой брони", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_speed_amplifier": [{"text": "Сила эффекта скорости у аметриновой брони", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_jump_boost_amplifier": [{"text": "Сила эффекта прыгучести у аметриновой брони", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Время действия левитации у аметринового топора", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Сила эффекта левитации у аметринового топора", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Время действия левитации у аметринового меча", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Сила эффекта левитации у аметринового меча", "color": "light_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_amplifier": [{"text": "Сила эффекта ядовитых шипов у нефритовой брони", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_poison_duration": [{"text": "Время действия яда у шипов нефритовой брони", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_duration": [{"text": "Время действия яда у нефритового топора", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_amplifier": [{"text": "Сила эффекта яда у нефритового топора", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_duration": [{"text": "Время действия яда у нефритового меча", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_amplifier": [{"text": "Сила эффекта яда у нефритового меча", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Сила эффекта спешки у рубиновой кирки", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Сила эффекта спешки у рубинового топора", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_shovel_amplifier": [{"text": "Сила эффекта спешки у рубиновой лопаты", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Сила эффекта спешки у рубинового меча", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Сила эффекта спешки у рубиновой мотыги", "color": "red"}],
+
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Время действия заморозки у аквамаринового топора", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Время действия заморозки у аквамаринового меча", "color": "aqua"}],
+
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Кузнечный шаблон",
@@ -114,10 +150,10 @@
   "aquamarine_sword.description": "Замораживает противника при ударе.",
 
   "ametrine.description": "Заставляет противника левитировать при ударе.",
-  "ametrine_helmet.description": "Бонус комплекта: Эффекты Прыгучести II и Скорости II.",
-  "ametrine_chestplate.description": "Бонус комплекта: Эффекты Прыгучести II и Скорости II.",
-  "ametrine_leggings.description": "Бонус комплекта: Эффекты Прыгучести II и Скорости II.",
-  "ametrine_boots.description": "Бонус комплекта: Эффекты Прыгучести II и Скорости II.",
+  "ametrine_helmet.description": "Бонус комплекта: Эффекты Прыгучести %s и Скорости %s.",
+  "ametrine_chestplate.description": "Бонус комплекта: Эффекты Прыгучести %s и Скорости %s.",
+  "ametrine_leggings.description": "Бонус комплекта: Эффекты Прыгучести %s и Скорости %s.",
+  "ametrine_boots.description": "Бонус комплекта: Эффекты Прыгучести %s и Скорости %s.",
   "ametrine_axe.description": "Заставляет противника левитировать при ударе.",
   "ametrine_sword.description": "Заставляет противника левитировать при ударе.",
 
@@ -133,12 +169,12 @@
   "topaz_sword.description": "Имеет в 3 раза больше прочности чем незеритовый меч",
 
   "sapphire.description": "Не имеет эффектов сам по себе.",
-  "sapphire_helmet.description": "Бонус комплекта: эффект Отражения урона III.",
-  "sapphire_chestplate.description": "Бонус комплекта: эффект Отражения урона III.",
-  "sapphire_leggings.description": "Бонус комплекта: эффект Отражения урона III.",
-  "sapphire_boots.description": "Бонус комплекта: эффект Отражения урона III.",
-  "sapphire_axe.description": "Наносит урон в процентном соотношении со здоровьем противника.",
-  "sapphire_sword.description": "Наносит урон в процентном соотношении со здоровьем противника.",
+  "sapphire_helmet.description": "Бонус комплекта: эффект Отражения урона %s.",
+  "sapphire_chestplate.description": "Бонус комплекта: эффект Отражения урона %s.",
+  "sapphire_leggings.description": "Бонус комплекта: эффект Отражения урона %s.",
+  "sapphire_boots.description": "Бонус комплекта: эффект Отражения урона %s.",
+  "sapphire_axe.description": "Наносит урон в процентном соотношении (%d%%) со здоровьем противника.",
+  "sapphire_sword.description": "Наносит урон в процентном соотношении (%d%%) со здоровьем противника.",
 
   "ruby.description": "Не имеет эффектов сам по себе.",
   "ruby_axe.description": "Если предмет в главной руке, накладывается эффект Спешки.",
@@ -148,10 +184,10 @@
   "ruby_sword.description": "Если предмет в главной руке, накладывается эффект Спешки.",
 
   "jade.description": "Отравляет противника при ударе.",
-  "jade_helmet.description": "Бонус комплекта: Эффект Отравленных шипов III.",
-  "jade_chestplate.description": "Бонус комплекта: Эффект Отравленных шипов III.",
-  "jade_leggings.description": "Бонус комплекта: Эффект Отравленных шипов III.",
-  "jade_boots.description": "Бонус комплекта: Эффект Отравленных шипов III.",
+  "jade_helmet.description": "Бонус комплекта: Эффект Отравленных шипов %s.",
+  "jade_chestplate.description": "Бонус комплекта: Эффект Отравленных шипов %s.",
+  "jade_leggings.description": "Бонус комплекта: Эффект Отравленных шипов %s.",
+  "jade_boots.description": "Бонус комплекта: Эффект Отравленных шипов %s.",
   "jade_axe.description": "Отравляет противника при ударе.",
   "jade_sword.description": "Отравляет противника при ударе.",
 
