@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SapphireAxeItem extends MythicEffectsAxeItem {
@@ -22,8 +24,7 @@ public class SapphireAxeItem extends MythicEffectsAxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        String tltp = Text.translatable(tooltipKey).getString().formatted(CONFIG.sapphireConfig.axe_percentage_damage_percent());
-        tooltip.add(Text.literal(tltp).formatted(color));
+        tooltip.add(Text.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.axe_percentage_damage_percent()).toArray()).formatted(color));
     }
 
     public void setPercent(int percent) {

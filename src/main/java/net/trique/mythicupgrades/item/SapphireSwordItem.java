@@ -22,8 +22,7 @@ public class SapphireSwordItem extends MythicEffectsSwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        String tltp = Text.translatable(tooltipKey).getString().formatted(CONFIG.sapphireConfig.sword_percentage_damage_percent());
-        tooltip.add(Text.literal(tltp).formatted(color));
+        tooltip.add(Text.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.sword_percentage_damage_percent()).toArray()).formatted(color));
     }
 
     public void setPercent(int percent) {
