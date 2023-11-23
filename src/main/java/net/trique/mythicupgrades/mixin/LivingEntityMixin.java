@@ -95,25 +95,28 @@ public abstract class LivingEntityMixin {
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
-        StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
-        if (deflection != null) {
-            Entity attacker = source.getAttacker();
-            float defl_dmg_coef = deflection.getAmplifier() / 10f;
-            boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null);
-            melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
-            melee &= !source.isOf(DamageTypes.SONIC_BOOM);
-            if (melee) {
-                boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
-                if (!check_damage_type || !hasDamageBeenDeflected) {
-                    attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                            MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), (0.1f + defl_dmg_coef) * amount);
-                    hasDamageBeenDeflected = check_damage_type;
-                } else  {
-                    hasDamageBeenDeflected = false;
+        if (!((LivingEntity)(Object)this).getWorld().isClient()) {
+            StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
+            if (deflection != null) {
+                Entity attacker = source.getAttacker();
+                float defl_dmg_coef = deflection.getAmplifier() / 10f;
+                boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null);
+                melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
+                melee &= !source.isOf(DamageTypes.SONIC_BOOM);
+                if (melee) {
+                    boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
+                    if (!check_damage_type || !hasDamageBeenDeflected) {
+                        attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
+                                MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), (0.1f + defl_dmg_coef) * amount);
+                        hasDamageBeenDeflected = check_damage_type;
+                    } else  {
+                        hasDamageBeenDeflected = false;
+                    }
                 }
+                amount *= (0.9f - defl_dmg_coef);
             }
-            amount *= (0.9f - defl_dmg_coef);
+            return amount;
         }
-        return amount;
+        return 0f;
     }
 }
