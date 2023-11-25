@@ -12,17 +12,18 @@ import java.util.List;
 
 public class ClientFunctions {
 
-    public static void handleTooltipForArmor(ItemStack stack, List<Text> tooltips, String tooltipSB, Formatting color, ArmorMaterial material) {
+    public static void handleTooltipForArmor(ItemStack stack, List<Text> tooltips, MutableText successTooltip, Formatting color, ArmorMaterial material) {
         ClientPlayerEntity player = getLocalPlayer();
-        MutableText tooltip = Text.translatable(tooltipSB).formatted(color);
-        MutableText defaultArmorTooltip = Text.translatable("defaultArmorTooltip.description").formatted(Formatting.GRAY).
-                formatted(Formatting.ITALIC);
-        ArrayList<ItemStack> toCheck = new ArrayList<>();
-        player.getArmorItems().forEach(toCheck::add);
-        if (CommonFunctions.hasCorrectArmorOn(player, material) && toCheck.contains(stack)) {
-            tooltips.add(tooltip);
-        } else {
-            tooltips.add(defaultArmorTooltip);
+        if (player != null) {
+            MutableText defaultArmorTooltip = Text.translatable("defaultArmorTooltip.description").formatted(Formatting.GRAY).
+                    formatted(Formatting.ITALIC);
+            ArrayList<ItemStack> toCheck = new ArrayList<>();
+            player.getArmorItems().forEach(toCheck::add);
+            if (CommonFunctions.hasCorrectArmorOn(player, material) && toCheck.contains(stack)) {
+                tooltips.add(successTooltip.formatted(color));
+            } else {
+                tooltips.add(defaultArmorTooltip);
+            }
         }
     }
     public static ClientPlayerEntity getLocalPlayer() {

@@ -6,7 +6,8 @@
   "mixins": [
     "LivingEntityMixin",
     "MobEntityMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "ServerWorldMixin"
   ],
   "client": [],
   "server": [],

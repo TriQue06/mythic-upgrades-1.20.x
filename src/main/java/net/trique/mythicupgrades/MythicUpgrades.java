@@ -2,23 +2,28 @@ package net.trique.mythicupgrades;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.trique.mythicupgrades.block.MythicBlocks;
-import net.trique.mythicupgrades.registry.RegisterMythicEffects;
-import net.trique.mythicupgrades.registry.RegisterMythicItems;
-import net.trique.mythicupgrades.world.gen.MythicWorldGeneration;
+import net.trique.mythicupgrades.block.MUBlocks;
+import net.trique.mythicupgrades.config.MUConfig;
+import net.trique.mythicupgrades.registry.RegisterMUCommands;
+import net.trique.mythicupgrades.registry.RegisterMUEffects;
+import net.trique.mythicupgrades.registry.RegisterMUItems;
+import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MythicUpgrades implements ModInitializer {
 	public static final String MOD_ID = "mythicupgrades";
-	public static final Logger LOGGER = LoggerFactory.getLogger("mythicupgrades");
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final MUConfig CONFIG = MUConfig.createAndLoad();
 
 	@Override
 	public void onInitialize() {
-		RegisterMythicEffects.registerEffects();
-		RegisterMythicItems.registerMythicItems();
-		MythicBlocks.registerMythicBlocks();
-		MythicWorldGeneration.generateModWorldGen();
+		CONFIG.load();
+		RegisterMUEffects.registerEffects();
+		RegisterMUItems.registerMythicItems();
+		RegisterMUCommands.registerCommands();
+		MUBlocks.registerMythicBlocks();
+		MUWorldGeneration.generateModWorldGen();
 		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARŞİM <3!");
 	}
 }

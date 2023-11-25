@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.SoundEvents;
+import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
 public class PoisonousThornsEffect extends StatusEffect {
     public PoisonousThornsEffect(StatusEffectCategory statusEffectCategory, int color) {
@@ -22,7 +23,8 @@ public class PoisonousThornsEffect extends StatusEffect {
                     entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 1 + amplifier);
                     entity.playSound(SoundEvents.ENCHANT_THORNS_HIT, 1.0f, livingEntity.getSoundPitch());
                     entity.playSound(SoundEvents.ENTITY_SPIDER_HURT, 1.0f, livingEntity.getSoundPitch());
-                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 60, amplifier), livingEntity);
+                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,
+                            (int)(CONFIG.jadeConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
                 }
             }
         }
