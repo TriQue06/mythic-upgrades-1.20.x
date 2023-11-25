@@ -9,9 +9,9 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.CommonFunctions;
-import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -52,7 +52,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                         SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
                         percent = axeItem.getPercent();
                     }
-                    DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(), MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE,
+                    DamageSource source = MythicUpgradesDamageTypes.create(entity.getWorld(), MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE,
                             this);
                     entity.damage(source, (percent / 100f) * entity.getMaxHealth());
                 }
