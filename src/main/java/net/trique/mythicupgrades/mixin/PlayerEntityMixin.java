@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
-import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
+import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
@@ -110,8 +110,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                     SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
                     percent = axeItem.getPercent();
                 }
-                DamageSource source = MythicUpgradeDamageTypes.create(entity.getWorld(),
-                        MythicUpgradeDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+                DamageSource source = MythicUpgradesDamageTypes.create(entity.getWorld(),
+                        MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
                 float dmg = (percent / 100f) * cooldownOnHit;
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragonEntity dragon = part.owner;

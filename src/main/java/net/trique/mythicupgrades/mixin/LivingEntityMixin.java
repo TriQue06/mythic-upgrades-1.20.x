@@ -8,7 +8,7 @@ import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
-import net.trique.mythicupgrades.MythicUpgradeDamageTypes;
+import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
 import net.trique.mythicupgrades.item.MythicEffectsArmorItem;
@@ -104,10 +104,10 @@ public abstract class LivingEntityMixin {
                 melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
                 melee &= !source.isOf(DamageTypes.SONIC_BOOM);
                 if (melee) {
-                    boolean check_damage_type = source.isOf(MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
+                    boolean check_damage_type = source.isOf(MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
                     if (!check_damage_type || !hasDamageBeenDeflected) {
-                        attacker.damage(MythicUpgradeDamageTypes.create(attacker.getWorld(),
-                                MythicUpgradeDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), (0.1f + defl_dmg_coef) * amount);
+                        attacker.damage(MythicUpgradesDamageTypes.create(attacker.getWorld(),
+                                MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), (0.1f + defl_dmg_coef) * amount);
                         hasDamageBeenDeflected = check_damage_type;
                     } else  {
                         hasDamageBeenDeflected = false;

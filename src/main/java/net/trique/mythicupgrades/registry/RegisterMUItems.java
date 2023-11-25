@@ -6,6 +6,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 import static net.trique.mythicupgrades.MythicUpgrades.*;
@@ -101,11 +103,29 @@ public class RegisterMUItems {
 
     private static void registerMUItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                        .icon(() -> new ItemStack(JADE_SWORD)).entries((displayContext, entries) -> {
-                            for (Item e : ALL_ITEMS) {
-                                entries.add(e);
-                            }
-                        }).build();
+                .icon(() -> new ItemStack(JADE_SWORD)).entries((displayContext, entries) -> {
+                    for (Item e : ALL_ITEMS) {
+                        entries.add(e);
+                    }
+                    entries.add(AMETRINE_BLOCK);
+                    entries.add(SAPPHIRE_BLOCK);
+                    entries.add(AQUAMARINE_BLOCK);
+                    entries.add(RUBY_BLOCK);
+                    entries.add(JADE_BLOCK);
+                    entries.add(TOPAZ_BLOCK);
+
+                    entries.add(SAPPHIRE_ORE);
+                    entries.add(RUBY_ORE);
+
+                    entries.add(AMETRINE_ORE);
+
+                    entries.add(JADE_ORE);
+                    entries.add(DEEPSLATE_JADE_ORE);
+                    entries.add(AQUAMARINE_ORE);
+                    entries.add(DEEPSLATE_AQUAMARINE_ORE);
+                    entries.add(TOPAZ_ORE);
+                    entries.add(DEEPSLATE_TOPAZ_ORE);
+                }).build();
         Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
     }
 
