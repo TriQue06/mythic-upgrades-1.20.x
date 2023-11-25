@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
-import net.trique.mythicupgrades.registry.RegisterMythicItems;
+import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUArmorMaterials implements StringIdentifiable, ArmorMaterial {
 
@@ -18,25 +18,25 @@ public enum MUArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.SAPPHIRE_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(SAPPHIRE_INGOT)),
     JADE("jade", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.JADE_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(JADE_INGOT)),
     TOPAZ("topaz", 120, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
         map.put(Type.HELMET, 5);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.TOPAZ_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 5.0F, 0.1F, Ingredient.ofItems(TOPAZ_INGOT)),
     AMETRINE("ametrine", 40, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(RegisterMythicItems.AMETRINE_INGOT));
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, Ingredient.ofItems(AMETRINE_INGOT));
 
     private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 13);

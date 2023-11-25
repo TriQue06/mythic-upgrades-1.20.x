@@ -1,4 +1,42 @@
 {
+  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "dark_purple", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Sapphire", "color" : "blue", "bold":  "true"}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "light_purple", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Armor's Damage Deflection amplifier", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_speed_amplifier": [{"text": "Armor's Speed amplifier", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_jump_boost_amplifier": [{"text": "Armor's Jump Boost amplifier", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Axe's Levitation duration", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Axe's Levitation amplifier", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Sword's Levitation duration", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Sword's Levitation amplifier", "color": "light_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous thorns amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous thorns Poison duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_duration": [{"text": "Axe's Poison duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_amplifier": [{"text": "Axe's Poison amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_duration": [{"text": "Sword's Poison duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_amplifier": [{"text": "Sword's Poison amplifier", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Pickaxe's Haste amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Axe's Haste amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_shovel_amplifier": [{"text": "Shovel's Haste amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Sword's Haste amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Hoe's Haste's amplifier", "color": "red"}],
+
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Axe's Freeze duration", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Sword's Freeze duration", "color": "aqua"}],
+
+
+
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Smithing Template",
@@ -113,10 +151,10 @@
   "aquamarine_sword.description": "Freezes enemy on hit.",
 
   "ametrine.description": "Levitates enemy on hit.",
-  "ametrine_helmet.description": "Set Bonus: Jump Boost II & Speed II effects.",
-  "ametrine_chestplate.description": "Set Bonus: Jump Boost II & Speed II effects.",
-  "ametrine_leggings.description": "Set Bonus: Jump Boost II & Speed II effects.",
-  "ametrine_boots.description": "Set Bonus: Jump Boost II & Speed II effects.",
+  "ametrine_helmet.description": "Set Bonus: Jump Boost %s & Speed %s effects.",
+  "ametrine_chestplate.description": "Set Bonus: Jump Boost %s & Speed %s effects.",
+  "ametrine_leggings.description": "Set Bonus: Jump Boost %s & Speed %s effects.",
+  "ametrine_boots.description": "Set Bonus: Jump Boost %s & Speed %s effects.",
   "ametrine_axe.description": "Levitates enemy on hit.",
   "ametrine_sword.description": "Levitates enemy on hit.",
 
@@ -132,12 +170,12 @@
   "topaz_sword.description": "Has 3x durability as netherite sword.",
 
   "sapphire.description": "Has no effects on its own.",
-  "sapphire_helmet.description": "Set Bonus: Damage Deflection III effect.",
-  "sapphire_chestplate.description": "Set Bonus: Damage Deflection III effect.",
-  "sapphire_leggings.description": "Set Bonus: Damage Deflection III effect.",
-  "sapphire_boots.description": "Set Bonus: Damage Deflection III effect.",
-  "sapphire_axe.description": "Deals percentage-based damage depending on enemy's health.",
-  "sapphire_sword.description": "Deals percentage-based damage depending on enemy's health.",
+  "sapphire_helmet.description": "Set Bonus: Damage Deflection %s effect.",
+  "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s effect.",
+  "sapphire_leggings.description": "Set Bonus: Damage Deflection %s effect.",
+  "sapphire_boots.description": "Set Bonus: Damage Deflection %s effect.",
+  "sapphire_axe.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
+  "sapphire_sword.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
 
   "ruby.description": "Has no effects on its own.",
   "ruby_axe.description": "Applies Haste when in main hand.",
@@ -147,10 +185,10 @@
   "ruby_sword.description": "Applies Haste when in main hand.",
 
   "jade.description": "Poisons enemy on hit.",
-  "jade_helmet.description": "Set Bonus: Poisonous Thorns III effect.",
-  "jade_chestplate.description": "Set Bonus: Poisonous Thorns III effect.",
-  "jade_leggings.description": "Set Bonus: Poisonous Thorns III effect.",
-  "jade_boots.description": "Set Bonus: Poisonous Thorns III effect.",
+  "jade_helmet.description": "Set Bonus: Poisonous Thorns %s effect.",
+  "jade_chestplate.description": "Set Bonus: Poisonous Thorns %s effect.",
+  "jade_leggings.description": "Set Bonus: Poisonous Thorns %s effect.",
+  "jade_boots.description": "Set Bonus: Poisonous Thorns %s effect.",
   "jade_axe.description": "Poisons enemy on hit.",
   "jade_sword.description": "Poisons enemy on hit.",
 

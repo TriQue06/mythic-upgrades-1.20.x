@@ -1,7 +1,7 @@
 package net.trique.mythicupgrades.world.gen;
 
-public class MythicWorldGeneration {
+public class MUWorldGeneration {
     public static void generateModWorldGen() {
-        MythicOreGeneration.generateOres();
+        MUOreGeneration.generateOres();
     }
 }

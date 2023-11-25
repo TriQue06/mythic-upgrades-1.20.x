@@ -5,31 +5,36 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.ClientFunctions;
+import net.trique.mythicupgrades.util.CommonFunctions;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
 import java.util.*;
 
 public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmorItem {
-    private final ItemEffectsList effects;
-    private final String tooltipSB;
-    private final Formatting color;
+    protected ItemEffectsList effects;
+    protected final String tooltipSB;
+    protected final Formatting color;
+    protected List<Integer> effectAmplifiers;
 
-    public MythicEffectsArmorItem(ArmorMaterial material, Type type, Settings settings, ItemEffectsList effects, String tooltipSB, Formatting color) {
+    public MythicEffectsArmorItem(ArmorMaterial material, Type type, Settings settings, ItemEffectsList effects, String tooltipSB, List<Integer> effectAmplifiers, Formatting color) {
         super(material, type, settings);
         this.effects = effects;
         this.tooltipSB = tooltipSB;
         this.color = color;
+        this.effectAmplifiers = effectAmplifiers;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        ClientFunctions.handleTooltipForArmor(stack, tooltip, tooltipSB, color, this.getMaterial());
-        super.appendTooltip(stack, world, tooltip, context);
+        List<String> romanians = effectAmplifiers.stream().map(CommonFunctions::arabicToRom).toList();
+        MutableText partTooltip = Text.translatable(tooltipSB, romanians.toArray());
+        ClientFunctions.handleTooltipForArmor(stack, tooltip, partTooltip, color, this.getMaterial());
     }
 
     @Override
@@ -50,5 +55,11 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmor
     @Override
     public HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs() {
         return effects.getForEquipmentDebuffs();
+    }
+
+    @Override
+    public void setNewEffects(ItemEffectsList effectsList, List<Integer> amplifierList) {
+        effects = effectsList;
+        effectAmplifiers = amplifierList;
     }
 }

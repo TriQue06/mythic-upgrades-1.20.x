@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class MythicEffectVirtualItemHandler {
 
-    private final ItemEffectsList allEffects;
+    private ItemEffectsList allEffects;
 
     public MythicEffectVirtualItemHandler(ItemEffectsList allEffects) {
         this.allEffects = allEffects;
@@ -27,5 +27,9 @@ public class MythicEffectVirtualItemHandler {
     }
     public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
         return allEffects.getForOthers();
+    }
+
+    public void setNewEffects(ItemEffectsList list) {
+        allEffects = list;
     }
 }
