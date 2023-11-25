@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class MythicUpgradeDamageTypes {
+public class MythicUpgradesDamageTypes {
     public static final RegistryKey<DamageType> PERCENTAGE_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
             new Identifier("mythicupgrades", "percentage_damage_type"));
     public static final RegistryKey<DamageType> DEFLECTING_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
