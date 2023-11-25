@@ -14,11 +14,11 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.trique.mythicupgrades.MythicUpgrades;
-import net.trique.mythicupgrades.block.MythicBlocks;
+import net.trique.mythicupgrades.block.MUBlocks;
 
 import java.util.List;
 
-public class MythicConfiguredFeatures {
+public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_CRYSTAL_KEY = registerKey("sapphire_crystal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
@@ -40,37 +40,37 @@ public class MythicConfiguredFeatures {
         RuleTest terraReplacables = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
 
         List<OreFeatureConfig.Target> netherSapphireOres =
-                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MythicBlocks.SAPPHIRE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MUBlocks.SAPPHIRE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> netherSapphireCrystals =
-                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MythicBlocks.SAPPHIRE_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MUBlocks.SAPPHIRE_CRYSTAL_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> netherRubyOres =
-                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MythicBlocks.RUBY_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MUBlocks.RUBY_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> netherRubyCrystals =
-                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MythicBlocks.RUBY_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MUBlocks.RUBY_CRYSTAL_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> overworldJadeOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MythicBlocks.JADE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, MythicBlocks.DEEPSLATE_JADE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.JADE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_JADE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> overworldJadeCrystals =
-                List.of(OreFeatureConfig.createTarget(terraReplacables, MythicBlocks.JADE_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(terraReplacables, MUBlocks.JADE_CRYSTAL_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> overworldTopazOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MythicBlocks.TOPAZ_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, MythicBlocks.DEEPSLATE_TOPAZ_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.TOPAZ_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_TOPAZ_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> overworldTopazCrystals =
-                List.of(OreFeatureConfig.createTarget(terraReplacables, MythicBlocks.TOPAZ_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(terraReplacables, MUBlocks.TOPAZ_CRYSTAL_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> endAmetrineOres =
-                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MythicBlocks.AMETRINE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.AMETRINE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> endAmetrineCrystals =
-                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MythicBlocks.AMETRINE_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.AMETRINE_CRYSTAL_BLOCK.getDefaultState()));
 
         List<OreFeatureConfig.Target> overworldAquamarineOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MythicBlocks.AQUAMARINE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, MythicBlocks.DEEPSLATE_AQUAMARINE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.AQUAMARINE_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_AQUAMARINE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> overworldAquamarineCrystals =
-                List.of(OreFeatureConfig.createTarget(terraReplacables, MythicBlocks.AQUAMARINE_CRYSTAL_BLOCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(terraReplacables, MUBlocks.AQUAMARINE_CRYSTAL_BLOCK.getDefaultState()));
 
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 6));
         register(context, SAPPHIRE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireCrystals, 12));

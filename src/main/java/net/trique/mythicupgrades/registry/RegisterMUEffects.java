@@ -5,15 +5,15 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.trique.mythicupgrades.MythicUpgrades;
-import net.trique.mythicupgrades.effect.MythicEffects;
+import net.trique.mythicupgrades.effect.MUEffects;
 
-public class RegisterMythicEffects {
+public class RegisterMUEffects {
     public static void registerEffect(StatusEffect effect, String name) {
         Registry.register(Registries.STATUS_EFFECT, new Identifier(MythicUpgrades.MOD_ID, name), effect);
     }
     public static void registerEffects() {
-        registerEffect(MythicEffects.POISONOUS_THORNS, "poisonous_thorns");
-        registerEffect(MythicEffects.FREEZE, "freeze");
-        registerEffect(MythicEffects.DAMAGE_DEFLECTION, "damage_deflection");
+        registerEffect(MUEffects.POISONOUS_THORNS, "poisonous_thorns");
+        registerEffect(MUEffects.FREEZE, "freeze");
+        registerEffect(MUEffects.DAMAGE_DEFLECTION, "damage_deflection");
     }
 }
