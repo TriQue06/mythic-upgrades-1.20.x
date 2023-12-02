@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.mixin;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -8,6 +9,7 @@ import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -26,7 +28,11 @@ import java.util.Map;
 import java.util.Objects;
 
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin {
+public abstract class LivingEntityMixin extends Entity {
+
+    public LivingEntityMixin(EntityType<?> type, World world) {
+        super(type, world);
+    }
 
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
@@ -95,12 +101,12 @@ public abstract class LivingEntityMixin {
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
-        if (!((LivingEntity)(Object)this).getWorld().isClient()) {
+        if (!getWorld().isClient()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getAttacker();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
-                boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null);
+                boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null) && !equals(attacker);
                 melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
                 melee &= !source.isOf(DamageTypes.SONIC_BOOM);
                 if (melee) {
