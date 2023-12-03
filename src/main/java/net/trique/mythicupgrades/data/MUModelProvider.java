@@ -62,6 +62,8 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUItems.SAPPHIRE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(MUItems.SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(MUItems.SAPPHIRE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.SAPPHIRE_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.SAPPHIRE_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(MUItems.RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(MUItems.RUBY_PICKAXE, Models.HANDHELD);
@@ -70,6 +72,8 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUItems.RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(MUItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(MUItems.RUBY_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.RUBY_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.RUBY_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(MUItems.JADE_AXE, Models.HANDHELD);
         itemModelGenerator.register(MUItems.JADE_SWORD, Models.HANDHELD);
@@ -79,6 +83,8 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUItems.JADE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(MUItems.JADE, Models.GENERATED);
         itemModelGenerator.register(MUItems.JADE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.JADE_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.JADE_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(MUItems.TOPAZ_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(MUItems.TOPAZ_PICKAXE, Models.HANDHELD);
@@ -91,6 +97,8 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUItems.TOPAZ_BOOTS, Models.GENERATED);
         itemModelGenerator.register(MUItems.TOPAZ, Models.GENERATED);
         itemModelGenerator.register(MUItems.TOPAZ_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.TOPAZ_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.TOPAZ_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(MUItems.AMETRINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(MUItems.AMETRINE_SWORD, Models.HANDHELD);
@@ -100,10 +108,14 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUItems.AMETRINE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(MUItems.AMETRINE, Models.GENERATED);
         itemModelGenerator.register(MUItems.AMETRINE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.AMETRINE_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.AMETRINE_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(MUItems.AQUAMARINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(MUItems.AQUAMARINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(MUItems.AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(MUItems.AQUAMARINE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(MUItems.AQUAMARINE_SHARD, Models.GENERATED);
+        itemModelGenerator.register(MUItems.AQUAMARINE_APPLE, Models.GENERATED);
     }
 }

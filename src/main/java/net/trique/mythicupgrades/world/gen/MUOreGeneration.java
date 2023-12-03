@@ -13,11 +13,15 @@ public class MUOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_CRYSTAL_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
@@ -38,5 +42,6 @@ public class MUOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AMETRINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AMETRINE_CRYSTAL_PLACED_KEY);
+
     }
 }
