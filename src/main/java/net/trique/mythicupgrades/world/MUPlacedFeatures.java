@@ -8,8 +8,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 import net.trique.mythicupgrades.MythicUpgrades;
 
 import java.util.List;
@@ -28,6 +27,10 @@ public class MUPlacedFeatures {
     public static final RegistryKey<PlacedFeature> AMETRINE_CRYSTAL_PLACED_KEY = registerKey("ametrine_crystal_placed");
     public static final RegistryKey<PlacedFeature> AQUAMARINE_ORE_PLACED_KEY = registerKey("aquamarine_ore_placed");
     public static final RegistryKey<PlacedFeature> AQUAMARINE_CRYSTAL_PLACED_KEY = registerKey("aquamarine_crystal_placed");
+
+    public static final RegistryKey<PlacedFeature> JADE_CRYSTAL_GEODE_PLACED_KEY = registerKey("jade_crystal_geode_placed");
+    public static final RegistryKey<PlacedFeature> TOPAZ_CRYSTAL_GEODE_PLACED_KEY = registerKey("topaz_crystal_geode_placed");
+    public static final RegistryKey<PlacedFeature> AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY = registerKey("aquamarine_crystal_geode_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -67,6 +70,18 @@ public class MUPlacedFeatures {
         register(context, AQUAMARINE_CRYSTAL_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_KEY),
                 MUOrePlacement.modifiersWithCount(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
+
+        register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
+                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
+                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+
+        register(context, TOPAZ_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_GEODE_KEY),
+                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
+                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+
+        register(context, AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_GEODE_KEY),
+                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
+                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

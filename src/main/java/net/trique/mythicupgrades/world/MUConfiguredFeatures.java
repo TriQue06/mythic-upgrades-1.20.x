@@ -9,10 +9,9 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.trique.mythicupgrades.MythicUpgrades;
 import net.trique.mythicupgrades.block.MUBlocks;
 
@@ -31,6 +30,10 @@ public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETRINE_CRYSTAL_KEY = registerKey("ametrine_crystal");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY = registerKey("aquamarine_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_CRYSTAL_KEY = registerKey("aquamarine_crystal");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> JADE_CRYSTAL_GEODE_KEY = registerKey("jade_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?,?>> TOPAZ_CRYSTAL_GEODE_KEY = registerKey("topaz_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?,?>> AQUAMARINE_CRYSTAL_GEODE_KEY = registerKey("aquamarine_crystal_geode");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -84,6 +87,51 @@ public class MUConfiguredFeatures {
         register(context, AMETRINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineCrystals, 12));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 6));
         register(context, AQUAMARINE_CRYSTAL_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineCrystals, 12));
+
+        register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                        BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
+                        BlockStateProvider.of(Blocks.BUDDING_AMETHYST),
+                        BlockStateProvider.of(Blocks.CALCITE),
+                        BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                        List.of(MUBlocks.SMALL_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
+                        new GeodeCrackConfig(0.95, 2.0, 2),
+                        0.35, 0.083,
+                        true, UniformIntProvider.create(4, 6),
+                        UniformIntProvider.create(3, 4), UniformIntProvider.create(1, 2),
+                        -16, 16, 0.05, 1));
+        
+        register(context, TOPAZ_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                        BlockStateProvider.of(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
+                        BlockStateProvider.of(Blocks.BUDDING_AMETHYST),
+                        BlockStateProvider.of(Blocks.CALCITE),
+                        BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                        List.of(MUBlocks.SMALL_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.getDefaultState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
+                        new GeodeCrackConfig(0.95, 2.0, 2),
+                        0.35, 0.083,
+                        true, UniformIntProvider.create(4, 6),
+                        UniformIntProvider.create(3, 4), UniformIntProvider.create(1, 2),
+                        -16, 16, 0.05, 1));
+        
+        register(context, AQUAMARINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                        BlockStateProvider.of(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
+                        BlockStateProvider.of(Blocks.BUDDING_AMETHYST),
+                        BlockStateProvider.of(Blocks.CALCITE),
+                        BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                        List.of(MUBlocks.SMALL_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.getDefaultState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
+                        new GeodeCrackConfig(0.95, 2.0, 2),
+                        0.35, 0.083,
+                        true, UniformIntProvider.create(4, 6),
+                        UniformIntProvider.create(3, 4), UniformIntProvider.create(1, 2),
+                        -16, 16, 0.05, 1));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

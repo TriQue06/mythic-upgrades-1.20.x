@@ -15,20 +15,21 @@ import java.util.List;
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
 public class MUItems {
+    private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
+    private static final List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
+    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
+
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
     private static final List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
 
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.ametrine_armor_speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier()).build();
     private static final List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier(), CONFIG.ametrineConfig.ametrine_armor_speed_amplifier());
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
-    private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
-    private static final List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
-
 
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
     private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 2).build();
-    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
+
     private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 2).build();
     private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, 20, 0).build();
     private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int) (CONFIG.aquamarineConfig.axe_freeze_duration() * 20), 0).build();
@@ -42,6 +43,7 @@ public class MUItems {
     private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_hoe_amplifier()).build();
     private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_shovel_amplifier()).build();
     private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_sword_amplifier()).build();
+    
     public static final BrokenDiscItem BROKEN_SAPPHIRE_DISC = new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16));
     public static final BrokenDiscItem BROKEN_RUBY_DISC = new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16));
     public static final BrokenDiscItem BROKEN_JADE_DISC = new BrokenDiscItem("jadedisc.description", new FabricItemSettings().maxCount(16));
@@ -58,21 +60,33 @@ public class MUItems {
 
     public static final MUGemItem SAPPHIRE = new MUGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings());
     public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
 
     public static final MUGemItem RUBY = new MUGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings());
     public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
 
     public static final MUGemItem JADE = new MUGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings());
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item JADE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item JADE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.JADE_APPLE));
 
     public static final MUGemItem TOPAZ = new MUGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings());
     public static final Item TOPAZ_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item TOPAZ_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_APPLE));
 
     public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
     public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
 
     public static final MUGemItem AQUAMARINE = new MUGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item AQUAMARINE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item AQUAMARINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_APPLE));
 
     public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(6, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE);
     public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(4, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE);
@@ -115,14 +129,9 @@ public class MUItems {
     public static final MythicEffectsSwordItem AQUAMARINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.4f, (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_axe.description", Formatting.AQUA);
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createJadeUpgrade();
-
     public static final Item TOPAZ_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createTopazUpgrade();
-
     public static final Item AQUAMARINE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createAquamarineUpgrade();
-
     public static final Item SAPPHIRE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createSapphireUpgrade();
-
     public static final Item RUBY_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createRubyUpgrade();
-
     public static final Item AMETRINE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createAmetrineUpgrade();
 }
