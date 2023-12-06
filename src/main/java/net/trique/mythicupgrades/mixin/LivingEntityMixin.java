@@ -1,7 +1,6 @@
 package net.trique.mythicupgrades.mixin;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -9,7 +8,6 @@ import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -25,12 +23,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Map;
-@Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin extends Entity{
+import java.util.Objects;
 
-    public LivingEntityMixin(EntityType<?> type, World world) {
-        super(type, world);
-    }
+@Mixin(LivingEntity.class)
+public abstract class LivingEntityMixin {
 
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
@@ -99,12 +95,12 @@ public abstract class LivingEntityMixin extends Entity{
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
-        if (!this.getWorld().isClient()) {
+        if (!((LivingEntity)(Object)this).getWorld().isClient()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getAttacker();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
-                boolean melee = (attacker != null) && attacker.equals(source.getSource()) && !equals(attacker);
+                boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null);
                 melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
                 melee &= !source.isOf(DamageTypes.SONIC_BOOM);
                 if (melee) {

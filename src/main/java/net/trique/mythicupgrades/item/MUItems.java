@@ -60,33 +60,33 @@ public class MUItems {
 
     public static final MUGemItem SAPPHIRE = new MUGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings());
     public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item SAPPHIRE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
 
     public static final MUGemItem RUBY = new MUGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings());
     public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item RUBY_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
 
     public static final MUGemItem JADE = new MUGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings());
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item JADE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item JADE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item JADE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.JADE_APPLE));
 
     public static final MUGemItem TOPAZ = new MUGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings());
     public static final Item TOPAZ_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item TOPAZ_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_APPLE));
 
     public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
     public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item AMETRINE_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
 
     public static final MUGemItem AQUAMARINE = new MUGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item AQUAMARINE_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item AQUAMARINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_APPLE));
+    public static final Item AQUAMARINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item AQUAMARINE_FISH = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_FISH));
 
     public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(6, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE);
     public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(4, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE);

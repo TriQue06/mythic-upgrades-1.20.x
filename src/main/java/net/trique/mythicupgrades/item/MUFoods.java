@@ -13,7 +13,7 @@ public class MUFoods {
         statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 300, 0), 1.0F).
         alwaysEdible().build();
 
-    public static final FoodComponent AQUAMARINE_APPLE = (new FoodComponent.Builder()).hunger(5).saturationModifier(1.2F).
+    public static final FoodComponent AQUAMARINE_FISH = (new FoodComponent.Builder()).hunger(5).saturationModifier(1.2F).
         statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 300, 0), 1.0F).
         alwaysEdible().build();
 

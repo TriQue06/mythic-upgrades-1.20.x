@@ -24,6 +24,6 @@ public class MythicUpgrades implements ModInitializer {
 		RegisterMUCommands.registerCommands();
 		MUBlocks.registerMythicBlocks();
 		MUWorldGeneration.generateModWorldGen();
-		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARŞİM <3!");
+		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARDES <3!");
 	}
 }
