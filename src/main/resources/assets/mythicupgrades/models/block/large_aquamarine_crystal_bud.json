@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mythicupgrades:block/large_aquamarine_crystal_bud"
+  }
+}

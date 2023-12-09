@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mythicupgrades:block/large_ametrine_crystal_bud"
+  }
+}
