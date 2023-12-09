@@ -26,7 +26,7 @@
       "net.trique.mythicupgrades.MythicUpgradesDataGenerator"
     ],
     "client": [
-      "net.trique.mythicupgrades.client.MythicUpgradesClient"
+      "net.trique.mythicupgrades.MythicUpgradesClient"
     ]
   },
   "depends": {
