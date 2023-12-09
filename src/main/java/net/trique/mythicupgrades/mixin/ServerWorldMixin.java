@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
+import static net.trique.mythicupgrades.effect.MUEffects.ITEM_MASTERY;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 @Mixin(ServerWorld.class)
@@ -23,11 +24,16 @@ public abstract class ServerWorldMixin {
     private void updateByConfigs(CallbackInfo ci) {
         ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
         List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
+
         ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.ametrine_armor_speed_amplifier()).
                 addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier()).build();
         List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier(), CONFIG.ametrineConfig.ametrine_armor_speed_amplifier());
+
         ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
         List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
+
+        ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
+        List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
         ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.aquamarineConfig.axe_freeze_duration() * 20), 0).build();
         ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.aquamarineConfig.sword_freeze_duration() * 20), 0).build();
@@ -65,6 +71,10 @@ public abstract class ServerWorldMixin {
         AMETRINE_CHESTPLATE.setNewEffects(ametrineArmorEffects, ametrineAmplifiers);
         AMETRINE_LEGGINGS.setNewEffects(ametrineArmorEffects, ametrineAmplifiers);
         AMETRINE_BOOTS.setNewEffects(ametrineArmorEffects, ametrineAmplifiers);
+        TOPAZ_HELMET.setNewEffects(topazArmorEffects, topazAmplifiers);
+        TOPAZ_CHESTPLATE.setNewEffects(topazArmorEffects, topazAmplifiers);
+        TOPAZ_LEGGINGS.setNewEffects(topazArmorEffects, topazAmplifiers);
+        TOPAZ_BOOTS.setNewEffects(topazArmorEffects, topazAmplifiers);
 
         SAPPHIRE_SWORD.setPercent(CONFIG.sapphireConfig.sword_percentage_damage_percent());
         SAPPHIRE_AXE.setPercent(CONFIG.sapphireConfig.axe_percentage_damage_percent());

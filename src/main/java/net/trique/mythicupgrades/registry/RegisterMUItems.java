@@ -12,7 +12,6 @@ import net.trique.mythicupgrades.item.MUItems;
 
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
-
 import static net.trique.mythicupgrades.MythicUpgrades.*;
 
 import java.util.ArrayList;
@@ -20,8 +19,7 @@ import java.util.ArrayList;
 public class RegisterMUItems {
     private static final ArrayList<Item> ALL_ITEMS = new ArrayList<>();
     private static <T extends Item> void registerItem(String name, T item) {
-        Item regItem = Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), (Item) item);
-        ALL_ITEMS.add(regItem);
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), (Item) item);
     }
 
     private static void registerMUItems() {
@@ -116,7 +114,7 @@ public class RegisterMUItems {
 
     private static void registerMUItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                .icon(() -> new ItemStack(MUItems.JADE_SWORD)).entries((displayContext, entries) -> {
+                .icon(() -> new ItemStack(JADE_SWORD)).entries((displayContext, entries) -> {
                     entries.add(BROKEN_JADE_DISC);
                     entries.add(MUSIC_DISC_NELUMBO);
 

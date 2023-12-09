@@ -54,7 +54,7 @@ public class MUCommands {
                                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                                     CONFIG.aquamarineConfig.axe_freeze_duration(1.25f);
                                     CONFIG.aquamarineConfig.axe_freeze_duration(1.25f);
-
+                                    CONFIG.topazConfig.item_mastery_amplifier(1);
 
                                     CONFIG.load();
                                     ctx.getSource().sendFeedback(() -> Text.literal("Successfully restored default values and reloaded config!"), false);
