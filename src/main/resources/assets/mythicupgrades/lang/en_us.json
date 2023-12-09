@@ -6,6 +6,7 @@
   "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "green", "bold": "true"}],
   "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
 
   "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's damage (% from target's max. health)", "color": "blue"}],
   "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's damage (% from target's max. health)", "color": "blue"}],
@@ -33,6 +34,8 @@
 
   "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Axe's Freeze duration", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Sword's Freeze duration", "color": "aqua"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery amplifier", "color": "gold"}],
 
 
 
@@ -179,6 +182,7 @@
   "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
   "effect.mythicupgrades.damage_deflection": "Damage Deflection",
+  "effect.mythicupgrades.item_mastery": "Item Mastery",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
@@ -200,10 +204,10 @@
   "ametrine_sword.description": "Levitates enemy on hit.",
 
   "topaz.description": "Has no effects on its own.",
-  "topaz_helmet.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_chestplate.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_leggings.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_boots.description": "Set Bonus: Fire Resistance effect.",
+  "topaz_helmet.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_chestplate.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_leggings.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_boots.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
   "topaz_axe.description": "Has 3x durability as netherite axe.",
   "topaz_pickaxe.description": "Has 3x durability as netherite pickaxe.",
   "topaz_shovel.description": "Has 3x durability as netherite shovel.",
