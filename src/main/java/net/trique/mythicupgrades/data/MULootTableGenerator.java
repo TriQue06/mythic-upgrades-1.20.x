@@ -35,12 +35,5 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(SAPPHIRE_ORE, oreDrops(SAPPHIRE_ORE, SAPPHIRE));
         addDrop(RUBY_ORE, oreDrops(RUBY_ORE, RUBY));
         addDrop(AMETRINE_ORE, oreDrops(AMETRINE_ORE, AMETRINE));
-
-        addClusterDrops(this, JADE_CRYSTAL_CLUSTER, JADE_CRYSTAL_SHARD, 2.0f, 4.0f);
-        addClusterDrops(this, TOPAZ_CRYSTAL_CLUSTER, TOPAZ_CRYSTAL_SHARD, 2.0f, 4.0f);
-        addClusterDrops(this, AQUAMARINE_CRYSTAL_CLUSTER, AQUAMARINE_CRYSTAL_SHARD, 2.0f, 4.0f);
-        addClusterDrops(this, SAPPHIRE_CRYSTAL_CLUSTER, SAPPHIRE_CRYSTAL_SHARD, 2.0f, 4.0f);
-        addClusterDrops(this, RUBY_CRYSTAL_CLUSTER, RUBY_CRYSTAL_SHARD, 2.0f, 4.0f);
-        addClusterDrops(this, AMETRINE_CRYSTAL_CLUSTER, AMETRINE_CRYSTAL_SHARD, 2.0f, 4.0f);
     }
 }
