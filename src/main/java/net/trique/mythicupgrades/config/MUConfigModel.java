@@ -19,6 +19,9 @@ public class MUConfigModel {
     @Nest
     public JadeConfig jadeConfig = new JadeConfig();
 
+    @Nest
+    public TopazConfig topazConfig = new TopazConfig();
+
     public static class SapphireConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1, max = 7)
@@ -90,6 +93,12 @@ public class MUConfigModel {
         public float sword_freeze_duration = 1.25f;
     }
 
+    public static class TopazConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int item_mastery_amplifier = 1;
+    }
+
 
     public static class JadeConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
@@ -113,5 +122,4 @@ public class MUConfigModel {
         @RangeConstraint(min = 0.1f, max = 5f)
         public float poisonous_thorns_poison_duration = 3f;
     }
-
 }

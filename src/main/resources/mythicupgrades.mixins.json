@@ -4,10 +4,21 @@
   "package": "net.trique.mythicupgrades.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BowItemMixin",
+    "BrushItemMixin",
+    "CrossBowItemMixin",
+    "FishingRodItemMixin",
+    "FlintAndSteelMixin",
     "LivingEntityMixin",
+    "MiningToolItemMixin",
     "MobEntityMixin",
+    "OnAStickItemMixin",
     "PlayerEntityMixin",
-    "ServerWorldMixin"
+    "PlayerInventoryMixin",
+    "ServerWorldMixin",
+    "ShearsItemMixin",
+    "SwordItemMixin",
+    "TridentItemMixin"
   ],
   "client": [],
   "server": [],

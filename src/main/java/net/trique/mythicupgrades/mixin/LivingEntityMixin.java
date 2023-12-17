@@ -1,6 +1,8 @@
 package net.trique.mythicupgrades.mixin;
 
+import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -8,6 +10,7 @@ import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -21,12 +24,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 import java.util.Map;
-import java.util.Objects;
+import java.util.function.Consumer;
 
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin {
+public abstract class LivingEntityMixin extends Entity {
+
+    public LivingEntityMixin(EntityType<?> type, World world) {
+        super(type, world);
+    }
 
     @Shadow
     public abstract ItemStack getEquippedStack(EquipmentSlot slot);
@@ -95,12 +102,12 @@ public abstract class LivingEntityMixin {
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
-        if (!((LivingEntity)(Object)this).getWorld().isClient()) {
+        if (!this.getWorld().isClient()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getAttacker();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
-                boolean melee = (Objects.equals(source.getSource(), attacker)) && (attacker != null);
+                boolean melee = (attacker != null) && attacker.equals(source.getSource()) && !equals(attacker);
                 melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
                 melee &= !source.isOf(DamageTypes.SONIC_BOOM);
                 if (melee) {
@@ -118,5 +125,11 @@ public abstract class LivingEntityMixin {
             return amount;
         }
         return 0f;
+    }
+
+
+    @WrapWithCondition(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
+        return checkForItemMastery(user);
     }
 }

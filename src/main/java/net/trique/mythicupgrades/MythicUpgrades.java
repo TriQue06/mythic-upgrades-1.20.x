@@ -11,10 +11,14 @@ import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Random;
+
 public class MythicUpgrades implements ModInitializer {
 	public static final String MOD_ID = "mythicupgrades";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final MUConfig CONFIG = MUConfig.createAndLoad();
+
+	public static Random RANDOM = new Random();
 
 	@Override
 	public void onInitialize() {
