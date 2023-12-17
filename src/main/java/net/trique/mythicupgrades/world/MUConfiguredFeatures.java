@@ -37,7 +37,6 @@ public class MUConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
         RuleTest endStoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
-        RuleTest terraReplacables = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
 
         List<OreFeatureConfig.Target> netherSapphireOres =
                 List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MUBlocks.SAPPHIRE_ORE.getDefaultState()));
@@ -68,7 +67,7 @@ public class MUConfiguredFeatures {
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 6));
 
         register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
-                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.WATER),
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(MUBlocks.BUDDING_JADE_CRYSTAL),
                         BlockStateProvider.of(Blocks.CALCITE),
@@ -83,7 +82,7 @@ public class MUConfiguredFeatures {
                         -16, 16, 0.05, 1));
         
         register(context, TOPAZ_CRYSTAL_GEODE_KEY, Feature.GEODE ,
-                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.WATER),
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
                         BlockStateProvider.of(MUBlocks.BUDDING_TOPAZ_CRYSTAL),
                         BlockStateProvider.of(Blocks.CALCITE),
@@ -98,7 +97,7 @@ public class MUConfiguredFeatures {
                         -16, 16, 0.05, 1));
         
         register(context, AQUAMARINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
-                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.WATER),
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(MUBlocks.BUDDING_AQUAMARINE_CRYSTAL),
                         BlockStateProvider.of(Blocks.CALCITE),

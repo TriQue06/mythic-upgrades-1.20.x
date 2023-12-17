@@ -33,51 +33,51 @@ public class MUPlacedFeatures {
 
         register(context, JADE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-128), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(96))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, TOPAZ_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, SAPPHIRE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, RUBY_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, AMETRINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
-                        YOffset.aboveBottom(128)), BiomePlacementModifier.of());
+                RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
