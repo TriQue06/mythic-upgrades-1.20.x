@@ -46,13 +46,13 @@ public class MUItems {
     private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_hoe_amplifier()).build();
     private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_shovel_amplifier()).build();
     private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_sword_amplifier()).build();
-    
-    public static final BrokenDiscItem BROKEN_SAPPHIRE_DISC = new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_RUBY_DISC = new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16));
+
     public static final BrokenDiscItem BROKEN_JADE_DISC = new BrokenDiscItem("jadedisc.description", new FabricItemSettings().maxCount(16));
     public static final BrokenDiscItem BROKEN_TOPAZ_DISC = new BrokenDiscItem("topazdisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_AMETRINE_DISC = new BrokenDiscItem("ametrinedisc.description", new FabricItemSettings().maxCount(16));
     public static final BrokenDiscItem BROKEN_AQUAMARINE_DISC = new BrokenDiscItem("aquamarinedisc.description", new FabricItemSettings().maxCount(16));
+    public static final BrokenDiscItem BROKEN_SAPPHIRE_DISC = new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16));
+    public static final BrokenDiscItem BROKEN_RUBY_DISC = new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16));
+    public static final BrokenDiscItem BROKEN_AMETRINE_DISC = new BrokenDiscItem("ametrinedisc.description", new FabricItemSettings().maxCount(16));
 
     public static final MusicDiscItem MUSIC_DISC_SOOT = new MusicDiscItem(15, MUSounds.SOOT, new FabricItemSettings().maxCount(1), 299);
     public static final MusicDiscItem MUSIC_DISC_APPOMATTOX = new MusicDiscItem(14, MUSounds.APPOMATTOX, new FabricItemSettings().maxCount(1), 724);
@@ -60,16 +60,6 @@ public class MUItems {
     public static final MusicDiscItem MUSIC_DISC_NELUMBO = new MusicDiscItem(14, MUSounds.NELUMBO, new FabricItemSettings().maxCount(1), 118);
     public static final MusicDiscItem MUSIC_DISC_FLOW_OF_THE_ABYSS = new MusicDiscItem(14, MUSounds.FLOW_OF_THE_ABYSS, new FabricItemSettings().maxCount(1), 125);
     public static final MusicDiscItem MUSIC_DISC_TANKER_ON_THE_LEVANTINES = new MusicDiscItem(14, MUSounds.TANKER_ON_THE_LEVANTINES, new FabricItemSettings().maxCount(1), 201);
-
-    public static final MUGemItem SAPPHIRE = new MUGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings());
-    public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
-
-    public static final MUGemItem RUBY = new MUGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings());
-    public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
 
     public static final MUGemItem JADE = new MUGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings());
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
@@ -81,28 +71,25 @@ public class MUItems {
     public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_APPLE));
 
-    public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
-    public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
-    public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
-
     public static final MUGemItem AQUAMARINE = new MUGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_FISH = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_FISH));
 
-    public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(6, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE);
-    public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(4, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE);
-    public static final MythicEffectsArmorItem SAPPHIRE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_helmet.description", sapphireAmplifiers, Formatting.BLUE);
-    public static final MythicEffectsArmorItem SAPPHIRE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_chestplate.description", sapphireAmplifiers, Formatting.BLUE);
-    public static final MythicEffectsArmorItem SAPPHIRE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_leggings.description", sapphireAmplifiers, Formatting.BLUE);
-    public static final MythicEffectsArmorItem SAPPHIRE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_boots.description", sapphireAmplifiers, Formatting.BLUE);
+    public static final MUGemItem SAPPHIRE = new MUGemItem("sapphire.description", Formatting.BLUE, sapphireItemEffects, new FabricItemSettings());
+    public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
 
-    public static final MythicEffectsShovelItem RUBY_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.RUBY, 2, -2.2f, (new FabricItemSettings().fireproof()), hasteShovelItemEffects, "ruby_shovel.description", Formatting.RED);
-    public static final MythicEffectsPickaxeItem RUBY_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.RUBY, 2, -2.2f, (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED);
-    public static final MythicEffectsAxeItem RUBY_AXE = new MythicEffectsAxeItem(MUToolMaterials.RUBY, 6, -2.5f, (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED);
-    public static final MythicEffectsHoeItem RUBY_HOE = new MythicEffectsHoeItem(MUToolMaterials.RUBY, 1, 0.6f, (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED);
-    public static final MythicEffectsSwordItem RUBY_SWORD = new MythicEffectsSwordItem(MUToolMaterials.RUBY, 4, -1.6f, (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED);
+    public static final MUGemItem RUBY = new MUGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings());
+    public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
+
+    public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
+    public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
 
     public static final MythicEffectsAxeItem JADE_AXE = new MythicEffectsAxeItem(MUToolMaterials.JADE, 6, -3.0f, (new FabricItemSettings().fireproof()), poisonAxeItemEffects, "jade_axe.description", Formatting.GREEN);
     public static final MythicEffectsSwordItem JADE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.JADE, 4, -2.4f, (new FabricItemSettings().fireproof()), poisonSwordItemEffects, "jade_sword.description", Formatting.GREEN);
@@ -121,15 +108,28 @@ public class MUItems {
     public static final MythicEffectsArmorItem TOPAZ_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_leggings.description", topazAmplifiers, Formatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_boots.description", topazAmplifiers, Formatting.GOLD);
 
+    public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(6, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.BLUE);
+    public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(4, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.BLUE);
+    public static final MythicEffectsArmorItem SAPPHIRE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_helmet.description", sapphireAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem SAPPHIRE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_chestplate.description", sapphireAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem SAPPHIRE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_leggings.description", sapphireAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem SAPPHIRE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), sapphireArmorEffects, "sapphire_boots.description", sapphireAmplifiers, Formatting.BLUE);
+
+    public static final MythicEffectsShovelItem RUBY_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.RUBY, 2, -2.2f, (new FabricItemSettings().fireproof()), hasteShovelItemEffects, "ruby_shovel.description", Formatting.RED);
+    public static final MythicEffectsPickaxeItem RUBY_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.RUBY, 2, -2.2f, (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED);
+    public static final MythicEffectsAxeItem RUBY_AXE = new MythicEffectsAxeItem(MUToolMaterials.RUBY, 6, -2.5f, (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED);
+    public static final MythicEffectsHoeItem RUBY_HOE = new MythicEffectsHoeItem(MUToolMaterials.RUBY, 1, 0.6f, (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED);
+    public static final MythicEffectsSwordItem RUBY_SWORD = new MythicEffectsSwordItem(MUToolMaterials.RUBY, 4, -1.6f, (new FabricItemSettings().fireproof()), hasteSwordItemEffects, "ruby_sword.description", Formatting.RED);
+
+    public static final MythicEffectsAxeItem AQUAMARINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AQUAMARINE, 6, -3f, (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA);
+    public static final MythicEffectsSwordItem AQUAMARINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.4f, (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_axe.description", Formatting.AQUA);
+
     public static final MythicEffectsAxeItem AMETRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AMETRINE, 6, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE);
     public static final MythicEffectsSwordItem AMETRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AMETRINE, 4, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_helmet.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), ametrineItemEffects, "ametrine_chestplate.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_leggings.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
-
-    public static final MythicEffectsAxeItem AQUAMARINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AQUAMARINE, 6, -3f, (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "aquamarine_axe.description", Formatting.AQUA);
-    public static final MythicEffectsSwordItem AQUAMARINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AQUAMARINE, 4, -2.4f, (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "aquamarine_axe.description", Formatting.AQUA);
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createJadeUpgrade();
     public static final Item TOPAZ_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createTopazUpgrade();
