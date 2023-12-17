@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
+
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
@@ -97,10 +99,6 @@ public class MUModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(SAPPHIRE_AXE, Models.HANDHELD);
         itemModelGenerator.register(SAPPHIRE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(SAPPHIRE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_INGOT, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_CRYSTAL_SHARD, Models.GENERATED);
@@ -118,10 +116,6 @@ public class MUModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(JADE_AXE, Models.HANDHELD);
         itemModelGenerator.register(JADE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(JADE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(JADE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(JADE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(JADE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(JADE, Models.GENERATED);
         itemModelGenerator.register(JADE_INGOT, Models.GENERATED);
         itemModelGenerator.register(JADE_CRYSTAL_SHARD, Models.GENERATED);
@@ -132,10 +126,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TOPAZ_AXE, Models.HANDHELD);
         itemModelGenerator.register(TOPAZ_HOE, Models.HANDHELD);
         itemModelGenerator.register(TOPAZ_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_HELMET, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_BOOTS, Models.GENERATED);
         itemModelGenerator.register(TOPAZ, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
@@ -143,10 +133,6 @@ public class MUModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(AMETRINE_AXE, Models.HANDHELD);
         itemModelGenerator.register(AMETRINE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(AMETRINE_HELMET, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_BOOTS, Models.GENERATED);
         itemModelGenerator.register(AMETRINE, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_CRYSTAL_SHARD, Models.GENERATED);
@@ -158,5 +144,25 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_FISH, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(((ArmorItem) JADE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) JADE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) JADE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) JADE_BOOTS));
+        
+        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_BOOTS));
+        
+        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_BOOTS));
+        
+        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_BOOTS));
     }
 }
