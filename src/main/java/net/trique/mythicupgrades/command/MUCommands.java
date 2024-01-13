@@ -21,7 +21,6 @@ public class MUCommands {
                         )
                 )
         );
-
     }
 
     public static void restoreDefaultsAndReload(CommandDispatcher<ServerCommandSource> dispatcher) {
