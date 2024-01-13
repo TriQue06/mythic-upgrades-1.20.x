@@ -1,4 +1,5 @@
 package net.trique.mythicupgrades.config;
+
 import io.wispforest.owo.config.Option;
 import io.wispforest.owo.config.annotation.*;
 import net.trique.mythicupgrades.MythicUpgrades;
@@ -6,8 +7,6 @@ import net.trique.mythicupgrades.MythicUpgrades;
 @Modmenu(modId = MythicUpgrades.MOD_ID)
 @Config(name = MythicUpgrades.MOD_ID + "-config", wrapperName = "MUConfig")
 public class MUConfigModel {
-
-
     @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
@@ -90,7 +89,6 @@ public class MUConfigModel {
         public float sword_freeze_duration = 1.25f;
     }
 
-
     public static class JadeConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 5f)
@@ -113,5 +111,4 @@ public class MUConfigModel {
         @RangeConstraint(min = 0.1f, max = 5f)
         public float poisonous_thorns_poison_duration = 3f;
     }
-
 }

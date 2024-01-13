@@ -22,7 +22,6 @@ public class RegisterMUItems {
         ALL_ITEMS.add(regItem);
     }
 
-
     private static void registerMUItems() {
         registerItem("broken_sapphire_disc", BROKEN_SAPPHIRE_DISC);
         registerItem("broken_jade_disc", BROKEN_JADE_DISC);
@@ -97,7 +96,6 @@ public class RegisterMUItems {
         registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
         registerItem("ametrine_upgrade_smithing_template", AMETRINE_UPGRADE_SMITHING_TEMPLATE);
         registerItem("jade_upgrade_smithing_template", JADE_UPGRADE_SMITHING_TEMPLATE);
-
     }
 
     private static void registerMUItemGroup() {

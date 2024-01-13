@@ -21,7 +21,6 @@ public class MUCommands {
                         )
                 )
         );
-
     }
 
     public static void restoreDefaultsAndReload(CommandDispatcher<ServerCommandSource> dispatcher) {
@@ -54,7 +53,6 @@ public class MUCommands {
                                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                                     CONFIG.aquamarineConfig.axe_freeze_duration(1.25f);
                                     CONFIG.aquamarineConfig.axe_freeze_duration(1.25f);
-
 
                                     CONFIG.load();
                                     ctx.getSource().sendFeedback(() -> Text.literal("Successfully restored default values and reloaded config!"), false);
