@@ -22,5 +22,8 @@ public class MUItemTagProvider extends FabricTagProvider.ItemTagProvider {
                         SAPPHIRE_HELMET, SAPPHIRE_CHESTPLATE, SAPPHIRE_LEGGINGS, SAPPHIRE_BOOTS,
                         AMETRINE_HELMET, AMETRINE_CHESTPLATE, AMETRINE_LEGGINGS, AMETRINE_BOOTS
                 );
+
+        getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
+                .add(TOPAZ_PICKAXE, RUBY_PICKAXE);
     }
 }
