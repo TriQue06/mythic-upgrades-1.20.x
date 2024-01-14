@@ -296,5 +296,5 @@
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
-  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
+  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade"
 }
