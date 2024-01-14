@@ -6,17 +6,18 @@
   "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Yakut", "color" : "red", "bold": "true"}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Yeşim", "color" : "green", "bold": "true"}],
   "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Akuamarin", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
 
-  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Baltanın hasarı (hedefin maksimum canının %'si)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Kılıcın hasarı (hedefin maksimum canının %'si)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Baltanın hasarı (hedefin azami canının %'si)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Kılıcın hasarı (hedefin azami canının %'si)", "color": "blue"}],
   "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Zırhın Hasar Yansıtma seviyesi", "color": "blue"}],
 
   "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_speed_amplifier": [{"text": "Zırhın Hız seviyesi", "color": "light_purple"}],
   "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_jump_boost_amplifier": [{"text": "Zırhın Zıplama Desteği seviyesi", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_Havaya Yükseltme_duration": [{"text": "Baltanın Havaya Yükseltme süresi", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_Havaya Yükseltme_amplifier": [{"text": "Baltanın Havaya Yükseltme seviyesi", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_Havaya Yükseltme_duration": [{"text": "Kılıcın Havaya Yükseltme süresi", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_Havaya Yükseltme_amplifier": [{"text": "Kılıcın Havaya Yükseltme seviyesi", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Baltanın Havaya Yükseltme süresi", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Baltanın Havaya Yükseltme seviyesi", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Kılıcın Havaya Yükseltme süresi", "color": "light_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Kılıcın Havaya Yükseltme seviyesi", "color": "light_purple"}],
 
   "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_amplifier": [{"text": "Zırhın Zehirli Dikenler seviyesi", "color": "green"}],
   "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_poison_duration": [{"text": "Zırhın Zehirli Dikenler süresi", "color": "green"}],
@@ -33,9 +34,9 @@
 
   "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Baltanın Dondurma süresi", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Kılıcın Dondurma süresi", "color": "aqua"}],
-  
-  
-  
+
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Zırhın Eşya Ustalığı seviyesi", "color": "gold"}],
+
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Demirci Şablonu",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Demirci Şablonu",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Demirci Şablonu",
@@ -179,6 +180,7 @@
   "effect.mythicupgrades.poisonous_thorns": "Zehirli Dikenler",
   "effect.mythicupgrades.freeze": "Dondurma",
   "effect.mythicupgrades.damage_deflection": "Hasar Yansıtma",
+  "effect.mythicupgrades.item_mastery": "Eşya Ustalığı",
 
   "death.attack.deflecting": "%s gebermek için %s tarafından yeterince yansıtılmış hasar yedi.",
   "death.attack.deflecting.item": "%s gebermek için %s tarafından yeterince yansıtılmış hasarı %s yardımıyla yedi.",
