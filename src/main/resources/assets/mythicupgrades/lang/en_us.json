@@ -37,8 +37,6 @@
 
   "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery amplifier", "color": "gold"}],
 
-
-
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Smithing Template",
@@ -251,6 +249,19 @@
   "ametrinedisc.description": "§7Repair this disc with an Ametrine!",
   "aquamarinedisc.description": "§7Repair this disc with an Aquamarine!",
 
+  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
+  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
+  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
+  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss",
+
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor or weapon",
@@ -286,17 +297,4 @@
   "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
   "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
-
-  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
-  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
-  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
-  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss"
 }
