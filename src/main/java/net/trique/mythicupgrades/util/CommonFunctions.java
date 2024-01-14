@@ -10,10 +10,13 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.trique.mythicupgrades.MythicUpgrades;
+import net.trique.mythicupgrades.effect.MUEffects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+
+import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 public class CommonFunctions {
 
@@ -94,5 +97,9 @@ public class CommonFunctions {
 
         }
         return result.toString();
+    }
+
+    public static  <T extends LivingEntity>  boolean checkForItemMastery(T user) {
+        return !user.hasStatusEffect(MUEffects.ITEM_MASTERY) || (user.hasStatusEffect(MUEffects.ITEM_MASTERY) && RANDOM.nextFloat() > 0.1f * (user.getStatusEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1));
     }
 }

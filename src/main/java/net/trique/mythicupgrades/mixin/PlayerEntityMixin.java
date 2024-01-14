@@ -1,5 +1,6 @@
 package net.trique.mythicupgrades.mixin;
 
+import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -16,6 +17,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
+import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,6 +27,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
+import java.util.function.Consumer;
+import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
@@ -122,5 +126,10 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 }
             }
         }
+    }
+
+    @WrapWithCondition(method = "damageShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForDamageShield(ItemStack stack, int amount, T user, Consumer<T> callback) {
+        return !hasStatusEffect(MUEffects.ITEM_MASTERY) || (hasStatusEffect(MUEffects.ITEM_MASTERY) && RANDOM.nextFloat() > 0.1f * getStatusEffect(MUEffects.ITEM_MASTERY).getAmplifier());
     }
 }

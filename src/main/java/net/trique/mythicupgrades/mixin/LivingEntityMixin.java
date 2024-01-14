@@ -1,11 +1,11 @@
 package net.trique.mythicupgrades.mixin;
 
+import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
@@ -24,12 +24,18 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
+
 import java.util.Map;
+import java.util.function.Consumer;
+
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin extends Entity{
+public abstract class LivingEntityMixin extends Entity {
 
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
+        deflecting_damage = 0f;
+        has_damage_been_deflected = false;
     }
 
     @Shadow
@@ -38,8 +44,9 @@ public abstract class LivingEntityMixin extends Entity{
     @Shadow
     public abstract Map<StatusEffect, StatusEffectInstance> getActiveStatusEffects();
 
-    @Unique
-    private boolean hasDamageBeenDeflected = false;
+    @Unique private boolean has_damage_been_deflected;
+
+    @Unique private float deflecting_damage;
 
     @Unique
     private BaseMythicItem lastUsed;
@@ -52,7 +59,7 @@ public abstract class LivingEntityMixin extends Entity{
         if (!this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty() &&
                 (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
             if (lastUsed != null && !item.equals(lastUsed)) {
-                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object)this, lastUsed.getMainHandEffects());
+                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastUsed.getMainHandEffects());
             }
             if (CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects())) {
                 CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects());
@@ -69,9 +76,9 @@ public abstract class LivingEntityMixin extends Entity{
         ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
             if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                CommonFunctions.removeMythicInfiniteEffects((LivingEntity)(Object) this, lastWorn.getEquipmentBuffs());
+                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
             }
-            if (CommonFunctions.hasCorrectArmorOn((LivingEntity)(Object) this, item.getMaterial()) &&
+            if (CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial()) &&
                     CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs())) {
                 CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs());
             }
@@ -98,29 +105,41 @@ public abstract class LivingEntityMixin extends Entity{
     }
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
-    private float applyDeflectingEffect(float amount, DamageSource source, float am1) {
+    private float reduceIncomingDamage(float amount, DamageSource source, float am1) {
         if (!this.getWorld().isClient()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getAttacker();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
-                boolean melee = (attacker != null) && attacker.equals(source.getSource()) && !equals(attacker);
-                melee &= !source.isOf(DamageTypes.DRAGON_BREATH);
-                melee &= !source.isOf(DamageTypes.SONIC_BOOM);
-                if (melee) {
-                    boolean check_damage_type = source.isOf(MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE) || source.isOf(DamageTypes.THORNS);
-                    if (!check_damage_type || !hasDamageBeenDeflected) {
-                        attacker.damage(MythicUpgradesDamageTypes.create(attacker.getWorld(),
-                                MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), (0.1f + defl_dmg_coef) * amount);
-                        hasDamageBeenDeflected = check_damage_type;
-                    } else  {
-                        hasDamageBeenDeflected = false;
-                    }
+                if (attacker != null) {
+                    deflecting_damage = (0.1f + defl_dmg_coef) * amount;
+                    amount *= (0.9f - defl_dmg_coef);
                 }
-                amount *= (0.9f - defl_dmg_coef);
             }
             return amount;
         }
         return 0f;
+    }
+
+    @Inject(method = "damage", at = @At(value = "TAIL"))
+    private void deflectDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (cir.getReturnValue()) {
+            StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
+            if (deflection != null) {
+                Entity attacker = source.getAttacker();
+                if (attacker != null && attacker.distanceTo(this) <= 3.0f && !has_damage_been_deflected) {
+                    has_damage_been_deflected = true;
+                    attacker.damage(MythicUpgradesDamageTypes.create(attacker.getWorld(),
+                            MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), deflecting_damage);
+                }
+            }
+        }
+        has_damage_been_deflected = false;
+    }
+
+
+    @WrapWithCondition(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
+        return checkForItemMastery(user);
     }
 }

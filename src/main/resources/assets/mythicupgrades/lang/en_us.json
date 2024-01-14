@@ -6,6 +6,7 @@
   "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "green", "bold": "true"}],
   "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
 
   "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's damage (% from target's max. health)", "color": "blue"}],
   "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's damage (% from target's max. health)", "color": "blue"}],
@@ -31,11 +32,10 @@
   "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Sword's Haste amplifier", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Hoe's Haste's amplifier", "color": "red"}],
 
-
   "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Axe's Freeze duration", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Sword's Freeze duration", "color": "aqua"}],
 
-
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery amplifier", "color": "gold"}],
 
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
@@ -44,38 +44,10 @@
   "item.mythicupgrades.ametrine_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Smithing Template",
 
-  "item.mythicupgrades.sapphire": "Sapphire",
-  "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
-
-  "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
-  "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
-  "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
-  "item.mythicupgrades.sapphire_boots": "Sapphire Boots",
-
-  "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
-  "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
-
-  "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
-  "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
-  "block.mythicupgrades.sapphire_block": "Block of Sapphire",
-  "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
-
-  "item.mythicupgrades.ruby": "Ruby",
-  "item.mythicupgrades.ruby_ingot": "Ruby Ingot",
-
-  "item.mythicupgrades.ruby_sword": "Ruby Sword",
-  "item.mythicupgrades.ruby_axe": "Ruby Axe",
-  "item.mythicupgrades.ruby_pickaxe": "Ruby Pickaxe",
-  "item.mythicupgrades.ruby_shovel": "Ruby Shovel",
-  "item.mythicupgrades.ruby_hoe": "Ruby Hoe",
-
-  "block.mythicupgrades.ruby_ore": "Ruby Ore",
-  "block.mythicupgrades.deepslate_ruby_ore": "Deepslate Ruby Ore",
-  "block.mythicupgrades.ruby_block": "Block of Ruby",
-  "block.mythicupgrades.ruby_crystal_block": "Block of Ruby Crystal",
-
   "item.mythicupgrades.jade": "Jade",
   "item.mythicupgrades.jade_ingot": "Jade Ingot",
+  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard",
+  "item.mythicupgrades.jade_apple": "Jade Apple",
 
   "item.mythicupgrades.jade_helmet": "Jade Helmet",
   "item.mythicupgrades.jade_chestplate": "Jade Chestplate",
@@ -89,9 +61,16 @@
   "block.mythicupgrades.deepslate_jade_ore": "Deepslate Jade Ore",
   "block.mythicupgrades.jade_block": "Block of Jade",
   "block.mythicupgrades.jade_crystal_block": "Block of Jade Crystal",
+  "block.mythicupgrades.budding_jade_crystal": "Budding Jade Crystal",
+  "block.mythicupgrades.jade_crystal_cluster": "Jade Crystal Cluster",
+  "block.mythicupgrades.large_jade_crystal_bud": "Large Jade Crystal Bud",
+  "block.mythicupgrades.medium_jade_crystal_bud": "Medium Jade Crystal Bud",
+  "block.mythicupgrades.small_jade_crystal_bud": "Small Jade Crystal Bud",
 
   "item.mythicupgrades.topaz": "Topaz",
   "item.mythicupgrades.topaz_ingot": "Topaz Ingot",
+  "item.mythicupgrades.topaz_crystal_shard": "Topaz Crystal Shard",
+  "item.mythicupgrades.topaz_apple": "Topaz Apple",
 
   "item.mythicupgrades.topaz_helmet": "Topaz Helmet",
   "item.mythicupgrades.topaz_chestplate": "Topaz Chestplate",
@@ -108,9 +87,78 @@
   "block.mythicupgrades.deepslate_topaz_ore": "Deepslate Topaz Ore",
   "block.mythicupgrades.topaz_block": "Block of Topaz",
   "block.mythicupgrades.topaz_crystal_block": "Block of Topaz Crystal",
+  "block.mythicupgrades.budding_topaz_crystal": "Budding Topaz Crystal",
+  "block.mythicupgrades.topaz_crystal_cluster": "Topaz Crystal Cluster",
+  "block.mythicupgrades.large_topaz_crystal_bud": "Large Topaz Crystal Bud",
+  "block.mythicupgrades.medium_topaz_crystal_bud": "Medium Topaz Crystal Bud",
+  "block.mythicupgrades.small_topaz_crystal_bud": "Small Topaz Crystal Bud",
+
+  "item.mythicupgrades.aquamarine": "Aquamarine",
+  "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
+  "item.mythicupgrades.aquamarine_crystal_shard": "Aquamarine Crystal Shard",
+  "item.mythicupgrades.aquamarine_fish": "Aquamarine Fish",
+
+  "item.mythicupgrades.aquamarine_sword": "Aquamarine Sword",
+  "item.mythicupgrades.aquamarine_axe": "Aquamarine Axe",
+
+  "block.mythicupgrades.aquamarine_ore": "Aquamarine Ore",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Deepslate Aquamarine Ore",
+  "block.mythicupgrades.aquamarine_block": "Block of Aquamarine",
+  "block.mythicupgrades.aquamarine_crystal_block": "Block of Aquamarine Crystal",
+  "block.mythicupgrades.budding_aquamarine_crystal": "Budding Aquamarine Crystal",
+  "block.mythicupgrades.aquamarine_crystal_cluster": "Aquamarine Crystal Cluster",
+  "block.mythicupgrades.large_aquamarine_crystal_bud": "Large Aquamarine Crystal Bud",
+  "block.mythicupgrades.medium_aquamarine_crystal_bud": "Medium Aquamarine Crystal Bud",
+  "block.mythicupgrades.small_aquamarine_crystal_bud": "Small Aquamarine Crystal Bud",
+
+  "item.mythicupgrades.sapphire": "Sapphire",
+  "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
+  "item.mythicupgrades.sapphire_crystal_shard": "Sapphire Crystal Shard",
+  "item.mythicupgrades.sapphire_apple": "Sapphire Apple",
+
+  "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
+  "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
+  "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
+  "item.mythicupgrades.sapphire_boots": "Sapphire Boots",
+
+  "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
+  "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
+
+  "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.mythicupgrades.sapphire_block": "Block of Sapphire",
+  "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
+  "block.mythicupgrades.budding_sapphire_crystal": "Budding Sapphire Crystal",
+  "block.mythicupgrades.sapphire_crystal_cluster": "Sapphire Crystal Cluster",
+  "block.mythicupgrades.large_sapphire_crystal_bud": "Large Sapphire Crystal Bud",
+  "block.mythicupgrades.medium_sapphire_crystal_bud": "Medium Sapphire Crystal Bud",
+  "block.mythicupgrades.small_sapphire_crystal_bud": "Small Sapphire Crystal Bud",
+
+  "item.mythicupgrades.ruby": "Ruby",
+  "item.mythicupgrades.ruby_ingot": "Ruby Ingot",
+  "item.mythicupgrades.ruby_crystal_shard": "Ruby Crystal Shard",
+  "item.mythicupgrades.ruby_apple": "Ruby Apple",
+
+  "item.mythicupgrades.ruby_sword": "Ruby Sword",
+  "item.mythicupgrades.ruby_axe": "Ruby Axe",
+  "item.mythicupgrades.ruby_pickaxe": "Ruby Pickaxe",
+  "item.mythicupgrades.ruby_shovel": "Ruby Shovel",
+  "item.mythicupgrades.ruby_hoe": "Ruby Hoe",
+
+  "block.mythicupgrades.ruby_ore": "Ruby Ore",
+  "block.mythicupgrades.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.mythicupgrades.ruby_block": "Block of Ruby",
+  "block.mythicupgrades.ruby_crystal_block": "Block of Ruby Crystal",
+  "block.mythicupgrades.budding_ruby_crystal": "Budding Ruby Crystal",
+  "block.mythicupgrades.ruby_crystal_cluster": "Ruby Crystal Cluster",
+  "block.mythicupgrades.large_ruby_crystal_bud": "Large Ruby Crystal Bud",
+  "block.mythicupgrades.medium_ruby_crystal_bud": "Medium Ruby Crystal Bud",
+  "block.mythicupgrades.small_ruby_crystal_bud": "Small Ruby Crystal Bud",
 
   "item.mythicupgrades.ametrine": "Ametrine",
   "item.mythicupgrades.ametrine_ingot": "Ametrine Ingot",
+  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard",
+  "item.mythicupgrades.ametrine_apple": "Ametrine Apple",
 
   "item.mythicupgrades.ametrine_helmet": "Ametrine Helmet",
   "item.mythicupgrades.ametrine_chestplate": "Ametrine Chestplate",
@@ -123,21 +171,16 @@
   "block.mythicupgrades.ametrine_ore": "Ametrine Ore",
   "block.mythicupgrades.ametrine_block": "Block of Ametrine",
   "block.mythicupgrades.ametrine_crystal_block": "Block of Ametrine Crystal",
-
-  "item.mythicupgrades.aquamarine": "Aquamarine",
-  "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
-
-  "item.mythicupgrades.aquamarine_sword": "Aquamarine Sword",
-  "item.mythicupgrades.aquamarine_axe": "Aquamarine Axe",
-
-  "block.mythicupgrades.aquamarine_ore": "Aquamarine Ore",
-  "block.mythicupgrades.deepslate_aquamarine_ore": "Deepslate Aquamarine Ore",
-  "block.mythicupgrades.aquamarine_block": "Block of Aquamarine",
-  "block.mythicupgrades.aquamarine_crystal_block": "Block of Aquamarine Crystal",
+  "block.mythicupgrades.budding_ametrine_crystal": "Budding Ametrine Crystal",
+  "block.mythicupgrades.ametrine_crystal_cluster": "Ametrine Crystal Cluster",
+  "block.mythicupgrades.large_ametrine_crystal_bud": "Large Ametrine Crystal Bud",
+  "block.mythicupgrades.medium_ametrine_crystal_bud": "Medium Ametrine Crystal Bud",
+  "block.mythicupgrades.small_ametrine_crystal_bud": "Small Ametrine Crystal Bud",
 
   "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
   "effect.mythicupgrades.damage_deflection": "Damage Deflection",
+  "effect.mythicupgrades.item_mastery": "Item Mastery",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
@@ -159,10 +202,10 @@
   "ametrine_sword.description": "Levitates enemy on hit.",
 
   "topaz.description": "Has no effects on its own.",
-  "topaz_helmet.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_chestplate.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_leggings.description": "Set Bonus: Fire Resistance effect.",
-  "topaz_boots.description": "Set Bonus: Fire Resistance effect.",
+  "topaz_helmet.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_chestplate.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_leggings.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
+  "topaz_boots.description": "Set Bonus: Fire Resistance and Item Mastery %s.",
   "topaz_axe.description": "Has 3x durability as netherite axe.",
   "topaz_pickaxe.description": "Has 3x durability as netherite pickaxe.",
   "topaz_shovel.description": "Has 3x durability as netherite shovel.",
@@ -206,6 +249,19 @@
   "ametrinedisc.description": "§7Repair this disc with an Ametrine!",
   "aquamarinedisc.description": "§7Repair this disc with an Aquamarine!",
 
+  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
+  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
+  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
+  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
+  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss",
+
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor or weapon",
@@ -240,18 +296,5 @@
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
-  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
-
-  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
-  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
-  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
-  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss"
+  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade"
 }
