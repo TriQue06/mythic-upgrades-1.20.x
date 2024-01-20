@@ -7,6 +7,7 @@ import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
 import net.trique.mythicupgrades.registry.RegisterMUEffects;
 import net.trique.mythicupgrades.registry.RegisterMUItems;
+import net.trique.mythicupgrades.util.MULootTableModifiers;
 import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ public class MythicUpgrades implements ModInitializer {
 		RegisterMUCommands.registerCommands();
 		MUBlocks.registerMythicBlocks();
 		MUWorldGeneration.generateModWorldGen();
+		MULootTableModifiers.modifyLootTables();
 		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARDES <3!");
 	}
 }
