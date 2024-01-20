@@ -23,24 +23,6 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItems() {
-        registerItem("broken_jade_disc", BROKEN_JADE_DISC);
-        registerItem("music_disc_nelumbo", MUSIC_DISC_NELUMBO);
-
-        registerItem("broken_topaz_disc", BROKEN_TOPAZ_DISC);
-        registerItem("music_disc_fierce", MUSIC_DISC_FIERCE);
-
-        registerItem("broken_aquamarine_disc", BROKEN_AQUAMARINE_DISC);
-        registerItem("music_disc_flow_of_the_abyss", MUSIC_DISC_FLOW_OF_THE_ABYSS);
-
-        registerItem("broken_sapphire_disc", BROKEN_SAPPHIRE_DISC);
-        registerItem("music_disc_soot", MUSIC_DISC_SOOT);
-
-        registerItem("broken_ruby_disc", BROKEN_RUBY_DISC);
-        registerItem("music_disc_tanker_on_the_levantines", MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
-
-        registerItem("broken_ametrine_disc", BROKEN_AMETRINE_DISC);
-        registerItem("music_disc_appomattox", MUSIC_DISC_APPOMATTOX);
-
         registerItem("jade_axe", JADE_AXE);
         registerItem("jade_sword", JADE_SWORD);
         registerItem("jade_helmet", JADE_HELMET);
@@ -52,6 +34,7 @@ public class RegisterMUItems {
         registerItem("jade_crystal_shard", JADE_CRYSTAL_SHARD);
         registerItem("jade_apple", JADE_APPLE);
         registerItem("jade_upgrade_smithing_template", JADE_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_nelumbo", MUSIC_DISC_NELUMBO);
 
         registerItem("topaz_shovel", TOPAZ_SHOVEL);
         registerItem("topaz_pickaxe", TOPAZ_PICKAXE);
@@ -67,6 +50,7 @@ public class RegisterMUItems {
         registerItem("topaz_crystal_shard", TOPAZ_CRYSTAL_SHARD);
         registerItem("topaz_apple", TOPAZ_APPLE);
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_fierce", MUSIC_DISC_FIERCE);
 
         registerItem("aquamarine_axe", AQUAMARINE_AXE);
         registerItem("aquamarine_sword", AQUAMARINE_SWORD);
@@ -75,6 +59,7 @@ public class RegisterMUItems {
         registerItem("aquamarine_crystal_shard", AQUAMARINE_CRYSTAL_SHARD);
         registerItem("aquamarine_fish", AQUAMARINE_FISH);
         registerItem("aquamarine_upgrade_smithing_template", AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_flow_of_the_abyss", MUSIC_DISC_FLOW_OF_THE_ABYSS);
 
         registerItem("sapphire_axe", SAPPHIRE_AXE);
         registerItem("sapphire_sword", SAPPHIRE_SWORD);
@@ -87,6 +72,7 @@ public class RegisterMUItems {
         registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
         registerItem("sapphire_apple", SAPPHIRE_APPLE);
         registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_soot", MUSIC_DISC_SOOT);
 
         registerItem("ruby_shovel", RUBY_SHOVEL);
         registerItem("ruby_axe", RUBY_AXE);
@@ -98,6 +84,7 @@ public class RegisterMUItems {
         registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
         registerItem("ruby_apple", RUBY_APPLE);
         registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_tanker_on_the_levantines", MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
 
         registerItem("ametrine_axe", AMETRINE_AXE);
         registerItem("ametrine_sword", AMETRINE_SWORD);
@@ -110,28 +97,12 @@ public class RegisterMUItems {
         registerItem("ametrine_crystal_shard", AMETRINE_CRYSTAL_SHARD);
         registerItem("ametrine_apple", AMETRINE_APPLE);
         registerItem("ametrine_upgrade_smithing_template", AMETRINE_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_appomattox", MUSIC_DISC_APPOMATTOX);
     }
 
     private static void registerMUItemGroup() {
         ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
                 .icon(() -> new ItemStack(JADE_SWORD)).entries((displayContext, entries) -> {
-                    entries.add(BROKEN_JADE_DISC);
-                    entries.add(MUSIC_DISC_NELUMBO);
-
-                    entries.add(BROKEN_TOPAZ_DISC);
-                    entries.add(MUSIC_DISC_FIERCE);
-
-                    entries.add(BROKEN_AQUAMARINE_DISC);
-                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
-
-                    entries.add(BROKEN_SAPPHIRE_DISC);
-                    entries.add(MUSIC_DISC_SOOT);
-
-                    entries.add(BROKEN_RUBY_DISC);
-                    entries.add(MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
-
-                    entries.add(BROKEN_AMETRINE_DISC);
-                    entries.add(MUSIC_DISC_APPOMATTOX);
 
                     entries.add(JADE_BLOCK);
                     entries.add(JADE_ORE);
@@ -153,6 +124,7 @@ public class RegisterMUItems {
                     entries.add(JADE_CRYSTAL_SHARD);
                     entries.add(JADE_APPLE);
                     entries.add(JADE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_NELUMBO);
 
                     entries.add(TOPAZ_BLOCK);
                     entries.add(TOPAZ_ORE);
@@ -177,6 +149,7 @@ public class RegisterMUItems {
                     entries.add(TOPAZ_CRYSTAL_SHARD);
                     entries.add(TOPAZ_APPLE);
                     entries.add(TOPAZ_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_FIERCE);
 
                     entries.add(AQUAMARINE_BLOCK);
                     entries.add(AQUAMARINE_ORE);
@@ -194,6 +167,7 @@ public class RegisterMUItems {
                     entries.add(AQUAMARINE_CRYSTAL_SHARD);
                     entries.add(AQUAMARINE_FISH);
                     entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
 
                     entries.add(SAPPHIRE_BLOCK);
                     entries.add(SAPPHIRE_ORE);
@@ -214,6 +188,7 @@ public class RegisterMUItems {
                     entries.add(SAPPHIRE_CRYSTAL_SHARD);
                     entries.add(SAPPHIRE_APPLE);
                     entries.add(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_SOOT);
 
                     entries.add(RUBY_BLOCK);
                     entries.add(RUBY_ORE);
@@ -233,6 +208,7 @@ public class RegisterMUItems {
                     entries.add(RUBY_CRYSTAL_SHARD);
                     entries.add(RUBY_APPLE);
                     entries.add(RUBY_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
 
                     entries.add(AMETRINE_BLOCK);
                     entries.add(AMETRINE_ORE);
@@ -253,6 +229,7 @@ public class RegisterMUItems {
                     entries.add(AMETRINE_CRYSTAL_SHARD);
                     entries.add(AMETRINE_APPLE);
                     entries.add(AMETRINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_APPOMATTOX);
                 }).build();
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
     }
