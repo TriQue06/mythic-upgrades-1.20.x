@@ -235,20 +235,6 @@
   "jade_axe.description": "Poisons enemy on hit.",
   "jade_sword.description": "Poisons enemy on hit.",
 
-  "item.mythicupgrades.broken_sapphire_disc": "Broken Music Disc",
-  "item.mythicupgrades.broken_ruby_disc": "Broken Music Disc",
-  "item.mythicupgrades.broken_jade_disc": "Broken Music Disc",
-  "item.mythicupgrades.broken_topaz_disc": "Broken Music Disc",
-  "item.mythicupgrades.broken_ametrine_disc": "Broken Music Disc",
-  "item.mythicupgrades.broken_aquamarine_disc": "Broken Music Disc",
-
-  "sapphiredisc.description": "§7Repair this disc with a Sapphire!",
-  "rubydisc.description": "§7Repair this disc with a Ruby!",
-  "jadedisc.description": "§7Repair this disc with a Jade!",
-  "topazdisc.description": "§7Repair this disc with a Topaz!",
-  "ametrinedisc.description": "§7Repair this disc with an Ametrine!",
-  "aquamarinedisc.description": "§7Repair this disc with an Aquamarine!",
-
   "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
   "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
   "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
