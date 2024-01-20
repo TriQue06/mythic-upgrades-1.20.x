@@ -235,20 +235,6 @@
   "jade_axe.description": "Rakibi zehirler.",
   "jade_sword.description": "Rakibi zehirler.",
 
-  "item.mythicupgrades.broken_sapphire_disc": "Kırık Müzik Diski",
-  "item.mythicupgrades.broken_ruby_disc": "Kırık Müzik Diski",
-  "item.mythicupgrades.broken_jade_disc": "Kırık Müzik Diski",
-  "item.mythicupgrades.broken_topaz_disc": "Kırık Müzik Diski",
-  "item.mythicupgrades.broken_ametrine_disc": "Kırık Müzik Diski",
-  "item.mythicupgrades.broken_aquamarine_disc": "Kırık Müzik Diski",
-
-  "sapphiredisc.description": "§7Bu diski bir Safir ile tamir et!",
-  "rubydisc.description": "§7Bu diski bir Yakut ile tamir et!",
-  "jadedisc.description": "§7Bu diski bir Yeşim ile tamir et!",
-  "topazdisc.description": "§7Bu diski bir Topaz ile tamir et!",
-  "ametrinedisc.description": "§7Bu diski bir Ametrin ile tamir et!",
-  "aquamarinedisc.description": "§7Bu diski bir Akuamarin ile tamir et!",
-
   "item.mythicupgrades.music_disc_soot": "§bMüzik Diski",
   "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
   "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMüzik Diski",

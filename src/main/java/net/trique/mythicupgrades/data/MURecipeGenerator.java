@@ -92,25 +92,6 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> JADE_INGOT, List.of(JADE, JADE, JADE, JADE,
                 Items.NETHERITE_INGOT, Items.NETHERITE_INGOT, Items.NETHERITE_INGOT, Items.NETHERITE_INGOT),
                 List.of(JADE), "jade_ingot", 2);
-        
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_APPOMATTOX,
-                List.of(BROKEN_AMETRINE_DISC, AMETRINE),
-                List.of(BROKEN_AMETRINE_DISC), "mu_music_disc", 1);
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_FLOW_OF_THE_ABYSS,
-                List.of(BROKEN_AQUAMARINE_DISC, AQUAMARINE),
-                List.of(BROKEN_AQUAMARINE_DISC), "mu_music_disc", 1);
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_NELUMBO,
-                List.of(BROKEN_JADE_DISC, JADE),
-                List.of(BROKEN_JADE_DISC),"mu_music_disc", 1);
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_TANKER_ON_THE_LEVANTINES,
-                List.of(BROKEN_RUBY_DISC, RUBY),
-                List.of(BROKEN_RUBY_DISC),"mu_music_disc", 1);
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_SOOT,
-                List.of(BROKEN_SAPPHIRE_DISC, SAPPHIRE),
-                List.of(BROKEN_SAPPHIRE_DISC),"mu_music_disc", 1);
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> MUSIC_DISC_FIERCE,
-                List.of(BROKEN_TOPAZ_DISC, TOPAZ),
-                List.of(BROKEN_TOPAZ_DISC),"mu_music_disc", 1);
 
         offerCustomUpgradeRecipe(exporter, AMETRINE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_AXE, AMETRINE_INGOT, RecipeCategory.COMBAT, AMETRINE_AXE);

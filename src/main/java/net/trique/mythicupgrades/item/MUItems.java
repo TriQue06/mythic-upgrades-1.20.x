@@ -17,7 +17,6 @@ import static net.trique.mythicupgrades.effect.MUEffects.*;
 public class MUItems {
     private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
     private static final List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
-    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
 
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
     private static final List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
@@ -28,13 +27,13 @@ public class MUItems {
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
     private static final List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
-
+    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 0).build();
+    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
+    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 13, 0).build();
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 2).build();
+    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 0).build();
 
-    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 2).build();
-    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 20, 0).build();
     private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.aquamarineConfig.axe_freeze_duration() * 20), 0).build();
     private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.aquamarineConfig.sword_freeze_duration() * 20), 0).build();
     private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int) (CONFIG.ametrineConfig.axe_levitation_duration() * 20), CONFIG.ametrineConfig.axe_levitation_amplifier()).build();
@@ -46,13 +45,6 @@ public class MUItems {
     private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_hoe_amplifier()).build();
     private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_shovel_amplifier()).build();
     private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_sword_amplifier()).build();
-
-    public static final BrokenDiscItem BROKEN_JADE_DISC = new BrokenDiscItem("jadedisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_TOPAZ_DISC = new BrokenDiscItem("topazdisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_AQUAMARINE_DISC = new BrokenDiscItem("aquamarinedisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_SAPPHIRE_DISC = new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_RUBY_DISC = new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_AMETRINE_DISC = new BrokenDiscItem("ametrinedisc.description", new FabricItemSettings().maxCount(16));
 
     public static final MusicDiscItem MUSIC_DISC_SOOT = new MusicDiscItem(15, MUSounds.SOOT, new FabricItemSettings().maxCount(1), 299);
     public static final MusicDiscItem MUSIC_DISC_APPOMATTOX = new MusicDiscItem(14, MUSounds.APPOMATTOX, new FabricItemSettings().maxCount(1), 724);

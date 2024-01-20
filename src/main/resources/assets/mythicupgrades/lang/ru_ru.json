@@ -196,20 +196,6 @@
   "jade_axe.description": "Отравляет противника при ударе.",
   "jade_sword.description": "Отравляет противника при ударе.",
 
-  "item.mythicupgrades.broken_sapphire_disc": "Сломанная музыкальная пластинка",
-  "item.mythicupgrades.broken_ruby_disc": "Сломанная музыкальная пластинка",
-  "item.mythicupgrades.broken_jade_disc": "Сломанная музыкальная пластинка",
-  "item.mythicupgrades.broken_topaz_disc": "Сломанная музыкальная пластинка",
-  "item.mythicupgrades.broken_ametrine_disc": "Сломанная музыкальная пластинка",
-  "item.mythicupgrades.broken_aquamarine_disc": "Сломанная музыкальная пластинка",
-
-  "sapphiredisc.description": "§7Почините этот диск сапфиром!",
-  "rubydisc.description": "§7Почините этот диск рубином!",
-  "jadedisc.description": "§7Почините этот диск нефритом!",
-  "topazdisc.description": "§7Почините этот диск топазом!",
-  "ametrinedisc.description": "§7Почините этот диск аметрином!",
-  "aquamarinedisc.description": "§7Почините этот диск аквамарином!",
-
   "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Добавьте нефритовый слиток",
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Незеритовому снаряжению",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
