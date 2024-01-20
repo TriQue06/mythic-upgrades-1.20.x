@@ -1,3 +1,30 @@
+package net.trique.mythicupgrades.util;
+
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.util.Identifier;
+import net.trique.mythicupgrades.item.MUItems;
+
+public class MULootTableModifiers {
+    private static final Identifier JUNGLE_TEMPLE_ID =
+            new Identifier("minecraft", "chests/jungle_temple");
+
+    private static final Identifier DESERT_PYRAMID_ID =
+            new Identifier("minecraft", "chests/desert_pyramid");
+
+    private static final Identifier IGLOO_CHEST_ID =
+            new Identifier("minecraft", "chests/igloo_chest");
+
+    private static final Identifier NETHER_BRIDGE_ID =
+            new Identifier("minecraft", "chests/nether_bridge");
+
+    private static final Identifier BASTION_BRIDGE_ID =
+            new Identifier("minecraft", "chests/bastion_bridge");
+
     private static final Identifier BASTION_HOGLIN_STABLE_ID =
             new Identifier("minecraft", "chests/bastion_hoglin_stable");
 
