@@ -41,8 +41,8 @@ public class MUConfigModel {
         @RangeConstraint(min = 0.1f, max = 5f)
         public float poisonous_thorns_poison_duration = 3f;
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 5)
-        public int poisonous_thorns_amplifier = 2;
+        @RangeConstraint(min = 0, max = 4)
+        public int poisonous_thorns_amplifier = 0;
     }
 
     public static class TopazConfig {
