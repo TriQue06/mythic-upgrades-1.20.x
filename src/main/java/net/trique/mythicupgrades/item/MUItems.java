@@ -17,7 +17,6 @@ import static net.trique.mythicupgrades.effect.MUEffects.*;
 public class MUItems {
     private static final ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
     private static final List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
-    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
 
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
     private static final List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
@@ -28,13 +27,13 @@ public class MUItems {
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
     private static final List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
-
+    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 0).build();
+    private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
+    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 13, 0).build();
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 2).build();
+    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 0).build();
 
-    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 2).build();
-    private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 20, 0).build();
     private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.aquamarineConfig.axe_freeze_duration() * 20), 0).build();
     private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.aquamarineConfig.sword_freeze_duration() * 20), 0).build();
     private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int) (CONFIG.ametrineConfig.axe_levitation_duration() * 20), CONFIG.ametrineConfig.axe_levitation_amplifier()).build();
