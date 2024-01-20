@@ -168,7 +168,7 @@ public class MULootTableModifiers {
             if(BASTION_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
                         .with(ItemEntry.builder(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
