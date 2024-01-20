@@ -47,19 +47,12 @@ public class MUItems {
     private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_shovel_amplifier()).build();
     private static final ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_sword_amplifier()).build();
 
-    public static final BrokenDiscItem BROKEN_JADE_DISC = new BrokenDiscItem("jadedisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_TOPAZ_DISC = new BrokenDiscItem("topazdisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_AQUAMARINE_DISC = new BrokenDiscItem("aquamarinedisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_SAPPHIRE_DISC = new BrokenDiscItem("sapphiredisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_RUBY_DISC = new BrokenDiscItem("rubydisc.description", new FabricItemSettings().maxCount(16));
-    public static final BrokenDiscItem BROKEN_AMETRINE_DISC = new BrokenDiscItem("ametrinedisc.description", new FabricItemSettings().maxCount(16));
-
+    public static final MusicDiscItem MUSIC_DISC_NELUMBO = new MusicDiscItem(14, MUSounds.NELUMBO, new FabricItemSettings().maxCount(1), 118);
     public static final MusicDiscItem MUSIC_DISC_SOOT = new MusicDiscItem(15, MUSounds.SOOT, new FabricItemSettings().maxCount(1), 299);
     public static final MusicDiscItem MUSIC_DISC_APPOMATTOX = new MusicDiscItem(14, MUSounds.APPOMATTOX, new FabricItemSettings().maxCount(1), 724);
     public static final MusicDiscItem MUSIC_DISC_FIERCE = new MusicDiscItem(14, MUSounds.FIERCE, new FabricItemSettings().maxCount(1), 129);
-    public static final MusicDiscItem MUSIC_DISC_NELUMBO = new MusicDiscItem(14, MUSounds.NELUMBO, new FabricItemSettings().maxCount(1), 118);
-    public static final MusicDiscItem MUSIC_DISC_FLOW_OF_THE_ABYSS = new MusicDiscItem(14, MUSounds.FLOW_OF_THE_ABYSS, new FabricItemSettings().maxCount(1), 125);
     public static final MusicDiscItem MUSIC_DISC_TANKER_ON_THE_LEVANTINES = new MusicDiscItem(14, MUSounds.TANKER_ON_THE_LEVANTINES, new FabricItemSettings().maxCount(1), 201);
+    public static final MusicDiscItem MUSIC_DISC_FLOW_OF_THE_ABYSS = new MusicDiscItem(14, MUSounds.FLOW_OF_THE_ABYSS, new FabricItemSettings().maxCount(1), 125);
 
     public static final MUGemItem JADE = new MUGemItem("jade.description", Formatting.GREEN, jadeItemEffects, new FabricItemSettings());
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
