@@ -18,7 +18,6 @@ public class MythicUpgrades implements ModInitializer {
 	public static final String MOD_ID = "mythicupgrades";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final MUConfig CONFIG = MUConfig.createAndLoad();
-
 	public static Random RANDOM = new Random();
 
 	@Override
@@ -28,7 +27,7 @@ public class MythicUpgrades implements ModInitializer {
 		RegisterMUItems.registerMythicItems();
 		RegisterMUCommands.registerCommands();
 		MUBlocks.registerMythicBlocks();
-		MUWorldGeneration.generateModWorldGen();
+		MUWorldGeneration.generateMythicWorldGen();
 		MULootTableModifiers.modifyLootTables();
 		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARDES <3!");
 	}
