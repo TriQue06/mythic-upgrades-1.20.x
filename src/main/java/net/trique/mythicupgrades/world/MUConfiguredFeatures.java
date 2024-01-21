@@ -59,12 +59,12 @@ public class MUConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.AQUAMARINE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_AQUAMARINE_ORE.getDefaultState()));
 
-        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 6));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 6));
         register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 6));
         register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 6));
-        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 6));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 6));
+        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 6));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 6));
+        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 6));
 
         register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
