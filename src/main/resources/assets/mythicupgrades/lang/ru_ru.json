@@ -1,42 +1,4 @@
 {
-  "text.config.mythicupgrades-config.title": [{"text" : "Конфигурация мода Mythic Upgrades", "color" : "dark_purple", "bold": "true"}],
-
-  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфир", "color" : "blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "light_purple", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубин", "color" : "red", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Нефрит", "color" : "green", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Топаз", "color" : "gold", "bold": "true"}],
-
-  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Урон (в %) от макс. здоровья врага (топор)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Урон (в %) от макс. здоровья врага (меч)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Сила эффекта отражения урона (броня)", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_speed_amplifier": [{"text": "Сила эффекта скорости (броня)", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.ametrine_armor_jump_boost_amplifier": [{"text": "Сила эффекта прыгучести (броня)", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Время действия левитации (топор)", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Сила эффекта левитации (топор)", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Время действия левитации (меч)", "color": "light_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Сила эффекта левитации (меч)", "color": "light_purple"}],
-
-  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_amplifier": [{"text": "Сила эффекта ядовитых шипов (броня)", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_poison_duration": [{"text": "Время действия яда от шипов (броня)", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_duration": [{"text": "Время действия яда (топор)", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_amplifier": [{"text": "Сила эффекта яда (топор)", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_duration": [{"text": "Время действия яда (меч)", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_amplifier": [{"text": "Сила эффекта яда (меч)", "color": "green"}],
-
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Сила эффекта спешки (кирка)", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Сила эффекта спешки (топор)", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_shovel_amplifier": [{"text": "Сила эффекта спешки (лопата)", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Сила эффекта спешки (меч)", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Сила эффекта спешки (мотыга)", "color": "red"}],
-
-  "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Время действия заморозки (топор)", "color": "aqua"}],
-  "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Время действия заморозки (меч)", "color": "aqua"}],
-
-  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Сила эффекта Мастера предметов", "color": "gold"}],
-
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Кузнечный шаблон",
