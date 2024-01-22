@@ -32,12 +32,10 @@
   "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Сила эффекта спешки (меч)", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Сила эффекта спешки (мотыга)", "color": "red"}],
 
-
   "text.config.mythicupgrades-config.option.aquamarineConfig.axe_freeze_duration": [{"text": "Время действия заморозки (топор)", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.sword_freeze_duration": [{"text": "Время действия заморозки (меч)", "color": "aqua"}],
 
   "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Сила эффекта Мастера предметов", "color": "gold"}],
-
 
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Кузнечный шаблон",
