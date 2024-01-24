@@ -11,16 +11,13 @@ import java.util.function.Supplier;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUArmorMaterials implements ArmorMaterial {
-    SAPPHIRE("sapphire", 40, new int[] { 3, 8, 6, 3 }, 15,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(SAPPHIRE_INGOT)),
-
-    JADE("jade", 40, new int[] { 3, 6, 8, 3 }, 15,
+    JADE("jade", 40, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(JADE_INGOT)),
-
-    TOPAZ("topaz", 40, new int[] { 4, 7, 9, 4 }, 15,
+    TOPAZ("topaz", 40, new int[] { 4, 9, 7, 4 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(TOPAZ_INGOT)),
-
-    AMETRINE("ametrine", 40, new int[] { 3, 6, 8, 3 }, 15,
+    SAPPHIRE("sapphire", 40, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(SAPPHIRE_INGOT)),
+    AMETRINE("ametrine", 40, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(AMETRINE_INGOT));
 
     private final String name;
