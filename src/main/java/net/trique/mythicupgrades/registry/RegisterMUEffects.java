@@ -16,5 +16,6 @@ public class RegisterMUEffects {
         registerEffect(MUEffects.FREEZE, "freeze");
         registerEffect(MUEffects.DAMAGE_DEFLECTION, "damage_deflection");
         registerEffect(MUEffects.ITEM_MASTERY, "item_mastery");
+        registerEffect(MUEffects.ICE_SHIELD, "ice_shield");
     }
 }

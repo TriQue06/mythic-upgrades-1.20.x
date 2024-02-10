@@ -15,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
+import static net.trique.mythicupgrades.effect.MUEffects.ICE_SHIELD;
 import static net.trique.mythicupgrades.effect.MUEffects.ITEM_MASTERY;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
@@ -32,7 +33,7 @@ public abstract class ServerWorldMixin {
         ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
         List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
 
-        ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
+        ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, 2).addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
         List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
         ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.aquamarineConfig.axe_freeze_duration() * 20), 0).build();

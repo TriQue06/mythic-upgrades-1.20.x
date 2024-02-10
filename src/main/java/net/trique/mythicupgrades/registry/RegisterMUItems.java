@@ -23,12 +23,6 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItems() {
-
-
-
-
-
-
         registerItem("jade_axe", JADE_AXE);
         registerItem("jade_sword", JADE_SWORD);
         registerItem("jade_helmet", JADE_HELMET);

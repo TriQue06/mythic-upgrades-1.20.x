@@ -5,6 +5,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Formatting;
+import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.sound.MUSounds;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
@@ -24,7 +25,7 @@ public class MUItems {
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.ametrine_armor_speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier()).build();
     private static final List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier(), CONFIG.ametrineConfig.ametrine_armor_speed_amplifier());
 
-    private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
+    private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, 2).addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
     private static final List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
     private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 0).build();
@@ -119,7 +120,7 @@ public class MUItems {
     public static final MythicEffectsAxeItem AMETRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AMETRINE, 6, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE);
     public static final MythicEffectsSwordItem AMETRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AMETRINE, 4, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_helmet.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsArmorItem AMETRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), ametrineItemEffects, "ametrine_chestplate.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
+    public static final MythicEffectsArmorItem AMETRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_chestplate.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_leggings.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
 
