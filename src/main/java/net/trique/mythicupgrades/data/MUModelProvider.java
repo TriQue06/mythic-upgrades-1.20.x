@@ -50,6 +50,10 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_AMETRINE_CRYSTAL);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(RAW_NECOIUM_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NECOIUM_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NECOIUM_ORE);
+
         blockStateModelGenerator.registerAmethyst(SMALL_AMETRINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(MEDIUM_AMETRINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(LARGE_AMETRINE_CRYSTAL_BUD);
@@ -113,6 +117,11 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RUBY_INGOT, Models.GENERATED);
         itemModelGenerator.register(RUBY_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(RUBY_APPLE, Models.GENERATED);
+        
+        itemModelGenerator.register(KYANITE, Models.GENERATED);
+        itemModelGenerator.register(KYANITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(KYANITE_CRYSTAL_SHARD, Models.GENERATED);
+        itemModelGenerator.register(KYANITE_APPLE, Models.GENERATED);
 
         itemModelGenerator.register(JADE_AXE, Models.HANDHELD);
         itemModelGenerator.register(JADE_SWORD, Models.HANDHELD);
@@ -144,6 +153,9 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_FISH, Models.GENERATED);
+
+        itemModelGenerator.register(RAW_NECOIUM, Models.GENERATED);
+        itemModelGenerator.register(NECOIUM_INGOT, Models.GENERATED);
 
         itemModelGenerator.registerArmor(((ArmorItem) JADE_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) JADE_CHESTPLATE));

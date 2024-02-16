@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "necoium_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:necoium_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mythicupgrades:necoium_block"
+  },
+  "show_notification": true
+}

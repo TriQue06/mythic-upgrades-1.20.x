@@ -11,6 +11,7 @@ public enum MUToolMaterials implements ToolMaterial {
     AQUAMARINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(AQUAMARINE_INGOT)),
     SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(SAPPHIRE_INGOT)),
     RUBY(MiningLevels.NETHERITE, 2106, 12.0f, 4.0f, 18, Ingredient.ofItems(RUBY_INGOT)),
+    KYANITE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(KYANITE_INGOT)),
     AMETRINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(AMETRINE_INGOT));
 
     private final int miningLevel;

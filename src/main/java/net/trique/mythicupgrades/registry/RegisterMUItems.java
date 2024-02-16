@@ -85,6 +85,11 @@ public class RegisterMUItems {
         registerItem("ruby_apple", RUBY_APPLE);
         registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
         registerItem("music_disc_tanker_on_the_levantines", MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
+        
+        registerItem("kyanite", KYANITE);
+        registerItem("kyanite_ingot", KYANITE_INGOT);
+        registerItem("kyanite_crystal_shard", KYANITE_CRYSTAL_SHARD);
+        registerItem("kyanite_apple", KYANITE_APPLE);
 
         registerItem("ametrine_axe", AMETRINE_AXE);
         registerItem("ametrine_sword", AMETRINE_SWORD);
@@ -98,6 +103,9 @@ public class RegisterMUItems {
         registerItem("ametrine_apple", AMETRINE_APPLE);
         registerItem("ametrine_upgrade_smithing_template", AMETRINE_UPGRADE_SMITHING_TEMPLATE);
         registerItem("music_disc_appomattox", MUSIC_DISC_APPOMATTOX);
+
+        registerItem("raw_necoium", RAW_NECOIUM);
+        registerItem("necoium_ingot", NECOIUM_INGOT);
     }
 
     private static void registerMUItemGroup() {
@@ -229,6 +237,12 @@ public class RegisterMUItems {
                     entries.add(AMETRINE_APPLE);
                     entries.add(AMETRINE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_APPOMATTOX);
+
+                    entries.add(RAW_NECOIUM_BLOCK);
+                    entries.add(NECOIUM_BLOCK);
+                    entries.add(NECOIUM_ORE);
+                    entries.add(RAW_NECOIUM);
+                    entries.add(NECOIUM_INGOT);
                 }).build();
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
     }

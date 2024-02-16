@@ -2,6 +2,7 @@ package net.trique.mythicupgrades.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -144,6 +145,31 @@ public class MUBlocks {
 
     public static final Block SMALL_RUBY_CRYSTAL_BUD = registerBlock("small_ruby_crystal_bud",
             new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(RUBY_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+    
+    
+    public static final Block KYANITE_BLOCK = registerBlock("kyanite_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.BLUE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block KYANITE_ORE = registerBlock("kyanite_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+
+    public static final Block BUDDING_KYANITE_CRYSTAL = registerBlock("budding_kyanite_crystal",
+            new BuddingRubyCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLUE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block KYANITE_CRYSTAL_BLOCK = registerBlock("kyanite_crystal_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.AMETHYST_BLOCK).strength(3.0f, 1200.0f)));
+
+    public static final Block KYANITE_CRYSTAL_CLUSTER = registerBlock("kyanite_crystal_cluster",
+            new AmethystClusterBlock(7, 3, AbstractBlock.Settings.create().mapColor(MapColor.BLUE).solid().nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5f).luminance(state -> 5).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block LARGE_KYANITE_CRYSTAL_BUD = registerBlock("large_kyanite_crystal_bud",
+            new AmethystClusterBlock(5, 3, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block MEDIUM_KYANITE_CRYSTAL_BUD = registerBlock("medium_kyanite_crystal_bud",
+            new AmethystClusterBlock(4, 3, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 2).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block SMALL_KYANITE_CRYSTAL_BUD = registerBlock("small_kyanite_crystal_bud",
+            new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
 
 
     public static final Block AMETRINE_BLOCK = registerBlock("ametrine_block",
@@ -169,6 +195,16 @@ public class MUBlocks {
 
     public static final Block SMALL_AMETRINE_CRYSTAL_BUD = registerBlock("small_ametrine_crystal_bud",
             new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(AMETRINE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block RAW_NECOIUM_BLOCK = registerBlock("raw_necoium_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 6.0f).instrument(Instrument.FLUTE)));
+
+    public static final Block NECOIUM_BLOCK = registerBlock("necoium_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block NECOIUM_ORE = registerBlock("necoium_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
