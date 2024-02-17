@@ -1,7 +1,6 @@
 package net.trique.mythicupgrades;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;

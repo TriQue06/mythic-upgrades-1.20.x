@@ -14,7 +14,7 @@ public class MUConfigModel {
     @Nest
     public TopazConfig topazConfig = new TopazConfig();
     @Nest
-    public AquamarineConfig aquamarineConfig = new AquamarineConfig();
+    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
     @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
@@ -51,13 +51,22 @@ public class MUConfigModel {
         public int item_mastery_amplifier = 1;
     }
 
-    public static class AquamarineConfig {
+    public static class KyaniteConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 2f)
         public float axe_freeze_duration = 1.25f;
+
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 2f)
         public float sword_freeze_duration = 1.25f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 2f, max = 5f)
+        public float ice_shield_duration = 3f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int ice_shield_amplifier = 2;
     }
 
     public static class SapphireConfig {

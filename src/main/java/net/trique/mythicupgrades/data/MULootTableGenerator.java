@@ -23,6 +23,8 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(SAPPHIRE_CRYSTAL_BLOCK);
         addDrop(RUBY_BLOCK);
         addDrop(RUBY_CRYSTAL_BLOCK);
+        addDrop(KYANITE_BLOCK);
+        addDrop(KYANITE_CRYSTAL_BLOCK);
         addDrop(AMETRINE_BLOCK);
         addDrop(AMETRINE_CRYSTAL_BLOCK);
         addDrop(NECOIUM_BLOCK);
@@ -36,6 +38,7 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(DEEPSLATE_AQUAMARINE_ORE, oreDrops(DEEPSLATE_AQUAMARINE_ORE, AQUAMARINE));
         addDrop(SAPPHIRE_ORE, oreDrops(SAPPHIRE_ORE, SAPPHIRE));
         addDrop(RUBY_ORE, oreDrops(RUBY_ORE, RUBY));
+        addDrop(KYANITE_ORE, oreDrops(KYANITE_ORE, KYANITE));
         addDrop(AMETRINE_ORE, oreDrops(AMETRINE_ORE, AMETRINE));
         addDrop(NECOIUM_ORE, oreDrops(NECOIUM_ORE, RAW_NECOIUM));
     }

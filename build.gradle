@@ -28,6 +28,14 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
     maven { url 'https://maven.wispforest.io' }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Ladysnake Libs"
+        url = 'https://maven.ladysnake.org/releases'
+    }
 }
 
 dependencies {
@@ -37,6 +45,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
     include "io.wispforest:owo-sentinel:${project.owo_version}"
+    modImplementation "dev.emi:trinkets:${project.trinkets_version}"
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
