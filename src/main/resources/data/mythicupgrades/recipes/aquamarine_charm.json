@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ring",
+  "pattern": [
+    " O ",
+    "X X",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    "O": {
+      "item": "mythicupgrades:aquamarine"
+    }
+  },
+  "result": {
+    "item": "mythicupgrades:aquamarine_charm"
+  }
+}

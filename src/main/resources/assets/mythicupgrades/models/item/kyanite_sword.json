@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "mythicupgrades:item/aquamarine_sword"
+    "layer0": "mythicupgrades:item/kyanite_sword"
   }
 }

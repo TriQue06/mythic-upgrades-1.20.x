@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kyanite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:kyanite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:kyanite_from_smelting_kyanite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kyanite_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:kyanite_from_smelting_kyanite_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -46,7 +46,6 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_RUBY_CRYSTAL);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(KYANITE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(KYANITE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(KYANITE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_KYANITE_CRYSTAL);
 
@@ -109,6 +108,7 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(RUBY_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(KYANITE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(JADE_AXE, Models.HANDHELD);
@@ -132,6 +132,7 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TOPAZ_APPLE, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
 
+        itemModelGenerator.register(AQUAMARINE_CHARM, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);

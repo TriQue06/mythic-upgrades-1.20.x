@@ -38,8 +38,8 @@ public class MUConfigModel {
         public int sword_poison_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 5f)
-        public float poisonous_thorns_poison_duration = 3f;
+        @RangeConstraint(min = 0.1f, max = 6f)
+        public float poisonous_thorns_poison_duration = 4f;
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int poisonous_thorns_amplifier = 0;

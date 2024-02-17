@@ -6,7 +6,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Formatting;
 import net.trique.mythicupgrades.effect.MUEffects;
-import net.trique.mythicupgrades.item.charms.JadeCharm;
+import net.trique.mythicupgrades.item.charms.*;
 import net.trique.mythicupgrades.sound.MUSounds;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
@@ -29,7 +29,7 @@ public class MUItems {
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
     private static final List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
 
-    private static final ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
+    private static final ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
     private static final List<Integer> kyaniteAmplifiers = List.of(CONFIG.kyaniteConfig.ice_shield_amplifier());
 
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.ametrine_armor_speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier()).build();
@@ -40,7 +40,7 @@ public class MUItems {
     private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsList();
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
-    private static final ItemEffectsList kyaniteItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 13, 0).build();
+    private static final ItemEffectsList kyaniteItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 10, 0).build();
     private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 0).build();
 
     private static final ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int) (CONFIG.jadeConfig.sword_poison_duration() * 20), CONFIG.jadeConfig.sword_poison_amplifier()).build();
@@ -66,50 +66,50 @@ public class MUItems {
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item JADE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item JADE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.JADE_APPLE));;
-    public static final Item JADE_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.JADE_APPLE));
-    public static final Item JADE_CHARM = new JadeCharm(new FabricItemSettings().fireproof());
+    public static final Item JADE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.JADE_POTION));
+    public static final Item JADE_CHARM = new JadeCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem TOPAZ = new MUGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings());
     public static final Item TOPAZ_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_APPLE));
-    public static final Item TOPAZ_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_APPLE));
-    public static final Item TOPAZ_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item TOPAZ_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_POTION).maxCount(16));
+    public static final Item TOPAZ_CHARM = new TopazCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem AQUAMARINE = new MUGemItem("aquamarine.description", Formatting.AQUA, aquamarineItemEffects, new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_FISH = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_FISH));
-    public static final Item AQUAMARINE_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_FISH));
-    public static final Item AQUAMARINE_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item AQUAMARINE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_POTION).maxCount(16));
+    public static final Item AQUAMARINE_CHARM = new AquamarineCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem SAPPHIRE = new MUGemItem("sapphire.description", Formatting.DARK_BLUE, sapphireItemEffects, new FabricItemSettings());
     public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
-    public static final Item SAPPHIRE_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_APPLE));
-    public static final Item SAPPHIRE_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item SAPPHIRE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_POTION).maxCount(16));
+    public static final Item SAPPHIRE_CHARM = new SapphireCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem RUBY = new MUGemItem("ruby.description", Formatting.RED, rubyItemEffects, new FabricItemSettings());
     public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
-    public static final Item RUBY_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
-    public static final Item RUBY_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item RUBY_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE).maxCount(16));
+    public static final Item RUBY_CHARM = new RubyCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem KYANITE = new MUGemItem("kyanite.description", Formatting.BLUE, kyaniteItemEffects, new FabricItemSettings());
     public static final Item KYANITE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item KYANITE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item KYANITE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_APPLE));
-    public static final Item KYANITE_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_APPLE));
-    public static final Item KYANITE_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item KYANITE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_POTION).maxCount(16));
+    public static final Item KYANITE_CHARM = new KyaniteCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
     public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
-    public static final Item AMETRINE_POTION = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
-    public static final Item AMETRINE_CHARM = new Item(new FabricItemSettings().fireproof());
+    public static final Item AMETRINE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_POTION).maxCount(16));
+    public static final Item AMETRINE_CHARM = new AmetrineCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final Item RAW_NECOIUM = new Item(new FabricItemSettings().fireproof());
     public static final Item NECOIUM_INGOT = new Item(new FabricItemSettings().fireproof());
