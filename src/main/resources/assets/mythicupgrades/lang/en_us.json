@@ -233,6 +233,10 @@
   "defaultArmorTooltip.description": "Try to wear full set of armour to get bonus effects if they are presented.",
 
   "kyanite.description": "Freezes enemy on hit.",
+  "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
+  "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
+  "kyanite_leggings.description": "Set Bonus: Ice Shield %s",
+  "kyanite_boots.description": "Set Bonus: Ice Shield %s",
   "kyanite_axe.description": "Freezes enemy on hit.",
   "kyanite_sword.description": "Freezes enemy on hit.",
   
@@ -241,12 +245,6 @@
   "aquamarine_chestplate.description": "Set Bonus: Dolphin's Grace",
   "aquamarine_leggings.description": "Set Bonus: Dolphin's Grace",
   "aquamarine_boots.description": "Set Bonus: Dolphin's Grace",
-  
-  "kyanite.description": "Has no effects on its own.",
-  "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
-  "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
-  "kyanite_leggings.description": "Set Bonus: Ice Shield %s",
-  "kyanite_boots.description": "Set Bonus: Ice Shield %s",
 
   "ametrine.description": "Levitates enemy on hit.",
   "ametrine_helmet.description": "Set Bonus: Jump Boost %s & Speed %s effects.",
@@ -332,6 +330,12 @@
   "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Add netherite weapon or tool",
   "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Ruby Ingot",
   "upgrade.minecraft.ruby_upgrade": "Ruby Upgrade",
+
+  "item.minecraft.smithing_template.kyanite_upgrade.additions_slot_description": "Add Kyanite Ingot",
+  "item.minecraft.smithing_template.kyanite_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.kyanite_upgrade.base_slot_description": "Add netherite armor or weapon",
+  "item.minecraft.smithing_template.kyanite_upgrade.ingredients": "Kyanite Ingot",
+  "upgrade.minecraft.kyanite_upgrade": "Kyanite Upgrade",
 
   "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Add Ametrine Ingot",
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",

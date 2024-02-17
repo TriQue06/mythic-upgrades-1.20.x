@@ -63,7 +63,7 @@ public class MythicPotionItem extends Item {
     }
 
     public SoundEvent getEatSound() {
-        return SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME;
+        return SoundEvents.BLOCK_AMETHYST_BLOCK_STEP;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
