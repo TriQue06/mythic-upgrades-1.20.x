@@ -6,15 +6,18 @@
       "item": "mythicupgrades:ruby_crystal_shard"
     },
     "X": {
-      "item": "minecraft:apple"
+      "item": "mythicupgrades:necoium_nugget"
+    },
+    "O": {
+      "item": "minecraft:glass_bottle"
     }
   },
   "pattern": [
     "###",
     "#X#",
-    "###"
+    "#O#"
   ],
   "result": {
-    "item": "mythicupgrades:ruby_apple"
+    "item": "mythicupgrades:ruby_potion"
   }
 }

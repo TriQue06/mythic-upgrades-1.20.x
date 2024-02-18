@@ -27,7 +27,7 @@ public abstract class ServerWorldMixin {
         ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
         List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
-        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).build();
+        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
         List<Integer> aquamarineAmplifiers = List.of();
 
         ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();

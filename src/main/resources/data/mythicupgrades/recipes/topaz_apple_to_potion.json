@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:topaz_apple"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:topaz_potion"
+  }
+}

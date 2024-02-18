@@ -6,15 +6,18 @@
       "item": "mythicupgrades:jade_crystal_shard"
     },
     "X": {
-      "item": "minecraft:apple"
+      "item": "mythicupgrades:necoium_nugget"
+    },
+    "O": {
+      "item": "minecraft:glass_bottle"
     }
   },
   "pattern": [
     "###",
     "#X#",
-    "###"
+    "#O#"
   ],
   "result": {
-    "item": "mythicupgrades:jade_apple"
+    "item": "mythicupgrades:jade_potion"
   }
 }

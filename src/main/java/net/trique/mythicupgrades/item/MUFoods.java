@@ -55,10 +55,6 @@ public class MUFoods {
         statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 3600, 0), 1.0F).
         alwaysEdible().build();
 
-    public static final FoodComponent KYANITE_APPLE = (new FoodComponent.Builder()).hunger(5).saturationModifier(1.2F).
-        statusEffect(new StatusEffectInstance(MUEffects.ICE_SHIELD, 4800, 0), 1.0F).
-        alwaysEdible().build();
-
     public static final FoodComponent KYANITE_POTION = (new FoodComponent.Builder()).hunger(2).saturationModifier(1.0F).
         statusEffect(new StatusEffectInstance(MUEffects.ICE_SHIELD, 3600, 2), 1.0F).
         statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 20, 0), 1.0F).

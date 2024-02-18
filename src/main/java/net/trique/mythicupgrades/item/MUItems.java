@@ -23,13 +23,13 @@ public class MUItems {
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).build();
     private static final List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
-    private static final ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).build();
+    private static final ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
     private static final List<Integer> aquamarineAmplifiers = List.of();
 
     private static final ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
     private static final List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
 
-    private static final ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
+    private static final ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
     private static final List<Integer> kyaniteAmplifiers = List.of(CONFIG.kyaniteConfig.ice_shield_amplifier());
 
     private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.ametrine_armor_speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier()).build();
@@ -66,7 +66,7 @@ public class MUItems {
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item JADE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item JADE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.JADE_APPLE));;
-    public static final Item JADE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.JADE_POTION));
+    public static final Item JADE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.JADE_POTION).maxCount(16));
     public static final Item JADE_CHARM = new JadeCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem TOPAZ = new MUGemItem("topaz.description", Formatting.GOLD, topazItemEffects, new FabricItemSettings());
@@ -94,13 +94,12 @@ public class MUItems {
     public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE));
-    public static final Item RUBY_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.RUBY_APPLE).maxCount(16));
+    public static final Item RUBY_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.RUBY_POTION).maxCount(16));
     public static final Item RUBY_CHARM = new RubyCharm(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final MUGemItem KYANITE = new MUGemItem("kyanite.description", Formatting.BLUE, kyaniteItemEffects, new FabricItemSettings());
     public static final Item KYANITE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item KYANITE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item KYANITE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_APPLE));
     public static final Item KYANITE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_POTION).maxCount(16));
     public static final Item KYANITE_CHARM = new KyaniteCharm(new FabricItemSettings().fireproof().maxCount(1));
 
@@ -152,10 +151,10 @@ public class MUItems {
 
     public static final MythicEffectsAxeItem KYANITE_AXE = new MythicEffectsAxeItem(MUToolMaterials.KYANITE, 6, -3f, (new FabricItemSettings().fireproof()), freezeAxeItemEffects, "kyanite_axe.description", Formatting.BLUE);
     public static final MythicEffectsSwordItem KYANITE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.KYANITE, 4, -2.4f, (new FabricItemSettings().fireproof()), freezeSwordItemEffects, "kyanite_axe.description", Formatting.BLUE);
-    public static final MythicEffectsArmorItem KYANITE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_helmet.description", kyaniteAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem KYANITE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_chestplate.description", kyaniteAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem KYANITE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_leggings.description", kyaniteAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem KYANITE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_boots.description", kyaniteAmplifiers, Formatting.GOLD);
+    public static final MythicEffectsArmorItem KYANITE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_helmet.description", kyaniteAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem KYANITE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_chestplate.description", kyaniteAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem KYANITE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_leggings.description", kyaniteAmplifiers, Formatting.BLUE);
+    public static final MythicEffectsArmorItem KYANITE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_boots.description", kyaniteAmplifiers, Formatting.BLUE);
 
     public static final MythicEffectsAxeItem AMETRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AMETRINE, 6, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE);
     public static final MythicEffectsSwordItem AMETRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AMETRINE, 4, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE);
