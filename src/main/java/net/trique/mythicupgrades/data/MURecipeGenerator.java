@@ -98,7 +98,7 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> TOPAZ_UPGRADE_SMITHING_TEMPLATE,
                 ()-> TOPAZ, ()->Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> AQUAMARINE, ()->Items.ICE);
+                ()-> AQUAMARINE, ()->Items.PRISMARINE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> SAPPHIRE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> SAPPHIRE, ()->Items.NETHER_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> RUBY_UPGRADE_SMITHING_TEMPLATE,
@@ -106,7 +106,7 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> KYANITE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> KYANITE, ()->Items.BASALT);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AMETRINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> AMETRINE, ()->Items.END_STONE);
+                ()-> AMETRINE, ()->Items.END_STONE_BRICKS);
 
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> JADE_INGOT, List.of(JADE, JADE, JADE, JADE,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),

@@ -19,7 +19,7 @@ public class MUOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_GEODE_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.AQUATIC),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY);

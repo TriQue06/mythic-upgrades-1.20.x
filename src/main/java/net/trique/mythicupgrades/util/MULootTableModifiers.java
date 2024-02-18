@@ -34,6 +34,12 @@ public class MULootTableModifiers {
     private static final Identifier BASTION_TREASURE_ID =
             new Identifier("minecraft", "chests/bastion_treasure");
 
+    private static final Identifier UNDERWATER_RUIN_BIG_ID =
+            new Identifier("minecraft", "chests/underwater_ruin_big");
+
+    private static final Identifier UNDERWATER_RUIN_SMALL_ID =
+            new Identifier("minecraft", "chests/underwater_ruin_small");
+
     private static final Identifier END_CITY_TREASURE_ID =
             new Identifier("minecraft", "chests/end_city_treasure");
 
@@ -75,7 +81,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(IGLOO_CHEST_ID.equals(id)) {
+            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
@@ -84,11 +90,11 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(IGLOO_CHEST_ID.equals(id)) {
+            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_FLOW_OF_THE_ABYSS))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f))
+                        .with(ItemEntry.builder(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -178,6 +184,24 @@ public class MULootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(IGLOO_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f))
+                        .with(ItemEntry.builder(MUItems.KYANITE_UPGRADE_SMITHING_TEMPLATE))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(IGLOO_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f))
                         .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
