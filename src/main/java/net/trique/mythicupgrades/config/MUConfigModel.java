@@ -14,11 +14,11 @@ public class MUConfigModel {
     @Nest
     public TopazConfig topazConfig = new TopazConfig();
     @Nest
-    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
-    @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
     public RubyConfig rubyConfig = new RubyConfig();
+    @Nest
+    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
     @Nest
     public AmetrineConfig ametrineConfig = new AmetrineConfig();
 
@@ -49,24 +49,6 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int item_mastery_amplifier = 1;
-    }
-
-    public static class KyaniteConfig {
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1f, max = 2f)
-        public float axe_freeze_duration = 1.25f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1f, max = 2f)
-        public float sword_freeze_duration = 1.25f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.5f, max = 3f)
-        public float ice_shield_duration = 1.5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int ice_shield_amplifier = 2;
     }
 
     public static class SapphireConfig {
@@ -105,14 +87,32 @@ public class MUConfigModel {
         public int haste_hoe_amplifier = 0;
     }
 
-    public static class AmetrineConfig {
+    public static class KyaniteConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 6)
-        public int ametrine_armor_speed_amplifier = 0;
+        @RangeConstraint(min = 1f, max = 2f)
+        public float axe_freeze_duration = 1.25f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 6)
-        public int ametrine_armor_jump_boost_amplifier = 0;
+        @RangeConstraint(min = 1f, max = 2f)
+        public float sword_freeze_duration = 1.25f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.5f, max = 3f)
+        public float ice_shield_duration = 1.5f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int ice_shield_amplifier = 2;
+    }
+
+    public static class AmetrineConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int speed_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int jump_boost_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 2f)

@@ -39,8 +39,8 @@ public class MUCommands {
                                     CONFIG.sapphireConfig.axe_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);
-                                    CONFIG.ametrineConfig.ametrine_armor_speed_amplifier(2);
-                                    CONFIG.ametrineConfig.ametrine_armor_jump_boost_amplifier(2);
+                                    CONFIG.ametrineConfig.speed_amplifier(2);
+                                    CONFIG.ametrineConfig.jump_boost_amplifier(2);
                                     CONFIG.rubyConfig.haste_pickaxe_amplifier(0);
                                     CONFIG.rubyConfig.haste_axe_amplifier(0);
                                     CONFIG.rubyConfig.haste_shovel_amplifier(0);
