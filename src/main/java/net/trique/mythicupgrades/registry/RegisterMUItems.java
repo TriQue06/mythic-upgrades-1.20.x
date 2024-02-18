@@ -109,7 +109,6 @@ public class RegisterMUItems {
         registerItem("kyanite", KYANITE);
         registerItem("kyanite_ingot", KYANITE_INGOT);
         registerItem("kyanite_crystal_shard", KYANITE_CRYSTAL_SHARD);
-        registerItem("kyanite_apple", KYANITE_APPLE);
         registerItem("kyanite_potion", KYANITE_POTION);
         registerItem("kyanite_upgrade_smithing_template", KYANITE_UPGRADE_SMITHING_TEMPLATE);
 
@@ -134,41 +133,15 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItemGroup() {
-        ItemGroup MYTHICITEMGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades"))
-                .icon(() -> new ItemStack(JADE_SWORD)).entries((displayContext, entries) -> {
-                    entries.add(JADE_BLOCK);
-                    entries.add(JADE_ORE);
-                    entries.add(DEEPSLATE_JADE_ORE);
-                    entries.add(JADE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_JADE_CRYSTAL);
-                    entries.add(SMALL_JADE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_JADE_CRYSTAL_BUD);
-                    entries.add(LARGE_JADE_CRYSTAL_BUD);
-                    entries.add(JADE_CRYSTAL_CLUSTER);
-                    entries.add(JADE_AXE);
-                    entries.add(JADE_SWORD);
-                    entries.add(JADE_HELMET);
-                    entries.add(JADE_CHESTPLATE);
-                    entries.add(JADE_LEGGINGS);
-                    entries.add(JADE_BOOTS);
-                    entries.add(JADE_CHARM);
-                    entries.add(JADE);
-                    entries.add(JADE_INGOT);
-                    entries.add(JADE_CRYSTAL_SHARD);
-                    entries.add(JADE_APPLE);
-                    entries.add(JADE_POTION);
-                    entries.add(JADE_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_NELUMBO);
+        ItemGroup MYTHICTOOLSGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Combat & Tools"))
+                .icon(() -> new ItemStack(SAPPHIRE_AXE)).entries((displayContext, entries) -> {
+                    entries.add(RUBY_SHOVEL);
+                    entries.add(RUBY_PICKAXE);
+                    entries.add(RUBY_AXE);
+                    entries.add(RUBY_HOE);
+                    entries.add(RUBY_SWORD);
+                    entries.add(RUBY_CHARM);
 
-                    entries.add(TOPAZ_BLOCK);
-                    entries.add(TOPAZ_ORE);
-                    entries.add(DEEPSLATE_TOPAZ_ORE);
-                    entries.add(TOPAZ_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_TOPAZ_CRYSTAL);
-                    entries.add(SMALL_TOPAZ_CRYSTAL_BUD);
-                    entries.add(MEDIUM_TOPAZ_CRYSTAL_BUD);
-                    entries.add(LARGE_TOPAZ_CRYSTAL_BUD);
-                    entries.add(TOPAZ_CRYSTAL_CLUSTER);
                     entries.add(TOPAZ_SHOVEL);
                     entries.add(TOPAZ_PICKAXE);
                     entries.add(TOPAZ_AXE);
@@ -179,6 +152,57 @@ public class RegisterMUItems {
                     entries.add(TOPAZ_LEGGINGS);
                     entries.add(TOPAZ_BOOTS);
                     entries.add(TOPAZ_CHARM);
+
+                    entries.add(JADE_AXE);
+                    entries.add(JADE_SWORD);
+                    entries.add(JADE_HELMET);
+                    entries.add(JADE_CHESTPLATE);
+                    entries.add(JADE_LEGGINGS);
+                    entries.add(JADE_BOOTS);
+                    entries.add(JADE_CHARM);
+
+                    entries.add(AQUAMARINE_HELMET);
+                    entries.add(AQUAMARINE_CHESTPLATE);
+                    entries.add(AQUAMARINE_LEGGINGS);
+                    entries.add(AQUAMARINE_BOOTS);
+                    entries.add(AQUAMARINE_CHARM);
+
+                    entries.add(KYANITE_AXE);
+                    entries.add(KYANITE_SWORD);
+                    entries.add(KYANITE_HELMET);
+                    entries.add(KYANITE_CHESTPLATE);
+                    entries.add(KYANITE_LEGGINGS);
+                    entries.add(KYANITE_BOOTS);
+                    entries.add(KYANITE_CHARM);
+
+                    entries.add(SAPPHIRE_AXE);
+                    entries.add(SAPPHIRE_SWORD);
+                    entries.add(SAPPHIRE_HELMET);
+                    entries.add(SAPPHIRE_CHESTPLATE);
+                    entries.add(SAPPHIRE_LEGGINGS);
+                    entries.add(SAPPHIRE_BOOTS);
+                    entries.add(SAPPHIRE_CHARM);
+
+                    entries.add(AMETRINE_AXE);
+                    entries.add(AMETRINE_SWORD);
+                    entries.add(AMETRINE_HELMET);
+                    entries.add(AMETRINE_CHESTPLATE);
+                    entries.add(AMETRINE_LEGGINGS);
+                    entries.add(AMETRINE_BOOTS);
+                    entries.add(AMETRINE_CHARM);
+                }).build();
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
+
+        ItemGroup MYTHICMISCGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Misc"))
+                .icon(() -> new ItemStack(SAPPHIRE)).entries((displayContext, entries) -> {
+                    entries.add(RUBY);
+                    entries.add(RUBY_INGOT);
+                    entries.add(RUBY_CRYSTAL_SHARD);
+                    entries.add(RUBY_APPLE);
+                    entries.add(RUBY_POTION);
+                    entries.add(RUBY_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
+
                     entries.add(TOPAZ);
                     entries.add(TOPAZ_INGOT);
                     entries.add(TOPAZ_CRYSTAL_SHARD);
@@ -186,6 +210,81 @@ public class RegisterMUItems {
                     entries.add(TOPAZ_POTION);
                     entries.add(TOPAZ_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_FIERCE);
+
+                    entries.add(JADE);
+                    entries.add(JADE_INGOT);
+                    entries.add(JADE_CRYSTAL_SHARD);
+                    entries.add(JADE_APPLE);
+                    entries.add(JADE_POTION);
+                    entries.add(JADE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_NELUMBO);
+
+                    entries.add(AQUAMARINE);
+                    entries.add(AQUAMARINE_INGOT);
+                    entries.add(AQUAMARINE_CRYSTAL_SHARD);
+                    entries.add(AQUAMARINE_FISH);
+                    entries.add(AQUAMARINE_POTION);
+                    entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
+
+                    entries.add(KYANITE);
+                    entries.add(KYANITE_INGOT);
+                    entries.add(KYANITE_CRYSTAL_SHARD);
+                    entries.add(KYANITE_POTION);
+                    entries.add(KYANITE_UPGRADE_SMITHING_TEMPLATE);
+
+                    entries.add(SAPPHIRE);
+                    entries.add(SAPPHIRE_INGOT);
+                    entries.add(SAPPHIRE_CRYSTAL_SHARD);
+                    entries.add(SAPPHIRE_APPLE);
+                    entries.add(SAPPHIRE_POTION);
+                    entries.add(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_SOOT);
+
+                    entries.add(AMETRINE);
+                    entries.add(AMETRINE_INGOT);
+                    entries.add(AMETRINE_CRYSTAL_SHARD);
+                    entries.add(AMETRINE_APPLE);
+                    entries.add(AMETRINE_POTION);
+                    entries.add(AMETRINE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_APPOMATTOX);
+
+                    entries.add(RAW_NECOIUM);
+                    entries.add(NECOIUM_INGOT);
+                    entries.add(NECOIUM_NUGGET);
+                }).build();
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
+
+        ItemGroup MYTHICBLOCKGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Blocks"))
+                .icon(() -> new ItemStack(SAPPHIRE_BLOCK)).entries((displayContext, entries) -> {
+                    entries.add(RUBY_BLOCK);
+                    entries.add(RUBY_ORE);
+                    entries.add(RUBY_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_RUBY_CRYSTAL);
+                    entries.add(SMALL_RUBY_CRYSTAL_BUD);
+                    entries.add(MEDIUM_RUBY_CRYSTAL_BUD);
+                    entries.add(LARGE_RUBY_CRYSTAL_BUD);
+                    entries.add(RUBY_CRYSTAL_CLUSTER);
+
+                    entries.add(TOPAZ_BLOCK);
+                    entries.add(TOPAZ_ORE);
+                    entries.add(DEEPSLATE_TOPAZ_ORE);
+                    entries.add(TOPAZ_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_TOPAZ_CRYSTAL);
+                    entries.add(SMALL_TOPAZ_CRYSTAL_BUD);
+                    entries.add(MEDIUM_TOPAZ_CRYSTAL_BUD);
+                    entries.add(LARGE_TOPAZ_CRYSTAL_BUD);
+                    entries.add(TOPAZ_CRYSTAL_CLUSTER);
+
+                    entries.add(JADE_BLOCK);
+                    entries.add(JADE_ORE);
+                    entries.add(DEEPSLATE_JADE_ORE);
+                    entries.add(JADE_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_JADE_CRYSTAL);
+                    entries.add(SMALL_JADE_CRYSTAL_BUD);
+                    entries.add(MEDIUM_JADE_CRYSTAL_BUD);
+                    entries.add(LARGE_JADE_CRYSTAL_BUD);
+                    entries.add(JADE_CRYSTAL_CLUSTER);
 
                     entries.add(AQUAMARINE_BLOCK);
                     entries.add(AQUAMARINE_ORE);
@@ -196,63 +295,6 @@ public class RegisterMUItems {
                     entries.add(MEDIUM_AQUAMARINE_CRYSTAL_BUD);
                     entries.add(LARGE_AQUAMARINE_CRYSTAL_BUD);
                     entries.add(AQUAMARINE_CRYSTAL_CLUSTER);
-                    entries.add(AQUAMARINE_HELMET);
-                    entries.add(AQUAMARINE_CHESTPLATE);
-                    entries.add(AQUAMARINE_LEGGINGS);
-                    entries.add(AQUAMARINE_BOOTS);
-                    entries.add(AQUAMARINE_CHARM);
-                    entries.add(AQUAMARINE);
-                    entries.add(AQUAMARINE_INGOT);
-                    entries.add(AQUAMARINE_CRYSTAL_SHARD);
-                    entries.add(AQUAMARINE_FISH);
-                    entries.add(AQUAMARINE_POTION);
-                    entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
-
-                    entries.add(SAPPHIRE_BLOCK);
-                    entries.add(SAPPHIRE_ORE);
-                    entries.add(SAPPHIRE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_SAPPHIRE_CRYSTAL);
-                    entries.add(SMALL_SAPPHIRE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_SAPPHIRE_CRYSTAL_BUD);
-                    entries.add(LARGE_SAPPHIRE_CRYSTAL_BUD);
-                    entries.add(SAPPHIRE_CRYSTAL_CLUSTER);
-                    entries.add(SAPPHIRE_AXE);
-                    entries.add(SAPPHIRE_SWORD);
-                    entries.add(SAPPHIRE_HELMET);
-                    entries.add(SAPPHIRE_CHESTPLATE);
-                    entries.add(SAPPHIRE_LEGGINGS);
-                    entries.add(SAPPHIRE_BOOTS);
-                    entries.add(SAPPHIRE_CHARM);
-                    entries.add(SAPPHIRE);
-                    entries.add(SAPPHIRE_INGOT);
-                    entries.add(SAPPHIRE_CRYSTAL_SHARD);
-                    entries.add(SAPPHIRE_APPLE);
-                    entries.add(SAPPHIRE_POTION);
-                    entries.add(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_SOOT);
-
-                    entries.add(RUBY_BLOCK);
-                    entries.add(RUBY_ORE);
-                    entries.add(RUBY_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_RUBY_CRYSTAL);
-                    entries.add(SMALL_RUBY_CRYSTAL_BUD);
-                    entries.add(MEDIUM_RUBY_CRYSTAL_BUD);
-                    entries.add(LARGE_RUBY_CRYSTAL_BUD);
-                    entries.add(RUBY_CRYSTAL_CLUSTER);
-                    entries.add(RUBY_SHOVEL);
-                    entries.add(RUBY_PICKAXE);
-                    entries.add(RUBY_AXE);
-                    entries.add(RUBY_HOE);
-                    entries.add(RUBY_SWORD);
-                    entries.add(RUBY);
-                    entries.add(RUBY_CHARM);
-                    entries.add(RUBY_INGOT);
-                    entries.add(RUBY_CRYSTAL_SHARD);
-                    entries.add(RUBY_APPLE);
-                    entries.add(RUBY_POTION);
-                    entries.add(RUBY_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
 
                     entries.add(KYANITE_BLOCK);
                     entries.add(KYANITE_ORE);
@@ -262,20 +304,16 @@ public class RegisterMUItems {
                     entries.add(MEDIUM_KYANITE_CRYSTAL_BUD);
                     entries.add(LARGE_KYANITE_CRYSTAL_BUD);
                     entries.add(KYANITE_CRYSTAL_CLUSTER);
-                    entries.add(KYANITE_AXE);
-                    entries.add(KYANITE_SWORD);
-                    entries.add(KYANITE_HELMET);
-                    entries.add(KYANITE_CHESTPLATE);
-                    entries.add(KYANITE_LEGGINGS);
-                    entries.add(KYANITE_BOOTS);
-                    entries.add(KYANITE_CHARM);
-                    entries.add(KYANITE);
-                    entries.add(KYANITE_INGOT);
-                    entries.add(KYANITE_CRYSTAL_SHARD);
-                    entries.add(KYANITE_APPLE);
-                    entries.add(KYANITE_POTION);
-                    entries.add(KYANITE_UPGRADE_SMITHING_TEMPLATE);
-                    
+
+                    entries.add(SAPPHIRE_BLOCK);
+                    entries.add(SAPPHIRE_ORE);
+                    entries.add(SAPPHIRE_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_SAPPHIRE_CRYSTAL);
+                    entries.add(SMALL_SAPPHIRE_CRYSTAL_BUD);
+                    entries.add(MEDIUM_SAPPHIRE_CRYSTAL_BUD);
+                    entries.add(LARGE_SAPPHIRE_CRYSTAL_BUD);
+                    entries.add(SAPPHIRE_CRYSTAL_CLUSTER);
+
                     entries.add(AMETRINE_BLOCK);
                     entries.add(AMETRINE_ORE);
                     entries.add(AMETRINE_CRYSTAL_BLOCK);
@@ -284,29 +322,12 @@ public class RegisterMUItems {
                     entries.add(MEDIUM_AMETRINE_CRYSTAL_BUD);
                     entries.add(LARGE_AMETRINE_CRYSTAL_BUD);
                     entries.add(AMETRINE_CRYSTAL_CLUSTER);
-                    entries.add(AMETRINE_AXE);
-                    entries.add(AMETRINE_SWORD);
-                    entries.add(AMETRINE_HELMET);
-                    entries.add(AMETRINE_CHESTPLATE);
-                    entries.add(AMETRINE_LEGGINGS);
-                    entries.add(AMETRINE_BOOTS);
-                    entries.add(AMETRINE_CHARM);
-                    entries.add(AMETRINE);
-                    entries.add(AMETRINE_INGOT);
-                    entries.add(AMETRINE_CRYSTAL_SHARD);
-                    entries.add(AMETRINE_APPLE);
-                    entries.add(AMETRINE_POTION);
-                    entries.add(AMETRINE_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_APPOMATTOX);
 
                     entries.add(RAW_NECOIUM_BLOCK);
                     entries.add(NECOIUM_BLOCK);
                     entries.add(NECOIUM_ORE);
-                    entries.add(RAW_NECOIUM);
-                    entries.add(NECOIUM_INGOT);
-                    entries.add(NECOIUM_NUGGET);
                 }).build();
-        Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicitemgroup"), MYTHICITEMGROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
     }
 
     public static void registerMythicItems() {

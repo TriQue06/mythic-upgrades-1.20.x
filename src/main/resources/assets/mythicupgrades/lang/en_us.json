@@ -219,6 +219,13 @@
   "block.mythicupgrades.medium_ametrine_crystal_bud": "Medium Ametrine Crystal Bud",
   "block.mythicupgrades.small_ametrine_crystal_bud": "Small Ametrine Crystal Bud",
 
+  "item.mythicupgrades.raw_necoium": "Raw Necoium",
+  "item.mythicupgrades.necoium_ingot": "Necoium Ingot",
+  "item.mythicupgrades.necoium_nugget": "Necoium Nugget",
+  "block.mythicupgrades.necoium_ore": "Necoium Ore",
+  "block.mythicupgrades.necoium_block": "Block of Necoium",
+  "block.mythicupgrades.raw_necoium_block": "Block of Raw Necoium",
+
   "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
   "effect.mythicupgrades.freeze": "Freeze",
   "effect.mythicupgrades.damage_deflection": "Damage Deflection",

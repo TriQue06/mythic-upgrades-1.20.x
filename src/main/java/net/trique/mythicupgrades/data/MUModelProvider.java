@@ -166,7 +166,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(KYANITE, Models.GENERATED);
         itemModelGenerator.register(KYANITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(KYANITE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(KYANITE_APPLE, Models.GENERATED);
         itemModelGenerator.register(KYANITE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(AMETRINE_AXE, Models.HANDHELD);

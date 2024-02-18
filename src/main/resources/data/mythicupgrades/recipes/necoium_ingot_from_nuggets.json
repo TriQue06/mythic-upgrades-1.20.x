@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "necoium_ingot",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:necoium_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mythicupgrades:necoium_ingot"
+  },
+  "show_notification": true
+}

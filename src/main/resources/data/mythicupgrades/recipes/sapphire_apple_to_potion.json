@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "mythicupgrades:jade_apple"
+      "item": "mythicupgrades:sapphire_apple"
     }
   ],
   "result": {
-    "item": "mythicupgrades:jade_potion"
+    "item": "mythicupgrades:sapphire_potion"
   }
 }

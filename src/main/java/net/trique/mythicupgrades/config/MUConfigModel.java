@@ -61,8 +61,8 @@ public class MUConfigModel {
         public float sword_freeze_duration = 1.25f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 2f, max = 5f)
-        public float ice_shield_duration = 3f;
+        @RangeConstraint(min = 0.5f, max = 3f)
+        public float ice_shield_duration = 1.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
@@ -107,16 +107,16 @@ public class MUConfigModel {
 
     public static class AmetrineConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int ametrine_armor_speed_amplifier = 1;
+        @RangeConstraint(min = 0, max = 6)
+        public int ametrine_armor_speed_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int ametrine_armor_jump_boost_amplifier = 1;
+        @RangeConstraint(min = 0, max = 6)
+        public int ametrine_armor_jump_boost_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 2f)
-        public float axe_levitation_duration = 0.5f;
+        public float axe_levitation_duration = 0.75f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 4, max = 6)
@@ -124,7 +124,7 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 2f)
-        public float sword_levitation_duration = 0.5f;
+        public float sword_levitation_duration = 0.75f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 4, max = 6)

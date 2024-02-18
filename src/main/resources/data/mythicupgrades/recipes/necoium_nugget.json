@@ -3,10 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "mythicupgrades:jade_apple"
+      "item": "mythicupgrades:necoium_ingot"
     }
   ],
   "result": {
-    "item": "mythicupgrades:jade_potion"
+    "count": 9,
+    "item": "mythicupgrades:necoium_nugget"
   }
 }
