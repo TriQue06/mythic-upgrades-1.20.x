@@ -32,17 +32,18 @@ public class MUItems {
     private static final ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
     private static final List<Integer> kyaniteAmplifiers = List.of(CONFIG.kyaniteConfig.ice_shield_amplifier());
 
-    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.jump_boost_amplifier()).build();
-    private static final List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.jump_boost_amplifier(), CONFIG.ametrineConfig.speed_amplifier());
+    private static final ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.jump_boost_amplifier()).addForEquipmentBuffs(ARCANE_AURA, CONFIG.ametrineConfig.arcane_aura_amplifier()).build();
+    private static final List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.jump_boost_amplifier(), CONFIG.ametrineConfig.speed_amplifier(), CONFIG.ametrineConfig.arcane_aura_amplifier());
 
-    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 40, 0).build();
+    private static final ItemEffectsList jadeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, 30, 0).build();
     private static final ItemEffectsList topazItemEffects = new ItemEffectsList();
     private static final ItemEffectsList aquamarineItemEffects = new ItemEffectsList();
     private static final ItemEffectsList sapphireItemEffects = new ItemEffectsList();
     private static final ItemEffectsList rubyItemEffects = new ItemEffectsList();
     private static final ItemEffectsList kyaniteItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, 10, 0).build();
-    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 0).build();
+    private static final ItemEffectsList ametrineItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, 10, 2).build();
 
+    private static final ItemEffectsList noItemEffects = new ItemEffectsListBuilder().build();
     private static final ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int) (CONFIG.jadeConfig.sword_poison_duration() * 20), CONFIG.jadeConfig.sword_poison_amplifier()).build();
     private static final ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int) (CONFIG.jadeConfig.axe_poison_duration() * 20), CONFIG.jadeConfig.axe_poison_amplifier()).build();
     private static final ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_axe_amplifier()).build();
@@ -103,7 +104,7 @@ public class MUItems {
     public static final Item KYANITE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.KYANITE_POTION).maxCount(16));
     public static final Item KYANITE_CHARM = new KyaniteCharm(new FabricItemSettings().fireproof().maxCount(1));
 
-    public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.LIGHT_PURPLE, ametrineItemEffects, new FabricItemSettings());
+    public static final MUGemItem AMETRINE = new MUGemItem("ametrine.description", Formatting.DARK_PURPLE, ametrineItemEffects, new FabricItemSettings());
     public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_APPLE));
@@ -121,20 +122,20 @@ public class MUItems {
     public static final MythicEffectsArmorItem JADE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.JADE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), jadeArmorEffects, "jade_leggings.description", jadeAmplifiers, Formatting.GREEN);
     public static final MythicEffectsArmorItem JADE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.JADE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), jadeArmorEffects, "jade_boots.description", jadeAmplifiers, Formatting.GREEN);
 
-    public static final Item TOPAZ_SHOVEL = new ShovelItem(MUToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof()));
-    public static final Item TOPAZ_PICKAXE = new PickaxeItem(MUToolMaterials.TOPAZ, 2, -2.8f, (new FabricItemSettings().fireproof()));
-    public static final Item TOPAZ_AXE = new AxeItem(MUToolMaterials.TOPAZ, 6, -3f, (new FabricItemSettings().fireproof()));
-    public static final Item TOPAZ_HOE = new HoeItem(MUToolMaterials.TOPAZ, 1, 0.0f, (new FabricItemSettings().fireproof()));
-    public static final Item TOPAZ_SWORD = new SwordItem(MUToolMaterials.TOPAZ, 4, -2.4f, (new FabricItemSettings().fireproof()));
+    public static final Item TOPAZ_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_shovel.description", Formatting.GOLD);
+    public static final Item TOPAZ_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.TOPAZ, 2, -2.8f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_pickaxe.description", Formatting.GOLD);
+    public static final Item TOPAZ_AXE = new MythicEffectsAxeItem(MUToolMaterials.TOPAZ, 6, -3f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_axe.description", Formatting.GOLD);
+    public static final Item TOPAZ_HOE = new MythicEffectsHoeItem(MUToolMaterials.TOPAZ, 1, 0.0f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_hoe.description", Formatting.GOLD);
+    public static final Item TOPAZ_SWORD = new MythicEffectsSwordItem(MUToolMaterials.TOPAZ, 4, -2.4f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_sword.description", Formatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_helmet.description", topazAmplifiers, Formatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_chestplate.description", topazAmplifiers, Formatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_leggings.description", topazAmplifiers, Formatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), topazArmorEffects, "topaz_boots.description", topazAmplifiers, Formatting.GOLD);
 
-    public static final MythicEffectsArmorItem AQUAMARINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_helmet.description", aquamarineAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem AQUAMARINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_chestplate.description", aquamarineAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem AQUAMARINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_leggings.description", aquamarineAmplifiers, Formatting.GOLD);
-    public static final MythicEffectsArmorItem AQUAMARINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_boots.description", aquamarineAmplifiers, Formatting.GOLD);
+    public static final MythicEffectsArmorItem AQUAMARINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_helmet.description", aquamarineAmplifiers, Formatting.AQUA);
+    public static final MythicEffectsArmorItem AQUAMARINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_chestplate.description", aquamarineAmplifiers, Formatting.AQUA);
+    public static final MythicEffectsArmorItem AQUAMARINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_leggings.description", aquamarineAmplifiers, Formatting.AQUA);
+    public static final MythicEffectsArmorItem AQUAMARINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AQUAMARINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), aquamarineArmorEffects, "aquamarine_boots.description", aquamarineAmplifiers, Formatting.AQUA);
 
     public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(6, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.DARK_BLUE);
     public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(4, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.DARK_BLUE);
@@ -156,12 +157,12 @@ public class MUItems {
     public static final MythicEffectsArmorItem KYANITE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_leggings.description", kyaniteAmplifiers, Formatting.BLUE);
     public static final MythicEffectsArmorItem KYANITE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.KYANITE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), kyaniteArmorEffects, "kyanite_boots.description", kyaniteAmplifiers, Formatting.BLUE);
 
-    public static final MythicEffectsAxeItem AMETRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AMETRINE, 6, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsSwordItem AMETRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AMETRINE, 4, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsArmorItem AMETRINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_helmet.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsArmorItem AMETRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_chestplate.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsArmorItem AMETRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_leggings.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
-    public static final MythicEffectsArmorItem AMETRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", ametrineAmplifiers, Formatting.LIGHT_PURPLE);
+    public static final MythicEffectsAxeItem AMETRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.AMETRINE, 6, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "ametrine_axe.description", Formatting.DARK_PURPLE);
+    public static final MythicEffectsSwordItem AMETRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.AMETRINE, 4, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "ametrine_sword.description", Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem AMETRINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_helmet.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem AMETRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_chestplate.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem AMETRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_leggings.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem AMETRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
 
     public static final Item JADE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createJadeUpgrade();
     public static final Item TOPAZ_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createTopazUpgrade();

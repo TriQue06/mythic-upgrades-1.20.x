@@ -12,8 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
-import static net.trique.mythicupgrades.effect.MUEffects.ICE_SHIELD;
-import static net.trique.mythicupgrades.effect.MUEffects.ITEM_MASTERY;
+import static net.trique.mythicupgrades.effect.MUEffects.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 @Mixin(ServerWorld.class)
@@ -36,8 +35,8 @@ public abstract class ServerWorldMixin {
         ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
         List<Integer> kyaniteAmplifiers = List.of(CONFIG.kyaniteConfig.ice_shield_amplifier());
 
-        ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.jump_boost_amplifier()).build();
-        List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.jump_boost_amplifier(), CONFIG.ametrineConfig.speed_amplifier());
+        ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.jump_boost_amplifier()).addForEquipmentBuffs(ARCANE_AURA, CONFIG.ametrineConfig.arcane_aura_amplifier()).build();
+        List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.jump_boost_amplifier(), CONFIG.ametrineConfig.speed_amplifier(), CONFIG.ametrineConfig.arcane_aura_amplifier());
 
         ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.jadeConfig.sword_poison_duration() * 20), CONFIG.jadeConfig.sword_poison_amplifier()).build();
         ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.jadeConfig.axe_poison_duration() * 20), CONFIG.jadeConfig.axe_poison_amplifier()).build();

@@ -7,7 +7,7 @@ import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUToolMaterials implements ToolMaterial {
     JADE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(JADE_INGOT)),
-    TOPAZ(MiningLevels.NETHERITE, 8769, 10.0f, 5.0f, 18, Ingredient.ofItems(TOPAZ_INGOT)),
+    TOPAZ(MiningLevels.NETHERITE, 8769, 11.0f, 6.0f, 18, Ingredient.ofItems(TOPAZ_INGOT)),
     AQUAMARINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(AQUAMARINE_INGOT)),
     SAPPHIRE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(SAPPHIRE_INGOT)),
     RUBY(MiningLevels.NETHERITE, 2923, 13.0f, 5.0f, 18, Ingredient.ofItems(RUBY_INGOT)),

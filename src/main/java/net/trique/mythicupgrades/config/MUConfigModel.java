@@ -38,8 +38,8 @@ public class MUConfigModel {
         public int sword_poison_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 6f)
-        public float poisonous_thorns_poison_duration = 4f;
+        @RangeConstraint(min = 0.1f, max = 7f)
+        public float poisonous_thorns_poison_duration = 5f;
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int poisonous_thorns_amplifier = 0;
@@ -48,7 +48,7 @@ public class MUConfigModel {
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
-        public int item_mastery_amplifier = 1;
+        public int item_mastery_amplifier = 2;
     }
 
     public static class SapphireConfig {
@@ -90,19 +90,19 @@ public class MUConfigModel {
     public static class KyaniteConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 2f)
-        public float axe_freeze_duration = 1.25f;
+        public float axe_freeze_duration = 0.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 2f)
-        public float sword_freeze_duration = 1.25f;
+        public float sword_freeze_duration = 0.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.5f, max = 3f)
-        public float ice_shield_duration = 1.5f;
+        public float ice_shield_duration = 1.0f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
-        public int ice_shield_amplifier = 2;
+        public int ice_shield_amplifier = 0;
     }
 
     public static class AmetrineConfig {
@@ -129,5 +129,13 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 4, max = 6)
         public int sword_levitation_amplifier = 4;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.5f, max = 3f)
+        public float arcane_aura_duration = 0.75f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int arcane_aura_amplifier = 2;
     }
 }
