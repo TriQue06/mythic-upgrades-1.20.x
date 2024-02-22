@@ -48,7 +48,7 @@ public class MUConfigModel {
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
-        public int item_mastery_amplifier = 2;
+        public int topaz_item_mastery_amplifier = 2;
     }
 
     public static class SapphireConfig {

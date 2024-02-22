@@ -19,8 +19,8 @@ public class AquamarineCharm extends TrinketItem {
 
     public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers = super.getModifiers(stack, slot, entity, uuid);
-        modifiers.put(MUAttributes.WATER_SPEED, new EntityAttributeModifier(uuid, "mythicupgrades:water_speed", 1.0, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
-        modifiers.put(MUAttributes.WATER_VISIBILITY, new EntityAttributeModifier(uuid, "mythicupgrades:water_visibility", 100, EntityAttributeModifier.Operation.ADDITION));
+        modifiers.put(MUAttributes.WATER_SPEED, new EntityAttributeModifier(uuid, "mythicupgrades:water_speed", 0.8, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        modifiers.put(MUAttributes.WATER_VISIBILITY, new EntityAttributeModifier(uuid, "mythicupgrades:water_visibility", 80, EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }
 }

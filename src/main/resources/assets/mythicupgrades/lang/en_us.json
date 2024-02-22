@@ -231,7 +231,7 @@
   "death.attack.percentage": "%s has received enough magic percentage damage to pass away while fighting with %s.",
   "death.attack.percentage.item": "%s has received enough magic percentage damage to pass away while fighting with %s holding %s.",
 
-  "defaultArmorTooltip.description": "Wear full set of armour to get bonus effects.",
+  "defaultArmorTooltip.description": "Wear full set of armor to get bonus effects.",
 
   "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
   "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
@@ -252,10 +252,10 @@
   "ametrine_axe.description": "Levitates enemy on hit",
   "ametrine_sword.description": "Levitates enemy on hit.",
 
-  "topaz_helmet.description": "Set Bonus: Fire Resistance & Item Mastery %s",
-  "topaz_chestplate.description": "Set Bonus: Fire Resistance & Item Mastery %s",
-  "topaz_leggings.description": "Set Bonus: Fire Resistance & Item Mastery %s",
-  "topaz_boots.description": "Set Bonus: Fire Resistance & Item Mastery %s",
+  "topaz_helmet.description": "Set Bonus: Item Mastery %s",
+  "topaz_chestplate.description": "Set Bonus: Item Mastery %s",
+  "topaz_leggings.description": "Set Bonus: Item Mastery %s",
+  "topaz_boots.description": "Set Bonus: Item Mastery %s",
   "topaz_axe.description": "Has 3x durability.",
   "topaz_pickaxe.description": "Has 3x durability.",
   "topaz_shovel.description": "Has 3x durability.",
@@ -341,7 +341,7 @@
 
   "attribute.name.mythicupgrades.water_speed": "Water Speed",
   "attribute.name.mythicupgrades.water_speed.desc": "Increases movement speed in water.",
-  "attribute.name.mythicupgrades.lava_speed": "Lava Speed",
+  "attribute.name.mythicupgrades.generic.lava_speed": "Lava Speed",
   "attribute.name.mythicupgrades.lava_speed.desc": "Increases movement speed in lava.",
 
   "attribute.name.mythicupgrades.player.critical_bonus_damage": "Crit Damage",

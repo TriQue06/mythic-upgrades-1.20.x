@@ -35,7 +35,7 @@ public class MUCommands {
                                     CONFIG.jadeConfig.sword_poison_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_poison_duration(3f);
-                                    CONFIG.topazConfig.item_mastery_amplifier(2);
+                                    CONFIG.topazConfig.topaz_item_mastery_amplifier(2);
                                     CONFIG.sapphireConfig.axe_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);

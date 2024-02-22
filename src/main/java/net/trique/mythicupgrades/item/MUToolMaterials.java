@@ -14,9 +14,6 @@ public enum MUToolMaterials implements ToolMaterial {
     KYANITE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(KYANITE_INGOT)),
     AMETRINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(AMETRINE_INGOT));
 
-    //NETHERITE(4, 2031, 9.0F, 4.0F, 15, () -> {
-    //        return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});
-
     private final int miningLevel;
     private final int itemDurability;
     private final float miningSpeed;

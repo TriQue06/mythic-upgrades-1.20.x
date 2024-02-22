@@ -8,6 +8,7 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
+import net.trique.mythicupgrades.attributes.MUAttributes;
 
 import java.util.UUID;
 
@@ -19,6 +20,7 @@ public class SapphireCharm extends TrinketItem {
     public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
         var modifiers = super.getModifiers(stack, slot, entity, uuid);
         modifiers.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(uuid, "mythicupgrades:attack_damage", 2, EntityAttributeModifier.Operation.ADDITION));
+        modifiers.put(MUAttributes.CRITICAL_BONUS_DAMAGE, new EntityAttributeModifier(uuid, "mythicupgrades:critical_bonus", 0.5, EntityAttributeModifier.Operation.ADDITION));
         return modifiers;
     }
 }
