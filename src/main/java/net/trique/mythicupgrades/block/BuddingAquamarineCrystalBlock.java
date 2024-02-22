@@ -1,11 +1,18 @@
 package net.trique.mythicupgrades.block;
 
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
+import net.trique.mythicupgrades.MythicUpgrades;
+import org.jetbrains.annotations.Nullable;
 
 public class BuddingAquamarineCrystalBlock
 extends AmethystBlock {
@@ -42,5 +49,14 @@ extends AmethystBlock {
 
     public static boolean canGrowIn(BlockState state) {
         return state.isAir() || state.isOf(Blocks.WATER) && state.getFluidState().getLevel() == 8;
+    }
+
+    @Override
+    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+        // do it here rather than through loot tables to easily check for the config value
+        super.afterBreak(world, player, pos, state, blockEntity, tool);
+        if (MythicUpgrades.CONFIG.aquamarineConfig.silk_touch_budding_crystal() && EnchantmentHelper.hasSilkTouch(tool)) {
+            dropStack(world, pos, MUBlocks.BUDDING_AQUAMARINE_CRYSTAL.asItem().getDefaultStack());
+        }
     }
 }
