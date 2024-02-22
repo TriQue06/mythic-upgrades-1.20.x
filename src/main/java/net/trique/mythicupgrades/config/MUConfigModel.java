@@ -43,12 +43,18 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int poisonous_thorns_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int item_mastery_amplifier = 1;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 
     public static class AquamarineConfig {
@@ -58,6 +64,9 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 2f)
         public float sword_freeze_duration = 1.25f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 
     public static class SapphireConfig {
@@ -72,6 +81,9 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int damage_deflection_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 
     public static class RubyConfig {
@@ -94,6 +106,9 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
         public int haste_hoe_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 
     public static class AmetrineConfig {
@@ -120,5 +135,8 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 4, max = 6)
         public int sword_levitation_amplifier = 4;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        public boolean silk_touch_budding_crystal = false;
     }
 }
