@@ -35,7 +35,7 @@ public class MUCommands {
                                     CONFIG.jadeConfig.sword_poison_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_poison_duration(3f);
-                                    CONFIG.topazConfig.item_mastery_amplifier(1);
+                                    CONFIG.topazConfig.item_mastery_amplifier(2);
                                     CONFIG.sapphireConfig.axe_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);
@@ -44,9 +44,9 @@ public class MUCommands {
                                     CONFIG.rubyConfig.haste_shovel_amplifier(0);
                                     CONFIG.rubyConfig.haste_sword_amplifier(0);
                                     CONFIG.rubyConfig.haste_hoe_amplifier(0);
-                                    CONFIG.kyaniteConfig.axe_freeze_duration(0.5f);
-                                    CONFIG.kyaniteConfig.sword_freeze_duration(0.5f);
-                                    CONFIG.kyaniteConfig.ice_shield_duration(1.5f);
+                                    CONFIG.kyaniteConfig.axe_freeze_duration(0.33f);
+                                    CONFIG.kyaniteConfig.sword_freeze_duration(0.33f);
+                                    CONFIG.kyaniteConfig.ice_shield_duration(1.0f);
                                     CONFIG.kyaniteConfig.ice_shield_amplifier(2);
                                     CONFIG.ametrineConfig.axe_levitation_duration(0.75f);
                                     CONFIG.ametrineConfig.axe_levitation_amplifier(4);

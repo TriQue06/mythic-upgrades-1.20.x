@@ -76,7 +76,7 @@ public class MUConfiguredFeatures {
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 5));
         register(context, KYANITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherKyaniteOres, 5));
         register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 5));
-        register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNecoiumOres, 5));
+        register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNecoiumOres, 3));
 
         register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),

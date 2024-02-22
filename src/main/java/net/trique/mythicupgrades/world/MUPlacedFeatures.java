@@ -63,7 +63,7 @@ public class MUPlacedFeatures {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, NECOIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.NECOIUM_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(3,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),

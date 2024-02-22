@@ -117,7 +117,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(JADE, Models.GENERATED);
         itemModelGenerator.register(JADE_INGOT, Models.GENERATED);
         itemModelGenerator.register(JADE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(JADE_APPLE, Models.GENERATED);
         itemModelGenerator.register(JADE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(TOPAZ_SHOVEL, Models.HANDHELD);
@@ -129,14 +128,12 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TOPAZ, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_APPLE, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
 
         itemModelGenerator.register(AQUAMARINE_CHARM, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(AQUAMARINE_FISH, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(SAPPHIRE_AXE, Models.HANDHELD);
@@ -145,7 +142,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_INGOT, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_APPLE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(RUBY_SHOVEL, Models.HANDHELD);
@@ -157,7 +153,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RUBY, Models.GENERATED);
         itemModelGenerator.register(RUBY_INGOT, Models.GENERATED);
         itemModelGenerator.register(RUBY_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(RUBY_APPLE, Models.GENERATED);
         itemModelGenerator.register(RUBY_POTION, Models.GENERATED);
 
         itemModelGenerator.register(KYANITE_SWORD, Models.HANDHELD);
@@ -174,7 +169,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AMETRINE, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_APPLE, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_POTION, Models.GENERATED);
         
         itemModelGenerator.register(RAW_NECOIUM, Models.GENERATED);

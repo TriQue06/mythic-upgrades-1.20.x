@@ -57,6 +57,8 @@ public class RegisterMUItems {
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
         registerItem("music_disc_fierce", MUSIC_DISC_FIERCE);
 
+        registerItem("aquamarine_sword", AQUAMARINE_SWORD);
+        registerItem("aquamarine_axe", AQUAMARINE_AXE);
         registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
         registerItem("aquamarine_chestplate", AQUAMARINE_CHESTPLATE);
         registerItem("aquamarine_leggings", AQUAMARINE_LEGGINGS);
@@ -198,7 +200,6 @@ public class RegisterMUItems {
                     entries.add(RUBY);
                     entries.add(RUBY_INGOT);
                     entries.add(RUBY_CRYSTAL_SHARD);
-                    entries.add(RUBY_APPLE);
                     entries.add(RUBY_POTION);
                     entries.add(RUBY_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_TANKER_ON_THE_LEVANTINES);
@@ -206,7 +207,6 @@ public class RegisterMUItems {
                     entries.add(TOPAZ);
                     entries.add(TOPAZ_INGOT);
                     entries.add(TOPAZ_CRYSTAL_SHARD);
-                    entries.add(TOPAZ_APPLE);
                     entries.add(TOPAZ_POTION);
                     entries.add(TOPAZ_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_FIERCE);
@@ -214,7 +214,6 @@ public class RegisterMUItems {
                     entries.add(JADE);
                     entries.add(JADE_INGOT);
                     entries.add(JADE_CRYSTAL_SHARD);
-                    entries.add(JADE_APPLE);
                     entries.add(JADE_POTION);
                     entries.add(JADE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_NELUMBO);
@@ -222,7 +221,6 @@ public class RegisterMUItems {
                     entries.add(AQUAMARINE);
                     entries.add(AQUAMARINE_INGOT);
                     entries.add(AQUAMARINE_CRYSTAL_SHARD);
-                    entries.add(AQUAMARINE_FISH);
                     entries.add(AQUAMARINE_POTION);
                     entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
@@ -236,7 +234,6 @@ public class RegisterMUItems {
                     entries.add(SAPPHIRE);
                     entries.add(SAPPHIRE_INGOT);
                     entries.add(SAPPHIRE_CRYSTAL_SHARD);
-                    entries.add(SAPPHIRE_APPLE);
                     entries.add(SAPPHIRE_POTION);
                     entries.add(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_SOOT);
@@ -244,7 +241,6 @@ public class RegisterMUItems {
                     entries.add(AMETRINE);
                     entries.add(AMETRINE_INGOT);
                     entries.add(AMETRINE_CRYSTAL_SHARD);
-                    entries.add(AMETRINE_APPLE);
                     entries.add(AMETRINE_POTION);
                     entries.add(AMETRINE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(MUSIC_DISC_APPOMATTOX);

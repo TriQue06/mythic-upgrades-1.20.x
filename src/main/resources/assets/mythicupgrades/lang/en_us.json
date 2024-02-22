@@ -51,7 +51,6 @@
   "item.mythicupgrades.jade": "Jade",
   "item.mythicupgrades.jade_ingot": "Jade Ingot",
   "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard",
-  "item.mythicupgrades.jade_apple": "Jade Apple",
   "item.mythicupgrades.jade_potion": "Jade Potion",
 
   "item.mythicupgrades.jade_helmet": "Jade Helmet",
@@ -76,7 +75,6 @@
   "item.mythicupgrades.topaz": "Topaz",
   "item.mythicupgrades.topaz_ingot": "Topaz Ingot",
   "item.mythicupgrades.topaz_crystal_shard": "Topaz Crystal Shard",
-  "item.mythicupgrades.topaz_apple": "Topaz Apple",
   "item.mythicupgrades.topaz_potion": "Topaz Potion",
 
   "item.mythicupgrades.topaz_helmet": "Topaz Helmet",
@@ -104,7 +102,6 @@
   "item.mythicupgrades.aquamarine": "Aquamarine",
   "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
   "item.mythicupgrades.aquamarine_crystal_shard": "Aquamarine Crystal Shard",
-  "item.mythicupgrades.aquamarine_fish": "Aquamarine Fish",
   "item.mythicupgrades.aquamarine_potion": "Aquamarine Potion",
 
   "item.mythicupgrades.aquamarine_helmet": "Aquamarine Helmet",
@@ -126,7 +123,6 @@
   "item.mythicupgrades.sapphire": "Sapphire",
   "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
   "item.mythicupgrades.sapphire_crystal_shard": "Sapphire Crystal Shard",
-  "item.mythicupgrades.sapphire_apple": "Sapphire Apple",
   "item.mythicupgrades.sapphire_potion": "Sapphire Potion",
 
   "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
@@ -151,7 +147,6 @@
   "item.mythicupgrades.ruby": "Ruby",
   "item.mythicupgrades.ruby_ingot": "Ruby Ingot",
   "item.mythicupgrades.ruby_crystal_shard": "Ruby Crystal Shard",
-  "item.mythicupgrades.ruby_apple": "Ruby Apple",
   "item.mythicupgrades.ruby_potion": "Ruby Potion",
 
   "item.mythicupgrades.ruby_sword": "Ruby Sword",
@@ -174,7 +169,6 @@
   "item.mythicupgrades.kyanite": "Kyanite",
   "item.mythicupgrades.kyanite_ingot": "Kyanite Ingot",
   "item.mythicupgrades.kyanite_crystal_shard": "Kyanite Crystal Shard",
-  "item.mythicupgrades.kyanite_apple": "Kyanite Apple",
   "item.mythicupgrades.kyanite_potion": "Kyanite Potion",
   
   "item.mythicupgrades.kyanite_helmet": "Kyanite Helmet",
@@ -197,8 +191,7 @@
   
   "item.mythicupgrades.ametrine": "Ametrine",
   "item.mythicupgrades.ametrine_ingot": "Ametrine Ingot",
-  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard",
-  "item.mythicupgrades.ametrine_apple": "Ametrine Apple",
+  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard", 
   "item.mythicupgrades.ametrine_potion": "Ametrine Potion",
 
   "item.mythicupgrades.ametrine_helmet": "Ametrine Helmet",
@@ -238,31 +231,27 @@
   "death.attack.percentage": "%s has received enough magic percentage damage to pass away while fighting with %s.",
   "death.attack.percentage.item": "%s has received enough magic percentage damage to pass away while fighting with %s holding %s.",
 
-  "defaultArmorTooltip.description": "Wear full set of armour to get bonus effects if presented.",
+  "defaultArmorTooltip.description": "Wear full set of armour to get bonus effects.",
 
-  "kyanite.description": "Freezes enemy on hit.",
   "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
   "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
   "kyanite_leggings.description": "Set Bonus: Ice Shield %s",
   "kyanite_boots.description": "Set Bonus: Ice Shield %s",
   "kyanite_axe.description": "Freezes enemy on hit.",
   "kyanite_sword.description": "Freezes enemy on hit.",
-  
-  "aquamarine.description": "Has no effects on its own.",
+
   "aquamarine_helmet.description": "Set Bonus: Dolphin's Grace & Water Breathing",
   "aquamarine_chestplate.description": "Set Bonus: Dolphin's Grace & Water Breathing",
   "aquamarine_leggings.description": "Set Bonus: Dolphin's Grace & Water Breathing",
   "aquamarine_boots.description": "Set Bonus: Dolphin's Grace & Water Breathing",
 
-  "ametrine.description": "Levitates enemy on hit.",
   "ametrine_helmet.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
   "ametrine_chestplate.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
   "ametrine_leggings.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
   "ametrine_boots.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
-  "ametrine_axe.description": "Levitates enemy on hit.",
+  "ametrine_axe.description": "Levitates enemy on hit",
   "ametrine_sword.description": "Levitates enemy on hit.",
 
-  "topaz.description": "Has no effects on its own.",
   "topaz_helmet.description": "Set Bonus: Fire Resistance & Item Mastery %s",
   "topaz_chestplate.description": "Set Bonus: Fire Resistance & Item Mastery %s",
   "topaz_leggings.description": "Set Bonus: Fire Resistance & Item Mastery %s",
@@ -273,7 +262,6 @@
   "topaz_hoe.description": "Has 3x durability.",
   "topaz_sword.description": "Has 3x durability.",
 
-  "sapphire.description": "Has no effects on its own.",
   "sapphire_helmet.description": "Set Bonus: Damage Deflection %s",
   "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s",
   "sapphire_leggings.description": "Set Bonus: Damage Deflection %s",
@@ -349,5 +337,23 @@
   "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Add netherite armor or weapon",
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
-  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade"
+  "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
+
+  "attribute.name.mythicupgrades.water_speed": "Water Speed",
+  "attribute.name.mythicupgrades.water_speed.desc": "Increases movement speed in water.",
+  "attribute.name.mythicupgrades.lava_speed": "Lava Speed",
+  "attribute.name.mythicupgrades.lava_speed.desc": "Increases movement speed in lava.",
+
+  "attribute.name.mythicupgrades.player.critical_bonus_damage": "Crit Damage",
+  "attribute.name.mythicupgrades.player.critical_bonus_damage.desc": "Increases damage when dealing critical hits.",
+  "attribute.name.mythicupgrades.player.water_visibility": " Water Vision",
+  "attribute.name.mythicupgrades.player.water_visibility.desc": "Increases view range in Water",
+  "attribute.name.mythicupgrades.player.lava_visibility": "Lava Vision",
+  "attribute.name.mythicupgrades.player.lava_visibility.desc": "Increases view range in Lava",
+  "attribute.name.mythicupgrades.player.dig_speed": "Mining Speed",
+  "attribute.name.mythicupgrades.player.dig_speed.desc": "Increases the speed when mining blocks",
+  "attribute.name.mythicupgrades.player.dropped_experience": "Dropped Experience",
+  "attribute.name.mythicupgrades.player.dropped_experience.desc": "Increases experience drops by blocks and kills",
+  "attribute.name.mythicupgrades.player.magic_protection": "Magic Protection",
+  "attribute.name.mythicupgrades.player.magic_protection.desc": "Decreases damage from magical damage sources"
 }

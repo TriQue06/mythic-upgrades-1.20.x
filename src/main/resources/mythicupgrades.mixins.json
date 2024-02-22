@@ -7,9 +7,12 @@
     "LivingEntityMixin",
     "MobEntityMixin",
     "PlayerEntityMixin",
-    "ServerWorldMixin"
+    "ServerWorldMixin",
+    "BlockMixin"
   ],
-  "client": [],
+  "client": [
+    "client.BackgroundRendererMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
