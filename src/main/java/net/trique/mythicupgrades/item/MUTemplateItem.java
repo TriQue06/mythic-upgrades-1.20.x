@@ -102,7 +102,7 @@ public class MUTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_AXE_TEXTURE);
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE);
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyAdditionsSlotTextures() {

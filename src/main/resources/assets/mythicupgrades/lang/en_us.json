@@ -342,14 +342,14 @@
   "attribute.name.mythicupgrades.generic.lava_speed": "Lava Speed",
   "attribute.name.mythicupgrades.lava_speed.desc": "Increases movement speed in lava.",
 
-  "attribute.name.mythicupgrades.player.critical_bonus_damage": "Crit Damage",
+  "attribute.name.mythicupgrades.player.critical_bonus_damage": "Critical Damage",
   "attribute.name.mythicupgrades.player.critical_bonus_damage.desc": "Increases damage when dealing critical hits.",
-  "attribute.name.mythicupgrades.player.water_visibility": " Water Vision",
-  "attribute.name.mythicupgrades.player.water_visibility.desc": "Increases view range in Water",
+  "attribute.name.mythicupgrades.player.water_visibility": "Water Vision",
+  "attribute.name.mythicupgrades.player.water_visibility.desc": "Increases view range in water.",
   "attribute.name.mythicupgrades.player.lava_visibility": "Lava Vision",
-  "attribute.name.mythicupgrades.player.lava_visibility.desc": "Increases view range in Lava",
+  "attribute.name.mythicupgrades.player.lava_visibility.desc": "Increases view range in lava.",
   "attribute.name.mythicupgrades.player.dig_speed": "Mining Speed",
-  "attribute.name.mythicupgrades.player.dig_speed.desc": "Increases the speed when mining blocks",
+  "attribute.name.mythicupgrades.player.dig_speed.desc": "Increases the speed when mining blocks.",
   "attribute.name.mythicupgrades.player.dropped_experience": "Dropped Experience",
-  "attribute.name.mythicupgrades.player.dropped_experience.desc": "Increases experience drops by blocks and kills"
+  "attribute.name.mythicupgrades.player.dropped_experience.desc": "Increases experience drops by blocks and kills."
 }
