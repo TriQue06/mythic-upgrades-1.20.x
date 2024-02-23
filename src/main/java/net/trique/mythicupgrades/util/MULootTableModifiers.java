@@ -135,6 +135,24 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
+            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f))
+                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f))
+                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
             if(NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))

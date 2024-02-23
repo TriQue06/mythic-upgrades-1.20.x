@@ -14,6 +14,7 @@ public class MUSounds {
     public static SoundEvent NELUMBO = registerSoundEvent("nelumbo");
     public static SoundEvent FLOW_OF_THE_ABYSS = registerSoundEvent("flow_of_the_abyss");
     public static SoundEvent TANKER_ON_THE_LEVANTINES = registerSoundEvent("tanker_on_the_levantines");
+    public static SoundEvent BOSSA_NOVA_BY_THE_SHORE = registerSoundEvent("bossa_nova_by_the_shore");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(MythicUpgrades.MOD_ID, name);

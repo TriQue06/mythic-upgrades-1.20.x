@@ -52,11 +52,12 @@ public class MUItems {
     private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int) (CONFIG.ametrineConfig.sword_levitation_duration() * 20), CONFIG.ametrineConfig.sword_levitation_amplifier()).build();
 
     public static final MusicDiscItem MUSIC_DISC_NELUMBO = new MusicDiscItem(14, MUSounds.NELUMBO, new FabricItemSettings().maxCount(1), 118);
-    public static final MusicDiscItem MUSIC_DISC_SOOT = new MusicDiscItem(15, MUSounds.SOOT, new FabricItemSettings().maxCount(1), 299);
+    public static final MusicDiscItem MUSIC_DISC_SOOT = new MusicDiscItem(14, MUSounds.SOOT, new FabricItemSettings().maxCount(1), 299);
     public static final MusicDiscItem MUSIC_DISC_APPOMATTOX = new MusicDiscItem(14, MUSounds.APPOMATTOX, new FabricItemSettings().maxCount(1), 724);
     public static final MusicDiscItem MUSIC_DISC_FIERCE = new MusicDiscItem(14, MUSounds.FIERCE, new FabricItemSettings().maxCount(1), 129);
     public static final MusicDiscItem MUSIC_DISC_TANKER_ON_THE_LEVANTINES = new MusicDiscItem(14, MUSounds.TANKER_ON_THE_LEVANTINES, new FabricItemSettings().maxCount(1), 201);
     public static final MusicDiscItem MUSIC_DISC_FLOW_OF_THE_ABYSS = new MusicDiscItem(14, MUSounds.FLOW_OF_THE_ABYSS, new FabricItemSettings().maxCount(1), 125);
+    public static final MusicDiscItem MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE = new MusicDiscItem(14, MUSounds.BOSSA_NOVA_BY_THE_SHORE, new FabricItemSettings().maxCount(1), 130);
 
     public static final Item JADE = new Item(new FabricItemSettings());
     public static final Item JADE_INGOT = new Item(new FabricItemSettings().fireproof());

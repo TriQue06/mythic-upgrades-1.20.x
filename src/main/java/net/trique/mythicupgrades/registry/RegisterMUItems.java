@@ -113,6 +113,7 @@ public class RegisterMUItems {
         registerItem("kyanite_crystal_shard", KYANITE_CRYSTAL_SHARD);
         registerItem("kyanite_potion", KYANITE_POTION);
         registerItem("kyanite_upgrade_smithing_template", KYANITE_UPGRADE_SMITHING_TEMPLATE);
+        registerItem("music_disc_bossa_nova_by_the_shore", MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE);
 
         registerItem("ametrine_axe", AMETRINE_AXE);
         registerItem("ametrine_sword", AMETRINE_SWORD);
@@ -223,13 +224,14 @@ public class RegisterMUItems {
                     entries.add(AQUAMARINE_CRYSTAL_SHARD);
                     entries.add(AQUAMARINE_POTION);
                     entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
-                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
+                    entries.add(MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE);
 
                     entries.add(KYANITE);
                     entries.add(KYANITE_INGOT);
                     entries.add(KYANITE_CRYSTAL_SHARD);
                     entries.add(KYANITE_POTION);
                     entries.add(KYANITE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(MUSIC_DISC_FLOW_OF_THE_ABYSS);
 
                     entries.add(SAPPHIRE);
                     entries.add(SAPPHIRE_INGOT);

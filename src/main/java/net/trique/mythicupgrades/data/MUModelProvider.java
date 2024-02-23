@@ -102,6 +102,7 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MUSIC_DISC_NELUMBO, Models.GENERATED);
         itemModelGenerator.register(MUSIC_DISC_FLOW_OF_THE_ABYSS, Models.GENERATED);
         itemModelGenerator.register(MUSIC_DISC_TANKER_ON_THE_LEVANTINES, Models.GENERATED);
+        itemModelGenerator.register(MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE, Models.GENERATED);
 
         itemModelGenerator.register(JADE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);

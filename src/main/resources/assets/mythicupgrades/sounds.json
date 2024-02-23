@@ -46,5 +46,13 @@
         "stream": true
       }
     ]
+  },
+  "bossa_nova_by_the_shore": {
+    "sounds": [
+      {
+        "name": "mythicupgrades:bossa_nova_by_the_shore",
+        "stream": true
+      }
+    ]
   }
 }
