@@ -151,7 +151,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.BLUE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block KYANITE_ORE = registerBlock("kyanite_ore",
-            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.BASALT).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_KYANITE_CRYSTAL = registerBlock("budding_kyanite_crystal",
             new BuddingRubyCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLUE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
