@@ -48,23 +48,23 @@ public class MUPlacedFeatures {
 
         register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, KYANITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.KYANITE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, NECOIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.NECOIUM_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(5,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(64))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),

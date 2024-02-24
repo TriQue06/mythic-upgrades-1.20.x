@@ -56,7 +56,7 @@
   "item.mythicupgrades.jade_helmet": "Yeşim Miğfer",
   "item.mythicupgrades.jade_chestplate": "Yeşim Göğüslük",
   "item.mythicupgrades.jade_leggings": "Yeşim Tozluk",
-  "item.mythicupgrades.jade_boots": "Yeşim Botlar",
+  "item.mythicupgrades.jade_boots": "Yeşim Çizme",
 
   "item.mythicupgrades.jade_sword": "Yeşim Kılıç",
   "item.mythicupgrades.jade_axe": "Yeşim Balta",
@@ -80,7 +80,7 @@
   "item.mythicupgrades.topaz_helmet": "Topaz Miğfer",
   "item.mythicupgrades.topaz_chestplate": "Topaz Göğüslük",
   "item.mythicupgrades.topaz_leggings": "Topaz Tozluk",
-  "item.mythicupgrades.topaz_boots": "Topaz Botlar",
+  "item.mythicupgrades.topaz_boots": "Topaz Çizme",
 
   "item.mythicupgrades.topaz_sword": "Topaz Kılıç",
   "item.mythicupgrades.topaz_axe": "Topaz Balta",
@@ -107,7 +107,7 @@
   "item.mythicupgrades.aquamarine_helmet": "Akuamarin Miğfer",
   "item.mythicupgrades.aquamarine_chestplate": "Akuamarin Göğüslük",
   "item.mythicupgrades.aquamarine_leggings": "Akuamarin Tozluk",
-  "item.mythicupgrades.aquamarine_boots": "Akuamarin Botlar",
+  "item.mythicupgrades.aquamarine_boots": "Akuamarin Çizme",
   "item.mythicupgrades.aquamarine_charm": "Akuamarin Tılsım",
 
   "block.mythicupgrades.aquamarine_ore": "Akuamarin Cevheri",
@@ -128,7 +128,7 @@
   "item.mythicupgrades.sapphire_helmet": "Safir Miğfer",
   "item.mythicupgrades.sapphire_chestplate": "Safir Göğüslük",
   "item.mythicupgrades.sapphire_leggings": "Safir Tozluk",
-  "item.mythicupgrades.sapphire_boots": "Safir Botlar",
+  "item.mythicupgrades.sapphire_boots": "Safir Çizme",
 
   "item.mythicupgrades.sapphire_sword": "Safir Kılıç",
   "item.mythicupgrades.sapphire_axe": "Safir Balta",
@@ -174,7 +174,7 @@
   "item.mythicupgrades.kyanite_helmet": "Kiyanit Miğfer",
   "item.mythicupgrades.kyanite_chestplate": "Kiyanit Göğüslük",
   "item.mythicupgrades.kyanite_leggings": "Kiyanit Tozluk",
-  "item.mythicupgrades.kyanite_boots": "Kiyanit Botlar",
+  "item.mythicupgrades.kyanite_boots": "Kiyanit Çizme",
 
   "item.mythicupgrades.kyanite_sword": "Kiyanit Kılıç",
   "item.mythicupgrades.kyanite_axe": "Kiyanit Balta",
@@ -197,7 +197,7 @@
   "item.mythicupgrades.ametrine_helmet": "Ametrin Miğfer",
   "item.mythicupgrades.ametrine_chestplate": "Ametrin Göğüslük",
   "item.mythicupgrades.ametrine_leggings": "Ametrin Tozluk",
-  "item.mythicupgrades.ametrine_boots": "Ametrin Botlar",
+  "item.mythicupgrades.ametrine_boots": "Ametrin Çizme",
 
   "item.mythicupgrades.ametrine_sword": "Ametrin Kılıç",
   "item.mythicupgrades.ametrine_axe": "Ametrin Balta",
@@ -214,7 +214,7 @@
 
   "item.mythicupgrades.raw_necoium": "Ham Necoyum",
   "item.mythicupgrades.necoium_ingot": "Necoyum Külçesi",
-  "item.mythicupgrades.necoium_nugget": "Necoyum Nugget",
+  "item.mythicupgrades.necoium_nugget": "Necoyum Parçası",
   "block.mythicupgrades.necoium_ore": "Necoyum Cevheri",
   "block.mythicupgrades.necoium_block": "Necoyum Bloğu",
   "block.mythicupgrades.raw_necoium_block": "Ham Necoyum Bloğu",
