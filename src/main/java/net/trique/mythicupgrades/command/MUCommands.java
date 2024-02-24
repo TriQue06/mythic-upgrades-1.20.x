@@ -29,9 +29,9 @@ public class MUCommands {
                 .then(
                         literal("config").then(literal("restoreDefaults")
                                 .executes(ctx -> {
-                                    CONFIG.jadeConfig.axe_poison_duration(2f);
+                                    CONFIG.jadeConfig.axe_poison_duration(1.5f);
                                     CONFIG.jadeConfig.axe_poison_amplifier(2);
-                                    CONFIG.jadeConfig.sword_poison_duration(2f);
+                                    CONFIG.jadeConfig.sword_poison_duration(1.5f);
                                     CONFIG.jadeConfig.sword_poison_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_amplifier(2);
                                     CONFIG.jadeConfig.poisonous_thorns_poison_duration(3f);
@@ -46,7 +46,7 @@ public class MUCommands {
                                     CONFIG.rubyConfig.haste_hoe_amplifier(0);
                                     CONFIG.kyaniteConfig.axe_freeze_duration(0.33f);
                                     CONFIG.kyaniteConfig.sword_freeze_duration(0.33f);
-                                    CONFIG.kyaniteConfig.ice_shield_duration(1.0f);
+                                    CONFIG.kyaniteConfig.ice_shield_duration(0.66f);
                                     CONFIG.kyaniteConfig.ice_shield_amplifier(2);
                                     CONFIG.ametrineConfig.axe_levitation_duration(0.75f);
                                     CONFIG.ametrineConfig.axe_levitation_amplifier(4);

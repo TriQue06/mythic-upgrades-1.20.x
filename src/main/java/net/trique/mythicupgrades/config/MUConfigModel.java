@@ -24,15 +24,15 @@ public class MUConfigModel {
 
     public static class JadeConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 5f)
-        public float axe_poison_duration = 2f;
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float axe_poison_duration = 1.5f;
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 5)
         public int axe_poison_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 5f)
-        public float sword_poison_duration = 2f;
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float sword_poison_duration = 1.5f;
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 5)
         public int sword_poison_amplifier = 2;
@@ -97,12 +97,12 @@ public class MUConfigModel {
         public float sword_freeze_duration = 0.33f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.5f, max = 3f)
-        public float ice_shield_duration = 1.0f;
+        @RangeConstraint(min = 0.33f, max = 3f)
+        public float ice_shield_duration = 0.66f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
-        public int ice_shield_amplifier = 0;
+        public int ice_shield_amplifier = 2;
     }
 
     public static class AmetrineConfig {
