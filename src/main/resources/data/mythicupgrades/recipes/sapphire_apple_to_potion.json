@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "mythicupgrades:sapphire_apple"
+    },
+    {
+      "item": "mythicupgrades:sapphire_apple"
+    },
+    {
+      "item": "mythicupgrades:necoium_nugget"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:sapphire_potion"
+  }
+}

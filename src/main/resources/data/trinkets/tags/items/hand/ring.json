@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "mythicupgrades:jade_charm",
+    "mythicupgrades:topaz_charm",
+    "mythicupgrades:aquamarine_charm",
+    "mythicupgrades:sapphire_charm",
+    "mythicupgrades:ruby_charm",
+    "mythicupgrades:kyanite_charm",
+    "mythicupgrades:ametrine_charm"
+  ]
+}

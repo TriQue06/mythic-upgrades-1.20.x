@@ -44,6 +44,14 @@
     "mythicupgrades:large_ruby_crystal_bud",
     "mythicupgrades:medium_ruby_crystal_bud",
     "mythicupgrades:small_ruby_crystal_bud",
+    "mythicupgrades:kyanite_block",
+    "mythicupgrades:kyanite_ore",
+    "mythicupgrades:kyanite_crystal_block",
+    "mythicupgrades:budding_kyanite_crystal",
+    "mythicupgrades:kyanite_crystal_cluster",
+    "mythicupgrades:large_kyanite_crystal_bud",
+    "mythicupgrades:medium_kyanite_crystal_bud",
+    "mythicupgrades:small_kyanite_crystal_bud",
     "mythicupgrades:ametrine_block",
     "mythicupgrades:ametrine_ore",
     "mythicupgrades:ametrine_crystal_block",
@@ -51,6 +59,9 @@
     "mythicupgrades:ametrine_crystal_cluster",
     "mythicupgrades:large_ametrine_crystal_bud",
     "mythicupgrades:medium_ametrine_crystal_bud",
-    "mythicupgrades:small_ametrine_crystal_bud"
+    "mythicupgrades:small_ametrine_crystal_bud",
+    "mythicupgrades:raw_necoium_block",
+    "mythicupgrades:necoium_ore",
+    "mythicupgrades:necoium_block"
   ]
 }

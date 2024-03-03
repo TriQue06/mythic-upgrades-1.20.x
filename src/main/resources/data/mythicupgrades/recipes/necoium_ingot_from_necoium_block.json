@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "necoium_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:necoium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:necoium_ingot"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "kyanite",
+  "ingredient": {
+    "item": "mythicupgrades:kyanite_ore"
+  },
+  "result": "mythicupgrades:kyanite"
+}

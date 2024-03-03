@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "mythicupgrades:block/kyanite_ore_top",
+    "side": "mythicupgrades:block/kyanite_ore_side"
+  }
+}
