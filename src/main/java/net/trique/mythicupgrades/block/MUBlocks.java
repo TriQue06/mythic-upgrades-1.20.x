@@ -1,8 +1,8 @@
 package net.trique.mythicupgrades.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -17,10 +17,10 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.LIME).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block JADE_ORE = registerBlock("jade_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block DEEPSLATE_JADE_ORE = registerBlock("deepslate_jade_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_JADE_CRYSTAL = registerBlock("budding_jade_crystal",
             new BuddingJadeCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIME).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -45,10 +45,10 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.TERRACOTTA_ORANGE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block TOPAZ_ORE = registerBlock("topaz_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block DEEPSLATE_TOPAZ_ORE = registerBlock("deepslate_topaz_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(TOPAZ_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(TOPAZ_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_TOPAZ_CRYSTAL = registerBlock("budding_topaz_crystal",
             new BuddingTopazCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.TERRACOTTA_ORANGE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -73,10 +73,10 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.LIGHT_BLUE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block AQUAMARINE_ORE = registerBlock("aquamarine_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block DEEPSLATE_AQUAMARINE_ORE = registerBlock("deepslate_aquamarine_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(AQUAMARINE_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(AQUAMARINE_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_AQUAMARINE_CRYSTAL = registerBlock("budding_aquamarine_crystal",
             new BuddingAquamarineCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -101,7 +101,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.LAPIS_BLUE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_SAPPHIRE_CRYSTAL = registerBlock("budding_sapphire_crystal",
             new BuddingSapphireCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.LAPIS_BLUE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -126,7 +126,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.DARK_RED).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_RUBY_CRYSTAL = registerBlock("budding_ruby_crystal",
             new BuddingRubyCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_RED).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -145,13 +145,38 @@ public class MUBlocks {
 
     public static final Block SMALL_RUBY_CRYSTAL_BUD = registerBlock("small_ruby_crystal_bud",
             new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(RUBY_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+    
+    
+    public static final Block KYANITE_BLOCK = registerBlock("kyanite_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.BLUE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block KYANITE_ORE = registerBlock("kyanite_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.BASALT).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+
+    public static final Block BUDDING_KYANITE_CRYSTAL = registerBlock("budding_kyanite_crystal",
+            new BuddingRubyCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLUE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block KYANITE_CRYSTAL_BLOCK = registerBlock("kyanite_crystal_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.BLUE).sounds(BlockSoundGroup.AMETHYST_BLOCK).strength(3.0f, 1200.0f)));
+
+    public static final Block KYANITE_CRYSTAL_CLUSTER = registerBlock("kyanite_crystal_cluster",
+            new AmethystClusterBlock(7, 3, AbstractBlock.Settings.create().mapColor(MapColor.BLUE).solid().nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5f).luminance(state -> 5).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block LARGE_KYANITE_CRYSTAL_BUD = registerBlock("large_kyanite_crystal_bud",
+            new AmethystClusterBlock(5, 3, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block MEDIUM_KYANITE_CRYSTAL_BUD = registerBlock("medium_kyanite_crystal_bud",
+            new AmethystClusterBlock(4, 3, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 2).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block SMALL_KYANITE_CRYSTAL_BUD = registerBlock("small_kyanite_crystal_bud",
+            new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(KYANITE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
 
 
     public static final Block AMETRINE_BLOCK = registerBlock("ametrine_block",
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block AMETRINE_ORE = registerBlock("ametrine_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(16, 32), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block BUDDING_AMETRINE_CRYSTAL = registerBlock("budding_ametrine_crystal",
             new BuddingAmetrineCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
@@ -170,6 +195,16 @@ public class MUBlocks {
 
     public static final Block SMALL_AMETRINE_CRYSTAL_BUD = registerBlock("small_ametrine_crystal_bud",
             new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(AMETRINE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block RAW_NECOIUM_BLOCK = registerBlock("raw_necoium_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.RAW_GOLD_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 6.0f).instrument(Instrument.FLUTE)));
+
+    public static final Block NECOIUM_BLOCK = registerBlock("necoium_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block NECOIUM_ORE = registerBlock("necoium_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

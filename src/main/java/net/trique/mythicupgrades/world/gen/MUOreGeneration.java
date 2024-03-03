@@ -19,7 +19,7 @@ public class MUOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_GEODE_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.AQUATIC),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY);
@@ -34,10 +34,17 @@ public class MUOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.RUBY_CRYSTAL_GEODE_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.KYANITE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.KYANITE_CRYSTAL_GEODE_PLACED_KEY);
+
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AMETRINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AMETRINE_CRYSTAL_GEODE_PLACED_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.NECOIUM_ORE_PLACED_KEY);
     }
 }

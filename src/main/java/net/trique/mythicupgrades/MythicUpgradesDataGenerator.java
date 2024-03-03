@@ -12,11 +12,7 @@ public class MythicUpgradesDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-        pack.addProvider(MULootTableGenerator::new);
-        pack.addProvider(MURecipeGenerator::new);
-        pack.addProvider(MUModelProvider::new);
         pack.addProvider(MUWorldGenerator::new);
-        pack.addProvider(MUItemTagProvider::new);
     }
 
     @Override

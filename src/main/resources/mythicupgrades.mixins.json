@@ -4,6 +4,7 @@
   "package": "net.trique.mythicupgrades.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockMixin",
     "BowItemMixin",
     "BrushItemMixin",
     "CrossBowItemMixin",
@@ -20,7 +21,9 @@
     "SwordItemMixin",
     "TridentItemMixin"
   ],
-  "client": [],
+  "client": [
+    "client.BackgroundRendererMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

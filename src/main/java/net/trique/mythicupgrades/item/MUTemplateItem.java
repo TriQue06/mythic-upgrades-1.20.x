@@ -54,6 +54,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Text RUBY_UPGRADE_INGREDIENTS_TEXT;
     private static final Text RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Text RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
+    private static final Text KYANITE_UPGRADE_TEXT;
+    private static final Text KYANITE_UPGRADE_APPLIES_TO_TEXT;
+    private static final Text KYANITE_UPGRADE_INGREDIENTS_TEXT;
+    private static final Text KYANITE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
+    private static final Text KYANITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
     private static final Text AMETRINE_UPGRADE_TEXT;
     private static final Text AMETRINE_UPGRADE_APPLIES_TO_TEXT;
     private static final Text AMETRINE_UPGRADE_INGREDIENTS_TEXT;
@@ -97,7 +102,7 @@ public class MUTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_AXE_TEXTURE);
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE);
     }
 
     private static List<Identifier> getAquamarineUpgradeEmptyAdditionsSlotTextures() {
@@ -125,6 +130,18 @@ public class MUTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getRubyUpgradeEmptyAdditionsSlotTextures() {
+        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
+    }
+
+    public static MUTemplateItem createKyaniteUpgrade() {
+        return new MUTemplateItem(KYANITE_UPGRADE_APPLIES_TO_TEXT, KYANITE_UPGRADE_INGREDIENTS_TEXT, KYANITE_UPGRADE_TEXT, KYANITE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, KYANITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getKyaniteUpgradeEmptyBaseSlotTextures(), getKyaniteUpgradeEmptyAdditionsSlotTextures());
+    }
+
+    private static List<Identifier> getKyaniteUpgradeEmptyBaseSlotTextures() {
+        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
+    }
+
+    private static List<Identifier> getKyaniteUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
@@ -206,6 +223,12 @@ public class MUTemplateItem extends SmithingTemplateItem {
         RUBY_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ruby_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
         RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ruby_upgrade.base_slot_description")));
         RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ruby_upgrade.additions_slot_description")));
+
+        KYANITE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("kyanite_upgrade"))).formatted(TITLE_FORMATTING);
+        KYANITE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.kyanite_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+        KYANITE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.kyanite_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+        KYANITE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.kyanite_upgrade.base_slot_description")));
+        KYANITE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.kyanite_upgrade.additions_slot_description")));
 
         AMETRINE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("ametrine_upgrade"))).formatted(TITLE_FORMATTING);
         AMETRINE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);

@@ -33,6 +33,11 @@ public class MythicUpgradesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_RUBY_CRYSTAL_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.SMALL_RUBY_CRYSTAL_BUD, RenderLayer.getCutout());
         
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.KYANITE_CRYSTAL_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.LARGE_KYANITE_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_KYANITE_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.SMALL_KYANITE_CRYSTAL_BUD, RenderLayer.getCutout());
+        
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.AMETRINE_CRYSTAL_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.LARGE_AMETRINE_CRYSTAL_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_AMETRINE_CRYSTAL_BUD, RenderLayer.getCutout());

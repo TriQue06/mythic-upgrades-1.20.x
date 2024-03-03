@@ -10,6 +10,5 @@ import java.util.List;
 public interface BaseMythicArmorItem extends BaseMythicItem {
     HashMap<StatusEffect, EffectMeta> getEquipmentBuffs();
     HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs();
-
     void setNewEffects(ItemEffectsList effectsList, List<Integer> amplifierList);
 }

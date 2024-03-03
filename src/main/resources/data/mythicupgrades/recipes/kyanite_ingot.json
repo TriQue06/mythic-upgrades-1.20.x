@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "kyanite_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:kyanite"
+    },
+    {
+      "item": "mythicupgrades:kyanite"
+    },
+    {
+      "item": "mythicupgrades:kyanite"
+    },
+    {
+      "item": "mythicupgrades:kyanite"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:kyanite_ingot"
+  }
+}

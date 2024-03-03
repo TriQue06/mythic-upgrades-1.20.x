@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "kyanite_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:kyanite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:kyanite_ingot"
+  }
+}
