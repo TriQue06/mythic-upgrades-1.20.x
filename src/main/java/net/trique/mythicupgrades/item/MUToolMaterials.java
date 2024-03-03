@@ -6,12 +6,13 @@ import net.minecraft.recipe.Ingredient;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUToolMaterials implements ToolMaterial {
-    JADE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(JADE_INGOT)),
-    TOPAZ(MiningLevels.NETHERITE, 6318, 10.0f, 4.5f, 18, Ingredient.ofItems(TOPAZ_INGOT)),
-    AQUAMARINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(AQUAMARINE_INGOT)),
-    SAPPHIRE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(SAPPHIRE_INGOT)),
-    RUBY(MiningLevels.NETHERITE, 2106, 12.0f, 4.0f, 18, Ingredient.ofItems(RUBY_INGOT)),
-    AMETRINE(MiningLevels.NETHERITE, 2106, 9.0f, 4.0f, 18, Ingredient.ofItems(AMETRINE_INGOT));
+    JADE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(JADE_INGOT)),
+    TOPAZ(MiningLevels.NETHERITE, 8769, 11.0f, 6.0f, 18, Ingredient.ofItems(TOPAZ_INGOT)),
+    AQUAMARINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(AQUAMARINE_INGOT)),
+    SAPPHIRE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(SAPPHIRE_INGOT)),
+    RUBY(MiningLevels.NETHERITE, 2923, 13.0f, 5.0f, 18, Ingredient.ofItems(RUBY_INGOT)),
+    KYANITE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(KYANITE_INGOT)),
+    AMETRINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(AMETRINE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

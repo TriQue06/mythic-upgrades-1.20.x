@@ -4,6 +4,7 @@
   "package": "net.trique.mythicupgrades.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockMixin",
     "BowItemMixin",
     "BrushItemMixin",
     "CrossBowItemMixin",

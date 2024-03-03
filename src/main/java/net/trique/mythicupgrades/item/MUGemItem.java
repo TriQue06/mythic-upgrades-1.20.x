@@ -18,25 +18,16 @@ import java.util.List;
 
 public class MUGemItem extends Item implements BaseMythicItem {
     private final MythicEffectVirtualItemHandler virtualItemHandler;
-    private final String translationKey;
-    private final Formatting color;
 
-    public MUGemItem(String translationKey, Formatting color, ItemEffectsList effects, Settings settings) {
+    public MUGemItem(ItemEffectsList effects, Settings settings) {
         super(settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
-        this.translationKey = translationKey;
-        this.color = color;
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         virtualItemHandler.handlePostHit(target, attacker);
         return super.postHit(stack, target, attacker);
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(translationKey).formatted(color));
     }
 
     @Override
