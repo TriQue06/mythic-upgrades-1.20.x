@@ -21,7 +21,9 @@
     "SwordItemMixin",
     "TridentItemMixin"
   ],
-  "client": [],
+  "client": [
+    "client.BackgroundRendererMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
