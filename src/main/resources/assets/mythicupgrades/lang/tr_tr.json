@@ -1,45 +1,4 @@
 {
-  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "dark_purple", "bold": "true"}],
-
-  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Yeşim", "color" : "green", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Akuamarin", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Safir", "color" : "dark_blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Yakut", "color" : "red", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.kyaniteConfig": [{"text" : "Kiyanit", "color" : "blue", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrin", "color" : "dark_purple", "bold": "true"}],
-
-  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Baltanın Hasarı (Rakip maks. canının %)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Kılıcın Hasarı (Rakip maks. canının %)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Zırhın Hasar Yansıtma Seviyesi", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.ametrineConfig.speed_amplifier": [{"text": "Zırhın Hız Seviyesi", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.jump_boost_amplifier": [{"text": "Zırhın Zıplama Desteği Seviyesi", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Baltanın Havaya Yükseltme Süresi", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Baltanın Havaya Yükseltme Seviyesi", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Kılıcın Havaya Yükseltme Süresi", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Kılıcın Havaya Yükseltme Seviyesi", "color": "dark_purple"}],
-
-  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_amplifier": [{"text": "Zırhın Zehirli Dikenler Seviyesi", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.poisonous_thorns_poison_duration": [{"text": "Zırhın Zehirli Dikenler Süresi", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_duration": [{"text": "Baltanın Zehir Süresi", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.axe_poison_amplifier": [{"text": "Baltanın Zehir Seviyesi", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_duration": [{"text": "Kılıcın Zehir Süresi", "color": "green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.sword_poison_amplifier": [{"text": "Kılıcın Zehir Seviyesj", "color": "green"}],
-
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Kazmanın Acele Seviyesi", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Baltanın Acele Seviyesi", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_shovel_amplifier": [{"text": "Küreğin Acele Seviyesi", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Kılıcın Acele Seviyesi", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Çapanın Acele Seviyesi", "color": "red"}],
-
-  "text.config.mythicupgrades-config.option.kyaniteConfig.axe_freeze_duration": [{"text": "Baltanın Dondurma Süresi", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.kyaniteConfig.sword_freeze_duration": [{"text": "Kılıcın Dondurma Süresi", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.kyaniteConfig.ice_shield_duration": [{"text": "Zırhın Buz Kalkanı Süresi", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.kyaniteConfig.ice_shield_amplifier": [{"text": "Zırhın Buz Kalkanı Seviyesi", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.topazConfig.topaz_item_mastery_amplifier": [{"text": "Zırhın Eşya Ustalığı Seviyesi", "color": "gold"}],
-
   "item.mythicupgrades.jade_upgrade_smithing_template": "Demirci Şablonu",
   "item.mythicupgrades.topaz_upgrade_smithing_template": "Demirci Şablonu",
   "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Demirci Şablonu",
