@@ -21,7 +21,7 @@ public class ArcaneAuraEffect extends StatusEffect {
             Entity attacker = livingEntity.getAttacker();
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
-                    entity.playSound(SoundEvents.ENTITY_ENDER_EYE_DEATH, 1.0f, livingEntity.getSoundPitch());
+                    entity.playSound(SoundEvents.ENTITY_SHULKER_BULLET_HIT, 1.0f, livingEntity.getSoundPitch());
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,
                             (int)(CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
                 }

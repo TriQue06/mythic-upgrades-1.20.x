@@ -26,17 +26,6 @@ loom {
 }
 
 repositories {
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
-            }
-        }
-        filter {
-            includeGroup "maven.modrinth"
-        }
-    }
     maven { url 'https://maven.wispforest.io' }
 
     maven {
@@ -56,8 +45,6 @@ dependencies {
 
     annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
     include "io.wispforest:owo-sentinel:${project.owo_version}"
-    modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-    modImplementation include("maven.modrinth:AdditionalEntityAttributes:${project.aea_version}")
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 

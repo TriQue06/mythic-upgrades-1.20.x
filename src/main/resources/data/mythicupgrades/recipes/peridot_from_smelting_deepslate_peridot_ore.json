@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "group": "peridot",
+  "ingredient": {
+    "item": "mythicupgrades:deepslate_peridot_ore"
+  },
+  "result": "mythicupgrades:peridot"
+}

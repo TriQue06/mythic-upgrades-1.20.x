@@ -18,7 +18,7 @@ import net.trique.mythicupgrades.block.MUBlocks;
 import java.util.List;
 
 public class MUConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PERIDOT_ORE_KEY = registerKey("peridot_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> TOPAZ_ORE_KEY = registerKey("topaz_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY = registerKey("aquamarine_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
@@ -27,7 +27,7 @@ public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETRINE_ORE_KEY = registerKey("ametrine_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NECOIUM_ORE_KEY = registerKey("necoium_ore");
 
-    public static final RegistryKey<ConfiguredFeature<?,?>> JADE_CRYSTAL_GEODE_KEY = registerKey("jade_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PERIDOT_CRYSTAL_GEODE_KEY = registerKey("peridot_crystal_geode");
     public static final RegistryKey<ConfiguredFeature<?,?>> TOPAZ_CRYSTAL_GEODE_KEY = registerKey("topaz_crystal_geode");
     public static final RegistryKey<ConfiguredFeature<?,?>> AQUAMARINE_CRYSTAL_GEODE_KEY = registerKey("aquamarine_crystal_geode");
     public static final RegistryKey<ConfiguredFeature<?,?>> SAPPHIRE_CRYSTAL_GEODE_KEY = registerKey("sapphire_crystal_geode");
@@ -43,8 +43,8 @@ public class MUConfiguredFeatures {
         RuleTest endStoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> overworldJadeOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.JADE_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_JADE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.PERIDOT_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_PERIDOT_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> overworldTopazOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.TOPAZ_ORE.getDefaultState()),
@@ -69,7 +69,7 @@ public class MUConfiguredFeatures {
         List<OreFeatureConfig.Target> endNecoiumOres =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.NECOIUM_ORE.getDefaultState()));
 
-        register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 4));
+        register(context, PERIDOT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 4));
         register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 4));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 4));
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 4));
@@ -78,13 +78,13 @@ public class MUConfiguredFeatures {
         register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 4));
         register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNecoiumOres, 4));
 
-        register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+        register(context, PERIDOT_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
-                        BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_JADE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.PERIDOT_CRYSTAL_BLOCK),
+                        BlockStateProvider.of(MUBlocks.BUDDING_PERIDOT_CRYSTAL),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.SMALL_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),

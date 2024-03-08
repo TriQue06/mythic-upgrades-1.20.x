@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mythicupgrades:block/peridot_crystal_cluster"
+  }
+}

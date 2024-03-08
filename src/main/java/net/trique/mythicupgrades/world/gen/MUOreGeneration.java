@@ -10,9 +10,9 @@ import net.trique.mythicupgrades.world.MUPlacedFeatures;
 public class MUOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_ORE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.PERIDOT_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_CRYSTAL_GEODE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.PERIDOT_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_ORE_PLACED_KEY);

@@ -8,9 +8,8 @@ import net.trique.mythicupgrades.MythicUpgrades;
 
 @Config(name = MythicUpgrades.MOD_ID + "-config", wrapperName = "MUConfig")
 public class MUConfigModel {
-
     @Nest
-    public JadeConfig jadeConfig = new JadeConfig();
+    public PeridotConfig peridotConfig = new PeridotConfig();
     @Nest
     public TopazConfig topazConfig = new TopazConfig();
     @Nest
@@ -21,8 +20,10 @@ public class MUConfigModel {
     public KyaniteConfig kyaniteConfig = new KyaniteConfig();
     @Nest
     public AmetrineConfig ametrineConfig = new AmetrineConfig();
+    @Nest
+    public JadeConfig jadeConfig = new JadeConfig();
 
-    public static class JadeConfig {
+    public static class PeridotConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 3f)
         public float axe_poison_duration = 1.5f;
@@ -98,7 +99,7 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.33f, max = 3f)
-        public float ice_shield_duration = 0.66f;
+        public float ice_shield_duration = 0.67f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
@@ -106,14 +107,6 @@ public class MUConfigModel {
     }
 
     public static class AmetrineConfig {
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int speed_amplifier = 2;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int jump_boost_amplifier = 2;
-
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 2f)
         public float axe_levitation_duration = 0.75f;
@@ -137,5 +130,23 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int arcane_aura_amplifier = 2;
+    }
+
+    public static class JadeConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int speed_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int jump_boost_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 3f, max = 10f)
+        public float hindering_duration = 5f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int hindering_amplifier = 0;
     }
 }

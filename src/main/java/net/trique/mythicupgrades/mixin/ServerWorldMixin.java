@@ -20,8 +20,8 @@ public abstract class ServerWorldMixin {
     @Inject(method = "tick", at = @At(value = "HEAD"))
 
     private void updateByConfigs(CallbackInfo ci) {
-        ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.jadeConfig.poisonous_thorns_amplifier()).build();
-        List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.poisonous_thorns_amplifier());
+        ItemEffectsList peridotArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.peridotConfig.poisonous_thorns_amplifier()).build();
+        List<Integer> peridotAmplifiers = List.of(CONFIG.peridotConfig.poisonous_thorns_amplifier());
 
         ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.topaz_item_mastery_amplifier()).build();
         List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.topaz_item_mastery_amplifier());
@@ -35,28 +35,26 @@ public abstract class ServerWorldMixin {
         ItemEffectsList kyaniteArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).addForEquipmentBuffs(ICE_SHIELD, CONFIG.kyaniteConfig.ice_shield_amplifier()).build();
         List<Integer> kyaniteAmplifiers = List.of(CONFIG.kyaniteConfig.ice_shield_amplifier());
 
-        ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.ametrineConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.ametrineConfig.jump_boost_amplifier()).addForEquipmentBuffs(ARCANE_AURA, CONFIG.ametrineConfig.arcane_aura_amplifier()).build();
-        List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.jump_boost_amplifier(), CONFIG.ametrineConfig.speed_amplifier(), CONFIG.ametrineConfig.arcane_aura_amplifier());
+        ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ARCANE_AURA, CONFIG.ametrineConfig.arcane_aura_amplifier()).build();
+        List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.arcane_aura_amplifier());
 
-        ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.jadeConfig.sword_poison_duration() * 20), CONFIG.jadeConfig.sword_poison_amplifier()).build();
-        ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.jadeConfig.axe_poison_duration() * 20), CONFIG.jadeConfig.axe_poison_amplifier()).build();
+        ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.sword_poison_duration() * 20), CONFIG.peridotConfig.sword_poison_amplifier()).build();
+        ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.axe_poison_duration() * 20), CONFIG.peridotConfig.axe_poison_amplifier()).build();
         ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_axe_amplifier()).build();
         ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_pickaxe_amplifier()).build();
         ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_hoe_amplifier()).build();
         ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_shovel_amplifier()).build();
-        ItemEffectsList hasteSwordItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_sword_amplifier()).build();
         ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.kyaniteConfig.axe_freeze_duration() * 20), 0).build();
         ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.kyaniteConfig.sword_freeze_duration() * 20), 0).build();
         ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int)(CONFIG.ametrineConfig.axe_levitation_duration() * 20), CONFIG.ametrineConfig.axe_levitation_amplifier()).build();
         ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int)(CONFIG.ametrineConfig.sword_levitation_duration() * 20), CONFIG.ametrineConfig.sword_levitation_amplifier()).build();
 
-        JADE_AXE.setNewEffects(poisonAxeItemEffects);
-        JADE_SWORD.setNewEffects(poisonSwordItemEffects);
+        PERIDOT_AXE.setNewEffects(poisonAxeItemEffects);
+        PERIDOT_SWORD.setNewEffects(poisonSwordItemEffects);
         SAPPHIRE_SWORD.setPercent(CONFIG.sapphireConfig.sword_percentage_damage_percent());
         SAPPHIRE_AXE.setPercent(CONFIG.sapphireConfig.axe_percentage_damage_percent());
         RUBY_AXE.setNewEffects(hasteAxeItemEffects);
         RUBY_PICKAXE.setNewEffects(hastePickaxeItemEffects);
-        RUBY_SWORD.setNewEffects(hasteSwordItemEffects);
         RUBY_SHOVEL.setNewEffects(hasteShovelItemEffects);
         RUBY_HOE.setNewEffects(hasteHoeItemEffects);
         KYANITE_AXE.setNewEffects(freezeAxeItemEffects);
@@ -64,10 +62,10 @@ public abstract class ServerWorldMixin {
         AMETRINE_AXE.setNewEffects(levitationAxeItemEffects);
         AMETRINE_SWORD.setNewEffects(levitationSwordItemEffects);
 
-        JADE_HELMET.setNewEffects(jadeArmorEffects, jadeAmplifiers);
-        JADE_CHESTPLATE.setNewEffects(jadeArmorEffects, jadeAmplifiers);
-        JADE_LEGGINGS.setNewEffects(jadeArmorEffects, jadeAmplifiers);
-        JADE_BOOTS.setNewEffects(jadeArmorEffects, jadeAmplifiers);
+        PERIDOT_HELMET.setNewEffects(peridotArmorEffects, peridotAmplifiers);
+        PERIDOT_CHESTPLATE.setNewEffects(peridotArmorEffects, peridotAmplifiers);
+        PERIDOT_LEGGINGS.setNewEffects(peridotArmorEffects, peridotAmplifiers);
+        PERIDOT_BOOTS.setNewEffects(peridotArmorEffects, peridotAmplifiers);
         AQUAMARINE_HELMET.setNewEffects(aquamarineArmorEffects, aquamarineAmplifiers);
         AQUAMARINE_CHESTPLATE.setNewEffects(aquamarineArmorEffects, aquamarineAmplifiers);
         AQUAMARINE_LEGGINGS.setNewEffects(aquamarineArmorEffects, aquamarineAmplifiers);

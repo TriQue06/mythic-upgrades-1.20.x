@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "peridot",
+  "ingredient": {
+    "item": "mythicupgrades:peridot_ore"
+  },
+  "result": "mythicupgrades:peridot"
+}

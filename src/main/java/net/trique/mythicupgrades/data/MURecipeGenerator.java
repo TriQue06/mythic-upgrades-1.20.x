@@ -7,7 +7,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.item.MUItems;
-
 import static net.trique.mythicupgrades.item.MUItems.*;
 import static net.trique.mythicupgrades.util.DataGenHelper.*;
 import static net.trique.mythicupgrades.util.CommonFunctions.getId;
@@ -21,10 +20,10 @@ public class MURecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerSmelting(exporter, List.of(MUBlocks.JADE_ORE, MUBlocks.DEEPSLATE_JADE_ORE), RecipeCategory.MISC, JADE,
-                3.0f, 200, "jade");
-        offerBlasting(exporter, List.of(MUBlocks.JADE_ORE, MUBlocks.DEEPSLATE_JADE_ORE), RecipeCategory.MISC, JADE,
-                3.0f, 100, "jade");
+        offerSmelting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
+                3.0f, 200, "peridot");
+        offerBlasting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
+                3.0f, 100, "peridot");
 
         offerSmelting(exporter, List.of(MUBlocks.TOPAZ_ORE, MUBlocks.DEEPSLATE_TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
                 3.0f, 200, "topaz");
@@ -56,6 +55,11 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(MUBlocks.AMETRINE_ORE), RecipeCategory.MISC, AMETRINE,
                 3.0f, 100, "ametrine");
 
+        offerSmelting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
+                3.0f, 200, "jade");
+        offerBlasting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
+                3.0f, 100, "jade");
+
         offerSmelting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 200, "necoium");
         offerBlasting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
@@ -66,8 +70,8 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(RAW_NECOIUM), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 100, "necoium");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, JADE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.JADE_BLOCK,
-                getId("jade_block"), "jade_block", getId("jade_ingot_from_jade_block"), "jade_ingot");
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, PERIDOT_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.PERIDOT_BLOCK,
+                getId("peridot_block"), "peridot_block", getId("peridot_ingot_from_peridot_block"), "peridot_ingot");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, TOPAZ_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.TOPAZ_BLOCK,
                 getId("topaz_block"), "topaz_block", getId("topaz_ingot_from_topaz_block"), "topaz_ingot");
@@ -87,14 +91,17 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AMETRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AMETRINE_BLOCK,
                 getId("ametrine_block"), "ametrine_block", getId("ametrine_ingot_from_ametrine_block"), "ametrine_ingot");
 
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, JADE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.JADE_BLOCK,
+                getId("jade_block"), "jade_block", getId("jade_ingot_from_jade_block"), "jade_ingot");
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, MUItems.NECOIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.NECOIUM_BLOCK,
                 getId("necoium_block"), "necoium_block", getId("necoium_ingot_from_necoium_block"), "necoium_ingot");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RAW_NECOIUM, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RAW_NECOIUM_BLOCK,
                 getId("raw_necoium_block"), "raw_necoium_block", getId("raw_necoium_from_raw_necoium_block"), "necoium_ingot");
 
-        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> JADE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> JADE, ()->Items.MOSSY_COBBLESTONE);
+        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                ()-> PERIDOT, ()->Items.MOSSY_COBBLESTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> TOPAZ_UPGRADE_SMITHING_TEMPLATE,
                 ()-> TOPAZ, ()->Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
@@ -107,10 +114,12 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 ()-> KYANITE, ()->Items.BASALT);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AMETRINE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> AMETRINE, ()->Items.END_STONE_BRICKS);
+        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> JADE_UPGRADE_SMITHING_TEMPLATE,
+                ()-> JADE, ()->Items.END_STONE_BRICKS);
 
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> JADE_INGOT, List.of(JADE, JADE, JADE, JADE,
+        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> PERIDOT_INGOT, List.of(PERIDOT, PERIDOT, PERIDOT, PERIDOT,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
-                List.of(JADE), "jade_ingot", 1);
+                List.of(PERIDOT), "peridot_ingot", 1);
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> TOPAZ_INGOT, List.of(TOPAZ, TOPAZ, TOPAZ, TOPAZ,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
                 List.of(TOPAZ),"topaz_ingot", 1);
@@ -127,21 +136,24 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
                 List.of(KYANITE),"kyanite_ingot", 1);
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> AMETRINE_INGOT, List.of(AMETRINE, AMETRINE, AMETRINE, AMETRINE,
-                MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
+                        MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
                 List.of(AMETRINE),"ametrine_ingot", 1);
+        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> JADE_INGOT, List.of(JADE, JADE, JADE, JADE,
+                        MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
+                List.of(JADE),"jade_ingot", 1);
 
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_AXE, JADE_INGOT, RecipeCategory.COMBAT, JADE_AXE);
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_SWORD, JADE_INGOT, RecipeCategory.COMBAT, JADE_SWORD);
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_HELMET, JADE_INGOT, RecipeCategory.COMBAT, JADE_HELMET);
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_CHESTPLATE, JADE_INGOT, RecipeCategory.COMBAT, JADE_CHESTPLATE);
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_LEGGINGS, JADE_INGOT, RecipeCategory.COMBAT, JADE_LEGGINGS);
-        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_BOOTS, JADE_INGOT, RecipeCategory.COMBAT, JADE_BOOTS);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_AXE, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_AXE);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_SWORD, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_SWORD);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_HELMET, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_HELMET);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_CHESTPLATE, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_CHESTPLATE);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_LEGGINGS, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_LEGGINGS);
+        offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_BOOTS, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_BOOTS);
 
         offerCustomUpgradeRecipe(exporter, TOPAZ_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_AXE, TOPAZ_INGOT, RecipeCategory.COMBAT, TOPAZ_AXE);
@@ -220,5 +232,18 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 Items.NETHERITE_LEGGINGS, AMETRINE_INGOT, RecipeCategory.COMBAT, AMETRINE_LEGGINGS);
         offerCustomUpgradeRecipe(exporter, AMETRINE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_BOOTS, AMETRINE_INGOT, RecipeCategory.COMBAT, AMETRINE_BOOTS);
+
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_AXE, JADE_INGOT, RecipeCategory.COMBAT, JADE_AXE);
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_SWORD, JADE_INGOT, RecipeCategory.COMBAT, JADE_SWORD);
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_HELMET, JADE_INGOT, RecipeCategory.COMBAT, JADE_HELMET);
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_CHESTPLATE, JADE_INGOT, RecipeCategory.COMBAT, JADE_CHESTPLATE);
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_LEGGINGS, JADE_INGOT, RecipeCategory.COMBAT, JADE_LEGGINGS);
+        offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_BOOTS, JADE_INGOT, RecipeCategory.COMBAT, JADE_BOOTS);
     }
 }

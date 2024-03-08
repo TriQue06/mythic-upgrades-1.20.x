@@ -49,16 +49,7 @@ public class MULootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.JADE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(JUNGLE_TEMPLE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_NELUMBO))
+                        .with(ItemEntry.builder(MUItems.PERIDOT_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -67,7 +58,7 @@ public class MULootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.JADE_POTION))
+                        .with(ItemEntry.builder(MUItems.PERIDOT_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -77,15 +68,6 @@ public class MULootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(DESERT_PYRAMID_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_FIERCE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -135,38 +117,11 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_BOSSA_NOVA_BY_THE_SHORE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
             if(NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(NETHER_BRIDGE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_SOOT))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -192,15 +147,6 @@ public class MULootTableModifiers {
             if(BASTION_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(BASTION_BRIDGE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.RUBY_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
@@ -219,15 +165,6 @@ public class MULootTableModifiers {
             if(BASTION_HOGLIN_STABLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(BASTION_HOGLIN_STABLE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.RUBY_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
@@ -239,15 +176,6 @@ public class MULootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(BASTION_OTHER_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -266,15 +194,6 @@ public class MULootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.5f))
                         .with(ItemEntry.builder(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(BASTION_TREASURE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -300,15 +219,6 @@ public class MULootTableModifiers {
             if(IGLOO_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_TANKER_ON_THE_LEVANTINES))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(IGLOO_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.KYANITE_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
@@ -320,15 +230,6 @@ public class MULootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(END_CITY_TREASURE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
-                        .with(ItemEntry.builder(MUItems.MUSIC_DISC_APPOMATTOX))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }

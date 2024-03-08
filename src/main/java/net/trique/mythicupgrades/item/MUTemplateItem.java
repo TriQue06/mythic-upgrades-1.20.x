@@ -29,11 +29,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private final List<Identifier> emptyBaseSlotTextures;
     private final List<Identifier> emptyAdditionsSlotTextures;
 
-    private static final Text JADE_UPGRADE_TEXT;
-    private static final Text JADE_UPGRADE_APPLIES_TO_TEXT;
-    private static final Text JADE_UPGRADE_INGREDIENTS_TEXT;
-    private static final Text JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
-    private static final Text JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
+    private static final Text PERIDOT_UPGRADE_TEXT;
+    private static final Text PERIDOT_UPGRADE_APPLIES_TO_TEXT;
+    private static final Text PERIDOT_UPGRADE_INGREDIENTS_TEXT;
+    private static final Text PERIDOT_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
+    private static final Text PERIDOT_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
     private static final Text TOPAZ_UPGRADE_TEXT;
     private static final Text TOPAZ_UPGRADE_APPLIES_TO_TEXT;
     private static final Text TOPAZ_UPGRADE_INGREDIENTS_TEXT;
@@ -73,15 +73,15 @@ public class MUTemplateItem extends SmithingTemplateItem {
         this.emptyAdditionsSlotTextures = emptyAdditionsSlotTextures;
     }
 
-    public static MUTemplateItem createJadeUpgrade() {
-        return new MUTemplateItem(JADE_UPGRADE_APPLIES_TO_TEXT, JADE_UPGRADE_INGREDIENTS_TEXT, JADE_UPGRADE_TEXT, JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getJadeUpgradeEmptyBaseSlotTextures(), getJadeUpgradeEmptyAdditionsSlotTextures());
+    public static MUTemplateItem createPeridotUpgrade() {
+        return new MUTemplateItem(PERIDOT_UPGRADE_APPLIES_TO_TEXT, PERIDOT_UPGRADE_INGREDIENTS_TEXT, PERIDOT_UPGRADE_TEXT, PERIDOT_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, PERIDOT_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getPeridotUpgradeEmptyBaseSlotTextures(), getPeridotUpgradeEmptyAdditionsSlotTextures());
     }
 
-    private static List<Identifier> getJadeUpgradeEmptyBaseSlotTextures() {
+    private static List<Identifier> getPeridotUpgradeEmptyBaseSlotTextures() {
         return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
     }
 
-    private static List<Identifier> getJadeUpgradeEmptyAdditionsSlotTextures() {
+    private static List<Identifier> getPeridotUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
@@ -194,11 +194,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
         EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("item/empty_slot_pickaxe");
         EMPTY_SLOT_INGOT_TEXTURE = new Identifier(":item/empty_slot_ingot");
 
-        JADE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("jade_upgrade"))).formatted(TITLE_FORMATTING);
-        JADE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.jade_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
-        JADE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.jade_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
-        JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.jade_upgrade.base_slot_description")));
-        JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.jade_upgrade.additions_slot_description")));
+        PERIDOT_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("peridot_upgrade"))).formatted(TITLE_FORMATTING);
+        PERIDOT_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.peridot_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+        PERIDOT_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.peridot_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+        PERIDOT_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.peridot_upgrade.base_slot_description")));
+        PERIDOT_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.peridot_upgrade.additions_slot_description")));
 
         TOPAZ_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("topaz_upgrade"))).formatted(TITLE_FORMATTING);
         TOPAZ_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.topaz_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);

@@ -24,9 +24,9 @@ public class PoisonousThornsEffect extends StatusEffect {
                     entity.playSound(SoundEvents.ENCHANT_THORNS_HIT, 1.0f, livingEntity.getSoundPitch());
                     entity.playSound(SoundEvents.ENTITY_SPIDER_HURT, 1.0f, livingEntity.getSoundPitch());
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,
-                            (int)(CONFIG.jadeConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.peridotConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,
-                            (int)(CONFIG.jadeConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.peridotConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

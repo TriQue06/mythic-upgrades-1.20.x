@@ -13,8 +13,8 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(JADE_BLOCK);
-        addDrop(JADE_CRYSTAL_BLOCK);
+        addDrop(PERIDOT_BLOCK);
+        addDrop(PERIDOT_CRYSTAL_BLOCK);
         addDrop(TOPAZ_BLOCK);
         addDrop(TOPAZ_CRYSTAL_BLOCK);
         addDrop(AQUAMARINE_BLOCK);
@@ -27,11 +27,13 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(KYANITE_CRYSTAL_BLOCK);
         addDrop(AMETRINE_BLOCK);
         addDrop(AMETRINE_CRYSTAL_BLOCK);
+        addDrop(JADE_BLOCK);
+        addDrop(JADE_CRYSTAL_BLOCK);
         addDrop(NECOIUM_BLOCK);
         addDrop(RAW_NECOIUM_BLOCK);
 
-        addDrop(JADE_ORE, oreDrops(JADE_ORE, JADE));
-        addDrop(DEEPSLATE_JADE_ORE, oreDrops(DEEPSLATE_JADE_ORE, JADE));
+        addDrop(PERIDOT_ORE, oreDrops(PERIDOT_ORE, PERIDOT));
+        addDrop(DEEPSLATE_PERIDOT_ORE, oreDrops(DEEPSLATE_PERIDOT_ORE, PERIDOT));
         addDrop(TOPAZ_ORE, oreDrops(TOPAZ_ORE, TOPAZ));
         addDrop(DEEPSLATE_TOPAZ_ORE, oreDrops(DEEPSLATE_TOPAZ_ORE, TOPAZ));
         addDrop(AQUAMARINE_ORE, oreDrops(AQUAMARINE_ORE, AQUAMARINE));
@@ -40,6 +42,7 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(RUBY_ORE, oreDrops(RUBY_ORE, RUBY));
         addDrop(KYANITE_ORE, oreDrops(KYANITE_ORE, KYANITE));
         addDrop(AMETRINE_ORE, oreDrops(AMETRINE_ORE, AMETRINE));
+        addDrop(JADE_ORE, oreDrops(JADE_ORE, JADE));
         addDrop(NECOIUM_ORE, oreDrops(NECOIUM_ORE, RAW_NECOIUM));
     }
 }
