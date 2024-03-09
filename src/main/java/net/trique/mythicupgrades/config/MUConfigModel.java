@@ -91,15 +91,15 @@ public class MUConfigModel {
     public static class KyaniteConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 1f)
-        public float axe_freeze_duration = 0.33f;
+        public float axe_freeze_duration = 0.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 1f)
-        public float sword_freeze_duration = 0.33f;
+        public float sword_freeze_duration = 0.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.33f, max = 3f)
-        public float ice_shield_duration = 0.67f;
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float ice_shield_duration = 1.0f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)

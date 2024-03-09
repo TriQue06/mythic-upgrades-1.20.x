@@ -8,17 +8,7 @@
   "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
   "text.config.mythicupgrades-config.category.kyaniteConfig": [{"text" : "Kyanite", "color" : "blue", "bold": "true"}],
   "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": "true"}],
-
-  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's Damage (% from target's max. health)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's Damage (% from target's max. health)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Armor's Damage Deflection Amplifier", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.ametrineConfig.speed_amplifier": [{"text": "Armor's Speed Amplifier", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.jump_boost_amplifier": [{"text": "Armor's Jump Boost Amplifier", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Axe's Levitation Duration", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Axe's Levitation Amplifier", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Sword's Levitation Duration", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Sword's Levitation Amplifier", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": "true"}],
 
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous Thorns Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous Thorns' Poison Duration", "color": "green"}],
@@ -26,6 +16,12 @@
   "text.config.mythicupgrades-config.option.peridotConfig.axe_poison_amplifier": [{"text": "Axe's Poison Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_duration": [{"text": "Sword's Poison Duration", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_amplifier": [{"text": "Sword's Poison Amplifier", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's Damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's Damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Armor's Damage Deflection Amplifier", "color": "blue"}],
 
   "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Pickaxe's Haste Amplifier", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Axe's Haste Amplifier", "color": "red"}],
@@ -38,7 +34,13 @@
   "text.config.mythicupgrades-config.option.kyaniteConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "blue"}],
   "text.config.mythicupgrades-config.option.kyaniteConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "blue"}],
 
-  "text.config.mythicupgrades-config.option.topazConfig.topaz_item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Axe's Levitation Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Axe's Levitation Amplifier", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Sword's Levitation Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Sword's Levitation Amplifier", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "Armor's Speed Amplifier", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Armor's Jump Boost Amplifier", "color": "dark_green"}],
 
   "item.mythicupgrades.peridot_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.topaz_upgrade_smithing_template": "Smithing Template",
@@ -47,6 +49,7 @@
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.kyanite_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ametrine_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Smithing Template",
 
   "item.mythicupgrades.peridot": "Peridot",
   "item.mythicupgrades.peridot_ingot": "Peridot Ingot",
@@ -60,7 +63,6 @@
 
   "item.mythicupgrades.peridot_sword": "Peridot Sword",
   "item.mythicupgrades.peridot_axe": "Peridot Axe",
-  "item.mythicupgrades.peridot_charm": "Peridot Charm",
 
   "block.mythicupgrades.peridot_ore": "Peridot Ore",
   "block.mythicupgrades.deepslate_peridot_ore": "Deepslate Peridot Ore",
@@ -87,7 +89,6 @@
   "item.mythicupgrades.topaz_pickaxe": "Topaz Pickaxe",
   "item.mythicupgrades.topaz_shovel": "Topaz Shovel",
   "item.mythicupgrades.topaz_hoe": "Topaz Hoe",
-  "item.mythicupgrades.topaz_charm": "Topaz Charm",
 
   "block.mythicupgrades.topaz_ore": "Topaz Ore",
   "block.mythicupgrades.deepslate_topaz_ore": "Deepslate Topaz Ore",
@@ -108,7 +109,6 @@
   "item.mythicupgrades.aquamarine_chestplate": "Aquamarine Chestplate",
   "item.mythicupgrades.aquamarine_leggings": "Aquamarine Leggings",
   "item.mythicupgrades.aquamarine_boots": "Aquamarine Boots",
-  "item.mythicupgrades.aquamarine_charm": "Aquamarine Charm",
 
   "block.mythicupgrades.aquamarine_ore": "Aquamarine Ore",
   "block.mythicupgrades.deepslate_aquamarine_ore": "Deepslate Aquamarine Ore",
@@ -132,7 +132,6 @@
 
   "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
   "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
-  "item.mythicupgrades.sapphire_charm": "Sapphire Charm",
 
   "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
   "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
@@ -149,12 +148,10 @@
   "item.mythicupgrades.ruby_crystal_shard": "Ruby Crystal Shard",
   "item.mythicupgrades.ruby_potion": "Ruby Potion",
 
-  "item.mythicupgrades.ruby_sword": "Ruby Sword",
   "item.mythicupgrades.ruby_axe": "Ruby Axe",
   "item.mythicupgrades.ruby_pickaxe": "Ruby Pickaxe",
   "item.mythicupgrades.ruby_shovel": "Ruby Shovel",
   "item.mythicupgrades.ruby_hoe": "Ruby Hoe",
-  "item.mythicupgrades.ruby_charm": "Ruby Charm",
 
   "block.mythicupgrades.ruby_ore": "Ruby Ore",
   "block.mythicupgrades.deepslate_ruby_ore": "Deepslate Ruby Ore",
@@ -178,7 +175,6 @@
   
   "item.mythicupgrades.kyanite_sword": "Kyanite Sword",
   "item.mythicupgrades.kyanite_axe": "Kyanite Axe",
-  "item.mythicupgrades.kyanite_charm": "Kyanite Charm",
 
   "block.mythicupgrades.kyanite_ore": "Kyanite Ore",
   "block.mythicupgrades.kyanite_block": "Block of Kyanite",
@@ -201,7 +197,6 @@
 
   "item.mythicupgrades.ametrine_sword": "Ametrine Sword",
   "item.mythicupgrades.ametrine_axe": "Ametrine Axe",
-  "item.mythicupgrades.ametrine_charm": "Ametrine Charm",
 
   "block.mythicupgrades.ametrine_ore": "Ametrine Ore",
   "block.mythicupgrades.ametrine_block": "Block of Ametrine",
@@ -211,6 +206,28 @@
   "block.mythicupgrades.large_ametrine_crystal_bud": "Large Ametrine Crystal Bud",
   "block.mythicupgrades.medium_ametrine_crystal_bud": "Medium Ametrine Crystal Bud",
   "block.mythicupgrades.small_ametrine_crystal_bud": "Small Ametrine Crystal Bud",
+  
+  "item.mythicupgrades.jade": "Jade",
+  "item.mythicupgrades.jade_ingot": "Jade Ingot",
+  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard", 
+  "item.mythicupgrades.jade_potion": "Jade Potion",
+
+  "item.mythicupgrades.jade_helmet": "Jade Helmet",
+  "item.mythicupgrades.jade_chestplate": "Jade Chestplate",
+  "item.mythicupgrades.jade_leggings": "Jade Leggings",
+  "item.mythicupgrades.jade_boots": "Jade Boots",
+
+  "item.mythicupgrades.jade_sword": "Jade Sword",
+  "item.mythicupgrades.jade_axe": "Jade Axe",
+
+  "block.mythicupgrades.jade_ore": "Jade Ore",
+  "block.mythicupgrades.jade_block": "Block of Jade",
+  "block.mythicupgrades.jade_crystal_block": "Block of Jade Crystal",
+  "block.mythicupgrades.budding_jade_crystal": "Budding Jade Crystal",
+  "block.mythicupgrades.jade_crystal_cluster": "Jade Crystal Cluster",
+  "block.mythicupgrades.large_jade_crystal_bud": "Large Jade Crystal Bud",
+  "block.mythicupgrades.medium_jade_crystal_bud": "Medium Jade Crystal Bud",
+  "block.mythicupgrades.small_jade_crystal_bud": "Small Jade Crystal Bud",
 
   "item.mythicupgrades.raw_necoium": "Raw Necoium",
   "item.mythicupgrades.necoium_ingot": "Necoium Ingot",
@@ -225,6 +242,7 @@
   "effect.mythicupgrades.item_mastery": "Item Mastery",
   "effect.mythicupgrades.ice_shield": "Ice Shield",
   "effect.mythicupgrades.arcane_aura": "Arcane Aura",
+  "effect.mythicupgrades.hindering": "Hindering",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
@@ -233,34 +251,27 @@
 
   "defaultArmorTooltip.description": "Wear full set of armor to get bonus effects.",
 
-  "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
-  "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
-  "kyanite_leggings.description": "Set Bonus: Ice Shield %s",
-  "kyanite_boots.description": "Set Bonus: Ice Shield %s",
-  "kyanite_axe.description": "Freezes enemy on hit.",
-  "kyanite_sword.description": "Freezes enemy on hit.",
+  "peridot_helmet.description": "Set Bonus: Poisonous Thorns %s",
+  "peridot_chestplate.description": "Set Bonus: Poisonous Thorns %s",
+  "peridot_leggings.description": "Set Bonus: Poisonous Thorns %s",
+  "peridot_boots.description": "Set Bonus: Poisonous Thorns %s",
+  "peridot_axe.description": "Poisons enemy on hit.",
+  "peridot_sword.description": "Poisons enemy on hit.",
 
-  "aquamarine_helmet.description": "Set Bonus: Dolphin's Grace & Water Breathing",
-  "aquamarine_chestplate.description": "Set Bonus: Dolphin's Grace & Water Breathing",
-  "aquamarine_leggings.description": "Set Bonus: Dolphin's Grace & Water Breathing",
-  "aquamarine_boots.description": "Set Bonus: Dolphin's Grace & Water Breathing",
-
-  "ametrine_helmet.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
-  "ametrine_chestplate.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
-  "ametrine_leggings.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
-  "ametrine_boots.description": "Set Bonus: Jump Boost %s, Speed %s & Arcane Aura %s",
-  "ametrine_axe.description": "Levitates enemy on hit",
-  "ametrine_sword.description": "Levitates enemy on hit.",
-
-  "topaz_helmet.description": "Set Bonus: Item Mastery %s",
-  "topaz_chestplate.description": "Set Bonus: Item Mastery %s",
-  "topaz_leggings.description": "Set Bonus: Item Mastery %s",
-  "topaz_boots.description": "Set Bonus: Item Mastery %s",
+  "topaz_helmet.description": "Set Bonus: Item Mastery %s and Fire Resistance",
+  "topaz_chestplate.description": "Set Bonus: Item Mastery %s and Fire Resistance",
+  "topaz_leggings.description": "Set Bonus: Item Mastery %s and Fire Resistance",
+  "topaz_boots.description": "Set Bonus: Item Mastery %s and Fire Resistance",
   "topaz_axe.description": "Has 3x durability.",
   "topaz_pickaxe.description": "Has 3x durability.",
   "topaz_shovel.description": "Has 3x durability.",
   "topaz_hoe.description": "Has 3x durability.",
   "topaz_sword.description": "Has 3x durability.",
+
+  "aquamarine_helmet.description": "Set Bonus: Night Vision, Dolphin's Grace & Water Breathing",
+  "aquamarine_chestplate.description": "Set Bonus: Night Vision, Dolphin's Grace & Water Breathing",
+  "aquamarine_leggings.description": "Set Bonus: Night Vision, Dolphin's Grace & Water Breathing",
+  "aquamarine_boots.description": "Set Bonus: Night Vision, Dolphin's Grace & Water Breathing",
 
   "sapphire_helmet.description": "Set Bonus: Damage Deflection %s",
   "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s",
@@ -275,27 +286,26 @@
   "ruby_hoe.description": "Applies Haste when in main hand.",
   "ruby_sword.description": "Applies Haste when in main hand.",
 
-  "peridot_helmet.description": "Set Bonus: Poisonous Thorns %s",
-  "peridot_chestplate.description": "Set Bonus: Poisonous Thorns %s",
-  "peridot_leggings.description": "Set Bonus: Poisonous Thorns %s",
-  "peridot_boots.description": "Set Bonus: Poisonous Thorns %s",
-  "peridot_axe.description": "Poisons enemy on hit.",
-  "peridot_sword.description": "Poisons enemy on hit.",
+  "kyanite_helmet.description": "Set Bonus: Ice Shield %s",
+  "kyanite_chestplate.description": "Set Bonus: Ice Shield %s",
+  "kyanite_leggings.description": "Set Bonus: Ice Shield %s",
+  "kyanite_boots.description": "Set Bonus: Ice Shield %s",
+  "kyanite_axe.description": "Freezes enemy on hit.",
+  "kyanite_sword.description": "Freezes enemy on hit.",
 
-  "item.mythicupgrades.music_disc_soot": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_soot.desc": "Ali Bakır - soot",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_tanker_on_the_levantines.desc": "Ali Bakır - tanker on the levantine's",
-  "item.mythicupgrades.music_disc_nelumbo": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_nelumbo.desc": "Ali Bakır - nelumbo",
-  "item.mythicupgrades.music_disc_fierce": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_fierce.desc": "Ali Bakır - fierce",
-  "item.mythicupgrades.music_disc_appomattox": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_appomattox.desc": "Ali Bakır - appomattox",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_flow_of_the_abyss.desc": "Ali Bakır - flow of the abyss",
-  "item.mythicupgrades.music_disc_bossa_nova_by_the_shore": "§bMusic Disc",
-  "item.mythicupgrades.music_disc_bossa_nova_by_the_shore.desc": "Ali Bakır - bossa nova by the shore",
+  "ametrine_helmet.description": "Set Bonus: Arcane Aura %s",
+  "ametrine_chestplate.description": "Set Bonus: Arcane Aura %s",
+  "ametrine_leggings.description": "Set Bonus: Arcane Aura %s",
+  "ametrine_boots.description": "Set Bonus: Arcane Aura %s",
+  "ametrine_axe.description": "Levitates enemy on hit",
+  "ametrine_sword.description": "Levitates enemy on hit.",
+
+  "jade_helmet.description": "Set Bonus: Speed %s and Jump Boost %s",
+  "jade_chestplate.description": "Set Bonus: Speed %s and Jump Boost %s",
+  "jade_leggings.description": "Set Bonus: Speed %s and Jump Boost %s",
+  "jade_boots.description": "Set Bonus: Speed %s and Jump Boost %s",
+  "jade_axe.description": "Has high attack speed.",
+  "jade_sword.description": "Has high attack speed.",
 
   "item.minecraft.smithing_template.peridot_upgrade.additions_slot_description": "Add Peridot Ingot",
   "item.minecraft.smithing_template.peridot_upgrade.applies_to": "Netherite Equipment",
@@ -339,19 +349,9 @@
   "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Ametrine Ingot",
   "upgrade.minecraft.ametrine_upgrade": "Ametrine Upgrade",
 
-  "attribute.name.mythicupgrades.water_speed": "Water Speed",
-  "attribute.name.mythicupgrades.water_speed.desc": "Increases movement speed in water.",
-  "attribute.name.mythicupgrades.generic.lava_speed": "Lava Speed",
-  "attribute.name.mythicupgrades.lava_speed.desc": "Increases movement speed in lava.",
-
-  "attribute.name.mythicupgrades.player.critical_bonus_damage": "Critical Damage",
-  "attribute.name.mythicupgrades.player.critical_bonus_damage.desc": "Increases damage when dealing critical hits.",
-  "attribute.name.mythicupgrades.player.water_visibility": "Water Vision",
-  "attribute.name.mythicupgrades.player.water_visibility.desc": "Increases view range in water.",
-  "attribute.name.mythicupgrades.player.lava_visibility": "Lava Vision",
-  "attribute.name.mythicupgrades.player.lava_visibility.desc": "Increases view range in lava.",
-  "attribute.name.mythicupgrades.player.dig_speed": "Mining Speed",
-  "attribute.name.mythicupgrades.player.dig_speed.desc": "Increases the speed when mining blocks.",
-  "attribute.name.mythicupgrades.player.dropped_experience": "Dropped Experience",
-  "attribute.name.mythicupgrades.player.dropped_experience.desc": "Increases experience drops by blocks and kills."
+  "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Add Jade Ingot",
+  "item.minecraft.smithing_template.jade_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Add netherite armor or weapon",
+  "item.minecraft.smithing_template.jade_upgrade.ingredients": "Jade Ingot",
+  "upgrade.minecraft.jade_upgrade": "Jade Upgrade"
 }

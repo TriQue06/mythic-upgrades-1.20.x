@@ -136,7 +136,6 @@ public class RegisterMUItems {
                     entries.add(RUBY_PICKAXE);
                     entries.add(RUBY_AXE);
                     entries.add(RUBY_HOE);
-                    entries.add(RUBY_SWORD);
 
                     entries.add(TOPAZ_SHOVEL);
                     entries.add(TOPAZ_PICKAXE);

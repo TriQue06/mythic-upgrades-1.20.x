@@ -25,6 +25,7 @@ public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> KYANITE_ORE_KEY = registerKey("kyanite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AMETRINE_ORE_KEY = registerKey("ametrine_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NECOIUM_ORE_KEY = registerKey("necoium_ore");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> PERIDOT_CRYSTAL_GEODE_KEY = registerKey("peridot_crystal_geode");
@@ -34,6 +35,7 @@ public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> RUBY_CRYSTAL_GEODE_KEY = registerKey("ruby_crystal_geode");
     public static final RegistryKey<ConfiguredFeature<?,?>> KYANITE_CRYSTAL_GEODE_KEY = registerKey("kyanite_crystal_geode");
     public static final RegistryKey<ConfiguredFeature<?,?>> AMETRINE_CRYSTAL_GEODE_KEY = registerKey("ametrine_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?,?>> JADE_CRYSTAL_GEODE_KEY = registerKey("jade_crystal_geode");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -42,7 +44,7 @@ public class MUConfiguredFeatures {
         RuleTest basaltReplaceables = new BlockMatchRuleTest(Blocks.BASALT);
         RuleTest endStoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
-        List<OreFeatureConfig.Target> overworldJadeOres =
+        List<OreFeatureConfig.Target> overworldPeridotOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, MUBlocks.PERIDOT_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, MUBlocks.DEEPSLATE_PERIDOT_ORE.getDefaultState()));
 
@@ -66,17 +68,21 @@ public class MUConfiguredFeatures {
         List<OreFeatureConfig.Target> endAmetrineOres =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.AMETRINE_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> endJadeOres =
+                List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.JADE_ORE.getDefaultState()));
+
         List<OreFeatureConfig.Target> endNecoiumOres =
                 List.of(OreFeatureConfig.createTarget(endStoneReplaceables, MUBlocks.NECOIUM_ORE.getDefaultState()));
 
-        register(context, PERIDOT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJadeOres, 4));
-        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 4));
-        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 4));
-        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 4));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 4));
-        register(context, KYANITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherKyaniteOres, 4));
-        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 4));
-        register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNecoiumOres, 4));
+        register(context, PERIDOT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPeridotOres, 5));
+        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTopazOres, 5));
+        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAquamarineOres, 5));
+        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherSapphireOres, 5));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRubyOres, 5));
+        register(context, KYANITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherKyaniteOres, 5));
+        register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endAmetrineOres, 5));
+        register(context, JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endJadeOres, 5));
+        register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNecoiumOres, 5));
 
         register(context, PERIDOT_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
@@ -175,6 +181,21 @@ public class MUConfiguredFeatures {
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.SMALL_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.getDefaultState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
+                        new GeodeCrackConfig(0.95, 2.0, 2),
+                        0.35, 0.083,
+                        true, UniformIntProvider.create(4, 6),
+                        UniformIntProvider.create(3, 4), UniformIntProvider.create(1, 2),
+                        -16, 16, 0.05, 1));
+        
+        register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+                new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                        BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
+                        BlockStateProvider.of(MUBlocks.BUDDING_JADE_CRYSTAL),
+                        BlockStateProvider.of(Blocks.CALCITE),
+                        BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                        List.of(MUBlocks.SMALL_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),

@@ -21,6 +21,7 @@ public class MUPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
     public static final RegistryKey<PlacedFeature> KYANITE_ORE_PLACED_KEY = registerKey("kyanite_ore_placed");
     public static final RegistryKey<PlacedFeature> AMETRINE_ORE_PLACED_KEY = registerKey("ametrine_ore_placed");
+    public static final RegistryKey<PlacedFeature> JADE_ORE_PLACED_KEY = registerKey("jade_ore_placed");
     public static final RegistryKey<PlacedFeature> NECOIUM_ORE_PLACED_KEY = registerKey("necoium_ore_placed");
 
     public static final RegistryKey<PlacedFeature> PERIDOT_CRYSTAL_GEODE_PLACED_KEY = registerKey("peridot_crystal_geode_placed");
@@ -30,40 +31,45 @@ public class MUPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RUBY_CRYSTAL_GEODE_PLACED_KEY = registerKey("ruby_crystal_geode_placed");
     public static final RegistryKey<PlacedFeature> KYANITE_CRYSTAL_GEODE_PLACED_KEY = registerKey("kyanite_crystal_geode_placed");
     public static final RegistryKey<PlacedFeature> AMETRINE_CRYSTAL_GEODE_PLACED_KEY = registerKey("ametrine_crystal_geode_placed");
+    public static final RegistryKey<PlacedFeature> JADE_CRYSTAL_GEODE_PLACED_KEY = registerKey("jade_crystal_geode_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, PERIDOT_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.PERIDOT_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
 
         register(context, SAPPHIRE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, RUBY_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, KYANITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.KYANITE_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
+
+        register(context, JADE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_ORE_KEY),
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, NECOIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.NECOIUM_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(5,
+                MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, PERIDOT_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.PERIDOT_CRYSTAL_GEODE_KEY),
@@ -91,6 +97,10 @@ public class MUPlacedFeatures {
                         YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, AMETRINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_CRYSTAL_GEODE_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                        YOffset.fixed(30)), BiomePlacementModifier.of());
+
+        register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
                         YOffset.fixed(30)), BiomePlacementModifier.of());
     }

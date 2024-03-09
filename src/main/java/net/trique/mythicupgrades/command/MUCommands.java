@@ -42,11 +42,10 @@ public class MUCommands {
                                     CONFIG.rubyConfig.haste_pickaxe_amplifier(0);
                                     CONFIG.rubyConfig.haste_axe_amplifier(0);
                                     CONFIG.rubyConfig.haste_shovel_amplifier(0);
-                                    CONFIG.rubyConfig.haste_sword_amplifier(0);
                                     CONFIG.rubyConfig.haste_hoe_amplifier(0);
-                                    CONFIG.kyaniteConfig.axe_freeze_duration(0.33f);
-                                    CONFIG.kyaniteConfig.sword_freeze_duration(0.33f);
-                                    CONFIG.kyaniteConfig.ice_shield_duration(0.67f);
+                                    CONFIG.kyaniteConfig.axe_freeze_duration(0.5f);
+                                    CONFIG.kyaniteConfig.sword_freeze_duration(0.5f);
+                                    CONFIG.kyaniteConfig.ice_shield_duration(1.0f);
                                     CONFIG.kyaniteConfig.ice_shield_amplifier(2);
                                     CONFIG.ametrineConfig.axe_levitation_duration(0.75f);
                                     CONFIG.ametrineConfig.axe_levitation_amplifier(4);

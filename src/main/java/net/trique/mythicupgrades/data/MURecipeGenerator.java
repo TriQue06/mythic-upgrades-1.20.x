@@ -199,8 +199,6 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerCustomUpgradeRecipe(exporter, RUBY_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_AXE, RUBY_INGOT, RecipeCategory.TOOLS, RUBY_AXE);
         offerCustomUpgradeRecipe(exporter, RUBY_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_SWORD, RUBY_INGOT, RecipeCategory.COMBAT, RUBY_SWORD);
-        offerCustomUpgradeRecipe(exporter, RUBY_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_SHOVEL, RUBY_INGOT, RecipeCategory.TOOLS, RUBY_SHOVEL);
         offerCustomUpgradeRecipe(exporter, RUBY_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_PICKAXE, RUBY_INGOT, RecipeCategory.TOOLS, RUBY_PICKAXE);

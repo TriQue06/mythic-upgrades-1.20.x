@@ -45,6 +45,11 @@ public class MUOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AMETRINE_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.JADE_CRYSTAL_GEODE_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.NECOIUM_ORE_PLACED_KEY);
     }
 }

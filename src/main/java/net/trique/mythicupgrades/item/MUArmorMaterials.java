@@ -15,7 +15,7 @@ public enum MUArmorMaterials implements ArmorMaterial {
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(PERIDOT_INGOT)),
     TOPAZ("topaz", 150, new int[] { 4, 9, 7, 4 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(TOPAZ_INGOT)),
-    AQUAMARINE("aquamarine", 50, new int[] { 4, 9, 7, 4 }, 18,
+    AQUAMARINE("aquamarine", 50, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(AQUAMARINE_INGOT)),
     SAPPHIRE("sapphire", 50, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(SAPPHIRE_INGOT)),
