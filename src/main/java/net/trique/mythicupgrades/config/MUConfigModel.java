@@ -13,6 +13,8 @@ public class MUConfigModel {
     @Nest
     public TopazConfig topazConfig = new TopazConfig();
     @Nest
+    public CitrineConfig citrineConfig = new CitrineConfig();
+    @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
     public RubyConfig rubyConfig = new RubyConfig();
@@ -48,8 +50,66 @@ public class MUConfigModel {
 
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int topaz_item_mastery_amplifier = 2;
+        @RangeConstraint(min = 0, max = 6)
+        public int topaz_item_mastery_amplifier = 4;
+    }
+
+    public static class CitrineConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 1f, max = 10f)
+        public float hindering_duration = 5f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int hindering_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int sword_weakness_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int sword_slowness_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int sword_hunger_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int axe_weakness_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int axe_slowness_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 2)
+        public int axe_hunger_amplifier = 0;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 1f, max = 15f)
+        public float sword_weakness_duration = 7f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 7f, max = 2f)
+        public float sword_slowness_duration = 7f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 7f, max = 2f)
+        public float sword_hunger_duration = 7f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 7f, max = 2f)
+        public float axe_weakness_duration = 7f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 7f, max = 2f)
+        public float axe_slowness_duration = 7f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 7f, max = 2f)
+        public float axe_hunger_duration = 7f;
     }
 
     public static class SapphireConfig {
@@ -140,13 +200,5 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int jump_boost_amplifier = 2;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 3f, max = 10f)
-        public float hindering_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int hindering_amplifier = 0;
     }
 }

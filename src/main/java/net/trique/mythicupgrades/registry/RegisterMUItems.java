@@ -49,6 +49,18 @@ public class RegisterMUItems {
         registerItem("topaz_potion", TOPAZ_POTION);
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
 
+        registerItem("citrine_axe", CITRINE_AXE);
+        registerItem("citrine_sword", CITRINE_SWORD);
+        registerItem("citrine_helmet", CITRINE_HELMET);
+        registerItem("citrine_chestplate", CITRINE_CHESTPLATE);
+        registerItem("citrine_leggings", CITRINE_LEGGINGS);
+        registerItem("citrine_boots", CITRINE_BOOTS);
+        registerItem("citrine", CITRINE);
+        registerItem("citrine_ingot", CITRINE_INGOT);
+        registerItem("citrine_crystal_shard", CITRINE_CRYSTAL_SHARD);
+        registerItem("citrine_potion", CITRINE_POTION);
+        registerItem("citrine_upgrade_smithing_template", CITRINE_UPGRADE_SMITHING_TEMPLATE);
+
         registerItem("aquamarine_sword", AQUAMARINE_SWORD);
         registerItem("aquamarine_axe", AQUAMARINE_AXE);
         registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
@@ -147,6 +159,13 @@ public class RegisterMUItems {
                     entries.add(TOPAZ_LEGGINGS);
                     entries.add(TOPAZ_BOOTS);
 
+                    entries.add(CITRINE_AXE);
+                    entries.add(CITRINE_SWORD);
+                    entries.add(CITRINE_HELMET);
+                    entries.add(CITRINE_CHESTPLATE);
+                    entries.add(CITRINE_LEGGINGS);
+                    entries.add(CITRINE_BOOTS);
+
                     entries.add(PERIDOT_AXE);
                     entries.add(PERIDOT_SWORD);
                     entries.add(PERIDOT_HELMET);
@@ -203,6 +222,12 @@ public class RegisterMUItems {
                     entries.add(TOPAZ_POTION);
                     entries.add(TOPAZ_UPGRADE_SMITHING_TEMPLATE);
 
+                    entries.add(CITRINE);
+                    entries.add(CITRINE_INGOT);
+                    entries.add(CITRINE_CRYSTAL_SHARD);
+                    entries.add(CITRINE_POTION);
+                    entries.add(CITRINE_UPGRADE_SMITHING_TEMPLATE);
+
                     entries.add(PERIDOT);
                     entries.add(PERIDOT_INGOT);
                     entries.add(PERIDOT_CRYSTAL_SHARD);
@@ -258,13 +283,22 @@ public class RegisterMUItems {
 
                     entries.add(TOPAZ_BLOCK);
                     entries.add(TOPAZ_ORE);
-                    entries.add(DEEPSLATE_TOPAZ_ORE);
                     entries.add(TOPAZ_CRYSTAL_BLOCK);
                     entries.add(BUDDING_TOPAZ_CRYSTAL);
                     entries.add(SMALL_TOPAZ_CRYSTAL_BUD);
                     entries.add(MEDIUM_TOPAZ_CRYSTAL_BUD);
                     entries.add(LARGE_TOPAZ_CRYSTAL_BUD);
                     entries.add(TOPAZ_CRYSTAL_CLUSTER);
+
+                    entries.add(CITRINE_BLOCK);
+                    entries.add(CITRINE_ORE);
+                    entries.add(DEEPSLATE_CITRINE_ORE);
+                    entries.add(CITRINE_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_CITRINE_CRYSTAL);
+                    entries.add(SMALL_CITRINE_CRYSTAL_BUD);
+                    entries.add(MEDIUM_CITRINE_CRYSTAL_BUD);
+                    entries.add(LARGE_CITRINE_CRYSTAL_BUD);
+                    entries.add(CITRINE_CRYSTAL_CLUSTER);
 
                     entries.add(PERIDOT_BLOCK);
                     entries.add(PERIDOT_ORE);

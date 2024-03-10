@@ -18,6 +18,11 @@ public class MythicUpgradesClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_TOPAZ_CRYSTAL_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.SMALL_TOPAZ_CRYSTAL_BUD, RenderLayer.getCutout());
         
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.CITRINE_CRYSTAL_CLUSTER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.LARGE_CITRINE_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_CITRINE_CRYSTAL_BUD, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.SMALL_CITRINE_CRYSTAL_BUD, RenderLayer.getCutout());
+        
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.LARGE_AQUAMARINE_CRYSTAL_BUD, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MUBlocks.MEDIUM_AQUAMARINE_CRYSTAL_BUD, RenderLayer.getCutout());

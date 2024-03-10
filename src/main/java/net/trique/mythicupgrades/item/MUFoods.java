@@ -12,7 +12,11 @@ public class MUFoods {
 
     public static final FoodComponent TOPAZ_POTION = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.4F).
             statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 3600, 0), 1.0F).
-            statusEffect(new StatusEffectInstance(MUEffects.ITEM_MASTERY, 3600, 0), 1.0F).
+            statusEffect(new StatusEffectInstance(MUEffects.ITEM_MASTERY, 3600, 4), 1.0F).
+        alwaysEdible().build();
+
+    public static final FoodComponent CITRINE_POTION = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.4F).
+            statusEffect(new StatusEffectInstance(MUEffects.HINDERING, 3600, 0), 1.0F).
         alwaysEdible().build();
 
     public static final FoodComponent AQUAMARINE_POTION = (new FoodComponent.Builder()).hunger(4).saturationModifier(0.4F).

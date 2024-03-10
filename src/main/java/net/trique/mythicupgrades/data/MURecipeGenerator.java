@@ -25,10 +25,15 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerBlasting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
                 3.0f, 100, "peridot");
 
-        offerSmelting(exporter, List.of(MUBlocks.TOPAZ_ORE, MUBlocks.DEEPSLATE_TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
+        offerSmelting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
                 3.0f, 200, "topaz");
-        offerBlasting(exporter, List.of(MUBlocks.TOPAZ_ORE, MUBlocks.DEEPSLATE_TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
+        offerBlasting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
                 3.0f, 100, "topaz");
+
+        offerSmelting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
+                3.0f, 200, "citrine");
+        offerBlasting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
+                3.0f, 100, "citrine");
 
         offerSmelting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
                 3.0f, 200, "aquamarine");
@@ -76,6 +81,9 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, TOPAZ_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.TOPAZ_BLOCK,
                 getId("topaz_block"), "topaz_block", getId("topaz_ingot_from_topaz_block"), "topaz_ingot");
 
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, CITRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.CITRINE_BLOCK,
+                getId("citrine_block"), "citrine_block", getId("citrine_ingot_from_citrine_block"), "citrine_ingot");
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AQUAMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AQUAMARINE_BLOCK,
                 getId("aquamarine_block"), "aquamarine_block", getId("aquamarine_ingot_from_aquamarine_block"), "aquamarine_ingot");
 
@@ -103,7 +111,9 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> PERIDOT_UPGRADE_SMITHING_TEMPLATE,
                 ()-> PERIDOT, ()->Items.MOSSY_COBBLESTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> TOPAZ_UPGRADE_SMITHING_TEMPLATE,
-                ()-> TOPAZ, ()->Items.SANDSTONE);
+                ()-> TOPAZ, ()->Items.BLACKSTONE);
+        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> CITRINE_UPGRADE_SMITHING_TEMPLATE,
+                ()-> CITRINE, ()->Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> AQUAMARINE, ()->Items.PRISMARINE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> SAPPHIRE_UPGRADE_SMITHING_TEMPLATE,

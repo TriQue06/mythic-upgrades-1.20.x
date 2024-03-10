@@ -39,6 +39,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Text TOPAZ_UPGRADE_INGREDIENTS_TEXT;
     private static final Text TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Text TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
+    private static final Text CITRINE_UPGRADE_TEXT;
+    private static final Text CITRINE_UPGRADE_APPLIES_TO_TEXT;
+    private static final Text CITRINE_UPGRADE_INGREDIENTS_TEXT;
+    private static final Text CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
+    private static final Text CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
     private static final Text AQUAMARINE_UPGRADE_TEXT;
     private static final Text AQUAMARINE_UPGRADE_APPLIES_TO_TEXT;
     private static final Text AQUAMARINE_UPGRADE_INGREDIENTS_TEXT;
@@ -64,6 +69,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Text AMETRINE_UPGRADE_INGREDIENTS_TEXT;
     private static final Text AMETRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Text AMETRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
+    private static final Text JADE_UPGRADE_TEXT;
+    private static final Text JADE_UPGRADE_APPLIES_TO_TEXT;
+    private static final Text JADE_UPGRADE_INGREDIENTS_TEXT;
+    private static final Text JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
+    private static final Text JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
 
     public MUTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, List<Identifier> emptyBaseSlotTextures, List<Identifier> emptyAdditionsSlotTextures) {
         super(appliesToText, ingredientsText, titleText, baseSlotDescriptionText, additionsSlotDescriptionText, emptyBaseSlotTextures, emptyAdditionsSlotTextures);
@@ -94,6 +104,18 @@ public class MUTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<Identifier> getTopazUpgradeEmptyAdditionsSlotTextures() {
+        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
+    }
+
+    public static MUTemplateItem createCitrineUpgrade() {
+        return new MUTemplateItem(CITRINE_UPGRADE_APPLIES_TO_TEXT, CITRINE_UPGRADE_INGREDIENTS_TEXT, CITRINE_UPGRADE_TEXT, CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getCitrineUpgradeEmptyBaseSlotTextures(), getCitrineUpgradeEmptyAdditionsSlotTextures());
+    }
+
+    private static List<Identifier> getCitrineUpgradeEmptyBaseSlotTextures() {
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
+    }
+
+    private static List<Identifier> getCitrineUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
@@ -157,6 +179,18 @@ public class MUTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
+    public static MUTemplateItem createJadeUpgrade() {
+        return new MUTemplateItem(JADE_UPGRADE_APPLIES_TO_TEXT, JADE_UPGRADE_INGREDIENTS_TEXT, JADE_UPGRADE_TEXT, JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getJadeUpgradeEmptyBaseSlotTextures(), getJadeUpgradeEmptyAdditionsSlotTextures());
+    }
+
+    private static List<Identifier> getJadeUpgradeEmptyBaseSlotTextures() {
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
+    }
+
+    private static List<Identifier> getJadeUpgradeEmptyAdditionsSlotTextures() {
+        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
+    }
+
     public Text getBaseSlotDescription() {
         return this.baseSlotDescriptionText;
     }
@@ -206,6 +240,12 @@ public class MUTemplateItem extends SmithingTemplateItem {
         TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.topaz_upgrade.base_slot_description")));
         TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.topaz_upgrade.additions_slot_description")));
 
+        CITRINE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("citrine_upgrade"))).formatted(TITLE_FORMATTING);
+        CITRINE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.citrine_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+        CITRINE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.citrine_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+        CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.citrine_upgrade.base_slot_description")));
+        CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.citrine_upgrade.additions_slot_description")));
+
         AQUAMARINE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("aquamarine_upgrade"))).formatted(TITLE_FORMATTING);
         AQUAMARINE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.aquamarine_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
         AQUAMARINE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.aquamarine_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
@@ -235,5 +275,11 @@ public class MUTemplateItem extends SmithingTemplateItem {
         AMETRINE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
         AMETRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.base_slot_description")));
         AMETRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.additions_slot_description")));
+    
+        JADE_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier("ametrine_upgrade"))).formatted(TITLE_FORMATTING);
+        JADE_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+        JADE_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+        JADE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.base_slot_description")));
+        JADE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ametrine_upgrade.additions_slot_description")));
     }
 }

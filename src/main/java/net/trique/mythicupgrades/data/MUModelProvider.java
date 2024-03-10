@@ -25,9 +25,14 @@ public class MUModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_TOPAZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_TOPAZ_CRYSTAL);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_CITRINE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_CITRINE_CRYSTAL);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_ORE);
@@ -73,6 +78,11 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAmethyst(LARGE_TOPAZ_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(TOPAZ_CRYSTAL_CLUSTER);
 
+        blockStateModelGenerator.registerAmethyst(SMALL_CITRINE_CRYSTAL_BUD);
+        blockStateModelGenerator.registerAmethyst(MEDIUM_CITRINE_CRYSTAL_BUD);
+        blockStateModelGenerator.registerAmethyst(LARGE_CITRINE_CRYSTAL_BUD);
+        blockStateModelGenerator.registerAmethyst(CITRINE_CRYSTAL_CLUSTER);
+
         blockStateModelGenerator.registerAmethyst(SMALL_AQUAMARINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(MEDIUM_AQUAMARINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(LARGE_AQUAMARINE_CRYSTAL_BUD);
@@ -108,6 +118,7 @@ public class MUModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(PERIDOT_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(CITRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(RUBY_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
@@ -131,6 +142,13 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
+
+        itemModelGenerator.register(CITRINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(CITRINE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(CITRINE, Models.GENERATED);
+        itemModelGenerator.register(CITRINE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(CITRINE_CRYSTAL_SHARD, Models.GENERATED);
+        itemModelGenerator.register(CITRINE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
@@ -187,6 +205,11 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_BOOTS));
+        
+        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_BOOTS));
 
         itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_CHESTPLATE));

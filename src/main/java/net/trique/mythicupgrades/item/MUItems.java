@@ -20,6 +20,9 @@ public class MUItems {
     private static final ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.topaz_item_mastery_amplifier()).addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
     private static final List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.topaz_item_mastery_amplifier());
 
+    private static final ItemEffectsList citrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(HINDERING, CONFIG.citrineConfig.hindering_amplifier()).build();
+    private static final List<Integer> citrineAmplifiers = List.of(CONFIG.citrineConfig.hindering_amplifier());
+
     private static final ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.NIGHT_VISION, 0).addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
     private static final List<Integer> aquamarineAmplifiers = List.of();
 
@@ -58,6 +61,11 @@ public class MUItems {
     public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_POTION).maxCount(16));
+
+    public static final Item CITRINE = new Item(new FabricItemSettings());
+    public static final Item CITRINE_INGOT = new Item(new FabricItemSettings().fireproof());
+    public static final Item CITRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
+    public static final Item CITRINE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.CITRINE_POTION).maxCount(16));
 
     public static final Item AQUAMARINE = new Item(new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
@@ -105,6 +113,13 @@ public class MUItems {
     public static final MythicEffectsArmorItem PERIDOT_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.PERIDOT, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), peridotArmorEffects, "peridot_chestplate.description", peridotAmplifiers, Formatting.GREEN);
     public static final MythicEffectsArmorItem PERIDOT_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.PERIDOT, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), peridotArmorEffects, "peridot_leggings.description", peridotAmplifiers, Formatting.GREEN);
     public static final MythicEffectsArmorItem PERIDOT_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.PERIDOT, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), peridotArmorEffects, "peridot_boots.description", peridotAmplifiers, Formatting.GREEN);
+
+    public static final MythicEffectsAxeItem CITRINE_AXE = new MythicEffectsAxeItem(MUToolMaterials.CITRINE, 5, -3.0f, (new FabricItemSettings().fireproof()), levitationAxeItemEffects, "citrine_axe.description", Formatting.DARK_PURPLE);
+    public static final MythicEffectsSwordItem CITRINE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.CITRINE, 3, -2.4f, (new FabricItemSettings().fireproof()), levitationSwordItemEffects, "citrine_sword.description", Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem CITRINE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.CITRINE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), citrineArmorEffects, "citrine_helmet.description", citrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem CITRINE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.CITRINE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), citrineArmorEffects, "citrine_chestplate.description", citrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem CITRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.CITRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), citrineArmorEffects, "citrine_leggings.description", citrineAmplifiers, Formatting.DARK_PURPLE);
+    public static final MythicEffectsArmorItem CITRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.CITRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), citrineArmorEffects, "citrine_boots.description", citrineAmplifiers, Formatting.DARK_PURPLE);
 
     public static final Item TOPAZ_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.TOPAZ, 2, -3.0f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_shovel.description", Formatting.GOLD);
     public static final Item TOPAZ_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.TOPAZ, 1, -2.8f, (new FabricItemSettings().fireproof()), noItemEffects, "topaz_pickaxe.description", Formatting.GOLD);
@@ -157,10 +172,11 @@ public class MUItems {
 
     public static final Item PERIDOT_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createPeridotUpgrade();
     public static final Item TOPAZ_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createTopazUpgrade();
+    public static final Item CITRINE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createCitrineUpgrade();
     public static final Item AQUAMARINE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createAquamarineUpgrade();
     public static final Item SAPPHIRE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createSapphireUpgrade();
     public static final Item RUBY_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createRubyUpgrade();
     public static final Item KYANITE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createKyaniteUpgrade();
     public static final Item AMETRINE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createAmetrineUpgrade();
-    public static final Item JADE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createAmetrineUpgrade();
+    public static final Item JADE_UPGRADE_SMITHING_TEMPLATE = MUTemplateItem.createJadeUpgrade();
 }

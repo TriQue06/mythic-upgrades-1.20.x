@@ -47,9 +47,6 @@ public class MUBlocks {
     public static final Block TOPAZ_ORE = registerBlock("topaz_ore",
             new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
-    public static final Block DEEPSLATE_TOPAZ_ORE = registerBlock("deepslate_topaz_ore",
-            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(TOPAZ_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16, 32)));
-
     public static final Block BUDDING_TOPAZ_CRYSTAL = registerBlock("budding_topaz_crystal",
             new BuddingTopazCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.TERRACOTTA_ORANGE).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
 
@@ -67,6 +64,34 @@ public class MUBlocks {
 
     public static final Block SMALL_TOPAZ_CRYSTAL_BUD = registerBlock("small_topaz_crystal_bud",
             new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(TOPAZ_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
+
+
+    public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.YELLOW).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
+
+    public static final Block CITRINE_ORE = registerBlock("citrine_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+
+    public static final Block DEEPSLATE_CITRINE_ORE = registerBlock("deepslate_citrine_ore",
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(CITRINE_ORE).mapColor(MapColor.DEEPSLATE_GRAY).strength(4.5f, 1200.0f).sounds(BlockSoundGroup.DEEPSLATE), UniformIntProvider.create(16, 32)));
+
+    public static final Block BUDDING_CITRINE_CRYSTAL = registerBlock("budding_citrine_crystal",
+            new BuddingCitrineCrystalBlock(AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.AMETHYST_BLOCK).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block CITRINE_CRYSTAL_BLOCK = registerBlock("citrine_crystal_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.YELLOW).strength(3.0f, 1200.0f)));
+    
+    public static final Block CITRINE_CRYSTAL_CLUSTER = registerBlock("citrine_crystal_cluster",
+            new AmethystClusterBlock(7, 3, AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).solid().nonOpaque().ticksRandomly().sounds(BlockSoundGroup.AMETHYST_CLUSTER).strength(1.5f).luminance(state -> 5).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block LARGE_CITRINE_CRYSTAL_BUD = registerBlock("large_citrine_crystal_bud",
+            new AmethystClusterBlock(5, 3, AbstractBlock.Settings.copy(CITRINE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block MEDIUM_CITRINE_CRYSTAL_BUD = registerBlock("medium_citrine_crystal_bud",
+            new AmethystClusterBlock(4, 3, AbstractBlock.Settings.copy(CITRINE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 2).pistonBehavior(PistonBehavior.DESTROY)));
+
+    public static final Block SMALL_CITRINE_CRYSTAL_BUD = registerBlock("small_citrine_crystal_bud",
+            new AmethystClusterBlock(3, 4, AbstractBlock.Settings.copy(CITRINE_CRYSTAL_CLUSTER).sounds(BlockSoundGroup.AMETHYST_CLUSTER).solid().luminance(state -> 1).pistonBehavior(PistonBehavior.DESTROY)));
 
 
     public static final Block AQUAMARINE_BLOCK = registerBlock("aquamarine_block",

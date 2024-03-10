@@ -26,6 +26,9 @@ public abstract class ServerWorldMixin {
         ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.topaz_item_mastery_amplifier()).addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
         List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.topaz_item_mastery_amplifier());
 
+        ItemEffectsList citrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(HINDERING, CONFIG.citrineConfig.hindering_amplifier()).build();
+        List<Integer> citrineAmplifiers = List.of(CONFIG.citrineConfig.hindering_amplifier());
+
         ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.NIGHT_VISION, 0).addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
         List<Integer> aquamarineAmplifiers = List.of();
 
@@ -40,6 +43,8 @@ public abstract class ServerWorldMixin {
 
         ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.sword_poison_duration() * 20), CONFIG.peridotConfig.sword_poison_amplifier()).build();
         ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.axe_poison_duration() * 20), CONFIG.peridotConfig.axe_poison_amplifier()).build();
+        ItemEffectsList hinderingAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.WEAKNESS, (int)(CONFIG.citrineConfig.axe_weakness_duration() * 20), CONFIG.citrineConfig.axe_weakness_amplifier()).addForHit(StatusEffects.SLOWNESS, (int)(CONFIG.citrineConfig.axe_slowness_duration() * 20), CONFIG.citrineConfig.axe_slowness_amplifier()).addForHit(StatusEffects.HUNGER, (int)(CONFIG.citrineConfig.axe_hunger_duration() * 20), CONFIG.citrineConfig.axe_hunger_amplifier()).build();
+        ItemEffectsList hinderingSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.WEAKNESS, (int)(CONFIG.citrineConfig.sword_weakness_duration() * 20), CONFIG.citrineConfig.sword_weakness_amplifier()).addForHit(StatusEffects.SLOWNESS, (int)(CONFIG.citrineConfig.sword_slowness_duration() * 20), CONFIG.citrineConfig.sword_slowness_amplifier()).addForHit(StatusEffects.HUNGER, (int)(CONFIG.citrineConfig.sword_hunger_duration() * 20), CONFIG.citrineConfig.sword_hunger_amplifier()).build();
         ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_axe_amplifier()).build();
         ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_pickaxe_amplifier()).build();
         ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.haste_hoe_amplifier()).build();
@@ -51,6 +56,8 @@ public abstract class ServerWorldMixin {
 
         PERIDOT_AXE.setNewEffects(poisonAxeItemEffects);
         PERIDOT_SWORD.setNewEffects(poisonSwordItemEffects);
+        CITRINE_AXE.setNewEffects(hinderingAxeItemEffects);
+        CITRINE_SWORD.setNewEffects(hinderingSwordItemEffects);
         SAPPHIRE_SWORD.setPercent(CONFIG.sapphireConfig.sword_percentage_damage_percent());
         SAPPHIRE_AXE.setPercent(CONFIG.sapphireConfig.axe_percentage_damage_percent());
         RUBY_AXE.setNewEffects(hasteAxeItemEffects);
@@ -74,6 +81,10 @@ public abstract class ServerWorldMixin {
         TOPAZ_CHESTPLATE.setNewEffects(topazArmorEffects, topazAmplifiers);
         TOPAZ_LEGGINGS.setNewEffects(topazArmorEffects, topazAmplifiers);
         TOPAZ_BOOTS.setNewEffects(topazArmorEffects, topazAmplifiers);
+        CITRINE_HELMET.setNewEffects(citrineArmorEffects, citrineAmplifiers);
+        CITRINE_CHESTPLATE.setNewEffects(citrineArmorEffects, citrineAmplifiers);
+        CITRINE_LEGGINGS.setNewEffects(topazArmorEffects, topazAmplifiers);
+        CITRINE_BOOTS.setNewEffects(topazArmorEffects, topazAmplifiers);
         SAPPHIRE_HELMET.setNewEffects(sapphireArmorEffects, sapphireAmplifiers);
         SAPPHIRE_CHESTPLATE.setNewEffects(sapphireArmorEffects, sapphireAmplifiers);
         SAPPHIRE_LEGGINGS.setNewEffects(sapphireArmorEffects, sapphireAmplifiers);
