@@ -43,6 +43,9 @@ public class MULootTableModifiers {
     private static final Identifier END_CITY_TREASURE_ID =
             new Identifier("minecraft", "chests/end_city_treasure");
 
+    private static final Identifier ENDER_DRAGON_ID =
+            new Identifier("minecraft", "entities/ender_dragon");
+
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if(JUNGLE_TEMPLE_ID.equals(id)) {
@@ -311,6 +314,15 @@ public class MULootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
                         .with(ItemEntry.builder(MUItems.AMETRINE_POTION))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(ENDER_DRAGON_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1.0f))
+                        .with(ItemEntry.builder(MUItems.AMETRINE_CHESTPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }

@@ -10,8 +10,8 @@ import net.minecraft.sound.SoundEvents;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
-public class ArcaneAuraEffect extends StatusEffect {
-    public ArcaneAuraEffect(StatusEffectCategory statusEffectCategory, int color) {
+public class OceanShieldEffect extends StatusEffect {
+    public OceanShieldEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
 
@@ -21,9 +21,10 @@ public class ArcaneAuraEffect extends StatusEffect {
             Entity attacker = livingEntity.getAttacker();
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
-                    entity.playSound(SoundEvents.ENTITY_SHULKER_HURT, 1.0f, livingEntity.getSoundPitch());
-                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION,
-                            (int)(CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
+                    entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 2 + amplifier);
+                    entity.playSound(SoundEvents.ENTITY_SPIDER_HURT, 1.0f, livingEntity.getSoundPitch());
+                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,
+                            (int)(CONFIG.aquamarineConfig.ocean_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

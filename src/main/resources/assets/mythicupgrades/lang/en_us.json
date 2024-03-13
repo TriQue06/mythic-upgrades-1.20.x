@@ -2,6 +2,7 @@
   "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "dark_purple", "bold": "true"}],
 
   "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.citrineConfig": [{"text" : "Citrine", "color" : "yellow", "bold": "true"}],
   "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
   "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
   "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Sapphire", "color" : "dark_blue", "bold":  "true"}],
@@ -16,6 +17,21 @@
   "text.config.mythicupgrades-config.option.peridotConfig.axe_poison_amplifier": [{"text": "Axe's Poison Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_duration": [{"text": "Sword's Poison Duration", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_amplifier": [{"text": "Sword's Poison Amplifier", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.citrineConfig.hindering_amplifier": [{"text": "Armor's Hindering Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.hindering_duration": [{"text": "Armor's Hindering's Effects' Durations", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_amplifier": [{"text": "Sword's Weakness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_duration": [{"text": "Sword's Weakness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_amplifier": [{"text": "Sword's Slowness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_duration": [{"text": "Sword's Slowness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_amplifier": [{"text": "Sword's Hunger Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_duration": [{"text": "Sword's Hunger Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_amplifier": [{"text": "Axe's Weakness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_duration": [{"text": "Axe's Weakness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_amplifier": [{"text": "Axe's Slowness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_duration": [{"text": "Axe's Slowness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_amplifier": [{"text": "Axe's Hunger Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_duration": [{"text": "Axe's Hunger Duration", "color": "yellow"}],
 
   "text.config.mythicupgrades-config.option.topazConfig.topaz_item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
 
@@ -91,7 +107,6 @@
   "item.mythicupgrades.topaz_hoe": "Topaz Hoe",
 
   "block.mythicupgrades.topaz_ore": "Topaz Ore",
-  "block.mythicupgrades.deepslate_topaz_ore": "Deepslate Topaz Ore",
   "block.mythicupgrades.topaz_block": "Block of Topaz",
   "block.mythicupgrades.topaz_crystal_block": "Block of Topaz Crystal",
   "block.mythicupgrades.budding_topaz_crystal": "Budding Topaz Crystal",
@@ -154,7 +169,6 @@
   "item.mythicupgrades.ruby_hoe": "Ruby Hoe",
 
   "block.mythicupgrades.ruby_ore": "Ruby Ore",
-  "block.mythicupgrades.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.mythicupgrades.ruby_block": "Block of Ruby",
   "block.mythicupgrades.ruby_crystal_block": "Block of Ruby Crystal",
   "block.mythicupgrades.budding_ruby_crystal": "Budding Ruby Crystal",
@@ -244,12 +258,12 @@
   "effect.mythicupgrades.arcane_aura": "Arcane Aura",
   "effect.mythicupgrades.hindering": "Hindering",
 
+  "defaultArmorTooltip.description": "Wear full set of armor to gain power-ups!",
+
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
   "death.attack.percentage": "%s has received enough magic percentage damage to pass away while fighting with %s.",
   "death.attack.percentage.item": "%s has received enough magic percentage damage to pass away while fighting with %s holding %s.",
-
-  "defaultArmorTooltip.description": "Wear full set of armor to get bonus effects.",
 
   "peridot_helmet.description": "Set Bonus: Poisonous Thorns %s",
   "peridot_chestplate.description": "Set Bonus: Poisonous Thorns %s",

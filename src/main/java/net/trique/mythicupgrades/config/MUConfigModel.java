@@ -9,49 +9,32 @@ import net.trique.mythicupgrades.MythicUpgrades;
 @Config(name = MythicUpgrades.MOD_ID + "-config", wrapperName = "MUConfig")
 public class MUConfigModel {
     @Nest
-    public PeridotConfig peridotConfig = new PeridotConfig();
-    @Nest
-    public TopazConfig topazConfig = new TopazConfig();
+    public AquamarineConfig aquamarineConfig = new AquamarineConfig();
     @Nest
     public CitrineConfig citrineConfig = new CitrineConfig();
     @Nest
+    public PeridotConfig peridotConfig = new PeridotConfig();
+    @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
+    @Nest
+    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
     @Nest
     public RubyConfig rubyConfig = new RubyConfig();
     @Nest
-    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
+    public TopazConfig topazConfig = new TopazConfig();
     @Nest
     public AmetrineConfig ametrineConfig = new AmetrineConfig();
     @Nest
     public JadeConfig jadeConfig = new JadeConfig();
 
-    public static class PeridotConfig {
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 3f)
-        public float axe_poison_duration = 1.5f;
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 5)
-        public int axe_poison_amplifier = 2;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 3f)
-        public float sword_poison_duration = 1.5f;
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 5)
-        public int sword_poison_amplifier = 2;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 7f)
-        public float poisonous_thorns_poison_duration = 5f;
+    public static class AquamarineConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
-        public int poisonous_thorns_amplifier = 0;
-    }
+        public int ocean_shield_amplifier = 2;
 
-    public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 6)
-        public int topaz_item_mastery_amplifier = 4;
+        @RangeConstraint(min = 1f, max = 5f)
+        public float ocean_shield_duration = 3f;
     }
 
     public static class CitrineConfig {
@@ -112,6 +95,29 @@ public class MUConfigModel {
         public float axe_hunger_duration = 7f;
     }
 
+    public static class PeridotConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float axe_poison_duration = 1.5f;
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 5)
+        public int axe_poison_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float sword_poison_duration = 1.5f;
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 5)
+        public int sword_poison_amplifier = 2;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 7f)
+        public float poisonous_thorns_poison_duration = 5f;
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int poisonous_thorns_amplifier = 0;
+    }
+
     public static class SapphireConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1, max = 7)
@@ -124,6 +130,24 @@ public class MUConfigModel {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int damage_deflection_amplifier = 2;
+    }
+
+    public static class KyaniteConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 1f)
+        public float axe_freeze_duration = 0.5f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 1f)
+        public float sword_freeze_duration = 0.5f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 3f)
+        public float ice_shield_duration = 1.0f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int ice_shield_amplifier = 2;
     }
 
     public static class RubyConfig {
@@ -148,22 +172,10 @@ public class MUConfigModel {
         public int haste_hoe_amplifier = 0;
     }
 
-    public static class KyaniteConfig {
+    public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 1f)
-        public float axe_freeze_duration = 0.5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 1f)
-        public float sword_freeze_duration = 0.5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 3f)
-        public float ice_shield_duration = 1.0f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int ice_shield_amplifier = 2;
+        @RangeConstraint(min = 0, max = 6)
+        public int topaz_item_mastery_amplifier = 4;
     }
 
     public static class AmetrineConfig {

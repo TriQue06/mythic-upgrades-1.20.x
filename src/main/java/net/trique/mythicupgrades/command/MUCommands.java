@@ -23,13 +23,8 @@ public class MUCommands {
         dispatcher.register(literal(MOD_ID)
                 .requires(source -> source.hasPermissionLevel(4))
                 .then(literal("config").then(literal("restoreDefaults").executes(ctx -> {
-                    CONFIG.peridotConfig.axe_poison_duration(1.5f);
-                    CONFIG.peridotConfig.axe_poison_amplifier(2);
-                    CONFIG.peridotConfig.sword_poison_duration(1.5f);
-                    CONFIG.peridotConfig.sword_poison_amplifier(2);
-                    CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
-                    CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
-                    CONFIG.topazConfig.topaz_item_mastery_amplifier(4);
+                    CONFIG.aquamarineConfig.ocean_shield_amplifier(2);
+                    CONFIG.aquamarineConfig.ocean_shield_duration(3f);
                     CONFIG.citrineConfig.hindering_amplifier(0);
                     CONFIG.citrineConfig.hindering_duration(5f);
                     CONFIG.citrineConfig.axe_weakness_amplifier(0);
@@ -44,17 +39,24 @@ public class MUCommands {
                     CONFIG.citrineConfig.sword_slowness_duration(7f);
                     CONFIG.citrineConfig.sword_hunger_amplifier(0);
                     CONFIG.citrineConfig.sword_hunger_duration(7f);
+                    CONFIG.peridotConfig.axe_poison_duration(1.5f);
+                    CONFIG.peridotConfig.axe_poison_amplifier(2);
+                    CONFIG.peridotConfig.sword_poison_duration(1.5f);
+                    CONFIG.peridotConfig.sword_poison_amplifier(2);
+                    CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
+                    CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
                     CONFIG.sapphireConfig.axe_percentage_damage_percent(5);
                     CONFIG.sapphireConfig.sword_percentage_damage_percent(5);
                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);
-                    CONFIG.rubyConfig.haste_pickaxe_amplifier(0);
-                    CONFIG.rubyConfig.haste_axe_amplifier(0);
-                    CONFIG.rubyConfig.haste_shovel_amplifier(0);
-                    CONFIG.rubyConfig.haste_hoe_amplifier(0);
                     CONFIG.kyaniteConfig.axe_freeze_duration(0.5f);
                     CONFIG.kyaniteConfig.sword_freeze_duration(0.5f);
                     CONFIG.kyaniteConfig.ice_shield_duration(1.0f);
                     CONFIG.kyaniteConfig.ice_shield_amplifier(2);
+                    CONFIG.rubyConfig.haste_pickaxe_amplifier(0);
+                    CONFIG.rubyConfig.haste_axe_amplifier(0);
+                    CONFIG.rubyConfig.haste_shovel_amplifier(0);
+                    CONFIG.rubyConfig.haste_hoe_amplifier(0);
+                    CONFIG.topazConfig.topaz_item_mastery_amplifier(4);
                     CONFIG.ametrineConfig.axe_levitation_duration(0.75f);
                     CONFIG.ametrineConfig.axe_levitation_amplifier(4);
                     CONFIG.ametrineConfig.sword_levitation_duration(0.75f);
