@@ -13,4 +13,5 @@ public class MUEffects {
     public static StatusEffect ICE_SHIELD = new IceShieldEffect(StatusEffectCategory.BENEFICIAL, 4561645);
     public static StatusEffect ARCANE_AURA = new ArcaneAuraEffect(StatusEffectCategory.BENEFICIAL, 11808511);
     public static StatusEffect HINDERING = new HinderingEffect(StatusEffectCategory.BENEFICIAL, 4699647);
+    public static StatusEffect OCEAN_SHIELD = new OceanShieldEffect(StatusEffectCategory.BENEFICIAL, 4699647);
 }

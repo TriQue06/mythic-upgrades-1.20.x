@@ -19,5 +19,6 @@ public class RegisterMUEffects {
         registerEffect(MUEffects.ICE_SHIELD, "ice_shield");
         registerEffect(MUEffects.ARCANE_AURA, "arcane_aura");
         registerEffect(MUEffects.HINDERING, "hindering");
+        registerEffect(MUEffects.OCEAN_SHIELD, "ocean_shield");
     }
 }
