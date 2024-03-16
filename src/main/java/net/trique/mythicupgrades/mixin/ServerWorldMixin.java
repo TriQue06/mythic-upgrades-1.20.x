@@ -29,8 +29,8 @@ public abstract class ServerWorldMixin {
         ItemEffectsList citrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(HINDERING, CONFIG.citrineConfig.hindering_amplifier()).build();
         List<Integer> citrineAmplifiers = List.of(CONFIG.citrineConfig.hindering_amplifier());
 
-        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.NIGHT_VISION, 0).addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
-        List<Integer> aquamarineAmplifiers = List.of();
+        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(OCEAN_SHIELD, CONFIG.aquamarineConfig.ocean_shield_amplifier()).addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
+        List<Integer> aquamarineAmplifiers = List.of(CONFIG.aquamarineConfig.ocean_shield_amplifier());
 
         ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
         List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());

@@ -21,7 +21,7 @@ public class OceanShieldEffect extends StatusEffect {
             Entity attacker = livingEntity.getAttacker();
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
-                    entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 2 + amplifier);
+                    entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 1 + amplifier);
                     entity.playSound(SoundEvents.ENTITY_ELDER_GUARDIAN_HURT, 1.0f, livingEntity.getSoundPitch());
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,
                             (int)(CONFIG.aquamarineConfig.ocean_shield_duration() * 20), amplifier), livingEntity);
