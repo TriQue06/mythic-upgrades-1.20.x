@@ -21,14 +21,13 @@ public class HinderingEffect extends StatusEffect {
             Entity attacker = livingEntity.getAttacker();
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
-                    entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), 0 + amplifier);
                     entity.playSound(SoundEvents.ENTITY_HUSK_HURT, 1.0f, livingEntity.getSoundPitch());
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS,
                             (int)(CONFIG.citrineConfig.hindering_duration() * 20), amplifier), livingEntity);
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,
                             (int)(CONFIG.citrineConfig.hindering_duration() * 20), amplifier), livingEntity);
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER,
-                            (int)(CONFIG.citrineConfig.hindering_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.citrineConfig.hindering_duration() * 20), 2 + amplifier), livingEntity);
                 }
             }
         }

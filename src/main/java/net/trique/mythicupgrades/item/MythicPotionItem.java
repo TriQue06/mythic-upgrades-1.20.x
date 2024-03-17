@@ -18,7 +18,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class MythicPotionItem extends Item {
-    private static final int MAX_USE_TIME = 30;
+    private static final int MAX_USE_TIME = 20;
 
     public MythicPotionItem(Item.Settings settings) {
         super(settings);
@@ -46,7 +46,7 @@ public class MythicPotionItem extends Item {
     }
 
     public int getMaxUseTime(ItemStack stack) {
-        return 30;
+        return 20;
     }
 
     public UseAction getUseAction(ItemStack stack) {
