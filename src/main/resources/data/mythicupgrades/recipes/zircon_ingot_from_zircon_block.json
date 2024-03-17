@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "zircon_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:zircon_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:zircon_ingot"
+  }
+}

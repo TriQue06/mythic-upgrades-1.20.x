@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:zircon_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "mythicupgrades:zircon_sword"
+  },
+  "template": {
+    "item": "mythicupgrades:zircon_upgrade_smithing_template"
+  }
+}

@@ -17,7 +17,7 @@ public class MUConfigModel {
     @Nest
     public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
-    public KyaniteConfig kyaniteConfig = new KyaniteConfig();
+    public ZirconConfig zirconConfig = new ZirconConfig();
     @Nest
     public RubyConfig rubyConfig = new RubyConfig();
     @Nest
@@ -132,7 +132,7 @@ public class MUConfigModel {
         public int damage_deflection_amplifier = 2;
     }
 
-    public static class KyaniteConfig {
+    public static class ZirconConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 1f)
         public float axe_freeze_duration = 0.5f;

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "zircon_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:zircon_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mythicupgrades:zircon_block"
+  },
+  "show_notification": true
+}

@@ -20,6 +20,31 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItems() {
+        registerItem("aquamarine_sword", AQUAMARINE_SWORD);
+        registerItem("aquamarine_axe", AQUAMARINE_AXE);
+        registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
+        registerItem("aquamarine_chestplate", AQUAMARINE_CHESTPLATE);
+        registerItem("aquamarine_leggings", AQUAMARINE_LEGGINGS);
+        registerItem("aquamarine_boots", AQUAMARINE_BOOTS);
+        registerItem("aquamarine", AQUAMARINE);
+        registerItem("aquamarine_ingot", AQUAMARINE_INGOT);
+        registerItem("aquamarine_crystal_shard", AQUAMARINE_CRYSTAL_SHARD);
+        registerItem("aquamarine_fish", AQUAMARINE_FISH);
+        registerItem("aquamarine_potion", AQUAMARINE_POTION);
+        registerItem("aquamarine_upgrade_smithing_template", AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("citrine_axe", CITRINE_AXE);
+        registerItem("citrine_sword", CITRINE_SWORD);
+        registerItem("citrine_helmet", CITRINE_HELMET);
+        registerItem("citrine_chestplate", CITRINE_CHESTPLATE);
+        registerItem("citrine_leggings", CITRINE_LEGGINGS);
+        registerItem("citrine_boots", CITRINE_BOOTS);
+        registerItem("citrine", CITRINE);
+        registerItem("citrine_ingot", CITRINE_INGOT);
+        registerItem("citrine_crystal_shard", CITRINE_CRYSTAL_SHARD);
+        registerItem("citrine_potion", CITRINE_POTION);
+        registerItem("citrine_upgrade_smithing_template", CITRINE_UPGRADE_SMITHING_TEMPLATE);
+
         registerItem("peridot_axe", PERIDOT_AXE);
         registerItem("peridot_sword", PERIDOT_SWORD);
         registerItem("peridot_helmet", PERIDOT_HELMET);
@@ -32,6 +57,43 @@ public class RegisterMUItems {
         registerItem("jade_apple", JADE_APPLE);
         registerItem("peridot_potion", PERIDOT_POTION);
         registerItem("peridot_upgrade_smithing_template", PERIDOT_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("zircon_helmet", ZIRCON_HELMET);
+        registerItem("zircon_chestplate", ZIRCON_CHESTPLATE);
+        registerItem("zircon_leggings", ZIRCON_LEGGINGS);
+        registerItem("zircon_boots", ZIRCON_BOOTS);
+        registerItem("zircon_axe", ZIRCON_AXE);
+        registerItem("zircon_sword", ZIRCON_SWORD);
+        registerItem("zircon", ZIRCON);
+        registerItem("zircon_ingot", ZIRCON_INGOT);
+        registerItem("zircon_crystal_shard", ZIRCON_CRYSTAL_SHARD);
+        registerItem("zircon_potion", ZIRCON_POTION);
+        registerItem("zircon_upgrade_smithing_template", ZIRCON_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("ruby_shovel", RUBY_SHOVEL);
+        registerItem("ruby_axe", RUBY_AXE);
+        registerItem("ruby_pickaxe", RUBY_PICKAXE);
+        registerItem("ruby_hoe", RUBY_HOE);
+        registerItem("ruby_sword", RUBY_SWORD);
+        registerItem("ruby", RUBY);
+        registerItem("ruby_ingot", RUBY_INGOT);
+        registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
+        registerItem("ruby_apple", RUBY_APPLE);
+        registerItem("ruby_potion", RUBY_POTION);
+        registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("sapphire_helmet", SAPPHIRE_HELMET);
+        registerItem("sapphire_chestplate", SAPPHIRE_CHESTPLATE);
+        registerItem("sapphire_leggings", SAPPHIRE_LEGGINGS);
+        registerItem("sapphire_boots", SAPPHIRE_BOOTS);
+        registerItem("sapphire_axe", SAPPHIRE_AXE);
+        registerItem("sapphire_sword", SAPPHIRE_SWORD);
+        registerItem("sapphire", SAPPHIRE);
+        registerItem("sapphire_ingot", SAPPHIRE_INGOT);
+        registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
+        registerItem("sapphire_apple", SAPPHIRE_APPLE);
+        registerItem("sapphire_potion", SAPPHIRE_POTION);
+        registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
 
         registerItem("topaz_shovel", TOPAZ_SHOVEL);
         registerItem("topaz_pickaxe", TOPAZ_PICKAXE);
@@ -48,68 +110,6 @@ public class RegisterMUItems {
         registerItem("topaz_apple", TOPAZ_APPLE);
         registerItem("topaz_potion", TOPAZ_POTION);
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("citrine_axe", CITRINE_AXE);
-        registerItem("citrine_sword", CITRINE_SWORD);
-        registerItem("citrine_helmet", CITRINE_HELMET);
-        registerItem("citrine_chestplate", CITRINE_CHESTPLATE);
-        registerItem("citrine_leggings", CITRINE_LEGGINGS);
-        registerItem("citrine_boots", CITRINE_BOOTS);
-        registerItem("citrine", CITRINE);
-        registerItem("citrine_ingot", CITRINE_INGOT);
-        registerItem("citrine_crystal_shard", CITRINE_CRYSTAL_SHARD);
-        registerItem("citrine_potion", CITRINE_POTION);
-        registerItem("citrine_upgrade_smithing_template", CITRINE_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("aquamarine_sword", AQUAMARINE_SWORD);
-        registerItem("aquamarine_axe", AQUAMARINE_AXE);
-        registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
-        registerItem("aquamarine_chestplate", AQUAMARINE_CHESTPLATE);
-        registerItem("aquamarine_leggings", AQUAMARINE_LEGGINGS);
-        registerItem("aquamarine_boots", AQUAMARINE_BOOTS);
-        registerItem("aquamarine", AQUAMARINE);
-        registerItem("aquamarine_ingot", AQUAMARINE_INGOT);
-        registerItem("aquamarine_crystal_shard", AQUAMARINE_CRYSTAL_SHARD);
-        registerItem("aquamarine_fish", AQUAMARINE_FISH);
-        registerItem("aquamarine_potion", AQUAMARINE_POTION);
-        registerItem("aquamarine_upgrade_smithing_template", AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("sapphire_helmet", SAPPHIRE_HELMET);
-        registerItem("sapphire_chestplate", SAPPHIRE_CHESTPLATE);
-        registerItem("sapphire_leggings", SAPPHIRE_LEGGINGS);
-        registerItem("sapphire_boots", SAPPHIRE_BOOTS);
-        registerItem("sapphire_axe", SAPPHIRE_AXE);
-        registerItem("sapphire_sword", SAPPHIRE_SWORD);
-        registerItem("sapphire", SAPPHIRE);
-        registerItem("sapphire_ingot", SAPPHIRE_INGOT);
-        registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
-        registerItem("sapphire_apple", SAPPHIRE_APPLE);
-        registerItem("sapphire_potion", SAPPHIRE_POTION);
-        registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("ruby_shovel", RUBY_SHOVEL);
-        registerItem("ruby_axe", RUBY_AXE);
-        registerItem("ruby_pickaxe", RUBY_PICKAXE);
-        registerItem("ruby_hoe", RUBY_HOE);
-        registerItem("ruby_sword", RUBY_SWORD);
-        registerItem("ruby", RUBY);
-        registerItem("ruby_ingot", RUBY_INGOT);
-        registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
-        registerItem("ruby_apple", RUBY_APPLE);
-        registerItem("ruby_potion", RUBY_POTION);
-        registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("kyanite_helmet", KYANITE_HELMET);
-        registerItem("kyanite_chestplate", KYANITE_CHESTPLATE);
-        registerItem("kyanite_leggings", KYANITE_LEGGINGS);
-        registerItem("kyanite_boots", KYANITE_BOOTS);
-        registerItem("kyanite_axe", KYANITE_AXE);
-        registerItem("kyanite_sword", KYANITE_SWORD);
-        registerItem("kyanite", KYANITE);
-        registerItem("kyanite_ingot", KYANITE_INGOT);
-        registerItem("kyanite_crystal_shard", KYANITE_CRYSTAL_SHARD);
-        registerItem("kyanite_potion", KYANITE_POTION);
-        registerItem("kyanite_upgrade_smithing_template", KYANITE_UPGRADE_SMITHING_TEMPLATE);
 
         registerItem("ametrine_axe", AMETRINE_AXE);
         registerItem("ametrine_sword", AMETRINE_SWORD);
@@ -185,12 +185,12 @@ public class RegisterMUItems {
                     entries.add(AQUAMARINE_LEGGINGS);
                     entries.add(AQUAMARINE_BOOTS);
 
-                    entries.add(KYANITE_AXE);
-                    entries.add(KYANITE_SWORD);
-                    entries.add(KYANITE_HELMET);
-                    entries.add(KYANITE_CHESTPLATE);
-                    entries.add(KYANITE_LEGGINGS);
-                    entries.add(KYANITE_BOOTS);
+                    entries.add(ZIRCON_AXE);
+                    entries.add(ZIRCON_SWORD);
+                    entries.add(ZIRCON_HELMET);
+                    entries.add(ZIRCON_CHESTPLATE);
+                    entries.add(ZIRCON_LEGGINGS);
+                    entries.add(ZIRCON_BOOTS);
 
                     entries.add(SAPPHIRE_AXE);
                     entries.add(SAPPHIRE_SWORD);
@@ -246,11 +246,11 @@ public class RegisterMUItems {
                     entries.add(AQUAMARINE_POTION);
                     entries.add(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
 
-                    entries.add(KYANITE);
-                    entries.add(KYANITE_INGOT);
-                    entries.add(KYANITE_CRYSTAL_SHARD);
-                    entries.add(KYANITE_POTION);
-                    entries.add(KYANITE_UPGRADE_SMITHING_TEMPLATE);
+                    entries.add(ZIRCON);
+                    entries.add(ZIRCON_INGOT);
+                    entries.add(ZIRCON_CRYSTAL_SHARD);
+                    entries.add(ZIRCON_POTION);
+                    entries.add(ZIRCON_UPGRADE_SMITHING_TEMPLATE);
 
                     entries.add(SAPPHIRE);
                     entries.add(SAPPHIRE_INGOT);
@@ -329,14 +329,14 @@ public class RegisterMUItems {
                     entries.add(LARGE_AQUAMARINE_CRYSTAL_BUD);
                     entries.add(AQUAMARINE_CRYSTAL_CLUSTER);
 
-                    entries.add(KYANITE_BLOCK);
-                    entries.add(KYANITE_ORE);
-                    entries.add(KYANITE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_KYANITE_CRYSTAL);
-                    entries.add(SMALL_KYANITE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_KYANITE_CRYSTAL_BUD);
-                    entries.add(LARGE_KYANITE_CRYSTAL_BUD);
-                    entries.add(KYANITE_CRYSTAL_CLUSTER);
+                    entries.add(ZIRCON_BLOCK);
+                    entries.add(ZIRCON_ORE);
+                    entries.add(ZIRCON_CRYSTAL_BLOCK);
+                    entries.add(BUDDING_ZIRCON_CRYSTAL);
+                    entries.add(SMALL_ZIRCON_CRYSTAL_BUD);
+                    entries.add(MEDIUM_ZIRCON_CRYSTAL_BUD);
+                    entries.add(LARGE_ZIRCON_CRYSTAL_BUD);
+                    entries.add(ZIRCON_CRYSTAL_CLUSTER);
 
                     entries.add(SAPPHIRE_BLOCK);
                     entries.add(SAPPHIRE_ORE);

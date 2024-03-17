@@ -18,7 +18,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class MythicPotionItem extends Item {
-    private static final int MAX_USE_TIME = 40;
+    private static final int MAX_USE_TIME = 30;
 
     public MythicPotionItem(Item.Settings settings) {
         super(settings);
@@ -31,10 +31,6 @@ public class MythicPotionItem extends Item {
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
 
-        if (!world.isClient) {
-            user.removeStatusEffect(StatusEffects.POISON);
-        }
-
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
         } else {
@@ -45,13 +41,12 @@ public class MythicPotionItem extends Item {
                     playerEntity.dropItem(itemStack, false);
                 }
             }
-
             return stack;
         }
     }
 
     public int getMaxUseTime(ItemStack stack) {
-        return 40;
+        return 30;
     }
 
     public UseAction getUseAction(ItemStack stack) {
