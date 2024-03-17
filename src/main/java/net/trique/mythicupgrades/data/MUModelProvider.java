@@ -49,6 +49,7 @@ public class MUModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_ZIRCON_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_ZIRCON_CRYSTAL);
         blockStateModelGenerator.registerAmethyst(SMALL_ZIRCON_CRYSTAL_BUD);

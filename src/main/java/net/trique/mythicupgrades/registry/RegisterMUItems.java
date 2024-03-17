@@ -331,6 +331,7 @@ public class RegisterMUItems {
 
                     entries.add(ZIRCON_BLOCK);
                     entries.add(ZIRCON_ORE);
+                    entries.add(DEEPSLATE_ZIRCON_ORE);
                     entries.add(ZIRCON_CRYSTAL_BLOCK);
                     entries.add(BUDDING_ZIRCON_CRYSTAL);
                     entries.add(SMALL_ZIRCON_CRYSTAL_BUD);

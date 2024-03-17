@@ -15,11 +15,11 @@ public class MUConfigModel {
     @Nest
     public PeridotConfig peridotConfig = new PeridotConfig();
     @Nest
-    public SapphireConfig sapphireConfig = new SapphireConfig();
-    @Nest
     public ZirconConfig zirconConfig = new ZirconConfig();
     @Nest
     public RubyConfig rubyConfig = new RubyConfig();
+    @Nest
+    public SapphireConfig sapphireConfig = new SapphireConfig();
     @Nest
     public TopazConfig topazConfig = new TopazConfig();
     @Nest
@@ -118,20 +118,6 @@ public class MUConfigModel {
         public int poisonous_thorns_amplifier = 0;
     }
 
-    public static class SapphireConfig {
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1, max = 7)
-        public int axe_percentage_damage_percent = 5;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1, max = 7)
-        public int sword_percentage_damage_percent = 5;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 4)
-        public int damage_deflection_amplifier = 2;
-    }
-
     public static class ZirconConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 1f)
@@ -165,11 +151,21 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int haste_sword_amplifier = 0;
+        public int haste_hoe_amplifier = 0;
+    }
+
+    public static class SapphireConfig {
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 1, max = 7)
+        public int axe_percentage_damage_percent = 5;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int haste_hoe_amplifier = 0;
+        @RangeConstraint(min = 1, max = 7)
+        public int sword_percentage_damage_percent = 5;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0, max = 4)
+        public int damage_deflection_amplifier = 2;
     }
 
     public static class TopazConfig {

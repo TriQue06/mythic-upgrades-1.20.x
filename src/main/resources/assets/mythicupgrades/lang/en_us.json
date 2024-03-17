@@ -134,29 +134,6 @@
   "block.mythicupgrades.medium_peridot_crystal_bud": "Medium Peridot Crystal Bud",
   "block.mythicupgrades.small_peridot_crystal_bud": "Small Peridot Crystal Bud",
 
-  "item.mythicupgrades.sapphire": "Sapphire",
-  "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
-  "item.mythicupgrades.sapphire_crystal_shard": "Sapphire Crystal Shard",
-  "item.mythicupgrades.sapphire_potion": "Sapphire Potion",
-
-  "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
-  "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
-  "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
-  "item.mythicupgrades.sapphire_boots": "Sapphire Boots",
-
-  "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
-  "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
-
-  "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
-  "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
-  "block.mythicupgrades.sapphire_block": "Block of Sapphire",
-  "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
-  "block.mythicupgrades.budding_sapphire_crystal": "Budding Sapphire Crystal",
-  "block.mythicupgrades.sapphire_crystal_cluster": "Sapphire Crystal Cluster",
-  "block.mythicupgrades.large_sapphire_crystal_bud": "Large Sapphire Crystal Bud",
-  "block.mythicupgrades.medium_sapphire_crystal_bud": "Medium Sapphire Crystal Bud",
-  "block.mythicupgrades.small_sapphire_crystal_bud": "Small Sapphire Crystal Bud",
-
   "item.mythicupgrades.zircon": "Zircon",
   "item.mythicupgrades.zircon_ingot": "Zircon Ingot",
   "item.mythicupgrades.zircon_crystal_shard": "Zircon Crystal Shard",
@@ -171,6 +148,7 @@
   "item.mythicupgrades.zircon_axe": "Zircon Axe",
 
   "block.mythicupgrades.zircon_ore": "Zircon Ore",
+  "block.mythicupgrades.deepslate_zircon_ore": "Deepslate Zircon Ore",
   "block.mythicupgrades.zircon_block": "Block of Zircon",
   "block.mythicupgrades.zircon_crystal_block": "Block of Zircon Crystal",
   "block.mythicupgrades.budding_zircon_crystal": "Budding Zircon Crystal",
@@ -197,6 +175,29 @@
   "block.mythicupgrades.large_ruby_crystal_bud": "Large Ruby Crystal Bud",
   "block.mythicupgrades.medium_ruby_crystal_bud": "Medium Ruby Crystal Bud",
   "block.mythicupgrades.small_ruby_crystal_bud": "Small Ruby Crystal Bud",
+
+  "item.mythicupgrades.sapphire": "Sapphire",
+  "item.mythicupgrades.sapphire_ingot": "Sapphire Ingot",
+  "item.mythicupgrades.sapphire_crystal_shard": "Sapphire Crystal Shard",
+  "item.mythicupgrades.sapphire_potion": "Sapphire Potion",
+
+  "item.mythicupgrades.sapphire_helmet": "Sapphire Helmet",
+  "item.mythicupgrades.sapphire_chestplate": "Sapphire Chestplate",
+  "item.mythicupgrades.sapphire_leggings": "Sapphire Leggings",
+  "item.mythicupgrades.sapphire_boots": "Sapphire Boots",
+
+  "item.mythicupgrades.sapphire_sword": "Sapphire Sword",
+  "item.mythicupgrades.sapphire_axe": "Sapphire Axe",
+
+  "block.mythicupgrades.sapphire_ore": "Sapphire Ore",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.mythicupgrades.sapphire_block": "Block of Sapphire",
+  "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
+  "block.mythicupgrades.budding_sapphire_crystal": "Budding Sapphire Crystal",
+  "block.mythicupgrades.sapphire_crystal_cluster": "Sapphire Crystal Cluster",
+  "block.mythicupgrades.large_sapphire_crystal_bud": "Large Sapphire Crystal Bud",
+  "block.mythicupgrades.medium_sapphire_crystal_bud": "Medium Sapphire Crystal Bud",
+  "block.mythicupgrades.small_sapphire_crystal_bud": "Small Sapphire Crystal Bud",
 
   "item.mythicupgrades.topaz": "Topaz",
   "item.mythicupgrades.topaz_ingot": "Topaz Ingot",
@@ -277,9 +278,9 @@
   "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.citrine_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.peridot_upgrade_smithing_template": "Smithing Template",
-  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.zircon_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Smithing Template",
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.topaz_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.ametrine_upgrade_smithing_template": "Smithing Template",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Smithing Template",
@@ -287,9 +288,9 @@
   "effect.mythicupgrades.ocean_shield": "Ocean Shield",
   "effect.mythicupgrades.hindering": "Hindering",
   "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
-  "effect.mythicupgrades.damage_deflection": "Damage Deflection",
   "effect.mythicupgrades.ice_shield": "Ice Shield",
   "effect.mythicupgrades.freeze": "Freeze",
+  "effect.mythicupgrades.damage_deflection": "Damage Deflection",
   "effect.mythicupgrades.item_mastery": "Item Mastery",
   "effect.mythicupgrades.arcane_aura": "Arcane Aura",
 
@@ -314,13 +315,6 @@
   "peridot_axe.description": "Poisons enemy on hit.",
   "peridot_sword.description": "Poisons enemy on hit.",
 
-  "sapphire_helmet.description": "Set Bonus: Damage Deflection %s",
-  "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s",
-  "sapphire_leggings.description": "Set Bonus: Damage Deflection %s",
-  "sapphire_boots.description": "Set Bonus: Damage Deflection %s",
-  "sapphire_axe.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
-  "sapphire_sword.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
-
   "zircon_helmet.description": "Set Bonus: Ice Shield %s",
   "zircon_chestplate.description": "Set Bonus: Ice Shield %s",
   "zircon_leggings.description": "Set Bonus: Ice Shield %s",
@@ -333,6 +327,13 @@
   "ruby_shovel.description": "Applies Haste when in main hand.",
   "ruby_hoe.description": "Applies Haste when in main hand.",
   "ruby_sword.description": "Applies Haste when in main hand.",
+
+  "sapphire_helmet.description": "Set Bonus: Damage Deflection %s",
+  "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s",
+  "sapphire_leggings.description": "Set Bonus: Damage Deflection %s",
+  "sapphire_boots.description": "Set Bonus: Damage Deflection %s",
+  "sapphire_axe.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
+  "sapphire_sword.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
 
   "topaz_helmet.description": "Set Bonus: Item Mastery %s and Fire Resistance",
   "topaz_chestplate.description": "Set Bonus: Item Mastery %s and Fire Resistance",
@@ -381,12 +382,6 @@
   "item.minecraft.smithing_template.peridot_upgrade.ingredients": "Peridot Ingot",
   "upgrade.minecraft.peridot_upgrade": "Peridot Upgrade",
 
-  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Add Sapphire Ingot",
-  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
-  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Add netherite armor or weapon",
-  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Sapphire Ingot",
-  "upgrade.minecraft.sapphire_upgrade": "Sapphire Upgrade",
-
   "item.minecraft.smithing_template.zircon_upgrade.additions_slot_description": "Add Zircon Ingot",
   "item.minecraft.smithing_template.zircon_upgrade.applies_to": "Netherite Equipment",
   "item.minecraft.smithing_template.zircon_upgrade.base_slot_description": "Add netherite armor or weapon",
@@ -398,6 +393,12 @@
   "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Add netherite tool",
   "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Ruby Ingot",
   "upgrade.minecraft.ruby_upgrade": "Ruby Upgrade",
+
+  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Add Sapphire Ingot",
+  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Netherite Equipment",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Add netherite armor or weapon",
+  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Sapphire Ingot",
+  "upgrade.minecraft.sapphire_upgrade": "Sapphire Upgrade",
 
   "item.minecraft.smithing_template.topaz_upgrade.additions_slot_description": "Add Topaz Ingot",
   "item.minecraft.smithing_template.topaz_upgrade.applies_to": "Netherite Equipment",
