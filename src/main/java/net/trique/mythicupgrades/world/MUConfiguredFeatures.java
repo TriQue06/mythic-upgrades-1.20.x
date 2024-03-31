@@ -29,15 +29,15 @@ public class MUConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NECOIUM_ORE_KEY = registerKey("necoium_ore");
 
-    public static final RegistryKey<ConfiguredFeature<?,?>> AQUAMARINE_CRYSTAL_GEODE_KEY = registerKey("aquamarine_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> CITRINE_CRYSTAL_GEODE_KEY = registerKey("citrine_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> PERIDOT_CRYSTAL_GEODE_KEY = registerKey("peridot_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> ZIRCON_CRYSTAL_GEODE_KEY = registerKey("zircon_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> RUBY_CRYSTAL_GEODE_KEY = registerKey("ruby_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> SAPPHIRE_CRYSTAL_GEODE_KEY = registerKey("sapphire_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> TOPAZ_CRYSTAL_GEODE_KEY = registerKey("topaz_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> AMETRINE_CRYSTAL_GEODE_KEY = registerKey("ametrine_crystal_geode");
-    public static final RegistryKey<ConfiguredFeature<?,?>> JADE_CRYSTAL_GEODE_KEY = registerKey("jade_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AQUAMARINE_CRYSTAL_GEODE_KEY = registerKey("aquamarine_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CITRINE_CRYSTAL_GEODE_KEY = registerKey("citrine_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PERIDOT_CRYSTAL_GEODE_KEY = registerKey("peridot_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ZIRCON_CRYSTAL_GEODE_KEY = registerKey("zircon_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RUBY_CRYSTAL_GEODE_KEY = registerKey("ruby_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SAPPHIRE_CRYSTAL_GEODE_KEY = registerKey("sapphire_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TOPAZ_CRYSTAL_GEODE_KEY = registerKey("topaz_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> AMETRINE_CRYSTAL_GEODE_KEY = registerKey("ametrine_crystal_geode");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> JADE_CRYSTAL_GEODE_KEY = registerKey("jade_crystal_geode");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -93,10 +93,10 @@ public class MUConfiguredFeatures {
         register(context, AQUAMARINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_AQUAMARINE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_AQUAMARINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -108,10 +108,10 @@ public class MUConfiguredFeatures {
         register(context, CITRINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.CITRINE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_CITRINE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.CITRINE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_CITRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_CITRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_CITRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.CITRINE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.CITRINE_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.CITRINE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -123,10 +123,10 @@ public class MUConfiguredFeatures {
         register(context, PERIDOT_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.PERIDOT_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_PERIDOT_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.PERIDOT_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_PERIDOT_CRYSTAL_BUD.getDefaultState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.PERIDOT_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -138,10 +138,10 @@ public class MUConfiguredFeatures {
         register(context, ZIRCON_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.ZIRCON_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_ZIRCON_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.ZIRCON_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_ZIRCON_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_ZIRCON_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_ZIRCON_CRYSTAL_BUD.getDefaultState(), MUBlocks.ZIRCON_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.ZIRCON_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.ZIRCON_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -153,10 +153,10 @@ public class MUConfiguredFeatures {
         register(context, RUBY_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.RUBY_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_RUBY_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.RUBY_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_RUBY_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_RUBY_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_RUBY_CRYSTAL_BUD.getDefaultState(), MUBlocks.RUBY_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.RUBY_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.RUBY_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -168,10 +168,10 @@ public class MUConfiguredFeatures {
         register(context, SAPPHIRE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.SAPPHIRE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_SAPPHIRE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.SAPPHIRE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_SAPPHIRE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_SAPPHIRE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_SAPPHIRE_CRYSTAL_BUD.getDefaultState(), MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -183,10 +183,10 @@ public class MUConfiguredFeatures {
         register(context, TOPAZ_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_TOPAZ_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_TOPAZ_CRYSTAL_BUD.getDefaultState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.TOPAZ_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -198,10 +198,10 @@ public class MUConfiguredFeatures {
         register(context, AMETRINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.AMETRINE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_AMETRINE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.AMETRINE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_AMETRINE_CRYSTAL_BUD.getDefaultState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.AMETRINE_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),
@@ -213,10 +213,10 @@ public class MUConfiguredFeatures {
         register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
                 new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
                         BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
-                        BlockStateProvider.of(MUBlocks.BUDDING_JADE_CRYSTAL),
+                        BlockStateProvider.of(MUBlocks.JADE_CRYSTAL_BLOCK),
                         BlockStateProvider.of(Blocks.CALCITE),
                         BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.SMALL_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.MEDIUM_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.LARGE_JADE_CRYSTAL_BUD.getDefaultState(), MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState()),
+                        List.of(MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState(), MUBlocks.JADE_CRYSTAL_CLUSTER.getDefaultState()),
                         BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerThicknessConfig(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackConfig(0.95, 2.0, 2),

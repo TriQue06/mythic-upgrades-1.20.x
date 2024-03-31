@@ -21,85 +21,49 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_AQUAMARINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_AQUAMARINE_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_AQUAMARINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_AQUAMARINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_AQUAMARINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(AQUAMARINE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_CITRINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_CITRINE_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_CITRINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_CITRINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_CITRINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(CITRINE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_PERIDOT_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_PERIDOT_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_PERIDOT_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_PERIDOT_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_PERIDOT_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(PERIDOT_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_ZIRCON_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_ZIRCON_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_ZIRCON_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_ZIRCON_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_ZIRCON_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(ZIRCON_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_RUBY_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_RUBY_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_RUBY_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_RUBY_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(RUBY_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_SAPPHIRE_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_SAPPHIRE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_SAPPHIRE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_SAPPHIRE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(SAPPHIRE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_TOPAZ_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_TOPAZ_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_TOPAZ_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_TOPAZ_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(TOPAZ_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_AMETRINE_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_AMETRINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_AMETRINE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_AMETRINE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(AMETRINE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(BUDDING_JADE_CRYSTAL);
-        blockStateModelGenerator.registerAmethyst(SMALL_JADE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(MEDIUM_JADE_CRYSTAL_BUD);
-        blockStateModelGenerator.registerAmethyst(LARGE_JADE_CRYSTAL_BUD);
         blockStateModelGenerator.registerAmethyst(JADE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(RAW_NECOIUM_BLOCK);

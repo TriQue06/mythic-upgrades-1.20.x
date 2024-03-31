@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "mythicupgrades:ruby_crystal_shard"
+      "item": "mythicupgrades:peridot_crystal_shard"
     },
     "X": {
       "item": "minecraft:gold_nugget"
@@ -18,6 +18,6 @@
     "#O#"
   ],
   "result": {
-    "item": "mythicupgrades:ruby_potion"
+    "item": "mythicupgrades:peridot_potion"
   }
 }

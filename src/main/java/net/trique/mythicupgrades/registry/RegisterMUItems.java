@@ -275,86 +275,50 @@ public class RegisterMUItems {
                     entries.add(RUBY_BLOCK);
                     entries.add(RUBY_ORE);
                     entries.add(RUBY_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_RUBY_CRYSTAL);
-                    entries.add(SMALL_RUBY_CRYSTAL_BUD);
-                    entries.add(MEDIUM_RUBY_CRYSTAL_BUD);
-                    entries.add(LARGE_RUBY_CRYSTAL_BUD);
                     entries.add(RUBY_CRYSTAL_CLUSTER);
 
                     entries.add(TOPAZ_BLOCK);
                     entries.add(TOPAZ_ORE);
                     entries.add(TOPAZ_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_TOPAZ_CRYSTAL);
-                    entries.add(SMALL_TOPAZ_CRYSTAL_BUD);
-                    entries.add(MEDIUM_TOPAZ_CRYSTAL_BUD);
-                    entries.add(LARGE_TOPAZ_CRYSTAL_BUD);
                     entries.add(TOPAZ_CRYSTAL_CLUSTER);
 
                     entries.add(CITRINE_BLOCK);
                     entries.add(CITRINE_ORE);
                     entries.add(DEEPSLATE_CITRINE_ORE);
                     entries.add(CITRINE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_CITRINE_CRYSTAL);
-                    entries.add(SMALL_CITRINE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_CITRINE_CRYSTAL_BUD);
-                    entries.add(LARGE_CITRINE_CRYSTAL_BUD);
                     entries.add(CITRINE_CRYSTAL_CLUSTER);
 
                     entries.add(PERIDOT_BLOCK);
                     entries.add(PERIDOT_ORE);
                     entries.add(DEEPSLATE_PERIDOT_ORE);
                     entries.add(PERIDOT_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_PERIDOT_CRYSTAL);
-                    entries.add(SMALL_PERIDOT_CRYSTAL_BUD);
-                    entries.add(MEDIUM_PERIDOT_CRYSTAL_BUD);
-                    entries.add(LARGE_PERIDOT_CRYSTAL_BUD);
                     entries.add(PERIDOT_CRYSTAL_CLUSTER);
 
                     entries.add(JADE_BLOCK);
                     entries.add(JADE_ORE);
                     entries.add(JADE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_JADE_CRYSTAL);
-                    entries.add(SMALL_JADE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_JADE_CRYSTAL_BUD);
-                    entries.add(LARGE_JADE_CRYSTAL_BUD);
                     entries.add(JADE_CRYSTAL_CLUSTER);
 
                     entries.add(AQUAMARINE_BLOCK);
                     entries.add(AQUAMARINE_ORE);
                     entries.add(DEEPSLATE_AQUAMARINE_ORE);
                     entries.add(AQUAMARINE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_AQUAMARINE_CRYSTAL);
-                    entries.add(SMALL_AQUAMARINE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_AQUAMARINE_CRYSTAL_BUD);
-                    entries.add(LARGE_AQUAMARINE_CRYSTAL_BUD);
                     entries.add(AQUAMARINE_CRYSTAL_CLUSTER);
 
                     entries.add(ZIRCON_BLOCK);
                     entries.add(ZIRCON_ORE);
                     entries.add(DEEPSLATE_ZIRCON_ORE);
                     entries.add(ZIRCON_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_ZIRCON_CRYSTAL);
-                    entries.add(SMALL_ZIRCON_CRYSTAL_BUD);
-                    entries.add(MEDIUM_ZIRCON_CRYSTAL_BUD);
-                    entries.add(LARGE_ZIRCON_CRYSTAL_BUD);
                     entries.add(ZIRCON_CRYSTAL_CLUSTER);
 
                     entries.add(SAPPHIRE_BLOCK);
                     entries.add(SAPPHIRE_ORE);
                     entries.add(SAPPHIRE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_SAPPHIRE_CRYSTAL);
-                    entries.add(SMALL_SAPPHIRE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_SAPPHIRE_CRYSTAL_BUD);
-                    entries.add(LARGE_SAPPHIRE_CRYSTAL_BUD);
                     entries.add(SAPPHIRE_CRYSTAL_CLUSTER);
 
                     entries.add(AMETRINE_BLOCK);
                     entries.add(AMETRINE_ORE);
                     entries.add(AMETRINE_CRYSTAL_BLOCK);
-                    entries.add(BUDDING_AMETRINE_CRYSTAL);
-                    entries.add(SMALL_AMETRINE_CRYSTAL_BUD);
-                    entries.add(MEDIUM_AMETRINE_CRYSTAL_BUD);
-                    entries.add(LARGE_AMETRINE_CRYSTAL_BUD);
                     entries.add(AMETRINE_CRYSTAL_CLUSTER);
 
                     entries.add(RAW_NECOIUM_BLOCK);
