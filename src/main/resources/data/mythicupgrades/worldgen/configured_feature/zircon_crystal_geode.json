@@ -5,7 +5,7 @@
       "alternate_inner_layer_provider": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "mythicupgrades:budding_zircon_crystal"
+          "Name": "mythicupgrades:zircon_crystal_block"
         }
       },
       "cannot_replace": "#minecraft:features_cannot_replace",
@@ -23,21 +23,21 @@
       },
       "inner_placements": [
         {
-          "Name": "mythicupgrades:small_zircon_crystal_bud",
+          "Name": "mythicupgrades:zircon_crystal_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
           }
         },
         {
-          "Name": "mythicupgrades:medium_zircon_crystal_bud",
+          "Name": "mythicupgrades:zircon_crystal_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
           }
         },
         {
-          "Name": "mythicupgrades:large_zircon_crystal_bud",
+          "Name": "mythicupgrades:zircon_crystal_cluster",
           "Properties": {
             "facing": "up",
             "waterlogged": "false"
