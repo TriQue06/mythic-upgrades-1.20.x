@@ -1,44 +1,44 @@
 {
-  "schemaVersion": 1,
-  "id": "mythicupgrades",
-  "version": "${version}",
-  "name": "Mythic Upgrades",
-  "description": "Mythic Upgrades adds new mythic ways to upgrade Netherite gear with new ores.",
-  "authors": [
-    "TriQue"
-  ],
-  "contributors": [
-    "CyberSteve777"
-  ],
-  "contact": {
-    "sources": "https://github.com/TriQue06/mythic-upgrades-1.20.x",
-    "issues": "https://github.com/TriQue06/mythic-upgrades-1.20.x/issues",
-    "repo": "https://github.com/TriQue06/mythic-upgrades-1.20.x"
-  },
-  "license": "MIT",
-  "icon": "assets/mythicupgrades/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.trique.mythicupgrades.MythicUpgrades"
+    "schemaVersion": 1,
+    "id": "mythicupgrades",
+    "version": "${version}",
+    "name": "Mythic Upgrades",
+    "description": "Mythic Upgrades adds new mythic ways to upgrade Netherite gear with new ores.",
+    "authors": [
+      "TriQue"
     ],
-    "fabric-datagen": [
-      "net.trique.mythicupgrades.MythicUpgradesDataGenerator"
+    "contributors": [
+      "CyberSteve777"
     ],
-    "client": [
-      "net.trique.mythicupgrades.MythicUpgradesClient"
-    ]
-  },
-  "mixins": [
-    "mythicupgrades.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.14.22",
-    "minecraft": "~1.20.4",
-    "java": ">=17",
-    "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+    "contact": {
+      "sources": "https://github.com/TriQue06/mythic-upgrades-1.20.x",
+      "issues": "https://github.com/TriQue06/mythic-upgrades-1.20.x/issues",
+      "repo": "https://github.com/TriQue06/mythic-upgrades-1.20.x"
+    },
+    "license": "MIT",
+    "icon": "assets/mythicupgrades/icon.png",
+    "environment": "*",
+    "entrypoints": {
+      "main": [
+        "net.trique.mythicupgrades.MythicUpgrades"
+      ],
+      "fabric-datagen": [
+        "net.trique.mythicupgrades.MythicUpgradesDataGenerator"
+      ],
+      "client": [
+        "net.trique.mythicupgrades.MythicUpgradesClient"
+      ]
+    },
+      "mixins": [
+        "mythicupgrades.mixins.json"
+    ],
+    "depends": {
+      "fabricloader": ">=0.14.22",
+      "minecraft": "~1.20.4",
+      "java": ">=17",
+      "fabric-api": "*"
+    },
+    "suggests": {
+      "another-mod": "*"
+    }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:citrine_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "item": "mythicupgrades:citrine_leggings"
+  },
+  "template": {
+    "item": "mythicupgrades:citrine_upgrade_smithing_template"
+  }
+}

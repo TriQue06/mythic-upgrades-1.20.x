@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.6-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -49,10 +49,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
     include "io.wispforest:owo-sentinel:${project.owo_version}"
-    modImplementation "dev.emi:trinkets:${project.trinkets_version}"// Adds an API dependency on the base cardinal components module (required by every other module)
-    modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cardinal_version}"
+    // Adds an API dependency on the base cardinal components module (required by every other module)
 // Adds an implementation dependency on the entity module
-    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cardinal_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 

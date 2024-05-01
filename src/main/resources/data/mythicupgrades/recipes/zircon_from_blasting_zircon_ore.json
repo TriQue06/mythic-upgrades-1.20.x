@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "zircon",
+  "ingredient": {
+    "item": "mythicupgrades:zircon_ore"
+  },
+  "result": "mythicupgrades:zircon"
+}

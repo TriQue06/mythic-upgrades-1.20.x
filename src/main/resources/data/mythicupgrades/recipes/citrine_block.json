@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "citrine_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:citrine_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mythicupgrades:citrine_block"
+  },
+  "show_notification": true
+}

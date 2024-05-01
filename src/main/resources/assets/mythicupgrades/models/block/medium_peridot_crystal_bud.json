@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mythicupgrades:block/medium_peridot_crystal_bud"
+  }
+}

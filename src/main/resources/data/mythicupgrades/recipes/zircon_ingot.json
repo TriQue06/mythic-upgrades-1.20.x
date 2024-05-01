@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "zircon_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:zircon"
+    },
+    {
+      "item": "mythicupgrades:zircon"
+    },
+    {
+      "item": "mythicupgrades:zircon"
+    },
+    {
+      "item": "mythicupgrades:zircon"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    }
+  ],
+  "result": {
+    "item": "mythicupgrades:zircon_ingot"
+  }
+}

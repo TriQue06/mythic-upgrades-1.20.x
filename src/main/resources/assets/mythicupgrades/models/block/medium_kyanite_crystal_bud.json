@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "mythicupgrades:block/medium_kyanite_crystal_bud"
-  }
-}
