@@ -1,1 +1,0 @@
-/summon minecraft:husk ~ ~ ~ {ArmorItems:[{id:"mythicupgrades:aquamarine_boots",Count:1}, {id:"mythicupgrades:aquamarine_leggings",Count:1}, {id:"mythicupgrades:aquamarine_chestplate",Count:1}, {id:"mythicupgrades:aquamarine_helmet",Count:1}], HandItems:[{id: "mythicupgrades:aquamarine_sword", Count:1}]}
