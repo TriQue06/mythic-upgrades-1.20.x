@@ -145,23 +145,23 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 List.of(JADE),"jade_ingot", 1);
 
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> AQUAMARINE, ()->Items.PRISMARINE);
+                ()-> AQUAMARINE, ()-> Items.STONE_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> CITRINE, ()->Items.SANDSTONE);
+                ()-> CITRINE, ()-> Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> PERIDOT_UPGRADE_SMITHING_TEMPLATE,
-                ()-> PERIDOT, ()->Items.MOSSY_COBBLESTONE);
+                ()-> PERIDOT, ()-> Items.MOSSY_COBBLESTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                ()-> ZIRCON, ()->Items.BASALT);
+                ()-> ZIRCON, ()-> Items.BLUE_ICE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> RUBY_UPGRADE_SMITHING_TEMPLATE,
-                ()-> RUBY, ()->Items.BLACKSTONE);
+                ()-> RUBY, ()-> Items.BLACKSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> SAPPHIRE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> SAPPHIRE, ()->Items.NETHER_BRICKS);
+                ()-> SAPPHIRE, ()-> Items.NETHER_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> TOPAZ_UPGRADE_SMITHING_TEMPLATE,
-                ()-> TOPAZ, ()->Items.BLACKSTONE);
+                ()-> TOPAZ, ()-> Items.NETHER_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AMETRINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> AMETRINE, ()->Items.END_STONE_BRICKS);
+                ()-> AMETRINE, ()-> Items.END_STONE_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> JADE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> JADE, ()->Items.END_STONE_BRICKS);
+                ()-> JADE, ()-> Items.END_STONE_BRICKS);
         
         offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_HELMET, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_HELMET);

@@ -72,27 +72,27 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1f, max = 15f)
-        public float sword_weakness_duration = 7f;
+        public float sword_weakness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 7f, max = 2f)
-        public float sword_slowness_duration = 7f;
+        public float sword_slowness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 7f, max = 2f)
-        public float sword_hunger_duration = 7f;
+        public float sword_hunger_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 7f, max = 2f)
-        public float axe_weakness_duration = 7f;
+        public float axe_weakness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 7f, max = 2f)
-        public float axe_slowness_duration = 7f;
+        public float axe_slowness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 7f, max = 2f)
-        public float axe_hunger_duration = 7f;
+        public float axe_hunger_duration = 5f;
     }
 
     public static class PeridotConfig {
