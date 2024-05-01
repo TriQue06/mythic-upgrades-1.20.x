@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "peridot_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:peridot_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mythicupgrades:peridot_block"
+  },
+  "show_notification": true
+}

@@ -10,7 +10,6 @@ import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery
 import org.spongepowered.asm.mixin.injection.At;
 import java.util.function.Consumer;
 
-
 @Mixin(SwordItem.class)
 public abstract class SwordItemMixin extends Item {
     public SwordItemMixin(Settings settings) {

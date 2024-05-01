@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicupgrades:zircon_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zircon_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:zircon_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_zircon_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicupgrades:zircon_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

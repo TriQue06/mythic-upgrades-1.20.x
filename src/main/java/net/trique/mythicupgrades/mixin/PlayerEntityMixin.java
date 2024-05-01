@@ -18,11 +18,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
-import net.trique.mythicupgrades.attributes.AdditionalEntityAttributesEntityTags;
-import net.trique.mythicupgrades.attributes.MUAttributes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
@@ -140,45 +137,5 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @WrapWithCondition(method = "damageShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
     private <T extends LivingEntity> boolean applyChanceWithToolMasteryForDamageShield(ItemStack stack, int amount, T user, Consumer<T> callback) {
         return !hasStatusEffect(MUEffects.ITEM_MASTERY) || (hasStatusEffect(MUEffects.ITEM_MASTERY) && RANDOM.nextFloat() > 0.1f * getStatusEffect(MUEffects.ITEM_MASTERY).getAmplifier());
-    }
-
-    @Inject(method = "createPlayerAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", require = 1, allow = 1, at = @At("RETURN"))
-    private static void additionalEntityAttributes$addPlayerAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
-        info.getReturnValue().add(MUAttributes.WATER_VISIBILITY);
-        info.getReturnValue().add(MUAttributes.LAVA_VISIBILITY);
-        info.getReturnValue().add(MUAttributes.CRITICAL_BONUS_DAMAGE);
-        info.getReturnValue().add(MUAttributes.DIG_SPEED);
-        info.getReturnValue().add(MUAttributes.DROPPED_EXPERIENCE);
-    }
-
-    /**
-     * By default, the additional crit damage is a 50% bonus
-     */
-    @ModifyConstant(method = "attack(Lnet/minecraft/entity/Entity;)V", constant = @Constant(floatValue = 1.5F))
-    public float additionalEntityAttributes$applyCriticalBonusDamage(float original) {
-        EntityAttributeInstance criticalDamageMultiplier = ((LivingEntity) (Object) this).getAttributeInstance(MUAttributes.CRITICAL_BONUS_DAMAGE);
-        if (criticalDamageMultiplier == null) {
-            return original;
-        } else {
-            return 1 + (float) criticalDamageMultiplier.getValue();
-        }
-    }
-
-    @ModifyVariable(method = "getBlockBreakingSpeed", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/effect/StatusEffectUtil;hasHaste(Lnet/minecraft/entity/LivingEntity;)Z"), index = 2)
-    private float additionalEntityAttributes$adjustBlockBreakingSpeed(float f) {
-        EntityAttributeInstance instance = ((LivingEntity) (Object) this).getAttributeInstance(MUAttributes.DIG_SPEED);
-
-        if (instance != null) {
-            for (EntityAttributeModifier modifier : instance.getModifiers()) {
-                float amount = (float) modifier.getValue();
-
-                if (modifier.getOperation() == EntityAttributeModifier.Operation.ADDITION)
-                    f += amount;
-                else
-                    f *= (amount + 1);
-            }
-        }
-
-        return f;
     }
 }

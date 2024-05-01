@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "peridot_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:peridot_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mythicupgrades:peridot_ingot"
+  }
+}

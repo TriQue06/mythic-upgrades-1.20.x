@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.mixin;
 
-
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.CrossbowItem;
