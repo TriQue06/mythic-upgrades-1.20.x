@@ -10,7 +10,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
 import java.util.List;
+
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 import static net.trique.mythicupgrades.effect.MUEffects.*;
 import static net.trique.mythicupgrades.item.MUItems.*;

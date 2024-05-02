@@ -7,11 +7,13 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.trique.mythicupgrades.MythicUpgrades;
+
+import java.util.ArrayList;
+
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 import static net.trique.mythicupgrades.MythicUpgrades.*;
 
-import java.util.ArrayList;
 
 public class RegisterMUItems {
     private static final ArrayList<Item> ALL_ITEMS = new ArrayList<>();
