@@ -12,8 +12,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
     private static final Formatting DESCRIPTION_FORMATTING;
     private static final String TRANSLATION_KEY;
-    private static final Text INGREDIENTS_TEXT;
-    private static final Text APPLIES_TO_TEXT;
     private static final Identifier EMPTY_ARMOR_SLOT_HELMET_TEXTURE;
     private static final Identifier EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE;
     private static final Identifier EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE;
@@ -215,8 +213,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
         TITLE_FORMATTING = Formatting.GRAY;
         DESCRIPTION_FORMATTING = Formatting.BLUE;
         TRANSLATION_KEY = Util.createTranslationKey("item", new Identifier("smithing_template"));
-        INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.ingredients"))).formatted(TITLE_FORMATTING);
-        APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.applies_to"))).formatted(TITLE_FORMATTING);
         EMPTY_ARMOR_SLOT_HELMET_TEXTURE = new Identifier("item/empty_armor_slot_helmet");
         EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE = new Identifier("item/empty_armor_slot_chestplate");
         EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE = new Identifier("item/empty_armor_slot_leggings");

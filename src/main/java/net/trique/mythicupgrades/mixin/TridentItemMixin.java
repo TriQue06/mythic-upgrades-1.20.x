@@ -6,9 +6,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
 import org.spongepowered.asm.mixin.Mixin;
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 import org.spongepowered.asm.mixin.injection.At;
+
 import java.util.function.Consumer;
+
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(TridentItem.class)
 public abstract class TridentItemMixin extends Item {

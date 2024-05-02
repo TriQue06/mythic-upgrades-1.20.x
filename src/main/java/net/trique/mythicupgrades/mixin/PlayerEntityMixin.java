@@ -3,9 +3,6 @@ package net.trique.mythicupgrades.mixin;
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonPart;
@@ -28,13 +25,11 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 import java.util.List;
 import java.util.function.Consumer;
-import java.util.function.Predicate;
+
+import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
