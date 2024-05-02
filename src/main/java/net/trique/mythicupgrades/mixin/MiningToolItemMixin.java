@@ -7,9 +7,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import java.util.function.Consumer;
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
+import java.util.function.Consumer;
+
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(MiningToolItem.class)
 public abstract class MiningToolItemMixin extends Item {

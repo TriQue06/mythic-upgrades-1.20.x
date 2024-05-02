@@ -23,18 +23,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import net.fabricmc.api.*;
-import net.minecraft.entity.attribute.*;
 import net.minecraft.entity.player.*;
-import net.minecraft.fluid.*;
-import net.minecraft.registry.tag.*;
 import org.jetbrains.annotations.*;
-import org.spongepowered.asm.mixin.injection.*;
-
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 import java.util.Map;
 import java.util.function.Consumer;
+
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
