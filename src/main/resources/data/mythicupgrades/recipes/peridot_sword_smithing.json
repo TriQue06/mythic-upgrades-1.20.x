@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:peridot_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "mythicupgrades:peridot_sword"
+  },
+  "template": {
+    "item": "mythicupgrades:peridot_upgrade_smithing_template"
+  }
+}

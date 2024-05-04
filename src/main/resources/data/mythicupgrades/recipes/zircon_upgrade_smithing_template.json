@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:zircon"
+    },
+    "C": {
+      "item": "minecraft:blue_ice"
+    },
+    "S": {
+      "item": "mythicupgrades:zircon_upgrade_smithing_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "mythicupgrades:zircon_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

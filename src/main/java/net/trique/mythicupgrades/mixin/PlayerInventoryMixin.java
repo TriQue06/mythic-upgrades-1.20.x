@@ -6,7 +6,9 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+
 import java.util.function.Consumer;
+
 import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(PlayerInventory.class)

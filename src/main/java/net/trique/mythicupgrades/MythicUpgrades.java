@@ -1,7 +1,6 @@
 package net.trique.mythicupgrades;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
@@ -29,6 +28,7 @@ public class MythicUpgrades implements ModInitializer {
 		MUBlocks.registerMythicBlocks();
 		MUWorldGeneration.generateMythicWorldGen();
 		MULootTableModifiers.modifyLootTables();
-		LOGGER.info("Mythic Upgrades works properly! CAN ANNENE SELAMLAR KARDES <3!");
+		LOGGER.info("Mythic Upgrades works properly! CAN, ANNENE SELAMLAR KARDESIM! <3");
+		LOGGER.info("Chase your dreams, no matter the cost. Don't wait for invitations, take action. Making a decision, starting something - that's half the battle of achieving success.");
 	}
 }

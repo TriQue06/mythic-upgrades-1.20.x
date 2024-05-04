@@ -11,18 +11,22 @@ import java.util.function.Supplier;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUArmorMaterials implements ArmorMaterial {
-    JADE("jade", 40, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(JADE_INGOT)),
-    TOPAZ("topaz", 40, new int[] { 4, 9, 7, 4 }, 18,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(TOPAZ_INGOT)),
-    AQUAMARINE("aquamarine", 40, new int[] { 3, 8, 6, 3 }, 18,
+    AQUAMARINE("aquamarine", 50, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(AQUAMARINE_INGOT)),
-    SAPPHIRE("sapphire", 40, new int[] { 3, 8, 6, 3 }, 18,
+    CITRINE("citrine", 50, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(CITRINE_INGOT)),
+    PERIDOT("peridot", 50, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(PERIDOT_INGOT)),
+    ZIRCON("zircon", 50, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F, () -> Ingredient.ofItems(ZIRCON_INGOT)),
+    SAPPHIRE("sapphire", 50, new int[] { 3, 8, 6, 3 }, 18,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(SAPPHIRE_INGOT)),
-    RUBY("ruby", 40, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(RUBY_INGOT)),
-    AMETRINE("ametrine", 40, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(AMETRINE_INGOT));
+    TOPAZ("topaz", 150, new int[] { 4, 9, 7, 4 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(TOPAZ_INGOT)),
+    AMETRINE("ametrine", 500, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(AMETRINE_INGOT)),
+    JADE("jade", 500, new int[] { 3, 8, 6, 3 }, 18,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.ofItems(JADE_INGOT));
 
     private final String name;
     private final int durabilityMultiplier;
@@ -36,7 +40,7 @@ public enum MUArmorMaterials implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = { 11, 16, 15, 13 };
 
     MUArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound,
-                      float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+                     float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;

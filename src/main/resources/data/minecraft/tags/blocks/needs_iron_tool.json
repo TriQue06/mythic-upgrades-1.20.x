@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "mythicupgrades:aquamarine_crystal_block",
+    "mythicupgrades:aquamarine_crystal_cluster",
+
+    "mythicupgrades:citrine_crystal_block",
+    "mythicupgrades:citrine_crystal_cluster",
+
+    "mythicupgrades:peridot_crystal_block",
+    "mythicupgrades:peridot_crystal_cluster",
+
+    "mythicupgrades:zircon_crystal_block",
+    "mythicupgrades:zircon_crystal_cluster",
+
+    "mythicupgrades:ruby_crystal_block",
+    "mythicupgrades:ruby_crystal_cluster",
+
+    "mythicupgrades:sapphire_crystal_block",
+    "mythicupgrades:sapphire_crystal_cluster",
+
+    "mythicupgrades:topaz_crystal_block",
+    "mythicupgrades:topaz_crystal_cluster",
+
+    "mythicupgrades:ametrine_crystal_block",
+    "mythicupgrades:ametrine_crystal_cluster",
+
+    "mythicupgrades:jade_crystal_block",
+    "mythicupgrades:jade_crystal_cluster"
+  ]
+}

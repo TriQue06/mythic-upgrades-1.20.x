@@ -1,6 +1,5 @@
 package net.trique.mythicupgrades.item;
 
-import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -11,8 +10,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SapphireAxeItem extends MythicEffectsAxeItem {
+import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
+public class SapphireAxeItem extends MythicEffectsAxeItem {
     private int percent;
 
     public SapphireAxeItem(int attackDamage, int percent,float attackSpeed, Settings settings, ItemEffectsList effects, String tooltipKey, Formatting color) {

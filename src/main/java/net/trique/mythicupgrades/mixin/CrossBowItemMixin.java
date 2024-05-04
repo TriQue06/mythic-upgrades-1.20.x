@@ -1,15 +1,16 @@
 package net.trique.mythicupgrades.mixin;
 
-
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.RangedWeaponItem;
 import org.spongepowered.asm.mixin.Mixin;
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 import org.spongepowered.asm.mixin.injection.At;
+
 import java.util.function.Consumer;
+
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(CrossbowItem.class)
 public abstract class CrossBowItemMixin extends RangedWeaponItem {

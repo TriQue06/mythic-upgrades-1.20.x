@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 3.0,
+  "group": "citrine",
+  "ingredient": {
+    "item": "mythicupgrades:deepslate_citrine_ore"
+  },
+  "result": "mythicupgrades:citrine"
+}

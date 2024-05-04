@@ -13,8 +13,8 @@ import java.util.List;
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
 public class SapphireSwordItem extends MythicEffectsSwordItem {
-
     private int percent;
+
     public SapphireSwordItem(int attackDamage, int percent, float attackSpeed, Settings settings, ItemEffectsList effects, String tooltipKey, Formatting color) {
         super(MUToolMaterials.SAPPHIRE, attackDamage, attackSpeed, settings, effects, tooltipKey, color);
         this.percent = percent;

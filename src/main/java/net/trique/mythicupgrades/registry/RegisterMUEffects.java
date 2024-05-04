@@ -12,9 +12,13 @@ public class RegisterMUEffects {
         Registry.register(Registries.STATUS_EFFECT, new Identifier(MythicUpgrades.MOD_ID, name), effect);
     }
     public static void registerEffects() {
+        registerEffect(MUEffects.OCEAN_SHIELD, "ocean_shield");
+        registerEffect(MUEffects.HINDERING, "hindering");
         registerEffect(MUEffects.POISONOUS_THORNS, "poisonous_thorns");
+        registerEffect(MUEffects.ICE_SHIELD, "ice_shield");
         registerEffect(MUEffects.FREEZE, "freeze");
         registerEffect(MUEffects.DAMAGE_DEFLECTION, "damage_deflection");
         registerEffect(MUEffects.ITEM_MASTERY, "item_mastery");
+        registerEffect(MUEffects.ARCANE_AURA, "arcane_aura");
     }
 }

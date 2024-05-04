@@ -14,6 +14,7 @@ import net.trique.mythicupgrades.util.CommonFunctions;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.*;
 
 public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmorItem {

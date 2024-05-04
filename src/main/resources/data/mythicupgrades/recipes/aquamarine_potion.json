@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:aquamarine_crystal_shard"
+    },
+    "X": {
+      "item": "minecraft:gold_nugget"
+    },
+    "O": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "#O#"
+  ],
+  "result": {
+    "item": "mythicupgrades:aquamarine_potion"
+  }
+}

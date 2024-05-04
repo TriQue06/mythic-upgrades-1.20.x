@@ -23,11 +23,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
+import net.minecraft.entity.player.*;
+import org.jetbrains.annotations.*;
 
 import java.util.Map;
 import java.util.function.Consumer;
+
+import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -142,4 +144,8 @@ public abstract class LivingEntityMixin extends Entity {
     private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
         return checkForItemMastery(user);
     }
+
+    @Shadow
+    @Nullable
+    protected PlayerEntity attackingPlayer;
 }
