@@ -60,10 +60,7 @@ public class MUItems {
     public static final Item AQUAMARINE = new Item(new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item AQUAMARINE_FISH = new Item(new FabricItemSettings().fireproof());
     public static final Item AQUAMARINE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.AQUAMARINE_POTION).maxCount(16));
-    public static final Item AQUAMARINE_AXE = new Item(new FabricItemSettings().fireproof().maxCount(1));
-    public static final Item AQUAMARINE_SWORD = new Item(new FabricItemSettings().fireproof().maxCount(1));
 
     public static final Item CITRINE = new Item(new FabricItemSettings());
     public static final Item CITRINE_INGOT = new Item(new FabricItemSettings().fireproof());
@@ -73,7 +70,6 @@ public class MUItems {
     public static final Item PERIDOT = new Item(new FabricItemSettings());
     public static final Item PERIDOT_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item PERIDOT_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item JADE_APPLE = new Item(new FabricItemSettings().fireproof());;
     public static final Item PERIDOT_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.PERIDOT_POTION).maxCount(16));
 
     public static final Item ZIRCON = new Item(new FabricItemSettings());
@@ -84,25 +80,21 @@ public class MUItems {
     public static final Item RUBY = new Item(new FabricItemSettings());
     public static final Item RUBY_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item RUBY_APPLE = new Item(new FabricItemSettings().fireproof());
     public static final Item RUBY_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.RUBY_POTION).maxCount(16));
 
     public static final Item SAPPHIRE = new Item(new FabricItemSettings());
     public static final Item SAPPHIRE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item SAPPHIRE_APPLE = new Item(new FabricItemSettings().fireproof());
     public static final Item SAPPHIRE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.SAPPHIRE_POTION).maxCount(16));
 
     public static final Item TOPAZ = new Item(new FabricItemSettings());
     public static final Item TOPAZ_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item TOPAZ_APPLE = new Item(new FabricItemSettings().fireproof());
     public static final Item TOPAZ_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.TOPAZ_POTION).maxCount(16));
 
     public static final Item AMETRINE = new Item(new FabricItemSettings());
     public static final Item AMETRINE_INGOT = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new FabricItemSettings().fireproof());
-    public static final Item AMETRINE_APPLE = new Item(new FabricItemSettings().fireproof());
     public static final Item AMETRINE_POTION = new MythicPotionItem(new FabricItemSettings().fireproof().food(MUFoods.AMETRINE_POTION).maxCount(16));
     
     public static final Item JADE = new Item(new FabricItemSettings());
@@ -144,7 +136,6 @@ public class MUItems {
     public static final MythicEffectsPickaxeItem RUBY_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.RUBY, 1, -2.8f, (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED);
     public static final MythicEffectsAxeItem RUBY_AXE = new MythicEffectsAxeItem(MUToolMaterials.RUBY, 5, -3f, (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED);
     public static final MythicEffectsHoeItem RUBY_HOE = new MythicEffectsHoeItem(MUToolMaterials.RUBY, -4, 0.0f, (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED);
-    public static final Item RUBY_SWORD = new Item(new FabricItemSettings().fireproof());
 
     public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(5, CONFIG.sapphireConfig.axe_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.DARK_BLUE);
     public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(3, CONFIG.sapphireConfig.sword_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.DARK_BLUE);

@@ -75,23 +75,23 @@ public class MUConfigModel {
         public float sword_weakness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
+        @RangeConstraint(min = 2f, max = 7f)
         public float sword_slowness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
+        @RangeConstraint(min = 2f, max = 7f)
         public float sword_hunger_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
+        @RangeConstraint(min = 2f, max = 7f)
         public float axe_weakness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
+        @RangeConstraint(min = 2f, max = 7f)
         public float axe_slowness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
+        @RangeConstraint(min = 2f, max = 7f)
         public float axe_hunger_duration = 5f;
     }
 
