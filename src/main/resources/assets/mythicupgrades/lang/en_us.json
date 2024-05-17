@@ -1,4 +1,73 @@
 {
+  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "dark_purple", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.citrineConfig": [{"text" : "Citrine", "color" : "yellow", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Sapphire", "color" : "dark_blue", "bold":  "true"}],
+  "text.config.mythicupgrades-config.category.zirconConfig": [{"text" : "Zircon", "color" : "blue", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": "true"}],
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_amplifier": [{"text": "Armor's Ocean Shield Amplifier", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_duration": [{"text": "Armor's Ocean Shield's Effect Duration", "color": "aqua"}],
+
+  "text.config.mythicupgrades-config.option.citrineConfig.hindering_amplifier": [{"text": "Armor's Hindering Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.hindering_duration": [{"text": "Armor's Hindering's Effects' Durations", "color": "yellow"}],
+
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_amplifier": [{"text": "Sword's Weakness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_duration": [{"text": "Sword's Weakness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_amplifier": [{"text": "Sword's Slowness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_duration": [{"text": "Sword's Slowness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_amplifier": [{"text": "Sword's Hunger Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_duration": [{"text": "Sword's Hunger Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_amplifier": [{"text": "Axe's Weakness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_duration": [{"text": "Axe's Weakness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_amplifier": [{"text": "Axe's Slowness Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_duration": [{"text": "Axe's Slowness Duration", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_amplifier": [{"text": "Axe's Hunger Amplifier", "color": "yellow"}],
+  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_duration": [{"text": "Axe's Hunger Duration", "color": "yellow"}],
+
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous Thorns Amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous Thorns' Poison Duration", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.peridotConfig.axe_poison_duration": [{"text": "Axe's Poison Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.axe_poison_amplifier": [{"text": "Axe's Poison Amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_duration": [{"text": "Sword's Poison Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.sword_poison_amplifier": [{"text": "Sword's Poison Amplifier", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Armor's Damage Deflection Amplifier", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Axe's Damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Sword's Damage (% from target's max. health)", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.zirconConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.zirconConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.zirconConfig.axe_freeze_duration": [{"text": "Axe's Freeze Duration", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.zirconConfig.sword_freeze_duration": [{"text": "Sword's Freeze Duration", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Pickaxe's Haste Amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Axe's Haste Amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_shovel_amplifier": [{"text": "Shovel's Haste Amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_sword_amplifier": [{"text": "Sword's Haste Amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.haste_hoe_amplifier": [{"text": "Hoe's Haste's Amplifier", "color": "red"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_duration": [{"text": "Armor's Arcane Aura Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": "Armor's Arcane Aura's Levitation Amplifier", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_duration": [{"text": "Axe's Levitation Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.axe_levitation_amplifier": [{"text": "Axe's Levitation Amplifier", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_duration": [{"text": "Sword's Levitation Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.sword_levitation_amplifier": [{"text": "Sword's Levitation Amplifier", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "Armor's Speed Amplifier", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Armor's Jump Boost Amplifier", "color": "dark_green"}],
+
   "item.mythicupgrades.aquamarine": "Aquamarine",
   "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
   "item.mythicupgrades.aquamarine_crystal_shard": "Aquamarine Crystal Shard",
