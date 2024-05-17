@@ -22,8 +22,6 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItems() {
-        registerItem("aquamarine_sword", AQUAMARINE_SWORD);
-        registerItem("aquamarine_axe", AQUAMARINE_AXE);
         registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
         registerItem("aquamarine_chestplate", AQUAMARINE_CHESTPLATE);
         registerItem("aquamarine_leggings", AQUAMARINE_LEGGINGS);
@@ -31,7 +29,6 @@ public class RegisterMUItems {
         registerItem("aquamarine", AQUAMARINE);
         registerItem("aquamarine_ingot", AQUAMARINE_INGOT);
         registerItem("aquamarine_crystal_shard", AQUAMARINE_CRYSTAL_SHARD);
-        registerItem("aquamarine_fish", AQUAMARINE_FISH);
         registerItem("aquamarine_potion", AQUAMARINE_POTION);
         registerItem("aquamarine_upgrade_smithing_template", AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
 
@@ -56,7 +53,6 @@ public class RegisterMUItems {
         registerItem("peridot", PERIDOT);
         registerItem("peridot_ingot", PERIDOT_INGOT);
         registerItem("peridot_crystal_shard", PERIDOT_CRYSTAL_SHARD);
-        registerItem("jade_apple", JADE_APPLE);
         registerItem("peridot_potion", PERIDOT_POTION);
         registerItem("peridot_upgrade_smithing_template", PERIDOT_UPGRADE_SMITHING_TEMPLATE);
 
@@ -76,11 +72,9 @@ public class RegisterMUItems {
         registerItem("ruby_axe", RUBY_AXE);
         registerItem("ruby_pickaxe", RUBY_PICKAXE);
         registerItem("ruby_hoe", RUBY_HOE);
-        registerItem("ruby_sword", RUBY_SWORD);
         registerItem("ruby", RUBY);
         registerItem("ruby_ingot", RUBY_INGOT);
         registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
-        registerItem("ruby_apple", RUBY_APPLE);
         registerItem("ruby_potion", RUBY_POTION);
         registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
 
@@ -93,7 +87,6 @@ public class RegisterMUItems {
         registerItem("sapphire", SAPPHIRE);
         registerItem("sapphire_ingot", SAPPHIRE_INGOT);
         registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
-        registerItem("sapphire_apple", SAPPHIRE_APPLE);
         registerItem("sapphire_potion", SAPPHIRE_POTION);
         registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
 
@@ -109,7 +102,6 @@ public class RegisterMUItems {
         registerItem("topaz", TOPAZ);
         registerItem("topaz_ingot", TOPAZ_INGOT);
         registerItem("topaz_crystal_shard", TOPAZ_CRYSTAL_SHARD);
-        registerItem("topaz_apple", TOPAZ_APPLE);
         registerItem("topaz_potion", TOPAZ_POTION);
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
 
@@ -122,7 +114,6 @@ public class RegisterMUItems {
         registerItem("ametrine", AMETRINE);
         registerItem("ametrine_ingot", AMETRINE_INGOT);
         registerItem("ametrine_crystal_shard", AMETRINE_CRYSTAL_SHARD);
-        registerItem("ametrine_apple", AMETRINE_APPLE);
         registerItem("ametrine_potion", AMETRINE_POTION);
         registerItem("ametrine_upgrade_smithing_template", AMETRINE_UPGRADE_SMITHING_TEMPLATE);
 
