@@ -1,66 +1,66 @@
 package net.trique.mythicupgrades.item;
 
-import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.stats.Stats;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemUtils;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.level.Level;
+import net.minecraft.advancement.criterion.Criteria;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsage;
+import net.minecraft.item.Items;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
+import net.minecraft.world.World;
 
 public class MythicPotionItem extends Item {
     private static final int MAX_USE_TIME = 20;
 
-    public MythicPotionItem(Properties settings) {
+    public MythicPotionItem(Settings settings) {
         super(settings);
     }
 
-    public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
-        super.finishUsingItem(stack, world, user);
-        if (user instanceof ServerPlayer serverPlayerEntity) {
-            CriteriaTriggers.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
-            serverPlayerEntity.awardStat(Stats.ITEM_USED.get(this));
+    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+        super.finishUsing(stack, world, user);
+        if (user instanceof ServerPlayerEntity serverPlayerEntity) {
+            Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
+            serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
 
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
         } else {
-            if (user instanceof Player && !((Player)user).getAbilities().instabuild) {
+            if (user instanceof PlayerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
                 ItemStack itemStack = new ItemStack(Items.GLASS_BOTTLE);
-                Player playerEntity = (Player)user;
-                if (!playerEntity.getInventory().add(itemStack)) {
-                    playerEntity.drop(itemStack, false);
+                PlayerEntity playerEntity = (PlayerEntity)user;
+                if (!playerEntity.getInventory().insertStack(itemStack)) {
+                    playerEntity.dropItem(itemStack, false);
                 }
             }
             return stack;
         }
     }
 
-    public int getUseDuration(ItemStack stack) {
+    public int getMaxUseTime(ItemStack stack) {
         return 20;
     }
 
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.DRINK;
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.DRINK;
     }
 
-    public SoundEvent getDrinkingSound() {
-        return SoundEvents.HONEY_DRINK;
+    public SoundEvent getDrinkSound() {
+        return SoundEvents.ITEM_HONEY_BOTTLE_DRINK;
     }
 
-    public SoundEvent getEatingSound() {
-        return SoundEvents.AMETHYST_BLOCK_STEP;
+    public SoundEvent getEatSound() {
+        return SoundEvents.BLOCK_AMETHYST_BLOCK_STEP;
     }
 
-    public InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand) {
-        return ItemUtils.startUsingInstantly(world, user, hand);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        return ItemUsage.consumeHeldItem(world, user, hand);
     }
 }

@@ -10,7 +10,6 @@ out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 /src/main/generated
-/backupSrc
 
 # JIRA plugin
 atlassian-ide-plugin.xml

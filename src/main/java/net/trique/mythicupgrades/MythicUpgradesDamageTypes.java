@@ -1,21 +1,21 @@
 package net.trique.mythicupgrades;
 
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.Level;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class MythicUpgradesDamageTypes {
-    public static final ResourceKey<DamageType> PERCENTAGE_DAMAGE_TYPE = ResourceKey.create(Registries.DAMAGE_TYPE,
-            new ResourceLocation("mythicupgrades", "percentage_damage_type"));
-    public static final ResourceKey<DamageType> DEFLECTING_DAMAGE_TYPE = ResourceKey.create(Registries.DAMAGE_TYPE,
-            new ResourceLocation("mythicupgrades", "deflecting_damage_type"));
+    public static final RegistryKey<DamageType> PERCENTAGE_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
+            new Identifier("mythicupgrades", "percentage_damage_type"));
+    public static final RegistryKey<DamageType> DEFLECTING_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE,
+            new Identifier("mythicupgrades", "deflecting_damage_type"));
 
-    public static DamageSource create(Level world, ResourceKey<DamageType> key, @Nullable Entity attacker) {
-        return new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(key), attacker);
+    public static DamageSource create(World world, RegistryKey<DamageType> key, @Nullable Entity attacker) {
+        return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key), attacker);
     }
 }

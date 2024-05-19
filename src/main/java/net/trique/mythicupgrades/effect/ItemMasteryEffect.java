@@ -1,15 +1,15 @@
 package net.trique.mythicupgrades.effect;
 
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
-public class ItemMasteryEffect extends MobEffect {
-    protected ItemMasteryEffect(MobEffectCategory category, int color) {
+public class ItemMasteryEffect extends StatusEffect {
+    protected ItemMasteryEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 
     @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
+    public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
 }
