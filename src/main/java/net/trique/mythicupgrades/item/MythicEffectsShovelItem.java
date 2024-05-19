@@ -1,14 +1,14 @@
 package net.trique.mythicupgrades.item;
 
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
@@ -20,10 +20,10 @@ import java.util.List;
 public class MythicEffectsShovelItem extends ShovelItem implements BaseMythicToolItem {
     protected final MythicEffectVirtualItemHandler virtualItemHandler;
     protected final String tooltipKey;
-    protected final Formatting color;
+    protected final ChatFormatting color;
 
-    public MythicEffectsShovelItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings,
-                                   ItemEffectsList effects, String tooltipKey, Formatting color) {
+    public MythicEffectsShovelItem(Tier material, int attackDamage, float attackSpeed, Properties settings,
+                                   ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
         super(material, attackDamage, attackSpeed, settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.tooltipKey = tooltipKey;
@@ -31,29 +31,29 @@ public class MythicEffectsShovelItem extends ShovelItem implements BaseMythicToo
     }
 
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         virtualItemHandler.handlePostHit(target, attacker);
-        return super.postHit(stack, target, attacker);
+        return super.hurtEnemy(stack, target, attacker);
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(tooltipKey).formatted(color));
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context) {
+        tooltip.add(Component.translatable(tooltipKey).withStyle(color));
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+    public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
         return virtualItemHandler.getMainHandEffects();
     }
 
     @Override
-    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+    public HashMap<MobEffect, EffectMeta> getOnHitEffects() {
         return virtualItemHandler.getOnHitEffects();
     }
 
     @Override
-    public ToolMaterial getMythicMaterial() {
-        return this.getMaterial();
+    public Tier getMythicMaterial() {
+        return this.getTier();
     }
 
     @Override

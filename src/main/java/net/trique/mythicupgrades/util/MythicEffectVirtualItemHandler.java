@@ -1,9 +1,8 @@
 package net.trique.mythicupgrades.util;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
-
 import java.util.HashMap;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.LivingEntity;
 
 public class MythicEffectVirtualItemHandler {
 
@@ -16,16 +15,16 @@ public class MythicEffectVirtualItemHandler {
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
         CommonFunctions.addStatusEffects(target, allEffects.getForOthers(), attacker);
     }
-    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
+    public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
         return allEffects.getForMainHand();
     }
-    public HashMap<StatusEffect, EffectMeta> getEquipmentBuffs() {
+    public HashMap<MobEffect, EffectMeta> getEquipmentBuffs() {
         return allEffects.getForEquipmentBuffs();
     }
-    public HashMap<StatusEffect, EffectMeta> getEquipmentDebuffs() {
+    public HashMap<MobEffect, EffectMeta> getEquipmentDebuffs() {
         return allEffects.getForEquipmentDebuffs();
     }
-    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
+    public HashMap<MobEffect, EffectMeta> getOnHitEffects() {
         return allEffects.getForOthers();
     }
 

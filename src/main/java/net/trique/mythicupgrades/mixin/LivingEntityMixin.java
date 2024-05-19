@@ -1,15 +1,6 @@
 package net.trique.mythicupgrades.mixin;
 
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -23,28 +14,38 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import net.minecraft.entity.player.*;
+import net.minecraft.world.entity.player.*;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.*;
 
 import java.util.Map;
 import java.util.function.Consumer;
 
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
+import static net.trique.mythicupgrades.util.CommonFunctions.*;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
 
-    public LivingEntityMixin(EntityType<?> type, World world) {
+    public LivingEntityMixin(EntityType<?> type, Level world) {
         super(type, world);
         deflecting_damage = 0f;
         has_damage_been_deflected = false;
     }
 
     @Shadow
-    public abstract ItemStack getEquippedStack(EquipmentSlot slot);
+    public abstract ItemStack getItemBySlot(EquipmentSlot slot);
 
     @Shadow
-    public abstract Map<StatusEffect, StatusEffectInstance> getActiveStatusEffects();
+    public abstract Map<MobEffect, MobEffectInstance> getActiveEffectsMap();
 
     @Unique private boolean has_damage_been_deflected;
 
@@ -58,8 +59,8 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void checkItemInHand(CallbackInfo ci) {
-        if (!this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty() &&
-                (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
+        if (!this.getItemBySlot(EquipmentSlot.MAINHAND).isEmpty() &&
+                (this.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
             if (lastUsed != null && !item.equals(lastUsed)) {
                 CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastUsed.getMainHandEffects());
             }
@@ -75,7 +76,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void applyArmorBuffs(CallbackInfo ci) {
-        ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
+        ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
             if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
                 CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
@@ -91,13 +92,13 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    @Inject(method = "damage", at = @At(value = "RETURN"))
+    @Inject(method = "hurt", at = @At(value = "RETURN"))
     private void applyArmorDebuffs(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         boolean was_damaged = cir.getReturnValue();
         if (was_damaged) {
-            Entity attacker = source.getAttacker();
+            Entity attacker = source.getEntity();
             if (attacker instanceof LivingEntity entity) {
-                ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
+                ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
                 if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
                         CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
                     CommonFunctions.addStatusEffects(entity, item.getEquipmentDebuffs(), (LivingEntity) (Object) this);
@@ -106,12 +107,12 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
+    @ModifyVariable(method = "hurt", at = @At(value = "HEAD"), argsOnly = true)
     private float reduceIncomingDamage(float amount, DamageSource source, float am1) {
-        if (!this.getWorld().isClient()) {
-            StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
+        if (!this.level().isClientSide()) {
+            MobEffectInstance deflection = this.getActiveEffectsMap().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
-                Entity attacker = source.getAttacker();
+                Entity attacker = source.getEntity();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
                 if (attacker != null) {
                     deflecting_damage = (0.1f + defl_dmg_coef) * amount;
@@ -123,15 +124,15 @@ public abstract class LivingEntityMixin extends Entity {
         return 0f;
     }
 
-    @Inject(method = "damage", at = @At(value = "TAIL"))
+    @Inject(method = "hurt", at = @At(value = "TAIL"))
     private void deflectDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         if (cir.getReturnValue()) {
-            StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
+            MobEffectInstance deflection = this.getActiveEffectsMap().get(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
-                Entity attacker = source.getAttacker();
+                Entity attacker = source.getEntity();
                 if (attacker != null && attacker.distanceTo(this) <= 3.0f && !has_damage_been_deflected) {
                     has_damage_been_deflected = true;
-                    attacker.damage(MythicUpgradesDamageTypes.create(attacker.getWorld(),
+                    attacker.hurt(MythicUpgradesDamageTypes.create(attacker.level(),
                             MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), deflecting_damage);
                 }
             }
@@ -140,12 +141,8 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
 
-    @WrapWithCondition(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    @WrapWithCondition(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
     private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
         return checkForItemMastery(user);
     }
-
-    @Shadow
-    @Nullable
-    protected PlayerEntity attackingPlayer;
 }
