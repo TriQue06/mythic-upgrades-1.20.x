@@ -48,71 +48,42 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int sword_weakness_amplifier = 0;
+        public int weapons_weakness_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int sword_slowness_amplifier = 0;
+        public int weapons_slowness_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int sword_hunger_amplifier = 0;
+        public int weapons_hunger_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int axe_weakness_amplifier = 0;
+        @RangeConstraint(min = 2f, max = 7f)
+        public float weapons_weakness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int axe_slowness_amplifier = 0;
+        @RangeConstraint(min = 2f, max = 7f)
+        public float weapons_slowness_duration = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int axe_hunger_amplifier = 0;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1f, max = 15f)
-        public float sword_weakness_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
-        public float sword_slowness_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
-        public float sword_hunger_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
-        public float axe_weakness_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
-        public float axe_slowness_duration = 5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 7f, max = 2f)
-        public float axe_hunger_duration = 5f;
+        @RangeConstraint(min = 2f, max = 7f)
+        public float weapons_hunger_duration = 5f;
     }
 
     public static class PeridotConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 3f)
-        public float axe_poison_duration = 1.5f;
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 5)
-        public int axe_poison_amplifier = 2;
+        public float weapons_poison_duration = 1.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 3f)
-        public float sword_poison_duration = 1.5f;
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 5)
-        public int sword_poison_amplifier = 2;
+        public int weapons_poison_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 7f)
         public float poisonous_thorns_poison_duration = 5f;
+
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int poisonous_thorns_amplifier = 0;
@@ -121,11 +92,7 @@ public class MUConfigModel {
     public static class ZirconConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 1f)
-        public float axe_freeze_duration = 0.5f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 1f)
-        public float sword_freeze_duration = 0.5f;
+        public float weapons_freeze_duration = 0.5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 3f)
@@ -139,29 +106,13 @@ public class MUConfigModel {
     public static class RubyConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int haste_pickaxe_amplifier = 0;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int haste_axe_amplifier = 0;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int haste_shovel_amplifier = 0;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int haste_hoe_amplifier = 0;
+        public int tools_haste_amplifier = 0;
     }
 
     public static class SapphireConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1, max = 7)
-        public int axe_percentage_damage_percent = 5;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1, max = 7)
-        public int sword_percentage_damage_percent = 5;
+        public int weapons_percentage_damage_percent = 5;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
@@ -171,25 +122,17 @@ public class MUConfigModel {
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 6)
-        public int topaz_item_mastery_amplifier = 4;
+        public int item_mastery_amplifier = 4;
     }
 
     public static class AmetrineConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 2f)
-        public float axe_levitation_duration = 0.75f;
+        public float weapons_levitation_duration = 0.75f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 4, max = 6)
-        public int axe_levitation_amplifier = 4;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 2f)
-        public float sword_levitation_duration = 0.75f;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 4, max = 6)
-        public int sword_levitation_amplifier = 4;
+        public int weapons_levitation_amplifier = 4;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.5f, max = 3f)
