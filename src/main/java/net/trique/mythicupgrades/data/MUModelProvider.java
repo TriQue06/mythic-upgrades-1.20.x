@@ -2,10 +2,10 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.data.models.BlockModelGenerators;
+import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.world.item.ArmorItem;
 
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
@@ -16,181 +16,181 @@ public class MUModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_AQUAMARINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(AQUAMARINE_CRYSTAL_CLUSTER);
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
+        blockStateModelGenerator.family(AQUAMARINE_BLOCK);
+        blockStateModelGenerator.family(AQUAMARINE_ORE);
+        blockStateModelGenerator.family(DEEPSLATE_AQUAMARINE_ORE);
+        blockStateModelGenerator.family(AQUAMARINE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(AQUAMARINE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_CITRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(CITRINE_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(CITRINE_BLOCK);
+        blockStateModelGenerator.family(CITRINE_ORE);
+        blockStateModelGenerator.family(DEEPSLATE_CITRINE_ORE);
+        blockStateModelGenerator.family(CITRINE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(CITRINE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_PERIDOT_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(PERIDOT_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(PERIDOT_BLOCK);
+        blockStateModelGenerator.family(PERIDOT_ORE);
+        blockStateModelGenerator.family(DEEPSLATE_PERIDOT_ORE);
+        blockStateModelGenerator.family(PERIDOT_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(PERIDOT_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_ZIRCON_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(ZIRCON_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(ZIRCON_BLOCK);
+        blockStateModelGenerator.family(ZIRCON_ORE);
+        blockStateModelGenerator.family(DEEPSLATE_ZIRCON_ORE);
+        blockStateModelGenerator.family(ZIRCON_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(ZIRCON_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(RUBY_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(RUBY_BLOCK);
+        blockStateModelGenerator.family(RUBY_ORE);
+        blockStateModelGenerator.family(RUBY_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(RUBY_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(SAPPHIRE_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(SAPPHIRE_BLOCK);
+        blockStateModelGenerator.family(SAPPHIRE_ORE);
+        blockStateModelGenerator.family(SAPPHIRE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(SAPPHIRE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(TOPAZ_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(TOPAZ_BLOCK);
+        blockStateModelGenerator.family(TOPAZ_ORE);
+        blockStateModelGenerator.family(TOPAZ_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(TOPAZ_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(AMETRINE_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(AMETRINE_BLOCK);
+        blockStateModelGenerator.family(AMETRINE_ORE);
+        blockStateModelGenerator.family(AMETRINE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(AMETRINE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(JADE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(JADE_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.family(JADE_BLOCK);
+        blockStateModelGenerator.family(JADE_ORE);
+        blockStateModelGenerator.family(JADE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.createAmethystCluster(JADE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(RAW_NECOIUM_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(NECOIUM_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(NECOIUM_ORE);
+        blockStateModelGenerator.family(RAW_NECOIUM_BLOCK);
+        blockStateModelGenerator.family(NECOIUM_BLOCK);
+        blockStateModelGenerator.family(NECOIUM_ORE);
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(AQUAMARINE, Models.GENERATED);
-        itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(AQUAMARINE_POTION, Models.GENERATED);
+    public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        itemModelGenerator.generateFlatItem(AQUAMARINE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(CITRINE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(CITRINE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(CITRINE, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(CITRINE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(PERIDOT_AXE, Models.HANDHELD);
-        itemModelGenerator.register(PERIDOT_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(PERIDOT, Models.GENERATED);
-        itemModelGenerator.register(PERIDOT_INGOT, Models.GENERATED);
-        itemModelGenerator.register(PERIDOT_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(PERIDOT_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(PERIDOT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(ZIRCON_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(ZIRCON_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ZIRCON, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(ZIRCON_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(RUBY_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(RUBY_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(RUBY_AXE, Models.HANDHELD);
-        itemModelGenerator.register(RUBY_HOE, Models.HANDHELD);
-        itemModelGenerator.register(RUBY, Models.GENERATED);
-        itemModelGenerator.register(RUBY_INGOT, Models.GENERATED);
-        itemModelGenerator.register(RUBY_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(RUBY_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(RUBY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(SAPPHIRE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(SAPPHIRE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(SAPPHIRE, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(TOPAZ_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_AXE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_HOE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(TOPAZ_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(AMETRINE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(AMETRINE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(AMETRINE, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(AMETRINE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(JADE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(JADE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(JADE, Models.GENERATED);
-        itemModelGenerator.register(JADE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(JADE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(JADE_POTION, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(JADE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(JADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_POTION, ModelTemplates.FLAT_ITEM);
         
-        itemModelGenerator.register(RAW_NECOIUM, Models.GENERATED);
-        itemModelGenerator.register(NECOIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(NECOIUM_NUGGET, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(RAW_NECOIUM, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(NECOIUM_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(NECOIUM_NUGGET, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(PERIDOT_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(RUBY_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(AMETRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(JADE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(CITRINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ZIRCON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TOPAZ_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) AQUAMARINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_BOOTS));
         
-        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) AMETRINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_BOOTS));
         
-        itemModelGenerator.registerArmor(((ArmorItem) JADE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) JADE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) JADE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) JADE_BOOTS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_HELMET));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_CHESTPLATE));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_LEGGINGS));
+        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_BOOTS));
     }
 }

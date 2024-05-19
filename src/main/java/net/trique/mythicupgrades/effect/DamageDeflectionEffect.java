@@ -1,16 +1,16 @@
 package net.trique.mythicupgrades.effect;
 
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
 
-public class DamageDeflectionEffect extends StatusEffect {
+public class DamageDeflectionEffect extends MobEffect {
 
-    public DamageDeflectionEffect(StatusEffectCategory category, int color) {
+    public DamageDeflectionEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
     @Override
-    public boolean canApplyUpdateEffect(int duration, int amplifier) {
+    public boolean isDurationEffectTick(int duration, int amplifier) {
         return true;
     }
 }

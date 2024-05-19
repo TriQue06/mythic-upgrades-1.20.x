@@ -2,26 +2,27 @@ package net.trique.mythicupgrades.command;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
-import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.text.Text;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.network.chat.Component;
+
 import static net.trique.mythicupgrades.MythicUpgrades.*;
-import static net.minecraft.server.command.CommandManager.*;
+import static net.minecraft.commands.Commands.*;
 
 public class MUCommands {
-    public static void updateConfig(CommandDispatcher<ServerCommandSource> dispatcher) {
+    public static void updateConfig(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(literal(MOD_ID)
-                .requires(source -> source.hasPermissionLevel(4))
+                .requires(source -> source.hasPermission(4))
                 .then(literal("config").then(literal("reload").executes(ctx -> {
                      CONFIG.load();
-                     ctx.getSource().sendFeedback(() -> Text.literal("Successfully reloaded config!"), false);
+                     ctx.getSource().sendSuccess(() -> Component.literal("Successfully reloaded config!"), false);
                      return Command.SINGLE_SUCCESS;
                 })))
         );
     }
 
-    public static void restoreDefaultsAndReload(CommandDispatcher<ServerCommandSource> dispatcher) {
+    public static void restoreDefaultsAndReload(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(literal(MOD_ID)
-                .requires(source -> source.hasPermissionLevel(4))
+                .requires(source -> source.hasPermission(4))
                 .then(literal("config").then(literal("restoreDefaults").executes(ctx -> {
                     CONFIG.aquamarineConfig.ocean_shield_amplifier(2);
                     CONFIG.aquamarineConfig.ocean_shield_duration(3f);
@@ -51,7 +52,7 @@ public class MUCommands {
                     CONFIG.jadeConfig.speed_amplifier(2);
                     CONFIG.jadeConfig.jump_boost_amplifier(2);
                     CONFIG.load();
-                    ctx.getSource().sendFeedback(() -> Text.literal("Successfully restored default values and reloaded config!"), false);
+                    ctx.getSource().sendSuccess(() -> Component.literal("Successfully restored default values and reloaded config!"), false);
                     return Command.SINGLE_SUCCESS;
                 })))
         );
