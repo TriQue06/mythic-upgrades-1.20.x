@@ -2,9 +2,9 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.item.Items;
-import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.world.item.Items;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.item.MUItems;
 import static net.trique.mythicupgrades.item.MUItems.*;
@@ -19,93 +19,93 @@ public class MURecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerSmelting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
+    public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+        oreSmelting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
                 3.0f, 200, "aquamarine");
-        offerBlasting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
+        oreBlasting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
                 3.0f, 100, "aquamarine");
 
-        offerSmelting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
+        oreSmelting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
                 3.0f, 200, "citrine");
-        offerBlasting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
+        oreBlasting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
                 3.0f, 100, "citrine");
         
-        offerSmelting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
+        oreSmelting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
                 3.0f, 200, "peridot");
-        offerBlasting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
+        oreBlasting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
                 3.0f, 100, "peridot");
 
-        offerSmelting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
+        oreSmelting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
                 3.0f, 200, "zircon");
-        offerBlasting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
+        oreBlasting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
                 3.0f, 100, "zircon");
         
-        offerSmelting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
+        oreSmelting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
                 3.0f, 200, "ruby");
-        offerBlasting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
+        oreBlasting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
                 3.0f, 100, "ruby");
         
-        offerSmelting(exporter, List.of(MUBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, SAPPHIRE,
+        oreSmelting(exporter, List.of(MUBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, SAPPHIRE,
                 3.0f, 200, "sapphire");
-        offerBlasting(exporter, List.of(MUBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, SAPPHIRE,
+        oreBlasting(exporter, List.of(MUBlocks.SAPPHIRE_ORE), RecipeCategory.MISC, SAPPHIRE,
                 3.0f, 100, "sapphire");
 
-        offerSmelting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
+        oreSmelting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
                 3.0f, 200, "topaz");
-        offerBlasting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
+        oreBlasting(exporter, List.of(MUBlocks.TOPAZ_ORE), RecipeCategory.MISC, TOPAZ,
                 3.0f, 100, "topaz");
 
-        offerSmelting(exporter, List.of(MUBlocks.AMETRINE_ORE), RecipeCategory.MISC, AMETRINE,
+        oreSmelting(exporter, List.of(MUBlocks.AMETRINE_ORE), RecipeCategory.MISC, AMETRINE,
                 3.0f, 200, "ametrine");
-        offerBlasting(exporter, List.of(MUBlocks.AMETRINE_ORE), RecipeCategory.MISC, AMETRINE,
+        oreBlasting(exporter, List.of(MUBlocks.AMETRINE_ORE), RecipeCategory.MISC, AMETRINE,
                 3.0f, 100, "ametrine");
 
-        offerSmelting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
+        oreSmelting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
                 3.0f, 200, "jade");
-        offerBlasting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
+        oreBlasting(exporter, List.of(MUBlocks.JADE_ORE), RecipeCategory.MISC, JADE,
                 3.0f, 100, "jade");
 
-        offerSmelting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
+        oreSmelting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 200, "necoium");
-        offerBlasting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
+        oreBlasting(exporter, List.of(MUBlocks.NECOIUM_ORE), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 100, "necoium");
 
-        offerSmelting(exporter, List.of(RAW_NECOIUM), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
+        oreSmelting(exporter, List.of(RAW_NECOIUM), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 200, "necoium");
-        offerBlasting(exporter, List.of(RAW_NECOIUM), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
+        oreBlasting(exporter, List.of(RAW_NECOIUM), RecipeCategory.MISC, MUItems.NECOIUM_INGOT,
                 3.0f, 100, "necoium");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AQUAMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AQUAMARINE_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, AQUAMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AQUAMARINE_BLOCK,
                 getId("aquamarine_block"), "aquamarine_block", getId("aquamarine_ingot_from_aquamarine_block"), "aquamarine_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, CITRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.CITRINE_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, CITRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.CITRINE_BLOCK,
                 getId("citrine_block"), "citrine_block", getId("citrine_ingot_from_citrine_block"), "citrine_ingot");
         
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, PERIDOT_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.PERIDOT_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, PERIDOT_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.PERIDOT_BLOCK,
                 getId("peridot_block"), "peridot_block", getId("peridot_ingot_from_peridot_block"), "peridot_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ZIRCON_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.ZIRCON_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, ZIRCON_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.ZIRCON_BLOCK,
                 getId("zircon_block"), "zircon_block", getId("zircon_ingot_from_zircon_block"), "zircon_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RUBY_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RUBY_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, RUBY_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RUBY_BLOCK,
                 getId("ruby_block"), "ruby_block", getId("ruby_ingot_from_ruby_block"), "ruby_ingot");
         
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, SAPPHIRE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.SAPPHIRE_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, SAPPHIRE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.SAPPHIRE_BLOCK,
                 getId("sapphire_block"), "sapphire_block", getId("sapphire_ingot_from_sapphire_block"), "sapphire_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, TOPAZ_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.TOPAZ_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, TOPAZ_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.TOPAZ_BLOCK,
                 getId("topaz_block"), "topaz_block", getId("topaz_ingot_from_topaz_block"), "topaz_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, AMETRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AMETRINE_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, AMETRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AMETRINE_BLOCK,
                 getId("ametrine_block"), "ametrine_block", getId("ametrine_ingot_from_ametrine_block"), "ametrine_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, JADE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.JADE_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, JADE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.JADE_BLOCK,
                 getId("jade_block"), "jade_block", getId("jade_ingot_from_jade_block"), "jade_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, MUItems.NECOIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.NECOIUM_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, MUItems.NECOIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.NECOIUM_BLOCK,
                 getId("necoium_block"), "necoium_block", getId("necoium_ingot_from_necoium_block"), "necoium_ingot");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RAW_NECOIUM, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RAW_NECOIUM_BLOCK,
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, RAW_NECOIUM, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RAW_NECOIUM_BLOCK,
                 getId("raw_necoium_block"), "raw_necoium_block", getId("raw_necoium_from_raw_necoium_block"), "necoium_ingot");
 
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> AQUAMARINE_INGOT, List.of(AQUAMARINE, AQUAMARINE, AQUAMARINE, AQUAMARINE,

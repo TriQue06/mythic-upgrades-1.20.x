@@ -1,20 +1,19 @@
 package net.trique.mythicupgrades.item;
 
-import net.fabricmc.yarn.constants.MiningLevels;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import static net.trique.mythicupgrades.item.MUItems.*;
 
-public enum MUToolMaterials implements ToolMaterial {
-    CITRINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(CITRINE_INGOT)),
-    PERIDOT(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(PERIDOT_INGOT)),
-    ZIRCON(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(ZIRCON_INGOT)),
-    RUBY(MiningLevels.NETHERITE, 2923, 13.0f, 5.0f, 18, Ingredient.ofItems(RUBY_INGOT)),
-    SAPPHIRE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(SAPPHIRE_INGOT)),
-    TOPAZ(MiningLevels.NETHERITE, 8769, 11.0f, 6.0f, 18, Ingredient.ofItems(TOPAZ_INGOT)),
-    AMETRINE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(AMETRINE_INGOT)),
-    JADE(MiningLevels.NETHERITE, 2923, 10.0f, 5.0f, 18, Ingredient.ofItems(JADE_INGOT));
+public enum MUToolMaterials implements Tier {
+    CITRINE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(CITRINE_INGOT)),
+    PERIDOT(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(PERIDOT_INGOT)),
+    ZIRCON(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(ZIRCON_INGOT)),
+    RUBY(4, 2923, 13.0f, 5.0f, 18, Ingredient.of(RUBY_INGOT)),
+    SAPPHIRE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(SAPPHIRE_INGOT)),
+    TOPAZ(4, 8769, 11.0f, 6.0f, 18, Ingredient.of(TOPAZ_INGOT)),
+    AMETRINE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(AMETRINE_INGOT)),
+    JADE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(JADE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;
@@ -24,6 +23,7 @@ public enum MUToolMaterials implements ToolMaterial {
     private final Ingredient repairIngredient;
 
     MUToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Ingredient repairIngredient) {
+        
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
@@ -33,27 +33,27 @@ public enum MUToolMaterials implements ToolMaterial {
     }
 
     @Override
-    public int getDurability() {
+    public int getUses() {
         return this.itemDurability;
     }
 
     @Override
-    public float getMiningSpeedMultiplier() {
+    public float getSpeed() {
         return this.miningSpeed;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return this.attackDamage;
     }
 
     @Override
-    public int getMiningLevel() {
+    public int getLevel() {
         return this.miningLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return this.enchantability;
     }
 

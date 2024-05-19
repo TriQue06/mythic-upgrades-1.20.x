@@ -12,48 +12,48 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(AQUAMARINE_BLOCK);
-        addDrop(AQUAMARINE_CRYSTAL_BLOCK);
-        addDrop(AQUAMARINE_ORE, oreDrops(AQUAMARINE_ORE, AQUAMARINE));
-        addDrop(DEEPSLATE_AQUAMARINE_ORE, oreDrops(DEEPSLATE_AQUAMARINE_ORE, AQUAMARINE));
+        dropSelf(AQUAMARINE_BLOCK);
+        dropSelf(AQUAMARINE_CRYSTAL_BLOCK);
+        add(AQUAMARINE_ORE, createOreDrop(AQUAMARINE_ORE, AQUAMARINE));
+        add(DEEPSLATE_AQUAMARINE_ORE, createOreDrop(DEEPSLATE_AQUAMARINE_ORE, AQUAMARINE));
 
-        addDrop(CITRINE_BLOCK);
-        addDrop(CITRINE_CRYSTAL_BLOCK);
-        addDrop(CITRINE_ORE, oreDrops(CITRINE_ORE, CITRINE));
-        addDrop(DEEPSLATE_CITRINE_ORE, oreDrops(DEEPSLATE_CITRINE_ORE, CITRINE));
+        dropSelf(CITRINE_BLOCK);
+        dropSelf(CITRINE_CRYSTAL_BLOCK);
+        add(CITRINE_ORE, createOreDrop(CITRINE_ORE, CITRINE));
+        add(DEEPSLATE_CITRINE_ORE, createOreDrop(DEEPSLATE_CITRINE_ORE, CITRINE));
 
-        addDrop(PERIDOT_BLOCK);
-        addDrop(PERIDOT_CRYSTAL_BLOCK);
-        addDrop(PERIDOT_ORE, oreDrops(PERIDOT_ORE, PERIDOT));
-        addDrop(DEEPSLATE_PERIDOT_ORE, oreDrops(DEEPSLATE_PERIDOT_ORE, PERIDOT));
+        dropSelf(PERIDOT_BLOCK);
+        dropSelf(PERIDOT_CRYSTAL_BLOCK);
+        add(PERIDOT_ORE, createOreDrop(PERIDOT_ORE, PERIDOT));
+        add(DEEPSLATE_PERIDOT_ORE, createOreDrop(DEEPSLATE_PERIDOT_ORE, PERIDOT));
 
-        addDrop(ZIRCON_BLOCK);
-        addDrop(ZIRCON_CRYSTAL_BLOCK);
-        addDrop(ZIRCON_ORE, oreDrops(ZIRCON_ORE, ZIRCON));
-        addDrop(DEEPSLATE_ZIRCON_ORE, oreDrops(DEEPSLATE_ZIRCON_ORE, ZIRCON));
+        dropSelf(ZIRCON_BLOCK);
+        dropSelf(ZIRCON_CRYSTAL_BLOCK);
+        add(ZIRCON_ORE, createOreDrop(ZIRCON_ORE, ZIRCON));
+        add(DEEPSLATE_ZIRCON_ORE, createOreDrop(DEEPSLATE_ZIRCON_ORE, ZIRCON));
 
-        addDrop(RUBY_BLOCK);
-        addDrop(RUBY_CRYSTAL_BLOCK);
-        addDrop(RUBY_ORE, oreDrops(RUBY_ORE, RUBY));
+        dropSelf(RUBY_BLOCK);
+        dropSelf(RUBY_CRYSTAL_BLOCK);
+        add(RUBY_ORE, createOreDrop(RUBY_ORE, RUBY));
 
-        addDrop(SAPPHIRE_BLOCK);
-        addDrop(SAPPHIRE_CRYSTAL_BLOCK);
-        addDrop(SAPPHIRE_ORE, oreDrops(SAPPHIRE_ORE, SAPPHIRE));
+        dropSelf(SAPPHIRE_BLOCK);
+        dropSelf(SAPPHIRE_CRYSTAL_BLOCK);
+        add(SAPPHIRE_ORE, createOreDrop(SAPPHIRE_ORE, SAPPHIRE));
 
-        addDrop(TOPAZ_BLOCK);
-        addDrop(TOPAZ_CRYSTAL_BLOCK);
-        addDrop(TOPAZ_ORE, oreDrops(TOPAZ_ORE, TOPAZ));
+        dropSelf(TOPAZ_BLOCK);
+        dropSelf(TOPAZ_CRYSTAL_BLOCK);
+        add(TOPAZ_ORE, createOreDrop(TOPAZ_ORE, TOPAZ));
 
-        addDrop(AMETRINE_BLOCK);
-        addDrop(AMETRINE_CRYSTAL_BLOCK);
-        addDrop(AMETRINE_ORE, oreDrops(AMETRINE_ORE, AMETRINE));
+        dropSelf(AMETRINE_BLOCK);
+        dropSelf(AMETRINE_CRYSTAL_BLOCK);
+        add(AMETRINE_ORE, createOreDrop(AMETRINE_ORE, AMETRINE));
 
-        addDrop(JADE_BLOCK);
-        addDrop(JADE_CRYSTAL_BLOCK);
-        addDrop(JADE_ORE, oreDrops(JADE_ORE, JADE));
+        dropSelf(JADE_BLOCK);
+        dropSelf(JADE_CRYSTAL_BLOCK);
+        add(JADE_ORE, createOreDrop(JADE_ORE, JADE));
 
-        addDrop(NECOIUM_BLOCK);
-        addDrop(RAW_NECOIUM_BLOCK);
-        addDrop(NECOIUM_ORE, oreDrops(NECOIUM_ORE, RAW_NECOIUM));
+        dropSelf(NECOIUM_BLOCK);
+        dropSelf(RAW_NECOIUM_BLOCK);
+        add(NECOIUM_ORE, createOreDrop(NECOIUM_ORE, RAW_NECOIUM));
     }
 }

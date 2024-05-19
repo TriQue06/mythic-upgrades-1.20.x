@@ -7,7 +7,7 @@ import static net.trique.mythicupgrades.command.MUCommands.*;
 public class RegisterMUCommands {
     public static void registerCommands() {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-                if (environment.dedicated) {
+                if (environment.includeDedicated) {
                     updateConfig(dispatcher);
                     restoreDefaultsAndReload(dispatcher);
                 }
