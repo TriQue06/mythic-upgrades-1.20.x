@@ -1,8 +1,8 @@
 package net.trique.mythicupgrades.mixin;
 
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.server.world.ServerWorld;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
@@ -17,12 +17,12 @@ import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 import static net.trique.mythicupgrades.effect.MUEffects.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
-@Mixin(ServerLevel.class)
+@Mixin(ServerWorld.class)
 public abstract class ServerWorldMixin {
     @Inject(method = "tick", at = @At(value = "HEAD"))
 
     private void updateByConfigs(CallbackInfo ci) {
-        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(OCEAN_SHIELD, CONFIG.aquamarineConfig.ocean_shield_amplifier()).addForEquipmentBuffs(MobEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(MobEffects.WATER_BREATHING, 0).build();
+        ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(OCEAN_SHIELD, CONFIG.aquamarineConfig.ocean_shield_amplifier()).addForEquipmentBuffs(StatusEffects.DOLPHINS_GRACE, 0).addForEquipmentBuffs(StatusEffects.WATER_BREATHING, 0).build();
         List<Integer> aquamarineAmplifiers = List.of(CONFIG.aquamarineConfig.ocean_shield_amplifier());
 
         ItemEffectsList citrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(HINDERING, CONFIG.citrineConfig.hindering_amplifier()).build();
@@ -37,31 +37,31 @@ public abstract class ServerWorldMixin {
         ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
         List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
 
-        ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).addForEquipmentBuffs(MobEffects.FIRE_RESISTANCE, 0).build();
+        ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).addForEquipmentBuffs(StatusEffects.FIRE_RESISTANCE, 0).build();
         List<Integer> topazAmplifiers = List.of(CONFIG.topazConfig.item_mastery_amplifier());
 
         ItemEffectsList ametrineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ARCANE_AURA, CONFIG.ametrineConfig.arcane_aura_amplifier()).build();
         List<Integer> ametrineAmplifiers = List.of(CONFIG.ametrineConfig.arcane_aura_amplifier());
 
-        ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MobEffects.MOVEMENT_SPEED, CONFIG.jadeConfig.speed_amplifier()).addForEquipmentBuffs(MobEffects.JUMP, CONFIG.jadeConfig.jump_boost_amplifier()).build();
+        ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(StatusEffects.SPEED, CONFIG.jadeConfig.speed_amplifier()).addForEquipmentBuffs(StatusEffects.JUMP_BOOST, CONFIG.jadeConfig.jump_boost_amplifier()).build();
         List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.speed_amplifier(), CONFIG.jadeConfig.jump_boost_amplifier());
 
-        ItemEffectsList hinderingAxeItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.WEAKNESS, (int)(CONFIG.citrineConfig.weapons_weakness_duration() * 20), CONFIG.citrineConfig.weapons_weakness_amplifier()).addForHit(MobEffects.MOVEMENT_SLOWDOWN, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_slowness_amplifier()).addForHit(MobEffects.HUNGER, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_hunger_amplifier()).build();
-        ItemEffectsList hinderingSwordItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.WEAKNESS, (int)(CONFIG.citrineConfig.weapons_weakness_duration() * 20), CONFIG.citrineConfig.weapons_weakness_amplifier()).addForHit(MobEffects.MOVEMENT_SLOWDOWN, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_slowness_amplifier()).addForHit(MobEffects.HUNGER, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_hunger_amplifier()).build();
+        ItemEffectsList hinderingAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.WEAKNESS, (int)(CONFIG.citrineConfig.weapons_weakness_duration() * 20), CONFIG.citrineConfig.weapons_weakness_amplifier()).addForHit(StatusEffects.SLOWNESS, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_slowness_amplifier()).addForHit(StatusEffects.HUNGER, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_hunger_amplifier()).build();
+        ItemEffectsList hinderingSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.WEAKNESS, (int)(CONFIG.citrineConfig.weapons_weakness_duration() * 20), CONFIG.citrineConfig.weapons_weakness_amplifier()).addForHit(StatusEffects.SLOWNESS, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_slowness_amplifier()).addForHit(StatusEffects.HUNGER, (int)(CONFIG.citrineConfig.weapons_hunger_duration() * 20), CONFIG.citrineConfig.weapons_hunger_amplifier()).build();
 
-        ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.POISON, (int)(CONFIG.peridotConfig.weapons_poison_duration() * 20), CONFIG.peridotConfig.weapons_poison_amplifier()).build();
-        ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.POISON, (int)(CONFIG.peridotConfig.weapons_poison_duration() * 20), CONFIG.peridotConfig.weapons_poison_amplifier()).build();
+        ItemEffectsList poisonSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.weapons_poison_duration() * 20), CONFIG.peridotConfig.weapons_poison_amplifier()).build();
+        ItemEffectsList poisonAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.POISON, (int)(CONFIG.peridotConfig.weapons_poison_duration() * 20), CONFIG.peridotConfig.weapons_poison_amplifier()).build();
 
         ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.zirconConfig.weapons_freeze_duration() * 20), 0).build();
         ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(MUEffects.FREEZE, (int)(CONFIG.zirconConfig.weapons_freeze_duration() * 20), 0).build();
 
-        ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(MobEffects.DIG_SPEED, MobEffectInstance.INFINITE_DURATION, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-        ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(MobEffects.DIG_SPEED, MobEffectInstance.INFINITE_DURATION, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-        ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(MobEffects.DIG_SPEED, MobEffectInstance.INFINITE_DURATION, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-        ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(MobEffects.DIG_SPEED, MobEffectInstance.INFINITE_DURATION, CONFIG.rubyConfig.tools_haste_amplifier()).build();
+        ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
+        ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
+        ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
+        ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
 
-        ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.LEVITATION, (int)(CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
-        ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(MobEffects.LEVITATION, (int)(CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
+        ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int)(CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
+        ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int)(CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
 
         CITRINE_AXE.setNewEffects(hinderingAxeItemEffects);
         CITRINE_SWORD.setNewEffects(hinderingSwordItemEffects);

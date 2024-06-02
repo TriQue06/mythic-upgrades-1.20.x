@@ -1,18 +1,14 @@
 package net.trique.mythicupgrades.util;
 
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.book.RecipeCategory;
 import org.jetbrains.annotations.Nullable;
-import static net.minecraft.data.recipes.RecipeProvider.inventoryTrigger;
+import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItemPredicates;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,44 +16,44 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class DataGenHelper {
-    public static void offerShapelessRecipeWithMultipleInputs(Consumer<FinishedRecipe> exporter, ItemLike output, List<ItemLike> inputs, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipeWithMultipleInputs(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, List<ItemConvertible> inputs, @Nullable String group, int outputCount) {
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, output, inputs, inputs, group, outputCount);
     }
 
-    public static void offerCustomUpgradeRecipe(Consumer<FinishedRecipe> exporter, Item template, Item input, Item itemMaterialUpgrade, RecipeCategory category, Item result) {
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(template), Ingredient.of(input), Ingredient.of(itemMaterialUpgrade), category, result).
-                unlocks(RecipeProvider.getHasName(() -> itemMaterialUpgrade), RecipeProvider.has(itemMaterialUpgrade)).save(exporter, RecipeProvider.getItemName(result) + "_smithing");
+    public static void offerCustomUpgradeRecipe(Consumer<RecipeJsonProvider> exporter, Item template, Item input, Item itemMaterialUpgrade, RecipeCategory category, Item result) {
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(template), Ingredient.ofItems(input), Ingredient.ofItems(itemMaterialUpgrade), category, result).
+                criterion(RecipeProvider.hasItem(() -> itemMaterialUpgrade), RecipeProvider.conditionsFromItem(itemMaterialUpgrade)).offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
     }
 
-    public static void offerCustomSmithingTemplateCopyingRecipe(Consumer<FinishedRecipe> exporter, ItemLike template, ItemLike duplicationMaterial, ItemLike resource) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, template, 2).define('#', duplicationMaterial).define('C', resource).define('S', template).pattern("#S#").pattern("#C#").pattern("###").
-                unlockedBy(RecipeProvider.getHasName(template), RecipeProvider.has(template)).save(exporter);
+    public static void offerCustomSmithingTemplateCopyingRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible template, ItemConvertible duplicationMaterial, ItemConvertible resource) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, template, 2).input('#', duplicationMaterial).input('C', resource).input('S', template).pattern("#S#").pattern("#C#").pattern("###").
+                criterion(RecipeProvider.hasItem(template), RecipeProvider.conditionsFromItem(template)).offerTo(exporter);
     }
 
-    public static InventoryChangeTrigger.TriggerInstance conditionsFromItems(ItemLike... items) {
-        return inventoryTrigger(ItemPredicate.Builder.item().of(items).build());
+    public static InventoryChangedCriterion.Conditions conditionsFromItems(ItemConvertible... items) {
+        return conditionsFromItemPredicates(ItemPredicate.Builder.create().items(items).build());
     }
 
-    public static void offerShapelessRecipeWithMultipleInputsAndKeyItems(Consumer<FinishedRecipe> exporter, ItemLike output, List<ItemLike> inputs, List<ItemLike> keyItems, @Nullable String group, int outputCount) {
-        ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, output, outputCount);
+    public static void offerShapelessRecipeWithMultipleInputsAndKeyItems(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, List<ItemConvertible> inputs, List<ItemConvertible> keyItems, @Nullable String group, int outputCount) {
+        ShapelessRecipeJsonBuilder builder = ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, output, outputCount);
 
-        for (ItemLike itemConvertible : inputs) {
-            builder = builder.requires(itemConvertible);
+        for (ItemConvertible itemConvertible : inputs) {
+            builder = builder.input(itemConvertible);
         }
-        builder = builder.unlockedBy("has_necessary_ingredients", conditionsFromItems(fromList(keyItems))).group(group);
-        builder.save(exporter);
+        builder = builder.criterion("has_necessary_ingredients", conditionsFromItems(fromList(keyItems))).group(group);
+        builder.offerTo(exporter);
     }
 
-    public static ItemLike [] fromList(List<ItemLike> list) {
-        HashSet<ItemLike> crts = new HashSet<>();
-        ArrayList<ItemLike> tmp = new ArrayList<>();
-        for (ItemLike itemConvertible : list) {
+    public static ItemConvertible [] fromList(List<ItemConvertible> list) {
+        HashSet<ItemConvertible> crts = new HashSet<>();
+        ArrayList<ItemConvertible> tmp = new ArrayList<>();
+        for (ItemConvertible itemConvertible : list) {
             if (!crts.contains(itemConvertible)) {
                 crts.add(itemConvertible);
                 tmp.add(itemConvertible);
             }
         }
-        ItemLike [] ans = new ItemLike[tmp.size()];
+        ItemConvertible [] ans = new ItemConvertible[tmp.size()];
         tmp.toArray(ans);
         return ans;
     }

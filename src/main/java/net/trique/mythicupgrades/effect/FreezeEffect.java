@@ -1,31 +1,31 @@
 package net.trique.mythicupgrades.effect;
 
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
 
-public class FreezeEffect extends MobEffect {
-    public FreezeEffect(MobEffectCategory statusEffectCategory, int color) {
+public class FreezeEffect extends StatusEffect {
+    public FreezeEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
 
     @Override
-    public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (!livingEntity.level().isClientSide()) {
+    public void applyUpdateEffect(LivingEntity livingEntity, int amplifier) {
+        if (!livingEntity.getWorld().isClient()) {
             double x = livingEntity.getX();
             double y = livingEntity.getY();
             double z = livingEntity.getZ();
 
-            livingEntity.teleportToWithTicket(x, y, z);
-            livingEntity.moveTo(x, y, z);
-            livingEntity.setDeltaMovement(0, 0, 0);
-            livingEntity.setSpeed(0f);
+            livingEntity.teleport(x, y, z);
+            livingEntity.refreshPositionAfterTeleport(x, y, z);
+            livingEntity.setVelocity(0, 0, 0);
+            livingEntity.setMovementSpeed(0f);
         }
-        super.applyEffectTick(livingEntity, amplifier);
+        super.applyUpdateEffect(livingEntity, amplifier);
     }
 
     @Override
-    public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+    public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {
         return true;
     }
 }

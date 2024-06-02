@@ -1,14 +1,14 @@
 package net.trique.mythicupgrades.item;
 
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+import net.minecraft.world.World;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
@@ -22,10 +22,10 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem 
     protected final MythicEffectVirtualItemHandler virtualItemHandler;
     protected final String tooltipKey;
 
-    protected final ChatFormatting color;
+    protected final Formatting color;
 
-    public MythicEffectsAxeItem(Tier material, int attackDamage, float attackSpeed, Properties settings,
-                                ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
+    public MythicEffectsAxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings,
+                                ItemEffectsList effects, String tooltipKey, Formatting color) {
         super(material, attackDamage, attackSpeed, settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.tooltipKey = tooltipKey;
@@ -33,29 +33,29 @@ public class MythicEffectsAxeItem extends AxeItem implements BaseMythicToolItem 
     }
 
     @Override
-    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         virtualItemHandler.handlePostHit(target, attacker);
-        return super.hurtEnemy(stack, target, attacker);
+        return super.postHit(stack, target, attacker);
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context) {
-        tooltip.add(Component.translatable(tooltipKey).withStyle(color));
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable(tooltipKey).formatted(color));
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
+    public HashMap<StatusEffect, EffectMeta> getMainHandEffects() {
         return virtualItemHandler.getMainHandEffects();
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getOnHitEffects() {
+    public HashMap<StatusEffect, EffectMeta> getOnHitEffects() {
         return virtualItemHandler.getOnHitEffects();
     }
 
     @Override
-    public Tier getMythicMaterial() {
-        return this.getTier();
+    public ToolMaterial getMythicMaterial() {
+        return this.getMaterial();
     }
 
     @Override

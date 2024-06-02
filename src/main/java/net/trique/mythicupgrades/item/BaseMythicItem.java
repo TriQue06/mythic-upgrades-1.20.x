@@ -1,11 +1,11 @@
 package net.trique.mythicupgrades.item;
 
-import net.minecraft.world.effect.MobEffect;
+import net.minecraft.entity.effect.StatusEffect;
 import net.trique.mythicupgrades.util.EffectMeta;
 
 import java.util.HashMap;
 
 public interface BaseMythicItem {
-    HashMap<MobEffect, EffectMeta> getMainHandEffects();
-    HashMap<MobEffect, EffectMeta> getOnHitEffects();
+    HashMap<StatusEffect, EffectMeta> getMainHandEffects();
+    HashMap<StatusEffect, EffectMeta> getOnHitEffects();
 }
