@@ -103,6 +103,7 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RUBY_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(RUBY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(RUBY, Models.GENERATED);
         itemModelGenerator.register(RUBY_INGOT, Models.GENERATED);
         itemModelGenerator.register(RUBY_CRYSTAL_SHARD, Models.GENERATED);

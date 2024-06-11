@@ -286,11 +286,7 @@
   "zircon_axe.description": "При ударе накладывает на цель эффект \"Заморозка\"",
   "zircon_sword.description": "При ударе накладывает на цель эффект \"Заморозка\"",
 
-  "ruby_axe.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
-  "ruby_pickaxe.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
-  "ruby_shovel.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
-  "ruby_hoe.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
-  "ruby_sword.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
+  "ruby_tool.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
 
   "sapphire_helmet.description": "Эффект набора: Отражение урона %s",
   "sapphire_chestplate.description": "Эффект набора: Отражение урона %s",
@@ -320,8 +316,8 @@
   "jade_chestplate.description": "Эффект набора: Скорость %s и Прыгучесть %s",
   "jade_leggings.description": "Эффект набора: Скорость %s и Прыгучесть %s",
   "jade_boots.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_axe.description": "Имеет повышенную скорость атаки",
-  "jade_sword.description": "Имеет повышенную скорость атаки",
+  "jade_axe.description": "-",
+  "jade_sword.description": "-",
 
   "death.attack.deflecting": "%s забыл что отраженный от %s урон может убить",
   "death.attack.deflecting.item": "%s забыл что отраженный от %s урон при помощи %s может убить",

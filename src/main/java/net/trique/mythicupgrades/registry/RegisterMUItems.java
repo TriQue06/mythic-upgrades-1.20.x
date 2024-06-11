@@ -72,6 +72,7 @@ public class RegisterMUItems {
         registerItem("ruby_axe", RUBY_AXE);
         registerItem("ruby_pickaxe", RUBY_PICKAXE);
         registerItem("ruby_hoe", RUBY_HOE);
+        registerItem("ruby_sword", RUBY_SWORD);
         registerItem("ruby", RUBY);
         registerItem("ruby_ingot", RUBY_INGOT);
         registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
@@ -141,6 +142,7 @@ public class RegisterMUItems {
                     entries.add(RUBY_PICKAXE);
                     entries.add(RUBY_AXE);
                     entries.add(RUBY_HOE);
+                    entries.add(RUBY_SWORD);
 
                     entries.add(TOPAZ_SHOVEL);
                     entries.add(TOPAZ_PICKAXE);

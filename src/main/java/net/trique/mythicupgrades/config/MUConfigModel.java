@@ -145,6 +145,14 @@ public class MUConfigModel {
 
     public static class JadeConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 0.1f, max = 2f)
+        public float weapons_jumpboost_duration = 1.0f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 4, max = 6)
+        public int weapons_jumpboost_amplifier = 4;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
         public int speed_amplifier = 2;
 

@@ -5,6 +5,9 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Formatting;
+import net.trique.mythicupgrades.MythicUpgrades;
+import net.trique.mythicupgrades.item.hitandget.HitAndGetAxeItem;
+import net.trique.mythicupgrades.item.hitandget.HitAndGetSwordItem;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
@@ -49,13 +52,12 @@ public class MUItems {
     private static final ItemEffectsList freezeAxeItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.zirconConfig.weapons_freeze_duration() * 20), 0).build();
     private static final ItemEffectsList freezeSwordItemEffects = new ItemEffectsListBuilder().addForHit(FREEZE, (int) (CONFIG.zirconConfig.weapons_freeze_duration() * 20), 0).build();
 
-    private static final ItemEffectsList hasteAxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-    private static final ItemEffectsList hastePickaxeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-    private static final ItemEffectsList hasteHoeItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
-    private static final ItemEffectsList hasteShovelItemEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
+    private static final ItemEffectsList hasteToolEffects = new ItemEffectsListBuilder().addForMainHand(StatusEffects.HASTE, StatusEffectInstance.INFINITE, CONFIG.rubyConfig.tools_haste_amplifier()).build();
 
     private static final ItemEffectsList levitationAxeItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int) (CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
     private static final ItemEffectsList levitationSwordItemEffects = new ItemEffectsListBuilder().addForHit(StatusEffects.LEVITATION, (int) (CONFIG.ametrineConfig.weapons_levitation_duration() * 20), CONFIG.ametrineConfig.weapons_levitation_amplifier()).build();
+
+    private static final ItemEffectsList jumpWeaponEffect = new ItemEffectsListBuilder().addForHit(StatusEffects.JUMP_BOOST, (int) (CONFIG.jadeConfig.weapons_jumpboost_duration() * 20),MythicUpgrades.CONFIG.jadeConfig.weapons_jumpboost_amplifier()).build();
 
     public static final Item AQUAMARINE = new Item(new FabricItemSettings());
     public static final Item AQUAMARINE_INGOT = new Item(new FabricItemSettings().fireproof());
@@ -132,10 +134,11 @@ public class MUItems {
     public static final MythicEffectsArmorItem ZIRCON_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.ZIRCON, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), zirconArmorEffects, "zircon_leggings.description", zirconAmplifiers, Formatting.BLUE);
     public static final MythicEffectsArmorItem ZIRCON_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.ZIRCON, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), zirconArmorEffects, "zircon_boots.description", zirconAmplifiers, Formatting.BLUE);
 
-    public static final MythicEffectsShovelItem RUBY_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.RUBY, 2, -3.0f, (new FabricItemSettings().fireproof()), hasteShovelItemEffects, "ruby_shovel.description", Formatting.RED);
-    public static final MythicEffectsPickaxeItem RUBY_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.RUBY, 1, -2.8f, (new FabricItemSettings().fireproof()), hastePickaxeItemEffects, "ruby_pickaxe.description", Formatting.RED);
-    public static final MythicEffectsAxeItem RUBY_AXE = new MythicEffectsAxeItem(MUToolMaterials.RUBY, 5, -3f, (new FabricItemSettings().fireproof()), hasteAxeItemEffects, "ruby_axe.description", Formatting.RED);
-    public static final MythicEffectsHoeItem RUBY_HOE = new MythicEffectsHoeItem(MUToolMaterials.RUBY, -4, 0.0f, (new FabricItemSettings().fireproof()), hasteHoeItemEffects, "ruby_hoe.description", Formatting.RED);
+    public static final MythicEffectsShovelItem RUBY_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.RUBY, 2, -3.0f, (new FabricItemSettings().fireproof()), hasteToolEffects, "ruby_tool.description", Formatting.RED);
+    public static final MythicEffectsPickaxeItem RUBY_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.RUBY, 1, -2.8f, (new FabricItemSettings().fireproof()), hasteToolEffects, "ruby_tool.description", Formatting.RED);
+    public static final MythicEffectsAxeItem RUBY_AXE = new MythicEffectsAxeItem(MUToolMaterials.RUBY, 5, -3f, (new FabricItemSettings().fireproof()), hasteToolEffects, "ruby_tool.description", Formatting.RED);
+    public static final MythicEffectsHoeItem RUBY_HOE = new MythicEffectsHoeItem(MUToolMaterials.RUBY, -4, 0.0f, (new FabricItemSettings().fireproof()), hasteToolEffects, "ruby_tool.description", Formatting.RED);
+    public static final MythicEffectsSwordItem RUBY_SWORD = new MythicEffectsSwordItem(MUToolMaterials.RUBY, 3, -1.8f, (new FabricItemSettings().fireproof()), hasteToolEffects, "ruby_tool.description", Formatting.RED);
 
     public static final SapphireAxeItem SAPPHIRE_AXE = new SapphireAxeItem(5, CONFIG.sapphireConfig.weapons_percentage_damage_percent(), -3.0f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_axe.description", Formatting.DARK_BLUE);
     public static final SapphireSwordItem SAPPHIRE_SWORD = new SapphireSwordItem(3, CONFIG.sapphireConfig.weapons_percentage_damage_percent(), -2.4f, (new FabricItemSettings().fireproof()), new ItemEffectsList(), "sapphire_sword.description", Formatting.DARK_BLUE);
@@ -161,8 +164,8 @@ public class MUItems {
     public static final MythicEffectsArmorItem AMETRINE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_leggings.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
     public static final MythicEffectsArmorItem AMETRINE_BOOTS = new MythicEffectsArmorItem(MUArmorMaterials.AMETRINE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof(), ametrineArmorEffects, "ametrine_boots.description", ametrineAmplifiers, Formatting.DARK_PURPLE);
 
-    public static final MythicEffectsAxeItem JADE_AXE = new MythicEffectsAxeItem(MUToolMaterials.JADE, 5, -2.4f, (new FabricItemSettings().fireproof()), noItemEffects, "jade_axe.description", Formatting.DARK_GREEN);
-    public static final MythicEffectsSwordItem JADE_SWORD = new MythicEffectsSwordItem(MUToolMaterials.JADE, 3, -1.8f, (new FabricItemSettings().fireproof()), noItemEffects, "jade_sword.description", Formatting.DARK_GREEN);
+    public static final HitAndGetAxeItem JADE_AXE = new HitAndGetAxeItem(MUToolMaterials.JADE, 5, -3.0f, (new FabricItemSettings().fireproof()), jumpWeaponEffect, "jade_axe.description", Formatting.DARK_GREEN);
+    public static final HitAndGetSwordItem JADE_SWORD = new HitAndGetSwordItem(MUToolMaterials.JADE, 3, -2.4f, (new FabricItemSettings().fireproof()), jumpWeaponEffect, "jade_sword.description", Formatting.DARK_GREEN);
     public static final MythicEffectsArmorItem JADE_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.JADE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof(), jadeArmorEffects, "jade_helmet.description", jadeAmplifiers, Formatting.DARK_GREEN);
     public static final MythicEffectsArmorItem JADE_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.JADE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof(), jadeArmorEffects, "jade_chestplate.description", jadeAmplifiers, Formatting.DARK_GREEN);
     public static final MythicEffectsArmorItem JADE_LEGGINGS = new MythicEffectsArmorItem(MUArmorMaterials.JADE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof(), jadeArmorEffects, "jade_leggings.description", jadeAmplifiers, Formatting.DARK_GREEN);

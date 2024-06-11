@@ -270,11 +270,7 @@
   "zircon_axe.description": "Freezes enemy on hit.",
   "zircon_sword.description": "Freezes enemy on hit.",
 
-  "ruby_axe.description": "Applies Haste when in main hand.",
-  "ruby_pickaxe.description": "Applies Haste when in main hand.",
-  "ruby_shovel.description": "Applies Haste when in main hand.",
-  "ruby_hoe.description": "Applies Haste when in main hand.",
-  "ruby_sword.description": "Applies Haste when in main hand.",
+  "ruby_tool.description": "Applies Haste when in main hand.",
 
   "sapphire_helmet.description": "Set Bonus: Damage Deflection %s",
   "sapphire_chestplate.description": "Set Bonus: Damage Deflection %s",
@@ -304,8 +300,8 @@
   "jade_chestplate.description": "Set Bonus: Speed %s and Jump Boost %s",
   "jade_leggings.description": "Set Bonus: Speed %s and Jump Boost %s",
   "jade_boots.description": "Set Bonus: Speed %s and Jump Boost %s",
-  "jade_axe.description": "Has high attack speed.",
-  "jade_sword.description": "Has high attack speed.",
+  "jade_axe.description": "Provides Jump Boost on hit.",
+  "jade_sword.description": "Provides Jump Boost on hit.",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
