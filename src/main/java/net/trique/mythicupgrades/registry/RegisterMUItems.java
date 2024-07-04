@@ -51,6 +51,21 @@ public class RegisterMUItems {
         registerItem("peridot_potion", PERIDOT_POTION);
         registerItem("peridot_upgrade_smithing_template", PERIDOT_UPGRADE_SMITHING_TEMPLATE);
 
+        registerItem("topaz_shovel", TOPAZ_SHOVEL);
+        registerItem("topaz_pickaxe", TOPAZ_PICKAXE);
+        registerItem("topaz_axe", TOPAZ_AXE);
+        registerItem("topaz_hoe", TOPAZ_HOE);
+        registerItem("topaz_sword", TOPAZ_SWORD);
+        registerItem("topaz_helmet", TOPAZ_HELMET);
+        registerItem("topaz_chestplate", TOPAZ_CHESTPLATE);
+        registerItem("topaz_leggings", TOPAZ_LEGGINGS);
+        registerItem("topaz_boots", TOPAZ_BOOTS);
+        registerItem("topaz", TOPAZ);
+        registerItem("topaz_ingot", TOPAZ_INGOT);
+        registerItem("topaz_crystal_shard", TOPAZ_CRYSTAL_SHARD);
+        registerItem("topaz_potion", TOPAZ_POTION);
+        registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
+
         registerItem("ruby_shovel", RUBY_SHOVEL);
         registerItem("ruby_axe", RUBY_AXE);
         registerItem("ruby_pickaxe", RUBY_PICKAXE);
@@ -80,21 +95,6 @@ public class RegisterMUItems {
         registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
         registerItem("sapphire_potion", SAPPHIRE_POTION);
         registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("topaz_shovel", TOPAZ_SHOVEL);
-        registerItem("topaz_pickaxe", TOPAZ_PICKAXE);
-        registerItem("topaz_axe", TOPAZ_AXE);
-        registerItem("topaz_hoe", TOPAZ_HOE);
-        registerItem("topaz_sword", TOPAZ_SWORD);
-        registerItem("topaz_helmet", TOPAZ_HELMET);
-        registerItem("topaz_chestplate", TOPAZ_CHESTPLATE);
-        registerItem("topaz_leggings", TOPAZ_LEGGINGS);
-        registerItem("topaz_boots", TOPAZ_BOOTS);
-        registerItem("topaz", TOPAZ);
-        registerItem("topaz_ingot", TOPAZ_INGOT);
-        registerItem("topaz_crystal_shard", TOPAZ_CRYSTAL_SHARD);
-        registerItem("topaz_potion", TOPAZ_POTION);
-        registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
 
         registerItem("ametrine_shovel", AMETRINE_SHOVEL);
         registerItem("ametrine_pickaxe", AMETRINE_PICKAXE);
