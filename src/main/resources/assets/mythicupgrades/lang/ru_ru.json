@@ -2,10 +2,8 @@
   "text.config.mythicupgrades-config.title": [{"text" : "Настройки мода \"Mythic Upgrades\"", "color" : "dark_purple", "bold": "true"}],
 
   "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.citrineConfig": [{"text" : "Цитрин", "color" : "yellow", "bold": "true"}],
   "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Перидот", "color" : "green", "bold": "true"}],
   "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфир", "color" : "dark_blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.zirconConfig": [{"text" : "Циркон", "color" : "blue", "bold": "true"}],
   "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубин", "color" : "red", "bold": "true"}],
   "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Топаз", "color" : "gold", "bold": "true"}],
   "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "dark_purple", "bold": "true"}],

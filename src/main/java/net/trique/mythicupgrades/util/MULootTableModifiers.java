@@ -82,24 +82,6 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(DESERT_PYRAMID_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.CITRINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(DESERT_PYRAMID_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f))
-                        .with(ItemEntry.builder(MUItems.CITRINE_POTION))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
             if(JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
@@ -122,7 +104,7 @@ public class MULootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.ZIRCON_UPGRADE_SMITHING_TEMPLATE))
+                        .with(ItemEntry.builder(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -131,7 +113,7 @@ public class MULootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
-                        .with(ItemEntry.builder(MUItems.ZIRCON_POTION))
+                        .with(ItemEntry.builder(MUItems.AQUAMARINE_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }

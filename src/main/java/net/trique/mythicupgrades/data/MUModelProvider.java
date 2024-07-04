@@ -23,23 +23,17 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AQUAMARINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerAmethyst(AQUAMARINE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_CITRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(CITRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(CITRINE_CRYSTAL_CLUSTER);
-
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_PERIDOT_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(PERIDOT_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerAmethyst(PERIDOT_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_ZIRCON_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ZIRCON_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(ZIRCON_CRYSTAL_CLUSTER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(DEEPSLATE_TOPAZ_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerAmethyst(TOPAZ_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(RUBY_ORE);
@@ -50,11 +44,6 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_ORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(SAPPHIRE_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerAmethyst(SAPPHIRE_CRYSTAL_CLUSTER);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(TOPAZ_CRYSTAL_BLOCK);
-        blockStateModelGenerator.registerAmethyst(TOPAZ_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AMETRINE_ORE);
@@ -73,31 +62,35 @@ public class MUModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(AQUAMARINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(AQUAMARINE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(AQUAMARINE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(AQUAMARINE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(AQUAMARINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(AQUAMARINE, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_INGOT, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(AQUAMARINE_POTION, Models.GENERATED);
 
-        itemModelGenerator.register(CITRINE_AXE, Models.HANDHELD);
-        itemModelGenerator.register(CITRINE_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(CITRINE, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_POTION, Models.GENERATED);
-
         itemModelGenerator.register(PERIDOT_AXE, Models.HANDHELD);
+        itemModelGenerator.register(PERIDOT_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(PERIDOT_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(PERIDOT_HOE, Models.HANDHELD);
         itemModelGenerator.register(PERIDOT_SWORD, Models.HANDHELD);
         itemModelGenerator.register(PERIDOT, Models.GENERATED);
         itemModelGenerator.register(PERIDOT_INGOT, Models.GENERATED);
         itemModelGenerator.register(PERIDOT_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(PERIDOT_POTION, Models.GENERATED);
 
-        itemModelGenerator.register(ZIRCON_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(ZIRCON_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ZIRCON, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_POTION, Models.GENERATED);
+        itemModelGenerator.register(TOPAZ_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(TOPAZ_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(TOPAZ_AXE, Models.HANDHELD);
+        itemModelGenerator.register(TOPAZ_HOE, Models.HANDHELD);
+        itemModelGenerator.register(TOPAZ_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(TOPAZ, Models.GENERATED);
+        itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
+        itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
+        itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
 
         itemModelGenerator.register(RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(RUBY_PICKAXE, Models.HANDHELD);
@@ -110,23 +103,19 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RUBY_POTION, Models.GENERATED);
 
         itemModelGenerator.register(SAPPHIRE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(SAPPHIRE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(SAPPHIRE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(SAPPHIRE_HOE, Models.HANDHELD);
         itemModelGenerator.register(SAPPHIRE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(SAPPHIRE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_INGOT, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_POTION, Models.GENERATED);
 
-        itemModelGenerator.register(TOPAZ_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_AXE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_HOE, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(TOPAZ, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_INGOT, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_CRYSTAL_SHARD, Models.GENERATED);
-        itemModelGenerator.register(TOPAZ_POTION, Models.GENERATED);
-
         itemModelGenerator.register(AMETRINE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(AMETRINE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(AMETRINE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(AMETRINE_HOE, Models.HANDHELD);
         itemModelGenerator.register(AMETRINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(AMETRINE, Models.GENERATED);
         itemModelGenerator.register(AMETRINE_INGOT, Models.GENERATED);
@@ -134,6 +123,9 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AMETRINE_POTION, Models.GENERATED);
 
         itemModelGenerator.register(JADE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(JADE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(JADE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(JADE_HOE, Models.HANDHELD);
         itemModelGenerator.register(JADE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(JADE, Models.GENERATED);
         itemModelGenerator.register(JADE_INGOT, Models.GENERATED);
@@ -142,12 +134,9 @@ public class MUModelProvider extends FabricModelProvider {
         
         itemModelGenerator.register(RAW_NECOIUM, Models.GENERATED);
         itemModelGenerator.register(NECOIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(NECOIUM_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(CITRINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(PERIDOT_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(ZIRCON_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(RUBY_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(TOPAZ_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
@@ -164,20 +153,15 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) PERIDOT_BOOTS));
 
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) CITRINE_BOOTS));
-
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ZIRCON_BOOTS));
-
         itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) SAPPHIRE_BOOTS));
+
+        itemModelGenerator.registerArmor(((ArmorItem) RUBY_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) RUBY_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) RUBY_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) RUBY_BOOTS));
 
         itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) TOPAZ_CHESTPLATE));

@@ -23,7 +23,7 @@ public class IceShieldEffect extends StatusEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.playSound(SoundEvents.ENTITY_PLAYER_HURT_FREEZE, 1.0f, livingEntity.getSoundPitch());
                     entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,
-                            (int)(CONFIG.zirconConfig.ice_shield_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
         }
