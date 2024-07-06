@@ -91,7 +91,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block AMETRINE_ORE = registerBlock("ametrine_ore",
-            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block AMETRINE_CRYSTAL_BLOCK = registerBlock("ametrine_crystal_block",
             new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.AMETHYST_BLOCK).strength(3.0f, 1200.0f)));
@@ -104,7 +104,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.DARK_GREEN).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL)));
 
     public static final Block JADE_ORE = registerBlock("jade_ore",
-            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.DARK_GREEN).strength(6.0f, 1200.0f), UniformIntProvider.create(16, 32)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(3.0f, 1200.0f), UniformIntProvider.create(16, 32)));
 
     public static final Block JADE_CRYSTAL_BLOCK = registerBlock("jade_crystal_block",
             new Block(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.DARK_GREEN).sounds(BlockSoundGroup.AMETHYST_BLOCK).strength(3.0f, 1200.0f)));
@@ -120,7 +120,7 @@ public class MUBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.PURPLE).strength(5.0f, 1200.0f).sounds(BlockSoundGroup.METAL).instrument(Instrument.FLUTE)));
 
     public static final Block NECOIUM_ORE = registerBlock("necoium_ore",
-            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(6.0f, 1200.0f).instrument(Instrument.FLUTE), UniformIntProvider.create(16, 32)));
+            new ExperienceDroppingBlock(AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.PALE_YELLOW).strength(3.0f, 1200.0f).instrument(Instrument.FLUTE), UniformIntProvider.create(16, 32)));
 
 
     private static Block registerBlock(String name, Block block) {

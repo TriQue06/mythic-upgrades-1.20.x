@@ -10,20 +10,14 @@ import net.minecraft.util.Identifier;
 import net.trique.mythicupgrades.item.MUItems;
 
 public class MULootTableModifiers {
-    private static final Identifier UNDERWATER_RUIN_BIG_ID =
-            new Identifier("minecraft", "chests/underwater_ruin_big");
-
-    private static final Identifier UNDERWATER_RUIN_SMALL_ID =
-            new Identifier("minecraft", "chests/underwater_ruin_small");
-
-    private static final Identifier DESERT_PYRAMID_ID =
-            new Identifier("minecraft", "chests/desert_pyramid");
+    private static final Identifier IGLOO_CHEST_ID =
+            new Identifier("minecraft", "chests/igloo_chest");
 
     private static final Identifier JUNGLE_TEMPLE_ID =
             new Identifier("minecraft", "chests/jungle_temple");
 
-    private static final Identifier IGLOO_CHEST_ID =
-            new Identifier("minecraft", "chests/igloo_chest");
+    private static final Identifier DESERT_PYRAMID_ID =
+            new Identifier("minecraft", "chests/desert_pyramid");
 
     private static final Identifier BASTION_BRIDGE_ID =
             new Identifier("minecraft", "chests/bastion_bridge");
@@ -46,7 +40,7 @@ public class MULootTableModifiers {
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 
-            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
+            if(IGLOO_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
@@ -55,16 +49,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
+            if(IGLOO_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
@@ -72,16 +57,7 @@ public class MULootTableModifiers {
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-
-            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f))
-                        .with(ItemEntry.builder(MUItems.AQUAMARINE_POTION))
-                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
+            
             if(JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
@@ -99,21 +75,21 @@ public class MULootTableModifiers {
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-
-            if(IGLOO_CHEST_ID.equals(id)) {
+            
+            if(DESERT_PYRAMID_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.1f))
-                        .with(ItemEntry.builder(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
+                        .with(ItemEntry.builder(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(IGLOO_CHEST_ID.equals(id)) {
+            if(DESERT_PYRAMID_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
-                        .with(ItemEntry.builder(MUItems.AQUAMARINE_POTION))
+                        .with(ItemEntry.builder(MUItems.TOPAZ_POTION))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }

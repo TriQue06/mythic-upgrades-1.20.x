@@ -132,7 +132,7 @@ public class RegisterMUItems {
 
     private static void registerMUItemGroup() {
         ItemGroup MYTHICTOOLSGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Combat & Tools"))
-                .icon(() -> new ItemStack(JADE_AXE)).entries((displayContext, entries) -> {
+                .icon(() -> new ItemStack(AMETRINE_AXE)).entries((displayContext, entries) -> {
                     entries.add(RUBY_SHOVEL);
                     entries.add(RUBY_PICKAXE);
                     entries.add(RUBY_AXE);
@@ -206,7 +206,7 @@ public class RegisterMUItems {
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
 
         ItemGroup MYTHICMISCGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Misc"))
-                .icon(() -> new ItemStack(JADE)).entries((displayContext, entries) -> {
+                .icon(() -> new ItemStack(AMETRINE)).entries((displayContext, entries) -> {
                     entries.add(RUBY);
                     entries.add(RUBY_INGOT);
                     entries.add(RUBY_CRYSTAL_SHARD);
@@ -255,7 +255,7 @@ public class RegisterMUItems {
         Registry.register(Registries.ITEM_GROUP, new Identifier(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
 
         ItemGroup MYTHICBLOCKGROUP = FabricItemGroup.builder().displayName(Text.literal("Mythic Upgrades: Blocks"))
-                .icon(() -> new ItemStack(JADE_BLOCK)).entries((displayContext, entries) -> {
+                .icon(() -> new ItemStack(AMETRINE_BLOCK)).entries((displayContext, entries) -> {
                     entries.add(RUBY_BLOCK);
                     entries.add(RUBY_ORE);
                     entries.add(RUBY_CRYSTAL_BLOCK);
@@ -263,6 +263,7 @@ public class RegisterMUItems {
 
                     entries.add(TOPAZ_BLOCK);
                     entries.add(TOPAZ_ORE);
+                    entries.add(DEEPSLATE_TOPAZ_ORE);
                     entries.add(TOPAZ_CRYSTAL_BLOCK);
                     entries.add(TOPAZ_CRYSTAL_CLUSTER);
 

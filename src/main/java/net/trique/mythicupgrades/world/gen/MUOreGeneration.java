@@ -9,21 +9,20 @@ import net.trique.mythicupgrades.world.MUPlacedFeatures;
 
 public class MUOreGeneration {
     public static void generateOres() {
-
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_GEODE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.PERIDOT_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.PERIDOT_CRYSTAL_GEODE_PLACED_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.ICY),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT),
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_ORE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.TOPAZ_CRYSTAL_GEODE_PLACED_KEY);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST),
                 GenerationStep.Feature.UNDERGROUND_ORES, MUPlacedFeatures.RUBY_ORE_PLACED_KEY);

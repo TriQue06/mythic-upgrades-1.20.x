@@ -13,6 +13,12 @@
     "mythicupgrades:peridot_crystal_block",
     "mythicupgrades:peridot_crystal_cluster",
 
+    "mythicupgrades:topaz_block",
+    "mythicupgrades:topaz_ore",
+    "mythicupgrades:deepslate_topaz_ore",
+    "mythicupgrades:topaz_crystal_block",
+    "mythicupgrades:topaz_crystal_cluster",
+
     "mythicupgrades:ruby_block",
     "mythicupgrades:ruby_ore",
     "mythicupgrades:ruby_crystal_block",
@@ -22,11 +28,6 @@
     "mythicupgrades:sapphire_ore",
     "mythicupgrades:sapphire_crystal_block",
     "mythicupgrades:sapphire_crystal_cluster",
-
-    "mythicupgrades:topaz_block",
-    "mythicupgrades:topaz_ore",
-    "mythicupgrades:topaz_crystal_block",
-    "mythicupgrades:topaz_crystal_cluster",
 
     "mythicupgrades:ametrine_block",
     "mythicupgrades:ametrine_ore",
