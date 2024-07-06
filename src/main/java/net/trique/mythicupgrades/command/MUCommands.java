@@ -23,29 +23,18 @@ public class MUCommands {
         dispatcher.register(literal(MOD_ID)
                 .requires(source -> source.hasPermissionLevel(4))
                 .then(literal("config").then(literal("restoreDefaults").executes(ctx -> {
-                    CONFIG.aquamarineConfig.ocean_shield_amplifier(2);
-                    CONFIG.aquamarineConfig.ocean_shield_duration(3f);
-                    CONFIG.citrineConfig.hindering_amplifier(0);
-                    CONFIG.citrineConfig.hindering_duration(5f);
-                    CONFIG.citrineConfig.weapons_weakness_amplifier(0);
-                    CONFIG.citrineConfig.weapons_weakness_duration(5f);
-                    CONFIG.citrineConfig.weapons_slowness_amplifier(0);
-                    CONFIG.citrineConfig.weapons_slowness_duration(5f);
-                    CONFIG.citrineConfig.weapons_hunger_amplifier(0);
-                    CONFIG.citrineConfig.weapons_hunger_duration(5f);
-                    CONFIG.peridotConfig.weapons_poison_duration(1.5f);
-                    CONFIG.peridotConfig.weapons_poison_amplifier(2);
+                    CONFIG.aquamarineConfig.ice_shield_amplifier(2);
+                    CONFIG.aquamarineConfig.ice_shield_duration(3f);
+                    CONFIG.peridotConfig.tools_poison_duration(1.5f);
+                    CONFIG.peridotConfig.tools_poison_amplifier(2);
                     CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
                     CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
-                    CONFIG.zirconConfig.weapons_freeze_duration(0.5f);
-                    CONFIG.zirconConfig.ice_shield_duration(1.0f);
-                    CONFIG.zirconConfig.ice_shield_amplifier(2);
-                    CONFIG.rubyConfig.tools_haste_amplifier(0);
-                    CONFIG.sapphireConfig.weapons_percentage_damage_percent(5);
-                    CONFIG.sapphireConfig.damage_deflection_amplifier(2);
                     CONFIG.topazConfig.item_mastery_amplifier(4);
-                    CONFIG.ametrineConfig.weapons_levitation_duration(0.75f);
-                    CONFIG.ametrineConfig.weapons_levitation_amplifier(4);
+                    CONFIG.rubyConfig.tools_haste_amplifier(0);
+                    CONFIG.sapphireConfig.tools_percentage_damage_percent(5);
+                    CONFIG.sapphireConfig.damage_deflection_amplifier(2);
+                    CONFIG.ametrineConfig.tools_levitation_duration(0.75f);
+                    CONFIG.ametrineConfig.tools_levitation_amplifier(4);
                     CONFIG.ametrineConfig.arcane_aura_amplifier(2);
                     CONFIG.ametrineConfig.arcane_aura_duration(0.5f);
                     CONFIG.jadeConfig.speed_amplifier(2);

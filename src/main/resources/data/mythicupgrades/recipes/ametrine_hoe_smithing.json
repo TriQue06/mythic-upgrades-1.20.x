@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:ametrine_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_hoe"
+  },
+  "result": {
+    "item": "mythicupgrades:ametrine_hoe"
+  },
+  "template": {
+    "item": "mythicupgrades:ametrine_upgrade_smithing_template"
+  }
+}

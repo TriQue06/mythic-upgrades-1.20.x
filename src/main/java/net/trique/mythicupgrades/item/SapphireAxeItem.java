@@ -22,7 +22,7 @@ public class SapphireAxeItem extends MythicEffectsAxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.weapons_percentage_damage_percent()).toArray()).formatted(color));
+        tooltip.add(Text.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.tools_percentage_damage_percent()).toArray()).formatted(color));
     }
 
     public void setPercent(int percent) {

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "mythicupgrades:block/small_topaz_crystal_bud"
-  }
-}
