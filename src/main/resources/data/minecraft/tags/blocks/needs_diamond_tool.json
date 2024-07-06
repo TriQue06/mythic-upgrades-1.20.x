@@ -5,17 +5,13 @@
     "mythicupgrades:aquamarine_ore",
     "mythicupgrades:deepslate_aquamarine_ore",
 
-    "mythicupgrades:citrine_block",
-    "mythicupgrades:citrine_ore",
-    "mythicupgrades:deepslate_citrine_ore",
-
     "mythicupgrades:peridot_block",
     "mythicupgrades:peridot_ore",
     "mythicupgrades:deepslate_peridot_ore",
 
-    "mythicupgrades:zircon_block",
-    "mythicupgrades:zircon_ore",
-    "mythicupgrades:deepslate_zircon_ore",
+    "mythicupgrades:topaz_block",
+    "mythicupgrades:topaz_ore",
+    "mythicupgrades:deepslate_topaz_ore",
 
     "mythicupgrades:ruby_block",
     "mythicupgrades:ruby_ore",
@@ -23,8 +19,6 @@
     "mythicupgrades:sapphire_block",
     "mythicupgrades:sapphire_ore",
 
-    "mythicupgrades:topaz_block",
-    "mythicupgrades:topaz_ore",
 
     "mythicupgrades:ametrine_block",
     "mythicupgrades:ametrine_ore",
