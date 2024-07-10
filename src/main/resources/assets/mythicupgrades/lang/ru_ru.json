@@ -12,22 +12,6 @@
   "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_amplifier": [{"text": "Сила эффекта \"Щит океана\" (броня)", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_duration": [{"text": "Длительность эффекта \"Щит океана\" (броня)", "color": "aqua"}],
 
-  "text.config.mythicupgrades-config.option.citrineConfig.hindering_amplifier": [{"text": "Сила эффекта \"Замешательство\" (броня)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.hindering_duration": [{"text": "Длительность эффекта \"Замешательство\" (броня)", "color": "yellow"}],
-
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_amplifier": [{"text": "Сила эффекта \"Слабость\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_weakness_duration": [{"text": "Длительность эффекта \"Слабость\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_amplifier": [{"text": "Сила эффекта \"Медлительность\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_slowness_duration": [{"text": "Длительность эффекта \"Медлительность\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_amplifier": [{"text": "Сила эффекта \"Голод\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.sword_hunger_duration": [{"text": "Длительность эффекта \"Голод\" (меч)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_amplifier": [{"text": "Сила эффекта \"Слабость\" (топор)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_weakness_duration": [{"text": "Длительность эффекта \"Слабость\" (топор)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_amplifier": [{"text": "Сила эффекта \"Медлительность\" (топор)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_slowness_duration": [{"text": "Длительность эффекта \"Медлительность\" (топор)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_amplifier": [{"text": "Сила эффекта \"Голод\" (топор)", "color": "yellow"}],
-  "text.config.mythicupgrades-config.option.citrineConfig.axe_hunger_duration": [{"text": "Длительность эффекта \"Голод\" (топор)", "color": "yellow"}],
-
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Сила эффекта \"Ядовитые шипы\" (броня) ", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Длительность эффекта \"Ядовитые шипы\" (броня)", "color": "green"}],
 
@@ -40,12 +24,6 @@
 
   "text.config.mythicupgrades-config.option.sapphireConfig.axe_percentage_damage_percent": [{"text": "Урон в % от максимального здоровья цели (топор)", "color": "blue"}],
   "text.config.mythicupgrades-config.option.sapphireConfig.sword_percentage_damage_percent": [{"text": "Урон в % от максимального здоровья цели (меч)", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.zirconConfig.ice_shield_duration": [{"text": "Длительность эффекта \"Ледяной щит\" (броня)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.zirconConfig.ice_shield_amplifier": [{"text": "Сила эффекта \"Ледяной щит\" (броня)", "color": "blue"}],
-
-  "text.config.mythicupgrades-config.option.zirconConfig.axe_freeze_duration": [{"text": "Длительность эффекта \"Заморозка\" (топор)", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.zirconConfig.sword_freeze_duration": [{"text": "Длительность эффекта \"Заморозка\" (меч)", "color": "blue"}],
 
   "text.config.mythicupgrades-config.option.rubyConfig.haste_pickaxe_amplifier": [{"text": "Сила эффекта \"Спешка\" (кирка)", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.haste_axe_amplifier": [{"text": "Сила эффекта \"Спешка\" (топор)", "color": "red"}],
@@ -76,33 +54,20 @@
   "item.mythicupgrades.aquamarine_leggings": "Аквамариновые поножи",
   "item.mythicupgrades.aquamarine_boots": "Аквамариновые ботинки",
 
+  "item.mythicupgrades.aquamarine_sword": "Аквамариновый меч",
+  "item.mythicupgrades.aquamarine_axe": "Аквамариновый топор",
+  "item.mythicupgrades.aquamarine_pickaxe": "Аквамариновая кирка",
+  "item.mythicupgrades.aquamarine_shovel": "Аквамариновая лопата",
+  "item.mythicupgrades.aquamarine_hoe": "Аквамариновая мотыга",
+
   "block.mythicupgrades.aquamarine_ore": "Аквамариновая руда",
   "block.mythicupgrades.deepslate_aquamarine_ore": "Аквамариноносный глубинный сланец",
   "block.mythicupgrades.aquamarine_block": "Блок аквамарина",
   "block.mythicupgrades.aquamarine_crystal_block": "Блок аквамариновых кристаллов",
   "block.mythicupgrades.aquamarine_crystal_cluster": "Аквамариновая друза",
 
-  "item.mythicupgrades.citrine": "Цитрин",
-  "item.mythicupgrades.citrine_ingot": "Цитриновый слиток",
-  "item.mythicupgrades.citrine_crystal_shard": "Осколок цитрина",
-  "item.mythicupgrades.citrine_potion": "Цитриновое зелье",
-
-  "item.mythicupgrades.citrine_helmet": "Цитриновый шлем",
-  "item.mythicupgrades.citrine_chestplate": "Цитриновый нагрудник",
-  "item.mythicupgrades.citrine_leggings": "Цитриновые поножи",
-  "item.mythicupgrades.citrine_boots": "Цитриновые ботинки",
-
-  "item.mythicupgrades.citrine_sword": "Цитриновый меч",
-  "item.mythicupgrades.citrine_axe": "Цитриновый топор",
-
-  "block.mythicupgrades.citrine_ore": "Цитриновая руда",
-  "block.mythicupgrades.deepslate_citrine_ore": "Цитриноносный глубинный сланец",
-  "block.mythicupgrades.citrine_block": "Блок цитрина",
-  "block.mythicupgrades.citrine_crystal_block": "Блок цитриновых кристаллов",
-  "block.mythicupgrades.citrine_crystal_cluster": "Цитриновая друза",
-
   "item.mythicupgrades.peridot": "Перидот",
-  "item.mythicupgrades.peridot_ingot": "Перидотовый слток",
+  "item.mythicupgrades.peridot_ingot": "Перидотовый слиток",
   "item.mythicupgrades.peridot_crystal_shard": "Осколок перидота",
   "item.mythicupgrades.peridot_potion": "Перидотовое зелье",
 
@@ -113,31 +78,15 @@
 
   "item.mythicupgrades.peridot_sword": "Перидотовый меч",
   "item.mythicupgrades.peridot_axe": "Перидотовый топор",
+  "item.mythicupgrades.peridot_pickaxe": "Перидотовая кирка",
+  "item.mythicupgrades.peridot_shovel": "Перидотовая лопата",
+  "item.mythicupgrades.peridot_hoe": "Перидотовая мотыга",
 
   "block.mythicupgrades.peridot_ore": "Перидотовая руда",
   "block.mythicupgrades.deepslate_peridot_ore": "Перидотоносный глубинный сланец",
   "block.mythicupgrades.peridot_block": "Блок перидота",
   "block.mythicupgrades.peridot_crystal_block": "Блок перидотовых кристаллов",
   "block.mythicupgrades.peridot_crystal_cluster": "Перидотовая друза",
-
-  "item.mythicupgrades.zircon": "Циркон",
-  "item.mythicupgrades.zircon_ingot": "Цирконовый слиток",
-  "item.mythicupgrades.zircon_crystal_shard": "Осколок циркона",
-  "item.mythicupgrades.zircon_potion": "Цирконовое зелье",
-
-  "item.mythicupgrades.zircon_helmet": "Цирконовый шлем",
-  "item.mythicupgrades.zircon_chestplate": "Цирконовый нагрудник",
-  "item.mythicupgrades.zircon_leggings": "Цирконовые поножи",
-  "item.mythicupgrades.zircon_boots": "Цирконовые ботинки",
-
-  "item.mythicupgrades.zircon_sword": "Цирконовый меч",
-  "item.mythicupgrades.zircon_axe": "Цирконовый топор",
-
-  "block.mythicupgrades.zircon_ore": "Цирконовая руда",
-  "block.mythicupgrades.deepslate_zircon_ore": "Циркононосный глубинный сланец",
-  "block.mythicupgrades.zircon_block": "Блок циркона",
-  "block.mythicupgrades.zircon_crystal_block": "Блок цирконовых кристаллов",
-  "block.mythicupgrades.zircon_crystal_cluster": "Цирконовая друза",
 
   "item.mythicupgrades.ruby": "Рубин",
   "item.mythicupgrades.ruby_ingot": "Рубиновый слиток",
@@ -148,6 +97,12 @@
   "item.mythicupgrades.ruby_pickaxe": "Рубиновая кирка",
   "item.mythicupgrades.ruby_shovel": "Рубиновая лопата",
   "item.mythicupgrades.ruby_hoe": "Рубиновая мотыга",
+  "item.mythicupgrades.ruby_sword": "Рубиновый меч",
+
+  "item.mythicupgrades.ruby_helmet": "Рубиновый шлем",
+  "item.mythicupgrades.ruby_chestplate": "Рубиновый нагрудник",
+  "item.mythicupgrades.ruby_leggings": "Рубиновые поножи",
+  "item.mythicupgrades.ruby_boots": "Рубиновые ботинки",
 
   "block.mythicupgrades.ruby_ore": "Рубиновая руда",
   "block.mythicupgrades.ruby_block": "Рубиновый блок",
@@ -166,6 +121,9 @@
 
   "item.mythicupgrades.sapphire_sword": "Сапфировый меч",
   "item.mythicupgrades.sapphire_axe": "Сапфировый топор",
+  "item.mythicupgrades.sapphire_pickaxe": "Сапфировая кирка",
+  "item.mythicupgrades.sapphire_shovel": "Сапфировая лопата",
+  "item.mythicupgrades.sapphire_hoe": "Сапфировая мотыга",
 
   "block.mythicupgrades.sapphire_ore": "Сапфировая руда",
   "block.mythicupgrades.deepslate_sapphire_ore": "Сапфироносный глубинный сланец",
@@ -190,6 +148,7 @@
   "item.mythicupgrades.topaz_hoe": "Топазовая мотыга",
 
   "block.mythicupgrades.topaz_ore": "Топазовая руда",
+  "block.mythicupgrades.deepslate_topaz_ore": "Топазоносный глубинный санец",
   "block.mythicupgrades.topaz_block": "Блок топаза",
   "block.mythicupgrades.topaz_crystal_block": "Блок топазовых кристаллов",
   "block.mythicupgrades.topaz_crystal_cluster": "Топазовая друза",
@@ -206,6 +165,9 @@
 
   "item.mythicupgrades.ametrine_sword": "Аметриновый меч",
   "item.mythicupgrades.ametrine_axe": "Аметриновый топор",
+  "item.mythicupgrades.ametrine_pickaxe": "Аметриновая кирка",
+  "item.mythicupgrades.ametrine_shovel": "Аметриновая лопата",
+  "item.mythicupgrades.ametrine_hoe": "Аметриновая мотыга",
 
   "block.mythicupgrades.ametrine_ore": "Аметриновая руда",
   "block.mythicupgrades.ametrine_block": "Блок аметрина",
@@ -224,6 +186,9 @@
 
   "item.mythicupgrades.jade_sword": "Нефритовый меч",
   "item.mythicupgrades.jade_axe": "Нефритовый топор",
+  "item.mythicupgrades.jade_pickaxe": "Нефритовая кирка",
+  "item.mythicupgrades.jade_shovel": "Нефритовая лопата",
+  "item.mythicupgrades.jade_hoe": "Нефритовая мотыга",
 
   "block.mythicupgrades.jade_ore": "Нефритовая руда",
   "block.mythicupgrades.jade_block": "Блок нефрита",
@@ -232,90 +197,49 @@
 
   "item.mythicupgrades.raw_necoium": "Сырой некопиум",
   "item.mythicupgrades.necoium_ingot": "Некопиумовый слиток",
-  "item.mythicupgrades.necoium_nugget": "Некопиумовый кусочек",
   "block.mythicupgrades.necoium_ore": "Некопиумовая руда",
   "block.mythicupgrades.necoium_block": "Блок некопиума",
   "block.mythicupgrades.raw_necoium_block": "Блок сырого некопиума",
 
   "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Кузнечный шаблон",
-  "item.mythicupgrades.citrine_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.peridot_upgrade_smithing_template": "Кузнечный шаблон",
-  "item.mythicupgrades.zircon_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.ruby_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.sapphire_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.topaz_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.ametrine_upgrade_smithing_template": "Кузнечный шаблон",
   "item.mythicupgrades.jade_upgrade_smithing_template": "Кузнечный шаблон",
 
-  "effect.mythicupgrades.ocean_shield": "Щит океана",
-  "effect.mythicupgrades.hindering": "Замешательство",
   "effect.mythicupgrades.poisonous_thorns": "Ядовитые шипы",
   "effect.mythicupgrades.ice_shield": "Ледяной щит",
   "effect.mythicupgrades.freeze": "Заморозка",
   "effect.mythicupgrades.damage_deflection": "Отражение урона",
   "effect.mythicupgrades.item_mastery": "Владение предметом",
   "effect.mythicupgrades.arcane_aura": "Аура Аркана",
+  "effect.mythicupgrades.miners_shield": "Щит шахтёра",
+  "effect.mythicupgrades.bouncer": "Попрыгун",
 
   "defaultArmorTooltip.description": "Одень полный набор брони чтобы получить усиления!",
+  
+  "aquamarine_armor.description": "Эффект набора: Ледяной щит %s",
+  "aquamarine_tool.description": "При ударе накладывает на цель эффект \"Заморозка\"",
 
-  "aquamarine_helmet.description": "Эффект набора: Щит океана %s, Грация дельфина и Подводное дыхание",
-  "aquamarine_chestplate.description": "Эффект набора: Щит океана %s, Грация дельфина и Подводное дыхание",
-  "aquamarine_leggings.description": "Эффект набора: Щит океана %s, Грация дельфина и Подводное дыхание",
-  "aquamarine_boots.description": "Эффект набора: Щит океана %s, Грация дельфина и Подводное дыхание",
-
-  "citrine_helmet.description": "Эффект набора: Замешательство %s",
-  "citrine_chestplate.description": "Эффект набораs: Замешательство %s",
-  "citrine_leggings.description": "Эффект набора: Замешательство %s",
-  "citrine_boots.description": "Эффект набора: Замешательство %s",
-  "citrine_axe.description": "При ударе ослабляет и замедляет врага",
-  "citrine_sword.description": "При ударе ослабляет и замедляет врага",
-
-  "peridot_helmet.description": "Эффект набора: Ядовитые шипы %s",
-  "peridot_chestplate.description": "Эффект набора: Ядовитые шипы %s",
-  "peridot_leggings.description": "Эффект набора: Ядовитые шипы %s",
-  "peridot_boots.description": "Эффект набора: Ядовитые шипы %s",
-  "peridot_axe.description": "При ударе накалдывает на цель эффект \"Отравление\"",
-  "peridot_sword.description": "При ударе накалдывает на цель эффект \"Отравление\"",
-
-  "zircon_helmet.description": "Эффект набора: Ледяной щит %s",
-  "zircon_chestplate.description": "Эффект набора: Ледяной щит %s",
-  "zircon_leggings.description": "Эффект набора: Ледяной щит %s",
-  "zircon_boots.description": "Эффект набора: Ледяной щит %s",
-  "zircon_axe.description": "При ударе накладывает на цель эффект \"Заморозка\"",
-  "zircon_sword.description": "При ударе накладывает на цель эффект \"Заморозка\"",
+  "peridot_armor.description": "Эффект набора: Ядовитые шипы %s",
+  "peridot_tool.description": "При ударе накалдывает на цель эффект \"Отравление\"",
 
   "ruby_tool.description": "Когда предмет в ведущей руке накладывает эффект \"Спешка\"",
+  "ruby_armor.description": "Эффект набора: Щит шахтёра %s",
 
-  "sapphire_helmet.description": "Эффект набора: Отражение урона %s",
-  "sapphire_chestplate.description": "Эффект набора: Отражение урона %s",
-  "sapphire_leggings.description": "Эффект набора: Отражение урона %s",
-  "sapphire_boots.description": "Эффект набора: Отражение урона %s",
-  "sapphire_axe.description": "Наносит цели дополнительный урон в размере %d%% максимального здоровья этой цели",
-  "sapphire_sword.description": "Наносит цели дополнительный урон в размере %d%% максимального здоровья этой цели",
+  "sapphire_armor.description": "Эффект набора: Отражение урона %s",
+  "sapphire_tool.description": "Наносит цели дополнительный урон в размере %d%% максимального здоровья этой цели",
 
-  "topaz_helmet.description": "Эффект набора: Владение предметом %s и Огнестойкость",
-  "topaz_chestplate.description": "Эффект набора: Владение предметом %s и Огнестойкость",
-  "topaz_leggings.description": "Эффект набора: Владение предметом %s и Огнестойкость",
-  "topaz_boots.description": "Эффект набора: Владение предметом %s и Огнестойкость",
-  "topaz_axe.description": "Прочность увеличена в 3 раз(а)",
-  "topaz_pickaxe.description": "Прочность увеличена в 3 раз(а)",
-  "topaz_shovel.description": "Прочность увеличена в 3 раз(а)",
-  "topaz_hoe.description": "Прочность увеличена в 3 раз(а)",
-  "topaz_sword.description": "Прочность увеличена в 3 раз(а)",
+  "topaz_armor.description": "Эффект набора: Владение предметом %s и Огнестойкость",
+  "topaz_tool.description": "Прочность увеличена в 3 раз(а)",
 
-  "ametrine_helmet.description": "Эффект набора: Аура Аркана %s",
-  "ametrine_chestplate.description": "Эффект набора: Аура Аркана %s",
-  "ametrine_leggings.description": "Эффект набора: Аура Аркана %s",
-  "ametrine_boots.description": "Эффект набора: Аура Аркана %s",
-  "ametrine_axe.description": "При ударе, накладывает на цель эффект \"Левитация\"",
-  "ametrine_sword.description": "При ударе, накладывает на цель эффект \"Левитация\"",
+  "ametrine_armor.description": "Эффект набора: Аура Аркана %s",
+  "ametrine_tool.description": "При ударе накладывает на цель эффект \"Левитация\"",
 
-  "jade_helmet.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_chestplate.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_leggings.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_boots.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_axe.description": "-",
-  "jade_sword.description": "-",
+  "jade_armor.description": "Эффект набора: Скорость %s и Прыгучесть %s",
+  "jade_tool.description": "Когда предмет в ведущей руке накладывает эффект \"Попрыгун\"",
 
   "death.attack.deflecting": "%s забыл что отраженный от %s урон может убить",
   "death.attack.deflecting.item": "%s забыл что отраженный от %s урон при помощи %s может убить",
@@ -328,23 +252,11 @@
   "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Аквамариновый слиток",
   "upgrade.minecraft.aquamarine_upgrade": "Аквамариновое улучшение",
 
-  "item.minecraft.smithing_template.citrine_upgrade.additions_slot_description": "Добавьте цитриновый слиток",
-  "item.minecraft.smithing_template.citrine_upgrade.applies_to": "Незеритовое снаряжение",
-  "item.minecraft.smithing_template.citrine_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
-  "item.minecraft.smithing_template.citrine_upgrade.ingredients": "Цитриновый слиток",
-  "upgrade.minecraft.citrine_upgrade": "Цитриновое улучшение",
-
   "item.minecraft.smithing_template.peridot_upgrade.additions_slot_description": "Добавьте перидотовый слиток",
   "item.minecraft.smithing_template.peridot_upgrade.applies_to": "Незеритовое снаряжение",
   "item.minecraft.smithing_template.peridot_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
   "item.minecraft.smithing_template.peridot_upgrade.ingredients": "Перидотовый слиток",
   "upgrade.minecraft.peridot_upgrade": "Перидотовое улучшение",
-
-  "item.minecraft.smithing_template.zircon_upgrade.additions_slot_description": "Добавьте цирконовый слиток",
-  "item.minecraft.smithing_template.zircon_upgrade.applies_to": "Незеритовое снаряжение",
-  "item.minecraft.smithing_template.zircon_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
-  "item.minecraft.smithing_template.zircon_upgrade.ingredients": "цирконовый слиток",
-  "upgrade.minecraft.zircon_upgrade": "цирконовое улучшение",
 
   "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Добавьте рубиновый слиток",
   "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Незеритовое снаряжение",
@@ -374,5 +286,5 @@
   "item.minecraft.smithing_template.jade_upgrade.applies_to": "Незеритовое снаряжение",
   "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Добавьте незеритовую броню или оружие",
   "item.minecraft.smithing_template.jade_upgrade.ingredients": "Нефритовый слиток",
-  "upgrade.minecraft.jade_upgrade": "Нефриовое улучшение"
+  "upgrade.minecraft.jade_upgrade": "Нефритовое улучшение"
 }
