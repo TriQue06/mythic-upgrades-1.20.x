@@ -9,9 +9,9 @@
   "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": "true"}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": "true"}],
 
-  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "Tools' Freeze Duration", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "Tools' Freeze Duration", "color": "aqua"}],
 
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous Thorns Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous Thorns' Poison Duration", "color": "green"}],
