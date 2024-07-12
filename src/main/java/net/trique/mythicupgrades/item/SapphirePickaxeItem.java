@@ -12,7 +12,7 @@ import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
-public class SapphirePickaxeItem extends MythicEffectsHoeItem {
+public class SapphirePickaxeItem extends MythicEffectsPickaxeItem {
     private int percent;
 
     public SapphirePickaxeItem(int attackDamage, int percent, float attackSpeed, Settings settings, ItemEffectsList effects, String tooltipKey, Formatting color) {
