@@ -153,44 +153,44 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(AMETRINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(JADE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AQUAMARINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(AQUAMARINE_HELMET);
+        itemModelGenerator.generateArmorTrims(AQUAMARINE_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(AQUAMARINE_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(AQUAMARINE_BOOTS);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) PERIDOT_BOOTS));
+        itemModelGenerator.generateArmorTrims(PERIDOT_HELMET);
+        itemModelGenerator.generateArmorTrims(PERIDOT_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(PERIDOT_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(PERIDOT_BOOTS);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) CITRINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(CITRINE_HELMET);
+        itemModelGenerator.generateArmorTrims(CITRINE_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(CITRINE_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(CITRINE_BOOTS);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) ZIRCON_BOOTS));
+        itemModelGenerator.generateArmorTrims(ZIRCON_HELMET);
+        itemModelGenerator.generateArmorTrims(ZIRCON_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(ZIRCON_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(ZIRCON_BOOTS);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) SAPPHIRE_BOOTS));
+        itemModelGenerator.generateArmorTrims(SAPPHIRE_HELMET);
+        itemModelGenerator.generateArmorTrims(SAPPHIRE_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(SAPPHIRE_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(SAPPHIRE_BOOTS);
 
-        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) TOPAZ_BOOTS));
+        itemModelGenerator.generateArmorTrims(TOPAZ_HELMET);
+        itemModelGenerator.generateArmorTrims(TOPAZ_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(TOPAZ_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(TOPAZ_BOOTS);
         
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) AMETRINE_BOOTS));
+        itemModelGenerator.generateArmorTrims(AMETRINE_HELMET);
+        itemModelGenerator.generateArmorTrims(AMETRINE_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(AMETRINE_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(AMETRINE_BOOTS);
         
-        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_HELMET));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_CHESTPLATE));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_LEGGINGS));
-        itemModelGenerator.generateArmorTrims(((ArmorItem) JADE_BOOTS));
+        itemModelGenerator.generateArmorTrims(JADE_HELMET);
+        itemModelGenerator.generateArmorTrims(JADE_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(JADE_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(JADE_BOOTS);
     }
 }
