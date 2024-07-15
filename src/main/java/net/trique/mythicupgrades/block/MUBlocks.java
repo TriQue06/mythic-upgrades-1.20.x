@@ -34,23 +34,6 @@ public class MUBlocks {
     public static final Block AQUAMARINE_CRYSTAL_CLUSTER = registerBlock("aquamarine_crystal_cluster",
             new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).forceSolidOn().noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5f).lightLevel(state -> 5).pushReaction(PushReaction.DESTROY)));
 
-
-    public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
-            new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(5.0f, 1200.0f).sound(SoundType.METAL)));
-
-    public static final Block CITRINE_ORE = registerBlock("citrine_ore",
-            new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformInt.of(16, 32)));
-
-    public static final Block DEEPSLATE_CITRINE_ORE = registerBlock("deepslate_citrine_ore",
-            new DropExperienceBlock(BlockBehaviour.Properties.copy(CITRINE_ORE).mapColor(MapColor.DEEPSLATE).strength(4.5f, 1200.0f).sound(SoundType.DEEPSLATE), UniformInt.of(16, 32)));
-
-    public static final Block CITRINE_CRYSTAL_BLOCK = registerBlock("citrine_crystal_block",
-            new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(3.0f, 1200.0f)));
-
-    public static final Block CITRINE_CRYSTAL_CLUSTER = registerBlock("citrine_crystal_cluster",
-            new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).forceSolidOn().noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5f).lightLevel(state -> 5).pushReaction(PushReaction.DESTROY)));
-
-
     public static final Block PERIDOT_BLOCK = registerBlock("peridot_block",
             new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(5.0f, 1200.0f).sound(SoundType.METAL)));
 
@@ -65,22 +48,6 @@ public class MUBlocks {
 
     public static final Block PERIDOT_CRYSTAL_CLUSTER = registerBlock("peridot_crystal_cluster",
             new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).forceSolidOn().noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5f).lightLevel(state -> 5).pushReaction(PushReaction.DESTROY)));
-
-
-    public static final Block ZIRCON_BLOCK = registerBlock("zircon_block",
-            new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_BLUE).strength(5.0f, 1200.0f).sound(SoundType.METAL)));
-
-    public static final Block ZIRCON_ORE = registerBlock("zircon_ore",
-            new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).strength(3.0f, 1200.0f), UniformInt.of(16, 32)));
-
-    public static final Block DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
-            new DropExperienceBlock(BlockBehaviour.Properties.copy(ZIRCON_ORE).mapColor(MapColor.DEEPSLATE).strength(4.5f, 1200.0f).sound(SoundType.DEEPSLATE), UniformInt.of(16, 32)));
-
-    public static final Block ZIRCON_CRYSTAL_BLOCK = registerBlock("zircon_crystal_block",
-            new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.COLOR_BLUE).sound(SoundType.AMETHYST).strength(3.0f, 1200.0f)));
-
-    public static final Block ZIRCON_CRYSTAL_CLUSTER = registerBlock("zircon_crystal_cluster",
-            new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).forceSolidOn().noOcclusion().randomTicks().sound(SoundType.AMETHYST_CLUSTER).strength(1.5f).lightLevel(state -> 5).pushReaction(PushReaction.DESTROY)));
 
 
     public static final Block RUBY_BLOCK = registerBlock("ruby_block",

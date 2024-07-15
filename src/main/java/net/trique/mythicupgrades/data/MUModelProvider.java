@@ -23,11 +23,6 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.family(AQUAMARINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.createAmethystCluster(AQUAMARINE_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.family(CITRINE_BLOCK);
-        blockStateModelGenerator.family(CITRINE_ORE);
-        blockStateModelGenerator.family(DEEPSLATE_CITRINE_ORE);
-        blockStateModelGenerator.family(CITRINE_CRYSTAL_BLOCK);
-        blockStateModelGenerator.createAmethystCluster(CITRINE_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.family(PERIDOT_BLOCK);
         blockStateModelGenerator.family(PERIDOT_ORE);
@@ -35,11 +30,6 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.family(PERIDOT_CRYSTAL_BLOCK);
         blockStateModelGenerator.createAmethystCluster(PERIDOT_CRYSTAL_CLUSTER);
 
-        blockStateModelGenerator.family(ZIRCON_BLOCK);
-        blockStateModelGenerator.family(ZIRCON_ORE);
-        blockStateModelGenerator.family(DEEPSLATE_ZIRCON_ORE);
-        blockStateModelGenerator.family(ZIRCON_CRYSTAL_BLOCK);
-        blockStateModelGenerator.createAmethystCluster(ZIRCON_CRYSTAL_CLUSTER);
 
         blockStateModelGenerator.family(RUBY_BLOCK);
         blockStateModelGenerator.family(RUBY_ORE);
@@ -78,13 +68,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(AQUAMARINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AQUAMARINE_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.generateFlatItem(CITRINE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE_INGOT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE_POTION, ModelTemplates.FLAT_ITEM);
-
         itemModelGenerator.generateFlatItem(PERIDOT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT, ModelTemplates.FLAT_ITEM);
@@ -92,12 +75,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(PERIDOT_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT_POTION, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.generateFlatItem(ZIRCON_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON_INGOT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON_POTION, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(RUBY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);

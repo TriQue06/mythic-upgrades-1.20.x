@@ -17,20 +17,11 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         add(AQUAMARINE_ORE, createOreDrop(AQUAMARINE_ORE, AQUAMARINE));
         add(DEEPSLATE_AQUAMARINE_ORE, createOreDrop(DEEPSLATE_AQUAMARINE_ORE, AQUAMARINE));
 
-        dropSelf(CITRINE_BLOCK);
-        dropSelf(CITRINE_CRYSTAL_BLOCK);
-        add(CITRINE_ORE, createOreDrop(CITRINE_ORE, CITRINE));
-        add(DEEPSLATE_CITRINE_ORE, createOreDrop(DEEPSLATE_CITRINE_ORE, CITRINE));
-
         dropSelf(PERIDOT_BLOCK);
         dropSelf(PERIDOT_CRYSTAL_BLOCK);
         add(PERIDOT_ORE, createOreDrop(PERIDOT_ORE, PERIDOT));
         add(DEEPSLATE_PERIDOT_ORE, createOreDrop(DEEPSLATE_PERIDOT_ORE, PERIDOT));
 
-        dropSelf(ZIRCON_BLOCK);
-        dropSelf(ZIRCON_CRYSTAL_BLOCK);
-        add(ZIRCON_ORE, createOreDrop(ZIRCON_ORE, ZIRCON));
-        add(DEEPSLATE_ZIRCON_ORE, createOreDrop(DEEPSLATE_ZIRCON_ORE, ZIRCON));
 
         dropSelf(RUBY_BLOCK);
         dropSelf(RUBY_CRYSTAL_BLOCK);

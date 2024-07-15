@@ -13,7 +13,7 @@ public class MythicEffectVirtualItemHandler {
     }
 
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
-        CommonFunctions.addStatusEffects(target, allEffects.getForOthers(), attacker);
+        CommonFunctions.addStatusEffects(target, getOnHitEffects(), attacker);
     }
     public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
         return allEffects.getForMainHand();
