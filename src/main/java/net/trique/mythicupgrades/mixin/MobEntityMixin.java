@@ -6,6 +6,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.boss.EnderDragonPart;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -52,9 +54,13 @@ public abstract class MobEntityMixin extends LivingEntity {
                         SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
                         percent = axeItem.getPercent();
                     }
-                    DamageSource source = MythicUpgradesDamageTypes.create(entity.level(), MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE,
-                            this);
-                    entity.hurt(source, (percent / 100f) * entity.getMaxHealth());
+                    DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
+                            MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+                    float dmg = (percent / 100f);
+                    if (entity.invulnerableTime <= 10) {
+                        entity.hurt(source, dmg * entity.getMaxHealth());
+                        entity.invulnerableTime = 0;
+                    }
                 }
             }
         }
