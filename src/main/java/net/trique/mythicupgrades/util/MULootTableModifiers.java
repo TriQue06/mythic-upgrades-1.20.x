@@ -46,7 +46,7 @@ public class MULootTableModifiers {
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 
-            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
+            if (UNDERWATER_RUIN_BIG_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -55,7 +55,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
+            if (UNDERWATER_RUIN_SMALL_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -64,7 +64,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(UNDERWATER_RUIN_BIG_ID.equals(id)) {
+            if (UNDERWATER_RUIN_BIG_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -73,7 +73,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(UNDERWATER_RUIN_SMALL_ID.equals(id)) {
+            if (UNDERWATER_RUIN_SMALL_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -82,7 +82,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(DESERT_PYRAMID_ID.equals(id)) {
+            if (DESERT_PYRAMID_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -91,7 +91,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(DESERT_PYRAMID_ID.equals(id)) {
+            if (DESERT_PYRAMID_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -100,7 +100,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(JUNGLE_TEMPLE_ID.equals(id)) {
+            if (JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -109,7 +109,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(JUNGLE_TEMPLE_ID.equals(id)) {
+            if (JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -118,7 +118,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(IGLOO_CHEST_ID.equals(id)) {
+            if (IGLOO_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -127,7 +127,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(IGLOO_CHEST_ID.equals(id)) {
+            if (IGLOO_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -136,7 +136,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_BRIDGE_ID.equals(id)) {
+            if (BASTION_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -145,7 +145,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_BRIDGE_ID.equals(id)) {
+            if (BASTION_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -154,7 +154,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_HOGLIN_STABLE_ID.equals(id)) {
+            if (BASTION_HOGLIN_STABLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -163,7 +163,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_HOGLIN_STABLE_ID.equals(id)) {
+            if (BASTION_HOGLIN_STABLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -172,7 +172,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_OTHER_ID.equals(id)) {
+            if (BASTION_OTHER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -181,7 +181,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_OTHER_ID.equals(id)) {
+            if (BASTION_OTHER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -190,7 +190,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_TREASURE_ID.equals(id)) {
+            if (BASTION_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.5f))
@@ -199,7 +199,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_TREASURE_ID.equals(id)) {
+            if (BASTION_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(1.0f))
@@ -208,7 +208,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(BASTION_BRIDGE_ID.equals(id)) {
+            if (BASTION_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -217,7 +217,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(NETHER_BRIDGE_ID.equals(id)) {
+            if (NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -226,7 +226,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(NETHER_BRIDGE_ID.equals(id)) {
+            if (NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -235,7 +235,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(NETHER_BRIDGE_ID.equals(id)) {
+            if (NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -244,7 +244,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(NETHER_BRIDGE_ID.equals(id)) {
+            if (NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -253,7 +253,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(END_CITY_TREASURE_ID.equals(id)) {
+            if (END_CITY_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -262,7 +262,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(END_CITY_TREASURE_ID.equals(id)) {
+            if (END_CITY_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
@@ -271,7 +271,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(END_CITY_TREASURE_ID.equals(id)) {
+            if (END_CITY_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -280,7 +280,7 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(END_CITY_TREASURE_ID.equals(id)) {
+            if (END_CITY_TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
