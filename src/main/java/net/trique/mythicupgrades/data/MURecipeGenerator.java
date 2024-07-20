@@ -25,21 +25,11 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         oreBlasting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
                 3.0f, 100, "aquamarine");
 
-        oreSmelting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
-                3.0f, 200, "citrine");
-        oreBlasting(exporter, List.of(MUBlocks.CITRINE_ORE, MUBlocks.DEEPSLATE_CITRINE_ORE), RecipeCategory.MISC, CITRINE,
-                3.0f, 100, "citrine");
-        
         oreSmelting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
                 3.0f, 200, "peridot");
         oreBlasting(exporter, List.of(MUBlocks.PERIDOT_ORE, MUBlocks.DEEPSLATE_PERIDOT_ORE), RecipeCategory.MISC, PERIDOT,
                 3.0f, 100, "peridot");
 
-        oreSmelting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
-                3.0f, 200, "zircon");
-        oreBlasting(exporter, List.of(MUBlocks.ZIRCON_ORE), RecipeCategory.MISC, ZIRCON,
-                3.0f, 100, "zircon");
-        
         oreSmelting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
                 3.0f, 200, "ruby");
         oreBlasting(exporter, List.of(MUBlocks.RUBY_ORE), RecipeCategory.MISC, RUBY,
@@ -78,14 +68,9 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         nineBlockStorageRecipes(exporter, RecipeCategory.MISC, AQUAMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.AQUAMARINE_BLOCK,
                 getId("aquamarine_block"), "aquamarine_block", getId("aquamarine_ingot_from_aquamarine_block"), "aquamarine_ingot");
 
-        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, CITRINE_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.CITRINE_BLOCK,
-                getId("citrine_block"), "citrine_block", getId("citrine_ingot_from_citrine_block"), "citrine_ingot");
-        
+
         nineBlockStorageRecipes(exporter, RecipeCategory.MISC, PERIDOT_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.PERIDOT_BLOCK,
                 getId("peridot_block"), "peridot_block", getId("peridot_ingot_from_peridot_block"), "peridot_ingot");
-
-        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, ZIRCON_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.ZIRCON_BLOCK,
-                getId("zircon_block"), "zircon_block", getId("zircon_ingot_from_zircon_block"), "zircon_ingot");
 
         nineBlockStorageRecipes(exporter, RecipeCategory.MISC, RUBY_INGOT, RecipeCategory.BUILDING_BLOCKS, MUBlocks.RUBY_BLOCK,
                 getId("ruby_block"), "ruby_block", getId("ruby_ingot_from_ruby_block"), "ruby_ingot");
@@ -111,18 +96,10 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> AQUAMARINE_INGOT, List.of(AQUAMARINE, AQUAMARINE, AQUAMARINE, AQUAMARINE,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
                 List.of(AQUAMARINE),"aquamarine_ingot", 1);
-
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> CITRINE_INGOT, List.of(CITRINE, CITRINE, CITRINE, CITRINE,
-                        MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
-                List.of(CITRINE),"citrine_ingot", 1);
         
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> PERIDOT_INGOT, List.of(PERIDOT, PERIDOT, PERIDOT, PERIDOT,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
                 List.of(PERIDOT), "peridot_ingot", 1);
-        
-        offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> ZIRCON_INGOT, List.of(ZIRCON, ZIRCON, ZIRCON, ZIRCON,
-                        MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
-                List.of(ZIRCON),"zircon_ingot", 1);
         
         offerShapelessRecipeWithMultipleInputsAndKeyItems(exporter, ()-> RUBY_INGOT, List.of(RUBY, RUBY, RUBY, RUBY,
                         MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT, MUItems.NECOIUM_INGOT),
@@ -146,12 +123,8 @@ public class MURecipeGenerator extends FabricRecipeProvider {
 
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> AQUAMARINE, ()-> Items.STONE_BRICKS);
-        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                ()-> CITRINE, ()-> Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> PERIDOT_UPGRADE_SMITHING_TEMPLATE,
                 ()-> PERIDOT, ()-> Items.MOSSY_COBBLESTONE);
-        offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                ()-> ZIRCON, ()-> Items.BLUE_ICE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> RUBY_UPGRADE_SMITHING_TEMPLATE,
                 ()-> RUBY, ()-> Items.BLACKSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> SAPPHIRE_UPGRADE_SMITHING_TEMPLATE,
@@ -171,20 +144,7 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 Items.NETHERITE_LEGGINGS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_LEGGINGS);
         offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_BOOTS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_BOOTS);
-        
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_AXE, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_AXE);
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_SWORD, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_SWORD);
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_HELMET, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_HELMET);
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_CHESTPLATE, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_CHESTPLATE);
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_LEGGINGS, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_LEGGINGS);
-        offerCustomUpgradeRecipe(exporter, CITRINE_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_BOOTS, CITRINE_INGOT, RecipeCategory.COMBAT, CITRINE_BOOTS);
-        
+
         offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_AXE, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_AXE);
         offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
@@ -197,19 +157,6 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 Items.NETHERITE_LEGGINGS, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_LEGGINGS);
         offerCustomUpgradeRecipe(exporter, PERIDOT_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_BOOTS, PERIDOT_INGOT, RecipeCategory.COMBAT, PERIDOT_BOOTS);
-
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_AXE, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_AXE);
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_SWORD, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_SWORD);
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_HELMET, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_HELMET);
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_CHESTPLATE, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_CHESTPLATE);
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_LEGGINGS, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_LEGGINGS);
-        offerCustomUpgradeRecipe(exporter, ZIRCON_UPGRADE_SMITHING_TEMPLATE,
-                Items.NETHERITE_BOOTS, ZIRCON_INGOT, RecipeCategory.COMBAT, ZIRCON_BOOTS);
 
         offerCustomUpgradeRecipe(exporter, RUBY_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_AXE, RUBY_INGOT, RecipeCategory.TOOLS, RUBY_AXE);

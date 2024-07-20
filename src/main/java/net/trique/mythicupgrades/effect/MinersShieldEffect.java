@@ -1,7 +1,5 @@
 package net.trique.mythicupgrades.effect;
 
-import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
-
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -10,8 +8,11 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-public class OceanShieldEffect extends MobEffect {
-    public OceanShieldEffect(MobEffectCategory statusEffectCategory, int color) {
+
+import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
+
+public class MinersShieldEffect extends MobEffect {
+    public MinersShieldEffect(MobEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
 
@@ -22,9 +23,9 @@ public class OceanShieldEffect extends MobEffect {
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.hurt(livingEntity.level().damageSources().thorns(livingEntity), amplifier);
-                    entity.playSound(SoundEvents.ELDER_GUARDIAN_HURT, 1.0f, livingEntity.getVoicePitch());
+                    entity.playSound(SoundEvents.PIGLIN_BRUTE_CONVERTED_TO_ZOMBIFIED, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN,
-                            (int)(CONFIG.aquamarineConfig.ocean_shield_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.rubyConfig.miners_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

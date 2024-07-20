@@ -12,8 +12,7 @@ public class RegisterMUEffects {
         Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(MythicUpgrades.MOD_ID, name), effect);
     }
     public static void registerEffects() {
-        registerEffect(MUEffects.OCEAN_SHIELD, "ocean_shield");
-        registerEffect(MUEffects.HINDERING, "hindering");
+        registerEffect(MUEffects.MINERS_SHIELD, "miners_shield");
         registerEffect(MUEffects.POISONOUS_THORNS, "poisonous_thorns");
         registerEffect(MUEffects.ICE_SHIELD, "ice_shield");
         registerEffect(MUEffects.FREEZE, "freeze");

@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import net.minecraft.world.entity.player.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,10 +21,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.*;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -79,15 +76,15 @@ public abstract class LivingEntityMixin extends Entity {
         ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
             if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
+                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentEffectsForSelf());
             }
             if (CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial()) &&
-                    CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs())) {
-                CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs());
+                    CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getEquipmentEffectsForSelf())) {
+                CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentEffectsForSelf());
             }
             lastWorn = item;
         } else if (lastWorn != null) {
-            CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
+            CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentEffectsForSelf());
             lastWorn = null;
         }
     }
@@ -101,7 +98,7 @@ public abstract class LivingEntityMixin extends Entity {
                 ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
                 if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
                         CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                    CommonFunctions.addStatusEffects(entity, item.getEquipmentDebuffs(), (LivingEntity) (Object) this);
+                    CommonFunctions.addStatusEffects(entity, item.getEquipmentEffectsForEnemies(), (LivingEntity) (Object) this);
                 }
             }
         }

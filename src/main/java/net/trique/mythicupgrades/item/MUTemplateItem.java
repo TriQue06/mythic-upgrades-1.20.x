@@ -36,11 +36,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Component TOPAZ_UPGRADE_INGREDIENTS_TEXT;
     private static final Component TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Component TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
-    private static final Component CITRINE_UPGRADE_TEXT;
-    private static final Component CITRINE_UPGRADE_APPLIES_TO_TEXT;
-    private static final Component CITRINE_UPGRADE_INGREDIENTS_TEXT;
-    private static final Component CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
-    private static final Component CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
     private static final Component AQUAMARINE_UPGRADE_TEXT;
     private static final Component AQUAMARINE_UPGRADE_APPLIES_TO_TEXT;
     private static final Component AQUAMARINE_UPGRADE_INGREDIENTS_TEXT;
@@ -56,11 +51,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
     private static final Component RUBY_UPGRADE_INGREDIENTS_TEXT;
     private static final Component RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
     private static final Component RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
-    private static final Component ZIRCON_UPGRADE_TEXT;
-    private static final Component ZIRCON_UPGRADE_APPLIES_TO_TEXT;
-    private static final Component ZIRCON_UPGRADE_INGREDIENTS_TEXT;
-    private static final Component ZIRCON_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT;
-    private static final Component ZIRCON_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT;
     private static final Component AMETRINE_UPGRADE_TEXT;
     private static final Component AMETRINE_UPGRADE_APPLIES_TO_TEXT;
     private static final Component AMETRINE_UPGRADE_INGREDIENTS_TEXT;
@@ -102,10 +92,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
 
     private static List<ResourceLocation> getTopazUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
-    }
-
-    public static MUTemplateItem createCitrineUpgrade() {
-        return new MUTemplateItem(CITRINE_UPGRADE_APPLIES_TO_TEXT, CITRINE_UPGRADE_INGREDIENTS_TEXT, CITRINE_UPGRADE_TEXT, CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getCitrineUpgradeEmptyBaseSlotTextures(), getCitrineUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<ResourceLocation> getCitrineUpgradeEmptyBaseSlotTextures() {
@@ -150,10 +136,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
 
     private static List<ResourceLocation> getRubyUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
-    }
-
-    public static MUTemplateItem createZirconUpgrade() {
-        return new MUTemplateItem(ZIRCON_UPGRADE_APPLIES_TO_TEXT, ZIRCON_UPGRADE_INGREDIENTS_TEXT, ZIRCON_UPGRADE_TEXT, ZIRCON_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, ZIRCON_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getZirconUpgradeEmptyBaseSlotTextures(), getZirconUpgradeEmptyAdditionsSlotTextures());
     }
 
     private static List<ResourceLocation> getZirconUpgradeEmptyBaseSlotTextures() {
@@ -235,12 +217,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
         TOPAZ_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.topaz_upgrade.base_slot_description")));
         TOPAZ_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.topaz_upgrade.additions_slot_description")));
 
-        CITRINE_UPGRADE_TEXT = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("citrine_upgrade"))).withStyle(TITLE_FORMATTING);
-        CITRINE_UPGRADE_APPLIES_TO_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.citrine_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMATTING);
-        CITRINE_UPGRADE_INGREDIENTS_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.citrine_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMATTING);
-        CITRINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.citrine_upgrade.base_slot_description")));
-        CITRINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.citrine_upgrade.additions_slot_description")));
-
         AQUAMARINE_UPGRADE_TEXT = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("aquamarine_upgrade"))).withStyle(TITLE_FORMATTING);
         AQUAMARINE_UPGRADE_APPLIES_TO_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.aquamarine_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMATTING);
         AQUAMARINE_UPGRADE_INGREDIENTS_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.aquamarine_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMATTING);
@@ -258,12 +234,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
         RUBY_UPGRADE_INGREDIENTS_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.ruby_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMATTING);
         RUBY_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.ruby_upgrade.base_slot_description")));
         RUBY_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.ruby_upgrade.additions_slot_description")));
-
-        ZIRCON_UPGRADE_TEXT = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("zircon_upgrade"))).withStyle(TITLE_FORMATTING);
-        ZIRCON_UPGRADE_APPLIES_TO_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.zircon_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMATTING);
-        ZIRCON_UPGRADE_INGREDIENTS_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.zircon_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMATTING);
-        ZIRCON_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.zircon_upgrade.base_slot_description")));
-        ZIRCON_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.zircon_upgrade.additions_slot_description")));
 
         AMETRINE_UPGRADE_TEXT = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("ametrine_upgrade"))).withStyle(TITLE_FORMATTING);
         AMETRINE_UPGRADE_APPLIES_TO_TEXT = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation("smithing_template.ametrine_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMATTING);

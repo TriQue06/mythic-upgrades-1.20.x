@@ -22,8 +22,8 @@ public class ItemEffectsList {
     public HashMap<MobEffect, EffectMeta> getForMainHand() {
         return allEffects.get(Target.IN_MAIN_HAND);
     }
-    public HashMap<MobEffect, EffectMeta> getForEquipmentBuffs() {return allEffects.get(Target.ON_EQUIPMENT_FOR_SELF);}
-    public HashMap<MobEffect, EffectMeta> getForEquipmentDebuffs() {return allEffects.get(Target.ON_EQUIPMENT_FOR_ENEMY);}
+    public HashMap<MobEffect, EffectMeta> getForEquipmentForSelf() {return allEffects.get(Target.ON_EQUIPMENT_FOR_SELF);}
+    public HashMap<MobEffect, EffectMeta> getForEquipmentForEnemy() {return allEffects.get(Target.ON_EQUIPMENT_FOR_ENEMY);}
     public HashMap<MobEffect, EffectMeta> getOnHitForEnemy() {
         return allEffects.get(Target.ON_HIT_FOR_ENEMY);
     }

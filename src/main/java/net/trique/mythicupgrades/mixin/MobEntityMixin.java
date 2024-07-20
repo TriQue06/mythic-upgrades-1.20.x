@@ -6,14 +6,14 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.boss.EnderDragonPart;
-import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.CommonFunctions;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,14 +27,14 @@ public abstract class MobEntityMixin extends LivingEntity {
     }
 
     @Shadow
-    public abstract ItemStack getItemBySlot(EquipmentSlot slot);
+    public abstract @NotNull ItemStack getItemBySlot(EquipmentSlot slot);
 
     @Inject(method = "doHurtTarget", at = @At(value = "RETURN"))
     private void handleEffects(Entity target, CallbackInfoReturnable<Boolean> cir) {
         boolean wasAttacked = cir.getReturnValue();
         if (wasAttacked) {
             if (target instanceof LivingEntity entity && this.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item) {
-                CommonFunctions.addStatusEffects(entity, item.getOnHitEffects(), this);
+                CommonFunctions.addStatusEffects(entity, item.getOnHitEffectsForEnemy(), this);
             }
         }
     }
@@ -45,15 +45,9 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (wasAttacked) {
             if (target instanceof LivingEntity entity) {
                 Item weapon = this.getItemBySlot(EquipmentSlot.MAINHAND).getItem();
-                boolean sapphire_weapon = (weapon instanceof SapphireAxeItem || weapon instanceof SapphireSwordItem);
+                boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
                 if (sapphire_weapon) {
-                    int percent;
-                    if (weapon instanceof SapphireSwordItem swordItem) {
-                        percent = swordItem.getPercent();
-                    } else {
-                        SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
-                        percent = axeItem.getPercent();
-                    }
+                    int percent = ((VirtualSapphireTool) weapon).getPercent();
                     DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
                             MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
                     float dmg = (percent / 100f);

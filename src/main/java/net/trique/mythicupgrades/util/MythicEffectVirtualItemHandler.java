@@ -13,19 +13,23 @@ public class MythicEffectVirtualItemHandler {
     }
 
     public void handlePostHit(LivingEntity target, LivingEntity attacker) {
-        CommonFunctions.addStatusEffects(target, getOnHitEffects(), attacker);
+        CommonFunctions.addStatusEffects(target, getOnHitEffectsForEnemy(), attacker);
+        CommonFunctions.addStatusEffects(attacker, getOnHitEffectsForSelf(), attacker);
     }
     public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
         return allEffects.getForMainHand();
     }
-    public HashMap<MobEffect, EffectMeta> getEquipmentBuffs() {
-        return allEffects.getForEquipmentBuffs();
+    public HashMap<MobEffect, EffectMeta> getEquipmentEffectsForSelf() {
+        return allEffects.getForEquipmentForSelf();
     }
-    public HashMap<MobEffect, EffectMeta> getEquipmentDebuffs() {
-        return allEffects.getForEquipmentDebuffs();
+    public HashMap<MobEffect, EffectMeta> getEquipmentEffectsForEnemy() {
+        return allEffects.getForEquipmentForEnemy();
     }
-    public HashMap<MobEffect, EffectMeta> getOnHitEffects() {
-        return allEffects.getForOthers();
+    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForEnemy() {
+        return allEffects.getOnHitForEnemy();
+    }
+    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForSelf() {
+        return allEffects.getOnHitForSelf();
     }
 
     public void setNewEffects(ItemEffectsList list) {

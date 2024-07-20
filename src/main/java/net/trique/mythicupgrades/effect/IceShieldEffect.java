@@ -23,7 +23,7 @@ public class IceShieldEffect extends MobEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.playSound(SoundEvents.PLAYER_HURT_FREEZE, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,
-                            (int)(CONFIG.zirconConfig.ice_shield_duration() * 20), amplifier), livingEntity);
+                            (int)(CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

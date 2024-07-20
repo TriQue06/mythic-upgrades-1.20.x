@@ -12,10 +12,10 @@ import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
-public class SapphireAxeItem extends MythicEffectsAxeItem implements VirtualSapphireTool {
+public class SapphireShovelItem extends MythicEffectsShovelItem implements VirtualSapphireTool {
     private int percent;
 
-    public SapphireAxeItem(int attackDamage, int percent,float attackSpeed, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
+    public SapphireShovelItem(int attackDamage, int percent, float attackSpeed, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
         super(MUToolMaterials.SAPPHIRE, attackDamage, attackSpeed, settings, effects, tooltipKey, color);
         this.percent = percent;
     }

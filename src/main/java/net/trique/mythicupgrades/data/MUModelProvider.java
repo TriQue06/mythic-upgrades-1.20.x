@@ -118,12 +118,9 @@ public class MUModelProvider extends FabricModelProvider {
         
         itemModelGenerator.generateFlatItem(RAW_NECOIUM, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(NECOIUM_INGOT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(NECOIUM_NUGGET, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(CITRINE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ZIRCON_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SAPPHIRE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TOPAZ_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
@@ -139,16 +136,6 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateArmorTrims(PERIDOT_CHESTPLATE);
         itemModelGenerator.generateArmorTrims(PERIDOT_LEGGINGS);
         itemModelGenerator.generateArmorTrims(PERIDOT_BOOTS);
-
-        itemModelGenerator.generateArmorTrims(CITRINE_HELMET);
-        itemModelGenerator.generateArmorTrims(CITRINE_CHESTPLATE);
-        itemModelGenerator.generateArmorTrims(CITRINE_LEGGINGS);
-        itemModelGenerator.generateArmorTrims(CITRINE_BOOTS);
-
-        itemModelGenerator.generateArmorTrims(ZIRCON_HELMET);
-        itemModelGenerator.generateArmorTrims(ZIRCON_CHESTPLATE);
-        itemModelGenerator.generateArmorTrims(ZIRCON_LEGGINGS);
-        itemModelGenerator.generateArmorTrims(ZIRCON_BOOTS);
 
         itemModelGenerator.generateArmorTrims(SAPPHIRE_HELMET);
         itemModelGenerator.generateArmorTrims(SAPPHIRE_CHESTPLATE);

@@ -21,6 +21,7 @@ import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
@@ -36,14 +37,14 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
 
     @Shadow
-    public abstract ItemStack getItemBySlot(EquipmentSlot slot);
+    public abstract @NotNull ItemStack getItemBySlot(EquipmentSlot slot);
 
 
     @Inject(method = "attack", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
     private void applyEffectsOnSweeping(Entity target, CallbackInfo ci, @Local LivingEntity livingEntity) {
         if (this.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof MythicEffectsSwordItem sword) {
-            for (MobEffect effect : sword.getOnHitEffects().keySet()) {
-                EffectMeta meta = sword.getOnHitEffects().get(effect);
+            for (MobEffect effect : sword.getOnHitEffectsForEnemy().keySet()) {
+                EffectMeta meta = sword.getOnHitEffectsForEnemy().get(effect);
                 int duration = meta.getDuration();
                 int amplifier = meta.getAmplifier();
                 boolean ambient = meta.isAmbient();
@@ -58,15 +59,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
     private void applySapphirePercentageDamage(Entity entity, CallbackInfo ci, @Local(ordinal = 2) float h) {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
-        boolean sapphire_weapon = (weapon instanceof SapphireAxeItem || weapon instanceof SapphireSwordItem);
+        boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent;
-            if (weapon instanceof SapphireSwordItem swordItem) {
-                percent = swordItem.getPercent();
-            } else {
-                SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
-                percent = axeItem.getPercent();
-            }
+            int percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
                     MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
             float dmg = (percent / 100f) * h * h;
@@ -88,15 +83,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     private void applySapphirePercentageDamageOnSweeping(Entity entity, CallbackInfo ci,
                                                          @Local(ordinal = 0) LivingEntity livingEntity) {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
-        boolean sapphire_weapon = (weapon instanceof SapphireAxeItem || weapon instanceof SapphireSwordItem);
+        boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent;
-            if (weapon instanceof SapphireSwordItem swordItem) {
-                percent = swordItem.getPercent();
-            } else {
-                SapphireAxeItem axeItem = (SapphireAxeItem) weapon;
-                percent = axeItem.getPercent();
-            }
+            int percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
                     MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
             float dmg = (percent / 200f) * (0.7f + 0.1f * EnchantmentHelper.getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this));
