@@ -90,6 +90,42 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
+            if (DESERT_PYRAMID_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                        .add(LootItem.lootTableItem(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (DESERT_PYRAMID_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
+                        .add(LootItem.lootTableItem(MUItems.TOPAZ_POTION))
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (IGLOO_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if (IGLOO_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
+                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
             if (BASTION_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
