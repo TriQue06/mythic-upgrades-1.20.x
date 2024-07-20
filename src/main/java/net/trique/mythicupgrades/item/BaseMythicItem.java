@@ -7,5 +7,6 @@ import java.util.HashMap;
 
 public interface BaseMythicItem {
     HashMap<MobEffect, EffectMeta> getMainHandEffects();
-    HashMap<MobEffect, EffectMeta> getOnHitEffects();
+    HashMap<MobEffect, EffectMeta> getOnHitEffectsForEnemy();
+    HashMap<MobEffect, EffectMeta> getOnHitEffectsForSelf();
 }
