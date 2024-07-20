@@ -94,14 +94,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
-    private static List<ResourceLocation> getCitrineUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
-    }
-
-    private static List<ResourceLocation> getCitrineUpgradeEmptyAdditionsSlotTextures() {
-        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
-    }
-
     public static MUTemplateItem createAquamarineUpgrade() {
         return new MUTemplateItem(AQUAMARINE_UPGRADE_APPLIES_TO_TEXT, AQUAMARINE_UPGRADE_INGREDIENTS_TEXT, AQUAMARINE_UPGRADE_TEXT, AQUAMARINE_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, AQUAMARINE_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getAquamarineUpgradeEmptyBaseSlotTextures(), getAquamarineUpgradeEmptyAdditionsSlotTextures());
     }
@@ -135,14 +127,6 @@ public class MUTemplateItem extends SmithingTemplateItem {
     }
 
     private static List<ResourceLocation> getRubyUpgradeEmptyAdditionsSlotTextures() {
-        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
-    }
-
-    private static List<ResourceLocation> getZirconUpgradeEmptyBaseSlotTextures() {
-        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE);
-    }
-
-    private static List<ResourceLocation> getZirconUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
