@@ -67,15 +67,15 @@ public class MUPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(64))));
 
         register(context, AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                RarityFilterPlacementModifier.of(48), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
                         YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, PERIDOT_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.PERIDOT_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                RarityFilterPlacementModifier.of(48), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
                         YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, TOPAZ_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_GEODE_KEY),
-                RarityFilterPlacementModifier.of(5), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
+                RarityFilterPlacementModifier.of(48), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6),
                         YOffset.fixed(30)), BiomePlacementModifier.of());
 
         register(context, RUBY_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_CRYSTAL_GEODE_KEY),
