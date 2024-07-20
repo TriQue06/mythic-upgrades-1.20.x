@@ -2,8 +2,9 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.Items;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.item.MUItems;
@@ -11,15 +12,17 @@ import static net.trique.mythicupgrades.item.MUItems.*;
 import static net.trique.mythicupgrades.util.DataGenHelper.*;
 import static net.trique.mythicupgrades.util.CommonFunctions.getId;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
+
 
 public class MURecipeGenerator extends FabricRecipeProvider {
-    public MURecipeGenerator(FabricDataOutput output) {
-        super(output);
+
+    public MURecipeGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+    public void buildRecipes(RecipeOutput exporter) {
         oreSmelting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,
                 3.0f, 200, "aquamarine");
         oreBlasting(exporter, List.of(MUBlocks.AQUAMARINE_ORE, MUBlocks.DEEPSLATE_AQUAMARINE_ORE), RecipeCategory.MISC, AQUAMARINE,

@@ -1,6 +1,6 @@
 package net.trique.mythicupgrades.util;
 
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -11,27 +11,27 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.trique.mythicupgrades.item.MUItems;
 
 public class MULootTableModifiers {
-    private static final ResourceLocation UNDERWATER_RUIN_BIG_ID = BuiltInLootTables.UNDERWATER_RUIN_BIG;
+    private static final ResourceLocation UNDERWATER_RUIN_BIG_ID = BuiltInLootTables.UNDERWATER_RUIN_BIG.location();
 
-    private static final ResourceLocation UNDERWATER_RUIN_SMALL_ID = BuiltInLootTables.UNDERWATER_RUIN_SMALL;
+    private static final ResourceLocation UNDERWATER_RUIN_SMALL_ID = BuiltInLootTables.UNDERWATER_RUIN_SMALL.location();
 
-    private static final ResourceLocation DESERT_PYRAMID_ID = BuiltInLootTables.DESERT_PYRAMID;
+    private static final ResourceLocation DESERT_PYRAMID_ID = BuiltInLootTables.DESERT_PYRAMID.location();
 
-    private static final ResourceLocation JUNGLE_TEMPLE_ID = BuiltInLootTables.JUNGLE_TEMPLE;
+    private static final ResourceLocation JUNGLE_TEMPLE_ID = BuiltInLootTables.JUNGLE_TEMPLE.location();
 
-    private static final ResourceLocation IGLOO_CHEST_ID = BuiltInLootTables.IGLOO_CHEST;
+    private static final ResourceLocation IGLOO_CHEST_ID = BuiltInLootTables.IGLOO_CHEST.location();
 
-    private static final ResourceLocation BASTION_BRIDGE_ID = BuiltInLootTables.BASTION_BRIDGE;
+    private static final ResourceLocation BASTION_BRIDGE_ID = BuiltInLootTables.BASTION_BRIDGE.location();
 
-    private static final ResourceLocation BASTION_HOGLIN_STABLE_ID = BuiltInLootTables.BASTION_HOGLIN_STABLE;
+    private static final ResourceLocation BASTION_HOGLIN_STABLE_ID = BuiltInLootTables.BASTION_HOGLIN_STABLE.location();
 
-    private static final ResourceLocation BASTION_OTHER_ID = BuiltInLootTables.BASTION_OTHER;
+    private static final ResourceLocation BASTION_OTHER_ID = BuiltInLootTables.BASTION_OTHER.location();
 
-    private static final ResourceLocation BASTION_TREASURE_ID = BuiltInLootTables.BASTION_TREASURE;
+    private static final ResourceLocation BASTION_TREASURE_ID = BuiltInLootTables.BASTION_TREASURE.location();
 
-    private static final ResourceLocation NETHER_BRIDGE_ID = BuiltInLootTables.NETHER_BRIDGE;
+    private static final ResourceLocation NETHER_BRIDGE_ID = BuiltInLootTables.NETHER_BRIDGE.location();
 
-    private static final ResourceLocation END_CITY_TREASURE_ID = BuiltInLootTables.END_CITY_TREASURE;
+    private static final ResourceLocation END_CITY_TREASURE_ID = BuiltInLootTables.END_CITY_TREASURE.location();
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {

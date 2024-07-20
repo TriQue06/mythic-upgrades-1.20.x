@@ -2,12 +2,17 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.HolderLookup;
+
+import java.util.concurrent.CompletableFuture;
+
 import static net.trique.mythicupgrades.item.MUItems.*;
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 
 public class MULootTableGenerator extends FabricBlockLootTableProvider {
-    public MULootTableGenerator(FabricDataOutput dataOutput) {
-        super(dataOutput);
+
+    protected MULootTableGenerator(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     @Override
