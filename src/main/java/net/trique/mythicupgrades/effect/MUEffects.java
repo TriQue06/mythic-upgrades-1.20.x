@@ -10,5 +10,5 @@ public class MUEffects {
     public static MobEffect DAMAGE_DEFLECTION = new DamageDeflectionEffect(MobEffectCategory.BENEFICIAL, 18170);
     public static MobEffect ITEM_MASTERY = new ItemMasteryEffect(MobEffectCategory.BENEFICIAL, 16747551);
     public static MobEffect ARCANE_AURA = new ArcaneAuraEffect(MobEffectCategory.BENEFICIAL, 12525567);
-    public static MobEffect MINERS_SHIELD = new ArcaneAuraEffect(MobEffectCategory.BENEFICIAL, 6317);
+    public static MobEffect MINERS_SHIELD = new MinersShieldEffect(MobEffectCategory.BENEFICIAL, 6317);
 }
