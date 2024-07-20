@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.world.item.ArmorItem;
 
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
@@ -23,13 +22,11 @@ public class MUModelProvider extends FabricModelProvider {
         blockStateModelGenerator.family(AQUAMARINE_CRYSTAL_BLOCK);
         blockStateModelGenerator.createAmethystCluster(AQUAMARINE_CRYSTAL_CLUSTER);
 
-
         blockStateModelGenerator.family(PERIDOT_BLOCK);
         blockStateModelGenerator.family(PERIDOT_ORE);
         blockStateModelGenerator.family(DEEPSLATE_PERIDOT_ORE);
         blockStateModelGenerator.family(PERIDOT_CRYSTAL_BLOCK);
         blockStateModelGenerator.createAmethystCluster(PERIDOT_CRYSTAL_CLUSTER);
-
 
         blockStateModelGenerator.family(RUBY_BLOCK);
         blockStateModelGenerator.family(RUBY_ORE);
@@ -43,6 +40,7 @@ public class MUModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.family(TOPAZ_BLOCK);
         blockStateModelGenerator.family(TOPAZ_ORE);
+        blockStateModelGenerator.family(DEEPSLATE_TOPAZ_ORE);
         blockStateModelGenerator.family(TOPAZ_CRYSTAL_BLOCK);
         blockStateModelGenerator.createAmethystCluster(TOPAZ_CRYSTAL_CLUSTER);
 
@@ -63,12 +61,20 @@ public class MUModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        itemModelGenerator.generateFlatItem(AQUAMARINE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AQUAMARINE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AQUAMARINE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AQUAMARINE_INGOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AQUAMARINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AQUAMARINE_POTION, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(PERIDOT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(PERIDOT_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(PERIDOT_INGOT, ModelTemplates.FLAT_ITEM);
@@ -80,6 +86,7 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(RUBY, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_INGOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(RUBY_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
@@ -87,6 +94,9 @@ public class MUModelProvider extends FabricModelProvider {
 
         itemModelGenerator.generateFlatItem(SAPPHIRE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(SAPPHIRE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(SAPPHIRE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(SAPPHIRE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SAPPHIRE_INGOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(SAPPHIRE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
@@ -104,12 +114,18 @@ public class MUModelProvider extends FabricModelProvider {
 
         itemModelGenerator.generateFlatItem(AMETRINE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AMETRINE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(AMETRINE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(AMETRINE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AMETRINE_INGOT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AMETRINE_CRYSTAL_SHARD, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(AMETRINE_POTION, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(JADE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(JADE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(JADE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(JADE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(JADE_INGOT, ModelTemplates.FLAT_ITEM);
@@ -136,6 +152,11 @@ public class MUModelProvider extends FabricModelProvider {
         itemModelGenerator.generateArmorTrims(PERIDOT_CHESTPLATE);
         itemModelGenerator.generateArmorTrims(PERIDOT_LEGGINGS);
         itemModelGenerator.generateArmorTrims(PERIDOT_BOOTS);
+
+        itemModelGenerator.generateArmorTrims(RUBY_HELMET);
+        itemModelGenerator.generateArmorTrims(RUBY_CHESTPLATE);
+        itemModelGenerator.generateArmorTrims(RUBY_LEGGINGS);
+        itemModelGenerator.generateArmorTrims(RUBY_BOOTS);
 
         itemModelGenerator.generateArmorTrims(SAPPHIRE_HELMET);
         itemModelGenerator.generateArmorTrims(SAPPHIRE_CHESTPLATE);

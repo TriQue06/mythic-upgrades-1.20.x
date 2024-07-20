@@ -81,11 +81,11 @@ public class MUPlacedFeatures {
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, RUBY_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, SAPPHIRE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, TOPAZ_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_GEODE_KEY),
@@ -93,11 +93,11 @@ public class MUPlacedFeatures {
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, AMETRINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
     }
 

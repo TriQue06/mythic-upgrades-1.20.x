@@ -17,6 +17,7 @@ public class MythicUpgradesDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MUModelProvider::new);
         pack.addProvider(MUWorldGenerator::new);
         pack.addProvider(MUItemTagProvider::new);
+        pack.addProvider(MUBlockTagProvider::new);
     }
 
     @Override

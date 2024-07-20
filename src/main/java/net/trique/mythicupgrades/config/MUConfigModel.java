@@ -78,7 +78,7 @@ public class MUConfigModel {
     public static class SapphireConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 1, max = 7)
-        public int tools_percentage_damage_percent = 3;
+        public int tools_percentage_damage_percent = 5;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)

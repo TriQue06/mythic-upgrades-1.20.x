@@ -11,6 +11,7 @@ public class ItemEffectsListBuilder {
         allEffects = new HashMap<>();
         allEffects.put(Target.IN_MAIN_HAND, new HashMap<>());
         allEffects.put(Target.ON_HIT_FOR_ENEMY, new HashMap<>());
+        allEffects.put(Target.ON_HIT_FOR_SELF, new HashMap<>());
         allEffects.put(Target.ON_EQUIPMENT_FOR_SELF, new HashMap<>());
         allEffects.put(Target.ON_EQUIPMENT_FOR_ENEMY, new HashMap<>());
     }

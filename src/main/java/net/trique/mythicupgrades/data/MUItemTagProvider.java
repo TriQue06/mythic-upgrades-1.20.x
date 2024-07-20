@@ -3,9 +3,6 @@ package net.trique.mythicupgrades.data;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -29,7 +26,8 @@ public class MUItemTagProvider extends FabricTagProvider.ItemTagProvider {
                         JADE_HELMET, JADE_CHESTPLATE, JADE_LEGGINGS, JADE_BOOTS,
                         RUBY_HELMET, RUBY_CHESTPLATE, RUBY_LEGGINGS, RUBY_BOOTS);
         getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES).add(
-                RUBY_PICKAXE, TOPAZ_PICKAXE
+                RUBY_PICKAXE, TOPAZ_PICKAXE, SAPPHIRE_PICKAXE, JADE_PICKAXE, AMETRINE_PICKAXE,
+                AQUAMARINE_PICKAXE, PERIDOT_PICKAXE
         );
     }
 }
