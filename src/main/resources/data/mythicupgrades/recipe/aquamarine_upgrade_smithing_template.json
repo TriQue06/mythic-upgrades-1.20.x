@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:aquamarine"
+    },
+    "C": {
+      "item": "minecraft:stone_bricks"
+    },
+    "S": {
+      "item": "mythicupgrades:aquamarine_upgrade_smithing_template"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "mythicupgrades:aquamarine_upgrade_smithing_template"
+  }
+}

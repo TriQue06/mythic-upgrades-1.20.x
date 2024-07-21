@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:peridot_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:peridot_pickaxe"
+  },
+  "template": {
+    "item": "mythicupgrades:peridot_upgrade_smithing_template"
+  }
+}

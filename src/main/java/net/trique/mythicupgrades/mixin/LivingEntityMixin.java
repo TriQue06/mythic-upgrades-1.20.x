@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.mixin;
 
-import com.llamalad7.mixinextras.injector.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -25,7 +26,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import java.util.Map;
-import java.util.function.Consumer;
 
 import static net.trique.mythicupgrades.util.CommonFunctions.*;
 
@@ -35,6 +35,7 @@ public abstract class LivingEntityMixin extends Entity {
     public LivingEntityMixin(EntityType<?> type, Level world) {
         super(type, world);
         deflecting_damage = 0f;
+        lastWorn = null;
         has_damage_been_deflected = false;
     }
 
@@ -72,13 +73,13 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
-    private void applyArmorBuffs(CallbackInfo ci) {
+    private void applyArmorEffectsForSelf(CallbackInfo ci) {
         ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
-            if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
+            if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial().value())) {
                 CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentEffectsForSelf());
             }
-            if (CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial()) &&
+            if (CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial().value()) &&
                     CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getEquipmentEffectsForSelf())) {
                 CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentEffectsForSelf());
             }
@@ -90,14 +91,14 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "hurt", at = @At(value = "RETURN"))
-    private void applyArmorDebuffs(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+    private void applyArmorEffectsForEnemy(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         boolean was_damaged = cir.getReturnValue();
         if (was_damaged) {
             Entity attacker = source.getEntity();
             if (attacker instanceof LivingEntity entity) {
                 ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
                 if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
-                        CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
+                        CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial().value())) {
                     CommonFunctions.addStatusEffects(entity, item.getEquipmentEffectsForEnemies(), (LivingEntity) (Object) this);
                 }
             }
@@ -138,8 +139,17 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
 
-    @WrapWithCondition(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
-    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
-        return checkForItemMastery(user);
+    @WrapOperation(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;)V"))
+    private void applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int i, LivingEntity livingEntity, EquipmentSlot equipmentSlot, Operation<Void> original) {
+        if (!applyItemMasteryChance(livingEntity)) {
+            original.call(instance, i, livingEntity, equipmentSlot);
+        }
+    }
+
+    @WrapOperation(method = "doHurtEquipment", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;)V"))
+    private void applyChanceWithToolMasteryForHurtArmor(ItemStack instance, int i, LivingEntity livingEntity, EquipmentSlot equipmentSlot, Operation<Void> original) {
+        if (!applyItemMasteryChance(livingEntity)) {
+            original.call(instance, i, livingEntity, equipmentSlot);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.item;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
@@ -8,9 +9,8 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.util.*;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -21,7 +21,7 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmor
     protected final ChatFormatting color;
     protected List<Integer> effectAmplifiers;
 
-    public MythicEffectsArmorItem(ArmorMaterial material, Type type, Properties settings, ItemEffectsList effects, String tooltipSB, List<Integer> effectAmplifiers, ChatFormatting color) {
+    public MythicEffectsArmorItem(Holder<ArmorMaterial> material, Type type, Properties settings, ItemEffectsList effects, String tooltipSB, List<Integer> effectAmplifiers, ChatFormatting color) {
         super(material, type, settings);
         this.virtualItemHandler = new MythicEffectVirtualItemHandler(effects);
         this.tooltipSB = tooltipSB;
@@ -30,34 +30,34 @@ public class MythicEffectsArmorItem extends ArmorItem implements BaseMythicArmor
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context) {
+    public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipContext, @NotNull List<Component> list, @NotNull TooltipFlag tooltipFlag) {
         List<String> romanians = effectAmplifiers.stream().map(CommonFunctions::arabicToRom).toList();
         MutableComponent partTooltip = Component.translatable(tooltipSB, romanians.toArray());
-        ClientFunctions.handleTooltipForArmor(stack, tooltip, partTooltip, color, this.getMaterial());
+        ClientFunctions.handleTooltipForArmor(itemStack, list, partTooltip, color, this.getMaterial().value());
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getMainHandEffects() {
+    public HashMap<Holder<MobEffect>, EffectMeta> getMainHandEffects() {
         return virtualItemHandler.getMainHandEffects();
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForEnemy() {
+    public HashMap<Holder<MobEffect>, EffectMeta> getOnHitEffectsForEnemy() {
         return virtualItemHandler.getOnHitEffectsForEnemy();
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForSelf() {
+    public HashMap<Holder<MobEffect>, EffectMeta> getOnHitEffectsForSelf() {
         return virtualItemHandler.getEquipmentEffectsForSelf();
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getEquipmentEffectsForSelf() {
+    public HashMap<Holder<MobEffect>, EffectMeta> getEquipmentEffectsForSelf() {
         return virtualItemHandler.getEquipmentEffectsForSelf();
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getEquipmentEffectsForEnemies() {
+    public HashMap<Holder<MobEffect>, EffectMeta> getEquipmentEffectsForEnemies() {
         return virtualItemHandler.getEquipmentEffectsForEnemy();
     }
 

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "peridot_ingot",
+  "ingredients": [
+    {
+      "item": "mythicupgrades:peridot"
+    },
+    {
+      "item": "mythicupgrades:peridot"
+    },
+    {
+      "item": "mythicupgrades:peridot"
+    },
+    {
+      "item": "mythicupgrades:peridot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    },
+    {
+      "item": "mythicupgrades:necoium_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:peridot_ingot"
+  }
+}
