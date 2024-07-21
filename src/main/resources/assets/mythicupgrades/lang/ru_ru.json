@@ -216,7 +216,6 @@
   "effect.mythicupgrades.item_mastery": "Владение предметом",
   "effect.mythicupgrades.arcane_aura": "Аура Аркана",
   "effect.mythicupgrades.miners_shield": "Щит шахтёра",
-  "effect.mythicupgrades.bouncer": "Попрыгун",
 
   "defaultArmorTooltip.description": "Одень полный набор брони чтобы получить усиления!",
   
@@ -239,7 +238,7 @@
   "ametrine_tool.description": "При ударе накладывает на цель эффект \"Левитация\"",
 
   "jade_armor.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_tool.description": "Когда предмет в ведущей руке накладывает эффект \"Попрыгун\"",
+  "jade_tool.description": "Накладывает эффект Прыгучести при ударе по противнику",
 
   "death.attack.deflecting": "%s забыл что отраженный от %s урон может убить",
   "death.attack.deflecting.item": "%s забыл что отраженный от %s урон при помощи %s может убить",
