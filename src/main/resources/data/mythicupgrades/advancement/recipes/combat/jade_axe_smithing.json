@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jade_axe_smithing"
+        "recipe": "mythicupgrades:jade_axe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jade_axe_smithing"
+      "mythicupgrades:jade_axe_smithing"
     ]
   }
 }

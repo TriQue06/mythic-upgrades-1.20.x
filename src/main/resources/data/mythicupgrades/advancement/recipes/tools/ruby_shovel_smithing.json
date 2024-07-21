@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ruby_shovel_smithing"
+        "recipe": "mythicupgrades:ruby_shovel_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ruby_shovel_smithing"
+      "mythicupgrades:ruby_shovel_smithing"
     ]
   }
 }

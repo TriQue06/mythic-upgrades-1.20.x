@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ruby_pickaxe_smithing"
+        "recipe": "mythicupgrades:ruby_pickaxe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ruby_pickaxe_smithing"
+      "mythicupgrades:ruby_pickaxe_smithing"
     ]
   }
 }
