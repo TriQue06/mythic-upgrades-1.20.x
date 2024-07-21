@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sapphire_axe_smithing"
+        "recipe": "mythicupgrades:sapphire_axe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sapphire_axe_smithing"
+      "mythicupgrades:sapphire_axe_smithing"
     ]
   },
   "sends_telemetry_event": false

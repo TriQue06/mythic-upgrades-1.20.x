@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:sapphire_pickaxe_smithing"
+        "recipe": "mythicupgrades:sapphire_pickaxe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:sapphire_pickaxe_smithing"
+      "mythicupgrades:sapphire_pickaxe_smithing"
     ]
   },
   "sends_telemetry_event": false

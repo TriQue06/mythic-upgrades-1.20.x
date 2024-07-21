@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jade_hoe_smithing"
+        "recipe": "mythicupgrades:jade_hoe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jade_hoe_smithing"
+      "mythicupgrades:jade_hoe_smithing"
     ]
   },
   "sends_telemetry_event": false
