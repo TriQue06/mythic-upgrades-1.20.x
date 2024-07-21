@@ -1,14 +1,37 @@
 package net.trique.mythicupgrades.effect;
 
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.trique.mythicupgrades.MythicUpgrades;
 
 public class MUEffects {
-    public static MobEffect POISONOUS_THORNS = new PoisonousThornsEffect(MobEffectCategory.BENEFICIAL, 11524864);
-    public static MobEffect ICE_SHIELD = new IceShieldEffect(MobEffectCategory.BENEFICIAL, 52218);
-    public static MobEffect FREEZE = new FreezeEffect(MobEffectCategory.HARMFUL, 52218);
-    public static MobEffect DAMAGE_DEFLECTION = new DamageDeflectionEffect(MobEffectCategory.BENEFICIAL, 18170);
-    public static MobEffect ITEM_MASTERY = new ItemMasteryEffect(MobEffectCategory.BENEFICIAL, 16747551);
-    public static MobEffect ARCANE_AURA = new ArcaneAuraEffect(MobEffectCategory.BENEFICIAL, 12525567);
-    public static MobEffect MINERS_SHIELD = new MinersShieldEffect(MobEffectCategory.BENEFICIAL, 6317);
+    public static final Holder<MobEffect> POISONOUS_THORNS;
+    public static final Holder<MobEffect> ICE_SHIELD;
+    public static final Holder<MobEffect> FREEZE;
+    public static final Holder<MobEffect> DAMAGE_DEFLECTION;
+    public static final Holder<MobEffect> ITEM_MASTERY;
+    public static final Holder<MobEffect> ARCANE_AURA;
+    public static final Holder<MobEffect> MINERS_SHIELD;
+
+    public static Holder<MobEffect> registerEffect(String name, MobEffect effect) {
+        return Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, name), effect);
+    }
+
+    public static void registerEffects() {
+        MythicUpgrades.LOGGER.info("Registering Effects...");
+    }
+
+    static {
+        POISONOUS_THORNS = registerEffect("poisonous_thorns", new PoisonousThornsEffect(MobEffectCategory.BENEFICIAL, 11524864));
+        ICE_SHIELD = registerEffect("ice_shield", new IceShieldEffect(MobEffectCategory.BENEFICIAL, 52218));
+        FREEZE = registerEffect("freeze", new FreezeEffect(MobEffectCategory.HARMFUL, 52218));
+        DAMAGE_DEFLECTION = registerEffect("damage_deflection", new DamageDeflectionEffect(MobEffectCategory.BENEFICIAL, 18170));
+        ITEM_MASTERY = registerEffect("item_mastery", new ItemMasteryEffect(MobEffectCategory.BENEFICIAL, 16747551));
+        ARCANE_AURA = registerEffect("arcane_aura", new ArcaneAuraEffect(MobEffectCategory.BENEFICIAL, 12525567));
+        MINERS_SHIELD = registerEffect("miners_shield", new MinersShieldEffect(MobEffectCategory.BENEFICIAL, 6317));
+    }
 }

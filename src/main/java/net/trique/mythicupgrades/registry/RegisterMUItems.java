@@ -20,7 +20,7 @@ import static net.trique.mythicupgrades.MythicUpgrades.*;
 public class RegisterMUItems {
     private static final ArrayList<Item> ALL_ITEMS = new ArrayList<>();
     private static <T extends Item> void registerItem(String name, T item) {
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, name), (Item) item);
+        Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, name), (Item) item);
     }
 
     private static void registerMUItems() {
@@ -206,7 +206,7 @@ public class RegisterMUItems {
                     entries.accept(AMETRINE_LEGGINGS);
                     entries.accept(AMETRINE_BOOTS);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
 
         CreativeModeTab MYTHICMISCGROUP = FabricItemGroup.builder().title(Component.literal("Mythic Upgrades: Misc"))
                 .icon(() -> new ItemStack(JADE)).displayItems((displayContext, entries) -> {
@@ -255,7 +255,7 @@ public class RegisterMUItems {
                     entries.accept(RAW_NECOIUM);
                     entries.accept(NECOIUM_INGOT);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
 
         CreativeModeTab MYTHICBLOCKGROUP = FabricItemGroup.builder().title(Component.literal("Mythic Upgrades: Blocks"))
                 .icon(() -> new ItemStack(JADE_BLOCK)).displayItems((displayContext, entries) -> {
@@ -301,7 +301,7 @@ public class RegisterMUItems {
                     entries.accept(NECOIUM_BLOCK);
                     entries.accept(NECOIUM_ORE);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
     }
 
     public static void registerMythicItems() {

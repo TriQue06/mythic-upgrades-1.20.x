@@ -1,12 +1,13 @@
 package net.trique.mythicupgrades.item;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.trique.mythicupgrades.util.EffectMeta;
 
 import java.util.HashMap;
 
 public interface BaseMythicItem {
-    HashMap<MobEffect, EffectMeta> getMainHandEffects();
-    HashMap<MobEffect, EffectMeta> getOnHitEffectsForEnemy();
-    HashMap<MobEffect, EffectMeta> getOnHitEffectsForSelf();
+    HashMap<Holder<MobEffect>, EffectMeta> getMainHandEffects();
+    HashMap<Holder<MobEffect>, EffectMeta> getOnHitEffectsForEnemy();
+    HashMap<Holder<MobEffect>, EffectMeta> getOnHitEffectsForSelf();
 }

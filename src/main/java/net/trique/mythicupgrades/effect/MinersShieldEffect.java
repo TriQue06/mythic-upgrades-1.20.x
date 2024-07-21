@@ -17,7 +17,7 @@ public class MinersShieldEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
+    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.level().isClientSide()) {
             Entity attacker = livingEntity.getLastHurtByMob();
             if (livingEntity.hurtTime == 9) {
@@ -29,11 +29,6 @@ public class MinersShieldEffect extends MobEffect {
                 }
             }
         }
-        super.applyEffectTick(livingEntity, amplifier);
-    }
-
-    @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
-        return true;
+        return super.applyEffectTick(livingEntity, amplifier);
     }
 }

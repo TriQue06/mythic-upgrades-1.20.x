@@ -1,11 +1,12 @@
 package net.trique.mythicupgrades.util;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -20,8 +21,8 @@ import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 public class CommonFunctions {
 
-    public static boolean checkStatusEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects) {
-        for (MobEffect effect : effects.keySet()) {
+    public static boolean checkStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects) {
+        for (Holder<MobEffect> effect : effects.keySet()) {
             MobEffectInstance instance = entity.getEffect(effect);
             EffectMeta meta = effects.get(effect);
             if (instance != null) {
@@ -34,15 +35,15 @@ public class CommonFunctions {
         }
         return false;
     }
-    public static void addStatusEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects, LivingEntity attacker) {
-        for (MobEffect effect : effects.keySet()) {
+    public static void addStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects, LivingEntity attacker) {
+        for (Holder<MobEffect> effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
             if (effect != null && ((effect.equals(MobEffects.HEAL) && (entity.getMobType().equals(MobType.UNDEAD))) ||
-                    (!(effect.equals(MobEffects.HARM) && (entity.getMobType().equals(MobType.UNDEAD)))) || !effect.isInstantenous())) {
+                    (!(effect.equals(MobEffects.HARM) && (entity.().equals(EntityType.)))) || !effect.isInstantenous())) {
                 if (entity.hasEffect(effect)) {
                     entity.removeEffect(effect);
                 }
-                entity.addEffect(new MobEffectInstance(effect, meta.getDuration(), meta.getAmplifier(),
+                entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN effect, meta.getDuration(), meta.getAmplifier(),
                         meta.isAmbient(), meta.shouldShowParticles(), meta.shouldShowIcon()), attacker);
             }
         }

@@ -3,8 +3,8 @@ package net.trique.mythicupgrades;
 import net.fabricmc.api.ModInitializer;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
+import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
-import net.trique.mythicupgrades.registry.RegisterMUEffects;
 import net.trique.mythicupgrades.registry.RegisterMUItems;
 import net.trique.mythicupgrades.util.MULootTableModifiers;
 import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
@@ -22,7 +22,7 @@ public class MythicUpgrades implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		CONFIG.load();
-		RegisterMUEffects.registerEffects();
+		MUEffects.registerEffects();
 		RegisterMUItems.registerMythicItems();
 		RegisterMUCommands.registerCommands();
 		MUBlocks.registerMythicBlocks();

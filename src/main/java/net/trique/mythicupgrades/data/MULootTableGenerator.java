@@ -11,7 +11,7 @@ import static net.trique.mythicupgrades.block.MUBlocks.*;
 
 public class MULootTableGenerator extends FabricBlockLootTableProvider {
 
-    protected MULootTableGenerator(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public MULootTableGenerator(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 

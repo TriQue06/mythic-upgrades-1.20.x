@@ -11,9 +11,9 @@ import org.jetbrains.annotations.Nullable;
 
 public class MythicUpgradesDamageTypes {
     public static final ResourceKey<DamageType> PERCENTAGE_DAMAGE_TYPE = ResourceKey.create(Registries.DAMAGE_TYPE,
-            new ResourceLocation("mythicupgrades", "percentage_damage_type"));
+            ResourceLocation.fromNamespaceAndPath("mythicupgrades", "percentage_damage_type"));
     public static final ResourceKey<DamageType> DEFLECTING_DAMAGE_TYPE = ResourceKey.create(Registries.DAMAGE_TYPE,
-            new ResourceLocation("mythicupgrades", "deflecting_damage_type"));
+            ResourceLocation.fromNamespaceAndPath("mythicupgrades", "deflecting_damage_type"));
 
     public static DamageSource create(Level world, ResourceKey<DamageType> key, @Nullable Entity attacker) {
         return new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(key), attacker);
