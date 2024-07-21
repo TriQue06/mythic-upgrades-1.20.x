@@ -11,6 +11,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.boss.EnderDragonPart;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
@@ -50,8 +51,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 boolean ambient = meta.isAmbient();
                 boolean showIcon = meta.shouldShowIcon();
                 boolean showParticles = meta.shouldShowParticles();
-                float sweeping_amplifier = getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this.level(), this.getItemBySlot(EquipmentSlot.MAINHAND));
-                livingEntity.addEffect(new MobEffectInstance(effect, duration, Math.max(0, (int) ((double) amplifier - 0.75 + sweeping_amplifier)), ambient, showParticles, showIcon));
+                double sweeping_amplifier = this.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO);
+                livingEntity.addEffect(new MobEffectInstance(effect, duration, Math.max(0, (int) (amplifier - 0.75 + sweeping_amplifier)), ambient, showParticles, showIcon));
             }
         }
     }
