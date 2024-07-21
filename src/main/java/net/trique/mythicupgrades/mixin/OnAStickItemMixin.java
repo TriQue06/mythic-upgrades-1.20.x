@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.mixin;
 
-import com.llamalad7.mixinextras.injector.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -10,7 +11,7 @@ import net.minecraft.world.item.FoodOnAStickItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-import static net.trique.mythicupgrades.util.CommonFunctions.checkForItemMastery;
+import static net.trique.mythicupgrades.util.CommonFunctions.applyItemMasteryChance;
 
 @Mixin(FoodOnAStickItem.class)
 public abstract class OnAStickItemMixin extends Item {
@@ -18,8 +19,10 @@ public abstract class OnAStickItemMixin extends Item {
         super(settings);
     }
 
-    @WrapWithCondition(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
-    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForPostHit(ItemStack instance, int amount, T user, Consumer<T> callback) {
-        return checkForItemMastery(user);
+    @WrapOperation(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    private <T extends LivingEntity> void applyChanceWithToolMasteryForPostHit(ItemStack instance, int i, T livingEntity, Consumer<T> consumer, Operation<Void> original) {
+        if (!applyItemMasteryChance(livingEntity)) {
+            original.call(instance, i, livingEntity, consumer);
+        }
     }
 }

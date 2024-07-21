@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.mixin;
 
-import com.llamalad7.mixinextras.injector.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
@@ -27,7 +28,7 @@ import net.minecraft.world.level.Level;
 import java.util.Map;
 import java.util.function.Consumer;
 
-import static net.trique.mythicupgrades.util.CommonFunctions.*;
+import static net.trique.mythicupgrades.util.CommonFunctions.applyItemMasteryChance;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -138,8 +139,10 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
 
-    @WrapWithCondition(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
-    private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
-        return checkForItemMastery(user);
+    @WrapOperation(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    private <T extends LivingEntity> void applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int i, T livingEntity, Consumer<T> consumer, Operation<Void> original) {
+        if (!applyItemMasteryChance(livingEntity)) {
+            original.call(instance, i, livingEntity, consumer);
+        }
     }
 }
