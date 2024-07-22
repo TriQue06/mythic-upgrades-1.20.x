@@ -19,15 +19,21 @@ public class PoisonousThornsEffect extends MobEffect {
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.level().isClientSide()) {
             Entity attacker = livingEntity.getLastHurtByMob();
+            System.out.println(attacker + " " + livingEntity);
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.hurt(livingEntity.level().damageSources().thorns(livingEntity), amplifier);
                     entity.playSound(SoundEvents.SPIDER_HURT, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.POISON,
-                            (int)(CONFIG.peridotConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
-                    }
+                            (int) (CONFIG.peridotConfig.poisonous_thorns_poison_duration() * 20), amplifier), livingEntity);
+                }
             }
         }
-        return super.applyEffectTick(livingEntity, amplifier);
+        return true;
+    }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int i, int j) {
+        return true;
     }
 }

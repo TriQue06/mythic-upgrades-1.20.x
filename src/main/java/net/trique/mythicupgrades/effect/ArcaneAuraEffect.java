@@ -23,10 +23,15 @@ public class ArcaneAuraEffect extends MobEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.playSound(SoundEvents.SHULKER_HURT, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION,
-                            (int)(CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
+                            (int) (CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
                 }
             }
         }
         return super.applyEffectTick(livingEntity, amplifier);
+    }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int i, int j) {
+        return true;
     }
 }

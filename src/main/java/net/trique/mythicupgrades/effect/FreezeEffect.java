@@ -23,4 +23,9 @@ public class FreezeEffect extends MobEffect {
         }
         return super.applyEffectTick(livingEntity, amplifier);
     }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int i, int j) {
+        return true;
+    }
 }

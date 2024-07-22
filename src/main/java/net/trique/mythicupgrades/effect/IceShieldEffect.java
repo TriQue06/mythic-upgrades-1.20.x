@@ -23,10 +23,15 @@ public class IceShieldEffect extends MobEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.playSound(SoundEvents.PLAYER_HURT_FREEZE, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,
-                            (int)(CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
+                            (int) (CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
         }
         return super.applyEffectTick(livingEntity, amplifier);
+    }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int i, int j) {
+        return true;
     }
 }
