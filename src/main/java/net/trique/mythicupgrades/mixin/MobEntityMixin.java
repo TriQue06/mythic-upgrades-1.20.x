@@ -47,8 +47,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                 boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
                 if (sapphire_weapon) {
                     int percent = ((VirtualSapphireTool) weapon).getPercent();
-                    DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
-                            MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+                    DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
                     float dmg = (percent / 100f);
                     if (entity.invulnerableTime <= 10) {
                         entity.hurt(source, dmg * entity.getMaxHealth());

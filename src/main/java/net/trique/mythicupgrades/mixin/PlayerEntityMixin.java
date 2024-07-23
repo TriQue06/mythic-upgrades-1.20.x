@@ -1,7 +1,5 @@
 package net.trique.mythicupgrades.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.Holder;
 import net.minecraft.world.damagesource.DamageSource;
@@ -63,8 +61,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
             int percent = ((VirtualSapphireTool) weapon).getPercent();
-            DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
-                    MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+            DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 100f) * h * h;
             if (entity.invulnerableTime <= 10) {
                 if (entity instanceof EnderDragonPart part) {
@@ -87,21 +84,13 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
             int percent = ((VirtualSapphireTool) weapon).getPercent();
-            DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
-                    MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+            DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 200f) * (0.7f + 0.1f * getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this.level(), getItemBySlot(EquipmentSlot.MAINHAND)));
             if (livingEntity.invulnerableTime <= 10) {
                 dmg *= livingEntity.getMaxHealth();
                 livingEntity.hurt(source, dmg);
                 livingEntity.invulnerableTime = 0;
             }
-        }
-    }
-
-    @WrapOperation(method = "hurtCurrentlyUsedShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;)V"))
-    private void applyChanceWithToolMasteryForDamageShield(ItemStack instance, int i, LivingEntity livingEntity, EquipmentSlot equipmentSlot, Operation<Void> original) {
-        if (!applyItemMasteryChance(livingEntity)) {
-            original.call(instance, i, livingEntity, equipmentSlot);
         }
     }
 }

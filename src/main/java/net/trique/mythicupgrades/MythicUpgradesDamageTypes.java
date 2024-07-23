@@ -15,7 +15,16 @@ public class MythicUpgradesDamageTypes {
     public static final ResourceKey<DamageType> DEFLECTING_DAMAGE_TYPE = ResourceKey.create(Registries.DAMAGE_TYPE,
             ResourceLocation.fromNamespaceAndPath("mythicupgrades", "deflecting_damage_type"));
 
-    public static DamageSource create(Level world, ResourceKey<DamageType> key, @Nullable Entity attacker) {
+    private static DamageSource create(Level world, ResourceKey<DamageType> key, @Nullable Entity attacker) {
         return new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(key), attacker);
     }
+
+    public static DamageSource percentage_damage(Entity user) {
+        return create(user.level(), PERCENTAGE_DAMAGE_TYPE, user);
+    }
+
+    public static DamageSource deflecting_damage(Entity user) {
+        return create(user.level(), DEFLECTING_DAMAGE_TYPE, user);
+    }
+
 }
