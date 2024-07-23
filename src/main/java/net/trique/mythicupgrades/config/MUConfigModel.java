@@ -52,7 +52,7 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 2)
-        public int poisonous_thorns_amplifier = 0;
+        public int poisonous_thorns_amplifier = 1;
     }
 
     public static class TopazConfig {
