@@ -145,10 +145,10 @@
   "block.mythicupgrades.sapphire_block": "Block of Sapphire",
   "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
   "block.mythicupgrades.sapphire_crystal_cluster": "Sapphire Crystal Cluster",
-  
+
   "item.mythicupgrades.ametrine": "Ametrine",
   "item.mythicupgrades.ametrine_ingot": "Ametrine Ingot",
-  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard", 
+  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard",
   "item.mythicupgrades.ametrine_potion": "Ametrine Potion",
 
   "item.mythicupgrades.ametrine_helmet": "Ametrine Helmet",
@@ -166,10 +166,10 @@
   "block.mythicupgrades.ametrine_block": "Block of Ametrine",
   "block.mythicupgrades.ametrine_crystal_block": "Block of Ametrine Crystal",
   "block.mythicupgrades.ametrine_crystal_cluster": "Ametrine Crystal Cluster",
-  
+
   "item.mythicupgrades.jade": "Jade",
   "item.mythicupgrades.jade_ingot": "Jade Ingot",
-  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard", 
+  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard",
   "item.mythicupgrades.jade_potion": "Jade Potion",
 
   "item.mythicupgrades.jade_helmet": "Jade Helmet",
@@ -209,6 +209,7 @@
   "effect.mythicupgrades.damage_deflection": "Damage Deflection",
   "effect.mythicupgrades.miners_shield": "Miner's Shield",
   "effect.mythicupgrades.arcane_aura": "Arcane Aura",
+  "effect.mythicupgrades.bouncer": "Bouncer",
 
   "defaultArmorTooltip.description": "Wear full set of armor to gain power-ups!",
 
@@ -231,7 +232,7 @@
   "ametrine_tool.description": "Levitates enemy on hit.",
 
   "jade_armor.description": "Set Bonus: Speed %s and Jump Boost %s",
-  "jade_tool.description": "Provides Jump Boost when hitting enemy.",
+  "jade_tool.description": "Provides Jump Boost on hit.",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",
