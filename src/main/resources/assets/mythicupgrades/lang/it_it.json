@@ -1,0 +1,245 @@
+{
+  "item.mythicupgrades.aquamarine": "Acquamarina",
+  "item.mythicupgrades.aquamarine_ingot": "Lingotto di Acquamarina",
+  "item.mythicupgrades.aquamarine_crystal_shard": "Scheggia di Cristallo di Acquamarina",
+  "item.mythicupgrades.aquamarine_potion": "Pozione di Acquamarina",
+
+  "item.mythicupgrades.aquamarine_helmet": "Elmo di Acquamarina",
+  "item.mythicupgrades.aquamarine_chestplate": "Pettorale di Acquamarina",
+  "item.mythicupgrades.aquamarine_leggings": "Gambali di Acquamarina",
+  "item.mythicupgrades.aquamarine_boots": "Stivali di Acquamarina",
+
+  "item.mythicupgrades.aquamarine_sword": "Spada di Acquamarina",
+  "item.mythicupgrades.aquamarine_axe": "Ascia di Acquamarina",
+  "item.mythicupgrades.aquamarine_pickaxe": "Piccone di Acquamarina",
+  "item.mythicupgrades.aquamarine_shovel": "Pala di Acquamarina",
+  "item.mythicupgrades.aquamarine_hoe": "Zappa di Acquamarina",
+
+  "block.mythicupgrades.aquamarine_ore": "Minerale di Acquamarina",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Minerale di Acquamarina in Deepslate",
+  "block.mythicupgrades.aquamarine_block": "Blocco di Acquamarina",
+  "block.mythicupgrades.aquamarine_crystal_block": "Blocco di Cristallo di Acquamarina",
+  "block.mythicupgrades.aquamarine_crystal_cluster": "Ramo di Cristallo di Acquamarina",
+
+  "item.mythicupgrades.peridot": "Peridoto",
+  "item.mythicupgrades.peridot_ingot": "Lingotto di Peridoto",
+  "item.mythicupgrades.peridot_crystal_shard": "Scheggia di Cristallo di Peridoto",
+  "item.mythicupgrades.peridot_potion": "Pozione di Peridoto",
+
+  "item.mythicupgrades.peridot_helmet": "Elmo di Peridoto",
+  "item.mythicupgrades.peridot_chestplate": "Pettorale di Peridoto",
+  "item.mythicupgrades.peridot_leggings": "Gambali di Peridoto",
+  "item.mythicupgrades.peridot_boots": "Stivali di Peridoto",
+
+  "item.mythicupgrades.peridot_sword": "Spada di Peridoto",
+  "item.mythicupgrades.peridot_axe": "Ascia di Peridoto",
+  "item.mythicupgrades.peridot_pickaxe": "Piccone di Peridoto",
+  "item.mythicupgrades.peridot_shovel": "Pala di Peridoto",
+  "item.mythicupgrades.peridot_hoe": "Zappa di Peridoto",
+
+  "block.mythicupgrades.peridot_ore": "Minerale di Peridoto",
+  "block.mythicupgrades.deepslate_peridot_ore": "Minerale di Peridoto in Deepslate",
+  "block.mythicupgrades.peridot_block": "Blocco di Peridoto",
+  "block.mythicupgrades.peridot_crystal_block": "Blocco di Cristallo di Peridoto",
+  "block.mythicupgrades.peridot_crystal_cluster": "Ramo di Cristallo di Peridoto",
+
+  "item.mythicupgrades.topaz": "Topazio",
+  "item.mythicupgrades.topaz_ingot": "Lingotto di Topazio",
+  "item.mythicupgrades.topaz_crystal_shard": "Scheggia di Cristallo di Topazio",
+  "item.mythicupgrades.topaz_potion": "Pozione di Topazio",
+
+  "item.mythicupgrades.topaz_helmet": "Elmo di Topazio",
+  "item.mythicupgrades.topaz_chestplate": "Pettorale di Topazio",
+  "item.mythicupgrades.topaz_leggings": "Gambali di Topazio",
+  "item.mythicupgrades.topaz_boots": "Stivali di Topazio",
+
+  "item.mythicupgrades.topaz_sword": "Spada di Topazio",
+  "item.mythicupgrades.topaz_axe": "Ascia di Topazio",
+  "item.mythicupgrades.topaz_pickaxe": "Piccone di Topazio",
+  "item.mythicupgrades.topaz_shovel": "Pala di Topazio",
+  "item.mythicupgrades.topaz_hoe": "Zappa di Topazio",
+
+  "block.mythicupgrades.topaz_ore": "Minerale di Topazio",
+  "block.mythicupgrades.deepslate_topaz_ore": "Minerale di Topazio in Deepslate",
+  "block.mythicupgrades.topaz_block": "Blocco di Topazio",
+  "block.mythicupgrades.topaz_crystal_block": "Blocco di Cristallo di Topazio",
+  "block.mythicupgrades.topaz_crystal_cluster": "Ramo di Cristallo di Topazio",
+
+  "item.mythicupgrades.ruby": "Rubino",
+  "item.mythicupgrades.ruby_ingot": "Lingotto di Rubino",
+  "item.mythicupgrades.ruby_crystal_shard": "Scheggia di Cristallo di Rubino",
+  "item.mythicupgrades.ruby_potion": "Pozione di Rubino",
+
+  "item.mythicupgrades.ruby_helmet": "Elmo di Rubino",
+  "item.mythicupgrades.ruby_chestplate": "Pettorale di Rubino",
+  "item.mythicupgrades.ruby_leggings": "Gambali di Rubino",
+  "item.mythicupgrades.ruby_boots": "Stivali di Rubino",
+
+  "item.mythicupgrades.ruby_axe": "Ascia di Rubino",
+  "item.mythicupgrades.ruby_pickaxe": "Piccone di Rubino",
+  "item.mythicupgrades.ruby_shovel": "Pala di Rubino",
+  "item.mythicupgrades.ruby_hoe": "Zappa di Rubino",
+  "item.mythicupgrades.ruby_sword": "Spada di Rubino",
+
+  "block.mythicupgrades.ruby_ore": "Minerale di Rubino",
+  "block.mythicupgrades.ruby_block": "Blocco di Rubino",
+  "block.mythicupgrades.ruby_crystal_block": "Blocco di Cristallo di Rubino",
+  "block.mythicupgrades.ruby_crystal_cluster": "Ramo di Cristallo di Rubino",
+
+  "item.mythicupgrades.sapphire": "Zaffiro",
+  "item.mythicupgrades.sapphire_ingot": "Lingotto di Zaffiro",
+  "item.mythicupgrades.sapphire_crystal_shard": "Scheggia di Cristallo di Zaffiro",
+  "item.mythicupgrades.sapphire_potion": "Pozione di Zaffiro",
+
+  "item.mythicupgrades.sapphire_helmet": "Elmo di Zaffiro",
+  "item.mythicupgrades.sapphire_chestplate": "Pettorale di Zaffiro",
+  "item.mythicupgrades.sapphire_leggings": "Gambali di Zaffiro",
+  "item.mythicupgrades.sapphire_boots": "Stivali di Zaffiro",
+
+  "item.mythicupgrades.sapphire_sword": "Spada di Zaffiro",
+  "item.mythicupgrades.sapphire_axe": "Ascia di Zaffiro",
+  "item.mythicupgrades.sapphire_pickaxe": "Piccone di Zaffiro",
+  "item.mythicupgrades.sapphire_shovel": "Pala di Zaffiro",
+  "item.mythicupgrades.sapphire_hoe": "Zappa di Zaffiro",
+
+  "block.mythicupgrades.sapphire_ore": "Minerale di Zaffiro",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Minerale di Zaffiro in Deepslate",
+  "block.mythicupgrades.sapphire_block": "Blocco di Zaffiro",
+  "block.mythicupgrades.sapphire_crystal_block": "Blocco di Cristallo di Zaffiro",
+  "block.mythicupgrades.sapphire_crystal_cluster": "Ramo di Cristallo di Zaffiro",
+  
+  "item.mythicupgrades.ametrine": "Ametrina",
+  "item.mythicupgrades.ametrine_ingot": "Lingotto di Ametrina",
+  "item.mythicupgrades.ametrine_crystal_shard": "Scheggia di Cristallo di Ametrina", 
+  "item.mythicupgrades.ametrine_potion": "Pozione di Ametrina",
+
+  "item.mythicupgrades.ametrine_helmet": "Elmo di Ametrina",
+  "item.mythicupgrades.ametrine_chestplate": "Pettorale di Ametrina",
+  "item.mythicupgrades.ametrine_leggings": "Gambali di Ametrina",
+  "item.mythicupgrades.ametrine_boots": "Stivali di Ametrina",
+
+  "item.mythicupgrades.ametrine_sword": "Spada di Ametrina",
+  "item.mythicupgrades.ametrine_axe": "Ascia di Ametrina",
+  "item.mythicupgrades.ametrine_pickaxe": "Piccone di Ametrina",
+  "item.mythicupgrades.ametrine_shovel": "Pala di Ametrina",
+  "item.mythicupgrades.ametrine_hoe": "Zappa di Ametrina",
+
+  "block.mythicupgrades.ametrine_ore": "Minerale di Ametrina",
+  "block.mythicupgrades.ametrine_block": "Blocco di Ametrina",
+  "block.mythicupgrades.ametrine_crystal_block": "Blocco di Cristallo di Ametrina",
+  "block.mythicupgrades.ametrine_crystal_cluster": "Ramo di Cristallo di Ametrina",
+  
+  "item.mythicupgrades.jade": "Giada",
+  "item.mythicupgrades.jade_ingot": "Lingotto di Giada",
+  "item.mythicupgrades.jade_crystal_shard": "Scheggia di Cristallo di Giada", 
+  "item.mythicupgrades.jade_potion": "Pozione di Giada",
+
+  "item.mythicupgrades.jade_helmet": "Elmo di Giada",
+  "item.mythicupgrades.jade_chestplate": "Pettorale di Giada",
+  "item.mythicupgrades.jade_leggings": "Gambali di Giada",
+  "item.mythicupgrades.jade_boots": "Stivali di Giada",
+
+  "item.mythicupgrades.jade_sword": "Spada di Giada",
+  "item.mythicupgrades.jade_axe": "Ascia di Giada",
+  "item.mythicupgrades.jade_pickaxe": "Piccone di Giada",
+  "item.mythicupgrades.jade_shovel": "Pala di Giada",
+  "item.mythicupgrades.jade_hoe": "Zappa di Giada",
+
+  "block.mythicupgrades.jade_ore": "Minerale di Giada",
+  "block.mythicupgrades.jade_block": "Blocco di Giada",
+  "block.mythicupgrades.jade_crystal_block": "Blocco di Cristallo di Giada",
+  "block.mythicupgrades.jade_crystal_cluster": "Ramo di Cristallo di Giada",
+
+  "item.mythicupgrades.raw_necoium": "Necoium Grezzo",
+  "item.mythicupgrades.necoium_ingot": "Lingotto di Necoium",
+  "block.mythicupgrades.necoium_ore": "Minerale di Necoium",
+  "block.mythicupgrades.necoium_block": "Blocco di Necoium",
+  "block.mythicupgrades.raw_necoium_block": "Blocco di Necoium Grezzo",
+
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.peridot_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Modello di Forgiatura",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Modello di Forgiatura",
+
+  "effect.mythicupgrades.ice_shield": "Scudo di Ghiaccio",
+  "effect.mythicupgrades.freeze": "Congelamento",
+  "effect.mythicupgrades.poisonous_thorns": "Spine Velenose",
+  "effect.mythicupgrades.item_mastery": "Maestria dell'Oggetto",
+  "effect.mythicupgrades.damage_deflection": "Deviazione Danno",
+  "effect.mythicupgrades.miners_shield": "Scudo del Minatore",
+  "effect.mythicupgrades.arcane_aura": "Aura Arcana",
+  "effect.mythicupgrades.bouncer": "Rimbalzo",
+
+  "defaultArmorTooltip.description": "Indossa il set completo di armatura per ottenere potenziamenti!",
+
+  "aquamarine_armor.description": "Bonus Set: Scudo di Ghiaccio %s",
+  "aquamarine_tool.description": "Congela il nemico all'impatto.",
+
+  "peridot_armor.description": "Bonus Set: Spine Velenose %s",
+  "peridot_tool.description": "Avvelena il nemico all'impatto.",
+
+  "topaz_armor.description": "Bonus Set: Protezione, Maestria dell'Oggetto %s e Resistenza al Fuoco",
+  "topaz_tool.description": "Ha 3x durata e statistiche superiori.",
+
+  "ruby_armor.description": "Bonus Set: Scudo del Minatore %s",
+  "ruby_tool.description": "Conferisce Rapidità quando è nella mano principale.",
+
+  "sapphire_armor.description": "Bonus Set: Deviazione Danno %s",
+  "sapphire_tool.description": "Infligge danni aggiuntivi pari al %d%% della salute massima del bersaglio.",
+
+  "ametrine_armor.description": "Bonus Set: Aura Arcana %s",
+  "ametrine_tool.description": "Levita il nemico all'impatto.",
+
+  "jade_armor.description": "Bonus Set: Velocità %s e Salto Potenziato %s",
+  "jade_tool.description": "Conferisce Rimbalzo quando è nella mano principale.",
+
+  "death.attack.deflecting": "%s ha ricevuto abbastanza danno deviato da %s per morire.",
+  "death.attack.deflecting.item": "%s ha ricevuto abbastanza danno deviato da %s per morire con l'aiuto di %s.",
+  "death.attack.percentage": "%s ha ricevuto abbastanza danno percentuale magico per morire mentre combatteva con %s.",
+  "death.attack.percentage.item": "%s ha ricevuto abbastanza danno percentuale magico per morire mentre combatteva con %s tenendo %s.",
+
+  "item.minecraft.smithing_template.aquamarine_upgrade.additions_slot_description": "Aggiungi Lingotto di Acquamarina",
+  "item.minecraft.smithing_template.aquamarine_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.aquamarine_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.aquamarine_upgrade.ingredients": "Lingotto di Acquamarina",
+  "upgrade.minecraft.aquamarine_upgrade": "Aggiornamento di Acquamarina",
+
+  "item.minecraft.smithing_template.peridot_upgrade.additions_slot_description": "Aggiungi Lingotto di Peridoto",
+  "item.minecraft.smithing_template.peridot_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.peridot_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.peridot_upgrade.ingredients": "Lingotto di Peridoto",
+  "upgrade.minecraft.peridot_upgrade": "Aggiornamento di Peridoto",
+
+  "item.minecraft.smithing_template.topaz_upgrade.additions_slot_description": "Aggiungi Lingotto di Topazio",
+  "item.minecraft.smithing_template.topaz_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.topaz_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.topaz_upgrade.ingredients": "Lingotto di Topazio",
+  "upgrade.minecraft.topaz_upgrade": "Aggiornamento di Topazio",
+
+  "item.minecraft.smithing_template.ruby_upgrade.additions_slot_description": "Aggiungi Lingotto di Rubino",
+  "item.minecraft.smithing_template.ruby_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.ruby_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.ruby_upgrade.ingredients": "Lingotto di Rubino",
+  "upgrade.minecraft.ruby_upgrade": "Aggiornamento di Rubino",
+
+  "item.minecraft.smithing_template.sapphire_upgrade.additions_slot_description": "Aggiungi Lingotto di Zaffiro",
+  "item.minecraft.smithing_template.sapphire_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.sapphire_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.sapphire_upgrade.ingredients": "Lingotto di Zaffiro",
+  "upgrade.minecraft.sapphire_upgrade": "Aggiornamento di Zaffiro",
+
+  "item.minecraft.smithing_template.ametrine_upgrade.additions_slot_description": "Aggiungi Lingotto di Ametrina",
+  "item.minecraft.smithing_template.ametrine_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.ametrine_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.ametrine_upgrade.ingredients": "Lingotto di Ametrina",
+  "upgrade.minecraft.ametrine_upgrade": "Aggiornamento di Ametrina",
+
+  "item.minecraft.smithing_template.jade_upgrade.additions_slot_description": "Aggiungi Lingotto di Giada",
+  "item.minecraft.smithing_template.jade_upgrade.applies_to": "Equipaggiamento in Netherite",
+  "item.minecraft.smithing_template.jade_upgrade.base_slot_description": "Aggiungi armatura, arma o attrezzo in netherite",
+  "item.minecraft.smithing_template.jade_upgrade.ingredients": "Lingotto di Giada",
+  "upgrade.minecraft.jade_upgrade": "Aggiornamento di Giada"
+}
