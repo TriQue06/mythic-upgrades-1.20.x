@@ -23,7 +23,7 @@ public class MinersShieldEffect extends StatusEffect {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.damage(livingEntity.getWorld().getDamageSources().thorns(livingEntity), amplifier);
                     entity.playSound(SoundEvents.ENTITY_PIGLIN_BRUTE_CONVERTED_TO_ZOMBIFIED, 1.0f, livingEntity.getSoundPitch());
-                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS,
+                    entity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,
                             (int)(CONFIG.rubyConfig.miners_shield_duration() * 20), amplifier), livingEntity);
                 }
             }
