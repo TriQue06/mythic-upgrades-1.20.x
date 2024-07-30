@@ -188,10 +188,10 @@
   "ruby_tool.description": "Provides Haste when in main hand.",
 
   "sapphire_armor.description": "Set Bonus: Damage Deflection %s",
-  "sapphire_tool.description": "Deals percentage-based damage (%d%%) depending on enemy's health.",
+  "sapphire_tool.description": "Deals additional damage equal to %d%% of target's max health.",
 
   "ametrine_armor.description": "Set Bonus: Arcane Aura %s",
-  "ametrine_tool.description": "Levitates enemy on hit",
+  "ametrine_tool.description": "Levitates enemy on hit.",
 
   "jade_armor.description": "Set Bonus: Speed %s and Jump Boost %s",
   "jade_tool.description": "Provides Bouncer when in main hand.",
