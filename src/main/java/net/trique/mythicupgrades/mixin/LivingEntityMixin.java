@@ -2,7 +2,6 @@ package net.trique.mythicupgrades.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.Holder;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
@@ -15,7 +14,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.minecraft.world.damagesource.DamageSource;
@@ -47,10 +45,6 @@ public abstract class LivingEntityMixin extends Entity {
     public abstract Map<MobEffect, MobEffectInstance> getActiveEffectsMap();
 
     @Shadow @Nullable public abstract MobEffectInstance getEffect(Holder<MobEffect> holder);
-
-    @Shadow public abstract double lerpTargetX();
-
-    @Shadow public abstract boolean isDamageSourceBlocked(DamageSource damageSource);
 
     @Unique private boolean has_damage_been_deflected;
 
