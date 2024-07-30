@@ -5,6 +5,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -14,18 +15,17 @@ import net.minecraft.world.entity.boss.EnderDragonPart;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
+import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 import static net.trique.mythicupgrades.util.CommonFunctions.*;
 
 @Mixin(Player.class)
@@ -35,8 +35,10 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         super(entityType, world);
     }
 
-    @Shadow
-    public abstract @NotNull ItemStack getItemBySlot(EquipmentSlot slot);
+
+    protected void percentHit(Entity entity) {
+
+    }
 
 
     @Inject(method = "attack", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
@@ -68,9 +70,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                     EnderDragon dragon = part.parentMob;
                     dmg *= dragon.getMaxHealth();
                     dragon.hurt(part, source, dmg);
+                    percentHit(entity);
                 } else if (entity instanceof LivingEntity target) {
                     dmg *= target.getMaxHealth();
                     target.hurt(source, dmg);
+                    percentHit(target);
                 }
                 entity.invulnerableTime = 0;
             }
@@ -89,8 +93,17 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             if (livingEntity.invulnerableTime <= 10) {
                 dmg *= livingEntity.getMaxHealth();
                 livingEntity.hurt(source, dmg);
+                percentHit(livingEntity);
                 livingEntity.invulnerableTime = 0;
             }
+        }
+    }
+
+    @Inject(method = "attack", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void applyBouncerEffect(Entity entity, CallbackInfo ci) {
+        if (this.hasEffect(MUEffects.BOUNCER)) {
+            int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
+            this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
         }
     }
 }
