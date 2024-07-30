@@ -46,7 +46,7 @@ public class MUItems {
 
     private static final ItemEffectsList levitationToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.LEVITATION, (int) (CONFIG.ametrineConfig.tools_levitation_duration() * 20), CONFIG.ametrineConfig.tools_levitation_amplifier()).build();
 
-    private static final ItemEffectsList bouncerToolEffect = new ItemEffectsListBuilder().addForHitToSelf(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), MythicUpgrades.CONFIG.jadeConfig.tools_bouncer_amplifier()).build();
+    private static final ItemEffectsList bouncerToolEffect = new ItemEffectsListBuilder().addForMainHand(BOUNCER, MobEffectInstance.INFINITE_DURATION, MythicUpgrades.CONFIG.jadeConfig.tools_bouncer_amplifier()).build();
 
     public static final Item AQUAMARINE = new Item(new Item.Properties());
     public static final Item AQUAMARINE_INGOT = new Item(new Item.Properties().fireResistant());
