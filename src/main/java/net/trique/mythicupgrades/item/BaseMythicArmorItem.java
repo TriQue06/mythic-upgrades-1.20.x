@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface BaseMythicArmorItem extends BaseMythicItem {
-    HashMap<MobEffect, EffectMeta> getEquipmentBuffs();
-    HashMap<MobEffect, EffectMeta> getEquipmentDebuffs();
+    HashMap<MobEffect, EffectMeta> getEquipmentEffectsForSelf();
+    HashMap<MobEffect, EffectMeta> getEquipmentEffectsForEnemies();
     void setNewEffects(ItemEffectsList effectsList, List<Integer> amplifierList);
 }

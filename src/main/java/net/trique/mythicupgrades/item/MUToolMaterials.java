@@ -6,14 +6,14 @@ import net.minecraft.world.item.crafting.Ingredient;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUToolMaterials implements Tier {
-    CITRINE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(CITRINE_INGOT)),
+    AQUAMARINE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(AQUAMARINE_INGOT)),
     PERIDOT(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(PERIDOT_INGOT)),
-    ZIRCON(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(ZIRCON_INGOT)),
     RUBY(4, 2923, 13.0f, 5.0f, 18, Ingredient.of(RUBY_INGOT)),
     SAPPHIRE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(SAPPHIRE_INGOT)),
     TOPAZ(4, 8769, 11.0f, 6.0f, 18, Ingredient.of(TOPAZ_INGOT)),
     AMETRINE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(AMETRINE_INGOT)),
     JADE(4, 2923, 10.0f, 5.0f, 18, Ingredient.of(JADE_INGOT));
+
 
     private final int miningLevel;
     private final int itemDurability;

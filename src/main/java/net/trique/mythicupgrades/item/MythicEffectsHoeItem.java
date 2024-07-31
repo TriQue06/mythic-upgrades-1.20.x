@@ -47,8 +47,13 @@ public class MythicEffectsHoeItem extends HoeItem implements BaseMythicToolItem 
     }
 
     @Override
-    public HashMap<MobEffect, EffectMeta> getOnHitEffects() {
-        return virtualItemHandler.getOnHitEffects();
+    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForEnemy() {
+        return virtualItemHandler.getOnHitEffectsForEnemy();
+    }
+
+    @Override
+    public HashMap<MobEffect, EffectMeta> getOnHitEffectsForSelf() {
+        return virtualItemHandler.getOnHitEffectsForSelf();
     }
 
     @Override

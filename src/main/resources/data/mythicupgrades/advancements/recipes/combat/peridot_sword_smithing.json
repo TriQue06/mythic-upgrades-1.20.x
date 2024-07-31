@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:peridot_sword_smithing"
+        "recipe": "mythicupgrades:peridot_sword_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:peridot_sword_smithing"
+      "mythicupgrades:peridot_sword_smithing"
     ]
   },
   "sends_telemetry_event": false

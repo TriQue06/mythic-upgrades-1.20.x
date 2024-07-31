@@ -21,9 +21,7 @@ import java.util.List;
 
 public class MUPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AQUAMARINE_ORE_PLACED_KEY = registerKey("aquamarine_ore_placed");
-    public static final ResourceKey<PlacedFeature> CITRINE_ORE_PLACED_KEY = registerKey("citrine_ore_placed");
     public static final ResourceKey<PlacedFeature> PERIDOT_ORE_PLACED_KEY = registerKey("peridot_ore_placed");
-    public static final ResourceKey<PlacedFeature> ZIRCON_ORE_PLACED_KEY = registerKey("zircon_ore_placed");
     public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
     public static final ResourceKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = registerKey("sapphire_ore_placed");
     public static final ResourceKey<PlacedFeature> TOPAZ_ORE_PLACED_KEY = registerKey("topaz_ore_placed");
@@ -32,9 +30,7 @@ public class MUPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NECOIUM_ORE_PLACED_KEY = registerKey("necoium_ore_placed");
 
     public static final ResourceKey<PlacedFeature> AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY = registerKey("aquamarine_crystal_geode_placed");
-    public static final ResourceKey<PlacedFeature> CITRINE_CRYSTAL_GEODE_PLACED_KEY = registerKey("citrine_crystal_geode_placed");
     public static final ResourceKey<PlacedFeature> PERIDOT_CRYSTAL_GEODE_PLACED_KEY = registerKey("peridot_crystal_geode_placed");
-    public static final ResourceKey<PlacedFeature> ZIRCON_CRYSTAL_GEODE_PLACED_KEY = registerKey("zircon_crystal_geode_placed");
     public static final ResourceKey<PlacedFeature> RUBY_CRYSTAL_GEODE_PLACED_KEY = registerKey("ruby_crystal_geode_placed");
     public static final ResourceKey<PlacedFeature> SAPPHIRE_CRYSTAL_GEODE_PLACED_KEY = registerKey("sapphire_crystal_geode_placed");
     public static final ResourceKey<PlacedFeature> TOPAZ_CRYSTAL_GEODE_PLACED_KEY = registerKey("topaz_crystal_geode_placed");
@@ -48,15 +44,7 @@ public class MUPlacedFeatures {
                 MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
 
-        register(context, CITRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.CITRINE_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
-
         register(context, PERIDOT_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.PERIDOT_ORE_KEY),
-                MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
-
-        register(context, ZIRCON_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.ZIRCON_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
 
@@ -85,39 +73,31 @@ public class MUPlacedFeatures {
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
 
         register(context, AQUAMARINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AQUAMARINE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
-                        VerticalAnchor.absolute(30)), BiomeFilter.biome());
-
-        register(context, CITRINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.CITRINE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, PERIDOT_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.PERIDOT_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
-                        VerticalAnchor.absolute(30)), BiomeFilter.biome());
-
-        register(context, ZIRCON_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.ZIRCON_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, RUBY_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.RUBY_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, SAPPHIRE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.SAPPHIRE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, TOPAZ_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, AMETRINE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
 
         register(context, JADE_CRYSTAL_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.JADE_CRYSTAL_GEODE_KEY),
-                RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
+                RarityFilter.onAverageOnceEvery(36), InSquarePlacement.spread(), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6),
                         VerticalAnchor.absolute(30)), BiomeFilter.biome());
     }
 

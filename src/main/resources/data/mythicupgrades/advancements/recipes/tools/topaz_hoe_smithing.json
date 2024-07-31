@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:topaz_hoe_smithing"
+        "recipe": "mythicupgrades:topaz_hoe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:topaz_hoe_smithing"
+      "mythicupgrades:topaz_hoe_smithing"
     ]
   },
   "sends_telemetry_event": false

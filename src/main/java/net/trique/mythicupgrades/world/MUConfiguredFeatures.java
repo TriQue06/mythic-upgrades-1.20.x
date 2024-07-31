@@ -26,20 +26,16 @@ import java.util.List;
 
 public class MUConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY = registerKey("aquamarine_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_ORE_KEY = registerKey("citrine_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PERIDOT_ORE_KEY = registerKey("peridot_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_ORE_KEY = registerKey("topaz_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ZIRCON_ORE_KEY = registerKey("zircon_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMETRINE_ORE_KEY = registerKey("ametrine_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NECOIUM_ORE_KEY = registerKey("necoium_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> AQUAMARINE_CRYSTAL_GEODE_KEY = registerKey("aquamarine_crystal_geode");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRINE_CRYSTAL_GEODE_KEY = registerKey("citrine_crystal_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PERIDOT_CRYSTAL_GEODE_KEY = registerKey("peridot_crystal_geode");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ZIRCON_CRYSTAL_GEODE_KEY = registerKey("zircon_crystal_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_CRYSTAL_GEODE_KEY = registerKey("ruby_crystal_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_CRYSTAL_GEODE_KEY = registerKey("sapphire_crystal_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TOPAZ_CRYSTAL_GEODE_KEY = registerKey("topaz_crystal_geode");
@@ -56,17 +52,9 @@ public class MUConfiguredFeatures {
                 List.of(OreConfiguration.target(stoneReplaceables, MUBlocks.AQUAMARINE_ORE.defaultBlockState()),
                         OreConfiguration.target(deepslateReplaceables, MUBlocks.DEEPSLATE_AQUAMARINE_ORE.defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> overworldCitrineOres =
-                List.of(OreConfiguration.target(stoneReplaceables, MUBlocks.CITRINE_ORE.defaultBlockState()),
-                        OreConfiguration.target(deepslateReplaceables, MUBlocks.DEEPSLATE_CITRINE_ORE.defaultBlockState()));
-
         List<OreConfiguration.TargetBlockState> overworldPeridotOres =
                 List.of(OreConfiguration.target(stoneReplaceables, MUBlocks.PERIDOT_ORE.defaultBlockState()),
                         OreConfiguration.target(deepslateReplaceables, MUBlocks.DEEPSLATE_PERIDOT_ORE.defaultBlockState()));
-
-        List<OreConfiguration.TargetBlockState> overworldZirconOres =
-                List.of(OreConfiguration.target(stoneReplaceables, MUBlocks.ZIRCON_ORE.defaultBlockState()),
-                        OreConfiguration.target(deepslateReplaceables, MUBlocks.DEEPSLATE_ZIRCON_ORE.defaultBlockState()));
 
         List<OreConfiguration.TargetBlockState> netherRubyOres =
                 List.of(OreConfiguration.target(netherStoneReplaceables, MUBlocks.RUBY_ORE.defaultBlockState()));
@@ -88,8 +76,6 @@ public class MUConfiguredFeatures {
 
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAquamarineOres, 5));
         register(context, PERIDOT_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPeridotOres, 5));
-        register(context, CITRINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldCitrineOres, 5));
-        register(context, ZIRCON_ORE_KEY, Feature.ORE, new OreConfiguration(overworldZirconOres, 5));
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(netherRubyOres, 5));
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(netherSapphireOres, 5));
         register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(netherTopazOres, 5));
@@ -97,14 +83,14 @@ public class MUConfiguredFeatures {
         register(context, JADE_ORE_KEY, Feature.ORE, new OreConfiguration(endJadeOres, 5));
         register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endNecoiumOres, 5));
 
-        register(context, AQUAMARINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+        register(context, AQUAMARINE_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.AQUAMARINE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
                         BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AQUAMARINE_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
@@ -112,29 +98,14 @@ public class MUConfiguredFeatures {
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
 
-        register(context, CITRINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
-                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
-                        BlockStateProvider.simple(MUBlocks.CITRINE_CRYSTAL_BLOCK),
-                        BlockStateProvider.simple(MUBlocks.CITRINE_CRYSTAL_BLOCK),
-                        BlockStateProvider.simple(Blocks.CALCITE),
-                        BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.CITRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.CITRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.CITRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.CITRINE_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
-                        new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
-                        new GeodeCrackSettings(0.95, 2.0, 2),
-                        0.35, 0.083,
-                        true, UniformInt.of(4, 6),
-                        UniformInt.of(3, 4), UniformInt.of(1, 2),
-                        -16, 16, 0.05, 1));
-
-        register(context, PERIDOT_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+        register(context, PERIDOT_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.PERIDOT_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.PERIDOT_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
                         BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.PERIDOT_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.PERIDOT_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
@@ -142,29 +113,14 @@ public class MUConfiguredFeatures {
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
 
-        register(context, ZIRCON_CRYSTAL_GEODE_KEY, Feature.GEODE ,
-                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
-                        BlockStateProvider.simple(MUBlocks.ZIRCON_CRYSTAL_BLOCK),
-                        BlockStateProvider.simple(MUBlocks.ZIRCON_CRYSTAL_BLOCK),
-                        BlockStateProvider.simple(Blocks.CALCITE),
-                        BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
-                        List.of(MUBlocks.ZIRCON_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.ZIRCON_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.ZIRCON_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.ZIRCON_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
-                        new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
-                        new GeodeCrackSettings(0.95, 2.0, 2),
-                        0.35, 0.083,
-                        true, UniformInt.of(4, 6),
-                        UniformInt.of(3, 4), UniformInt.of(1, 2),
-                        -16, 16, 0.05, 1));
-
-        register(context, RUBY_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+        register(context, RUBY_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.RUBY_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.RUBY_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
                         BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.RUBY_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.RUBY_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.RUBY_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.RUBY_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
@@ -172,59 +128,59 @@ public class MUConfiguredFeatures {
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
 
-        register(context, SAPPHIRE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+        register(context, SAPPHIRE_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.SAPPHIRE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.SAPPHIRE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
                         BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.SAPPHIRE_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
                         true, UniformInt.of(4, 6),
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
-        
-        register(context, TOPAZ_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+
+        register(context, TOPAZ_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.TOPAZ_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
                         BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
                         List.of(MUBlocks.TOPAZ_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.TOPAZ_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
                         true, UniformInt.of(4, 6),
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
-        
-        register(context, AMETRINE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+
+        register(context, AMETRINE_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.AMETRINE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.AMETRINE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
-                        BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
+                        BlockStateProvider.simple(Blocks.OBSIDIAN),
                         List.of(MUBlocks.AMETRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.AMETRINE_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
                         true, UniformInt.of(4, 6),
                         UniformInt.of(3, 4), UniformInt.of(1, 2),
                         -16, 16, 0.05, 1));
-        
-        register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE ,
+
+        register(context, JADE_CRYSTAL_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(MUBlocks.JADE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(MUBlocks.JADE_CRYSTAL_BLOCK),
                         BlockStateProvider.simple(Blocks.CALCITE),
-                        BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
+                        BlockStateProvider.simple(Blocks.OBSIDIAN),
                         List.of(MUBlocks.JADE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.JADE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.JADE_CRYSTAL_CLUSTER.defaultBlockState(), MUBlocks.JADE_CRYSTAL_CLUSTER.defaultBlockState()),
-                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS),
                         new GeodeLayerSettings(1.7, 2.2, 3.2, 4.2),
                         new GeodeCrackSettings(0.95, 2.0, 2),
                         0.35, 0.083,
@@ -238,7 +194,7 @@ public class MUConfiguredFeatures {
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
-                                                                                   ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 }

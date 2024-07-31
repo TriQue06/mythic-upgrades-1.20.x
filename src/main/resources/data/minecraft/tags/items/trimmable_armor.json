@@ -5,18 +5,10 @@
     "mythicupgrades:aquamarine_chestplate",
     "mythicupgrades:aquamarine_leggings",
     "mythicupgrades:aquamarine_boots",
-    "mythicupgrades:citrine_helmet",
-    "mythicupgrades:citrine_chestplate",
-    "mythicupgrades:citrine_leggings",
-    "mythicupgrades:citrine_boots",
     "mythicupgrades:peridot_helmet",
     "mythicupgrades:peridot_chestplate",
     "mythicupgrades:peridot_leggings",
     "mythicupgrades:peridot_boots",
-    "mythicupgrades:zircon_helmet",
-    "mythicupgrades:zircon_chestplate",
-    "mythicupgrades:zircon_leggings",
-    "mythicupgrades:zircon_boots",
     "mythicupgrades:sapphire_helmet",
     "mythicupgrades:sapphire_chestplate",
     "mythicupgrades:sapphire_leggings",
@@ -32,6 +24,10 @@
     "mythicupgrades:jade_helmet",
     "mythicupgrades:jade_chestplate",
     "mythicupgrades:jade_leggings",
-    "mythicupgrades:jade_boots"
+    "mythicupgrades:jade_boots",
+    "mythicupgrades:ruby_helmet",
+    "mythicupgrades:ruby_chestplate",
+    "mythicupgrades:ruby_leggings",
+    "mythicupgrades:ruby_boots"
   ]
 }

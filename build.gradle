@@ -27,7 +27,7 @@ loom {
 
 repositories {
     mavenCentral()
-    maven { url 'https://maven.wispforest.io' }
+    maven { url = 'https://maven.wispforest.io' }
 
     maven {
         name = "TerraformersMC"

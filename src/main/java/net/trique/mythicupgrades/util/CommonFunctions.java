@@ -99,7 +99,10 @@ public class CommonFunctions {
         return result.toString();
     }
 
-    public static  <T extends LivingEntity>  boolean checkForItemMastery(T user) {
-        return !user.hasEffect(MUEffects.ITEM_MASTERY) || (user.hasEffect(MUEffects.ITEM_MASTERY) && RANDOM.nextFloat() > 0.1f * (user.getEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1));
+    public static  <T extends LivingEntity> boolean applyItemMasteryChance(T user) {
+        if (user.hasEffect(MUEffects.ITEM_MASTERY)) {
+            return RANDOM.nextFloat() <= 0.1f * (user.getEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1);
+        }
+        return false;
     }
 }

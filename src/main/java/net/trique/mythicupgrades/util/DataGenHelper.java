@@ -8,9 +8,11 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.trique.mythicupgrades.MythicUpgrades;
 import org.jetbrains.annotations.Nullable;
 import static net.minecraft.data.recipes.RecipeProvider.inventoryTrigger;
 
@@ -26,7 +28,7 @@ public class DataGenHelper {
 
     public static void offerCustomUpgradeRecipe(Consumer<FinishedRecipe> exporter, Item template, Item input, Item itemMaterialUpgrade, RecipeCategory category, Item result) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(template), Ingredient.of(input), Ingredient.of(itemMaterialUpgrade), category, result).
-                unlocks(RecipeProvider.getHasName(() -> itemMaterialUpgrade), RecipeProvider.has(itemMaterialUpgrade)).save(exporter, RecipeProvider.getItemName(result) + "_smithing");
+                unlocks(RecipeProvider.getHasName(() -> itemMaterialUpgrade), RecipeProvider.has(itemMaterialUpgrade)).save(exporter, new ResourceLocation(MythicUpgrades.MOD_ID, RecipeProvider.getItemName(result) + "_smithing"));
     }
 
     public static void offerCustomSmithingTemplateCopyingRecipe(Consumer<FinishedRecipe> exporter, ItemLike template, ItemLike duplicationMaterial, ItemLike resource) {

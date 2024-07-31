@@ -3,9 +3,6 @@ package net.trique.mythicupgrades.data;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,16 +19,31 @@ public class MUItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(
                         AQUAMARINE_HELMET, AQUAMARINE_CHESTPLATE, AQUAMARINE_LEGGINGS, AQUAMARINE_BOOTS,
-                        CITRINE_HELMET, CITRINE_CHESTPLATE, CITRINE_LEGGINGS, CITRINE_BOOTS,
                         PERIDOT_HELMET, PERIDOT_CHESTPLATE, PERIDOT_LEGGINGS, PERIDOT_BOOTS,
-                        ZIRCON_HELMET, ZIRCON_CHESTPLATE, ZIRCON_LEGGINGS, ZIRCON_BOOTS,
                         SAPPHIRE_HELMET, SAPPHIRE_CHESTPLATE, SAPPHIRE_LEGGINGS, SAPPHIRE_BOOTS,
                         TOPAZ_HELMET, TOPAZ_CHESTPLATE, TOPAZ_LEGGINGS, TOPAZ_BOOTS,
                         AMETRINE_HELMET, AMETRINE_CHESTPLATE, AMETRINE_LEGGINGS, AMETRINE_BOOTS,
-                        JADE_HELMET, JADE_CHESTPLATE, JADE_LEGGINGS, JADE_BOOTS
-                );
+                        JADE_HELMET, JADE_CHESTPLATE, JADE_LEGGINGS, JADE_BOOTS,
+                        RUBY_HELMET, RUBY_CHESTPLATE, RUBY_LEGGINGS, RUBY_BOOTS);
         getOrCreateTagBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES).add(
-                RUBY_PICKAXE, TOPAZ_PICKAXE
+                RUBY_PICKAXE, TOPAZ_PICKAXE, SAPPHIRE_PICKAXE, JADE_PICKAXE, AMETRINE_PICKAXE,
+                AQUAMARINE_PICKAXE, PERIDOT_PICKAXE
+        );
+        getOrCreateTagBuilder(ItemTags.SWORDS).add(
+                AMETRINE_SWORD, AQUAMARINE_SWORD, JADE_SWORD, PERIDOT_SWORD, RUBY_SWORD, SAPPHIRE_SWORD, TOPAZ_SWORD
+        );
+        getOrCreateTagBuilder(ItemTags.AXES).add(
+                AMETRINE_AXE, AQUAMARINE_AXE, JADE_AXE, PERIDOT_AXE, RUBY_AXE, SAPPHIRE_AXE, TOPAZ_AXE
+
+        );
+        getOrCreateTagBuilder(ItemTags.PICKAXES).add(
+                AMETRINE_PICKAXE, AQUAMARINE_PICKAXE, JADE_PICKAXE, PERIDOT_PICKAXE, RUBY_PICKAXE, SAPPHIRE_PICKAXE, TOPAZ_PICKAXE
+        );
+        getOrCreateTagBuilder(ItemTags.SHOVELS).add(
+                AMETRINE_SHOVEL, AQUAMARINE_SHOVEL, JADE_SHOVEL, PERIDOT_SHOVEL, RUBY_SHOVEL, SAPPHIRE_SHOVEL, TOPAZ_SHOVEL
+        );
+        getOrCreateTagBuilder(ItemTags.HOES).add(
+                AMETRINE_HOE, AQUAMARINE_HOE, JADE_HOE, PERIDOT_HOE, RUBY_HOE, SAPPHIRE_HOE, TOPAZ_HOE
         );
     }
 }

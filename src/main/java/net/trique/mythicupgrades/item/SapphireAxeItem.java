@@ -12,7 +12,7 @@ import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
-public class SapphireAxeItem extends MythicEffectsAxeItem {
+public class SapphireAxeItem extends MythicEffectsAxeItem implements VirtualSapphireTool {
     private int percent;
 
     public SapphireAxeItem(int attackDamage, int percent,float attackSpeed, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
@@ -22,7 +22,7 @@ public class SapphireAxeItem extends MythicEffectsAxeItem {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context) {
-        tooltip.add(Component.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.weapons_percentage_damage_percent()).toArray()).withStyle(color));
+        tooltip.add(Component.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.tools_percentage_damage_percent()).toArray()).withStyle(color));
     }
 
     public void setPercent(int percent) {

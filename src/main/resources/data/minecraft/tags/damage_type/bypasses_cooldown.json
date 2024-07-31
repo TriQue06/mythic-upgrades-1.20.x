@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mythicupgrades:deflecting_damage_type",
-    "mythicupgrades:percentage_damage_type"
+    "mythicupgrades:deflecting_damage_type"
   ]
 }
