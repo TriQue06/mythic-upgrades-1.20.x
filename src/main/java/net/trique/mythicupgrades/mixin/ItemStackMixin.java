@@ -15,7 +15,7 @@ public abstract class ItemStackMixin {
 
     @WrapOperation(method = "hurtAndBreak", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurt(ILnet/minecraft/util/RandomSource;Lnet/minecraft/server/level/ServerPlayer;)Z"))
     private boolean applyItemMasteryChanceOnItems(ItemStack instance, int i, RandomSource randomSource, ServerPlayer serverPlayer, Operation<Boolean> original) {
-        if (!applyItemMasteryChance(serverPlayer)) {
+        if (serverPlayer != null && !applyItemMasteryChance(serverPlayer)) {
             return original.call(instance, i, randomSource, serverPlayer);
         }
         return false;
