@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sapphire_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:sapphire_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:sapphire_block"
+  }
+}

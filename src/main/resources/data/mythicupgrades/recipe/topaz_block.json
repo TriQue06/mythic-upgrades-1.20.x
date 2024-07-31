@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "topaz_block",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:topaz_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:topaz_block"
+  }
+}

@@ -7,9 +7,4 @@ public class ItemMasteryEffect extends MobEffect {
     protected ItemMasteryEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
-
-    @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
-        return true;
-    }
 }

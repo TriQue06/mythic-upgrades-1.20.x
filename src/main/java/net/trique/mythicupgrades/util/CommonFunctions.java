@@ -1,27 +1,41 @@
 package net.trique.mythicupgrades.util;
 
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgrades;
 import net.trique.mythicupgrades.effect.MUEffects;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 import static net.trique.mythicupgrades.MythicUpgrades.RANDOM;
 
 public class CommonFunctions {
 
-    public static boolean checkStatusEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects) {
-        for (MobEffect effect : effects.keySet()) {
+    public static int getEnchantmentLevel(ResourceKey<Enchantment> key, Level world, ItemStack stack) {
+        RegistryAccess drm = world.registryAccess();
+        Registry<Enchantment> reg = drm.registryOrThrow(Registries.ENCHANTMENT);
+        Optional<Holder.Reference<Enchantment>> optional = reg.getHolder(key);
+        Holder<Enchantment> enchantmentEntry = optional.orElseThrow();
+        return EnchantmentHelper.getItemEnchantmentLevel(enchantmentEntry, stack);
+    }
+
+    public static boolean checkStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects) {
+        for (Holder<MobEffect> effect : effects.keySet()) {
             MobEffectInstance instance = entity.getEffect(effect);
             EffectMeta meta = effects.get(effect);
             if (instance != null) {
@@ -34,11 +48,11 @@ public class CommonFunctions {
         }
         return false;
     }
-    public static void addStatusEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects, LivingEntity attacker) {
-        for (MobEffect effect : effects.keySet()) {
+    public static void addStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects, LivingEntity attacker) {
+        for (Holder<MobEffect> effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
-            if (effect != null && ((effect.equals(MobEffects.HEAL) && (entity.getMobType().equals(MobType.UNDEAD))) ||
-                    (!(effect.equals(MobEffects.HARM) && (entity.getMobType().equals(MobType.UNDEAD)))) || !effect.isInstantenous())) {
+            if (effect != null && ((effect.equals(MobEffects.HEAL) && (entity.getTags().contains(EntityTypeTags.UNDEAD.toString()))) ||
+                    (!(effect.equals(MobEffects.HARM) && (entity.getTags().contains(EntityTypeTags.UNDEAD.toString())))) || !effect.value().isInstantenous())) {
                 if (entity.hasEffect(effect)) {
                     entity.removeEffect(effect);
                 }
@@ -48,7 +62,7 @@ public class CommonFunctions {
         }
     }
 
-    public static void addStatusEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects) {
+    public static void addStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects) {
         addStatusEffects(entity, effects, null);
     }
 
@@ -62,14 +76,14 @@ public class CommonFunctions {
             if (!(stack.getItem() instanceof ArmorItem)) {
                 return false;
             }
-            if (!((ArmorItem) stack.getItem()).getMaterial().equals(material)) {
+            if (!((ArmorItem) stack.getItem()).getMaterial().value().equals(material)) {
                 return false;
             }
         }
         return true;
     }
-    public static void removeMythicInfiniteEffects(LivingEntity entity, HashMap<MobEffect, EffectMeta> effects) {
-        for (MobEffect effect : effects.keySet()) {
+    public static void removeMythicInfiniteEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects) {
+        for (Holder<MobEffect> effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
             if (effect != null && entity.hasEffect(effect) && entity.getEffect(effect).isInfiniteDuration() &&
             entity.getEffect(effect).getAmplifier() == meta.getAmplifier()) {
@@ -99,7 +113,10 @@ public class CommonFunctions {
         return result.toString();
     }
 
-    public static  <T extends LivingEntity>  boolean checkForItemMastery(T user) {
-        return !user.hasEffect(MUEffects.ITEM_MASTERY) || (user.hasEffect(MUEffects.ITEM_MASTERY) && RANDOM.nextFloat() > 0.1f * (user.getEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1));
+    public static  <T extends LivingEntity> boolean applyItemMasteryChance(T user) {
+        if (user != null && user.hasEffect(MUEffects.ITEM_MASTERY)) {
+            return RANDOM.nextFloat() <= 0.1f * (user.getEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1);
+        }
+        return false;
     }
 }

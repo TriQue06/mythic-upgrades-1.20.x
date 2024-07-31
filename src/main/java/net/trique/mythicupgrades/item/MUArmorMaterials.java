@@ -1,93 +1,91 @@
 package net.trique.mythicupgrades.item;
 
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.trique.mythicupgrades.MythicUpgrades;
+
+import java.util.List;
+import java.util.Map;
 import java.util.function.Supplier;
 
 import static net.trique.mythicupgrades.item.MUItems.*;
 
-public enum MUArmorMaterials implements ArmorMaterial {
-    AQUAMARINE("aquamarine", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(AQUAMARINE_INGOT)),
-    CITRINE("citrine", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(CITRINE_INGOT)),
-    PERIDOT("peridot", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(PERIDOT_INGOT)),
-    ZIRCON("zircon", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F, () -> Ingredient.of(ZIRCON_INGOT)),
-    SAPPHIRE("sapphire", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(SAPPHIRE_INGOT)),
-    TOPAZ("topaz", 150, new int[] { 4, 9, 7, 4 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(TOPAZ_INGOT)),
-    AMETRINE("ametrine", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(AMETRINE_INGOT)),
-    JADE("jade", 50, new int[] { 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(JADE_INGOT));
+public class MUArmorMaterials {
+    public static final Holder<ArmorMaterial> AQUAMARINE;
+    public static final Holder<ArmorMaterial> PERIDOT;
+    public static final Holder<ArmorMaterial> SAPPHIRE;
+    public static final Holder<ArmorMaterial> TOPAZ;
+    public static final Holder<ArmorMaterial> RUBY;
+    public static final Holder<ArmorMaterial> AMETRINE;
+    public static final Holder<ArmorMaterial> JADE;
 
-    private final String name;
-    private final int durabilityMultiplier;
-    private final int[] protectionAmounts;
-    private final int enchantability;
-    private final SoundEvent equipSound;
-    private final float toughness;
-    private final float knockbackResistance;
-    private final Supplier<Ingredient> repairIngredient;
+    public static Holder<ArmorMaterial> registerMaterial(String id, Map<Type, Integer> defensePoints, Holder<SoundEvent> equipSound, int enchantability, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
+        List<ArmorMaterial.Layer> layers = List.of(
+                new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, id), "", dyeable)
+        );
 
-    private static final int[] BASE_DURABILITY = { 11, 16, 15, 13 };
-
-    MUArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound,
-                     float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
-        this.name = name;
-        this.durabilityMultiplier = durabilityMultiplier;
-        this.protectionAmounts = protectionAmounts;
-        this.enchantability = enchantability;
-        this.equipSound = equipSound;
-        this.toughness = toughness;
-        this.knockbackResistance = knockbackResistance;
-        this.repairIngredient = repairIngredient;
+        ArmorMaterial material = new ArmorMaterial(defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance);
+        material = Registry.register(BuiltInRegistries.ARMOR_MATERIAL, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, id), material);
+        return Holder.direct(material);
     }
 
-    @Override
-    public int getDurabilityForType(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
-    }
+    static {
+        AQUAMARINE = registerMaterial("aquamarine", Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE, 18,
+                () -> Ingredient.of(AQUAMARINE_INGOT), 3.0F, 0.1F, false);
+        PERIDOT = registerMaterial("peridot", Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE, 18,
+                () -> Ingredient.of(PERIDOT_INGOT), 3.0F, 0.1F, false);
+        SAPPHIRE = registerMaterial("sapphire",  Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE, 18,
+                () -> Ingredient.of(SAPPHIRE_INGOT), 3.0F, 0.1F, false);
+        TOPAZ = registerMaterial("topaz", Map.of(
+                        Type.HELMET, 4,
+                        Type.CHESTPLATE, 9,
+                        Type.LEGGINGS, 7,
+                        Type.BOOTS, 4
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE,
+                 18, () -> Ingredient.of(TOPAZ_INGOT), 3.0F, 0.1F, false);
+        RUBY = registerMaterial("ruby", Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE,
+                 18, () -> Ingredient.of(RUBY_INGOT), 3.0F, 0.1F, false);
+        AMETRINE = registerMaterial("ametrine", Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE,
+                18, () -> Ingredient.of(AMETRINE_INGOT), 3.0F, 0.1F, false);
+        JADE = registerMaterial("jade", Map.of(
+                        Type.HELMET, 3,
+                        Type.CHESTPLATE, 8,
+                        Type.LEGGINGS, 6,
+                        Type.BOOTS, 3
+                ), SoundEvents.ARMOR_EQUIP_NETHERITE,
+                18, () -> Ingredient.of(JADE_INGOT), 3.0F, 0.1F, false);
 
-    @Override
-    public int getDefenseForType(ArmorItem.Type type) {
-        return protectionAmounts[type.ordinal()];
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return this.enchantability;
-    }
-
-    @Override
-    public SoundEvent getEquipSound() {
-        return this.equipSound;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
-    }
-
-    @Override
-    public String getName() {
-        return MythicUpgrades.MOD_ID + ":" + this.name;
-    }
-
-    @Override
-    public float getToughness() {
-        return this.toughness;
-    }
-
-    @Override
-    public float getKnockbackResistance() {
-        return this.knockbackResistance;
     }
 }

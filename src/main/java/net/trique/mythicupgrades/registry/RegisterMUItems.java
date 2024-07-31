@@ -20,10 +20,15 @@ import static net.trique.mythicupgrades.MythicUpgrades.*;
 public class RegisterMUItems {
     private static final ArrayList<Item> ALL_ITEMS = new ArrayList<>();
     private static <T extends Item> void registerItem(String name, T item) {
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(MOD_ID, name), (Item) item);
+        Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, name), (Item) item);
     }
 
     private static void registerMUItems() {
+        registerItem("aquamarine_axe", AQUAMARINE_AXE);
+        registerItem("aquamarine_shovel", AQUAMARINE_SHOVEL);
+        registerItem("aquamarine_pickaxe", AQUAMARINE_PICKAXE);
+        registerItem("aquamarine_hoe", AQUAMARINE_HOE);
+        registerItem("aquamarine_sword", AQUAMARINE_SWORD);
         registerItem("aquamarine_helmet", AQUAMARINE_HELMET);
         registerItem("aquamarine_chestplate", AQUAMARINE_CHESTPLATE);
         registerItem("aquamarine_leggings", AQUAMARINE_LEGGINGS);
@@ -34,19 +39,10 @@ public class RegisterMUItems {
         registerItem("aquamarine_potion", AQUAMARINE_POTION);
         registerItem("aquamarine_upgrade_smithing_template", AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
 
-        registerItem("citrine_axe", CITRINE_AXE);
-        registerItem("citrine_sword", CITRINE_SWORD);
-        registerItem("citrine_helmet", CITRINE_HELMET);
-        registerItem("citrine_chestplate", CITRINE_CHESTPLATE);
-        registerItem("citrine_leggings", CITRINE_LEGGINGS);
-        registerItem("citrine_boots", CITRINE_BOOTS);
-        registerItem("citrine", CITRINE);
-        registerItem("citrine_ingot", CITRINE_INGOT);
-        registerItem("citrine_crystal_shard", CITRINE_CRYSTAL_SHARD);
-        registerItem("citrine_potion", CITRINE_POTION);
-        registerItem("citrine_upgrade_smithing_template", CITRINE_UPGRADE_SMITHING_TEMPLATE);
-
         registerItem("peridot_axe", PERIDOT_AXE);
+        registerItem("peridot_shovel", PERIDOT_SHOVEL);
+        registerItem("peridot_pickaxe", PERIDOT_PICKAXE);
+        registerItem("peridot_hoe", PERIDOT_HOE);
         registerItem("peridot_sword", PERIDOT_SWORD);
         registerItem("peridot_helmet", PERIDOT_HELMET);
         registerItem("peridot_chestplate", PERIDOT_CHESTPLATE);
@@ -57,40 +53,6 @@ public class RegisterMUItems {
         registerItem("peridot_crystal_shard", PERIDOT_CRYSTAL_SHARD);
         registerItem("peridot_potion", PERIDOT_POTION);
         registerItem("peridot_upgrade_smithing_template", PERIDOT_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("zircon_helmet", ZIRCON_HELMET);
-        registerItem("zircon_chestplate", ZIRCON_CHESTPLATE);
-        registerItem("zircon_leggings", ZIRCON_LEGGINGS);
-        registerItem("zircon_boots", ZIRCON_BOOTS);
-        registerItem("zircon_axe", ZIRCON_AXE);
-        registerItem("zircon_sword", ZIRCON_SWORD);
-        registerItem("zircon", ZIRCON);
-        registerItem("zircon_ingot", ZIRCON_INGOT);
-        registerItem("zircon_crystal_shard", ZIRCON_CRYSTAL_SHARD);
-        registerItem("zircon_potion", ZIRCON_POTION);
-        registerItem("zircon_upgrade_smithing_template", ZIRCON_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("ruby_shovel", RUBY_SHOVEL);
-        registerItem("ruby_axe", RUBY_AXE);
-        registerItem("ruby_pickaxe", RUBY_PICKAXE);
-        registerItem("ruby_hoe", RUBY_HOE);
-        registerItem("ruby", RUBY);
-        registerItem("ruby_ingot", RUBY_INGOT);
-        registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
-        registerItem("ruby_potion", RUBY_POTION);
-        registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
-
-        registerItem("sapphire_helmet", SAPPHIRE_HELMET);
-        registerItem("sapphire_chestplate", SAPPHIRE_CHESTPLATE);
-        registerItem("sapphire_leggings", SAPPHIRE_LEGGINGS);
-        registerItem("sapphire_boots", SAPPHIRE_BOOTS);
-        registerItem("sapphire_axe", SAPPHIRE_AXE);
-        registerItem("sapphire_sword", SAPPHIRE_SWORD);
-        registerItem("sapphire", SAPPHIRE);
-        registerItem("sapphire_ingot", SAPPHIRE_INGOT);
-        registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
-        registerItem("sapphire_potion", SAPPHIRE_POTION);
-        registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
 
         registerItem("topaz_shovel", TOPAZ_SHOVEL);
         registerItem("topaz_pickaxe", TOPAZ_PICKAXE);
@@ -107,7 +69,40 @@ public class RegisterMUItems {
         registerItem("topaz_potion", TOPAZ_POTION);
         registerItem("topaz_upgrade_smithing_template", TOPAZ_UPGRADE_SMITHING_TEMPLATE);
 
+        registerItem("ruby_shovel", RUBY_SHOVEL);
+        registerItem("ruby_axe", RUBY_AXE);
+        registerItem("ruby_pickaxe", RUBY_PICKAXE);
+        registerItem("ruby_hoe", RUBY_HOE);
+        registerItem("ruby_sword", RUBY_SWORD);
+        registerItem("ruby_helmet", RUBY_HELMET);
+        registerItem("ruby_chestplate", RUBY_CHESTPLATE);
+        registerItem("ruby_leggings", RUBY_LEGGINGS);
+        registerItem("ruby_boots", RUBY_BOOTS);
+        registerItem("ruby", RUBY);
+        registerItem("ruby_ingot", RUBY_INGOT);
+        registerItem("ruby_crystal_shard", RUBY_CRYSTAL_SHARD);
+        registerItem("ruby_potion", RUBY_POTION);
+        registerItem("ruby_upgrade_smithing_template", RUBY_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("sapphire_axe", SAPPHIRE_AXE);
+        registerItem("sapphire_shovel", SAPPHIRE_SHOVEL);
+        registerItem("sapphire_pickaxe", SAPPHIRE_PICKAXE);
+        registerItem("sapphire_hoe", SAPPHIRE_HOE);
+        registerItem("sapphire_sword", SAPPHIRE_SWORD);
+        registerItem("sapphire_helmet", SAPPHIRE_HELMET);
+        registerItem("sapphire_chestplate", SAPPHIRE_CHESTPLATE);
+        registerItem("sapphire_leggings", SAPPHIRE_LEGGINGS);
+        registerItem("sapphire_boots", SAPPHIRE_BOOTS);
+        registerItem("sapphire", SAPPHIRE);
+        registerItem("sapphire_ingot", SAPPHIRE_INGOT);
+        registerItem("sapphire_crystal_shard", SAPPHIRE_CRYSTAL_SHARD);
+        registerItem("sapphire_potion", SAPPHIRE_POTION);
+        registerItem("sapphire_upgrade_smithing_template", SAPPHIRE_UPGRADE_SMITHING_TEMPLATE);
+
+        registerItem("ametrine_shovel", AMETRINE_SHOVEL);
+        registerItem("ametrine_pickaxe", AMETRINE_PICKAXE);
         registerItem("ametrine_axe", AMETRINE_AXE);
+        registerItem("ametrine_hoe", AMETRINE_HOE);
         registerItem("ametrine_sword", AMETRINE_SWORD);
         registerItem("ametrine_helmet", AMETRINE_HELMET);
         registerItem("ametrine_chestplate", AMETRINE_CHESTPLATE);
@@ -119,7 +114,10 @@ public class RegisterMUItems {
         registerItem("ametrine_potion", AMETRINE_POTION);
         registerItem("ametrine_upgrade_smithing_template", AMETRINE_UPGRADE_SMITHING_TEMPLATE);
 
+        registerItem("jade_shovel", JADE_SHOVEL);
+        registerItem("jade_pickaxe", JADE_PICKAXE);
         registerItem("jade_axe", JADE_AXE);
+        registerItem("jade_hoe", JADE_HOE);
         registerItem("jade_sword", JADE_SWORD);
         registerItem("jade_helmet", JADE_HELMET);
         registerItem("jade_chestplate", JADE_CHESTPLATE);
@@ -133,7 +131,6 @@ public class RegisterMUItems {
 
         registerItem("raw_necoium", RAW_NECOIUM);
         registerItem("necoium_ingot", NECOIUM_INGOT);
-        registerItem("necoium_nugget", NECOIUM_NUGGET);
     }
 
     private static void registerMUItemGroup() {
@@ -143,6 +140,11 @@ public class RegisterMUItems {
                     entries.accept(RUBY_PICKAXE);
                     entries.accept(RUBY_AXE);
                     entries.accept(RUBY_HOE);
+                    entries.accept(RUBY_SWORD);
+                    entries.accept(RUBY_HELMET);
+                    entries.accept(RUBY_CHESTPLATE);
+                    entries.accept(RUBY_LEGGINGS);
+                    entries.accept(RUBY_BOOTS);
 
                     entries.accept(TOPAZ_SHOVEL);
                     entries.accept(TOPAZ_PICKAXE);
@@ -154,54 +156,57 @@ public class RegisterMUItems {
                     entries.accept(TOPAZ_LEGGINGS);
                     entries.accept(TOPAZ_BOOTS);
 
-                    entries.accept(CITRINE_AXE);
-                    entries.accept(CITRINE_SWORD);
-                    entries.accept(CITRINE_HELMET);
-                    entries.accept(CITRINE_CHESTPLATE);
-                    entries.accept(CITRINE_LEGGINGS);
-                    entries.accept(CITRINE_BOOTS);
-
+                    entries.accept(PERIDOT_SHOVEL);
+                    entries.accept(PERIDOT_PICKAXE);
                     entries.accept(PERIDOT_AXE);
+                    entries.accept(PERIDOT_HOE);
                     entries.accept(PERIDOT_SWORD);
                     entries.accept(PERIDOT_HELMET);
                     entries.accept(PERIDOT_CHESTPLATE);
                     entries.accept(PERIDOT_LEGGINGS);
                     entries.accept(PERIDOT_BOOTS);
 
+                    entries.accept(JADE_SHOVEL);
+                    entries.accept(JADE_PICKAXE);
                     entries.accept(JADE_AXE);
+                    entries.accept(JADE_HOE);
                     entries.accept(JADE_SWORD);
                     entries.accept(JADE_HELMET);
                     entries.accept(JADE_CHESTPLATE);
                     entries.accept(JADE_LEGGINGS);
                     entries.accept(JADE_BOOTS);
 
+                    entries.accept(AQUAMARINE_SHOVEL);
+                    entries.accept(AQUAMARINE_PICKAXE);
+                    entries.accept(AQUAMARINE_AXE);
+                    entries.accept(AQUAMARINE_HOE);
+                    entries.accept(AQUAMARINE_SWORD);
                     entries.accept(AQUAMARINE_HELMET);
                     entries.accept(AQUAMARINE_CHESTPLATE);
                     entries.accept(AQUAMARINE_LEGGINGS);
                     entries.accept(AQUAMARINE_BOOTS);
 
-                    entries.accept(ZIRCON_AXE);
-                    entries.accept(ZIRCON_SWORD);
-                    entries.accept(ZIRCON_HELMET);
-                    entries.accept(ZIRCON_CHESTPLATE);
-                    entries.accept(ZIRCON_LEGGINGS);
-                    entries.accept(ZIRCON_BOOTS);
-
+                    entries.accept(SAPPHIRE_SHOVEL);
+                    entries.accept(SAPPHIRE_PICKAXE);
                     entries.accept(SAPPHIRE_AXE);
+                    entries.accept(SAPPHIRE_HOE);
                     entries.accept(SAPPHIRE_SWORD);
                     entries.accept(SAPPHIRE_HELMET);
                     entries.accept(SAPPHIRE_CHESTPLATE);
                     entries.accept(SAPPHIRE_LEGGINGS);
                     entries.accept(SAPPHIRE_BOOTS);
 
+                    entries.accept(AMETRINE_SHOVEL);
+                    entries.accept(AMETRINE_PICKAXE);
                     entries.accept(AMETRINE_AXE);
+                    entries.accept(AMETRINE_HOE);
                     entries.accept(AMETRINE_SWORD);
                     entries.accept(AMETRINE_HELMET);
                     entries.accept(AMETRINE_CHESTPLATE);
                     entries.accept(AMETRINE_LEGGINGS);
                     entries.accept(AMETRINE_BOOTS);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythictoolsgroup"), MYTHICTOOLSGROUP);
 
         CreativeModeTab MYTHICMISCGROUP = FabricItemGroup.builder().title(Component.literal("Mythic Upgrades: Misc"))
                 .icon(() -> new ItemStack(JADE)).displayItems((displayContext, entries) -> {
@@ -216,12 +221,6 @@ public class RegisterMUItems {
                     entries.accept(TOPAZ_CRYSTAL_SHARD);
                     entries.accept(TOPAZ_POTION);
                     entries.accept(TOPAZ_UPGRADE_SMITHING_TEMPLATE);
-
-                    entries.accept(CITRINE);
-                    entries.accept(CITRINE_INGOT);
-                    entries.accept(CITRINE_CRYSTAL_SHARD);
-                    entries.accept(CITRINE_POTION);
-                    entries.accept(CITRINE_UPGRADE_SMITHING_TEMPLATE);
 
                     entries.accept(PERIDOT);
                     entries.accept(PERIDOT_INGOT);
@@ -241,12 +240,6 @@ public class RegisterMUItems {
                     entries.accept(AQUAMARINE_POTION);
                     entries.accept(AQUAMARINE_UPGRADE_SMITHING_TEMPLATE);
 
-                    entries.accept(ZIRCON);
-                    entries.accept(ZIRCON_INGOT);
-                    entries.accept(ZIRCON_CRYSTAL_SHARD);
-                    entries.accept(ZIRCON_POTION);
-                    entries.accept(ZIRCON_UPGRADE_SMITHING_TEMPLATE);
-
                     entries.accept(SAPPHIRE);
                     entries.accept(SAPPHIRE_INGOT);
                     entries.accept(SAPPHIRE_CRYSTAL_SHARD);
@@ -261,9 +254,8 @@ public class RegisterMUItems {
 
                     entries.accept(RAW_NECOIUM);
                     entries.accept(NECOIUM_INGOT);
-                    entries.accept(NECOIUM_NUGGET);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythicmiscgroup"), MYTHICMISCGROUP);
 
         CreativeModeTab MYTHICBLOCKGROUP = FabricItemGroup.builder().title(Component.literal("Mythic Upgrades: Blocks"))
                 .icon(() -> new ItemStack(JADE_BLOCK)).displayItems((displayContext, entries) -> {
@@ -274,14 +266,9 @@ public class RegisterMUItems {
 
                     entries.accept(TOPAZ_BLOCK);
                     entries.accept(TOPAZ_ORE);
+                    entries.accept(DEEPSLATE_TOPAZ_ORE);
                     entries.accept(TOPAZ_CRYSTAL_BLOCK);
                     entries.accept(TOPAZ_CRYSTAL_CLUSTER);
-
-                    entries.accept(CITRINE_BLOCK);
-                    entries.accept(CITRINE_ORE);
-                    entries.accept(DEEPSLATE_CITRINE_ORE);
-                    entries.accept(CITRINE_CRYSTAL_BLOCK);
-                    entries.accept(CITRINE_CRYSTAL_CLUSTER);
 
                     entries.accept(PERIDOT_BLOCK);
                     entries.accept(PERIDOT_ORE);
@@ -300,12 +287,6 @@ public class RegisterMUItems {
                     entries.accept(AQUAMARINE_CRYSTAL_BLOCK);
                     entries.accept(AQUAMARINE_CRYSTAL_CLUSTER);
 
-                    entries.accept(ZIRCON_BLOCK);
-                    entries.accept(ZIRCON_ORE);
-                    entries.accept(DEEPSLATE_ZIRCON_ORE);
-                    entries.accept(ZIRCON_CRYSTAL_BLOCK);
-                    entries.accept(ZIRCON_CRYSTAL_CLUSTER);
-
                     entries.accept(SAPPHIRE_BLOCK);
                     entries.accept(SAPPHIRE_ORE);
                     entries.accept(SAPPHIRE_CRYSTAL_BLOCK);
@@ -320,7 +301,7 @@ public class RegisterMUItems {
                     entries.accept(NECOIUM_BLOCK);
                     entries.accept(NECOIUM_ORE);
                 }).build();
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
     }
 
     public static void registerMythicItems() {

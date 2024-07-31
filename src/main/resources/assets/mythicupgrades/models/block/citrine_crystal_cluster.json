@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "mythicupgrades:block/citrine_crystal_cluster"
-  }
-}

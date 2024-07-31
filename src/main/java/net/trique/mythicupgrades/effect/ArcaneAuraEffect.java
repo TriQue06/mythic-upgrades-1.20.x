@@ -16,22 +16,22 @@ public class ArcaneAuraEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
+    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.level().isClientSide()) {
             Entity attacker = livingEntity.getLastHurtByMob();
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.playSound(SoundEvents.SHULKER_HURT, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION,
-                            (int)(CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
+                            (int) (CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
                 }
             }
         }
-        super.applyEffectTick(livingEntity, amplifier);
+        return super.applyEffectTick(livingEntity, amplifier);
     }
 
     @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
+    public boolean shouldApplyEffectTickThisTick(int i, int j) {
         return true;
     }
 }

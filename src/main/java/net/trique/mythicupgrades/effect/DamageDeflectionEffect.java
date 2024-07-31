@@ -8,9 +8,4 @@ public class DamageDeflectionEffect extends MobEffect {
     public DamageDeflectionEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
-
-    @Override
-    public boolean isDurationEffectTick(int duration, int amplifier) {
-        return true;
-    }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:sapphire_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:sapphire_axe"
+  },
+  "template": {
+    "item": "mythicupgrades:sapphire_upgrade_smithing_template"
+  }
+}

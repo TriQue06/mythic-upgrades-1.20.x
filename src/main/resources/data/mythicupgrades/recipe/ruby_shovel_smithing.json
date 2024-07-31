@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mythicupgrades:ruby_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:ruby_shovel"
+  },
+  "template": {
+    "item": "mythicupgrades:ruby_upgrade_smithing_template"
+  }
+}

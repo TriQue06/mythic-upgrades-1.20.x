@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "mythicupgrades:block/large_citrine_crystal_bud"
-  }
-}
