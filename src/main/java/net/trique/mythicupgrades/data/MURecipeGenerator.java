@@ -254,5 +254,25 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 Items.NETHERITE_LEGGINGS, JADE_INGOT, RecipeCategory.COMBAT, JADE_LEGGINGS);
         offerCustomUpgradeRecipe(exporter, JADE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_BOOTS, JADE_INGOT, RecipeCategory.COMBAT, JADE_BOOTS);
+
+
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_AXE, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_AXE);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_SWORD, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_SWORD);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_PICKAXE, AQUAMARINE_INGOT, RecipeCategory.TOOLS, AQUAMARINE_PICKAXE);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_SHOVEL, AQUAMARINE_INGOT, RecipeCategory.TOOLS, AQUAMARINE_SHOVEL);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_HOE, AQUAMARINE_INGOT, RecipeCategory.TOOLS, AQUAMARINE_HOE);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_HELMET, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_HELMET);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_CHESTPLATE, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_CHESTPLATE);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_LEGGINGS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_LEGGINGS);
+        offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
+                Items.NETHERITE_BOOTS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_BOOTS);
     }
 }
