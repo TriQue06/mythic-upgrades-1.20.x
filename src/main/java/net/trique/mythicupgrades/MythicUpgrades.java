@@ -6,6 +6,7 @@ import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
 import net.trique.mythicupgrades.registry.RegisterMUEffects;
 import net.trique.mythicupgrades.registry.RegisterMUItems;
+import net.trique.mythicupgrades.registry.RegisterMUParticles;
 import net.trique.mythicupgrades.util.MULootTableModifiers;
 import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class MythicUpgrades implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		CONFIG.load();
+		RegisterMUParticles.registerParticles();
 		RegisterMUEffects.registerEffects();
 		RegisterMUItems.registerMythicItems();
 		RegisterMUCommands.registerCommands();

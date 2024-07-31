@@ -1,18 +1,18 @@
 package net.trique.mythicupgrades.mixin;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.BaseMythicItem;
 import net.trique.mythicupgrades.item.MythicEffectsArmorItem;
 import net.trique.mythicupgrades.util.CommonFunctions;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.minecraft.world.damagesource.DamageSource;
@@ -26,9 +26,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import java.util.Map;
-import java.util.function.Consumer;
-
-import static net.trique.mythicupgrades.util.CommonFunctions.applyItemMasteryChance;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -36,6 +33,7 @@ public abstract class LivingEntityMixin extends Entity {
     public LivingEntityMixin(EntityType<?> type, Level world) {
         super(type, world);
         deflecting_damage = 0f;
+        lastWorn = null;
         has_damage_been_deflected = false;
     }
 
@@ -44,6 +42,8 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Shadow
     public abstract Map<MobEffect, MobEffectInstance> getActiveEffectsMap();
+
+    @Shadow @Nullable public abstract MobEffectInstance getEffect(MobEffect effect);
 
     @Unique private boolean has_damage_been_deflected;
 
@@ -73,7 +73,7 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
-    private void applyArmorBuffs(CallbackInfo ci) {
+    private void applyArmorEffectsForSelf(CallbackInfo ci) {
         ItemStack head = this.getItemBySlot(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
             if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
@@ -91,7 +91,7 @@ public abstract class LivingEntityMixin extends Entity {
     }
 
     @Inject(method = "hurt", at = @At(value = "RETURN"))
-    private void applyArmorDebuffs(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+    private void applyArmorEffectsForEnemy(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         boolean was_damaged = cir.getReturnValue();
         if (was_damaged) {
             Entity attacker = source.getEntity();
@@ -105,10 +105,10 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    @ModifyVariable(method = "hurt", at = @At(value = "HEAD"), argsOnly = true)
-    private float reduceIncomingDamage(float amount, DamageSource source, float am1) {
+    @WrapMethod(method = "hurt")
+    private boolean reduceIncomingDamage(DamageSource source, float amount, Operation<Boolean> original) {
         if (!this.level().isClientSide()) {
-            MobEffectInstance deflection = this.getActiveEffectsMap().get(MUEffects.DAMAGE_DEFLECTION);
+            MobEffectInstance deflection = this.getEffect(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getEntity();
                 float defl_dmg_coef = deflection.getAmplifier() / 10f;
@@ -117,32 +117,26 @@ public abstract class LivingEntityMixin extends Entity {
                     amount *= (0.9f - defl_dmg_coef);
                 }
             }
-            return amount;
         }
-        return 0f;
+        return original.call(source, amount);
     }
 
     @Inject(method = "hurt", at = @At(value = "TAIL"))
     private void deflectDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        if (cir.getReturnValue()) {
-            MobEffectInstance deflection = this.getActiveEffectsMap().get(MUEffects.DAMAGE_DEFLECTION);
+        if (!this.level().isClientSide() && cir.getReturnValue()) {
+            MobEffectInstance deflection = this.getEffect(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getEntity();
-                if (attacker != null && attacker.distanceTo(this) <= 3.0f && !has_damage_been_deflected) {
-                    has_damage_been_deflected = true;
-                    attacker.hurt(MythicUpgradesDamageTypes.create(attacker.level(),
-                            MythicUpgradesDamageTypes.DEFLECTING_DAMAGE_TYPE, (LivingEntity)(Object)this), deflecting_damage);
+                if (attacker instanceof LivingEntity enemy) {
+                    if (enemy.distanceToSqr(this) <= 9.0f && !has_damage_been_deflected) {
+                        DamageSource deflecting_source = MythicUpgradesDamageTypes.deflecting_damage(this);
+                        has_damage_been_deflected = true;
+                        enemy.hurt(deflecting_source, deflecting_damage);
+                    }
                 }
+
             }
         }
         has_damage_been_deflected = false;
-    }
-
-
-    @WrapOperation(method = "updateFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
-    private <T extends LivingEntity> void applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int i, T livingEntity, Consumer<T> consumer, Operation<Void> original) {
-        if (!applyItemMasteryChance(livingEntity)) {
-            original.call(instance, i, livingEntity, consumer);
-        }
     }
 }

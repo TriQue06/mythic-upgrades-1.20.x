@@ -19,5 +19,6 @@ public class RegisterMUEffects {
         registerEffect(MUEffects.DAMAGE_DEFLECTION, "damage_deflection");
         registerEffect(MUEffects.ITEM_MASTERY, "item_mastery");
         registerEffect(MUEffects.ARCANE_AURA, "arcane_aura");
+        registerEffect(MUEffects.BOUNCER, "bouncer");
     }
 }

@@ -1,13 +1,13 @@
 {
-  "text.config.mythicupgrades-config.title": [{"text" : "Настройки мода \"Mythic Upgrades\"", "color" : "dark_purple", "bold": "true"}],
+  "text.config.mythicupgrades-config.title": [{"text" : "Настройки мода \"Mythic Upgrades\"", "color" : "dark_purple", "bold": true}],
 
-  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Перидот", "color" : "green", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфир", "color" : "dark_blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубин", "color" : "red", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Топаз", "color" : "gold", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "dark_purple", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Нефрит", "color" : "dark_green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Перидот", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфир", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубин", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Топаз", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Нефрит", "color" : "dark_green", "bold": true}],
 
   "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_amplifier": [{"text": "Сила эффекта \"Щит океана\" (броня)", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ocean_shield_duration": [{"text": "Длительность эффекта \"Щит океана\" (броня)", "color": "aqua"}],
@@ -216,10 +216,9 @@
   "effect.mythicupgrades.item_mastery": "Владение предметом",
   "effect.mythicupgrades.arcane_aura": "Аура Аркана",
   "effect.mythicupgrades.miners_shield": "Щит шахтёра",
-  "effect.mythicupgrades.bouncer": "Попрыгун",
 
-  "defaultArmorTooltip.description": "Одень полный набор брони чтобы получить усиления!",
-  
+  "defaultArmorTooltip.description": "Оденьте полный комплект брони чтобы получить усиления!",
+
   "aquamarine_armor.description": "Эффект набора: Ледяной щит %s",
   "aquamarine_tool.description": "При ударе накладывает на цель эффект \"Заморозка\"",
 
@@ -239,12 +238,12 @@
   "ametrine_tool.description": "При ударе накладывает на цель эффект \"Левитация\"",
 
   "jade_armor.description": "Эффект набора: Скорость %s и Прыгучесть %s",
-  "jade_tool.description": "Когда предмет в ведущей руке накладывает эффект \"Попрыгун\"",
+  "jade_tool.description": "Накладывает эффект Прыгучести при ударе по противнику",
 
   "death.attack.deflecting": "%s забыл что отраженный от %s урон может убить",
-  "death.attack.deflecting.item": "%s забыл что отраженный от %s урон при помощи %s может убить",
+  "death.attack.deflecting.item": "%s добровольно убился своим же уроном об %s, держащего %s",
   "death.attack.percentage": "Магический процентный урон умножил жизнь %s на ноль, пока тот сражался с %s",
-  "death.attack.percentage.item": "Магический процентный урон умножил жизнь %s на ноль, пока тот сражался с %s при помощи %s",
+  "death.attack.percentage.item": "Магический процентный урон умножил жизнь %s на ноль, пока тот сражался с %s, держащего %s",
 
   "item.mythicupgrades.smithing_template.aquamarine_upgrade.additions_slot_description": "Добавьте аквамариновый слиток",
   "item.mythicupgrades.smithing_template.aquamarine_upgrade.applies_to": "Незеритовое снаряжение",

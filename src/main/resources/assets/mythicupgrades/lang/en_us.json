@@ -1,13 +1,13 @@
 {
-  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "aqua", "bold": true}],
 
-  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Sapphire", "color" : "dark_blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aquamarine", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Sapphire", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Ruby", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": true}],
 
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "aqua"}],
@@ -145,10 +145,10 @@
   "block.mythicupgrades.sapphire_block": "Block of Sapphire",
   "block.mythicupgrades.sapphire_crystal_block": "Block of Sapphire Crystal",
   "block.mythicupgrades.sapphire_crystal_cluster": "Sapphire Crystal Cluster",
-  
+
   "item.mythicupgrades.ametrine": "Ametrine",
   "item.mythicupgrades.ametrine_ingot": "Ametrine Ingot",
-  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard", 
+  "item.mythicupgrades.ametrine_crystal_shard": "Ametrine Crystal Shard",
   "item.mythicupgrades.ametrine_potion": "Ametrine Potion",
 
   "item.mythicupgrades.ametrine_helmet": "Ametrine Helmet",
@@ -166,10 +166,10 @@
   "block.mythicupgrades.ametrine_block": "Block of Ametrine",
   "block.mythicupgrades.ametrine_crystal_block": "Block of Ametrine Crystal",
   "block.mythicupgrades.ametrine_crystal_cluster": "Ametrine Crystal Cluster",
-  
+
   "item.mythicupgrades.jade": "Jade",
   "item.mythicupgrades.jade_ingot": "Jade Ingot",
-  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard", 
+  "item.mythicupgrades.jade_crystal_shard": "Jade Crystal Shard",
   "item.mythicupgrades.jade_potion": "Jade Potion",
 
   "item.mythicupgrades.jade_helmet": "Jade Helmet",
@@ -232,7 +232,7 @@
   "ametrine_tool.description": "Levitates enemy on hit.",
 
   "jade_armor.description": "Set Bonus: Speed %s and Jump Boost %s",
-  "jade_tool.description": "Provides Bouncer when in main hand.",
+  "jade_tool.description": "Provides Jump Boost on hit.",
 
   "death.attack.deflecting": "%s has received enough deflected damage from %s to pass away.",
   "death.attack.deflecting.item": "%s has received enough deflected damage from %s to pass away with help of %s.",

@@ -4,7 +4,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.trique.mythicupgrades.MythicUpgrades;
-import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,13 +25,13 @@ public abstract class ServerWorldMixin {
         ItemEffectsList aquamarineArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ICE_SHIELD, CONFIG.aquamarineConfig.ice_shield_amplifier()).build();
         List<Integer> aquamarineAmplifiers = List.of(CONFIG.aquamarineConfig.ice_shield_amplifier());
 
-        ItemEffectsList peridotArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.POISONOUS_THORNS, CONFIG.peridotConfig.poisonous_thorns_amplifier()).build();
+        ItemEffectsList peridotArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(POISONOUS_THORNS, CONFIG.peridotConfig.poisonous_thorns_amplifier()).build();
         List<Integer> peridotAmplifiers = List.of(CONFIG.peridotConfig.poisonous_thorns_amplifier());
 
         ItemEffectsList rubyArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MINERS_SHIELD, CONFIG.rubyConfig.miners_shield_amplifier()).build();
         List<Integer> rubyAmplifiers = List.of(CONFIG.rubyConfig.miners_shield_amplifier());
 
-        ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MUEffects.DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
+        ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
         List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
 
         ItemEffectsList topazArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(ITEM_MASTERY, CONFIG.topazConfig.item_mastery_amplifier()).addForEquipmentBuffs(MobEffects.FIRE_RESISTANCE, 0).build();
@@ -46,13 +45,13 @@ public abstract class ServerWorldMixin {
 
         ItemEffectsList poisonToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.POISON, (int)(CONFIG.peridotConfig.tools_poison_duration() * 20), CONFIG.peridotConfig.tools_poison_amplifier()).build();
 
-        ItemEffectsList freezeToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MUEffects.FREEZE, (int)(CONFIG.aquamarineConfig.tools_freeze_duration() * 20), 0).build();
+        ItemEffectsList freezeToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(FREEZE, (int)(CONFIG.aquamarineConfig.tools_freeze_duration() * 20), 0).build();
 
         ItemEffectsList hasteToolEffects = new ItemEffectsListBuilder().addForMainHand(MobEffects.DIG_SPEED, MobEffectInstance.INFINITE_DURATION, CONFIG.rubyConfig.tools_haste_amplifier()).build();
 
         ItemEffectsList levitationToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.LEVITATION, (int)(CONFIG.ametrineConfig.tools_levitation_duration() * 20), CONFIG.ametrineConfig.tools_levitation_amplifier()).build();
 
-        ItemEffectsList bouncerToolEffect = new ItemEffectsListBuilder().addForHitToSelf(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), MythicUpgrades.CONFIG.jadeConfig.tools_bouncer_amplifier()).build();
+        ItemEffectsList bouncerToolEffect = new ItemEffectsListBuilder().addForMainHand(BOUNCER, MobEffectInstance.INFINITE_DURATION, MythicUpgrades.CONFIG.jadeConfig.tools_bouncer_amplifier()).build();
 
         AQUAMARINE_AXE.setNewEffects(freezeToolEffects);
         AQUAMARINE_PICKAXE.setNewEffects(freezeToolEffects);

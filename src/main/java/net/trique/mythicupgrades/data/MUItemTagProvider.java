@@ -29,5 +29,21 @@ public class MUItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 RUBY_PICKAXE, TOPAZ_PICKAXE, SAPPHIRE_PICKAXE, JADE_PICKAXE, AMETRINE_PICKAXE,
                 AQUAMARINE_PICKAXE, PERIDOT_PICKAXE
         );
+        getOrCreateTagBuilder(ItemTags.SWORDS).add(
+                AMETRINE_SWORD, AQUAMARINE_SWORD, JADE_SWORD, PERIDOT_SWORD, RUBY_SWORD, SAPPHIRE_SWORD, TOPAZ_SWORD
+        );
+        getOrCreateTagBuilder(ItemTags.AXES).add(
+                AMETRINE_AXE, AQUAMARINE_AXE, JADE_AXE, PERIDOT_AXE, RUBY_AXE, SAPPHIRE_AXE, TOPAZ_AXE
+
+        );
+        getOrCreateTagBuilder(ItemTags.PICKAXES).add(
+                AMETRINE_PICKAXE, AQUAMARINE_PICKAXE, JADE_PICKAXE, PERIDOT_PICKAXE, RUBY_PICKAXE, SAPPHIRE_PICKAXE, TOPAZ_PICKAXE
+        );
+        getOrCreateTagBuilder(ItemTags.SHOVELS).add(
+                AMETRINE_SHOVEL, AQUAMARINE_SHOVEL, JADE_SHOVEL, PERIDOT_SHOVEL, RUBY_SHOVEL, SAPPHIRE_SHOVEL, TOPAZ_SHOVEL
+        );
+        getOrCreateTagBuilder(ItemTags.HOES).add(
+                AMETRINE_HOE, AQUAMARINE_HOE, JADE_HOE, PERIDOT_HOE, RUBY_HOE, SAPPHIRE_HOE, TOPAZ_HOE
+        );
     }
 }

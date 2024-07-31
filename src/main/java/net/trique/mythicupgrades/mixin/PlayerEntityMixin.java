@@ -1,11 +1,10 @@
 package net.trique.mythicupgrades.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -14,21 +13,18 @@ import net.minecraft.world.entity.boss.EnderDragonPart;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
+import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.*;
 import net.trique.mythicupgrades.util.EffectMeta;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import java.util.function.Consumer;
 
-import static net.trique.mythicupgrades.util.CommonFunctions.applyItemMasteryChance;
+import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
 @Mixin(Player.class)
 public abstract class PlayerEntityMixin extends LivingEntity {
@@ -37,8 +33,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         super(entityType, world);
     }
 
-    @Shadow
-    public abstract @NotNull ItemStack getItemBySlot(EquipmentSlot slot);
+    protected void percentHit(Entity entity) {
+
+    }
 
 
     @Inject(method = "attack", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
@@ -51,8 +48,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                 boolean ambient = meta.isAmbient();
                 boolean showIcon = meta.shouldShowIcon();
                 boolean showParticles = meta.shouldShowParticles();
-                float sweeping_amplifier = EnchantmentHelper.getSweepingDamageRatio(this);
-                livingEntity.addEffect(new MobEffectInstance(effect, duration, Math.max(0, (int) ((double) amplifier - 0.75 + sweeping_amplifier)), ambient, showParticles, showIcon));
+                double sweeping_amplifier = EnchantmentHelper.getSweepingDamageRatio(this);
+                livingEntity.addEffect(new MobEffectInstance(effect, duration, Math.max(0, (int) (amplifier - 0.75 + sweeping_amplifier)), ambient, showParticles, showIcon));
             }
         }
     }
@@ -63,17 +60,18 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
             int percent = ((VirtualSapphireTool) weapon).getPercent();
-            DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
-                    MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+            DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 100f) * h * h;
             if (entity.invulnerableTime <= 10) {
                 if (entity instanceof EnderDragonPart part) {
                     EnderDragon dragon = part.parentMob;
                     dmg *= dragon.getMaxHealth();
                     dragon.hurt(part, source, dmg);
+                    percentHit(entity);
                 } else if (entity instanceof LivingEntity target) {
                     dmg *= target.getMaxHealth();
                     target.hurt(source, dmg);
+                    percentHit(target);
                 }
                 entity.invulnerableTime = 0;
             }
@@ -87,21 +85,22 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
             int percent = ((VirtualSapphireTool) weapon).getPercent();
-            DamageSource source = MythicUpgradesDamageTypes.create(entity.level(),
-                    MythicUpgradesDamageTypes.PERCENTAGE_DAMAGE_TYPE, this);
+            DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 200f) * (0.7f + 0.1f * EnchantmentHelper.getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this));
             if (livingEntity.invulnerableTime <= 10) {
                 dmg *= livingEntity.getMaxHealth();
                 livingEntity.hurt(source, dmg);
+                percentHit(livingEntity);
                 livingEntity.invulnerableTime = 0;
             }
         }
     }
 
-    @WrapOperation(method = "hurtCurrentlyUsedShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;hurtAndBreak(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
-    private <T extends LivingEntity> void applyChanceWithToolMasteryForDamageShield(ItemStack instance, int i, T livingEntity, Consumer<T> consumer, Operation<Void> original) {
-        if (!applyItemMasteryChance(livingEntity)) {
-            original.call(instance, i, livingEntity, consumer);
+    @Inject(method = "attack", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void applyBouncerEffect(Entity entity, CallbackInfo ci) {
+        if (this.hasEffect(MUEffects.BOUNCER)) {
+            int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
+            this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
         }
     }
 }

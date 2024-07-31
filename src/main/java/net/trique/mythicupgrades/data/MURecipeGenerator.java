@@ -13,7 +13,9 @@ import static net.trique.mythicupgrades.util.CommonFunctions.getId;
 import java.util.List;
 import java.util.function.Consumer;
 
+
 public class MURecipeGenerator extends FabricRecipeProvider {
+
     public MURecipeGenerator(FabricDataOutput output) {
         super(output);
     }

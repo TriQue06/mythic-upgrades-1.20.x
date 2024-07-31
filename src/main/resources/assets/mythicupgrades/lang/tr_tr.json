@@ -1,13 +1,13 @@
 {
-  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "aqua", "bold": "true"}],
+  "text.config.mythicupgrades-config.title": [{"text" : "Mythic Upgrades Config", "color" : "aqua", "bold": true}],
 
-  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Akuamarin", "color" : "aqua", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Safir", "color" : "dark_blue", "bold":  "true"}],
-  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Yakut", "color" : "red", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrin", "color" : "dark_purple", "bold": "true"}],
-  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Yeşim", "color" : "dark_green", "bold": "true"}],
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Akuamarin", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Peridot", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaz", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Safir", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Yakut", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrin", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Yeşim", "color" : "dark_green", "bold": true}],
 
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Zırhın Buzul Kalkan Süresi", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Zırhın Buzul Kalkan Seviyesi", "color": "aqua"}],
