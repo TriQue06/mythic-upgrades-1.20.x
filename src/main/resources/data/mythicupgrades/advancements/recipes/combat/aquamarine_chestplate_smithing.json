@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:aquamarine_chestplate_smithing"
+        "recipe": "mythicupgrades:aquamarine_chestplate_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:aquamarine_chestplate_smithing"
+      "mythicupgrades:aquamarine_chestplate_smithing"
     ]
   },
   "sends_telemetry_event": false
