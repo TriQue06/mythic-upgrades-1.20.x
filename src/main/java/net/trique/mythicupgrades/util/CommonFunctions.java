@@ -100,7 +100,7 @@ public class CommonFunctions {
     }
 
     public static  <T extends LivingEntity> boolean applyItemMasteryChance(T user) {
-        if (user.hasEffect(MUEffects.ITEM_MASTERY)) {
+        if (user != null && user.hasEffect(MUEffects.ITEM_MASTERY)) {
             return RANDOM.nextFloat() <= 0.1f * (user.getEffect(MUEffects.ITEM_MASTERY).getAmplifier() + 1);
         }
         return false;
