@@ -62,8 +62,9 @@ public class MUConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> netherSapphireOres =
                 List.of(OreConfiguration.target(netherStoneReplaceables, MUBlocks.SAPPHIRE_ORE.defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> netherTopazOres =
-                List.of(OreConfiguration.target(netherStoneReplaceables, MUBlocks.TOPAZ_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldTopazOres =
+                List.of(OreConfiguration.target(stoneReplaceables, MUBlocks.TOPAZ_ORE.defaultBlockState()),
+                        OreConfiguration.target(deepslateReplaceables, MUBlocks.DEEPSLATE_TOPAZ_ORE.defaultBlockState()));
 
         List<OreConfiguration.TargetBlockState> endAmetrineOres =
                 List.of(OreConfiguration.target(endStoneReplaceables, MUBlocks.AMETRINE_ORE.defaultBlockState()));
@@ -78,7 +79,7 @@ public class MUConfiguredFeatures {
         register(context, PERIDOT_ORE_KEY, Feature.ORE, new OreConfiguration(overworldPeridotOres, 5));
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(netherRubyOres, 5));
         register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(netherSapphireOres, 5));
-        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(netherTopazOres, 5));
+        register(context, TOPAZ_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTopazOres, 5));
         register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreConfiguration(endAmetrineOres, 5));
         register(context, JADE_ORE_KEY, Feature.ORE, new OreConfiguration(endJadeOres, 5));
         register(context, NECOIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endNecoiumOres, 5));

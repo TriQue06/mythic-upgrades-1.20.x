@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "mythicupgrades:peridot_crystal_shard"
+    },
+    "B": {
+      "item": "minecraft:glass_bottle"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#N#",
+    "#B#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicupgrades:peridot_potion"
+  }
+}
