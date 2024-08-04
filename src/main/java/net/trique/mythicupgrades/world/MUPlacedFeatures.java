@@ -58,7 +58,7 @@ public class MUPlacedFeatures {
 
         register(context, TOPAZ_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.TOPAZ_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64))));
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
 
         register(context, AMETRINE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MUConfiguredFeatures.AMETRINE_ORE_KEY),
                 MUOrePlacement.modifiersWithCount(6,
