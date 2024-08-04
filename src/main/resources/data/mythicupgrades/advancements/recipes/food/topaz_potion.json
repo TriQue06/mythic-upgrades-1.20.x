@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicupgrades:topaz_potion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_topaz_crystal_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:topaz_crystal_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_topaz_crystal_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicupgrades:topaz_potion"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -273,5 +273,13 @@ public class MURecipeGenerator extends FabricRecipeProvider {
                 Items.NETHERITE_LEGGINGS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_LEGGINGS);
         offerCustomUpgradeRecipe(exporter, AQUAMARINE_UPGRADE_SMITHING_TEMPLATE,
                 Items.NETHERITE_BOOTS, AQUAMARINE_INGOT, RecipeCategory.COMBAT, AQUAMARINE_BOOTS);
+
+        offerMythicPotionRecipe(exporter, AMETRINE_CRYSTAL_SHARD, AMETRINE_POTION);
+        offerMythicPotionRecipe(exporter, AQUAMARINE_CRYSTAL_SHARD, AQUAMARINE_POTION);
+        offerMythicPotionRecipe(exporter, JADE_CRYSTAL_SHARD, JADE_POTION);
+        offerMythicPotionRecipe(exporter, PERIDOT_CRYSTAL_SHARD, PERIDOT_POTION);
+        offerMythicPotionRecipe(exporter, RUBY_CRYSTAL_SHARD, RUBY_POTION);
+        offerMythicPotionRecipe(exporter, SAPPHIRE_CRYSTAL_SHARD, SAPPHIRE_POTION);
+        offerMythicPotionRecipe(exporter, TOPAZ_CRYSTAL_SHARD, TOPAZ_POTION);
     }
 }
