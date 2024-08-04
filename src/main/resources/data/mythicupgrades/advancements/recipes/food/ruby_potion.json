@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ruby_crystal_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mythicupgrades:ruby_crystal_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicupgrades:ruby_potion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ruby_crystal_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicupgrades:ruby_potion"
+    ]
+  },
+  "sends_telemetry_event": false
+}
