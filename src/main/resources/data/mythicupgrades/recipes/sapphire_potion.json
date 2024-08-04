@@ -5,19 +5,20 @@
     "#": {
       "item": "mythicupgrades:sapphire_crystal_shard"
     },
-    "X": {
-      "item": "minecraft:gold_nugget"
-    },
-    "O": {
+    "B": {
       "item": "minecraft:glass_bottle"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "pattern": [
     "###",
-    "#X#",
-    "#O#"
+    "#N#",
+    "#B#"
   ],
   "result": {
     "item": "mythicupgrades:sapphire_potion"
-  }
+  },
+  "show_notification": true
 }
