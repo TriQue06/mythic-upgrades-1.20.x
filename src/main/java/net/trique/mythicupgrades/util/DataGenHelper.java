@@ -6,6 +6,9 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.PotionItem;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.trique.mythicupgrades.MythicUpgrades;
@@ -57,5 +60,11 @@ public class DataGenHelper {
         ItemLike [] ans = new ItemLike[tmp.size()];
         tmp.toArray(ans);
         return ans;
+    }
+
+    public static void offerMythicPotionRecipe(RecipeOutput exporter, ItemLike gem, ItemLike mythicPotion) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, mythicPotion, 1).define('#', gem).define('N',
+                Items.GOLD_NUGGET).define('B', Items.GLASS_BOTTLE).pattern("###").pattern("#N#")
+                .pattern("#B#").unlockedBy(RecipeProvider.getHasName(gem), RecipeProvider.has(gem)).save(exporter);
     }
 }
