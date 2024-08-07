@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.potion;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
@@ -16,10 +16,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 
-public class MythicPotionItem extends Item {
+public class OldMythicPotionItem extends Item {
     private static final int MAX_USE_TIME = 20;
 
-    public MythicPotionItem(Properties settings) {
+    public OldMythicPotionItem(Properties settings) {
         super(settings);
     }
 
@@ -43,9 +43,8 @@ public class MythicPotionItem extends Item {
             return stack;
         }
     }
-
-    public int getUseDuration(ItemStack stack) {
-        return 20;
+    public int getUseDuration(ItemStack itemStack, LivingEntity livingEntity) {
+        return MAX_USE_TIME;
     }
 
     public UseAnim getUseAnimation(ItemStack stack) {

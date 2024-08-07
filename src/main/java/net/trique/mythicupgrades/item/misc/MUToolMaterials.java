@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.misc;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.tags.BlockTags;

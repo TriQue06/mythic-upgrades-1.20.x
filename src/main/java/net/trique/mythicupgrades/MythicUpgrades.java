@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.effect.MUEffects;
+import net.trique.mythicupgrades.item.potion.MUPotions;
 import net.trique.mythicupgrades.networking.MUPackets;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
 import net.trique.mythicupgrades.registry.RegisterMUItems;
@@ -27,6 +28,7 @@ public class MythicUpgrades implements ModInitializer {
 		RegisterMUParticles.registerParticles();
 		MUPackets.registerPacketCodecs();
 		MUEffects.registerEffects();
+		MUPotions.bootstrap();
 		RegisterMUItems.registerMythicItems();
 		RegisterMUCommands.registerCommands();
 		MUBlocks.registerMythicBlocks();

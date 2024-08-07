@@ -1,11 +1,18 @@
 package net.trique.mythicupgrades.item;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.trique.mythicupgrades.MythicUpgrades;
+import net.trique.mythicupgrades.item.misc.MUArmorMaterials;
+import net.trique.mythicupgrades.item.misc.MUTemplateItem;
+import net.trique.mythicupgrades.item.misc.MUToolMaterials;
+import net.trique.mythicupgrades.item.mythic_impl.*;
+import net.trique.mythicupgrades.item.potion.*;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.ItemEffectsListBuilder;
 
@@ -48,40 +55,44 @@ public class MUItems {
 
     private static final ItemEffectsList bouncerToolEffect = new ItemEffectsListBuilder().addForMainHand(BOUNCER, MobEffectInstance.INFINITE_DURATION, MythicUpgrades.CONFIG.jadeConfig.tools_bouncer_amplifier()).build();
 
+    public static final Item MYTHIC_POTION = new MythicPotionItem(new Item.Properties().stacksTo(16).component(DataComponents.POTION_CONTENTS, PotionContents.EMPTY));
+    public static final Item MYTHIC_SPLASH_POTION = new MythicSplashPotionItem(new Item.Properties().stacksTo(16).component(DataComponents.POTION_CONTENTS, PotionContents.EMPTY));
+    public static final Item MYTHIC_LINGERING_POTION = new MythicLingeringPotionItem(new Item.Properties().stacksTo(16).component(DataComponents.POTION_CONTENTS, PotionContents.EMPTY));
+
     public static final Item AQUAMARINE = new Item(new Item.Properties());
     public static final Item AQUAMARINE_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item AQUAMARINE_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item AQUAMARINE_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.AQUAMARINE_POTION).stacksTo(16));
+    public static final Item AQUAMARINE_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.AQUAMARINE_POTION).stacksTo(16));
 
     public static final Item PERIDOT = new Item(new Item.Properties());
     public static final Item PERIDOT_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item PERIDOT_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item PERIDOT_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.PERIDOT_POTION).stacksTo(16));
+    public static final Item PERIDOT_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.PERIDOT_POTION).stacksTo(16));
 
     public static final Item RUBY = new Item(new Item.Properties());
     public static final Item RUBY_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item RUBY_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item RUBY_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.RUBY_POTION).stacksTo(16));
+    public static final Item RUBY_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.RUBY_POTION).stacksTo(16));
 
     public static final Item SAPPHIRE = new Item(new Item.Properties());
     public static final Item SAPPHIRE_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item SAPPHIRE_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item SAPPHIRE_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.SAPPHIRE_POTION).stacksTo(16));
+    public static final Item SAPPHIRE_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.SAPPHIRE_POTION).stacksTo(16));
 
     public static final Item TOPAZ = new Item(new Item.Properties());
     public static final Item TOPAZ_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item TOPAZ_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item TOPAZ_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.TOPAZ_POTION).stacksTo(16));
+    public static final Item TOPAZ_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.TOPAZ_POTION).stacksTo(16));
 
     public static final Item AMETRINE = new Item(new Item.Properties());
     public static final Item AMETRINE_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item AMETRINE_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item AMETRINE_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.AMETRINE_POTION).stacksTo(16));
+    public static final Item AMETRINE_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.AMETRINE_POTION).stacksTo(16));
     
     public static final Item JADE = new Item(new Item.Properties());
     public static final Item JADE_INGOT = new Item(new Item.Properties().fireResistant());
     public static final Item JADE_CRYSTAL_SHARD = new Item(new Item.Properties().fireResistant());
-    public static final Item JADE_POTION = new MythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.JADE_POTION).stacksTo(16));
+    public static final Item JADE_POTION = new OldMythicPotionItem(new Item.Properties().fireResistant().food(MUFoods.JADE_POTION).stacksTo(16));
 
     public static final Item RAW_NECOIUM = new Item(new Item.Properties().fireResistant());
     public static final Item NECOIUM_INGOT = new Item(new Item.Properties().fireResistant());

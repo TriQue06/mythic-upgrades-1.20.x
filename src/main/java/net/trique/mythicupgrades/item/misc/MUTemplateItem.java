@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.misc;
 
 import java.util.List;
 import net.minecraft.ChatFormatting;

@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.base;
 
 import net.minecraft.world.item.Tier;
 import net.trique.mythicupgrades.util.ItemEffectsList;

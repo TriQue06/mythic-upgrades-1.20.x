@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -8,7 +9,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.trique.mythicupgrades.MythicUpgrades;
+import net.trique.mythicupgrades.item.potion.MUPotionItems;
+import net.trique.mythicupgrades.item.potion.MUPotions;
 
 import java.util.ArrayList;
 
@@ -24,6 +29,10 @@ public class RegisterMUItems {
     }
 
     private static void registerMUItems() {
+        registerItem("mythic_potion", MYTHIC_POTION);
+        registerItem("mythic_splash_potion", MYTHIC_SPLASH_POTION);
+        registerItem("mythic_lingering_potion", MYTHIC_LINGERING_POTION);
+
         registerItem("aquamarine_axe", AQUAMARINE_AXE);
         registerItem("aquamarine_shovel", AQUAMARINE_SHOVEL);
         registerItem("aquamarine_pickaxe", AQUAMARINE_PICKAXE);
@@ -131,6 +140,7 @@ public class RegisterMUItems {
 
         registerItem("raw_necoium", RAW_NECOIUM);
         registerItem("necoium_ingot", NECOIUM_INGOT);
+        MUPotionItems.setupMythicPotions();
     }
 
     private static void registerMUItemGroup() {
@@ -304,8 +314,30 @@ public class RegisterMUItems {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, "mythicblockgroup"), MYTHICBLOCKGROUP);
     }
 
+    private static void addBrewingRecipes() {
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+            builder.addContainer(MYTHIC_POTION);
+            builder.addContainer(MYTHIC_SPLASH_POTION);
+            builder.addContainer(MYTHIC_LINGERING_POTION);
+            builder.addContainerRecipe(Items.POTION, Items.EMERALD, MYTHIC_POTION);
+            builder.addContainerRecipe(Items.LINGERING_POTION, Items.EMERALD, MYTHIC_LINGERING_POTION);
+            builder.addContainerRecipe(Items.SPLASH_POTION, Items.EMERALD, MYTHIC_SPLASH_POTION);
+            builder.addContainerRecipe(MYTHIC_POTION, Items.GUNPOWDER, MYTHIC_SPLASH_POTION);
+            builder.addContainerRecipe(MYTHIC_POTION, Items.DRAGON_BREATH, MYTHIC_LINGERING_POTION);
+            builder.addStartMix(Items.GOLD_NUGGET, MUPotions.BASE);
+            builder.addMix(MUPotions.BASE, AMETRINE_CRYSTAL_SHARD, MUPotions.AMETRINE);
+            builder.addMix(MUPotions.BASE, AQUAMARINE_CRYSTAL_SHARD, MUPotions.AQUAMARINE);
+            builder.addMix(MUPotions.BASE, JADE_CRYSTAL_SHARD, MUPotions.JADE);
+            builder.addMix(MUPotions.BASE, PERIDOT_CRYSTAL_SHARD, MUPotions.PERIDOT);
+            builder.addMix(MUPotions.BASE, RUBY_CRYSTAL_SHARD, MUPotions.RUBY);
+            builder.addMix(MUPotions.BASE, SAPPHIRE_CRYSTAL_SHARD, MUPotions.SAPPHIRE);
+            builder.addMix(MUPotions.BASE, TOPAZ_CRYSTAL_SHARD, MUPotions.TOPAZ);
+        });
+    }
+
     public static void registerMythicItems() {
         registerMUItems();
+        addBrewingRecipes();
         registerMUItemGroup();
         LOGGER.info("Registering Mythic Items for " + MOD_ID);
     }
