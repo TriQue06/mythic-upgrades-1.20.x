@@ -198,15 +198,6 @@ public class MULootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if (BASTION_BRIDGE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
             if (NETHER_BRIDGE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
@@ -221,24 +212,6 @@ public class MULootTableModifiers {
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.SAPPHIRE_POTION))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (NETHER_BRIDGE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (NETHER_BRIDGE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
-                        .add(LootItem.lootTableItem(MUItems.TOPAZ_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
