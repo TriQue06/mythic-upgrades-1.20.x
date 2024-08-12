@@ -17,6 +17,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.alchemy.PotionContents;
 import net.minecraft.world.level.Level;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MythicPotionItem extends Item {
@@ -71,7 +72,7 @@ public class MythicPotionItem extends Item {
         if (this.components().has(DataComponents.FOOD)) {
             FoodProperties props = this.components().get(DataComponents.FOOD);
             if (props != null && !props.effects().isEmpty()) {
-                List<MobEffectInstance> effects = new java.util.ArrayList<>(List.of());
+                List<MobEffectInstance> effects = new ArrayList<>(List.of());
                 props.effects().forEach((possibleEffect)-> effects.add(possibleEffect.effect()));
                 PotionContents.addPotionTooltip(effects, list::add, 1.0F, tooltipContext.tickRate());
             }
