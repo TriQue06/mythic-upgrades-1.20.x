@@ -46,6 +46,7 @@ public class MULootTableGenerator extends FabricBlockLootTableProvider {
         dropSelf(TOPAZ_BLOCK);
         dropSelf(TOPAZ_CRYSTAL_BLOCK);
         add(TOPAZ_ORE, createOreDrop(TOPAZ_ORE, TOPAZ));
+        add(DEEPSLATE_TOPAZ_ORE, createOreDrop(DEEPSLATE_TOPAZ_ORE, TOPAZ));
 
         dropSelf(AMETRINE_BLOCK);
         dropSelf(AMETRINE_CRYSTAL_BLOCK);
