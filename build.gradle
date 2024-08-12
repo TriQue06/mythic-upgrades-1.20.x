@@ -41,6 +41,7 @@ repositories {
 
 dependencies {
     annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+    include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.4.1")))
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"

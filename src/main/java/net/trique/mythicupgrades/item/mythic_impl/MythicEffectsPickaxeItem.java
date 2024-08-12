@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.mythic_impl;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
@@ -9,12 +9,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.trique.mythicupgrades.item.base.BaseMythicToolItem;
 import net.trique.mythicupgrades.util.EffectMeta;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import net.trique.mythicupgrades.util.MythicEffectVirtualItemHandler;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;

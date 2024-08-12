@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.misc;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;

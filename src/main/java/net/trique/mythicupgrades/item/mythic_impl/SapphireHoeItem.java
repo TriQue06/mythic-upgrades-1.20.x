@@ -1,13 +1,13 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.mythic_impl;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.trique.mythicupgrades.item.misc.MUToolMaterials;
+import net.trique.mythicupgrades.item.base.VirtualSapphireTool;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 

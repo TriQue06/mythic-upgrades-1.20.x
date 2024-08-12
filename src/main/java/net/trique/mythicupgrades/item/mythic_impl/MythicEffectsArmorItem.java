@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.mythic_impl;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
@@ -9,6 +9,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.trique.mythicupgrades.item.base.BaseMythicArmorItem;
 import net.trique.mythicupgrades.util.*;
 import org.jetbrains.annotations.NotNull;
 

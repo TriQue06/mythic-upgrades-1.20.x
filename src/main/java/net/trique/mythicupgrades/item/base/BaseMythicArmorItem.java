@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item;
+package net.trique.mythicupgrades.item.base;
 
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
