@@ -2,6 +2,7 @@ package net.trique.mythicupgrades.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 
@@ -44,6 +45,11 @@ public class MUBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 JADE_BLOCK, JADE_ORE,
                 AMETRINE_BLOCK, AMETRINE_ORE,
                 NECOIUM_BLOCK, NECOIUM_ORE, RAW_NECOIUM_BLOCK
+        );
+        getOrCreateTagBuilder(ConventionalBlockTags.ORES).add(
+                AMETRINE_ORE, AQUAMARINE_ORE, DEEPSLATE_AQUAMARINE_ORE,
+                JADE_ORE, PERIDOT_ORE, DEEPSLATE_PERIDOT_ORE, RUBY_ORE,
+                SAPPHIRE_ORE, TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, NECOIUM_ORE
         );
     }
 }
