@@ -13,9 +13,11 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MythicPotionItem extends Item {
@@ -64,5 +66,15 @@ public class MythicPotionItem extends Item {
 
     public InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand) {
         return ItemUtils.startUsingInstantly(world, user, hand);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {
+        super.appendHoverText(itemStack, level, list, tooltipFlag);
+        if (this.getFoodProperties() != null && !this.getFoodProperties().getEffects().isEmpty()) {
+            List<MobEffectInstance> effects = new ArrayList<>(List.of());
+            this.getFoodProperties().getEffects().forEach((pair)->effects.add(pair.getFirst()));
+            PotionUtils.addPotionTooltip(effects, list, 1.0F);
+        }
     }
 }
