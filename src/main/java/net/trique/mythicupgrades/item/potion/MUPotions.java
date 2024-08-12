@@ -35,7 +35,7 @@ public class MUPotions {
             alwaysEdible().build();
 
     public static final FoodProperties JADE_POTION = (new FoodProperties.Builder()).nutrition(4).saturationModifier(0.4F).
-            effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 2), 1.0F).
-            effect(new MobEffectInstance(MobEffects.JUMP, 3600, 2), 1.0F).
+            effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 1), 1.0F).
+            effect(new MobEffectInstance(MobEffects.JUMP, 3600, 1), 1.0F).
             alwaysEdible().build();
 }
