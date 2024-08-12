@@ -11,10 +11,6 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.trique.mythicupgrades.item.MUItems;
 
 public class MULootTableModifiers {
-    private static final ResourceLocation UNDERWATER_RUIN_BIG_ID = BuiltInLootTables.UNDERWATER_RUIN_BIG;
-
-    private static final ResourceLocation UNDERWATER_RUIN_SMALL_ID = BuiltInLootTables.UNDERWATER_RUIN_SMALL;
-
     private static final ResourceLocation DESERT_PYRAMID_ID = BuiltInLootTables.DESERT_PYRAMID;
 
     private static final ResourceLocation JUNGLE_TEMPLE_ID = BuiltInLootTables.JUNGLE_TEMPLE;
@@ -35,43 +31,6 @@ public class MULootTableModifiers {
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-
-            if (UNDERWATER_RUIN_BIG_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_SMALL_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_BIG_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_SMALL_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
             if (JUNGLE_TEMPLE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
