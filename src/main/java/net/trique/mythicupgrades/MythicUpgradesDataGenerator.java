@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
-import net.trique.mythicupgrades.data.*;
+import net.trique.mythicupgrades.datagen.*;
 import net.trique.mythicupgrades.world.MUConfiguredFeatures;
 import net.trique.mythicupgrades.world.MUPlacedFeatures;
 
@@ -14,10 +14,10 @@ public class MythicUpgradesDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(MULootTableGenerator::new);
         pack.addProvider(MURecipeGenerator::new);
-        pack.addProvider(MUModelProvider::new);
+        pack.addProvider(MUModelGenerator::new);
         pack.addProvider(MUWorldGenerator::new);
-        pack.addProvider(MUItemTagProvider::new);
-        pack.addProvider(MUBlockTagProvider::new);
+        pack.addProvider(MUItemTagGenerator::new);
+        pack.addProvider(MUBlockTagGenerator::new);
     }
 
     @Override

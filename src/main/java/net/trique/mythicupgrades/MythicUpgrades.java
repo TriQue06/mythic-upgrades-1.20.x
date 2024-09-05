@@ -5,6 +5,7 @@ import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.networking.MUPackets;
+import net.trique.mythicupgrades.registry.RegisterMUAdditionalResourcePacks;
 import net.trique.mythicupgrades.registry.RegisterMUCommands;
 import net.trique.mythicupgrades.registry.RegisterMUItems;
 import net.trique.mythicupgrades.registry.RegisterMUParticles;
@@ -32,6 +33,7 @@ public class MythicUpgrades implements ModInitializer {
 		MUBlocks.registerMythicBlocks();
 		MUWorldGeneration.generateMythicWorldGen();
 		MULootTableModifiers.modifyLootTables();
+		RegisterMUAdditionalResourcePacks.addPacks();
 		LOGGER.info("Mythic Upgrades works properly! CAN, ANNENE SELAMLAR KARDESIM! <3");
 		LOGGER.info("Chase your dreams, no matter the cost. Don't wait for invitations, take action. Making a decision, starting something - that's half the battle of achieving success.");
 	}
