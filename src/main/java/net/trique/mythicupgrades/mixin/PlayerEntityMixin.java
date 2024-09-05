@@ -19,8 +19,10 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
+import net.trique.mythicupgrades.item.base.BaseMythicToolItem;
 import net.trique.mythicupgrades.item.base.VirtualSapphireTool;
-import net.trique.mythicupgrades.item.mythic_impl.MythicEffectsSwordItem;
+import net.trique.mythicupgrades.item.materials.MUToolMaterials;
+import net.trique.mythicupgrades.item.mythic_impl.common.MythicEffectsSwordItem;
 import net.trique.mythicupgrades.util.EffectMeta;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
@@ -63,7 +65,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent = ((VirtualSapphireTool) weapon).getPercent();
+            float percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 100f) * h * h;
             if (entity.invulnerableTime <= 10) {
@@ -88,7 +90,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent = ((VirtualSapphireTool) weapon).getPercent();
+            float percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 200f) * (0.7f + 0.1f * getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this.level(), getItemBySlot(EquipmentSlot.MAINHAND)));
             if (livingEntity.invulnerableTime <= 10) {
@@ -105,6 +107,23 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (this.hasEffect(MUEffects.BOUNCER)) {
             int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
             this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
+        }
+    }
+
+    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void setEntityOnFire(Entity entity, CallbackInfo ci) {
+        Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
+        if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
+            entity.igniteForSeconds(CONFIG.topazConfig.topaz_tools_fire_seconds());
+        }
+    }
+
+    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void setEntityOnFireSweeping(Entity entity, CallbackInfo ci,
+                                         @Local(ordinal = 0) LivingEntity livingEntity) {
+        Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
+        if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
+            livingEntity.igniteForSeconds(CONFIG.topazConfig.topaz_tools_fire_seconds());
         }
     }
 }
