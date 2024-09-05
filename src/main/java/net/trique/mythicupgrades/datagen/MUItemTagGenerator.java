@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.data;
+package net.trique.mythicupgrades.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -9,8 +9,8 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.trique.mythicupgrades.item.MUItems.*;
 
-public class MUItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public MUItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+public class MUItemTagGenerator extends FabricTagProvider.ItemTagProvider {
+    public MUItemTagGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 

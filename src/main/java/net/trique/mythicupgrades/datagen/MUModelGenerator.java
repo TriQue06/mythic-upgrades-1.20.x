@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.data;
+package net.trique.mythicupgrades.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -9,8 +9,8 @@ import net.minecraft.data.models.model.ModelTemplates;
 import static net.trique.mythicupgrades.block.MUBlocks.*;
 import static net.trique.mythicupgrades.item.MUItems.*;
 
-public class MUModelProvider extends FabricModelProvider {
-    public MUModelProvider(FabricDataOutput output) {
+public class MUModelGenerator extends FabricModelProvider {
+    public MUModelGenerator(FabricDataOutput output) {
         super(output);
     }
 

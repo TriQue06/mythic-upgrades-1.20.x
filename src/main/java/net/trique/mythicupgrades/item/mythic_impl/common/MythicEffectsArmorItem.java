@@ -1,4 +1,4 @@
-package net.trique.mythicupgrades.item.mythic_impl;
+package net.trique.mythicupgrades.item.mythic_impl.common;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;

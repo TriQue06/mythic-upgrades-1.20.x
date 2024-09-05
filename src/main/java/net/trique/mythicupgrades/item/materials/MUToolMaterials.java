@@ -1,24 +1,24 @@
-package net.trique.mythicupgrades.item.misc;
+package net.trique.mythicupgrades.item.materials;
 
 import com.google.common.base.Suppliers;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.trique.mythicupgrades.util.MUBlockTags;
 
 import java.util.function.Supplier;
 
 import static net.trique.mythicupgrades.item.MUItems.*;
 
 public enum MUToolMaterials implements Tier {
-    AQUAMARINE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(AQUAMARINE_INGOT)),
-    PERIDOT(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(PERIDOT_INGOT)),
-    RUBY(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 13.0f, 5.0f, 18, () -> Ingredient.of(RUBY_INGOT)),
-    SAPPHIRE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(SAPPHIRE_INGOT)),
-    TOPAZ(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 8769, 11.0f, 6.0f, 18, () -> Ingredient.of(TOPAZ_INGOT)),
-    AMETRINE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(AMETRINE_INGOT)),
-    JADE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(JADE_INGOT));
+    AQUAMARINE(MUBlockTags.INCORRECT_FOR_AQUAMARINE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(AQUAMARINE_INGOT)),
+    PERIDOT(MUBlockTags.INCORRECT_FOR_PERIDOT_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(PERIDOT_INGOT)),
+    RUBY(MUBlockTags.INCORRECT_FOR_RUBY_TOOL, 2923, 13.0f, 5.0f, 18, () -> Ingredient.of(RUBY_INGOT)),
+    SAPPHIRE(MUBlockTags.INCORRECT_FOR_SAPPHIRE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(SAPPHIRE_INGOT)),
+    TOPAZ(MUBlockTags.INCORRECT_FOR_TOPAZ_TOOL, 8769, 11.0f, 6.0f, 18, () -> Ingredient.of(TOPAZ_INGOT)),
+    AMETRINE(MUBlockTags.INCORRECT_FOR_AMETRINE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(AMETRINE_INGOT)),
+    JADE(MUBlockTags.INCORRECT_FOR_JADE_TOOL, 2923, 10.0f, 5.0f, 18, () -> Ingredient.of(JADE_INGOT));
 
 
     private final TagKey<Block> inverseTag;
