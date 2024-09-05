@@ -19,7 +19,6 @@ public class PoisonousThornsEffect extends MobEffect {
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.level().isClientSide()) {
             Entity attacker = livingEntity.getLastHurtByMob();
-            System.out.println(attacker + " " + livingEntity);
             if (livingEntity.hurtTime == 9) {
                 if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
                     entity.hurt(livingEntity.level().damageSources().thorns(livingEntity), amplifier);
