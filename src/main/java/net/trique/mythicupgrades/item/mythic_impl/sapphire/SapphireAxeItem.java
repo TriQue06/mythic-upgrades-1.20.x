@@ -1,11 +1,12 @@
-package net.trique.mythicupgrades.item.mythic_impl;
+package net.trique.mythicupgrades.item.mythic_impl.sapphire;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.trique.mythicupgrades.item.misc.MUToolMaterials;
+import net.trique.mythicupgrades.item.materials.MUToolMaterials;
 import net.trique.mythicupgrades.item.base.VirtualSapphireTool;
+import net.trique.mythicupgrades.item.mythic_impl.common.MythicEffectsAxeItem;
 import net.trique.mythicupgrades.util.ItemEffectsList;
 import org.jetbrains.annotations.NotNull;
 
@@ -13,10 +14,10 @@ import java.util.List;
 
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
-public class SapphireSwordItem extends MythicEffectsSwordItem implements VirtualSapphireTool {
-    private int percent;
+public class SapphireAxeItem extends MythicEffectsAxeItem implements VirtualSapphireTool {
+    private float percent;
 
-    public SapphireSwordItem(int percent, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
+    public SapphireAxeItem(float percent, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
         super(MUToolMaterials.SAPPHIRE, settings, effects, tooltipKey, color);
         this.percent = percent;
     }
@@ -26,11 +27,11 @@ public class SapphireSwordItem extends MythicEffectsSwordItem implements Virtual
         list.add(Component.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.tools_percentage_damage_percent()).toArray()).withStyle(color));
     }
 
-    public void setPercent(int percent) {
+    public void setPercent(float percent) {
         this.percent = percent;
     }
 
-    public int getPercent() {
+    public float getPercent() {
         return percent;
     }
 }
