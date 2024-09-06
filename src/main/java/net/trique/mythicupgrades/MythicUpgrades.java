@@ -3,10 +3,7 @@ package net.trique.mythicupgrades;
 import net.fabricmc.api.ModInitializer;
 import net.trique.mythicupgrades.block.MUBlocks;
 import net.trique.mythicupgrades.config.MUConfig;
-import net.trique.mythicupgrades.registry.RegisterMUCommands;
-import net.trique.mythicupgrades.registry.RegisterMUEffects;
-import net.trique.mythicupgrades.registry.RegisterMUItems;
-import net.trique.mythicupgrades.registry.RegisterMUParticles;
+import net.trique.mythicupgrades.registry.*;
 import net.trique.mythicupgrades.util.MULootTableModifiers;
 import net.trique.mythicupgrades.world.gen.MUWorldGeneration;
 import org.slf4j.Logger;
@@ -30,6 +27,7 @@ public class MythicUpgrades implements ModInitializer {
 		MUBlocks.registerMythicBlocks();
 		MUWorldGeneration.generateMythicWorldGen();
 		MULootTableModifiers.modifyLootTables();
+		RegisterMUAdditionalResourcePacks.addPacks();
 		LOGGER.info("Mythic Upgrades works properly! CAN, ANNENE SELAMLAR KARDESIM! <3");
 		LOGGER.info("Chase your dreams, no matter the cost. Don't wait for invitations, take action. Making a decision, starting something - that's half the battle of achieving success.");
 	}

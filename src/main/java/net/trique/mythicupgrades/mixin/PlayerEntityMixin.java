@@ -59,7 +59,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent = ((VirtualSapphireTool) weapon).getPercent();
+            float percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 100f) * h * h;
             if (entity.invulnerableTime <= 10) {
@@ -84,7 +84,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
         if (sapphire_weapon) {
-            int percent = ((VirtualSapphireTool) weapon).getPercent();
+            float percent = ((VirtualSapphireTool) weapon).getPercent();
             DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
             float dmg = (percent / 200f) * (0.7f + 0.1f * EnchantmentHelper.getEnchantmentLevel(Enchantments.SWEEPING_EDGE, this));
             if (livingEntity.invulnerableTime <= 10) {
@@ -101,6 +101,15 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (this.hasEffect(MUEffects.BOUNCER)) {
             int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
             this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
+        }
+    }
+
+    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void setEntityOnFireSweeping(Entity entity, CallbackInfo ci,
+                                         @Local(ordinal = 0) LivingEntity livingEntity) {
+        Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
+        if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
+            livingEntity.setSecondsOnFire(CONFIG.topazConfig.topaz_tools_fire_seconds());
         }
     }
 }

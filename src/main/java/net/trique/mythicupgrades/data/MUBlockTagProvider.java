@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.trique.mythicupgrades.util.MUBlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -49,7 +50,11 @@ public class MUBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ConventionalBlockTags.ORES).add(
                 AMETRINE_ORE, AQUAMARINE_ORE, DEEPSLATE_AQUAMARINE_ORE,
                 JADE_ORE, PERIDOT_ORE, DEEPSLATE_PERIDOT_ORE, RUBY_ORE,
-                SAPPHIRE_ORE, TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, NECOIUM_ORE
+                SAPPHIRE_ORE, TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, NECOIUM_ORE,
+                RAW_NECOIUM_BLOCK
+        );
+        getOrCreateTagBuilder(MUBlockTags.SPELUNKER_HIGHLIGHTED).addTag(
+                ConventionalBlockTags.ORES
         );
     }
 }

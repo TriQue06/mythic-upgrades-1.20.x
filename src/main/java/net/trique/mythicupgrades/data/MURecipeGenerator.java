@@ -132,7 +132,7 @@ public class MURecipeGenerator extends FabricRecipeProvider {
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> SAPPHIRE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> SAPPHIRE, ()-> Items.NETHER_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> TOPAZ_UPGRADE_SMITHING_TEMPLATE,
-                ()-> TOPAZ, ()-> Items.NETHER_BRICKS);
+                ()-> TOPAZ, ()-> Items.SANDSTONE);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> AMETRINE_UPGRADE_SMITHING_TEMPLATE,
                 ()-> AMETRINE, ()-> Items.END_STONE_BRICKS);
         offerCustomSmithingTemplateCopyingRecipe(exporter, ()-> JADE_UPGRADE_SMITHING_TEMPLATE,
