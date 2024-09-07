@@ -9,7 +9,7 @@
   "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": true}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": true}],
 
-  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Duration", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Slowness Duration", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "Tools' Freeze Duration", "color": "aqua"}],
 
@@ -19,12 +19,12 @@
   "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_amplifier": [{"text": "Tools' Poison Amplifier", "color": "green"}],
 
   "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "Time entities hit with topaz tools will burn for", "color": "gold"}],
 
   "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Armor's Damage Deflection Amplifier", "color": "blue"}],
-  "text.config.mythicupgrades-config.option.sapphireConfig.tools_percentage_damage_percent": [{"text": "Tools' Damage (% from target's max. health)", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.tools_percentage_damage_percent": [{"text": "Tools' Damage  (% from target's max. health)", "color": "blue"}],
 
-  "text.config.mythicupgrades-config.option.rubyConfig.miners_shield_duration": [{"text": "Armor's Miner's Shield Duration", "color": "red"}],
-  "text.config.mythicupgrades-config.option.rubyConfig.miners_shield_amplifier": [{"text": "Armor's Miner's Shield Amplifier", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.spelunker_amplifier": [{"text": "Spelunker Amplifier", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.tools_haste_amplifier": [{"text": "Tools' Haste Amplifier", "color": "red"}],
 
   "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_duration": [{"text": "Armor's Arcane Aura Duration", "color": "dark_purple"}],
@@ -36,6 +36,8 @@
   "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Armor's Jump Boost Amplifier", "color": "dark_green"}],
   "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_duration": [{"text": "Tools' Bouncer Duration", "color": "dark_green"}],
   "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_amplifier": [{"text": "Tools' Bouncer Amplifier", "color": "dark_green"}],
+
+  "pack.mythicupgrades.32x": "Mythic Upgrades 32x",
 
   "item.mythicupgrades.aquamarine": "Aquamarine",
   "item.mythicupgrades.aquamarine_ingot": "Aquamarine Ingot",
@@ -207,7 +209,7 @@
   "effect.mythicupgrades.poisonous_thorns": "Poisonous Thorns",
   "effect.mythicupgrades.item_mastery": "Item Mastery",
   "effect.mythicupgrades.damage_deflection": "Damage Deflection",
-  "effect.mythicupgrades.miners_shield": "Miner's Shield",
+  "effect.mythicupgrades.spelunker": "Spelunker",
   "effect.mythicupgrades.arcane_aura": "Arcane Aura",
   "effect.mythicupgrades.bouncer": "Bouncer",
 
@@ -220,9 +222,9 @@
   "peridot_tool.description": "Poisons enemy on hit.",
 
   "topaz_armor.description": "Set Bonus: Protection, Item Mastery %s and Fire Resistance",
-  "topaz_tool.description": "Has 3x durability and higher stats.",
+  "topaz_tool.description": "Has 3x durability and higher stats, burns enemies on hit and smelts mined loot.",
 
-  "ruby_armor.description": "Set Bonus: Miner's Shield %s",
+  "ruby_armor.description": "Set Bonus: Spelunker %s",
   "ruby_tool.description": "Provides Haste when in main hand.",
 
   "sapphire_armor.description": "Set Bonus: Damage Deflection %s",

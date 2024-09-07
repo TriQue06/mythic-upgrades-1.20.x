@@ -4,6 +4,7 @@ import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -51,7 +52,7 @@ public abstract class MobEntityMixin extends LivingEntity {
                 Item weapon = this.getItemBySlot(EquipmentSlot.MAINHAND).getItem();
                 boolean sapphire_weapon = weapon instanceof VirtualSapphireTool;
                 if (sapphire_weapon) {
-                    int percent = ((VirtualSapphireTool) weapon).getPercent();
+                    float percent = ((VirtualSapphireTool) weapon).getPercent();
                     DamageSource source = MythicUpgradesDamageTypes.percentage_damage(this);
                     float dmg = (percent / 100f);
                     if (entity.invulnerableTime <= 10) {
@@ -76,6 +77,14 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (this.hasEffect(MUEffects.BOUNCER)) {
             int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
             this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
+        }
+    }
+
+    @Inject(method = "doHurtTarget", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void setEntityOnFire(Entity entity, CallbackInfoReturnable<Boolean> cir) {
+        Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
+        if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
+            entity.setRemainingFireTicks(Mth.floor(CONFIG.topazConfig.topaz_tools_fire_seconds() * 20f));
         }
     }
 }

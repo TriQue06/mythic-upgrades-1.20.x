@@ -4,6 +4,8 @@
   "package": "net.trique.mythicupgrades.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockBehaviourMixin",
+    "FireAspectMixin",
     "ItemStackMixin",
     "LivingEntityMixin",
     "MobEntityMixin",

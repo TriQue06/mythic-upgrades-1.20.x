@@ -13,9 +13,9 @@ import java.util.List;
 import static net.trique.mythicupgrades.MythicUpgrades.CONFIG;
 
 public class SapphireShovelItem extends MythicEffectsShovelItem implements VirtualSapphireTool {
-    private int percent;
+    private float percent;
 
-    public SapphireShovelItem(int attackDamage, int percent, float attackSpeed, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
+    public SapphireShovelItem(int attackDamage, float percent, float attackSpeed, Properties settings, ItemEffectsList effects, String tooltipKey, ChatFormatting color) {
         super(MUToolMaterials.SAPPHIRE, attackDamage, attackSpeed, settings, effects, tooltipKey, color);
         this.percent = percent;
     }
@@ -25,11 +25,11 @@ public class SapphireShovelItem extends MythicEffectsShovelItem implements Virtu
         tooltip.add(Component.translatable(tooltipKey, List.of(CONFIG.sapphireConfig.tools_percentage_damage_percent()).toArray()).withStyle(color));
     }
 
-    public void setPercent(int percent) {
+    public void setPercent(float percent) {
         this.percent = percent;
     }
 
-    public int getPercent() {
+    public float getPercent() {
         return percent;
     }
 }

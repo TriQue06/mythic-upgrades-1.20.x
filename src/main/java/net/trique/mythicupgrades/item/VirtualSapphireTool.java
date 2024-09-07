@@ -1,7 +1,7 @@
 package net.trique.mythicupgrades.item;
 
 public interface VirtualSapphireTool {
-    void setPercent(int percent);
+    void setPercent(float percent);
 
-    int getPercent();
+    float getPercent();
 }

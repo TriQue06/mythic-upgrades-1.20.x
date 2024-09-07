@@ -57,6 +57,10 @@ public class MUConfigModel {
 
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+        @RangeConstraint(min = 1f, max = 30f)
+        public float topaz_tools_fire_seconds = 10f;
+
+        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 6)
         public int item_mastery_amplifier = 4;
     }
@@ -67,18 +71,14 @@ public class MUConfigModel {
         public int tools_haste_amplifier = 0;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 2)
-        public int miners_shield_amplifier = 0;
-
-        @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0.1f, max = 5f)
-        public float miners_shield_duration = 2f;
+        @RangeConstraint(min = 0, max = 10)
+        public int spelunker_amplifier = 5;
     }
 
     public static class SapphireConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1, max = 7)
-        public int tools_percentage_damage_percent = 5;
+        @RangeConstraint(min = 1f, max = 7f)
+        public float tools_percentage_damage_percent = 5f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)

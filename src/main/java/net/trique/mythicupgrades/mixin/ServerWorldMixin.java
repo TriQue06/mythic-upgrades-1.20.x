@@ -28,8 +28,8 @@ public abstract class ServerWorldMixin {
         ItemEffectsList peridotArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(POISONOUS_THORNS, CONFIG.peridotConfig.poisonous_thorns_amplifier()).build();
         List<Integer> peridotAmplifiers = List.of(CONFIG.peridotConfig.poisonous_thorns_amplifier());
 
-        ItemEffectsList rubyArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MINERS_SHIELD, CONFIG.rubyConfig.miners_shield_amplifier()).build();
-        List<Integer> rubyAmplifiers = List.of(CONFIG.rubyConfig.miners_shield_amplifier());
+        ItemEffectsList rubyArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(SPELUNKER, CONFIG.rubyConfig.spelunker_amplifier()).build();
+        List<Integer> rubyAmplifiers = List.of(CONFIG.rubyConfig.spelunker_amplifier());
 
         ItemEffectsList sapphireArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(DAMAGE_DEFLECTION, CONFIG.sapphireConfig.damage_deflection_amplifier()).build();
         List<Integer> sapphireAmplifiers = List.of(CONFIG.sapphireConfig.damage_deflection_amplifier());
