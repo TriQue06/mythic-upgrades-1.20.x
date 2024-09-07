@@ -62,7 +62,7 @@ public class MUBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(MUBlockTags.INCORRECT_FOR_SAPPHIRE_TOOL);
         getOrCreateTagBuilder(MUBlockTags.INCORRECT_FOR_TOPAZ_TOOL);
 
-        getOrCreateTagBuilder(MUBlockTags.SPELUNKER_HIGHLIGHTED).addTag(
+        getOrCreateTagBuilder(MUBlockTags.SPELUNKER_OUTLINED).addTag(
                 ConventionalBlockTags.ORES
         );
     }

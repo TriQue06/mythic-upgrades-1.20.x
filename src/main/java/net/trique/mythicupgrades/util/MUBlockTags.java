@@ -16,7 +16,7 @@ public class MUBlockTags {
     public static TagKey<Block> INCORRECT_FOR_SAPPHIRE_TOOL = create("incorrect_for_sapphire_tool");
     public static TagKey<Block> INCORRECT_FOR_TOPAZ_TOOL = create("incorrect_for_topaz_tool");
 
-    public static TagKey<Block> SPELUNKER_HIGHLIGHTED = create("spelunker_highlighted");
+    public static TagKey<Block> SPELUNKER_OUTLINED = create("spelunker_outlined");
 
 
     private static TagKey<Block> create(String string) {
