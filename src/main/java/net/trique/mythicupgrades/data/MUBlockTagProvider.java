@@ -53,7 +53,7 @@ public class MUBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 SAPPHIRE_ORE, TOPAZ_ORE, DEEPSLATE_TOPAZ_ORE, NECOIUM_ORE,
                 RAW_NECOIUM_BLOCK
         );
-        getOrCreateTagBuilder(MUBlockTags.SPELUNKER_HIGHLIGHTED).addTag(
+        getOrCreateTagBuilder(MUBlockTags.SPELUNKER_OUTLINED).addTag(
                 ConventionalBlockTags.ORES
         );
     }

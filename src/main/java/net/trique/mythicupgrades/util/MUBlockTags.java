@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.trique.mythicupgrades.MythicUpgrades;
 
 public class MUBlockTags {
-    public static TagKey<Block> SPELUNKER_HIGHLIGHTED = create("spelunker_highlighted");
+    public static TagKey<Block> SPELUNKER_OUTLINED = create("spelunker_outlined");
 
 
     private static TagKey<Block> create(String string) {

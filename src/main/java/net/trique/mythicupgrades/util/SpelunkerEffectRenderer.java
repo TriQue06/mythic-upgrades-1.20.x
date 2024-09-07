@@ -39,7 +39,7 @@ public class SpelunkerEffectRenderer {
                 for (int z = -radius; z <= radius; z++) {
                     BlockPos pos = startPos.offset(x, y, z);
                     BlockState state = level.getBlockState(pos);
-                    if (state.is(MUBlockTags.SPELUNKER_HIGHLIGHTED)) {
+                    if (state.is(MUBlockTags.SPELUNKER_OUTLINED)) {
                         ORES_HIGHLIGHT_POSITIONS.add(pos);
                     }
                 }
