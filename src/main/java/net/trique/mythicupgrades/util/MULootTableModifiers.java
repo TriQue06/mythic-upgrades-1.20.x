@@ -12,10 +12,6 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.trique.mythicupgrades.item.MUItems;
 
 public class MULootTableModifiers {
-    private static final ResourceKey<LootTable> UNDERWATER_RUIN_BIG_LOOT = BuiltInLootTables.UNDERWATER_RUIN_BIG;
-
-    private static final ResourceKey<LootTable> UNDERWATER_RUIN_SMALL_LOOT = BuiltInLootTables.UNDERWATER_RUIN_SMALL;
-
     private static final ResourceKey<LootTable> DESERT_PYRAMID_LOOT = BuiltInLootTables.DESERT_PYRAMID;
 
     private static final ResourceKey<LootTable> JUNGLE_TEMPLE_LOOT = BuiltInLootTables.JUNGLE_TEMPLE;
@@ -35,222 +31,154 @@ public class MULootTableModifiers {
     private static final ResourceKey<LootTable> END_CITY_TREASURE_LOOT = BuiltInLootTables.END_CITY_TREASURE;
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((id, tableBuilder, source, registries)->{
-            if (UNDERWATER_RUIN_BIG_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_SMALL_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_BIG_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (UNDERWATER_RUIN_SMALL_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
-                        .when(LootItemRandomChanceCondition.randomChance(0.25f))
-                        .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (JUNGLE_TEMPLE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+        LootTableEvents.MODIFY.register(((key, tableBuilder, source, registries) -> {
+            if (JUNGLE_TEMPLE_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.PERIDOT_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (JUNGLE_TEMPLE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.PERIDOT_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (DESERT_PYRAMID_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+
+            if (DESERT_PYRAMID_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.TOPAZ_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (DESERT_PYRAMID_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.TOPAZ_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (IGLOO_CHEST_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (IGLOO_CHEST_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.AQUAMARINE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (IGLOO_CHEST_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.AQUAMARINE_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (BASTION_BRIDGE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (BASTION_BRIDGE_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (BASTION_BRIDGE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (BASTION_HOGLIN_STABLE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (BASTION_HOGLIN_STABLE_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (BASTION_HOGLIN_STABLE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (BASTION_OTHER_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (BASTION_OTHER_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (BASTION_OTHER_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (BASTION_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (BASTION_TREASURE_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.5f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (BASTION_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(1.0f))
                         .add(LootItem.lootTableItem(MUItems.RUBY_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (NETHER_BRIDGE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (NETHER_BRIDGE_LOOT.equals(key)) {
+                LootPool.Builder smithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.SAPPHIRE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (NETHER_BRIDGE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder potionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.SAPPHIRE_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(smithingUpgradePoolBuilder.build());
+                tableBuilder.pool(potionPoolBuilder.build());
             }
 
-            if (END_CITY_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+            if (END_CITY_TREASURE_LOOT.equals(key)) {
+                LootPool.Builder ametrineSmithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.AMETRINE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (END_CITY_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder ametrinePotionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.AMETRINE_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (END_CITY_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder jadeSmithingUpgradePoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.1f))
                         .add(LootItem.lootTableItem(MUItems.JADE_UPGRADE_SMITHING_TEMPLATE))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-
-            if (END_CITY_TREASURE_LOOT.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
+                LootPool.Builder jadePotionPoolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .add(LootItem.lootTableItem(MUItems.JADE_POTION))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                tableBuilder.pool(ametrineSmithingUpgradePoolBuilder.build());
+                tableBuilder.pool(ametrinePotionPoolBuilder.build());
+                tableBuilder.pool(jadeSmithingUpgradePoolBuilder.build());
+                tableBuilder.pool(jadePotionPoolBuilder.build());
             }
-        });
+        }));
     }
 }

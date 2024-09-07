@@ -31,7 +31,9 @@ public class MUCommands {
                     CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
                     CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
                     CONFIG.topazConfig.item_mastery_amplifier(4);
+                    CONFIG.topazConfig.topaz_tools_fire_seconds(10);
                     CONFIG.rubyConfig.tools_haste_amplifier(0);
+                    CONFIG.rubyConfig.spelunker_amplifier(5);
                     CONFIG.sapphireConfig.tools_percentage_damage_percent(5);
                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);
                     CONFIG.ametrineConfig.tools_levitation_duration(0.75f);

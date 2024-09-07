@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "authors": "Patrick & Skilltissued",
+    "faithful_credit": "Some textures such as bars and some netherite armor pieces were taken as base from Faithful (https://faithfulpack.net)",
+    "pack_format": 15,
+    "description": "Fan-made x32 texture pack for Mythic Upgrades",
+    "supported_formats": {
+      "min_inclusive": 15,
+      "max_inclusive": 34
+    }
+  }
+}

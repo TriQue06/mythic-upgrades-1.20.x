@@ -6,7 +6,7 @@ import net.minecraft.core.Holder;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.base.BaseMythicItem;
-import net.trique.mythicupgrades.item.mythic_impl.MythicEffectsArmorItem;
+import net.trique.mythicupgrades.item.mythic_impl.common.MythicEffectsArmorItem;
 import net.trique.mythicupgrades.util.CommonFunctions;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -26,8 +26,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import java.util.Map;
-
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
 
@@ -40,9 +38,6 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Shadow
     public abstract ItemStack getItemBySlot(EquipmentSlot slot);
-
-    @Shadow
-    public abstract Map<MobEffect, MobEffectInstance> getActiveEffectsMap();
 
     @Shadow @Nullable public abstract MobEffectInstance getEffect(Holder<MobEffect> holder);
 

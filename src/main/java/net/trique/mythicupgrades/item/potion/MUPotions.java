@@ -18,6 +18,7 @@ public class MUPotions {
 
     public static final FoodProperties RUBY_POTION = (new FoodProperties.Builder()).nutrition(4).saturationModifier(0.4F).
             effect(new MobEffectInstance(MobEffects.DIG_SPEED, 3600, 0), 1.0F).
+            effect(new MobEffectInstance(MUEffects.SPELUNKER, 3600, 2), 1.0F).
             alwaysEdible().build();
 
     public static final FoodProperties SAPPHIRE_POTION = (new FoodProperties.Builder()).nutrition(4).saturationModifier(0.4F).

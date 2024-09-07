@@ -15,10 +15,10 @@ public class MUEffects {
     public static final Holder<MobEffect> DAMAGE_DEFLECTION;
     public static final Holder<MobEffect> ITEM_MASTERY;
     public static final Holder<MobEffect> ARCANE_AURA;
-    public static final Holder<MobEffect> MINERS_SHIELD;
     public static final Holder<MobEffect> BOUNCER;
+    public static final Holder<MobEffect> SPELUNKER;
 
-    public static Holder<MobEffect> registerEffect(String name, MobEffect effect) {
+    private static Holder<MobEffect> registerEffect(String name, MobEffect effect) {
         return Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, name), effect);
     }
 
@@ -33,7 +33,7 @@ public class MUEffects {
         DAMAGE_DEFLECTION = registerEffect("damage_deflection", new DamageDeflectionEffect(MobEffectCategory.BENEFICIAL, 18170));
         ITEM_MASTERY = registerEffect("item_mastery", new ItemMasteryEffect(MobEffectCategory.BENEFICIAL, 16747551));
         ARCANE_AURA = registerEffect("arcane_aura", new ArcaneAuraEffect(MobEffectCategory.BENEFICIAL, 12525567));
-        MINERS_SHIELD = registerEffect("miners_shield", new MinersShieldEffect(MobEffectCategory.BENEFICIAL, 6317));
         BOUNCER = registerEffect("bouncer", new BouncerEffect(MobEffectCategory.BENEFICIAL, 3652380));
+        SPELUNKER = registerEffect("spelunker", new SpelunkerEffect(MobEffectCategory.BENEFICIAL, 6317));
     }
 }
