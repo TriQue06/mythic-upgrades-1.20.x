@@ -105,6 +105,14 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
     }
 
+    @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
+    private void setEntityOnFire(Entity entity, CallbackInfo ci) {
+        Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
+        if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
+            entity.setRemainingFireTicks(Mth.floor(CONFIG.topazConfig.topaz_tools_fire_seconds() * 20f));
+        }
+    }
+
     @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z"))
     private void setEntityOnFireSweeping(Entity entity, CallbackInfo ci,
                                          @Local(ordinal = 0) LivingEntity livingEntity) {
