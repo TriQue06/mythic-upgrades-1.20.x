@@ -1,6 +1,7 @@
 package net.trique.mythicupgrades.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -109,7 +110,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
                                          @Local(ordinal = 0) LivingEntity livingEntity) {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
-            livingEntity.setSecondsOnFire(CONFIG.topazConfig.topaz_tools_fire_seconds());
+            livingEntity.setRemainingFireTicks(Mth.floor(CONFIG.topazConfig.topaz_tools_fire_seconds() * 20f));
         }
     }
 }

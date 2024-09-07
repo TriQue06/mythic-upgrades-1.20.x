@@ -57,8 +57,8 @@ public class MUConfigModel {
 
     public static class TopazConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 1, max = 30)
-        public int topaz_tools_fire_seconds = 10;
+        @RangeConstraint(min = 1f, max = 30f)
+        public float topaz_tools_fire_seconds = 10f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 6)

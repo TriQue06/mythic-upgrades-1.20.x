@@ -4,6 +4,7 @@ import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -83,7 +84,7 @@ public abstract class MobEntityMixin extends LivingEntity {
     private void setEntityOnFire(Entity entity, CallbackInfoReturnable<Boolean> cir) {
         Item weapon = getItemBySlot(EquipmentSlot.MAINHAND).getItem();
         if (weapon instanceof BaseMythicToolItem item && item.getMythicMaterial().equals(MUToolMaterials.TOPAZ)) {
-            entity.setSecondsOnFire(CONFIG.topazConfig.topaz_tools_fire_seconds());
+            entity.setRemainingFireTicks(Mth.floor(CONFIG.topazConfig.topaz_tools_fire_seconds() * 20f));
         }
     }
 }
