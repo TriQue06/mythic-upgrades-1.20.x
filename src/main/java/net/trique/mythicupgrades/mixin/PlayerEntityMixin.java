@@ -106,7 +106,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     private void applyBouncerEffect(Entity entity, CallbackInfo ci) {
         if (this.hasEffect(MUEffects.BOUNCER)) {
             int ampl = this.getEffect(MUEffects.BOUNCER).getAmplifier();
-            this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int) (CONFIG.jadeConfig.tools_bouncer_duration() * 20), ampl));
+            this.addEffect(new MobEffectInstance(MobEffects.JUMP, (int)
+                    (CONFIG.jadeConfig.tools_bouncer_jump_boost_duration() * 20), ampl));
         }
     }
 

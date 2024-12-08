@@ -25,7 +25,7 @@ public class ArcaneAuraEffect extends MobEffect {
                         !(entity instanceof Player player && (player.isCreative() || player.isSpectator()))) {
                     entity.playSound(SoundEvents.SHULKER_HURT, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION,
-                            (int) (CONFIG.ametrineConfig.arcane_aura_duration() * 20), amplifier), livingEntity);
+                            (int) (CONFIG.ametrineConfig.arcane_aura_levitation_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

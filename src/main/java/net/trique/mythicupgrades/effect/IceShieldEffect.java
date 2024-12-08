@@ -25,7 +25,7 @@ public class IceShieldEffect extends MobEffect {
                         !(entity instanceof Player player && (player.isCreative() || player.isSpectator()))) {
                     entity.playSound(SoundEvents.PLAYER_HURT_FREEZE, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,
-                            (int) (CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
+                            (int) (CONFIG.aquamarineConfig.ice_shield_slowness_duration() * 20), amplifier), livingEntity);
                 }
             }
         }

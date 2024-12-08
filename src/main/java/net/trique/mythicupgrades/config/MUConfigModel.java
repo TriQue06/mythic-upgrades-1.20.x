@@ -30,7 +30,7 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 3f)
-        public float ice_shield_duration = 1.0f;
+        public float ice_shield_slowness_duration = 1.0f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
@@ -51,8 +51,8 @@ public class MUConfigModel {
         public float tools_nausea_duration = 12f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-        @RangeConstraint(min = 0, max = 3)
-        public int poisonous_thorns_amplifier = 1;
+        @RangeConstraint(min = 0, max = 4)
+        public int poisonous_thorns_amplifier = 2;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 5f)
@@ -104,7 +104,7 @@ public class MUConfigModel {
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.5f, max = 3f)
-        public float arcane_aura_duration = 0.75f;
+        public float arcane_aura_levitation_duration = 0.75f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0, max = 4)
@@ -114,7 +114,7 @@ public class MUConfigModel {
     public static class JadeConfig {
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 0.1f, max = 5f)
-        public float tools_bouncer_duration = 2f;
+        public float tools_bouncer_jump_boost_duration = 2f;
 
         @Sync(Option.SyncMode.OVERRIDE_CLIENT)
         @RangeConstraint(min = 2, max = 6)

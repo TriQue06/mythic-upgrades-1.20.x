@@ -25,25 +25,35 @@ public class MUCommands {
                 .requires(source -> source.hasPermission(4))
                 .then(literal("config").then(literal("restoreDefaults").executes(ctx -> {
                     CONFIG.aquamarineConfig.ice_shield_amplifier(2);
-                    CONFIG.aquamarineConfig.ice_shield_duration(3f);
+                    CONFIG.aquamarineConfig.ice_shield_slowness_duration(3f);
+                    CONFIG.aquamarineConfig.tools_freeze_duration(0.5f);
+
                     CONFIG.peridotConfig.tools_poison_duration(3f);
-                    CONFIG.peridotConfig.tools_nausea_duration(9f);
+                    CONFIG.peridotConfig.tools_nausea_duration(12f);
                     CONFIG.peridotConfig.tools_effects_amplifier(2);
-                    CONFIG.peridotConfig.poisonous_thorns_amplifier(1);
+                    CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
                     CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
-                    CONFIG.peridotConfig.poisonous_thorns_nausea_duration(12f);
+                    CONFIG.peridotConfig.poisonous_thorns_nausea_duration(9f);
+
                     CONFIG.topazConfig.item_mastery_amplifier(4);
-                    CONFIG.topazConfig.topaz_tools_fire_seconds(10);
+                    CONFIG.topazConfig.topaz_tools_fire_seconds(10f);
+
                     CONFIG.rubyConfig.tools_haste_amplifier(0);
                     CONFIG.rubyConfig.spelunker_amplifier(5);
-                    CONFIG.sapphireConfig.tools_percentage_damage_percent(5);
+
+                    CONFIG.sapphireConfig.tools_percentage_damage_percent(5f);
                     CONFIG.sapphireConfig.damage_deflection_amplifier(2);
+
                     CONFIG.ametrineConfig.tools_levitation_duration(0.75f);
                     CONFIG.ametrineConfig.tools_levitation_amplifier(4);
                     CONFIG.ametrineConfig.arcane_aura_amplifier(2);
-                    CONFIG.ametrineConfig.arcane_aura_duration(0.5f);
+                    CONFIG.ametrineConfig.arcane_aura_levitation_duration(0.75f);
+
                     CONFIG.jadeConfig.speed_amplifier(2);
                     CONFIG.jadeConfig.jump_boost_amplifier(2);
+                    CONFIG.jadeConfig.tools_bouncer_jump_boost_duration(2f);
+                    CONFIG.jadeConfig.tools_bouncer_amplifier(4);
+
                     CONFIG.load();
                     ctx.getSource().sendSuccess(() -> Component.literal("Successfully restored default values and reloaded config!"), false);
                     return Command.SINGLE_SUCCESS;
