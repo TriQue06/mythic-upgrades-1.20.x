@@ -26,10 +26,12 @@ public class MUCommands {
                 .then(literal("config").then(literal("restoreDefaults").executes(ctx -> {
                     CONFIG.aquamarineConfig.ice_shield_amplifier(2);
                     CONFIG.aquamarineConfig.ice_shield_duration(3f);
-                    CONFIG.peridotConfig.tools_poison_duration(1.5f);
-                    CONFIG.peridotConfig.tools_poison_amplifier(2);
-                    CONFIG.peridotConfig.poisonous_thorns_amplifier(2);
+                    CONFIG.peridotConfig.tools_poison_duration(3f);
+                    CONFIG.peridotConfig.tools_nausea_duration(9f);
+                    CONFIG.peridotConfig.tools_effects_amplifier(2);
+                    CONFIG.peridotConfig.poisonous_thorns_amplifier(1);
                     CONFIG.peridotConfig.poisonous_thorns_poison_duration(3f);
+                    CONFIG.peridotConfig.poisonous_thorns_nausea_duration(12f);
                     CONFIG.topazConfig.item_mastery_amplifier(4);
                     CONFIG.topazConfig.topaz_tools_fire_seconds(10);
                     CONFIG.rubyConfig.tools_haste_amplifier(0);
