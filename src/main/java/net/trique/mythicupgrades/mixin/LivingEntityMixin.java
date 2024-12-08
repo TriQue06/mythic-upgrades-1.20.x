@@ -3,6 +3,7 @@ package net.trique.mythicupgrades.mixin;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.core.Holder;
+import net.minecraft.world.entity.player.Player;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
 import net.trique.mythicupgrades.effect.MUEffects;
 import net.trique.mythicupgrades.item.base.BaseMythicItem;
@@ -123,7 +124,8 @@ public abstract class LivingEntityMixin extends Entity {
             MobEffectInstance deflection = this.getEffect(MUEffects.DAMAGE_DEFLECTION);
             if (deflection != null) {
                 Entity attacker = source.getEntity();
-                if (attacker instanceof LivingEntity enemy) {
+                if (attacker instanceof LivingEntity enemy &&
+                        !(enemy instanceof Player player && (player.isCreative() || player.isSpectator()))) {
                     if (enemy.distanceToSqr(this) <= 9.0f && !has_damage_been_deflected) {
                         DamageSource deflecting_source = MythicUpgradesDamageTypes.deflecting_damage(this);
                         has_damage_been_deflected = true;

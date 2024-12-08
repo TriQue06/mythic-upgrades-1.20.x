@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 
 public class IceShieldEffect extends MobEffect {
     public IceShieldEffect(MobEffectCategory statusEffectCategory, int color) {
@@ -20,7 +21,8 @@ public class IceShieldEffect extends MobEffect {
         if (!livingEntity.level().isClientSide()) {
             Entity attacker = livingEntity.getLastHurtByMob();
             if (livingEntity.hurtTime == 9) {
-                if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity)) {
+                if (attacker instanceof LivingEntity entity && !attacker.equals(livingEntity) &&
+                        !(entity instanceof Player player && (player.isCreative() || player.isSpectator()))) {
                     entity.playSound(SoundEvents.PLAYER_HURT_FREEZE, 1.0f, livingEntity.getVoicePitch());
                     entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,
                             (int) (CONFIG.aquamarineConfig.ice_shield_duration() * 20), amplifier), livingEntity);
