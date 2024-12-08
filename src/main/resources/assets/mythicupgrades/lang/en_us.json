@@ -15,8 +15,10 @@
 
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous Thorns Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous Thorns' Poison Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_nausea_duration": [{"text": "Armor's Poisonous Thorns' Nausea Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_effects_amplifier": [{"text": "Tools' Poison Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_duration": [{"text": "Tools' Poison Duration", "color": "green"}],
-  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_amplifier": [{"text": "Tools' Poison Amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_nausea_duration": [{"text": "Tools' Nausea Duration", "color": "green"}],
 
   "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
   "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "Time entities hit with topaz tools will burn for", "color": "gold"}],
