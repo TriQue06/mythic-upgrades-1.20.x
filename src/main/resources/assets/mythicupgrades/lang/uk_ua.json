@@ -1,0 +1,290 @@
+{
+  "text.config.mythicupgrades-config.title": [{"text" : "Конфігурація Mythic Upgrades", "color" : "aqua", "bold": true}],
+
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Аквамарин", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Перідот", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Топаз", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Сапфір", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Рубін", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Аметрин", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Жад", "color" : "dark_green", "bold": true}],
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_slowness_duration": [{"text": "Тривалість Повільності Льодового Щита", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Підсилювач Льодового Щита Броні", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": " Тривалість Замороження Інструментів", "color": "aqua"}],
+
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "підсилювач Отруйних Шипів Броні", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Тривалість отруйних Шипів Броні ", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_nausea_duration": [{"text": "Тривалість Отруйних Шипів Нудоти Броні", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_effects_amplifier": [{"text": "Підсилювач Отрути Інструментів", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_duration": [{"text": "Тривалість Отрути Інструментів", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_nausea_duration": [{"text": "Тривалість Нудоти Інструментів", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Підсилювач Майстерности броні", "color": "gold"}],
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "Підпалювання суб'єктів, що Потрапляють До Топазних Інструментів", "color": "gold"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Підсилювач Відмови Від Пошкоджень Броні", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.tools_percentage_damage_percent": [{"text": "Нанесення Шкоди Інструментами  (% з максимального здоров'я мішені)", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.spelunker_amplifier": [{"text": "Підсилювач Дослідника Печер", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.tools_haste_amplifier": [{"text": "Підсилювач Квапливости", "color": "red"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_levitation_duration": [{"text": "тривалість Таємної Аури (Левітації) у Броні", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": " Підсилювач Таємної аури у Броні", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_duration": [{"text": "Тривалість Левітації у Інструментів", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_amplifier": [{"text": "Підсилювач Левітації у Інструментім", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "Підсилювач швидкости броні", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Підсилювач підсилювача стрибка броні", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_jump_boost_duration": [{"text": "Тривалість прискорення стрибків інструментів", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_amplifier": [{"text": "Підсилювач вибивачів інструментів", "color": "dark_green"}],
+
+  "pack.mythicupgrades.32x": "Mythic Upgrades 32x",
+
+  "item.mythicupgrades.aquamarine": "Аквамарин",
+  "item.mythicupgrades.aquamarine_ingot": "Аквамариновий Злиток",
+  "item.mythicupgrades.aquamarine_crystal_shard": "Аквамариновий Кришталевий Осколок",
+  "item.mythicupgrades.aquamarine_potion": "Аквамаринове Зілля",
+
+  "item.mythicupgrades.aquamarine_helmet": "Аквамариновий Шолом",
+  "item.mythicupgrades.aquamarine_chestplate": "Аквамариновий Нагрудник",
+  "item.mythicupgrades.aquamarine_leggings": "Аквамаринові Наголінники",
+  "item.mythicupgrades.aquamarine_boots": "Аквамаринові Чоботи",
+
+  "item.mythicupgrades.aquamarine_sword": "Аквамариновий Меч",
+  "item.mythicupgrades.aquamarine_axe": "Аквамаринова Сокира",
+  "item.mythicupgrades.aquamarine_pickaxe": "Аквамаринове Кайло",
+  "item.mythicupgrades.aquamarine_shovel": "Аквамаринова Лопата",
+  "item.mythicupgrades.aquamarine_hoe": "Аквамаринова Мотика",
+
+  "block.mythicupgrades.aquamarine_ore": "Аквамаринова Руда",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Аквамариноносний Глибосланець",
+  "block.mythicupgrades.aquamarine_block": "Блок Аквамарину",
+  "block.mythicupgrades.aquamarine_crystal_block": "Блок з Аквамаринового Кришталю",
+  "block.mythicupgrades.aquamarine_crystal_cluster": "Аквамариновий Кришталевий Кластер",
+
+
+  "item.mythicupgrades.peridot": "Перідот",
+  "item.mythicupgrades.peridot_ingot": "Перідотовий Злиток",
+  "item.mythicupgrades.peridot_crystal_shard": "Перідотовий Кришталь",
+  "item.mythicupgrades.peridot_potion": "Перідотове Зілля",
+
+  "item.mythicupgrades.peridot_helmet": "Перідотовий Шолом",
+  "item.mythicupgrades.peridot_chestplate": "Перідотовий Нагрудник",
+  "item.mythicupgrades.peridot_leggings": "Перідотові Наголінники",
+  "item.mythicupgrades.peridot_boots": "Перідотові Чоботи",
+
+  "item.mythicupgrades.peridot_sword": "Перідотовий Меч",
+  "item.mythicupgrades.peridot_axe": "Перідотова Сокира",
+  "item.mythicupgrades.peridot_pickaxe": "Перідотове Кайло",
+  "item.mythicupgrades.peridot_shovel": "Перідотова Лопата",
+  "item.mythicupgrades.peridot_hoe": "Перідотова Мотика",
+
+  "block.mythicupgrades.peridot_ore": "Перідотова Руда",
+  "block.mythicupgrades.deepslate_peridot_ore": "Перідотоносний глибосланець",
+  "block.mythicupgrades.peridot_block": "Блок Перідоту",
+  "block.mythicupgrades.peridot_crystal_block": "Блок Перідотового Кришталю",
+  "block.mythicupgrades.peridot_crystal_cluster": "Перідотовий Кришталевий Кластер",
+
+
+  "item.mythicupgrades.topaz": "Топаз",
+  "item.mythicupgrades.topaz_ingot": "Топазний Злиток",
+  "item.mythicupgrades.topaz_crystal_shard": "Топазний Кришталевий Осколок",
+  "item.mythicupgrades.topaz_potion": "Топазне Зілля",
+
+  "item.mythicupgrades.topaz_helmet": "Топазний Шолом",
+  "item.mythicupgrades.topaz_chestplate": "Топазний Нагрудник",
+  "item.mythicupgrades.topaz_leggings": "Топазні Наголінники",
+  "item.mythicupgrades.topaz_boots": "Топазні Чоботи",
+
+  "item.mythicupgrades.topaz_sword": "Топазний Меч",
+  "item.mythicupgrades.topaz_axe": "Топазна Сокира",
+  "item.mythicupgrades.topaz_pickaxe": "Топазне Кайло",
+  "item.mythicupgrades.topaz_shovel": "Топазна Лопата",
+  "item.mythicupgrades.topaz_hoe": "Топазна Мотика",
+
+  "block.mythicupgrades.topaz_ore": "Топазна Руда",
+  "block.mythicupgrades.deepslate_topaz_ore": "Топазоносний Глибосланець",
+  "block.mythicupgrades.topaz_block": "Блок Топазу",
+  "block.mythicupgrades.topaz_crystal_block": "Блок Топазного Кришталю",
+  "block.mythicupgrades.topaz_crystal_cluster": "Топазний Кришталевий Кластер",
+
+
+  "item.mythicupgrades.ruby": "Рубін",
+  "item.mythicupgrades.ruby_ingot": "Рубіновий Злиток",
+  "item.mythicupgrades.ruby_crystal_shard": "Рубіновий Кришталевий Осколок",
+  "item.mythicupgrades.ruby_potion": "Рубінове Зілля",
+
+  "item.mythicupgrades.ruby_helmet": "Рубіновий Шолом",
+  "item.mythicupgrades.ruby_chestplate": "Рубіновий Нагрудник",
+  "item.mythicupgrades.ruby_leggings": "Рубінові Наголінники",
+  "item.mythicupgrades.ruby_boots": "Рубінові Чоботи",
+
+  "item.mythicupgrades.ruby_sword": "Рубіновий Меч",
+  "item.mythicupgrades.ruby_axe": "Рубінова Сокира",
+  "item.mythicupgrades.ruby_pickaxe": "Рубінове Кайло",
+  "item.mythicupgrades.ruby_shovel": "Рубінова Лопата",
+  "item.mythicupgrades.ruby_hoe": "Рубінова Мотика",
+  
+
+  "block.mythicupgrades.ruby_ore": "Рубінова",
+  "block.mythicupgrades.ruby_block": "Рубіновий Блок",
+  "block.mythicupgrades.ruby_crystal_block": "Блок Рубінового Кришталю",
+  "block.mythicupgrades.ruby_crystal_cluster": "Рубіновий Кришталевий Кластер",
+
+  "item.mythicupgrades.sapphire": "Сапфір",
+  "item.mythicupgrades.sapphire_ingot": "Сапфіровий Злиток",
+  "item.mythicupgrades.sapphire_crystal_shard": "Сапфіровий Кришталевий Осколок",
+  "item.mythicupgrades.sapphire_potion": "Сапфірове Зілля",
+
+  "item.mythicupgrades.sapphire_helmet": "Сапфіровий Шолом",
+  "item.mythicupgrades.sapphire_chestplate": "Сапфіровий Нагрудник",
+  "item.mythicupgrades.sapphire_leggings": "Сапфірові Наголінники",
+  "item.mythicupgrades.sapphire_boots": "Sapphire Чоботи",
+
+  "item.mythicupgrades.sapphire_sword": "Сапфіровий Меч",
+  "item.mythicupgrades.sapphire_axe": "Сапфірова Сокира",
+  "item.mythicupgrades.sapphire_pickaxe": "Сапфірове Кайло",
+  "item.mythicupgrades.sapphire_shovel": "Сапфірова Лопата",
+  "item.mythicupgrades.sapphire_hoe": "Сапфірова Мотика",
+
+  "block.mythicupgrades.sapphire_ore": "Сапфірова Руда",
+  "block.mythicupgrades.sapphire_block": "Сапфіровий блок",
+  "block.mythicupgrades.sapphire_crystal_block": "Блок Сапфірового Кришталю",
+  "block.mythicupgrades.sapphire_crystal_cluster": "Сапфіровий Кришталевий Кластер ",
+
+  "item.mythicupgrades.ametrine": "Аметрин",
+  "item.mythicupgrades.ametrine_ingot": "Аметриновий Злиток",
+  "item.mythicupgrades.ametrine_crystal_shard": "Аметриновий Кришталь",
+  "item.mythicupgrades.ametrine_potion": "Аметринове Зілля",
+
+  "item.mythicupgrades.ametrine_helmet": "Аметриновий Шолом",
+  "item.mythicupgrades.ametrine_chestplate": "Аметриновий Нагрудник ",
+  "item.mythicupgrades.ametrine_leggings": "Аметринові Наголінники",
+  "item.mythicupgrades.ametrine_boots": "Аметринові Чоботи",
+
+  "item.mythicupgrades.ametrine_sword": "Аметриновий Меч",
+  "item.mythicupgrades.ametrine_axe": "Аметринова Сокира",
+  "item.mythicupgrades.ametrine_pickaxe": "Аметринове Кайло",
+  "item.mythicupgrades.ametrine_shovel": "Аметринова Лопата",
+  "item.mythicupgrades.ametrine_hoe": "Аметринова Мотика",
+
+  "block.mythicupgrades.ametrine_ore": "Аметринова Руда",
+  "block.mythicupgrades.ametrine_block": "Аметриновий Блок",
+  "block.mythicupgrades.ametrine_crystal_block": "Блок з Аметринового Кришталю",
+  "block.mythicupgrades.ametrine_crystal_cluster": "Ametrine Кришталевий Кластер",
+
+  "item.mythicupgrades.jade": "Жад",
+  "item.mythicupgrades.jade_ingot": "Жадовий Злиток",
+  "item.mythicupgrades.jade_crystal_shard": "Жадовий Кришталь",
+  "item.mythicupgrades.jade_potion": "Жадове зілля",
+
+  "item.mythicupgrades.jade_helmet": "Жадовий Шолом",
+  "item.mythicupgrades.jade_chestplate": "Жадовий Нагрудник",
+  "item.mythicupgrades.jade_leggings": "Жадові Наголінники",
+  "item.mythicupgrades.jade_boots": "Жадові Чоботи",
+
+  "item.mythicupgrades.jade_sword": "Жадовий Меч",
+  "item.mythicupgrades.jade_axe": "Жадова Сокира",
+  "item.mythicupgrades.jade_pickaxe": "Жадове Кайло",
+  "item.mythicupgrades.jade_shovel": "Жадова Лопта",
+  "item.mythicupgrades.jade_hoe": "Жадова Мотика",
+
+  "block.mythicupgrades.jade_ore": "Жадова Руда",
+  "block.mythicupgrades.jade_block": "Жадовий блок",
+  "block.mythicupgrades.jade_crystal_block": "Блок  Жадового Кришталю",
+  "block.mythicupgrades.jade_crystal_cluster": "Жадовий Кришталевий Кластер",
+
+  "item.mythicupgrades.raw_necoium": "Рудний Некоіум",
+  "item.mythicupgrades.necoium_ingot": "Некоіумний злиток",
+  "block.mythicupgrades.necoium_ore": "Некоіумна Руда",
+  "block.mythicupgrades.necoium_block": "Некоіумний блок",
+  "block.mythicupgrades.raw_necoium_block": "Блок Рудного Некоіума",
+
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.peridot_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Ковальський Шаблон",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Ковальський Шаблон",
+
+  "effect.mythicupgrades.ice_shield": "Крижаний Щит",
+  "effect.mythicupgrades.freeze": "Замороження",
+  "effect.mythicupgrades.poisonous_thorns": "Отруйні Шипи",
+  "effect.mythicupgrades.item_mastery": "Майстерність Предметів",
+  "effect.mythicupgrades.damage_deflection": "Пошкодження",
+  "effect.mythicupgrades.spelunker": "Дослідник печер",
+  "effect.mythicupgrades.arcane_aura": "Таємна аура",
+  "effect.mythicupgrades.bouncer": "Вибух",
+
+  "defaultArmorTooltip.description": "Надягніть полний комплект броні для отримання додаткової суперсили!",
+
+  "aquamarine_armor.description": "Бонус Комплекту: Крижаний щит %s",
+  "aquamarine_tool.description": "Заморожує ворога при ударі.",
+
+  "peridot_armor.description": "Бонус Комплекту: Отруйні Шипи %s",
+  "peridot_tool.description": "Отруює ворога при ударі.",
+
+  "topaz_armor.description": "Бонус Комплекту: Захист, Майстерність Предметів  %s та Вогнестійкість",
+  "topaz_tool.description": "Має втричі більше міцності та підвищені характеристики, підпалює ворогів при ударі і переплавляє видобуваний предмет.",
+
+  "ruby_armor.description": "Бонус Комплекту: Дослідник Печер %s",
+  "ruby_tool.description": "Має Спішку, коли в основній руці.",
+
+  "sapphire_armor.description": "Бонус Комплекту: Нанесення шкоди %s",
+  "sapphire_tool.description": "Завдає додаткову шкоду, що дорівнює %d%% максимального здоров'я у мішені.",
+
+  "ametrine_armor.description": "Бонус Комплекту: Таємна аура %s",
+  "ametrine_tool.description": "Левітує ворога при ударі.",
+
+  "jade_armor.description": "Бонус Комплекту: Швидкість %s та Підвищення стрибків %s",
+  "jade_tool.description": "Забезпечує збільшення стрибка при ударі.",
+
+  "death.attack.deflecting": "%s отримав достатню відхилену шкоду від %s, щоб пройти.",
+  "death.attack.deflecting.item": "%s отримав достатню відхилену шкоду від %s, щоб пройти за допомогою %s.",
+  "death.attack.percentage": "%s отримав достатню магічну відсоткову шкоду, щоб пройти під час боротьби з %s.",
+  "death.attack.percentage.item": "%s отримав достатню магічну відсоткову шкоду, щоб пройти під час боротьби з %s, що зберігає %s.",
+
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.additions_slot_description": "Додайте Аквамариновий Злиток",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.ingredients": "Аквамариновий Злиток",
+  "upgrade.mythicupgrades.aquamarine_upgrade": "Аквамаринове Покращення",
+
+  "item.mythicupgrades.smithing_template.peridot_upgrade.additions_slot_description": "Додайте Перідотовий Злиток",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.ingredients": "Перідотовий Злиток",
+  "upgrade.mythicupgrades.peridot_upgrade": "Перідотове Покращення",
+
+  "item.mythicupgrades.smithing_template.topaz_upgrade.additions_slot_description": "Додайте Топазний Злиток",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.ingredients": "Топазний Злиток",
+  "upgrade.mythicupgrades.topaz_upgrade": "Топазне Покращення",
+
+  "item.mythicupgrades.smithing_template.ruby_upgrade.additions_slot_description": "Додайте Рубіновий Злиток",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.ingredients": "Топазний Злиток",
+  "upgrade.mythicupgrades.ruby_upgrade": "Рубінове Покращення",
+
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.additions_slot_description": "Додайте Сапфіровий Злиток",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.ingredients": "Сапфіровий Злиток",
+  "upgrade.mythicupgrades.sapphire_upgrade": "Sapphire Покращення",
+
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.additions_slot_description": "Додайте Аметриновий Злиток",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.ingredients": "Аметриновий Злиток",
+  "upgrade.mythicupgrades.ametrine_upgrade": "Аметринове Покращення",
+
+  "item.mythicupgrades.smithing_template.jade_upgrade.additions_slot_description": "Додайте Жадовий Злиток",
+  "item.mythicupgrades.smithing_template.jade_upgrade.applies_to": "Незеритові Обладунки",
+  "item.mythicupgrades.smithing_template.jade_upgrade.base_slot_description": "Додайте незеритову броню, зброю або інструмент",
+  "item.mythicupgrades.smithing_template.jade_upgrade.ingredients": "Жадовий Злиток",
+  "upgrade.mythicupgrades.jade_upgrade": "Жадове Покращення"
+}
