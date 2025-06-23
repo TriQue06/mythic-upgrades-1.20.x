@@ -26,7 +26,7 @@ public class MUArmorMaterials {
     public static final Holder<ArmorMaterial> AMETRINE;
     public static final Holder<ArmorMaterial> JADE;
 
-    public static Holder<ArmorMaterial> registerMaterial(String id, Map<Type, Integer> defensePoints, Holder<SoundEvent> equipSound, int enchantability, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
+    private static Holder<ArmorMaterial> registerMaterial(String id, Map<Type, Integer> defensePoints, Holder<SoundEvent> equipSound, int enchantability, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
         List<ArmorMaterial.Layer> layers = List.of(
                 new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MythicUpgrades.MOD_ID, id), "", dyeable)
         );

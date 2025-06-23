@@ -45,7 +45,8 @@ public class MUItems {
 
     private static final ItemEffectsList noToolEffects = new ItemEffectsListBuilder().build();
 
-    private static final ItemEffectsList poisonToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.POISON, (int) (CONFIG.peridotConfig.tools_poison_duration() * 20), CONFIG.peridotConfig.tools_poison_amplifier()).build();
+    private static final ItemEffectsList poisonToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.POISON, (int)(CONFIG.peridotConfig.tools_poison_duration() * 20), CONFIG.peridotConfig.tools_effects_amplifier()).
+    addForHitToEnemy(MobEffects.CONFUSION, (int) (CONFIG.peridotConfig.tools_nausea_duration() * 20), CONFIG.peridotConfig.tools_effects_amplifier()).build();
 
     private static final ItemEffectsList freezeToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(FREEZE, (int) (CONFIG.aquamarineConfig.tools_freeze_duration() * 20), 0).build();
 
@@ -136,7 +137,7 @@ public class MUItems {
     public static final Item TOPAZ_SHOVEL = new MythicEffectsShovelItem(MUToolMaterials.TOPAZ, new Item.Properties().fireResistant().attributes(MythicEffectsShovelItem.createAttributes(MUToolMaterials.TOPAZ, 2, -2.9f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
     public static final Item TOPAZ_PICKAXE = new MythicEffectsPickaxeItem(MUToolMaterials.TOPAZ, new Item.Properties().fireResistant().attributes(MythicEffectsPickaxeItem.createAttributes(MUToolMaterials.TOPAZ, 1, -2.7f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
     public static final Item TOPAZ_AXE = new MythicEffectsAxeItem(MUToolMaterials.TOPAZ, new Item.Properties().fireResistant().attributes(MythicEffectsAxeItem.createAttributes(MUToolMaterials.TOPAZ, 5, -2.9f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
-    public static final Item TOPAZ_HOE = new MythicEffectsAxeItem(MUToolMaterials.TOPAZ, new Item.Properties().fireResistant().attributes(MythicEffectsHoeItem.createAttributes(MUToolMaterials.TOPAZ, -4, 0.1f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
+    public static final Item TOPAZ_HOE = new MythicEffectsHoeItem(MUToolMaterials.TOPAZ, new Item.Properties().fireResistant().attributes(MythicEffectsHoeItem.createAttributes(MUToolMaterials.TOPAZ, -4, 0.1f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
     public static final Item TOPAZ_SWORD = new TopazSwordItem(new Item.Properties().fireResistant().attributes(MythicEffectsSwordItem.createAttributes(MUToolMaterials.TOPAZ, 3, -2.3f)), noToolEffects, "topaz_tool.description", ChatFormatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_HELMET = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(50)), topazArmorEffects, "topaz_armor.description", topazAmplifiers, ChatFormatting.GOLD);
     public static final MythicEffectsArmorItem TOPAZ_CHESTPLATE = new MythicEffectsArmorItem(MUArmorMaterials.TOPAZ, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(50)), topazArmorEffects, "topaz_armor.description", topazAmplifiers, ChatFormatting.GOLD);

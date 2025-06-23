@@ -43,7 +43,8 @@ public abstract class ServerWorldMixin {
         ItemEffectsList jadeArmorEffects = new ItemEffectsListBuilder().addForEquipmentBuffs(MobEffects.MOVEMENT_SPEED, CONFIG.jadeConfig.speed_amplifier()).addForEquipmentBuffs(MobEffects.JUMP, CONFIG.jadeConfig.jump_boost_amplifier()).build();
         List<Integer> jadeAmplifiers = List.of(CONFIG.jadeConfig.speed_amplifier(), CONFIG.jadeConfig.jump_boost_amplifier());
 
-        ItemEffectsList poisonToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.POISON, (int)(CONFIG.peridotConfig.tools_poison_duration() * 20), CONFIG.peridotConfig.tools_poison_amplifier()).build();
+        ItemEffectsList poisonToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(MobEffects.POISON, (int)(CONFIG.peridotConfig.tools_poison_duration() * 20), CONFIG.peridotConfig.tools_effects_amplifier()).
+                addForHitToEnemy(MobEffects.CONFUSION, (int) (CONFIG.peridotConfig.tools_nausea_duration() * 20), CONFIG.peridotConfig.tools_effects_amplifier()).build();
 
         ItemEffectsList freezeToolEffects = new ItemEffectsListBuilder().addForHitToEnemy(FREEZE, (int)(CONFIG.aquamarineConfig.tools_freeze_duration() * 20), 0).build();
 

@@ -9,14 +9,16 @@
   "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Ametrine", "color" : "dark_purple", "bold": true}],
   "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": true}],
 
-  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "Armor's Ice Shield Slowness Duration", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_slowness_duration": [{"text": "Armor's Ice Shield Slowness Duration", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Armor's Ice Shield Amplifier", "color": "aqua"}],
   "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "Tools' Freeze Duration", "color": "aqua"}],
 
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Armor's Poisonous Thorns Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Armor's Poisonous Thorns' Poison Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_nausea_duration": [{"text": "Armor's Poisonous Thorns' Nausea Duration", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_effects_amplifier": [{"text": "Tools' Poison Amplifier", "color": "green"}],
   "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_duration": [{"text": "Tools' Poison Duration", "color": "green"}],
-  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_amplifier": [{"text": "Tools' Poison Amplifier", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_nausea_duration": [{"text": "Tools' Nausea Duration", "color": "green"}],
 
   "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Armor's Item Mastery Amplifier", "color": "gold"}],
   "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "Time entities hit with topaz tools will burn for", "color": "gold"}],
@@ -27,14 +29,14 @@
   "text.config.mythicupgrades-config.option.rubyConfig.spelunker_amplifier": [{"text": "Spelunker Amplifier", "color": "red"}],
   "text.config.mythicupgrades-config.option.rubyConfig.tools_haste_amplifier": [{"text": "Tools' Haste Amplifier", "color": "red"}],
 
-  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_duration": [{"text": "Armor's Arcane Aura Duration", "color": "dark_purple"}],
-  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": "Armor's Arcane Aura's Levitation Amplifier", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_levitation_duration": [{"text": "Armor's Arcane Aura Levitation Duration", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": "Armor's Arcane Aura's Amplifier", "color": "dark_purple"}],
   "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_duration": [{"text": "Tools' Levitation Duration", "color": "dark_purple"}],
   "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_amplifier": [{"text": "Tools' Levitation Amplifier", "color": "dark_purple"}],
 
   "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "Armor's Speed Amplifier", "color": "dark_green"}],
   "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Armor's Jump Boost Amplifier", "color": "dark_green"}],
-  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_duration": [{"text": "Tools' Bouncer Duration", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_jump_boost_duration": [{"text": "Tools' Bouncer's Jump Boost Duration", "color": "dark_green"}],
   "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_amplifier": [{"text": "Tools' Bouncer Amplifier", "color": "dark_green"}],
 
   "pack.mythicupgrades.32x": "Mythic Upgrades 32x",

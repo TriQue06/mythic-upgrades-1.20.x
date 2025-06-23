@@ -1,0 +1,287 @@
+{
+  "text.config.mythicupgrades-config.title": [{"text" : "Configuration des amélioration Mythiques", "color" : "aqua", "bold": true}],
+
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "Aigue-marine", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "Péridot", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "Topaze", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "Saphir", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "Rubis", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "Amétrine", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "Jade", "color" : "dark_green", "bold": true}],
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_slowness_duration": [{"text": "Durée de lenteur du bouclier de glace de l'armure", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "Amplificateur du bouclier de glace de l'armure", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "Durée de gel des outils", "color": "aqua"}],
+
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "Amplificateur des épines empoisonnées de l'armure", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "Durée du poison des épines empoisonnées de l'armure", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_nausea_duration": [{"text": "Durée de la nausée des épines empoisonnées de l'armure", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_effects_amplifier": [{"text": "Amplificateur de poison des outils", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_duration": [{"text": "Durée du poison des outils", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_nausea_duration": [{"text": "Durée de la nausée des outils", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "Amplificateur de maîtrise d'objet de l'armure", "color": "gold"}],
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "Durée pendant laquelle les entités touchées par les outils en topaze brûleront", "color": "gold"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "Amplificateur de déviation des dégâts de l'armure", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.tools_percentage_damage_percent": [{"text": "Dégâts des outils (% des PV max de la cible)", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.spelunker_amplifier": [{"text": "Amplificateur de spéléologue", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.tools_haste_amplifier": [{"text": "Amplificateur de vitesse des outils", "color": "red"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_levitation_duration": [{"text": "Durée de lévitation de l'aura arcanique de l'armure", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": "Amplificateur de l'aura arcanique de l'armure", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_duration": [{"text": "Durée de lévitation des outils", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_amplifier": [{"text": "Amplificateur de lévitation des outils", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "Amplificateur de vitesse de l'armure", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "Amplificateur de saut amélioré de l'armure", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_jump_boost_duration": [{"text": "Durée du saut amélioré des outils rebondissants", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_amplifier": [{"text": "Amplificateur des outils rebondissants", "color": "dark_green"}],
+
+  "pack.mythicupgrades.32x": "Améliorations Mythiques x32",
+
+  "item.mythicupgrades.aquamarine": "Aigue-marine",
+  "item.mythicupgrades.aquamarine_ingot": "Lingot d'aigue-marine",
+  "item.mythicupgrades.aquamarine_crystal_shard": "Éclat de cristal d'aigue-marine",
+  "item.mythicupgrades.aquamarine_potion": "Potion d'aigue-marine",
+
+  "item.mythicupgrades.aquamarine_helmet": "Casque en aigue-marine",
+  "item.mythicupgrades.aquamarine_chestplate": "Plastron en aigue-marine",
+  "item.mythicupgrades.aquamarine_leggings": "Jambières en aigue-marine",
+  "item.mythicupgrades.aquamarine_boots": "Bottes en aigue-marine",
+
+  "item.mythicupgrades.aquamarine_sword": "Épée en aigue-marine",
+  "item.mythicupgrades.aquamarine_axe": "Hache en aigue-marine",
+  "item.mythicupgrades.aquamarine_pickaxe": "Pioche en aigue-marine",
+  "item.mythicupgrades.aquamarine_shovel": "Pelle en aigue-marine",
+  "item.mythicupgrades.aquamarine_hoe": "Houe en aigue-marine",
+
+  "block.mythicupgrades.aquamarine_ore": "Minerai d'aigue-marine",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "Minerai d'aigue-marine en ardoise des abîmes",
+  "block.mythicupgrades.aquamarine_block": "Bloc d'aigue-marine",
+  "block.mythicupgrades.aquamarine_crystal_block": "Bloc de cristal d'aigue-marine",
+  "block.mythicupgrades.aquamarine_crystal_cluster": "Grappe de cristal d'aigue-marine",
+
+  "item.mythicupgrades.peridot": "Péridot",
+  "item.mythicupgrades.peridot_ingot": "Lingot de péridot",
+  "item.mythicupgrades.peridot_crystal_shard": "Éclat de cristal de péridot",
+  "item.mythicupgrades.peridot_potion": "Potion de péridot",
+
+  "item.mythicupgrades.peridot_helmet": "Casque en péridot",
+  "item.mythicupgrades.peridot_chestplate": "Plastron en péridot",
+  "item.mythicupgrades.peridot_leggings": "Jambières en péridot",
+  "item.mythicupgrades.peridot_boots": "Bottes en péridot",
+
+  "item.mythicupgrades.peridot_sword": "Épée en péridot",
+  "item.mythicupgrades.peridot_axe": "Hache en péridot",
+  "item.mythicupgrades.peridot_pickaxe": "Pioche en péridot",
+  "item.mythicupgrades.peridot_shovel": "Pelle en péridot",
+  "item.mythicupgrades.peridot_hoe": "Houe en péridot",
+
+  "block.mythicupgrades.peridot_ore": "Minerai de péridot",
+  "block.mythicupgrades.deepslate_peridot_ore": "Minerai de péridot en ardoise des abîmes",
+  "block.mythicupgrades.peridot_block": "Bloc de péridot",
+  "block.mythicupgrades.peridot_crystal_block": "Bloc de cristal de péridot",
+  "block.mythicupgrades.peridot_crystal_cluster": "Grappe de cristal de péridot",
+
+  "item.mythicupgrades.topaz": "Topaze",
+  "item.mythicupgrades.topaz_ingot": "Lingot de topaze",
+  "item.mythicupgrades.topaz_crystal_shard": "Éclat de cristal de topaze",
+  "item.mythicupgrades.topaz_potion": "Potion de topaze",
+
+  "item.mythicupgrades.topaz_helmet": "Casque en topaze",
+  "item.mythicupgrades.topaz_chestplate": "Plastron en topaze",
+  "item.mythicupgrades.topaz_leggings": "Jambières en topaze",
+  "item.mythicupgrades.topaz_boots": "Bottes en topaze",
+
+  "item.mythicupgrades.topaz_sword": "Épée en topaze",
+  "item.mythicupgrades.topaz_axe": "Hache en topaze",
+  "item.mythicupgrades.topaz_pickaxe": "Pioche en topaze",
+  "item.mythicupgrades.topaz_shovel": "Pelle en topaze",
+  "item.mythicupgrades.topaz_hoe": "Houe en topaze",
+
+  "block.mythicupgrades.topaz_ore": "Minerai de topaze",
+  "block.mythicupgrades.deepslate_topaz_ore": "Minerai de topaze en ardoise des abîmes",
+  "block.mythicupgrades.topaz_block": "Bloc de topaze",
+  "block.mythicupgrades.topaz_crystal_block": "Bloc de cristal de topaze",
+  "block.mythicupgrades.topaz_crystal_cluster": "Grappe de cristal de topaze",
+
+  "item.mythicupgrades.ruby": "Rubis",
+  "item.mythicupgrades.ruby_ingot": "Lingot de rubis",
+  "item.mythicupgrades.ruby_crystal_shard": "Éclat de cristal de rubis",
+  "item.mythicupgrades.ruby_potion": "Potion de rubis",
+
+  "item.mythicupgrades.ruby_helmet": "Casque en rubis",
+  "item.mythicupgrades.ruby_chestplate": "Plastron en rubis",
+  "item.mythicupgrades.ruby_leggings": "Jambières en rubis",
+  "item.mythicupgrades.ruby_boots": "Bottes en rubis",
+
+  "item.mythicupgrades.ruby_axe": "Hache en rubis",
+  "item.mythicupgrades.ruby_pickaxe": "Pioche en rubis",
+  "item.mythicupgrades.ruby_shovel": "Pelle en rubis",
+  "item.mythicupgrades.ruby_hoe": "Houe en rubis",
+  "item.mythicupgrades.ruby_sword": "Épée en rubis",
+
+  "block.mythicupgrades.ruby_ore": "Minerai de rubis",
+  "block.mythicupgrades.ruby_block": "Bloc de rubis",
+  "block.mythicupgrades.ruby_crystal_block": "Bloc de cristal de rubis",
+  "block.mythicupgrades.ruby_crystal_cluster": "Grappe de cristal de rubis",
+
+  "item.mythicupgrades.sapphire": "Saphir",
+  "item.mythicupgrades.sapphire_ingot": "Lingot de saphir",
+  "item.mythicupgrades.sapphire_crystal_shard": "Éclat de cristal de saphir",
+  "item.mythicupgrades.sapphire_potion": "Potion de saphir",
+
+  "item.mythicupgrades.sapphire_helmet": "Casque en saphir",
+  "item.mythicupgrades.sapphire_chestplate": "Plastron en saphir",
+  "item.mythicupgrades.sapphire_leggings": "Jambières en saphir",
+  "item.mythicupgrades.sapphire_boots": "Bottes en saphir",
+
+  "item.mythicupgrades.sapphire_sword": "Épée en saphir",
+  "item.mythicupgrades.sapphire_axe": "Hache en saphir",
+  "item.mythicupgrades.sapphire_pickaxe": "Pioche en saphir",
+  "item.mythicupgrades.sapphire_shovel": "Pelle en saphir",
+  "item.mythicupgrades.sapphire_hoe": "Houe en saphir",
+
+  "block.mythicupgrades.sapphire_ore": "Minerai de saphir",
+  "block.mythicupgrades.deepslate_sapphire_ore": "Minerai de saphir en ardoise des abîmes",
+  "block.mythicupgrades.sapphire_block": "Bloc de saphir",
+  "block.mythicupgrades.sapphire_crystal_block": "Bloc de cristal de saphir",
+  "block.mythicupgrades.sapphire_crystal_cluster": "Grappe de cristal de saphir",
+
+  "item.mythicupgrades.ametrine": "Amétrine",
+  "item.mythicupgrades.ametrine_ingot": "Lingot d'amétrine",
+  "item.mythicupgrades.ametrine_crystal_shard": "Éclat de cristal d'amétrine",
+  "item.mythicupgrades.ametrine_potion": "Potion d'amétrine",
+
+  "item.mythicupgrades.ametrine_helmet": "Casque en amétrine",
+  "item.mythicupgrades.ametrine_chestplate": "Plastron en amétrine",
+  "item.mythicupgrades.ametrine_leggings": "Jambières en amétrine",
+  "item.mythicupgrades.ametrine_boots": "Bottes en amétrine",
+
+  "item.mythicupgrades.ametrine_sword": "Épée en amétrine",
+  "item.mythicupgrades.ametrine_axe": "Hache en amétrine",
+  "item.mythicupgrades.ametrine_pickaxe": "Pioche en amétrine",
+  "item.mythicupgrades.ametrine_shovel": "Pelle en amétrine",
+  "item.mythicupgrades.ametrine_hoe": "Houe en amétrine",
+
+  "block.mythicupgrades.ametrine_ore": "Minerai d'amétrine",
+  "block.mythicupgrades.ametrine_block": "Bloc d'amétrine",
+  "block.mythicupgrades.ametrine_crystal_block": "Bloc de cristal d'amétrine",
+  "block.mythicupgrades.ametrine_crystal_cluster": "Grappe de cristal d'amétrine",
+
+  "item.mythicupgrades.jade": "Jade",
+  "item.mythicupgrades.jade_ingot": "Lingot de jade",
+  "item.mythicupgrades.jade_crystal_shard": "Éclat de cristal de jade",
+  "item.mythicupgrades.jade_potion": "Potion de jade",
+
+  "item.mythicupgrades.jade_helmet": "Casque en jade",
+  "item.mythicupgrades.jade_chestplate": "Plastron en jade",
+  "item.mythicupgrades.jade_leggings": "Jambières en jade",
+  "item.mythicupgrades.jade_boots": "Bottes en jade",
+
+  "item.mythicupgrades.jade_sword": "Épée en jade",
+  "item.mythicupgrades.jade_axe": "Hache en jade",
+  "item.mythicupgrades.jade_pickaxe": "Pioche en jade",
+  "item.mythicupgrades.jade_shovel": "Pelle en jade",
+  "item.mythicupgrades.jade_hoe": "Houe en jade",
+
+  "block.mythicupgrades.jade_ore": "Minerai de jade",
+  "block.mythicupgrades.jade_block": "Bloc de jade",
+  "block.mythicupgrades.jade_crystal_block": "Bloc de cristal de jade",
+  "block.mythicupgrades.jade_crystal_cluster": "Grappe de cristal de jade",
+
+  "item.mythicupgrades.raw_necoium": "Necoium brut",
+  "item.mythicupgrades.necoium_ingot": "Lingot de necoium",
+  "block.mythicupgrades.necoium_ore": "Minerai de necoium",
+  "block.mythicupgrades.necoium_block": "Bloc de necoium",
+  "block.mythicupgrades.raw_necoium_block": "Bloc de necoium brut",
+
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.peridot_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "Modèle de forge",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "Modèle de forge",
+
+  "effect.mythicupgrades.ice_shield": "Bouclier de Glace",
+  "effect.mythicupgrades.freeze": "Gel",
+  "effect.mythicupgrades.poisonous_thorns": "Épines Empoisonnées",
+  "effect.mythicupgrades.item_mastery": "Maîtrise des Objets",
+  "effect.mythicupgrades.damage_deflection": "Déviation des Dégâts",
+  "effect.mythicupgrades.spelunker": "Spéléologue",
+  "effect.mythicupgrades.arcane_aura": "Aura Arcanique",
+  "effect.mythicupgrades.bouncer": "Rebondeur",
+
+  "defaultArmorTooltip.description": "Portez un ensemble complet d'armure pour obtenir des bonus de puissance !",
+
+  "aquamarine_armor.description": "Bonus d'ensemble : Bouclier de Glace %s",
+  "aquamarine_tool.description": "Gèle l'ennemi au toucher.",
+
+  "peridot_armor.description": "Bonus d'ensemble : Épines Empoisonnées %s",
+  "peridot_tool.description": "Empoisonne l'ennemi au toucher.",
+
+  "topaz_armor.description": "Bonus d'ensemble : Protection, Maîtrise des Objets %s et Résistance au Feu",
+  "topaz_tool.description": "A 3x de durabilité et des statistiques supérieures, brûle les ennemis au toucher et fond le butin extrait.",
+
+  "ruby_armor.description": "Bonus d'ensemble : Spéléologue %s",
+  "ruby_tool.description": "Fournit de la Célérité lorsqu'il est dans la main principale.",
+
+  "sapphire_armor.description": "Bonus d'ensemble : Déviation des Dégâts %s",
+  "sapphire_tool.description": "Inflige des dégâts supplémentaires égaux à %d%% de la santé maximale de la cible.",
+
+  "ametrine_armor.description": "Bonus d'ensemble : Aura Arcanique %s",
+  "ametrine_tool.description": "Lévite l'ennemi au toucher.",
+
+  "jade_armor.description": "Bonus d'ensemble : Vitesse %s et Boost de Saut %s",
+  "jade_tool.description": "Fournit un boost de saut au toucher.",
+
+  "death.attack.deflecting": "%s a subi suffisamment de dégâts réfléchis de %s pour mourir.",
+  "death.attack.deflecting.item": "%s a subi suffisamment de dégâts réfléchis de %s pour mourir avec l'aide de %s.",
+  "death.attack.percentage": "%s a subi suffisamment de dégâts magiques en pourcentage pour mourir en combattant %s.",
+  "death.attack.percentage.item": "%s a subi suffisamment de dégâts magiques en pourcentage pour mourir en combattant %s tenant %s.",
+
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.additions_slot_description": "Ajouter un lingot d'aigue-marine",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.applies_to": "Équipement en Netherite",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.base_slot_description": "Ajouter une armure, une arme ou un outil en Netherite",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.ingredients": "Lingot d'aigue-marine",
+  "upgrade.mythicupgrades.aquamarine_upgrade": "Amélioration d'aigue-marine",
+
+  "item.mythicupgrades.smithing_template.peridot_upgrade.additions_slot_description": "Ajouter un lingot de péridot",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.applies_to": "Équipement en Netherite",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.base_slot_description": "Ajouter une armure, une arme ou un outil en Netherite",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.ingredients": "Lingot de péridot",
+  "upgrade.mythicupgrades.peridot_upgrade": "Amélioration du péridot",
+
+  "item.mythicupgrades.smithing_template.topaz_upgrade.additions_slot_description": "Ajouter un lingot de topaze",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.applies_to": "Équipement en Netherite",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.base_slot_description": "Ajouter une armure en Netherite, arme ou outil",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.ingredients": "Lingot de topaze",
+  "upgrade.mythicupgrades.topaz_upgrade": "amélioration de topaze",
+
+  "item.mythicupgrades.smithing_template.ruby_upgrade.additions_slot_description": "Ajouter un lingot de rubis",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.applies_to": "Équipement en netherite",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.base_slot_description": "Ajouter une armure, une arme ou un outil en netherite",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.ingredients": "Lingot de rubis",
+  "upgrade.mythicupgrades.ruby_upgrade": "Mise à niveau de rubis",
+
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.additions_slot_description": "Ajouter un lingot de saphir",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.applies_to": "Équipement en Netherite",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.base_slot_description": "Ajouter une armure, une arme ou un outil en Netherite",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.ingredients": "Lingot de saphir",
+  "upgrade.mythicupgrades.sapphire_upgrade": "Amélioration de saphir",
+
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.additions_slot_description": "Ajouter un lingot d'amétrine",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.applies_to": "Équipement en Netherite",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.base_slot_description": "Ajoutez une armure, une arme ou un outil en Netherite",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.ingredients": "Lingot d'amétrine",
+  "upgrade.mythicupgrades.ametrine_upgrade": "amélioration de l'amétrine",
+
+  "item.mythicupgrades.smithing_template.jade_upgrade.additions_slot_description": "Ajouter un lingot de jade",
+  "item.mythicupgrades.smithing_template.jade_upgrade.applies_to": "Netherite Équipement",
+  "item.mythicupgrades.smithing_template.jade_upgrade.base_slot_description": "Ajoutez une armure, une arme ou un outil en Netherite",
+  "item.mythicupgrades.smithing_template.jade_upgrade.ingredients": "Lingot de jade",
+  "upgrade.mythicupgrades.jade_upgrade": "amélioration de Jade"
+}

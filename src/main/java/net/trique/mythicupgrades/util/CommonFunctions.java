@@ -5,10 +5,8 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
@@ -51,8 +49,7 @@ public class CommonFunctions {
     public static void addStatusEffects(LivingEntity entity, HashMap<Holder<MobEffect>, EffectMeta> effects, LivingEntity attacker) {
         for (Holder<MobEffect> effect : effects.keySet()) {
             EffectMeta meta = effects.get(effect);
-            if (effect != null && ((effect.equals(MobEffects.HEAL) && (entity.getTags().contains(EntityTypeTags.UNDEAD.toString()))) ||
-                    (!(effect.equals(MobEffects.HARM) && (entity.getTags().contains(EntityTypeTags.UNDEAD.toString())))) || !effect.value().isInstantenous())) {
+            if (effect != null && !effect.value().isInstantenous()) {
                 if (entity.hasEffect(effect)) {
                     entity.removeEffect(effect);
                 }

@@ -3,6 +3,7 @@ package net.trique.mythicupgrades.effect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 
 public class FreezeEffect extends MobEffect {
     public FreezeEffect(MobEffectCategory statusEffectCategory, int color) {
@@ -11,7 +12,7 @@ public class FreezeEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (!livingEntity.level().isClientSide()) {
+        if (!livingEntity.level().isClientSide() && !(livingEntity instanceof Player player && (player.isCreative() || player.isSpectator()))) {
             double x = livingEntity.getX();
             double y = livingEntity.getY();
             double z = livingEntity.getZ();
