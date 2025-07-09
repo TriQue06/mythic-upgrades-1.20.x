@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.trique.mythicupgrades.MythicUpgradesDamageTypes;
@@ -40,73 +41,79 @@ public abstract class LivingEntityMixin extends Entity {
         has_damage_been_deflected = false;
     }
 
-    @Shadow
-    public abstract ItemStack getEquippedStack(EquipmentSlot slot);
-
-    @Shadow
-    public abstract Map<StatusEffect, StatusEffectInstance> getActiveStatusEffects();
+    @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
+    @Shadow public abstract Map<StatusEffect, StatusEffectInstance> getActiveStatusEffects();
 
     @Unique private boolean has_damage_been_deflected;
-
     @Unique private float deflecting_damage;
+    @Unique private BaseMythicItem lastUsed;
+    @Unique private MythicEffectsArmorItem lastWorn;
 
-    @Unique
-    private BaseMythicItem lastUsed;
-
-    @Unique
-    private MythicEffectsArmorItem lastWorn;
-
-    @Inject(method = "tick", at = @At(value = "HEAD"))
+    @Inject(method = "tick", at = @At("HEAD"))
     private void checkItemInHand(CallbackInfo ci) {
         if (!this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty() &&
                 (this.getEquippedStack(EquipmentSlot.MAINHAND).getItem() instanceof BaseMythicItem item)) {
             if (lastUsed != null && !item.equals(lastUsed)) {
-                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastUsed.getMainHandEffects());
+                CommonFunctions.removeMythicInfiniteEffects((LivingEntity)(Object)this, lastUsed.getMainHandEffects());
             }
-            if (CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects())) {
-                CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getMainHandEffects());
+            if (CommonFunctions.checkStatusEffects((LivingEntity)(Object)this, item.getMainHandEffects())) {
+                CommonFunctions.addStatusEffects((LivingEntity)(Object)this, item.getMainHandEffects());
             }
             lastUsed = item;
         } else if (lastUsed != null) {
-            CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastUsed.getMainHandEffects());
+            CommonFunctions.removeMythicInfiniteEffects((LivingEntity)(Object)this, lastUsed.getMainHandEffects());
             lastUsed = null;
         }
     }
 
-    @Inject(method = "tick", at = @At(value = "HEAD"))
+    @Inject(method = "tick", at = @At("HEAD"))
     private void applyArmorBuffs(CallbackInfo ci) {
         ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
         if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item) {
-            if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
+            if (lastWorn != null && !CommonFunctions.hasCorrectArmorOn((LivingEntity)(Object)this, item.getMaterial())) {
+                CommonFunctions.removeMythicInfiniteEffects((LivingEntity)(Object)this, lastWorn.getEquipmentBuffs());
             }
-            if (CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial()) &&
-                    CommonFunctions.checkStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs())) {
-                CommonFunctions.addStatusEffects((LivingEntity) (Object) this, item.getEquipmentBuffs());
+            if (CommonFunctions.hasCorrectArmorOn((LivingEntity)(Object)this, item.getMaterial()) &&
+                    CommonFunctions.checkStatusEffects((LivingEntity)(Object)this, item.getEquipmentBuffs())) {
+                CommonFunctions.addStatusEffects((LivingEntity)(Object)this, item.getEquipmentBuffs());
             }
             lastWorn = item;
         } else if (lastWorn != null) {
-            CommonFunctions.removeMythicInfiniteEffects((LivingEntity) (Object) this, lastWorn.getEquipmentBuffs());
+            CommonFunctions.removeMythicInfiniteEffects((LivingEntity)(Object)this, lastWorn.getEquipmentBuffs());
             lastWorn = null;
         }
     }
 
-    @Inject(method = "damage", at = @At(value = "RETURN"))
-    private void applyArmorDebuffs(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        boolean was_damaged = cir.getReturnValue();
-        if (was_damaged) {
-            Entity attacker = source.getAttacker();
-            if (attacker instanceof LivingEntity entity) {
-                ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
-                if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
-                        CommonFunctions.hasCorrectArmorOn((LivingEntity) (Object) this, item.getMaterial())) {
-                    CommonFunctions.addStatusEffects(entity, item.getEquipmentDebuffs(), (LivingEntity) (Object) this);
+    @Inject(method = "tick", at = @At("TAIL"))
+    private void clearPoisonNauseaIfPoisonousThorns(CallbackInfo ci) {
+        if (!this.getWorld().isClient()) {
+            LivingEntity self = (LivingEntity)(Object)this;
+            if (self.hasStatusEffect(MUEffects.POISONOUS_THORNS)) {
+                if (self.hasStatusEffect(StatusEffects.POISON)) {
+                    self.removeStatusEffect(StatusEffects.POISON);
+                }
+                if (self.hasStatusEffect(StatusEffects.NAUSEA)) {
+                    self.removeStatusEffect(StatusEffects.NAUSEA);
                 }
             }
         }
     }
 
-    @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
+    @Inject(method = "damage", at = @At("RETURN"))
+    private void applyArmorDebuffs(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (cir.getReturnValue()) {
+            Entity attacker = source.getAttacker();
+            if (attacker instanceof LivingEntity entity) {
+                ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
+                if (!head.isEmpty() && head.getItem() instanceof MythicEffectsArmorItem item &&
+                        CommonFunctions.hasCorrectArmorOn((LivingEntity)(Object)this, item.getMaterial())) {
+                    CommonFunctions.addStatusEffects(entity, item.getEquipmentDebuffs(), (LivingEntity)(Object)this);
+                }
+            }
+        }
+    }
+
+    @ModifyVariable(method = "damage", at = @At("HEAD"), argsOnly = true)
     private float reduceIncomingDamage(float amount, DamageSource source, float am1) {
         if (!this.getWorld().isClient()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
@@ -123,7 +130,7 @@ public abstract class LivingEntityMixin extends Entity {
         return 0f;
     }
 
-    @Inject(method = "damage", at = @At(value = "TAIL"))
+    @Inject(method = "damage", at = @At("TAIL"))
     private void deflectDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         if (cir.getReturnValue()) {
             StatusEffectInstance deflection = this.getActiveStatusEffects().get(MUEffects.DAMAGE_DEFLECTION);
@@ -139,8 +146,8 @@ public abstract class LivingEntityMixin extends Entity {
         has_damage_been_deflected = false;
     }
 
-
-    @WrapWithCondition(method = "tickFallFlying", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
+    @WrapWithCondition(method = "tickFallFlying", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Ljava/util/function/Consumer;)V"))
     private <T extends LivingEntity> boolean applyChanceWithToolMasteryForTickFallFlying(ItemStack instance, int amount, T user, Consumer<T> breakCallback) {
         return checkForItemMastery(user);
     }
