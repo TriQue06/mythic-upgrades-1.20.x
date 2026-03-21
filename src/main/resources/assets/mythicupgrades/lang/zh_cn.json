@@ -1,0 +1,285 @@
+{
+  "text.config.mythicupgrades-config.title": [{"text" : "神话升级配置", "color" : "aqua", "bold": true}],
+
+  "text.config.mythicupgrades-config.category.aquamarineConfig": [{"text" : "海蓝宝石", "color" : "aqua", "bold": true}],
+  "text.config.mythicupgrades-config.category.peridotConfig": [{"text" : "橄榄石", "color" : "green", "bold": true}],
+  "text.config.mythicupgrades-config.category.topazConfig": [{"text" : "黄玉", "color" : "gold", "bold": true}],
+  "text.config.mythicupgrades-config.category.sapphireConfig": [{"text" : "蓝宝石", "color" : "dark_blue", "bold":  true}],
+  "text.config.mythicupgrades-config.category.rubyConfig": [{"text" : "红宝石", "color" : "red", "bold": true}],
+  "text.config.mythicupgrades-config.category.ametrineConfig": [{"text" : "紫黄晶", "color" : "dark_purple", "bold": true}],
+  "text.config.mythicupgrades-config.category.jadeConfig": [{"text" : "翡翠", "color" : "dark_green", "bold": true}],
+
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_duration": [{"text": "盔甲的冰盾缓慢效果时长", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.ice_shield_amplifier": [{"text": "盔甲的冰盾效果等级", "color": "aqua"}],
+  "text.config.mythicupgrades-config.option.aquamarineConfig.tools_freeze_duration": [{"text": "工具的冻结效果时长", "color": "aqua"}],
+
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_amplifier": [{"text": "盔甲的毒荆棘效果等级", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.poisonous_thorns_poison_duration": [{"text": "盔甲的毒荆棘中毒效果时长", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_duration": [{"text": "工具的中毒效果时长", "color": "green"}],
+  "text.config.mythicupgrades-config.option.peridotConfig.tools_poison_amplifier": [{"text": "工具的中毒效果等级", "color": "green"}],
+
+  "text.config.mythicupgrades-config.option.topazConfig.item_mastery_amplifier": [{"text": "盔甲的物品掌控效果等级", "color": "gold"}],
+  "text.config.mythicupgrades-config.option.topazConfig.topaz_tools_fire_seconds": [{"text": "黄玉工具击中的实体的着火时间", "color": "gold"}],
+
+  "text.config.mythicupgrades-config.option.sapphireConfig.damage_deflection_amplifier": [{"text": "盔甲的伤害偏转效果等级", "color": "blue"}],
+  "text.config.mythicupgrades-config.option.sapphireConfig.tools_percentage_damage_percent": [{"text": "工具造成的伤害（相对目标最大生命值的百分比）", "color": "blue"}],
+
+  "text.config.mythicupgrades-config.option.rubyConfig.spelunker_amplifier": [{"text": "探洞者效果等级", "color": "red"}],
+  "text.config.mythicupgrades-config.option.rubyConfig.tools_haste_amplifier": [{"text": "工具的急迫效果等级", "color": "red"}],
+
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_duration": [{"text": "盔甲的奥术光环效果时长", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.arcane_aura_amplifier": [{"text": "盔甲的奥术光环飘浮效果等级", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_duration": [{"text": "工具的飘浮效果时长", "color": "dark_purple"}],
+  "text.config.mythicupgrades-config.option.ametrineConfig.tools_levitation_amplifier": [{"text": "工具的飘浮效果等级", "color": "dark_purple"}],
+
+  "text.config.mythicupgrades-config.option.jadeConfig.speed_amplifier": [{"text": "盔甲的迅捷效果等级", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.jump_boost_amplifier": [{"text": "盔甲的跳跃提升效果等级", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_duration": [{"text": "工具的弹跳者效果时长", "color": "dark_green"}],
+  "text.config.mythicupgrades-config.option.jadeConfig.tools_bouncer_amplifier": [{"text": "工具的弹跳者效果等级", "color": "dark_green"}],
+
+  "pack.mythicupgrades.32x": "神话升级32x",
+
+  "item.mythicupgrades.aquamarine": "海蓝宝石",
+  "item.mythicupgrades.aquamarine_ingot": "海蓝宝石锭",
+  "item.mythicupgrades.aquamarine_crystal_shard": "海蓝宝石晶体碎片",
+  "item.mythicupgrades.aquamarine_potion": "海蓝宝石药水",
+
+  "item.mythicupgrades.aquamarine_helmet": "海蓝宝石头盔",
+  "item.mythicupgrades.aquamarine_chestplate": "海蓝宝石胸甲",
+  "item.mythicupgrades.aquamarine_leggings": "海蓝宝石护腿",
+  "item.mythicupgrades.aquamarine_boots": "海蓝宝石靴子",
+
+  "item.mythicupgrades.aquamarine_sword": "海蓝宝石剑",
+  "item.mythicupgrades.aquamarine_axe": "海蓝宝石斧",
+  "item.mythicupgrades.aquamarine_pickaxe": "海蓝宝石镐",
+  "item.mythicupgrades.aquamarine_shovel": "海蓝宝石锹",
+  "item.mythicupgrades.aquamarine_hoe": "海蓝宝石锄",
+
+  "block.mythicupgrades.aquamarine_ore": "海蓝宝石矿石",
+  "block.mythicupgrades.deepslate_aquamarine_ore": "深层海蓝宝石矿石",
+  "block.mythicupgrades.aquamarine_block": "海蓝宝石块",
+  "block.mythicupgrades.aquamarine_crystal_block": "海蓝宝石晶块",
+  "block.mythicupgrades.aquamarine_crystal_cluster": "海蓝宝石晶簇",
+
+  "item.mythicupgrades.peridot": "橄榄石",
+  "item.mythicupgrades.peridot_ingot": "橄榄石锭",
+  "item.mythicupgrades.peridot_crystal_shard": "橄榄石晶体碎片",
+  "item.mythicupgrades.peridot_potion": "橄榄石药水",
+
+  "item.mythicupgrades.peridot_helmet": "橄榄石头盔",
+  "item.mythicupgrades.peridot_chestplate": "橄榄石胸甲",
+  "item.mythicupgrades.peridot_leggings": "橄榄石护腿",
+  "item.mythicupgrades.peridot_boots": "橄榄石靴子",
+
+  "item.mythicupgrades.peridot_sword": "橄榄石剑",
+  "item.mythicupgrades.peridot_axe": "橄榄石斧",
+  "item.mythicupgrades.peridot_pickaxe": "橄榄石镐",
+  "item.mythicupgrades.peridot_shovel": "橄榄石锹",
+  "item.mythicupgrades.peridot_hoe": "橄榄石锄",
+
+  "block.mythicupgrades.peridot_ore": "橄榄石矿石",
+  "block.mythicupgrades.deepslate_peridot_ore": "深层橄榄石矿石",
+  "block.mythicupgrades.peridot_block": "橄榄石块",
+  "block.mythicupgrades.peridot_crystal_block": "橄榄石晶块",
+  "block.mythicupgrades.peridot_crystal_cluster": "橄榄石晶簇",
+
+  "item.mythicupgrades.topaz": "黄玉",
+  "item.mythicupgrades.topaz_ingot": "黄玉锭",
+  "item.mythicupgrades.topaz_crystal_shard": "黄玉晶体碎片",
+  "item.mythicupgrades.topaz_potion": "黄玉药水",
+
+  "item.mythicupgrades.topaz_helmet": "黄玉头盔",
+  "item.mythicupgrades.topaz_chestplate": "黄玉胸甲",
+  "item.mythicupgrades.topaz_leggings": "黄玉护腿",
+  "item.mythicupgrades.topaz_boots": "黄玉靴子",
+
+  "item.mythicupgrades.topaz_sword": "黄玉剑",
+  "item.mythicupgrades.topaz_axe": "黄玉斧",
+  "item.mythicupgrades.topaz_pickaxe": "黄玉镐",
+  "item.mythicupgrades.topaz_shovel": "黄玉锹",
+  "item.mythicupgrades.topaz_hoe": "黄玉锄",
+
+  "block.mythicupgrades.topaz_ore": "黄玉矿石",
+  "block.mythicupgrades.deepslate_topaz_ore": "深层黄玉矿石",
+  "block.mythicupgrades.topaz_block": "黄玉块",
+  "block.mythicupgrades.topaz_crystal_block": "黄玉晶块",
+  "block.mythicupgrades.topaz_crystal_cluster": "黄玉晶簇",
+
+  "item.mythicupgrades.ruby": "红宝石",
+  "item.mythicupgrades.ruby_ingot": "红宝石锭",
+  "item.mythicupgrades.ruby_crystal_shard": "红宝石晶体碎片",
+  "item.mythicupgrades.ruby_potion": "红宝石药水",
+
+  "item.mythicupgrades.ruby_helmet": "红宝石头盔",
+  "item.mythicupgrades.ruby_chestplate": "红宝石胸甲",
+  "item.mythicupgrades.ruby_leggings": "红宝石护腿",
+  "item.mythicupgrades.ruby_boots": "红宝石靴子",
+
+  "item.mythicupgrades.ruby_axe": "红宝石斧",
+  "item.mythicupgrades.ruby_pickaxe": "红宝石镐",
+  "item.mythicupgrades.ruby_shovel": "红宝石锹",
+  "item.mythicupgrades.ruby_hoe": "红宝石锄",
+  "item.mythicupgrades.ruby_sword": "红宝石剑",
+
+  "block.mythicupgrades.ruby_ore": "红宝石矿石",
+  "block.mythicupgrades.ruby_block": "红宝石块",
+  "block.mythicupgrades.ruby_crystal_block": "红宝石晶块",
+  "block.mythicupgrades.ruby_crystal_cluster": "红宝石晶簇",
+
+  "item.mythicupgrades.sapphire": "蓝宝石",
+  "item.mythicupgrades.sapphire_ingot": "蓝宝石锭",
+  "item.mythicupgrades.sapphire_crystal_shard": "蓝宝石晶体碎片",
+  "item.mythicupgrades.sapphire_potion": "蓝宝石药水",
+
+  "item.mythicupgrades.sapphire_helmet": "蓝宝石头盔",
+  "item.mythicupgrades.sapphire_chestplate": "蓝宝石胸甲",
+  "item.mythicupgrades.sapphire_leggings": "蓝宝石护腿",
+  "item.mythicupgrades.sapphire_boots": "蓝宝石靴子",
+
+  "item.mythicupgrades.sapphire_sword": "蓝宝石剑",
+  "item.mythicupgrades.sapphire_axe": "蓝宝石斧",
+  "item.mythicupgrades.sapphire_pickaxe": "蓝宝石镐",
+  "item.mythicupgrades.sapphire_shovel": "蓝宝石锹",
+  "item.mythicupgrades.sapphire_hoe": "蓝宝石锄",
+
+  "block.mythicupgrades.sapphire_ore": "蓝宝石矿石",
+  "block.mythicupgrades.deepslate_sapphire_ore": "深层蓝宝石矿石",
+  "block.mythicupgrades.sapphire_block": "蓝宝石块",
+  "block.mythicupgrades.sapphire_crystal_block": "蓝宝石晶块",
+  "block.mythicupgrades.sapphire_crystal_cluster": "蓝宝石晶簇",
+
+  "item.mythicupgrades.ametrine": "紫黄晶",
+  "item.mythicupgrades.ametrine_ingot": "紫黄晶锭",
+  "item.mythicupgrades.ametrine_crystal_shard": "紫黄晶晶体碎片",
+  "item.mythicupgrades.ametrine_potion": "紫黄晶药水",
+
+  "item.mythicupgrades.ametrine_helmet": "紫黄晶头盔",
+  "item.mythicupgrades.ametrine_chestplate": "紫黄晶胸甲",
+  "item.mythicupgrades.ametrine_leggings": "紫黄晶护腿",
+  "item.mythicupgrades.ametrine_boots": "紫黄晶靴子",
+
+  "item.mythicupgrades.ametrine_sword": "紫黄晶剑",
+  "item.mythicupgrades.ametrine_axe": "紫黄晶斧",
+  "item.mythicupgrades.ametrine_pickaxe": "紫黄晶镐",
+  "item.mythicupgrades.ametrine_shovel": "紫黄晶锹",
+  "item.mythicupgrades.ametrine_hoe": "紫黄晶锄",
+
+  "block.mythicupgrades.ametrine_ore": "紫黄晶矿石",
+  "block.mythicupgrades.ametrine_block": "紫黄晶块",
+  "block.mythicupgrades.ametrine_crystal_block": "紫黄晶晶块",
+  "block.mythicupgrades.ametrine_crystal_cluster": "紫黄晶晶簇",
+
+  "item.mythicupgrades.jade": "翡翠",
+  "item.mythicupgrades.jade_ingot": "翡翠锭",
+  "item.mythicupgrades.jade_crystal_shard": "翡翠晶体碎片",
+  "item.mythicupgrades.jade_potion": "翡翠药水",
+
+  "item.mythicupgrades.jade_helmet": "翡翠头盔",
+  "item.mythicupgrades.jade_chestplate": "翡翠胸甲",
+  "item.mythicupgrades.jade_leggings": "翡翠护腿",
+  "item.mythicupgrades.jade_boots": "翡翠靴子",
+
+  "item.mythicupgrades.jade_sword": "翡翠剑",
+  "item.mythicupgrades.jade_axe": "翡翠斧",
+  "item.mythicupgrades.jade_pickaxe": "翡翠镐",
+  "item.mythicupgrades.jade_shovel": "翡翠锹",
+  "item.mythicupgrades.jade_hoe": "翡翠锄",
+
+  "block.mythicupgrades.jade_ore": "翡翠矿石",
+  "block.mythicupgrades.jade_block": "翡翠块",
+  "block.mythicupgrades.jade_crystal_block": "翡翠晶块",
+  "block.mythicupgrades.jade_crystal_cluster": "翡翠晶簇",
+
+  "item.mythicupgrades.raw_necoium": "粗内焦",
+  "item.mythicupgrades.necoium_ingot": "内焦锭",
+  "block.mythicupgrades.necoium_ore": "内焦矿石",
+  "block.mythicupgrades.necoium_block": "内焦块",
+  "block.mythicupgrades.raw_necoium_block": "粗内焦块",
+
+  "item.mythicupgrades.aquamarine_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.peridot_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.topaz_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.ruby_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.sapphire_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.ametrine_upgrade_smithing_template": "锻造模板",
+  "item.mythicupgrades.jade_upgrade_smithing_template": "锻造模板",
+
+  "effect.mythicupgrades.ice_shield": "冰盾",
+  "effect.mythicupgrades.freeze": "冻结",
+  "effect.mythicupgrades.poisonous_thorns": "毒荆棘",
+  "effect.mythicupgrades.item_mastery": "物品掌控",
+  "effect.mythicupgrades.damage_deflection": "伤害偏转",
+  "effect.mythicupgrades.spelunker": "探洞者",
+  "effect.mythicupgrades.arcane_aura": "奥术光环",
+  "effect.mythicupgrades.bouncer": "弹跳者",
+
+  "defaultArmorTooltip.description": "穿上全套盔甲获得强化效果！",
+
+  "aquamarine_armor.description": "设置增益：冰盾%s",
+  "aquamarine_tool.description": "击中敌人时使其冻结。",
+
+  "peridot_armor.description": "设置增益：毒荆棘%s",
+  "peridot_tool.description": "击中敌人时使其中毒。",
+
+  "topaz_armor.description": "设置增益：保护、物品掌控%s与抗火",
+  "topaz_tool.description": "拥有3倍耐久以及更高的数值，击中敌人时使其着火，并自动烧炼挖掘掉落物",
+
+  "ruby_armor.description": "设置增益：探洞者%s",
+  "ruby_tool.description": "在主手时提供急迫效果。",
+
+  "sapphire_armor.description": "设置增益：伤害偏转%s",
+  "sapphire_tool.description": "对目标施加其最大生命值的%d%%的附加伤害。",
+
+  "ametrine_armor.description": "设置增益：奥术光环%s",
+  "ametrine_tool.description": "击中敌人时使其飘浮。",
+
+  "jade_armor.description": "设置增益：迅捷%s与跳跃提升%s",
+  "jade_tool.description": "击中敌人时提供跳跃提升效果。",
+
+  "death.attack.deflecting": "%s受到了%s足量的偏转伤害而死",
+  "death.attack.deflecting.item": "%s受到了%s用%s造成的足量偏转伤害而死",
+  "death.attack.percentage": "%s在与%s战斗时受到了足量的魔法百分比伤害而死",
+  "death.attack.percentage.item": "%s在与%s战斗时受到了其持%s造成的足量魔法百分比伤害而死",
+
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.additions_slot_description": "放入海蓝宝石锭",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.aquamarine_upgrade.ingredients": "海蓝宝石锭",
+  "upgrade.mythicupgrades.aquamarine_upgrade": "海蓝宝石升级",
+
+  "item.mythicupgrades.smithing_template.peridot_upgrade.additions_slot_description": "放入橄榄石锭",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.peridot_upgrade.ingredients": "橄榄石锭",
+  "upgrade.mythicupgrades.peridot_upgrade": "橄榄石升级",
+
+  "item.mythicupgrades.smithing_template.topaz_upgrade.additions_slot_description": "放入黄玉锭",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.topaz_upgrade.ingredients": "黄玉锭",
+  "upgrade.mythicupgrades.topaz_upgrade": "黄玉升级",
+
+  "item.mythicupgrades.smithing_template.ruby_upgrade.additions_slot_description": "放入红宝石锭",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.ruby_upgrade.ingredients": "红宝石锭",
+  "upgrade.mythicupgrades.ruby_upgrade": "红宝石升级",
+
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.additions_slot_description": "放入蓝宝石锭",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.sapphire_upgrade.ingredients": "蓝宝石锭",
+  "upgrade.mythicupgrades.sapphire_upgrade": "蓝宝石升级",
+
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.additions_slot_description": "放入紫黄晶锭",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.ametrine_upgrade.ingredients": "紫黄晶锭",
+  "upgrade.mythicupgrades.ametrine_upgrade": "紫黄晶升级",
+
+  "item.mythicupgrades.smithing_template.jade_upgrade.additions_slot_description": "放入翡翠锭",
+  "item.mythicupgrades.smithing_template.jade_upgrade.applies_to": "下界合金装备",
+  "item.mythicupgrades.smithing_template.jade_upgrade.base_slot_description": "放入下界合金盔甲、武器或工具",
+  "item.mythicupgrades.smithing_template.jade_upgrade.ingredients": "翡翠锭",
+  "upgrade.mythicupgrades.jade_upgrade": "翡翠升级"
+}
